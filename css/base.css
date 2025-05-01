@@ -5,216 +5,8 @@
 /*font size*/
 /*letter-spacing*/
 /*-------------------------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap");
-.font-styles-001 {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  font-style: normal;
-  font-size: 8px;
-  color: #999999;
-  letter-spacing: 40px;
-  line-height: 3;
-}
-
-.font-styles-002 {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  font-style: normal;
-  font-size: 16px;
-  color: #333333;
-  letter-spacing: 40px;
-  line-height: 1.5;
-}
-
-.font-styles-003 {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  font-style: normal;
-  font-size: 12px;
-  color: #333333;
-  letter-spacing: 0px;
-  line-height: 0.5;
-}
-
-.font-styles-004 {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  font-style: normal;
-  font-size: 24px;
-  color: #333333;
-  letter-spacing: 40px;
-  line-height: 0.68;
-}
-
-.font-styles-005 {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  font-style: normal;
-  font-size: 16px;
-  color: #333333;
-  letter-spacing: 40px;
-  line-height: 0.71;
-}
-
-.font-styles-006 {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  font-style: normal;
-  font-size: 20px;
-  color: #ffffff;
-  letter-spacing: 300px;
-  line-height: 0.6;
-}
-
-.font-styles-007 {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  font-style: normal;
-  font-size: 20px;
-  color: #333333;
-  letter-spacing: 100px;
-  line-height: 0.6;
-}
-
-.font-styles-008 {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  font-style: normal;
-  font-size: 10px;
-  color: #999999;
-  letter-spacing: 40px;
-  line-height: 1;
-}
-
-.font-styles-009 {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  font-style: normal;
-  font-size: 10px;
-  color: #333333;
-  letter-spacing: 40px;
-  line-height: 1;
-}
-
-.font-styles-010 {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  font-style: normal;
-  font-size: 48px;
-  color: #333333;
-  letter-spacing: 40px;
-  line-height: 0.68;
-}
-
-.font-styles-011 {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  font-style: bold;
-  font-size: 48px;
-  color: #333333;
-  letter-spacing: 40px;
-  line-height: 1;
-}
-
-.font-styles-012 {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  font-style: bold;
-  font-size: 48px;
-  color: #ffffff;
-  letter-spacing: 40px;
-  line-height: 1;
-}
-
-.font-styles-013 {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  font-style: normal;
-  font-size: 20px;
-  color: #333333;
-  letter-spacing: 40px;
-  line-height: 0.6;
-}
-
-.font-styles-014 {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  font-style: normal;
-  font-size: 20px;
-  color: #ffffff;
-  letter-spacing: 40px;
-  line-height: 0.6;
-}
-
-.font-styles-015 {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  font-style: bold;
-  font-size: 120px;
-  color: #ffffff;
-  letter-spacing: 40px;
-  line-height: 3.75;
-}
-
-.font-styles-016 {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  font-style: bold;
-  font-size: 24px;
-  color: #333333;
-  letter-spacing: 40px;
-  line-height: 0.85;
-}
-
-.font-styles-017 {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  font-style: bold;
-  font-size: 32px;
-  color: #333333;
-  letter-spacing: 40px;
-  line-height: 1;
-}
-
-.font-styles-018 {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  font-style: bold;
-  font-size: 20px;
-  color: #3366AA;
-  letter-spacing: 40px;
-  line-height: 0.6;
-}
-
-.font-styles-019 {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  font-style: bold;
-  font-size: 48px;
-  color: #3366AA;
-  letter-spacing: 40px;
-  line-height: 1.5;
-}
-
-.font-styles-020 {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  font-style: bold;
-  font-size: 48px;
-  color: #ee7744;
-  letter-spacing: 40px;
-  line-height: 1.5;
-}
-
-.font-styles-021 {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  font-style: bold;
-  font-size: 16px;
-  color: #ee7744;
-  letter-spacing: 40px;
-  line-height: 0.5;
-}
-
-.font-styles-022 {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  font-style: bold;
-  font-size: 10px;
-  color: #333333;
-  letter-spacing: 0px;
-  line-height: 0.41;
-}
-
-.font-styles-023 {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  font-style: bold;
-  font-size: 16px;
-  color: #666666;
-  letter-spacing: 0px;
-  line-height: 0.6;
-}
-
-/*-------------------------------------------*/
 /*header*/
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap");
 .custom-header h1 {
   display: none;
 }
@@ -251,81 +43,54 @@
 }
 
 ._main_mv h2 {
-  font-size: clamp(2rem, 1.9617rem + 0.1361vw, 2.125rem);
+  font-size: clamp(3.5rem, 3.4617rem + 0.1361vw, 3.625rem);
   color: #ffffff;
   position: absolute;
-  top: 60%;
+  top: 55%;
   left: 15%;
+  color: #000000;
 }
 ._main_mv span {
+  font-size: clamp(1.25rem, 1.2117rem + 0.1361vw, 1.375rem);
+  color: #ffffff;
   position: absolute;
-  top: 70%;
+  top: 55%;
   left: 15%;
   z-index: 1;
+  color: #000000;
 }
 ._main_mv ._main_mv_en {
   position: absolute;
   top: 40%;
-  left: 15%;
+  left: 20%;
   z-index: 1;
 }
 
-/*製品・システム トップ*/
-.popular_products_now {
-  text-align: center;
-}
-.popular_products_now h3 {
-  font-size: clamp(2rem, 1.9617rem + 0.1361vw, 2.125rem);
-  color: #000000;
-}
-.popular_products_now .popular_products_category h4 {
-  color: #000000;
-  text-align: center;
-  border-bottom: 2px #3366AA solid;
-  padding-bottom: 30px;
-  padding: 30px 0px;
-}
-.popular_products_now .popular_products_category ._link_bt1 a {
-  width: 100%;
-  max-width: 312px;
-  height: 60px;
-  line-height: 30px;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3019607843);
-  margin: 0px auto;
-  font-size: clamp(1.25rem, 1.2117rem + 0.1361vw, 1.375rem);
-  text-box: none;
-  color: #ffffff;
-  border-radius: 100vh;
-  display: block;
-}
-.popular_products_now .popular_products_category p {
-  width: 100%;
-  max-width: 312px;
-  overflow: hidden;
-}
-.popular_products_now .popular_products_category p:nth-child(n+2) {
-  height: 30px;
-}
-.popular_products_now .popular_products_category ul {
-  padding: 0px 0px 0px;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-}
-.popular_products_now .popular_products_category ul li {
-  width: 33%;
-  height: auto;
-  padding: 10px 5px;
+/*パンくず*/
+.breadcrumb {
+  font-size: clamp(0.625rem, 0.5867rem + 0.1361vw, 0.75rem);
 }
 
-/*電気をつくる*/
+.total-energy-solutions::before {
+  content: " ";
+  display: block;
+  clear: both;
+  background: #ddd;
+  width: 1000px;
+  height: 600px;
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  z-index: 0;
+}
+
+/*製品*/
 .create_electricity {
   background-image: url(/wp-content/uploads/2025/02/header.jpg);
   width: 100%;
   max-width: 100%;
   margin-bottom: 50px;
-  padding: 50px 0px;
+  padding: 100px 0px;
 }
 .create_electricity ._list {
   text-align: center;
@@ -352,7 +117,7 @@
   justify-content: space-around;
 }
 .create_electricity ul li {
-  width: 226px;
+  width: 484px;
   height: 312px;
   padding: 5px 5px;
   margin: 5px;
@@ -365,98 +130,356 @@
   width: 100%;
 }
 
-.list {
-  text-align: center;
-}
-
-.products_that_generate_electricity_title {
+/*_product*/
+._product {
+  max-width: 100%;
+  width: 100%;
+  height: 100vh;
   position: relative;
+  background: #fff;
+  padding: 0;
+  margin: 0px 0px;
+  z-index: 0;
+  /*電気をつくる*/
 }
-.products_that_generate_electricity_title h2 {
-  border-bottom: solid 3px #ddd;
-  padding-bottom: 30px;
-}
-.products_that_generate_electricity_title .for_retailers_only {
+._product ._system_bt {
   position: absolute;
-  padding: 10px 50px;
-  border: solid 1px #ddd;
-  margin: 10px 0px;
   right: 0px;
-  bottom: 5px;
+  top: 30px;
+  border: solid 1px #000;
+  padding: 15px 50px;
+  z-index: 10;
 }
-
-/*電気をためる*/
-.storing_electricity {
-  background-image: url(/wp-content/uploads/2025/02/header.jpg);
-  width: 100%;
+._product ._title_text {
   max-width: 100%;
-  margin-bottom: 50px;
-  padding: 50px 0px;
-}
-.storing_electricity h3 {
+  width: 100%;
   text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 20vh;
+  z-index: 6;
+}
+._product ._title_text h2 {
+  font-size: clamp(3rem, 2.8438rem + 0.5vw, 3.125rem);
+  color: #3366AA;
+  text-align: left;
+  max-width: 1000px;
+  width: 100%;
+  margin: 20px auto;
+}
+._product ._title_text span {
+  border-bottom: solid 2px #3366AA;
+  display: block;
+}
+._product ._product_back {
+  position: absolute;
+  top: -40px;
+  left: 0px;
+  max-width: 60%;
+  width: 100%;
+  height: 100vh;
+  background: rgba(51, 102, 170, 0.18);
+  z-index: 1;
+}
+._product ._product_back2 {
+  height: 70vh;
+}
+._product ._product_back3 {
+  height: 100vh;
+}
+._product ._product_back4 {
+  height: 75vh;
+}
+._product ._product_contents1 {
+  max-width: 100%;
+  width: 100%;
+  padding: 100px 0px;
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  z-index: 5;
+}
+._product ._vertical_text {
+  position: absolute;
+  top: 0px;
+  left: 15%;
+  writing-mode: vertical-rl;
+  font-size: clamp(7.5rem, 7.4617rem + 0.1361vw, 7.625rem);
+  opacity: 0.8;
   color: #fff;
-}
-.storing_electricity h3 span {
-  font-size: clamp(3rem, 2.9617rem + 0.1361vw, 3.125rem);
-}
-.storing_electricity h4 {
-  text-align: center;
-  padding: 50px;
-  overflow: hidden;
-}
-.storing_electricity ul {
-  display: flex;
-  justify-content: space-around;
-}
-.storing_electricity ul li {
-  width: 484px;
-  height: 312px;
-  padding: 5px 5px;
-  margin: 5px;
-  background: #ddd;
-  border-radius: 20px;
-  overflow: hidden;
+  display: inline-block;
+  background: linear-gradient(281deg, #ffffff 0%, #fefeff 40%, rgba(255, 255, 255, 0.5803921569) 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 12;
 }
 
-/*電気をかしこくつかう*/
-.use_electricity_wisely {
-  background-image: url(/wp-content/uploads/2025/02/header.jpg);
-  width: 100%;
+._product_contents2, ._product_contents3, ._product_contents4 {
   max-width: 100%;
-  padding: 50px 0px;
-  margin-bottom: 50px;
+  width: 100%;
+  padding: 100px 0px;
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  z-index: 5;
 }
-.use_electricity_wisely h3 {
+
+._product_1 {
+  padding: 10px auto;
+  margin: 150px 0px 0px !important;
+  z-index: 0;
+}
+
+._product_2 {
+  padding: 10px auto;
+  margin: 100px 0px !important;
+  z-index: 0;
+}
+
+._product_back3 {
+  background: rgba(238, 119, 68, 0.2) !important;
+}
+
+._product_3 {
+  height: 70vh;
+}
+
+._product_contents2 {
+  top: -90px;
+}
+
+._product_contents3 {
+  top: -280px;
+}
+
+._for_retailers_only {
+  padding: 10px 40px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border: solid 1px #000;
+}
+
+.one_stop img {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+/*商品詳細*/
+/*アコーディオン*/
+.btn-more, .btn-more2, .btn-more, .btn-more3, .btn-more4, .btn-more1 {
+  width: 100%;
   text-align: center;
-  color: rgb(87, 84, 84);
-}
-.use_electricity_wisely h3 span {
-  font-size: clamp(3rem, 2.9617rem + 0.1361vw, 3.125rem);
-}
-.use_electricity_wisely h4 {
-  text-align: center;
-  height: 50px;
-  overflow: hidden;
-}
-.use_electricity_wisely ul {
+  background-color: #fff;
+  cursor: pointer;
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px;
+  border: solid 1px #ddd;
 }
-.use_electricity_wisely ul li {
-  width: 484px;
-  height: 312px;
-  padding: 5px 5px;
-  margin: 5px;
-  background: #ddd;
-  border-radius: 20px;
+
+.btn-more::after, .btn-more2::after, .btn-more3::after, .btn-more4::after, .btn-more1::after {
+  font-family: "Material Symbols Outlined";
+  content: "↑";
+  font-size: 20px;
+  transform: rotate(180deg);
+  transition: all 0.3s ease;
+  margin-right: 8px;
+  color: #999;
+  display: block;
+}
+
+.btn-more.close::after, .btn-more2.close::after, .btn-more3.close::after, .btn-more4.close::after, .btn-more1.close::after {
+  transform: rotate(0deg);
+}
+
+.dropdown, .dropdown2, .dropdown3, .dropdown4, .dropdown1 {
+  background-color: #fff;
+}
+
+._product_details .Label::before {
+  content: "";
+  border-top: 2px solid #525252;
+  border-right: 2px solid #525252;
+}
+._product_details .Label {
+  text-align: center;
+  color: #000;
+  background: #fff;
+  border: solid 1px #000;
+}
+._product_details ._inner {
+  display: flex;
+  justify-content: space-between;
+}
+._product_details ._inner ._left {
+  max-width: 100%;
+  width: 50%;
+}
+._product_details ._inner ._right {
+  max-width: 100%;
+  width: 50%;
+}
+._product_details ._inner .new-post__pr {
+  font-size: 16px;
+  width: 17%;
+  padding: 0px 0px;
+  background: #ff701e;
+  color: #fff;
+  max-width: 150px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0;
+}
+._product_details ._inner h2 {
+  font-size: clamp(3rem, 2.8438rem + 0.5vw, 3.125rem);
+  margin: 0;
+  padding: 0;
+}
+._product_details ._inner ._explanation {
+  color: #3366AA;
+  font-size: 24px;
+  padding: 10px 0px;
+}
+._product_details ._inner ._point ul {
+  display: flex;
+  justify-content: space-between;
+}
+._product_details ._inner ._point li {
+  background: #ededed;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+._product_details ._inner ._measured_value ul {
+  display: flex;
+  justify-content: start;
+}
+._product_details ._inner ._measured_value ul li:nth-child(1) {
+  max-width: 50%;
+  width: 45%;
+  padding: 0px 5px;
+  border-right: solid 1px #ddd;
+}
+._product_details ._inner ._measured_value ul li:nth-child(2) {
+  max-width: 50%;
+  width: 50%;
+  padding: 10px;
+  padding: 0px 30px;
+}
+._product_details ._inner ._size ul, ._product_details ._inner ._weight ul {
+  display: flex;
+  justify-content: start;
+  padding: 0px 10px;
+}
+._product_details ._inner ._size ul li, ._product_details ._inner ._weight ul li {
+  width: 48%;
+}
+._product_details ._inner ._size ._pdf_bt, ._product_details ._inner ._weight ._pdf_bt {
+  padding: 10px 10px;
+  text-align: center;
+}
+._product_details ._inner ._size ._pdf_bt li a:nth-child(1), ._product_details ._inner ._weight ._pdf_bt li a:nth-child(1) {
+  max-width: 100%;
+  width: 100%;
+  color: #fff;
+  background: #ff701e;
+  line-height: 60px;
+  padding: 0px;
+  border-radius: 30px;
+  display: block;
+}
+._product_details ._inner ._size ._pdf_bt ._02 a, ._product_details ._inner ._weight ._pdf_bt ._02 a {
+  color: #ff701e !important;
+  background: #fff !important;
+  border: solid 1px !important;
+}
+._product_details ._inner ._size ._pdf_bt ._03 a, ._product_details ._inner ._weight ._pdf_bt ._03 a {
+  color: #000 !important;
+  background: #fff !important;
+  border: none !important;
+}
+._product_details ._inner .n2-ss-slider-1.n2_ss__touch_element.n2-ow {
+  height: 50vh;
+}
+._product_details ._inner div#n2-ss-3 .nextend-thumbnail-horizontal .n2-thumbnail-dot {
+  border: solid 1px #ddd;
+  padding: 10px;
+}
+._product_details ._inner div#n2-ss-3 .n2-style-f58d52632d016e4532dc73de3ceef8d2-simple {
+  background-color: #fff;
+}
+
+.popular_products_now {
+  text-align: center;
+}
+.popular_products_now h3 {
+  font-size: clamp(2rem, 1.9617rem + 0.1361vw, 2.125rem);
+  color: #000000;
+}
+.popular_products_now .popular_products_category h4 {
+  font-size: clamp(1.25rem, 1.2117rem + 0.1361vw, 1.375rem);
+  color: #000000;
+  text-align: center;
+  border-bottom: 2px #3366AA solid;
+  padding-bottom: 30px;
+  padding: 30px 0px;
+}
+.popular_products_now .popular_products_category h5 {
+  font-size: clamp(1.5rem, 1.4617rem + 0.1361vw, 1.625rem);
+  text-align: center;
+  letter-spacing: 0.96px;
+  line-height: 0.6;
+  height: 29px;
+  color: #000;
+  padding-bottom: 40px;
+}
+.popular_products_now .popular_products_category ._link_bt1 a {
+  width: 100%;
+  max-width: 312px;
+  height: 60px;
+  line-height: 30px;
+  letter-spacing: 0.64px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3019607843);
+  margin: 0px auto;
+  font-size: clamp(1rem, 0.9617rem + 0.1361vw, 1.125rem);
+  text-box: none;
+  color: #ffffff;
+  border-radius: 100vh;
+  display: block;
+}
+.popular_products_now .popular_products_category p {
+  width: 100%;
+  max-width: 312px;
+  height: 160px;
   overflow: hidden;
+}
+.popular_products_now .popular_products_category p:nth-child(n+2) {
+  height: 30px;
+}
+.popular_products_now .popular_products_category ul {
+  padding: 0px 0px 0px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.popular_products_now .popular_products_category ul li {
+  width: 312px;
+  height: auto;
+  padding: 10px 5px;
 }
 
 /*関連記事*/
 .related_articles ul {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 .related_articles ul li {
   width: 33%;
@@ -471,6 +494,30 @@
   max-width: 100%;
 }
 
+.mega-menu-item a {
+  width: 100%;
+  height: 60px !important;
+  line-height: 60px !important;
+}
+
+.mega-nav_contact {
+  background: #3366aa !important;
+}
+.mega-nav_contact a {
+  color: #fff !important;
+}
+.mega-nav_contact a :hover {
+  background: #3366aa !important;
+}
+
+li#mega-menu-55-0 a {
+  color: #000 !important;
+}
+
+/*
+#mega-menu-wrap-top #mega-menu-top > li.mega-menu-item.mega-toggle-on > a.mega-menu-link {
+    background: #3366aa;
+}*/
 h2.head-border.text-line-right {
   color: #fff;
   font-size: clamp(1.25rem, 1.2117rem + 0.1361vw, 1.375rem);
@@ -511,7 +558,6 @@ h2.head-border.text-line-right {
   right: 0;
 }
 
-/**/
 .home .page-title {
   display: none;
 }
@@ -525,8 +571,9 @@ h2.head-border.text-line-right {
   overflow: hidden;
 }
 .logo img {
-  max-width: 170px;
-  width: 170px;
+  max-width: 150px;
+  width: 150px;
+  padding: 10px;
 }
 
 .nav li:nth-child(1)::after, .nav li:nth-child(2)::after {
@@ -727,11 +774,11 @@ h2.head-border.text-line-right {
 }
 .topic-inner img {
   height: auto;
-  transition: transform 0.4s ease; /* ゆっくり変化させる */
+  transition: transform 0.4s ease;
   width: 100vw;
 }
 .topic-inner img:hover {
-  transform: scale(1.1); /* 拡大 */
+  transform: scale(1.1);
 }
 .topic-inner ul {
   display: -webkit-flex;
@@ -866,12 +913,14 @@ h2.head-border.text-line-right {
 .total-energy-solutions .content {
   float: left;
   width: 50%;
+  height: auto;
 }
 .total-energy-solutions .content:nth-child(2) {
   float: left;
   width: 50%;
-  position: static;
+  position: relative;
   padding: 100px;
+  z-index: 6;
 }
 .total-energy-solutions h3 {
   color: #3366AA;
@@ -890,7 +939,7 @@ h2.head-border.text-line-right {
   transform: scale(1.1); /* 拡大 */
 }
 
-/*製品・システム*/
+/*Products/Systems*/
 .product .section-inner, .product .section-title {
   text-align: center;
 }
@@ -970,7 +1019,7 @@ h2.head-border.text-line-right {
   padding: 0px;
 }
 
-/*各種バナー*/
+/*banner1*/
 .banner1 {
   margin: 20px 0px;
 }
@@ -1131,6 +1180,9 @@ h2.head-border.text-line-right {
   font-size: clamp(1.625rem, 1.5867rem + 0.1361vw, 1.75rem);
 }
 
+footer {
+  position: relative;
+}
 footer ._footer_fixed_bt > .footer_text_01 {
   font-size: clamp(0.875rem, 0.8367rem + 0.1361vw, 1rem);
 }
@@ -1162,6 +1214,7 @@ footer .footer-menu h3 {
   font-size: clamp(1rem, 0.9617rem + 0.1361vw, 1.125rem);
   border-bottom: solid 2px #ddd;
   padding: 10px 0px;
+  position: relative;
 }
 footer .footer-menu li {
   font-size: clamp(0.75rem, 0.7117rem + 0.1361vw, 0.875rem);
@@ -1195,6 +1248,7 @@ footer ._end li:nth-child(2) {
 footer .footer-buttom {
   display: flex;
   justify-content: space-evenly;
+  margin-top: 50px;
 }
 footer .footer-buttom div {
   width: 33%;
@@ -1215,21 +1269,21 @@ footer ._inner ._contenner ._logo {
 }
 footer ._inner ._contenner ._sns ul li:nth-child(1) {
   position: absolute;
-  right: 10px;
+  right: 200px;
   top: 4px;
   font-size: 12px;
   padding: 15px;
 }
 footer ._inner ._contenner ._sns ul li:nth-child(2) {
   position: absolute;
-  right: 55px;
+  right: 100px;
   top: 0px;
   font-size: 12px;
   padding: 15px;
 }
 footer ._inner ._contenner ._sns ul li:nth-child(3) {
   position: absolute;
-  right: 100px;
+  right: 0px;
   top: 0px;
   font-size: 12px;
   padding: 15px;
@@ -1245,10 +1299,15 @@ footer ._inner ._contenner ._sns ul img {
   background-repeat: no-repeat;
   background-position: center center;
   width: 0px;
-  height: 10px;
+  height: 30px;
   float: right;
   padding: 10px;
   background-size: 10px;
+}
+
+.material-symbols-outlined {
+  position: absolute;
+  right: 10px;
 }
 
 /*ボタン*/
@@ -1264,6 +1323,12 @@ footer ._inner ._contenner ._sns ul img {
   text-align: center;
   color: #000000;
   line-height: 0px;
+}
+
+.material-symbols-outlined {
+  position: absolute;
+  right: 10px;
+  font-weight: normal;
 }
 
 .content-inner {
@@ -1668,67 +1733,6 @@ footer ._inner ._contenner ._sns ul img {
     width: 50%;
   }
   #mega-menu-wrap-top #mega-menu-top li.mega-menu-item-has-children > a.mega-menu-link > span.mega-indicator:after {
-    content: "+";
-  }
-  #mega-menu-wrap-top #mega-menu-top li.mega-menu-item-has-children.mega-toggle-on > a.mega-menu-link > span.mega-indicator:after {
-    content: "-";
-  }
-  .wrap {
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-}
-/*sp*/
-@media screen and (max-width: 860px) {
-  .topic-inner ul li {
-    position: relative;
-    width: 33%;
-    max-width: 33%;
-  }
-  .topic-inner ul h3 {
-    text-align: center !important;
-  }
-}
-@media screen and (max-width: 780px) {
-  .topic-inner ul li {
-    position: relative;
-    width: 156px;
-    max-width: 156px;
-    height: 156px;
-    max-height: 156px;
-    margin: 0px 0px 10px 0px;
-  }
-  .topic-inner ul h3 {
-    text-align: center !important;
-  }
-  .topic-inner ul ._overflow-hidden-topic {
-    width: 100%;
-    height: auto;
-  }
-  .total-energy-solutions .content:nth-child(2) {
-    width: 100%;
-    padding: 0px;
-  }
-  .btn {
-    max-width: 100%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .topic-inner ul li {
-    width: 156px;
-    max-width: 156px;
-    height: 156px;
-    max-height: 156px;
-    margin: 0px 0px 10px 0px;
-  }
-  .topic-inner ul h3 {
-    text-align: center !important;
-  }
-  .topic-inner ul ._overflow-hidden-topic {
-    width: 100%;
-    height: auto;
-  }
-}/*# sourceMappingURL=base.css.map */.mega-menu-item-has-children > a.mega-menu-link > span.mega-indicator:after {
     content: "+";
   }
   #mega-menu-wrap-top #mega-menu-top li.mega-menu-item-has-children.mega-toggle-on > a.mega-menu-link > span.mega-indicator:after {
