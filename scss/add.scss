@@ -1,0 +1,419 @@
+.navigation-top {
+  background: #e5e5e5;
+}
+/*_____ navigation _____*/ 
+
+.main-mv {
+  .btn-box {
+    .btn {
+      font-size: 16px;
+      border-radius: 5px;
+
+      &:hover {
+        color: white;
+        opacity: 1;
+
+        &::after {
+          background-color: #F18F52;
+        }
+      }
+    }
+  }
+}
+
+.topic {
+  
+  .section-title {
+    color: #333;
+  }
+
+  .topic-inner {
+
+    .wrap_s {
+      justify-content: center;
+      gap: min(32px, 11vw);
+
+      li {
+        min-width: 312px;
+        min-height: fit-content;
+        margin: 0;
+        overflow: unset;
+
+        &:hover {
+          a {
+            opacity: unset;
+            
+            img {
+              transform: scale(1.1);
+            }
+          }
+
+          h3 {
+            color: #EE7744;
+          }
+
+          a {
+            ._overflow-hidden-topic {
+              &::after {
+                background-image: url(/wp-content/uploads/2025/03/arrow-right.png);
+                opacity: 1;
+              }
+            }
+          }
+        }
+
+        a {
+
+          ._overflow-hidden-topic {
+            position: relative;
+            &::after {
+              content: "";
+              position: absolute;
+              right: 20px;
+              bottom: 20px;
+              background-image: url(/wp-content/uploads/2025/03/download.png);
+              background-size: contain;
+              background-repeat: no-repeat;
+              width: 40px;
+              height: 40px;
+              opacity: .7;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*_____ topic _____*/ 
+
+.total-energy-solutions {
+  &::before {
+    content: " ";
+    display: block;
+    clear: both;
+    background: #3366AA14;
+    width: 1000px;
+    height: 600px;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    z-index: 0;
+  }
+
+  .content {
+    height: auto;
+
+    &.img-size {
+      overflow: unset;
+      
+      img {
+        box-shadow: 0px 0px 40px #00000033;
+      }
+    }
+  
+    &:nth-child(2) {
+      padding-top: 140px;
+
+      .border-solid-bottom-01 {
+        border-bottom: solid 1px #1b1b1b;
+      }
+    }
+
+  }
+
+  ._link_bt3_b {
+
+    a {
+      line-height: 1.5;
+      &:hover {
+        &::after {
+          background-color: #3D7ABB;
+        }
+      }
+    }
+  }
+}
+/*_____ total-energy-solutions _____*/ 
+
+.product {
+
+  .section-title {
+    color: #333;
+  }
+
+  .product-category {
+
+    .wrap_s {
+
+      li {
+
+        h4 {
+          font-size: 20px;
+        }
+
+        ._link_bt2 {
+          position: absolute;
+          bottom: 40px;
+        }
+      }
+    }
+  }
+
+  .banner1 {
+
+    .wrap_s {
+
+      li {
+        max-width: 312px;
+        @media screen and (max-width: 1054px) {
+          max-width: unset;
+          margin-bottom: 20px;
+        }
+
+        h4 {
+
+          a {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+/*_____ product _____*/ 
+
+.retailer-system {
+
+  ._right_contents {
+
+    img {
+      box-shadow: 0px 5px 20px #00000033;
+    }
+  }
+}
+/*_____ retailer-system _____*/
+
+.electricity-bill-service {
+  background: unset;
+  padding: 60px 0 140px;
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    background-image: url(/wp-content/uploads/2025/02/header.jpg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 55%;
+    z-index: -1;
+  }
+
+  h3 {
+    padding: 0;
+  }
+
+  .electricity-bill-service-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 118px;
+    &:first-of-type {
+      margin-bottom: 80px;
+    }
+
+    ._right_contents {
+
+      .btn {
+        @media screen and (max-width: 1054px) {
+          max-width: 226px;
+          margin-inline: auto;
+        }
+        &:hover {
+          opacity: unset;
+          &::after {
+            background-color: #F18F52;
+          }
+        }
+      }
+    }
+
+    ._left_contents {
+      box-shadow: 5px 5px 20px #00000033;
+      overflow: unset;
+      @media screen and (max-width: 1054px) {
+        max-width: 95%;
+        margin-inline: auto;
+      }
+
+      .item_box {
+        border: unset;
+        max-width: unset;
+        margin: unset;
+        
+        .item_link {
+  
+          &:hover {
+            border: unset;
+            outline: 2px solid white;
+            opacity: 1;
+  
+            .item_content {
+  
+              .item_image {
+  
+                img {
+                  scale: (1.1);
+                }
+              }
+            }
+            img {
+              transform: unset;
+            }
+          }
+  
+          .item_content {
+  
+            .item_image {
+  
+              img {
+                transition: all .5s ease;
+              }
+            }
+  
+            .item_mask {
+              transition: all .5s ease;
+              background-color: rgba(0, 0, 0, 0.5);
+  
+              .item_mask-text {
+  
+                img {
+                  max-width: 226px;
+                }
+              }
+  
+              .material-symbols-outlined {
+                color: white;
+                position: absolute;
+                bottom: 30px;
+                right: 30px;
+                font-weight: 200;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+/*_____ electricity-bill-service _____*/ 
+
+.press {
+
+  .topic-inner {
+
+    .wrap_s {
+
+      li {
+        height: fit-content;
+        &:hover {
+          ._overflow-hidden-topic {
+            ._right_bt {
+              opacity: .8;
+            }
+          }
+
+          a {
+            .press-title {
+              font-weight: bold;
+              color: #333;
+            }
+          }
+        }
+
+        ._overflow-hidden-topic {
+          position: relative;
+          height: fit-content;
+          margin-bottom: 20px;
+          height: 208px;
+
+          ._right_bt {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            background-image: url(/wp-content/uploads/2025/03/arrow-right.png);
+            background-repeat: no-repeat;
+            z-index: 99999999;
+            content: "";
+            width: 40px;
+            height: 40px;
+            background-size: contain;
+            opacity: 0;
+            transition: all .5s ease;
+          }
+
+          img {
+            height: 210px;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+
+        a {
+          .press-time {
+            display: block;
+            text-align: left;
+            color: #999;
+          }
+
+          .press-title {
+            font-weight: 400;
+          }
+        }
+
+        ._right_bt {
+
+          a {
+            top: unset;
+            bottom: 10px;
+            right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+/*_____ press _____*/ 
+
+/*_____ navigation _____*/ 
+
+/*_____ navigation _____*/ 
+
+/*_____ navigation _____*/ 
+
+/*_____ navigation _____*/ 
+
+/*_____ navigation _____*/ 
+
+/*_____ navigation _____*/ 
+
+/*_____ navigation _____*/ 
+
+/*_____ navigation _____*/ 
+
+/*_____ navigation _____*/ 
+
+/*_____ navigation _____*/ 
+
+/*_____ navigation _____*/ 
+
+/*_____ navigation _____*/ 
+
+/*_____ navigation _____*/ 
+
+
+
+

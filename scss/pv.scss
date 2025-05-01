@@ -1,0 +1,506 @@
+// ハンファジャパンのPV
+
+.popular_products_now {
+
+  h3 {
+    margin-bottom: 60px;
+  }
+
+  ._contents001 {
+    ._box1 {
+      .wrap_s {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: min(32px, 6vw);
+        margin-bottom: 80px;
+
+        li {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: fit-content;
+          margin-inline: auto;
+
+          img {
+            padding: 0;
+            margin-bottom: 30px;
+          }
+
+          .textarea {
+            display: flex;
+            flex-direction: column;
+
+            .title {
+              font-size: 20px;
+              font-weight: bold;
+              margin-bottom: 30px;
+            }
+  
+            .year {
+              font-size: 12px;
+              font-weight: bold;
+              margin-bottom: 20px;
+            }
+  
+            .caution {
+              font-size: 10px;
+              text-align: left;
+            }
+          }
+        }
+      }
+      
+      h3 {
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+      }
+    }
+  }
+}
+/*_____ popular_products_now _____*/ 
+
+
+._contents002 {
+  padding-block: 100px 160px !important;
+  margin-bottom: 0 !important;
+
+  h3 {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 70px;
+  }
+
+  ._contents002_inner {
+    display: unset !important;
+
+    .wrap {
+      position: relative;
+
+      .wrap_s {
+  
+        ._box1 {
+          max-width: unset !important;
+          width: min(60vw, 742px) !important;
+          height: 480px;
+    
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+          }
+        }
+      }
+  
+      ._box2 {
+        position: absolute;
+        right: 0;
+        width: 55vw;
+        max-width: 538px;
+        top: 30%;
+        padding-block: 70px 80px;
+        background: white;
+        padding-left: 86px;
+        box-shadow: 0px 0px 30px #00000033;
+        border-top: 10px solid #EE7744;
+
+        ._box2-title {
+          font-size: 16px;
+          font-weight: 400;
+          color: #333333;
+          text-align: left;
+          margin-bottom: 40px;
+        }
+
+        ._box2-text {
+          font-size: 20px;
+          text-align: left;
+          margin-bottom: 0;
+
+          .orange {
+            color: #EE7744;
+          }
+        }
+      }
+    }
+  }
+}
+/*_____ _contents002 _____*/
+
+
+.section-back {
+  position: relative;
+  z-index: 0;
+  padding-block: 90px 160px;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 366px;
+    height: 100%;
+    background-color: rgba(238, 119, 68, .08);
+  }
+  &::after {
+    content: "Hanwha Japan";
+    position: absolute;
+    z-index: -1;
+    top: 72px;
+    left: 0;
+    writing-mode: vertical-lr;
+    font-size: 120px;
+    color: white;
+    line-height: .8;
+  }
+
+
+  .section-title-area {
+    position: relative;
+    margin-bottom: 80px;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      background: #EE7744;
+      max-width: 1140px;
+      width: 90%;
+    }
+
+    h2 {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 22px;
+      .orange {
+        font-size: 32px;
+        color: #EE7744;
+      }
+    }
+  }
+
+  ._contents003 {
+    margin-bottom: 140px;
+
+    ._contents003_inner {
+
+      ._box1 {
+
+        .wrap_s {
+          height: 250px;
+          background: wheat;
+          margin-bottom: 40px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      ._box2 {
+
+        .wrap_s {
+          font-weight: 500;
+          .orange {
+            color: #EE7744;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  ._contents004 {
+    margin-bottom: 140px;
+
+    ._contents004_inner {
+
+      .wrap_s {
+        display: grid;
+        grid-template-columns: 3.7fr 1fr;
+        gap: 32px;
+
+        ._box1 {
+          height: 580px;
+          background: wheat;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        ._box2 {
+          align-self: end;
+          margin-bottom: 50px;
+          
+          p {
+            line-height: 1.4;
+            
+            .orange {
+              font-size: 20px;
+              font-weight: bold;
+              color: #EE7744;
+            }
+          }
+
+          .btn {
+            background: #3366aa;
+            &:hover {
+              &::after {
+                background: #3D7ABB;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  ._contents005 {
+    
+    ._contents005_inner {
+
+      .wrap {
+        position: relative;
+
+        .reason-list {
+          width: 100%;
+          max-width: 484px;
+          margin-bottom: 100px;
+
+          .reason-item {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+
+            .reason-link {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              &:hover {
+                .reason-text {
+                  color: #EE7744;
+                }
+                
+                .reason-detail {
+                  color: #666;
+                  font-weight: bold;
+                  &::before {
+                    right: -5px;
+                  }
+                }
+              }
+
+              .reason-text {
+                font-size: 20px;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+  
+                .num {
+                  font-family: "Figtree";
+                  font-size: 48px;
+                  font-weight: bold;
+                  font-style: italic;
+                  color: #EE7744;
+                  opacity: .5;
+                  margin-right: 33px;
+                }
+              }
+  
+              .reason-detail {
+                font-weight: 500;
+                color: #999;
+                position: relative;
+                padding-right: 15px;
+                &::before {
+                  content: '';
+                  width: 8px;
+                  height: 8px;
+                  border-top: solid 2px #999;
+                  border-right: solid 2px #999;
+                  position: absolute;
+                  right: 0px;
+                  top: 50%;
+                  transform: rotate(45deg) translateY(-50%);
+                  transition: all .5s ease;
+                }
+              }
+            }
+
+          }
+        }
+
+        .reason-img {
+          position: absolute;
+          top: -100px;
+          right: 0;
+          background: wheat;
+          width: min(538px, 45vw);
+          height: min(538px, 45vw);
+          z-index: -1;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .banner {
+
+        a {
+          display: block;
+          max-width: 828px;
+          margin-inline: auto;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+}
+/*_____ section-back _____*/
+
+
+
+._contents006 {
+  background: url(/wp-content/uploads/2025/02/header.jpg);
+  background-repeat: no-repeat;
+  padding-block: 80px;
+  margin-bottom: 100px;
+
+  .wrap_s {
+
+    h2 {
+      font-size: 32px;
+      font-weight: bold;
+      color: #000000;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+  
+  ._contents006_inner {
+
+    ._box1 {
+      width: 100%;
+      max-width: 828px;
+      margin-inline: auto;
+      padding-block: 60px;
+      padding-inline: 1em;
+      background: #FFFFFFB3 0% 0% no-repeat padding-box;
+      backdrop-filter: blur(8px);
+
+      .voice-list {
+        width: 100%;
+        max-width: 656px;
+        margin-inline: auto;
+
+        .voice-item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 25px;
+          gap: 32px;
+          position: relative;
+          &:nth-child(2) {
+            flex-direction: row-reverse;
+            &::after {
+              left: unset;
+              right: 70px;
+            }
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 20px;
+            left: 70px;
+            height: 1px;
+            width: 60%;
+            max-width: 400px;
+            background: #666;
+            z-index: -1;
+          }
+
+          img {
+            border-radius: 50%;
+            max-width: 140px;
+            max-height: 140px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            object-position: center;
+            box-shadow: 5px 5px 10px #0000004D;
+          }
+
+          .voice-text {
+            margin-bottom: 0;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1.6;
+          }
+        }
+      }
+
+      .next-more1 {
+        width: 100%;
+        max-width: 656px;
+        margin-inline: auto;
+        padding: 0;
+      }
+    }
+  }
+}
+/*_____ _contents006 _____*/
+
+
+._contents007 {
+
+  ._contents007_inner {
+
+    .wrap {
+
+      .wrap_s {
+  
+        ._box1 {
+  
+          ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 32px;
+  
+            li {
+              max-width: 312px;
+              
+              img {
+                width: 312px;
+                height: 226px;
+                object-fit: cover;
+                margin-bottom: 20px;
+                border-radius: 10px;
+              }
+  
+              .title {
+                margin-bottom: 15px;
+              }
+  
+              p {
+                font-size: 12px;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*_____ _contents007 _____*/

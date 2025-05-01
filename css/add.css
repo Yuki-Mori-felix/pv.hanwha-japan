@@ -1,0 +1,273 @@
+.navigation-top {
+  background: #e5e5e5;
+}
+
+/*_____ navigation _____*/
+.main-mv .btn-box .btn {
+  font-size: 16px;
+  border-radius: 5px;
+}
+.main-mv .btn-box .btn:hover {
+  color: white;
+  opacity: 1;
+}
+.main-mv .btn-box .btn:hover::after {
+  background-color: #F18F52;
+}
+
+.topic .section-title {
+  color: #333;
+}
+.topic .topic-inner .wrap_s {
+  justify-content: center;
+  gap: min(32px, 11vw);
+}
+.topic .topic-inner .wrap_s li {
+  min-width: 312px;
+  min-height: fit-content;
+  margin: 0;
+  overflow: unset;
+}
+.topic .topic-inner .wrap_s li:hover a {
+  opacity: unset;
+}
+.topic .topic-inner .wrap_s li:hover a img {
+  transform: scale(1.1);
+}
+.topic .topic-inner .wrap_s li:hover h3 {
+  color: #EE7744;
+}
+.topic .topic-inner .wrap_s li:hover a ._overflow-hidden-topic::after {
+  background-image: url(/wp-content/uploads/2025/03/arrow-right.png);
+  opacity: 1;
+}
+.topic .topic-inner .wrap_s li a ._overflow-hidden-topic {
+  position: relative;
+}
+.topic .topic-inner .wrap_s li a ._overflow-hidden-topic::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background-image: url(/wp-content/uploads/2025/03/download.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  opacity: 0.7;
+}
+
+/*_____ topic _____*/
+.total-energy-solutions::before {
+  content: " ";
+  display: block;
+  clear: both;
+  background: rgba(51, 102, 170, 0.0784313725);
+  width: 1000px;
+  height: 600px;
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  z-index: 0;
+}
+.total-energy-solutions .content {
+  height: auto;
+}
+.total-energy-solutions .content.img-size {
+  overflow: unset;
+}
+.total-energy-solutions .content.img-size img {
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
+}
+.total-energy-solutions .content:nth-child(2) {
+  padding-top: 140px;
+}
+.total-energy-solutions .content:nth-child(2) .border-solid-bottom-01 {
+  border-bottom: solid 1px #1b1b1b;
+}
+.total-energy-solutions ._link_bt3_b a {
+  line-height: 1.5;
+}
+.total-energy-solutions ._link_bt3_b a:hover::after {
+  background-color: #3D7ABB;
+}
+
+/*_____ total-energy-solutions _____*/
+.product .section-title {
+  color: #333;
+}
+.product .product-category .wrap_s li h4 {
+  font-size: 20px;
+}
+.product .product-category .wrap_s li ._link_bt2 {
+  position: absolute;
+  bottom: 40px;
+}
+.product .banner1 .wrap_s li {
+  max-width: 312px;
+}
+@media screen and (max-width: 1054px) {
+  .product .banner1 .wrap_s li {
+    max-width: unset;
+    margin-bottom: 20px;
+  }
+}
+.product .banner1 .wrap_s li h4 a {
+  font-size: 16px;
+}
+
+/*_____ product _____*/
+.retailer-system ._right_contents img {
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/*_____ retailer-system _____*/
+.electricity-bill-service {
+  background: unset;
+  padding: 60px 0 140px;
+  position: relative;
+  z-index: 0;
+}
+.electricity-bill-service::before {
+  content: "";
+  background-image: url(/wp-content/uploads/2025/02/header.jpg);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 55%;
+  z-index: -1;
+}
+.electricity-bill-service h3 {
+  padding: 0;
+}
+.electricity-bill-service .electricity-bill-service-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 118px;
+}
+.electricity-bill-service .electricity-bill-service-inner:first-of-type {
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 1054px) {
+  .electricity-bill-service .electricity-bill-service-inner ._right_contents .btn {
+    max-width: 226px;
+    margin-inline: auto;
+  }
+}
+.electricity-bill-service .electricity-bill-service-inner ._right_contents .btn:hover {
+  opacity: unset;
+}
+.electricity-bill-service .electricity-bill-service-inner ._right_contents .btn:hover::after {
+  background-color: #F18F52;
+}
+.electricity-bill-service .electricity-bill-service-inner ._left_contents {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  overflow: unset;
+}
+@media screen and (max-width: 1054px) {
+  .electricity-bill-service .electricity-bill-service-inner ._left_contents {
+    max-width: 95%;
+    margin-inline: auto;
+  }
+}
+.electricity-bill-service .electricity-bill-service-inner ._left_contents .item_box {
+  border: unset;
+  max-width: unset;
+  margin: unset;
+}
+.electricity-bill-service .electricity-bill-service-inner ._left_contents .item_box .item_link:hover {
+  border: unset;
+  outline: 2px solid white;
+  opacity: 1;
+}
+.electricity-bill-service .electricity-bill-service-inner ._left_contents .item_box .item_link:hover .item_content .item_image img {
+  scale: 1.1;
+}
+.electricity-bill-service .electricity-bill-service-inner ._left_contents .item_box .item_link:hover img {
+  transform: unset;
+}
+.electricity-bill-service .electricity-bill-service-inner ._left_contents .item_box .item_link .item_content .item_image img {
+  transition: all 0.5s ease;
+}
+.electricity-bill-service .electricity-bill-service-inner ._left_contents .item_box .item_link .item_content .item_mask {
+  transition: all 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.electricity-bill-service .electricity-bill-service-inner ._left_contents .item_box .item_link .item_content .item_mask .item_mask-text img {
+  max-width: 226px;
+}
+.electricity-bill-service .electricity-bill-service-inner ._left_contents .item_box .item_link .item_content .item_mask .material-symbols-outlined {
+  color: white;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-weight: 200;
+}
+
+/*_____ electricity-bill-service _____*/
+.press .topic-inner .wrap_s li {
+  height: fit-content;
+}
+.press .topic-inner .wrap_s li:hover ._overflow-hidden-topic ._right_bt {
+  opacity: 0.8;
+}
+.press .topic-inner .wrap_s li:hover a .press-title {
+  font-weight: bold;
+  color: #333;
+}
+.press .topic-inner .wrap_s li ._overflow-hidden-topic {
+  position: relative;
+  height: fit-content;
+  margin-bottom: 20px;
+  height: 208px;
+}
+.press .topic-inner .wrap_s li ._overflow-hidden-topic ._right_bt {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background-image: url(/wp-content/uploads/2025/03/arrow-right.png);
+  background-repeat: no-repeat;
+  z-index: 99999999;
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.press .topic-inner .wrap_s li ._overflow-hidden-topic img {
+  height: 210px;
+  object-fit: cover;
+  object-position: center;
+}
+.press .topic-inner .wrap_s li a .press-time {
+  display: block;
+  text-align: left;
+  color: #999;
+}
+.press .topic-inner .wrap_s li a .press-title {
+  font-weight: 400;
+}
+.press .topic-inner .wrap_s li ._right_bt a {
+  top: unset;
+  bottom: 10px;
+  right: 10px;
+}
+
+/*_____ press _____*/
+/*_____ navigation _____*/
+/*_____ navigation _____*/
+/*_____ navigation _____*/
+/*_____ navigation _____*/
+/*_____ navigation _____*/
+/*_____ navigation _____*/
+/*_____ navigation _____*/
+/*_____ navigation _____*/
+/*_____ navigation _____*/
+/*_____ navigation _____*/
+/*_____ navigation _____*/
+/*_____ navigation _____*/
+/*_____ navigation _____*//*# sourceMappingURL=add.css.map */

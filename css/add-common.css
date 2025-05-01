@@ -1,0 +1,253 @@
+@charset "UTF-8";
+/* パンくずリスト用CSS */
+#breadcrumb {
+  margin: auto;
+  max-width: 1000px;
+  margin-bottom: 65px;
+}
+#breadcrumb ul {
+  text-align: left;
+}
+#breadcrumb ul li {
+  display: inline; /*横並びにする*/
+  line-height: 20px; /*行間*/
+  font-size: 10px;
+  font-weight: 400;
+  margin-right: 5px;
+}
+#breadcrumb ul li:last-of-type {
+  color: #333;
+  font-weight: bold;
+}
+#breadcrumb ul li .fa-home {
+  color: #999;
+  margin-right: 5px;
+}
+#breadcrumb ul li a {
+  color: #999;
+}
+#breadcrumb ul li a:hover {
+  text-decoration: underline;
+}
+#breadcrumb ul li a span {
+  margin-right: 5px;
+}
+
+/*======================= END OF BREADCRUMB =======================*/
+footer#colophon ._inner {
+  margin-bottom: 40px;
+}
+footer#colophon ._inner ._contenner {
+  width: 98%;
+}
+footer#colophon ._inner ._contenner ._contenner_inner * {
+  all: unset;
+}
+footer#colophon ._inner ._contenner ._contenner_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer#colophon ._inner ._contenner ._contenner_inner ._logo a {
+  cursor: pointer;
+}
+footer#colophon ._inner ._contenner ._contenner_inner ._logo a img {
+  max-width: 140px;
+}
+footer#colophon ._inner ._contenner ._contenner_inner ._sns ul {
+  display: flex;
+  align-items: center;
+  gap: min(30px, 7vw);
+}
+footer#colophon ._inner ._contenner ._contenner_inner ._sns ul li a {
+  cursor: pointer;
+  height: 54px;
+  width: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer#colophon ._inner ._contenner ._contenner_inner ._sns ul li a:hover {
+  background: rgba(0, 0, 0, 0.1490196078);
+  border-radius: 50%;
+}
+footer#colophon ._inner ._contenner ._contenner_inner ._sns ul li:nth-child(1) a img {
+  max-width: 27px;
+}
+footer#colophon ._inner ._contenner ._contenner_inner ._sns ul li:nth-child(2) a img, footer#colophon ._inner ._contenner ._contenner_inner ._sns ul li:nth-child(3) a img {
+  max-width: 24px;
+}
+footer#colophon .wrap_s {
+  width: 96%;
+}
+footer#colophon .wrap_s .footer-buttom {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+}
+footer#colophon .wrap_s .footer-buttom .footer-menu {
+  width: unset;
+  padding: 0;
+}
+footer#colophon .wrap_s .footer-buttom .footer-menu h3 {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+footer#colophon .wrap_s .footer-buttom .footer-menu h3:has(.material-symbols-outlined) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer#colophon .wrap_s .footer-buttom .footer-menu h3:has(.material-symbols-outlined) a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer#colophon .wrap_s .footer-buttom .footer-menu h3:has(a):hover a {
+  color: #3366AA;
+  font-weight: bold;
+  opacity: unset;
+}
+footer#colophon .wrap_s .footer-buttom .footer-menu h3 .material-symbols-outlined {
+  font-size: 14px;
+}
+footer#colophon .wrap_s .footer-buttom .footer-menu ul li {
+  line-height: 1.4;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+footer#colophon .wrap_s .footer-buttom .footer-menu ul li a {
+  font-size: 12px;
+  font-weight: 400;
+}
+footer#colophon .wrap_s .footer-buttom .footer-menu ul li a:hover {
+  font-weight: bold;
+}
+footer#colophon .wrap_s .footer-buttom .footer-menu ul li a::after {
+  all: unset;
+}
+footer#colophon .wrap_s .footer-buttom .footer-menu ul li .material-symbols-outlined {
+  position: unset;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 2px;
+  margin-left: 5px;
+}
+footer#colophon ._fixed_button *,
+footer#colophon ._fixed_button *::before,
+footer#colophon ._fixed_button *::after {
+  all: unset;
+}
+footer#colophon ._fixed_button {
+  position: fixed;
+  z-index: 99;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.4);
+}
+@media screen and (max-width: 1054px) {
+  footer#colophon ._fixed_button {
+    display: none;
+  }
+}
+footer#colophon ._fixed_button .btn-box .btn {
+  width: 60px;
+  height: 140px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.4s ease;
+}
+footer#colophon ._fixed_button .btn-box .btn::after {
+  transition: all 0.4s ease;
+  background: #ee7744;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 140px;
+  transform: scale(0, 1);
+  transform-origin: right;
+  z-index: -1;
+}
+footer#colophon ._fixed_button .btn-box .btn:hover {
+  color: white;
+  z-index: 1;
+}
+footer#colophon ._fixed_button .btn-box .btn:hover::after {
+  transform: scale(1, 1);
+}
+footer#colophon ._fixed_button .btn1-box .btn1 {
+  color: #ee7744;
+  border-right: #ee7744 10px solid;
+  border-radius: 5px 0 0 0;
+  border-bottom: 1px solid #ccc;
+}
+footer#colophon ._fixed_button .btn1-box .btn1::after {
+  border-radius: 5px 0 0 0;
+}
+footer#colophon ._fixed_button .btn2-box .btn2 {
+  color: #3366AA;
+  border-right: #3366AA 10px solid;
+  border-bottom: 1px solid #ccc;
+}
+footer#colophon ._fixed_button .btn2-box .btn2::after {
+  background: #3366AA;
+}
+footer#colophon ._fixed_button .btn3-box .btn3 {
+  color: #999;
+  border-right: #999 10px solid;
+}
+footer#colophon ._fixed_button .btn3-box .btn3::after {
+  background: #999;
+}
+footer#colophon ._end {
+  display: block;
+  width: 100%;
+  background: white;
+  margin: 0;
+  padding-block: 18px 17px;
+}
+footer#colophon ._end .wrap_s {
+  display: flex;
+  justify-content: space-between;
+}
+footer#colophon ._end .wrap_s ._left-contents ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+footer#colophon ._end .wrap_s ._left-contents ul li {
+  font-size: 10px;
+  font-weight: 400;
+  padding: 0;
+  position: relative;
+  border: none;
+}
+footer#colophon ._end .wrap_s ._left-contents ul li:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 1px;
+  height: 20px;
+  background: #ccc;
+}
+footer#colophon ._end .wrap_s ._left-contents ul li a:hover {
+  text-decoration: underline;
+}
+footer#colophon ._end .wrap_s ._copyright {
+  font-size: 8px;
+  color: #999;
+}/*# sourceMappingURL=add-common.css.map */

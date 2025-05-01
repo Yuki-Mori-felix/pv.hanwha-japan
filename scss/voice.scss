@@ -1,0 +1,746 @@
+/*_____ お客様の声 アーカイブページ _____*/ 
+.archive-voice {
+  
+  .section-title {
+    font-size: 32px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 50px;
+  }
+
+  .post-filter-area {
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
+    background: #F5F5F5;
+    padding-block: 30px;
+
+    .voice-category-wrap {
+      width: 100%;
+      max-width: 1000px;
+      margin-inline: auto;
+
+
+      .voice-category-buttons {
+        display: flex;
+        margin-bottom: 0;
+        background: white;
+        width: fit-content;
+        border-radius: 35px;
+  
+        li {
+  
+          .filter-button {
+            background: unset;
+            color: #333333;
+            font-size: 14px;
+            border-radius: 35px;
+            
+            &.active {
+              color: white;
+              background: #666;
+
+              &:hover {
+                color: white;
+              }
+            }
+          }
+  
+          &:nth-child(2) {
+            .filter-button {
+              &:hover {
+                color: #EE7744;
+              }
+              &.active {
+                background: #EE7744;
+                &:hover {
+                  color: white;
+                }
+              }
+            }
+          }
+  
+          &:nth-child(3) {
+            .filter-button {
+              &:hover {
+                color: #3366AA;
+              }
+              &.active {
+                background: #3366AA;
+                &:hover {
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .voice-list-wrap {
+    width: 100%;
+    max-width: 1000px;
+    margin-inline: auto;
+    margin-top: 50px;
+
+    .voice-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+
+      .voice-item {
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px #00000029;
+
+        a {
+          position: relative;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .voice-item-textarea {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 1;
+            padding: 25px 20px 0;
+  
+            .voice-item-title {
+              font-size: 18px;
+              padding-bottom: 15px;
+            }
+            
+            .voice-item-address {
+              font-size: 12px;
+              text-align: right;
+              margin-bottom: 12px;
+              padding-top: 15px;
+              border-top: 1px solid #ddd;
+            }
+          }
+  
+          .voice-item-img {
+            aspect-ratio: 1/1;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+              border-radius: 0  0 10px 10px;
+            }
+          }
+
+          .voice-item-cat {
+            font-size: 10px;
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+            background: #EE7744;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 13px;
+
+            &:has(.solar-storage) {
+              background: #3366AA;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+/*_____ お客様の声 アーカイブページ _____*/
+
+
+/*_____ お客様の声 個別ページ _____*/
+.single-voice-title-area {
+  margin-bottom: 60px;
+
+  .wrap {
+    position: relative;
+    &::before {
+      content: "INSPIRATION";
+      color: #3366AA;
+      opacity: 0.05;
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      font-size: 80px;
+      line-height: 1;
+      transform: translateY(-50%);
+    }
+    &::after {
+      content: "";
+      height: 2px;
+      width: 90%;
+      max-width: 1280px;
+      background: #3366AA;
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      font-size: 80px;
+      line-height: 1;
+    }
+  }
+
+  .single-voice-title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #666;
+    letter-spacing: .1em !important;
+
+    .bold {
+      font-size: 32px;
+      font-weight: bold;
+      color: #3366AA;
+    }
+  }
+}
+
+.single-voice {
+  .section-title {
+    text-align: center;
+    color: #333;
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  .section-title-en {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 80px;
+  }
+
+  .voice-title {
+    font-size: 32px;
+    color: #fff;
+    background: transparent linear-gradient(90deg, #333333 0%, #767676 100%) 0% 0% no-repeat padding-box;
+    padding-block: 32px;
+    padding-left: 15px;
+    margin-bottom: 60px;
+  }
+
+  .voice-detail {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: min(120px, 10vw);
+    margin-bottom: 80px;
+
+    .voice-detail-imgs {
+
+      img {
+        aspect-ratio: 1/1;
+        width: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+        margin-bottom: 15px;
+      }
+
+      .voice-detail-address {
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+
+    .voice-detail-textarea {
+
+
+      .detail-head {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 20px;
+
+        img {
+          width: 100%;
+          max-width: 65px;
+        }
+
+        .detail-head-text {
+          .detail-head-title {
+            font-size: 20px;
+          }
+          .detail-head-title-en {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .status-list {
+
+        .status-item {
+          font-size: 14px;
+          display: flex;
+          grid-template-columns: 1fr 3.5fr;
+          gap: min(85px, 6vw);
+          padding-block: 20px;
+          border-bottom: 1px solid #ddd;
+          &:first-child {
+            border-top: 1px solid #ddd;
+          }
+
+          .status-title {
+            min-width: 90px;
+          }
+
+          .status-text {
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
+
+.problem {
+  position: relative;
+  padding-block: 95px 100px;
+  margin-bottom: 88px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #3366AA 0%, #CCCCCC 50%, #EE7744 100%);
+    opacity: 0.2; /* ここで背景のみ透過 */
+  }
+
+  .wrap {
+    
+    .wrap_s {
+      position: relative;
+
+      .problem-titles {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-content: center;
+        gap: 32px;
+        margin-bottom: 30px;
+
+        .problem-title {
+          font-size: 24px;
+          text-align: left;
+          color: #3366AA;
+          place-content: center;
+          padding-left: 50px;
+          &:nth-child(2) {
+            color: #EE7744;
+          }
+        }
+      }
+
+      .problem-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+
+        .problem-list {
+          background: white;
+          padding: 60px 50px;
+          border-radius: 10px;
+
+          .problem-item {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.inspiration {
+  padding-block: 0 80px;
+
+  .inspiration-content {
+
+    .inspiration-background {
+      background: linear-gradient(90deg, #f5f5f5 0%, #f5f5f5 60%, transparent 60%, transparent 100%);
+      padding-block: 60px;
+      &:first-child {
+        margin-bottom: 60px;
+      }
+      &:nth-child(2) {
+        background: linear-gradient(90deg, transparent 0%, transparent 40%, #f5f5f5 40%, #f5f5f5 100%);
+        .inspiration-textarea {
+          margin-right: 1em;
+          margin-left: 0 !important;
+        }
+      }
+
+      .wrap_s {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+
+        .inspiration-textarea {
+          max-width: 398px;
+          margin-left: 1em;
+  
+          .inspiration-title {
+            font-size: 20px;
+            border-bottom: 1px solid #666;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+          }
+  
+          .inspiration-text {
+            font-size: 13px;
+          }
+        }
+
+        .inspiration-img {
+          width: 100%;
+          max-width: 480px;
+          height: 100%;
+          max-height: 480px;
+          box-shadow: 0px 5px 20px #00000029;
+    
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+  
+    }
+  }
+}
+
+.benefit {
+  background: #F5F5F5;
+  padding-block: 80px;
+
+  .single-voice-title-area {
+    .wrap {
+      &::before {
+        content: "BENEFIT";
+        color: #EE7744;
+      }
+      &::after {
+        background: #EE7744;
+      }
+    }
+  
+    .single-voice-title {
+      .bold {
+        color: #EE7744;
+      }
+    }
+  }
+
+  .benefit-content {
+
+    .benefit-background {
+      background: linear-gradient(90deg, #fff 0%, #fff 60%, transparent 60%, transparent 100%);
+      padding-block: 60px;
+      &:first-child {
+        margin-bottom: 60px;
+      }
+      &:nth-child(2) {
+        background: linear-gradient(90deg, transparent 0%, transparent 40%, #fff 40%, #fff 100%);
+        .inspiration-textarea {
+          margin-right: 1em;
+          margin-left: 0 !important;
+        }
+      }
+
+      .wrap_s {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+
+        .benefit-textarea {
+          max-width: 398px;
+          margin-left: 1em;
+  
+          .benefit-title {
+            font-size: 20px;
+            border-bottom: 1px solid #666;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+          }
+  
+          .benefit-text {
+            font-size: 13px;
+          }
+        }
+
+        .benefit-img {
+          width: 100%;
+          max-width: 480px;
+          height: 100%;
+          max-height: 480px;
+          box-shadow: 0px 5px 20px #00000029;
+    
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+  
+    }
+  }
+}
+
+.message {
+  padding-block: 80px 130px;
+
+  .single-voice-title-area {
+    .wrap {
+      &::before {
+        content: "MESSAGE";
+        color: #88BBBB;
+        opacity: .1;
+      }
+      &::after {
+        background: #88BBBB;
+      }
+    }
+  
+    .single-voice-title {
+      .bold {
+        color: #88BBBB;
+      }
+    }
+  }
+
+  .message-content {
+
+    .message-background {
+      background: linear-gradient(90deg, #f5f5f5 0%, #f5f5f5 60%, transparent 60%, transparent 100%);
+      padding-block: 60px;
+
+      .wrap_s {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+
+        .message-textarea {
+          max-width: 398px;
+          margin-left: 1em;
+  
+          .message-title {
+            font-size: 20px;
+            border-bottom: 1px solid #666;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+          }
+  
+          .message-text {
+            font-size: 13px;
+          }
+        }
+
+        .message-img {
+          position: relative;
+          bottom: -100px;
+          box-shadow: 0px 5px 20px #00000029;
+          width: 100%;
+          max-width: 480px;
+          height: 100%;
+          max-height: 480px;
+    
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+  
+    }
+  }
+}
+
+.store-info {
+  background: #3366AA12;
+  padding-block: 80px 120px;
+
+  .section-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .wrap {
+
+    .wrap_s {
+      background: white;
+      padding: 80px 85px;
+
+      .store-info-title {
+        color: #3366AA;
+        background: #F5F5F5;
+        font-size: 24px;
+        padding-block: 32px 33px;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+
+      .store-info-content {
+        display: grid;
+        grid-template-columns: 1fr 2.5fr;
+        gap: min(118px, 11vw);
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 60px;
+        margin-bottom: 80px;
+
+        .store-info-img {
+          max-width: 140px;
+          width: 100%;
+          height: auto;
+          margin-inline: auto 0;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .store-info-textarea {
+
+          .company-name {
+            font-size: 24px;
+            margin-bottom: 30px;
+          }
+
+          .location,
+          .tel,
+          .site {
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            img {
+              object-fit: cover;
+            }
+          }
+
+          .location {
+            img {
+              width: 12px;
+              height: 18px;
+              margin-right: 10px;
+            }
+          }
+          .tel {
+            img {
+              width: 18px;
+              height: 18px;
+              margin-right: 4px;
+            }
+          }
+          .site {
+            margin-bottom: 35px;
+            img {
+              width: 15px;
+              height: 16px;
+              margin-right: 6px;
+            }
+            a {
+              color: #3366AA;
+              text-decoration: underline;
+            }
+          }
+
+          .sns-icons {
+            display: flex;
+            justify-content: left;
+            gap: 20px;
+
+            .sns-icon {
+              max-width: 30px;
+            }
+          }
+        }
+      }
+
+      .store-info-detail {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: 85px;
+
+        .store-info-detail-img {
+
+          img {
+            width: 100%;
+          }
+
+          .img-info {
+            font-size: 10px;
+            text-align: center;
+            margin-bottom: 50px;
+          }
+        }
+
+        .store-info-detail-text {
+          
+          p {
+            margin-bottom: 60px;
+            &:last-child {
+              margin-bottom: 40px;
+            }
+          }
+
+          .caution {
+            font-size: 10px;
+            font-weight: 400;
+          }
+        }
+      }
+
+      .green-alliance {
+        background: #F2FBF2;
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        gap: 30px;
+        margin-top: 80px;
+
+        .green-alliance-logo {
+          width: 140px;
+          height: 140px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .green-alliance-textarea {
+
+          .green-alliance-title {
+            font-size: 20px;
+          }
+
+          p {
+            font-size: 12px;
+          }
+
+          .green-alliance-link {
+            font-size: 14px;
+            text-align: center;
+            color: white;
+            display: block;
+            width: 140px;
+            background-color: #333;
+            padding-block: 10px;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+/*_____ お客様の声 個別ページ _____*/

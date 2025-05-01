@@ -1,0 +1,303 @@
+@charset "UTF-8";
+/*_____  _____*/
+.popular_products_now {
+  margin-bottom: 118px;
+}
+.popular_products_now .wrap_s .popular_products_category {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: min(32px, 2.5vw);
+  place-content: center;
+}
+.popular_products_now .wrap_s .popular_products_category .popular_products_item h4 {
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+}
+.popular_products_now .wrap_s .popular_products_category .popular_products_item img {
+  margin-bottom: 50px;
+}
+.popular_products_now .wrap_s .popular_products_category .popular_products_item h5 {
+  padding: 0;
+}
+.popular_products_now .wrap_s .popular_products_category .popular_products_item .btn {
+  display: block;
+  margin-inline: auto;
+  background: #3366AA;
+  color: white;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 312px;
+}
+.popular_products_now .wrap_s .popular_products_category .popular_products_item .btn:hover::after {
+  background: #3D7ABB;
+}
+
+/*_____ popular_products_now _____*/
+.section-back {
+  padding-block: 80px;
+  position: relative;
+  margin-bottom: 80px;
+  /*___ 共通 ___*/
+  /*___ create_electricity ___*/
+  /*___ store_electricity ___*/
+  /*___ use_electricity ___*/
+  /*___ sisytem ___*/
+}
+.section-back:has(.electricity)::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  width: 60%;
+  max-width: 796px;
+  height: 100%;
+  background-color: rgba(51, 102, 170, 0.08);
+  z-index: 0;
+}
+.section-back:has(.electricity)::after {
+  content: "PRODUCT";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 1;
+  color: white;
+  writing-mode: vertical-rl;
+  font-size: min(120px, 11vw);
+  letter-spacing: 4.8px;
+  line-height: 0.8;
+  opacity: 0.8;
+}
+.section-back:has(.system) {
+  margin-bottom: 100px;
+}
+.section-back:has(.system)::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  width: 60%;
+  max-width: 796px;
+  height: 100%;
+  background-color: rgba(238, 119, 68, 0.08);
+  z-index: 0;
+}
+.section-back:has(.system)::after {
+  content: "SYSTEM";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 1;
+  color: white;
+  writing-mode: vertical-rl;
+  font-size: min(120px, 11vw);
+  letter-spacing: 4.8px;
+  line-height: 0.8;
+  opacity: 0.8;
+}
+.section-back:has(.system) .main-title::after {
+  background: #EE7744;
+}
+.section-back:has(.system) .main-title .wrap_s {
+  position: relative;
+}
+.section-back:has(.system) .main-title .wrap_s h2 {
+  color: #EE7744;
+}
+.section-back:has(.system) .main-title .wrap_s .system-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #EE7744;
+  background: #F5F5F5;
+  padding-block: 11px 12px;
+  width: 226px;
+  text-align: center;
+  border: 1px solid #CCCCCC;
+}
+.section-back .main-title {
+  position: relative;
+  margin-bottom: 90px;
+  z-index: 2;
+}
+.section-back .main-title::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: #3366AA;
+  max-width: 1140px;
+  width: 90%;
+}
+.section-back .main-title h2 {
+  font-size: 48px;
+  color: #3366AA;
+  margin-bottom: 10px;
+}
+.section-back .electricity {
+  padding-block: 40px 70px;
+  margin-bottom: 60px;
+  position: relative;
+}
+.section-back .electricity h3 {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.section-back .electricity h3 span {
+  font-size: 48px;
+  font-weight: bold;
+}
+.section-back .create_electricity .electricity-content {
+  position: relative;
+  z-index: 2;
+}
+.section-back .create_electricity .electricity-content .create-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 226px);
+  place-content: center;
+  gap: min(32px, 2.5vw);
+}
+.section-back .create_electricity .electricity-content .create-list li {
+  width: unset;
+  padding: 20px 20px 0;
+  background: rgba(255, 255, 255, 0.7019607843) 0% 0% no-repeat padding-box;
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+}
+.section-back .create_electricity .electricity-content .create-list li:hover {
+  background: white;
+}
+.section-back .create_electricity .electricity-content .create-list li ._list {
+  width: 140px;
+  height: 50px;
+  margin-inline: auto;
+  margin-bottom: 10px;
+}
+.section-back .create_electricity .electricity-content .create-list li ._list img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section-back .create_electricity .electricity-content .create-list li h4 {
+  font-size: 16px;
+  margin-bottom: 17px;
+}
+.section-back .store_electricity {
+  background-image: url(/wp-content/uploads/2025/02/header.jpg);
+}
+.section-back .store_electricity h3 {
+  color: white;
+}
+.section-back .store_electricity .electricity-content {
+  width: 100%;
+  max-width: 484px;
+  height: 312px;
+  margin-inline: auto;
+  padding-block: 60px;
+  padding-inline: 1em;
+  background: rgba(255, 255, 255, 0.7019607843) 0% 0% no-repeat padding-box;
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.section-back .store_electricity .electricity-content:hover {
+  background: white;
+}
+.section-back .store_electricity .electricity-content ul li h4 {
+  text-align: center;
+  margin-bottom: 58px;
+}
+.section-back .store_electricity .electricity-content ul li img {
+  display: block;
+  margin-inline: auto;
+}
+.section-back .use_electricity {
+  background-image: url(/wp-content/uploads/2025/02/header.jpg);
+}
+.section-back .use_electricity .electricity-content ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  place-content: center;
+  gap: min(32px, 2.5vw);
+}
+.section-back .use_electricity .electricity-content ul li {
+  height: 312px;
+  overflow: hidden;
+  padding-top: 57px;
+  padding-inline: 1em;
+  background: rgba(255, 255, 255, 0.7019607843) 0% 0% no-repeat padding-box;
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.section-back .use_electricity .electricity-content ul li:hover {
+  background: white;
+}
+.section-back .use_electricity .electricity-content ul li h4 {
+  text-align: center;
+}
+.section-back .use_electricity .electricity-content ul li p {
+  position: relative;
+  margin-bottom: 0;
+  height: 150px;
+}
+.section-back .use_electricity .electricity-content ul li p img {
+  position: absolute;
+  top: 0;
+}
+.section-back .system .system-content {
+  position: relative;
+  z-index: 2;
+}
+.section-back .system .system-content .banner {
+  display: block;
+  max-height: 312px;
+}
+.section-back .system .system-content .banner img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*_____ section-back _____*/
+.products_that_generate_electricity_title .section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  border-bottom: unset;
+  margin-bottom: 40px;
+  padding: 0;
+}
+.products_that_generate_electricity_title .related_articles .related-post-wrap ul {
+  flex-wrap: wrap;
+  gap: min(32px, 11vw);
+  justify-content: center;
+  width: fit-content;
+}
+.products_that_generate_electricity_title .related_articles .related-post-wrap ul li {
+  width: 226px;
+  height: 226px;
+  padding: 0;
+  overflow: hidden;
+}
+.products_that_generate_electricity_title .related_articles .related-post-wrap ul li:hover img {
+  scale: 1.1;
+}
+.products_that_generate_electricity_title .related_articles .related-post-wrap ul li a {
+  height: fit-content;
+}
+.products_that_generate_electricity_title .related_articles .related-post-wrap ul li a img {
+  transition: all 0.5s ease;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*_____ products_that_generate_electricity_title _____*/
+/*_____  _____*//*# sourceMappingURL=product-list.css.map */

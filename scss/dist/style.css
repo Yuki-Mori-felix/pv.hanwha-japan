@@ -1,0 +1,1698 @@
+@charset "UTF-8";
+/*header*/
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap");
+.custom-header h1 {
+	display: none;
+}
+
+.page-header {
+	padding-bottom: 0em;
+}
+
+.site-navigation-fixed.navigation-top {
+	position: relative;
+	background: #fff;
+	top: 0px !important;
+}
+
+.n2-ss-slider-1.n2_ss__touch_element.n2-ow {
+	height: 100vh;
+}
+
+.header .nav {
+	padding: 7px 30px 7px 0px;
+	height: 34px;
+	margin: 0;
+}
+.header .nav li {
+	font-size: 12px;
+	padding: 0px 10px;
+}
+.header ul {
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	display: flex;
+	-webkit-justify-content: end;
+	justify-content: end;
+}
+
+.home .page-title {
+	display: none;
+}
+
+.logo {
+	position: absolute;
+	top: 40%;
+	left: 10px;
+	z-index: 999999;
+	width: 200px;
+	overflow: hidden;
+}
+.logo img {
+	max-width: 170px;
+	width: 170px;
+}
+
+.nav li:nth-child(1)::after,
+.nav li:nth-child(2)::after {
+	content: "";
+	background-image: url(/wp-content/uploads/2025/02/link.png) !important;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 0px;
+	height: 10px;
+	display: block;
+	float: right;
+	padding: 10px;
+	background-size: 10px;
+}
+
+.nav li:nth-child(3)::after {
+	content: "";
+	background-image: unset !important;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 0px;
+	height: 10px;
+	display: block;
+	float: right;
+	padding: 10px;
+	background-size: 10px;
+}
+
+.nav li a:last-child(3)::after {
+	content: "";
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 0px;
+	height: 10px;
+	display: block;
+	float: right;
+	padding: 10px;
+	background-size: 10px;
+}
+
+.site-branding {
+	padding: 10em 0;
+}
+
+/*MV*/
+.main-mv {
+	position: relative;
+}
+
+.main-catchphrase {
+	position: absolute;
+	left: unset;
+	top: unset;
+	margin-left: unset;
+	margin-top: unset;
+	color: #fff;
+	z-index: 999;
+}
+.main-catchphrase p {
+	font-size: 40px;
+}
+
+._mv_link_bt {
+	position: absolute;
+	left: 50%;
+	top: 80%;
+	margin-left: -120px;
+	margin-top: -100px;
+	color: #fff;
+	z-index: 999;
+	line-height: 0px;
+}
+._mv_link_bt p {
+	font-size: 30px;
+}
+._mv_link_bt a {
+	padding: 10px 35px;
+	border-radius: 10px;
+	background-color: #f77706;
+	color: #fff;
+}
+._mv_link_bt a:hover {
+	opacity: 0.8;
+}
+
+/*スクロールアニメーション*/
+.scroll_down {
+	position: absolute;
+	bottom: 50px;
+	right: 50%;
+	animation: arrowmove 1s ease-in-out infinite;
+}
+
+.scroll_down a {
+	position: absolute;
+	left: -24px;
+	bottom: 60px;
+	color: #fff;
+	font-size: 14px;
+	font-family: "Josefin Sans", sans-serif;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	width: 24px;
+	height: 24px;
+	text-decoration: none;
+}
+
+.text {
+	display: block;
+	margin-top: 30px;
+	margin-left: -14px;
+	font-size: 12px;
+	color: #fff;
+	text-transform: uppercase;
+	white-space: nowrap;
+	letter-spacing: 2px;
+}
+
+.arrow {
+	position: absolute;
+	width: 28px;
+	height: 5px;
+	opacity: 0;
+	transform: scale3d(0.5, 0.5, 0.5);
+	animation: move 3s ease-out infinite;
+}
+
+.arrow:first-child {
+	animation: move 3s ease-out 1s infinite;
+}
+
+.arrow:nth-child(2) {
+	animation: move 3s ease-out 2s infinite;
+}
+
+.arrow:before,
+.arrow:after {
+	content: " ";
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 51%;
+	background: #fff;
+}
+
+.arrow:before {
+	left: 0;
+	transform: skew(0deg, 30deg);
+}
+
+.arrow:after {
+	right: 0;
+	width: 50%;
+	transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+	25% {
+		opacity: 1;
+	}
+	33% {
+		opacity: 1;
+		transform: translateY(30px);
+	}
+	67% {
+		opacity: 1;
+		transform: translateY(40px);
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+	}
+}
+/*下層メインイメージ*/
+.custom-header {
+	height: 50vh;
+	overflow: hidden;
+}
+.custom-header h1 {
+	position: absolute;
+	left: 20%;
+	top: 45%;
+	color: #fff;
+	max-width: 1200px;
+	display: block;
+}
+.custom-header img {
+	width: 100%;
+}
+
+/*topic*/
+.topic {
+	text-align: center;
+}
+
+.topic-inner {
+	position: relative;
+}
+.topic-inner img {
+	height: auto;
+	transition: transform 0.4s ease;
+	/* ゆっくり変化させる */
+	width: 100vw;
+}
+.topic-inner img:hover {
+	transform: scale(1.1);
+	/* 拡大 */
+}
+.topic-inner ul {
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+.topic-inner ul li {
+	width: 312px;
+	height: 350px;
+	max-width: 33%;
+	overflow: hidden;
+	position: relative;
+}
+@media screen and (max-width: 1054px) {
+	.topic-inner ul li {
+		width: 312px;
+		height: 350px;
+		max-width: 33%;
+		overflow: hidden;
+		position: relative;
+	}
+}
+.topic-inner ul h3 {
+	text-align: left;
+	font-size: 16px;
+	padding: 10px 0px;
+}
+.topic-inner ul ._overflow-hidden-topic {
+	width: 312px;
+	height: 312px;
+	overflow: hidden;
+}
+
+._right_bt a {
+	position: absolute;
+	right: 20px;
+	top: 250px;
+	background-image: url(/wp-content/uploads/2025/03/download.png);
+	background-repeat: no-repeat;
+	z-index: 99999999;
+	content: "";
+	width: 40px;
+	height: 40px;
+	background-size: contain;
+	caret-color: currentcolor;
+}
+._right_bt a img {
+	max-width: 40px;
+	width: 40px;
+}
+
+._right_bt a:hover {
+	background-image: url(/wp-content/uploads/2025/03/arrow-right.png);
+}
+
+.next-more {
+	display: block;
+	right: 0px;
+	text-align: right;
+	padding: 10px 0px 120px;
+}
+
+.next-more1 {
+	display: block;
+	right: 0px;
+	text-align: right;
+	padding: 30px 0px 120px;
+	font: normal normal bold 16px/24px Noto Sans JP;
+	letter-spacing: 0.64px;
+	opacity: 1;
+}
+.next-more1 a {
+	color: #3366aa;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+}
+.next-more1 :after {
+	content: "";
+	background-image: url(/wp-content/uploads/2025/03/arrow-right.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	margin: 0px 0px 0px 10px;
+}
+
+.total-energy-solutions-img {
+	max-width: 50%;
+}
+
+/*mega menu*/
+#mega-menu-wrap-top,
+#mega-menu-wrap-top #mega-menu-top,
+#mega-menu-wrap-top #mega-menu-top ul.mega-sub-menu,
+#mega-menu-wrap-top #mega-menu-top li.mega-menu-item,
+#mega-menu-wrap-top #mega-menu-top li.mega-menu-row,
+#mega-menu-wrap-top #mega-menu-top li.mega-menu-column,
+#mega-menu-wrap-top #mega-menu-top a.mega-menu-link,
+#mega-menu-wrap-top #mega-menu-top span.mega-menu-badge,
+#mega-menu-wrap-top #mega-menu-top + button.mega-close {
+	line-height: 4.8;
+}
+
+/*nav*/
+.navigation-top .wrap {
+	max-width: 100%;
+	width: 100%;
+}
+
+/*total-energy-solutions*/
+.total-energy-solutions {
+	position: relative;
+	letter-spacing: 1.28px;
+}
+.total-energy-solutions p {
+	font-size: 12px;
+}
+@media screen and (max-width: 1054px) {
+	.total-energy-solutions p {
+		font-size: 14px;
+	}
+}
+.total-energy-solutions img {
+	max-width: 100%;
+	width: 100%;
+}
+.total-energy-solutions .img-size {
+	max-width: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+.total-energy-solutions .content {
+	float: left;
+	width: 50%;
+}
+.total-energy-solutions .content:nth-child(2) {
+	float: left;
+	width: 50%;
+	position: static;
+	padding: 100px;
+}
+.total-energy-solutions h3 {
+	color: #3366aa;
+	opacity: 1;
+}
+.total-energy-solutions ._link_bt3 {
+	left: unset;
+	padding: 0px;
+}
+
+.electricity-bill-service-inner._left_contents {
+	transition: transform 0.4s ease;
+	/* ゆっくり変化させる */
+}
+
+._left_contents:hover img {
+	transform: scale(1.1);
+	/* 拡大 */
+}
+
+/*製品・システム*/
+.product .section-inner,
+.product .section-title {
+	text-align: center;
+}
+
+.product ._left-contents {
+	height: 182px;
+	overflow: hidden;
+}
+
+.section-inner {
+	padding: 0px 0px 0px;
+}
+.section-inner .sub-title {
+	color: #666;
+}
+
+.product-category ul {
+	padding: 30px 0px 0px;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+.product-category li {
+	text-align: left;
+	width: 48%;
+	padding: 30px 30px;
+	background: #ddd;
+	margin: 20px 0px;
+	overflow: hidden;
+	background: linear-gradient(45deg, #fffdfe -16%, #e9e0f0 66%);
+}
+.product-category p {
+	line-height: 1.4em;
+}
+.product-category li:nth-child(1) {
+	height: 312px;
+}
+.product-category li:nth-child(2) {
+	height: 312px;
+}
+.product-category li:nth-child(3) {
+	height: 226px;
+	background-image: linear-gradient(90deg, #555555, black);
+}
+.product-category li:nth-child(3) a {
+	color: #fff;
+}
+.product-category li:nth-child(4) {
+	height: 226px;
+	background-image: linear-gradient(90deg, #555555, black);
+}
+.product-category li:nth-child(4) a {
+	color: #fff;
+}
+.product-category .product-photo1 {
+	position: absolute;
+	right: 0px;
+	top: 0%;
+	max-width: 50%;
+	width: 100%;
+	height: 100%;
+}
+.product-category .product-logo {
+	max-width: 200px;
+	overflow: hidden;
+	height: 100px;
+}
+.product-category .product-logo img {
+	max-width: 200px;
+	width: 100%;
+}
+
+/*各種バナー*/
+.banner1 {
+	margin: 20px 0px;
+}
+.banner1 ul {
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+.banner1 li {
+	text-align: left;
+	width: 33%;
+	height: 170px;
+	padding: 30px 30px;
+	background: #ddd;
+	margin: 1px;
+	position: relative;
+}
+.banner1 ._link_bt1 {
+	padding: 20px 0px;
+	position: absolute;
+	left: 30px;
+	bottom: -10px;
+}
+.banner1 .banner-photo1 {
+	position: absolute;
+	top: 0;
+	right: 0px;
+	width: 140px;
+	height: 170px;
+	overflow: hidden;
+}
+
+/*電気料金削減サービス*/
+.electricity-bill-service {
+	background: url(/wp-content/uploads/2025/02/header.jpg);
+	background-position-x: 400px;
+	background-repeat: no-repeat;
+	margin: 80px 0px;
+	padding: 50px 0px;
+}
+.electricity-bill-service h3 {
+	font-size: 32px;
+	text-align: center;
+	letter-spacing: 1.28px;
+	color: #333333;
+	opacity: 1;
+	padding: 100px 0px 60px;
+}
+.electricity-bill-service h4 {
+	font-size: 20px;
+}
+.electricity-bill-service p {
+	font-size: 12px;
+}
+@media screen and (max-width: 1054px) {
+	.electricity-bill-service p {
+		font-size: 14px;
+	}
+}
+
+.electricity-bill-service-inner {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 50px 0px;
+}
+.electricity-bill-service-inner .link-bt {
+	padding: 100px 0px;
+}
+.electricity-bill-service-inner .link-bt a {
+	color: #fff;
+	text-align: center;
+	background: #ff701e !important;
+	padding: 15px !important;
+	width: 226px !important;
+	height: 60px;
+	display: block;
+	border-radius: 10px;
+}
+.electricity-bill-service-inner ._left_contents {
+	width: 484px;
+	height: 272px;
+	overflow: hidden;
+}
+.electricity-bill-service-inner ._left_contents a:hover {
+	border: solid 2px #203aad;
+}
+.electricity-bill-service-inner ._right_contents {
+	width: 398px;
+	height: auto;
+	position: relative;
+}
+.electricity-bill-service-inner ._right_contents ._link_bt3 {
+	padding: 20px 0px;
+	left: 0px;
+	bottom: -10px;
+}
+
+._left_contents,
+._right_contents {
+	width: 90%;
+}
+
+/*販売店用システム*/
+.retailer-system {
+	position: relative;
+	padding: 50px 0px;
+}
+
+.retailer-system ._left_contents {
+	max-width: 650px;
+	height: 200px;
+	overflow: hidden;
+	text-align: left;
+	padding: 70px;
+	background: transparent linear-gradient(90deg, #333333 0%, #767676 100%) 0% 0%;
+}
+.retailer-system h3 {
+	font-size: 24px;
+	padding: 0px;
+	margin: 0px;
+	color: #fff;
+}
+.retailer-system p {
+	font-size: 16px;
+	color: #fff;
+}
+
+.retailer-system ._right_contents {
+	position: absolute;
+	right: 0px;
+	top: 100px;
+	width: 100%;
+	max-width: 100%;
+	text-align: right;
+}
+
+#colophon {
+	margin-top: 0px;
+	background: #f5f5f5;
+}
+#colophon ._inner {
+	background: #ddd;
+	padding: 10px 0px;
+	background: transparent linear-gradient(90deg, #333333 0%, #767676 100%) 0% 0%
+		no-repeat padding-box;
+}
+
+/*footer*/
+.fa-instagram:before {
+	font-size: 26px;
+}
+
+.fa-youtube:before {
+	font-size: 26px;
+}
+
+footer li {
+	font-size: 12px;
+	line-height: 24px;
+}
+footer ._backtop {
+	text-align: right;
+	padding: 10px;
+}
+footer ._backtop :after {
+	content: "";
+	background-image: url(/wp-content/uploads/2025/03/download.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	margin: 0px 0px 0px 10px;
+	transform: rotate(270deg);
+}
+footer ._backtop a {
+	color: #666666;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+}
+footer ._backtop ._inner {
+	background-color: #ddd;
+}
+footer .footer-menu h3 {
+	font-size: 16px;
+	border-bottom: solid 2px #ddd;
+	padding: 10px 0px;
+}
+footer .footer-menu li {
+	font-size: 12px;
+	line-height: 2.4;
+}
+footer ._copyright {
+	font-size: 12px;
+	text-align: right;
+	margin: 10px;
+	color: #bbb;
+}
+footer ._left-contents ul {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	margin: 0px 0px 0px 0px;
+	padding: 10px;
+}
+footer ._end {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 1000px;
+	margin: 0 auto;
+}
+footer ._end li {
+	text-align: center;
+}
+footer ._end li:nth-child(2) {
+	border-left: 1px #ddd solid;
+	padding-right: 180px;
+}
+footer .footer-buttom {
+	display: flex;
+	justify-content: space-evenly;
+}
+footer .footer-buttom div {
+	width: 33%;
+	padding: 0px 10px 0px 0px;
+}
+footer .footer-menu.products-menu {
+	width: 33%;
+}
+footer ._inner ._contenner {
+	max-width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+footer ._inner ._contenner ._logo {
+	width: 140px;
+	height: auto;
+	overflow: hidden;
+}
+footer ._inner ._contenner ._sns ul li:nth-child(1) {
+	position: absolute;
+	right: 10px;
+	top: 4px;
+	font-size: 12px;
+	padding: 15px;
+}
+footer ._inner ._contenner ._sns ul li:nth-child(2) {
+	position: absolute;
+	right: 55px;
+	top: 0px;
+	font-size: 12px;
+	padding: 15px;
+}
+footer ._inner ._contenner ._sns ul li:nth-child(3) {
+	position: absolute;
+	right: 100px;
+	top: 0px;
+	font-size: 12px;
+	padding: 15px;
+}
+footer ._inner ._contenner ._sns ul img {
+	max-width: 27px;
+	width: 100%;
+}
+
+.link-icon-002 a::after {
+	content: "";
+	background-image: url(/wp-content/uploads/2025/02/link.png) !important;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 0px;
+	height: 10px;
+	float: right;
+	padding: 10px;
+	background-size: 10px;
+}
+
+/*ボタン*/
+._mv_link_bt a {
+	font-size: 16px;
+	font-weight: bold;
+	background: #f37421;
+	padding: 30px;
+	margin: 10px 0px;
+	display: block;
+	width: 226px;
+	height: 60px;
+	text-align: center;
+	color: #fff;
+	line-height: 0px;
+}
+
+.content-inner {
+	position: relative;
+}
+
+.product-category li {
+	position: relative;
+}
+
+/*_link_bt*/
+._link_bt1,
+._link_bt2 {
+	display: block;
+	position: relative;
+}
+
+._link_bt1,
+._link_bt2 {
+	padding: 20px 20px;
+	position: absolute;
+	left: 0px;
+	bottom: -10px;
+}
+
+._link_bt1 a {
+	font-size: 16px;
+	font-weight: bold;
+	background: #3366aa;
+	padding: 20px;
+	margin: 10px 0px;
+	display: block;
+	width: 124px;
+	height: 24px;
+	text-align: center;
+	color: #fff;
+	border-radius: 30px;
+	line-height: 0px;
+	box-shadow: 0px 3px 6px #0000004d;
+}
+
+._link_bt2 a {
+	font-size: 16px;
+	font-weight: bold;
+	background: #f37421;
+	padding: 20px;
+	margin: 10px 0px;
+	display: block;
+	width: 124px;
+	height: 24px;
+	text-align: center;
+	color: #fff;
+	border-radius: 30px;
+	line-height: 0px;
+	box-shadow: 0px 3px 6px #0000004d;
+}
+
+._link_bt3 a {
+	font-size: 16px;
+	font-weight: bold;
+	background: #f37421;
+	padding: 30px;
+	margin: 10px 0px;
+	display: block;
+	width: 226px;
+	height: 60px;
+	text-align: center;
+	color: #fff;
+	line-height: 0px;
+	box-shadow: 0px 3px 6px #0000004d;
+	border-radius: 5px;
+}
+
+._link_bt3_b a {
+	background: #3366aa;
+}
+
+/*single*/
+.single-featured-image-header img {
+	display: none;
+}
+
+/*hover / 電気料金削減サービス*/
+.item_box * {
+	box-sizing: border-box;
+}
+
+.item_box {
+	width: 100%;
+	max-width: 100%;
+	/* 幅調整 */
+}
+
+.item_link {
+	display: block;
+}
+
+.item_content {
+	position: relative;
+	overflow: hidden;
+}
+
+.item_image img {
+	width: 484px;
+	height: 272px;
+	vertical-align: top;
+}
+
+.item_mask {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	opacity: 0;
+}
+
+.item_mask-text {
+	width: 100%;
+	padding: 0.5em;
+	font-size: 0.8em;
+	color: #fff;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+}
+
+.item_text {
+	margin-top: 10px;
+	text-align: center;
+}
+
+.item_box .item_link:hover .item_mask {
+	opacity: 1;
+}
+
+/* -fade-in */
+.item_box.-fade-in .item_mask {
+	transition: opacity 1s ease;
+}
+
+.btn {
+	position: relative;
+	display: block;
+	width: 226px;
+	height: 60px;
+	line-height: 60px;
+	text-decoration: none;
+	background-color: #f47522;
+	color: #fff;
+	text-align: center;
+	z-index: 2;
+	overflow: hidden;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3019607843);
+	border-radius: 5px;
+}
+
+.btn:hover {
+	color: #fff;
+}
+
+.btn::after,
+.btn::before {
+	position: absolute;
+	z-index: -1;
+	display: block;
+	content: "";
+	box-sizing: border-box;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+.btn:hover::after {
+	top: 0;
+	left: 0;
+	background-color: #f15a4a;
+}
+
+.btn::after {
+	top: 0;
+	left: -200px;
+	width: 100%;
+	height: 100%;
+}
+
+._footer_fixed_bt {
+	display: none;
+}
+
+@media screen and (max-width: 1054px) {
+	._footer_fixed_bt {
+		display: block;
+	}
+
+	.topic-inner ul li {
+		width: 33%;
+		max-width: 33%;
+	}
+
+	.total-energy-solutions .content {
+		float: none;
+		width: 100vw;
+	}
+
+	.total-energy-solutions .content:nth-child(2) {
+		width: 100vw;
+		padding: 0px;
+	}
+
+	.btn {
+		width: 100vw;
+	}
+
+	.next-more1 a {
+		justify-content: end;
+		align-items: end;
+	}
+
+	.product-category ul {
+		display: block;
+	}
+
+	.product-category li {
+		width: 100%;
+	}
+
+	.banner1 ul {
+		display: block;
+	}
+
+	.banner1 li {
+		width: 100%;
+	}
+
+	.electricity-bill-service-inner {
+		display: block;
+	}
+
+	.custom-header {
+		display: none !important;
+	}
+
+	.header .nav {
+		display: none;
+	}
+
+	body.mega-menu-top .navigation-top .wrap {
+		padding: 0px;
+	}
+
+	#mega-menu-wrap-top .mega-menu-toggle {
+		background: #fff;
+	}
+
+	#mega-menu-wrap-top
+		.mega-menu-toggle
+		.mega-toggle-block-0
+		.mega-toggle-animated-inner,
+	#mega-menu-wrap-top
+		.mega-menu-toggle
+		.mega-toggle-block-0
+		.mega-toggle-animated-inner::before,
+	#mega-menu-wrap-top
+		.mega-menu-toggle
+		.mega-toggle-block-0
+		.mega-toggle-animated-inner::after {
+		background-color: #000;
+	}
+
+	body.mega-menu-top .navigation-top nav {
+		margin-left: 0;
+		height: 60px;
+	}
+
+	.electricity-bill-service {
+		background: url(/wp-content/uploads/2025/02/header.jpg);
+		background-position-x: 300px;
+		background-repeat: no-repeat;
+	}
+
+	.electricity-bill-service-inner ._right_contents {
+		margin: 0 auto;
+		width: 95%;
+	}
+
+	.electricity-bill-service-inner ._left_contents {
+		width: 100%;
+		height: auto;
+		overflow: unset;
+		text-align: center;
+	}
+
+	.item_image img {
+		width: 100%;
+		height: auto;
+		vertical-align: top;
+	}
+
+	._footer_fixed_bt {
+		width: 100%;
+		position: fixed;
+		bottom: 0px;
+		background-color: #fff;
+		padding: 0px 0px 0px;
+		z-index: 999999999999;
+	}
+	._footer_fixed_bt ul {
+		display: flex;
+		justify-content: space-between;
+		margin: 0px;
+		background: #ddd;
+	}
+	._footer_fixed_bt li {
+		max-width: 30%;
+		width: 30%;
+	}
+	._footer_fixed_bt li:nth-child(1) {
+		background-color: #fff;
+		text-align: center;
+		padding: 20px;
+		border-bottom: 5px solid #ff701e;
+		box-shadow: 0px 0px 5px #000;
+	}
+}
+@media screen and (max-width: 1054px) and (max-width: 1054px) {
+	._footer_fixed_bt li:nth-child(1) {
+		font-size: 12px;
+	}
+}
+@media screen and (max-width: 1054px) {
+	._footer_fixed_bt li:nth-child(2) {
+		background-color: #fff;
+		text-align: center;
+		padding: 20px;
+		border-bottom: 5px solid #3366aa;
+		box-shadow: 0px 0px 5px #000;
+	}
+}
+@media screen and (max-width: 1054px) and (max-width: 1054px) {
+	._footer_fixed_bt li:nth-child(2) {
+		font-size: 12px;
+	}
+}
+@media screen and (max-width: 1054px) {
+	._footer_fixed_bt li:nth-child(3) {
+		background-color: #fff;
+		text-align: center;
+		padding: 20px;
+		border-bottom: 5px solid #777777;
+		box-shadow: 0px 0px 5px #000;
+	}
+}
+@media screen and (max-width: 1054px) and (max-width: 1054px) {
+	._footer_fixed_bt li:nth-child(3) {
+		font-size: 12px;
+	}
+}
+@media screen and (max-width: 1054px) {
+	.fa-envelope:before {
+		content: "";
+		color: #ff701e;
+		padding: 5px 0px;
+	}
+}
+@media screen and (max-width: 1054px) {
+	.fa-book-open:before {
+		content: "";
+		color: #3366aa;
+		padding: 5px 0px;
+	}
+}
+@media screen and (max-width: 1054px) {
+	.fa-calculator:before {
+		content: "";
+		color: #777;
+		padding: 5px 0px;
+	}
+}
+@media screen and (max-width: 1054px) {
+	._footer_fixed_bt a:nth-child(1) {
+		color: #1d1d1d;
+	}
+}
+@media screen and (max-width: 1054px) {
+	i.fa-solid.fa-envelope,
+	i.fa-solid.fa-book-open,
+	i.fa-solid.fa-calculator {
+		display: block;
+		padding: 5px 0px 0px 0px;
+	}
+}
+@media screen and (max-width: 1054px) {
+	._fixed_button {
+		display: none;
+	}
+}
+@media screen and (max-width: 1054px) {
+	.retailer-system ._right_contents {
+		position: static;
+		top: 260px;
+		overflow: hidden;
+		width: 100%;
+		margin-top: -40px;
+		text-align: center;
+	}
+}
+@media screen and (max-width: 1054px) {
+	.retailer-system ._left_contents {
+		max-width: 100%;
+		width: 100%;
+	}
+}
+@media screen and (max-width: 1054px) {
+	._end ._left-contents {
+		padding: 30px 0px;
+	}
+}
+@media screen and (max-width: 1054px) {
+	footer ._end li {
+		text-align: center;
+		width: 50%;
+	}
+}
+/*sp*/
+@media only screen and (max-width: 1054px) {
+	#mega-menu-wrap-top .mega-menu-toggle + #mega-menu-top {
+		right: -300px !important;
+		left: unset;
+	}
+}
+@media only screen and (max-width: 1054px) {
+	#mega-menu-wrap-top .mega-menu-toggle.mega-menu-open + #mega-menu-top {
+		right: 0 !important;
+		left: unset;
+	}
+}
+@media only screen and (max-width: 1054px) {
+	#mega-menu-wrap-top .mega-menu-toggle + #mega-menu-top {
+		position: fixed;
+		display: block;
+		width: 400px;
+		max-width: 100%;
+		height: 100vh;
+		max-height: 100vh;
+		top: 0;
+		left: 20%;
+		box-sizing: border-box;
+		transition: left 200msease-in-out, right 200msease-in-out,
+			visibility 200msease-in-out;
+		overflow-y: auto;
+		overflow-x: hidden;
+		z-index: 9999999999;
+		overscroll-behavior: contain;
+		visibility: hidden;
+	}
+
+	.main-catchphrase p {
+		font-size: 24px;
+		display: grid;
+		place-items: center;
+		height: 100vh;
+	}
+
+	.banner1 .banner-photo1 {
+		width: 50%;
+	}
+
+	#mega-menu-wrap-top
+		#mega-menu-top
+		li.mega-menu-item-has-children
+		> a.mega-menu-link
+		> span.mega-indicator:after {
+		content: "+";
+	}
+
+	#mega-menu-wrap-top
+		#mega-menu-top
+		li.mega-menu-item-has-children.mega-toggle-on
+		> a.mega-menu-link
+		> span.mega-indicator:after {
+		content: "-";
+	}
+}
+/*sp*/
+@media screen and (max-width: 860px) {
+	.topic-inner ul li {
+		position: relative;
+		width: 33%;
+		max-width: 33%;
+	}
+	.topic-inner ul h3 {
+		text-align: center !important;
+	}
+}
+@media screen and (max-width: 780px) {
+	.topic-inner ul li {
+		position: relative;
+		width: 49%;
+		max-width: 49%;
+	}
+	.topic-inner ul h3 {
+		text-align: center !important;
+	}
+}
+@media screen and (max-width: 480px) {
+	.topic-inner ul li {
+		width: 156px;
+		max-width: 156px;
+		height: 156px;
+		max-height: 156px;
+	}
+	.topic-inner ul h3 {
+		text-align: center !important;
+	}
+
+	.topic-inner ul ._overflow-hidden-topic {
+		width: 100%;
+		height: auto;
+	}
+}
+/*body*/
+body {
+	font-family: "Noto Sans JP", sans-serif !important;
+	font-optical-sizing: auto;
+	font-weight: bold !important;
+	font-style: normal;
+	letter-spacing: 1.28px;
+	transition-duration: 500ms;
+}
+
+/*commom*/
+.clearfix::after {
+	content: " ";
+	display: block;
+	clear: both;
+}
+
+.wrap {
+	max-width: 1280px;
+	width: 100%;
+}
+
+.wrap_s {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+p {
+	line-height: 2.4;
+}
+
+li,
+ul,
+ol {
+	list-style: none;
+}
+
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+ul {
+	font-family: "Noto Sans JP", sans-serif !important;
+}
+
+h3.section-title {
+	padding: 50px 0pc 0px 0px;
+	font: normal normal bold 32px/32px Figtree;
+	letter-spacing: 1.28px;
+	color: #3366aa;
+	opacity: 1;
+	line-height: 48px;
+}
+
+/*font*/
+.font_sz32 {
+	font-size: 32px;
+}
+
+.font_sz20 {
+	font-size: 20px;
+}
+
+.font_sz19 {
+	font-size: 19px;
+}
+
+.font_sz18 {
+	font-size: 18px;
+}
+
+.font_sz17 {
+	font-size: 17px;
+}
+
+.font_sz16 {
+	font-size: 16px;
+}
+
+.font_sz15 {
+	font-size: 15px;
+}
+
+.font_sz14 {
+	font-size: 14px;
+}
+
+.font_sz13 {
+	font-size: 13px;
+}
+
+.font_sz12 {
+	font-size: 12px;
+}
+
+/*text-align*/
+.text-align-l {
+	text-align: left;
+}
+
+/*display-frex*/
+.display-frex {
+	display: flex;
+}
+
+.justify-con {
+	justify-content: space-between;
+}
+
+/*position*/
+.position_re {
+	position: relative;
+}
+
+.position_ab {
+	position: absolute;
+}
+
+.position_st {
+	position: static;
+}
+
+/*solid*/
+.border-solid-bottom-01 {
+	border-bottom: solid 3px #ddd;
+	padding: 10px 0px;
+}
+
+/*link*/
+a:hover {
+	opacity: 0.8;
+}
+
+._right_bt a:hover {
+	opacity: 1;
+}
+
+/*nav*/
+.mv-btn {
+	background: #f3f3f3;
+	color: #ff701e;
+	overflow: hidden;
+	z-index: 1;
+	padding: 40px 20px;
+}
+
+.mv-btn2 {
+	background: #f3f3f3;
+	color: #ff701e;
+	overflow: hidden;
+	z-index: 1;
+	padding: 40px 20px;
+}
+
+/*サイドボタン*/
+.side_bt_position_01 {
+	font-size: 14px;
+	position: fixed;
+	height: 140px;
+	right: 0px;
+	bottom: 30.9%;
+	writing-mode: vertical-rl;
+	z-index: 9999999999 !important;
+}
+
+.side_bt_position_02 {
+	font-size: 14px;
+	position: fixed;
+	height: 140px;
+	right: 0px;
+	bottom: 15.5%;
+	writing-mode: vertical-rl;
+	z-index: 9999999999 !important;
+}
+
+.side_bt_position_03 {
+	font-size: 14px;
+	position: fixed;
+	height: 140px;
+	right: 0px;
+	bottom: 0px;
+	writing-mode: vertical-rl;
+	z-index: 9999999999 !important;
+}
+
+.slide_right_border_002 {
+	border-right: 5px solid #3366aa !important;
+}
+
+.slide_right_border_003 {
+	border-right: 5px solid #777777 !important;
+}
+
+.c-btn {
+	background: #ff701e;
+	border-right: 5px solid #ff701e;
+	border-radius: 0px;
+	color: #fff;
+	display: block;
+	font-weight: bold;
+	max-width: 300px;
+	padding: 15px 20px;
+	text-align: center;
+}
+
+.c-btn.slide {
+	box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.4);
+	background: #fff;
+	color: #ff701e;
+	overflow: hidden;
+	/*position: relative;*/
+	z-index: 1;
+}
+
+.c-btn.slide::after {
+	background: #ff701e;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 100%;
+	transform: scale(0, 1);
+	transform-origin: right top;
+	transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+	z-index: -1;
+}
+
+.c-btn.slide:hover {
+	color: #fff;
+}
+
+.c-btn.slide:hover::after {
+	transform: scale(1, 1);
+}
+
+/*カタログ請求*/
+.c-btn2 {
+	background: #3366aa;
+	border-right: 10px solid #ff701e;
+	border-radius: 0px;
+	color: #fff;
+	display: block;
+	font-weight: bold;
+	max-width: 300px;
+	padding: 15px 20px;
+	text-align: center;
+}
+
+.c-btn2.slide {
+	box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.4);
+	background: #fff;
+	color: #3366aa;
+	overflow: hidden;
+	/*position: relative;*/
+	z-index: 1;
+}
+
+.c-btn2.slide::after {
+	background: #3366aa;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 100%;
+	transform: scale(0, 1);
+	transform-origin: right top;
+	transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+	z-index: -1;
+}
+
+.c-btn2.slide:hover {
+	color: #fff;
+}
+
+.c-btn2.slide:hover::after {
+	transform: scale(1, 1);
+}
+
+/*お見積り請求書*/
+.c-btn3 {
+	background: #777777;
+	border-right: 10px solid #ff701e;
+	border-radius: 0px;
+	color: #fff;
+	display: block;
+	font-weight: bold;
+	max-width: 300px;
+	padding: 15px 20px;
+	text-align: center;
+}
+
+.c-btn3.slide {
+	box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.4);
+	background: #fff;
+	color: #777777;
+	overflow: hidden;
+	/*position: relative;*/
+	z-index: 1;
+}
+
+.c-btn3.slide::after {
+	background: #777777;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 100%;
+	transform: scale(0, 1);
+	transform-origin: right top;
+	transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+	z-index: -1;
+}
+
+.c-btn3.slide:hover {
+	color: #fff;
+}
+
+.c-btn3.slide:hover::after {
+	transform: scale(1, 1);
+}
+
+@media screen and (max-width: 1054px) {
+	footer .footer-buttom {
+		display: none;
+	}
+
+	footer ._end li:nth-child(2) {
+		border-left: 1px #ddd solid;
+		padding-right: 0px;
+	}
+
+	footer ._left-contents ul {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	footer ._end {
+		max-width: 100%;
+		display: block;
+	}
+
+	footer ._copyright {
+		text-align: center;
+	}
+
+	.logo {
+		top: 5%;
+	}
+
+	.topic-inner ul ._overflow-hidden-topic {
+		margin: 0 auto;
+	}
+
+	.topic-inner ul h3 {
+		text-align: left;
+		padding: 10px 9%;
+	}
+
+	.topic-inner li:nth-child(3) {
+		display: none;
+	}
+
+	.item_box {
+		width: 100%;
+		max-width: 95%;
+		margin: 0 auto;
+		border: solid 5px #fff;
+	}
+
+	h3.section-title {
+		font-size: 28px;
+		color: #000;
+	}
+}
