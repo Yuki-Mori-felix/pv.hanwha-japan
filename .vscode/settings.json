@@ -1,0 +1,7 @@
+{
+    "liveSassCompile.settings.useNewCompiler": false,
+    "compile-hero.disable-compile-files-on-did-save-code": false,
+    "liveSassCompile.settings.autoprefix": [
+        
+    ]
+}
