@@ -145,6 +145,24 @@ if (! function_exists('custom_breadcrumb')) {
       //添付ファイルページ ( $wp_obj : WP_Post )
       $post_title = apply_filters('the_title', $wp_obj->post_title);
       echo '<li><span>' . esc_html($post_title) . '</span></li>';
+
+    } elseif (is_single() && get_post_type() === 'voice') { // お客様インタビュー(個別ページ) パンくず表示調整
+
+      // 固定ページ "page-voice.php" を追加
+      $page_voice = get_page_by_path('voice');
+      if ($page_voice) {
+        echo '<li><a href="' . get_permalink($page_voice) . '"><span>' . esc_html($page_voice->post_title) . '</span></a> / </li>';
+      }
+
+      // 固定ページ "page-voice-interview.php" を追加
+      $page_voice_interview = get_page_by_path('voice/interview');
+      if ($page_voice_interview) {
+        echo '<li><a href="' . get_permalink($page_voice_interview) . '"><span>' . esc_html($page_voice_interview->post_title) . '</span></a> / </li>';
+      }
+
+      // 個別ページの投稿タイトルを表示
+      echo '<li><span>' . esc_html(get_the_title()) . '</span></li>';
+  
     } elseif (is_single()) {
 
       //投稿ページ ( $wp_obj : WP_Post )
