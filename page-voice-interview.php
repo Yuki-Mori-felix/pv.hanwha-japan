@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: お客様の声(インタビュー)
+Template Name: お客様インタビュー
 */
 
 /**
