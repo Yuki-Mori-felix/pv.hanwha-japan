@@ -89,9 +89,9 @@ function add_custom_post()
     array(
       'label' => 'お客様インタビュー',
       'public' => true,
-      'has_archive' => true,
       'show_in_rest' => true,
       'menu_position' => 5,
+      'rewrite' => array('slug' => 'voice/interview'), // URL「voice」の下層に表示
       'supports' => array(
         'title',
         'editor',
