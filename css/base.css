@@ -162,14 +162,14 @@
 }
 ._product ._title_text h2 {
   font-size: clamp(3rem, 2.8438rem + 0.5vw, 3.125rem);
-  color: #3366AA;
+  color: #3366aa;
   text-align: left;
   max-width: 1000px;
   width: 100%;
   margin: 20px auto;
 }
 ._product ._title_text span {
-  border-bottom: solid 2px #3366AA;
+  border-bottom: solid 2px #3366aa;
   display: block;
 }
 ._product ._product_back {
@@ -210,12 +210,13 @@
   color: #fff;
   display: inline-block;
   background: linear-gradient(281deg, #ffffff 0%, #fefeff 40%, rgba(255, 255, 255, 0.5803921569) 80%);
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: 12;
 }
 
-._product_contents2, ._product_contents3, ._product_contents4 {
+._product_contents2,
+._product_contents3,
+._product_contents4 {
   max-width: 100%;
   width: 100%;
   padding: 100px 0px;
@@ -270,7 +271,12 @@
 
 /*商品詳細*/
 /*アコーディオン*/
-.btn-more, .btn-more2, .btn-more, .btn-more3, .btn-more4, .btn-more1 {
+.btn-more,
+.btn-more2,
+.btn-more,
+.btn-more3,
+.btn-more4,
+.btn-more1 {
   width: 100%;
   text-align: center;
   background-color: #fff;
@@ -282,7 +288,11 @@
   border: solid 1px #ddd;
 }
 
-.btn-more::after, .btn-more2::after, .btn-more3::after, .btn-more4::after, .btn-more1::after {
+.btn-more::after,
+.btn-more2::after,
+.btn-more3::after,
+.btn-more4::after,
+.btn-more1::after {
   font-family: "Material Symbols Outlined";
   content: "↑";
   font-size: 20px;
@@ -293,11 +303,19 @@
   display: block;
 }
 
-.btn-more.close::after, .btn-more2.close::after, .btn-more3.close::after, .btn-more4.close::after, .btn-more1.close::after {
+.btn-more.close::after,
+.btn-more2.close::after,
+.btn-more3.close::after,
+.btn-more4.close::after,
+.btn-more1.close::after {
   transform: rotate(0deg);
 }
 
-.dropdown, .dropdown2, .dropdown3, .dropdown4, .dropdown1 {
+.dropdown,
+.dropdown2,
+.dropdown3,
+.dropdown4,
+.dropdown1 {
   background-color: #fff;
 }
 
@@ -341,7 +359,7 @@
   padding: 0;
 }
 ._product_details ._inner ._explanation {
-  color: #3366AA;
+  color: #3366aa;
   font-size: 24px;
   padding: 10px 0px;
 }
@@ -370,19 +388,23 @@
   padding: 10px;
   padding: 0px 30px;
 }
-._product_details ._inner ._size ul, ._product_details ._inner ._weight ul {
+._product_details ._inner ._size ul,
+._product_details ._inner ._weight ul {
   display: flex;
   justify-content: start;
   padding: 0px 10px;
 }
-._product_details ._inner ._size ul li, ._product_details ._inner ._weight ul li {
+._product_details ._inner ._size ul li,
+._product_details ._inner ._weight ul li {
   width: 48%;
 }
-._product_details ._inner ._size ._pdf_bt, ._product_details ._inner ._weight ._pdf_bt {
+._product_details ._inner ._size ._pdf_bt,
+._product_details ._inner ._weight ._pdf_bt {
   padding: 10px 10px;
   text-align: center;
 }
-._product_details ._inner ._size ._pdf_bt li a:nth-child(1), ._product_details ._inner ._weight ._pdf_bt li a:nth-child(1) {
+._product_details ._inner ._size ._pdf_bt li a:nth-child(1),
+._product_details ._inner ._weight ._pdf_bt li a:nth-child(1) {
   max-width: 100%;
   width: 100%;
   color: #fff;
@@ -392,12 +414,14 @@
   border-radius: 30px;
   display: block;
 }
-._product_details ._inner ._size ._pdf_bt ._02 a, ._product_details ._inner ._weight ._pdf_bt ._02 a {
+._product_details ._inner ._size ._pdf_bt ._02 a,
+._product_details ._inner ._weight ._pdf_bt ._02 a {
   color: #ff701e !important;
   background: #fff !important;
   border: solid 1px !important;
 }
-._product_details ._inner ._size ._pdf_bt ._03 a, ._product_details ._inner ._weight ._pdf_bt ._03 a {
+._product_details ._inner ._size ._pdf_bt ._03 a,
+._product_details ._inner ._weight ._pdf_bt ._03 a {
   color: #000 !important;
   background: #fff !important;
   border: none !important;
@@ -424,7 +448,7 @@
   font-size: clamp(1.25rem, 1.2117rem + 0.1361vw, 1.375rem);
   color: #000000;
   text-align: center;
-  border-bottom: 2px #3366AA solid;
+  border-bottom: 2px #3366aa solid;
   padding-bottom: 30px;
   padding: 30px 0px;
 }
@@ -576,7 +600,8 @@ h2.head-border.text-line-right {
   padding: 10px;
 }
 
-.nav li:nth-child(1)::after, .nav li:nth-child(2)::after {
+.nav li:nth-child(1)::after,
+.nav li:nth-child(2)::after {
   content: "";
   background-image: url(/wp-content/uploads/2025/02/link.png) !important;
   background-repeat: no-repeat;
@@ -853,7 +878,7 @@ h2.head-border.text-line-right {
   opacity: 1;
 }
 .next-more1 a {
-  color: #3366AA;
+  color: #3366aa;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -874,7 +899,15 @@ h2.head-border.text-line-right {
 }
 
 /*mega menu*/
-#mega-menu-wrap-top, #mega-menu-wrap-top #mega-menu-top, #mega-menu-wrap-top #mega-menu-top ul.mega-sub-menu, #mega-menu-wrap-top #mega-menu-top li.mega-menu-item, #mega-menu-wrap-top #mega-menu-top li.mega-menu-row, #mega-menu-wrap-top #mega-menu-top li.mega-menu-column, #mega-menu-wrap-top #mega-menu-top a.mega-menu-link, #mega-menu-wrap-top #mega-menu-top span.mega-menu-badge, #mega-menu-wrap-top #mega-menu-top + button.mega-close {
+#mega-menu-wrap-top,
+#mega-menu-wrap-top #mega-menu-top,
+#mega-menu-wrap-top #mega-menu-top ul.mega-sub-menu,
+#mega-menu-wrap-top #mega-menu-top li.mega-menu-item,
+#mega-menu-wrap-top #mega-menu-top li.mega-menu-row,
+#mega-menu-wrap-top #mega-menu-top li.mega-menu-column,
+#mega-menu-wrap-top #mega-menu-top a.mega-menu-link,
+#mega-menu-wrap-top #mega-menu-top span.mega-menu-badge,
+#mega-menu-wrap-top #mega-menu-top + button.mega-close {
   line-height: 4.8;
 }
 
@@ -923,7 +956,7 @@ h2.head-border.text-line-right {
   z-index: 6;
 }
 .total-energy-solutions h3 {
-  color: #3366AA;
+  color: #3366aa;
   opacity: 1;
 }
 .total-energy-solutions ._link_bt3 {
@@ -940,7 +973,8 @@ h2.head-border.text-line-right {
 }
 
 /*Products/Systems*/
-.product .section-inner, .product .section-title {
+.product .section-inner,
+.product .section-title {
   text-align: center;
 }
 
@@ -1123,7 +1157,8 @@ h2.head-border.text-line-right {
   bottom: -10px;
 }
 
-._left_contents, ._right_contents {
+._left_contents,
+._right_contents {
   width: 90%;
 }
 
@@ -1340,7 +1375,8 @@ footer ._inner ._contenner ._sns ul img {
 }
 
 /*_link_bt*/
-._link_bt1, ._link_bt2 {
+._link_bt1,
+._link_bt2 {
   display: block;
   position: relative;
 }
@@ -1578,7 +1614,9 @@ footer ._inner ._contenner ._sns ul img {
   #mega-menu-wrap-top .mega-menu-toggle {
     background: #ffffff;
   }
-  #mega-menu-wrap-top .mega-menu-toggle .mega-toggle-block-0 .mega-toggle-animated-inner, #mega-menu-wrap-top .mega-menu-toggle .mega-toggle-block-0 .mega-toggle-animated-inner::before, #mega-menu-wrap-top .mega-menu-toggle .mega-toggle-block-0 .mega-toggle-animated-inner::after {
+  #mega-menu-wrap-top .mega-menu-toggle .mega-toggle-block-0 .mega-toggle-animated-inner,
+  #mega-menu-wrap-top .mega-menu-toggle .mega-toggle-block-0 .mega-toggle-animated-inner::before,
+  #mega-menu-wrap-top .mega-menu-toggle .mega-toggle-block-0 .mega-toggle-animated-inner::after {
     background-color: #000;
   }
   body.mega-menu-top .navigation-top nav {
@@ -1665,7 +1703,9 @@ footer ._inner ._contenner ._sns ul img {
   ._footer_fixed_bt a:nth-child(1) {
     color: #1d1d1d;
   }
-  i.fa-solid.fa-envelope, i.fa-solid.fa-book-open, i.fa-solid.fa-calculator {
+  i.fa-solid.fa-envelope,
+  i.fa-solid.fa-book-open,
+  i.fa-solid.fa-calculator {
     display: block;
     padding: 5px 0px 0px 0px;
   }
@@ -1848,14 +1888,16 @@ footer ._inner ._contenner ._sns ul img {
   display: none;
 }
 
-.Label { /*タイトル*/
+.Label {
+  /*タイトル*/
   padding: 1em;
   display: block;
   color: #fff;
   background: #019ac6;
 }
 
-.Label::before { /*タイトル横の矢印*/
+.Label::before {
+  /*タイトル横の矢印*/
   content: "";
   width: 6px;
   height: 6px;
@@ -1876,14 +1918,16 @@ footer ._inner ._contenner ._sns ul img {
   transition: all 0.3s;
 }
 
-.content { /*本文*/
+.content {
+  /*本文*/
   height: 0;
   margin-bottom: 10px;
   padding: 0 20px;
   overflow: hidden;
 }
 
-.toggle:checked + .Label + .content { /*開閉時*/
+.toggle:checked + .Label + .content {
+  /*開閉時*/
   height: auto;
   padding: 20px;
   transition: all 0.3s;
@@ -1937,7 +1981,7 @@ footer ._inner ._contenner ._sns ul img {
 ._qcells_features ._title h3 {
   font-size: clamp(2rem, 1.9617rem + 0.1361vw, 2.125rem);
   position: relative;
-  color: #3366AA;
+  color: #3366aa;
   background: #ddd;
   padding: 25px 140px;
 }
@@ -1962,7 +2006,7 @@ footer ._inner ._contenner ._sns ul img {
 ._qcells_features2 h3 {
   font-size: clamp(2rem, 1.9617rem + 0.1361vw, 2.125rem);
   position: relative;
-  color: #3366AA;
+  color: #3366aa;
   background: #ddd;
   padding: 25px 140px;
 }
@@ -2020,7 +2064,7 @@ footer ._inner ._contenner ._sns ul img {
 ._qcells_features3 h3 {
   font-size: clamp(2rem, 1.9617rem + 0.1361vw, 2.125rem);
   position: relative;
-  color: #3366AA;
+  color: #3366aa;
   background: #ddd;
   padding: 25px 140px;
 }
@@ -2143,7 +2187,7 @@ footer ._inner ._contenner ._sns ul img {
 ._qcells_features ._title h3 {
   font-size: clamp(2rem, 1.9617rem + 0.1361vw, 2.125rem);
   position: relative;
-  color: #3366AA;
+  color: #3366aa;
   background: #ddd;
   padding: 25px 140px;
 }/*# sourceMappingURL=base.css.map */
