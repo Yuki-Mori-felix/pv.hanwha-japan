@@ -89,7 +89,7 @@
   </div>
 
 </footer>
-
+-
 
 
 </div><!-- .site-content-contain -->
@@ -99,7 +99,7 @@
 
 </body>
 <?php 
-if (is_archive('voice') || is_page('voice')) {
+if (is_page('voice') || is_page('interview')) {
   echo '<script src="' . get_stylesheet_directory_uri() . '/js/voice.js"></script>';
 }
 ?>
