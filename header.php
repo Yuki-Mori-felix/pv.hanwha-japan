@@ -11,13 +11,14 @@
   <!--style.css-->
   <?php if (is_front_page() || is_home() ) : ?>
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/add.css'>
-  <?php elseif (is_page('voice') || is_archive('voice') || is_singular('voice')) : ?>
+  <?php elseif (is_page('voice') || is_page('interview') || is_singular('voice')) : ?>
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/voice.css'>
   <?php elseif (is_page('pv')) : ?>
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/pv.css'>
   <?php elseif (is_page('product-list')) : ?>
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/product-list.css'>
   <?php endif; ?>
+  <!--style.css-->
 
   <!--font-icon-->
   <link href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" rel="stylesheet">
