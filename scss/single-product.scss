@@ -15,9 +15,7 @@ body {
 		height: 720px;
 	}
 	&.product-template-single-product-1-php::before {
-		background: transparent
-			linear-gradient(180deg, #3366aa 0%, transparent 100%) 0% 0% no-repeat
-			padding-box;
+		background: transparent linear-gradient(180deg, #3366aa 0%, transparent 100%) 0% 0% no-repeat padding-box;
 	}
 	.site-content-contain {
 		background-color: transparent;
@@ -895,21 +893,32 @@ main.single-products {
 						}
 					}
 					.name {
-						display: flex;
-						justify-content: space-between;
-						align-items: center;
-						margin-top: 50px;
-						padding-bottom: 10px;
+						position: relative;
+						margin-top: 40px;
 						border-bottom: solid 1px var(--col-black);
-						.txt {
-							font-weight: var(--fw-bold);
-						}
-						.triangle {
+						&::after {
+							content: "";
+							position: absolute;
+							top: 20px;
+							right: 1px;
 							display: block;
 							width: 12px;
 							height: 10px;
 							background-color: var(--col-black);
 							clip-path: polygon(0 0, 100% 0, 50% 100%);
+						}
+						.select-product-name {
+							cursor: pointer;
+							width: 100%;
+							margin: 0;
+							padding: 0;
+							border: none;
+							font-weight: var(--fw-bold);
+							-webkit-appearance: none; /* ベンダープレフィックス(Google Chrome、Safari用) */
+							-moz-appearance: none; /* ベンダープレフィックス(Firefox用) */
+							&::-ms-expand {
+								display: none; /* select要素のデザインを無効にする（IE用） */
+							}
 						}
 					}
 					.more {
