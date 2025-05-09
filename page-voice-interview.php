@@ -2,23 +2,15 @@
 /*
 Template Name: お客様インタビュー
 */
-
-/**
- * The template for displaying archive pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
- * @version 1.0
- */
-
 get_header();
 ?>
-<div class="mv" style="height: 420px; width: 100%; background: wheat; text-align: center;">
-  mv
+
+<div class="mv_for_page interview" style="background-image: url(<?php the_field('fv_page_img'); ?>)">
+  <h2><?php the_title(); ?></h2>
+  <span class="sub-title"><?php the_field('interview_page_catch'); ?></span>
 </div>
+<!--========== MV ==========-->
+
 <div class="wrap">
   <div class="wrap_s">
     <?php custom_breadcrumb(); ?>
@@ -75,22 +67,31 @@ get_header();
                   <a href="<?= the_permalink() ?>">
                     <div class="voice-item-textarea">
                       <div class="voice-item-title"><?= the_field('voice_title') ?></div>
-                      <div class="voice-item-address"><?= the_field('voice_address') ?></div>
+                      <div class="voice-item-address"><?= the_title() ?></div>
                     </div>
                     <div class="voice-item-img"><img src="<?= get_field('voice_img')['url'] ?>" alt="<?= get_field('voice_img')['alt'] ?>"></div>
                     <div class="voice-item-cat">
                       <?php
-                      // カスタムタクソノミーが使用されている場合
-                      $terms = get_the_terms(get_the_ID(), 'voice-cat'); // 'voice-cat' がカスタムタクソノミー名
+                      // 任意のクラス名を対応付けるためのマッピング配列
+                      $category_classes = array(
+                        '太陽光発電システム' => 'solar',
+                        '太陽光発電システム+蓄電システム' => 'solar-storage', // この行を追加
+                      );
+
+                      // カテゴリを取得
+                      $terms = get_the_terms(get_the_ID(), 'voice-cat');
 
                       if (!empty($terms)) {
                         foreach ($terms as $term) {
-                          echo '<a href="' . esc_url(get_term_link($term)) . '" class="category-link">' . esc_html($term->name) . '</a>';
+                          // タクソノミー名から対応するクラス名を取得
+                          $class_name = isset($category_classes[$term->name]) ? $category_classes[$term->name] : 'class-default';
+                          echo '<span class="' . esc_attr($class_name) . ' category-link">' . esc_html($term->name) . '</span>';
                         }
                       } else {
-                        echo '<span>カテゴリなし</span>';
+                        echo '<span class="no-category">カテゴリなし</span>';
                       }
                       ?>
+
                     </div>
 
                   </a>

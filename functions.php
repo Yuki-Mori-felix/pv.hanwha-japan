@@ -396,7 +396,7 @@ function filter_voice_posts()
         <a href="<?php the_permalink(); ?>">
           <div class="voice-item-textarea">
             <div class="voice-item-title"><?php the_field('voice_title'); ?></div>
-            <div class="voice-item-address"><?= the_field('voice_address') ?></div>
+            <div class="voice-item-address"><?= the_title(); ?></div>
           </div>
           <div class="voice-item-img"><img src="<?= get_field('voice_img')['url'] ?>" alt="<?= get_field('voice_img')['alt'] ?>"></div>
           <div class="voice-item-cat">
