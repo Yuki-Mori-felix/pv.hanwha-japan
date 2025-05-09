@@ -1,5 +1,31 @@
 @charset "UTF-8";
-/*_____ お客様の声 アーカイブページ _____*/
+/*_____ お客様インタビュー 一覧ページ _____*/
+.mv_for_page.interview {
+  position: relative;
+  height: 320px;
+  background-size: cover;
+  background-position: center bottom;
+}
+.mv_for_page.interview h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: min(40px, 5vw);
+  color: #333;
+}
+.mv_for_page.interview .sub-title {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Figtree";
+  color: #333;
+  letter-spacing: 0.8px;
+}
+
 .archive-voice .section-title {
   font-size: 32px;
   text-align: center;
@@ -9,7 +35,7 @@
 .archive-voice .post-filter-area {
   width: 100vw;
   margin: 0 calc(50% - 50vw);
-  background: #F5F5F5;
+  background: #f5f5f5;
   padding-block: 30px;
 }
 .archive-voice .post-filter-area .voice-category-wrap {
@@ -38,19 +64,19 @@
   color: white;
 }
 .archive-voice .post-filter-area .voice-category-wrap .voice-category-buttons li:nth-child(2) .filter-button:hover {
-  color: #EE7744;
+  color: #ee7744;
 }
 .archive-voice .post-filter-area .voice-category-wrap .voice-category-buttons li:nth-child(2) .filter-button.active {
-  background: #EE7744;
+  background: #ee7744;
 }
 .archive-voice .post-filter-area .voice-category-wrap .voice-category-buttons li:nth-child(2) .filter-button.active:hover {
   color: white;
 }
 .archive-voice .post-filter-area .voice-category-wrap .voice-category-buttons li:nth-child(3) .filter-button:hover {
-  color: #3366AA;
+  color: #3366aa;
 }
 .archive-voice .post-filter-area .voice-category-wrap .voice-category-buttons li:nth-child(3) .filter-button.active {
-  background: #3366AA;
+  background: #3366aa;
 }
 .archive-voice .post-filter-area .voice-category-wrap .voice-category-buttons li:nth-child(3) .filter-button.active:hover {
   color: white;
@@ -110,17 +136,17 @@
   position: absolute;
   right: 5px;
   bottom: 5px;
-  background: #EE7744;
+  background: #ee7744;
   color: white;
   padding: 5px 10px;
   border-radius: 13px;
 }
 .archive-voice .voice-list-wrap .voice-list .voice-item a .voice-item-cat:has(.solar-storage) {
-  background: #3366AA;
+  background: #3366aa;
 }
 
-/*_____ お客様の声 アーカイブページ _____*/
-/*_____ お客様の声 個別ページ _____*/
+/*_____ お客様インタビュー 一覧ページ _____*/
+/*_____ お客様インタビュー 個別ページ _____*/
 .single-voice-title-area {
   margin-bottom: 60px;
 }
@@ -129,7 +155,7 @@
 }
 .single-voice-title-area .wrap::before {
   content: "INSPIRATION";
-  color: #3366AA;
+  color: #3366aa;
   opacity: 0.05;
   position: absolute;
   top: 50%;
@@ -143,7 +169,7 @@
   height: 2px;
   width: 90%;
   max-width: 1280px;
-  background: #3366AA;
+  background: #3366aa;
   position: absolute;
   bottom: -15px;
   left: 0;
@@ -159,7 +185,7 @@
 .single-voice-title-area .single-voice-title .bold {
   font-size: 32px;
   font-weight: bold;
-  color: #3366AA;
+  color: #3366aa;
 }
 
 .single-voice .section-title {
@@ -247,7 +273,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, #3366AA 0%, #CCCCCC 50%, #EE7744 100%);
+  background: linear-gradient(90deg, #3366aa 0%, #cccccc 50%, #ee7744 100%);
   opacity: 0.2; /* ここで背景のみ透過 */
 }
 .problem .wrap .wrap_s {
@@ -263,12 +289,12 @@
 .problem .wrap .wrap_s .problem-titles .problem-title {
   font-size: 24px;
   text-align: left;
-  color: #3366AA;
+  color: #3366aa;
   place-content: center;
   padding-left: 50px;
 }
 .problem .wrap .wrap_s .problem-titles .problem-title:nth-child(2) {
-  color: #EE7744;
+  color: #ee7744;
 }
 .problem .wrap .wrap_s .problem-content {
   display: grid;
@@ -334,18 +360,18 @@
 }
 
 .benefit {
-  background: #F5F5F5;
+  background: #f5f5f5;
   padding-block: 80px;
 }
 .benefit .single-voice-title-area .wrap::before {
   content: "BENEFIT";
-  color: #EE7744;
+  color: #ee7744;
 }
 .benefit .single-voice-title-area .wrap::after {
-  background: #EE7744;
+  background: #ee7744;
 }
 .benefit .single-voice-title-area .single-voice-title .bold {
-  color: #EE7744;
+  color: #ee7744;
 }
 .benefit .benefit-content .benefit-background {
   background: linear-gradient(90deg, #fff 0%, #fff 60%, transparent 60%, transparent 100%);
@@ -398,14 +424,14 @@
 }
 .message .single-voice-title-area .wrap::before {
   content: "MESSAGE";
-  color: #88BBBB;
+  color: #88bbbb;
   opacity: 0.1;
 }
 .message .single-voice-title-area .wrap::after {
-  background: #88BBBB;
+  background: #88bbbb;
 }
 .message .single-voice-title-area .single-voice-title .bold {
-  color: #88BBBB;
+  color: #88bbbb;
 }
 .message .message-content .message-background {
   background: linear-gradient(90deg, #f5f5f5 0%, #f5f5f5 60%, transparent 60%, transparent 100%);
@@ -458,8 +484,8 @@
   padding: 80px 85px;
 }
 .store-info .wrap .wrap_s .store-info-title {
-  color: #3366AA;
-  background: #F5F5F5;
+  color: #3366aa;
+  background: #f5f5f5;
   font-size: 24px;
   padding-block: 32px 33px;
   text-align: center;
@@ -518,7 +544,7 @@
   margin-right: 6px;
 }
 .store-info .wrap .wrap_s .store-info-content .store-info-textarea .site a {
-  color: #3366AA;
+  color: #3366aa;
   text-decoration: underline;
 }
 .store-info .wrap .wrap_s .store-info-content .store-info-textarea .sns-icons {
@@ -553,7 +579,7 @@
   font-weight: 400;
 }
 .store-info .wrap .wrap_s .green-alliance {
-  background: #F2FBF2;
+  background: #f2fbf2;
   padding: 30px;
   display: grid;
   grid-template-columns: 140px 1fr;
@@ -585,4 +611,4 @@
   border-radius: 5px;
 }
 
-/*_____ お客様の声 個別ページ _____*//*# sourceMappingURL=voice.css.map */
+/*_____ お客様インタビュー 個別ページ _____*//*# sourceMappingURL=voice.css.map */
