@@ -5,6 +5,19 @@ require get_stylesheet_directory() . '/include/my_variables.php';
 
 <?php get_header(); ?>
 
+<section class="mv-for-page">
+  <div class="mv-img" style="background-image: url(<?php the_field('fv_page_img'); ?>);">
+    <div class="mv-sub-title-area">
+      <div class="border"></div>
+      <div class="mv-sub-title"><?php the_field('page_sub_title') ?></div>
+    </div>
+    <div class="mv-text wrap_s">
+      <?php if (the_field('fv_page_catch')) '<span>' . the_field('fv_page_catch') . '</span>'; ?>
+      <h2><?php the_title(); ?></h2>
+    </div>
+  </div>
+</section>
+
 <div class="wrap">
   <?php custom_breadcrumb(); ?>
 </div>
@@ -20,7 +33,7 @@ require get_stylesheet_directory() . '/include/my_variables.php';
             <div class="textarea">
               <div class="title">新築住宅シェア</div>
               <div class="year">(2003・2004年)</div>
-              <div class="caution">※出展：月間スマートハウスNo.108(2024年2月号)</div>
+              <div class="caution">※出展：月間スマートハウスNo.108(2024年2月号)<br>月間スマートハウスNo.120（2025年2月号）</div>
             </div>
           </li>
           <li>

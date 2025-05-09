@@ -17,6 +17,7 @@
 .popular_products_now ._contents001 ._box1 .wrap_s li img {
   padding: 0;
   margin-bottom: 30px;
+  max-width: 226px;
 }
 .popular_products_now ._contents001 ._box1 .wrap_s li .textarea {
   display: flex;
@@ -26,6 +27,7 @@
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 30px;
+  min-height: 60px;
 }
 .popular_products_now ._contents001 ._box1 .wrap_s li .textarea .year {
   font-size: 12px;
@@ -141,6 +143,7 @@
 .section-back .section-title-area h2 {
   font-size: 48px;
   font-weight: bold;
+  color: #333;
   margin-bottom: 22px;
 }
 .section-back .section-title-area h2 .orange {
@@ -309,6 +312,8 @@
   padding-inline: 1em;
   background: rgba(255, 255, 255, 0.7019607843) 0% 0% no-repeat padding-box;
   backdrop-filter: blur(8px);
+  outline: 2px solid white;
+  outline-offset: -2px;
 }
 ._contents006 ._contents006_inner ._box1 .voice-list {
   width: 100%;
