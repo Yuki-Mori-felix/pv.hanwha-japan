@@ -1,9 +1,75 @@
 @charset "UTF-8";
+/* 全ページ共通 */
+#content {
+  padding-top: 0;
+  /* メイン画像用CSS */
+}
+#content .mv-for-page {
+  position: relative;
+  height: 600px;
+  background: rgba(238, 119, 68, 0.08);
+}
+#content .mv-for-page.product-list {
+  background-color: rgba(51, 102, 170, 0.08);
+}
+#content .mv-for-page .mv-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 85%;
+  width: 90%;
+  background-size: cover;
+  background-position: bottom center;
+}
+#content .mv-for-page .mv-sub-title-area {
+  position: relative;
+}
+#content .mv-for-page .mv-sub-title-area .border {
+  position: absolute;
+  top: 64px;
+  left: -10vw;
+  height: 2px;
+  width: 14vw;
+  background: white;
+}
+#content .mv-for-page .mv-sub-title-area .mv-sub-title {
+  position: absolute;
+  top: 48px;
+  left: 7vw;
+  font-size: 20px;
+  font-family: "Figtree";
+  font-weight: 500;
+  color: white;
+  letter-spacing: 6px !important;
+}
+#content .mv-for-page .mv-text {
+  position: absolute;
+  bottom: 10%;
+  left: 7vw;
+  z-index: 1;
+}
+#content .mv-for-page .mv-text h2 {
+  font-size: 45px;
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(90deg, #3366aa 0%, #000000 50%, #ee7744 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#content .mv-for-page .mv-text span {
+  font-size: 20px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 58px;
+}
+
+/*======================= END OF COMMON =======================*/
 /* パンくずリスト用CSS */
 #breadcrumb {
   margin: auto;
   max-width: 1000px;
-  margin-bottom: 65px;
+  margin-block: 40px 65px;
 }
 #breadcrumb ul {
   text-align: left;
@@ -105,7 +171,7 @@ footer#colophon .wrap_s .footer-buttom .footer-menu h3:has(.material-symbols-out
   justify-content: space-between;
 }
 footer#colophon .wrap_s .footer-buttom .footer-menu h3:has(a):hover a {
-  color: #3366AA;
+  color: #3366aa;
   font-weight: bold;
   opacity: unset;
 }
@@ -197,12 +263,12 @@ footer#colophon ._fixed_button .btn1-box .btn1::after {
   border-radius: 5px 0 0 0;
 }
 footer#colophon ._fixed_button .btn2-box .btn2 {
-  color: #3366AA;
-  border-right: #3366AA 10px solid;
+  color: #3366aa;
+  border-right: #3366aa 10px solid;
   border-bottom: 1px solid #ccc;
 }
 footer#colophon ._fixed_button .btn2-box .btn2::after {
-  background: #3366AA;
+  background: #3366aa;
 }
 footer#colophon ._fixed_button .btn3-box .btn3 {
   color: #999;
@@ -250,4 +316,6 @@ footer#colophon ._end .wrap_s ._left-contents ul li a:hover {
 footer#colophon ._end .wrap_s ._copyright {
   font-size: 8px;
   color: #999;
-}/*# sourceMappingURL=add-common.css.map */
+}
+
+/*======================= END OF FOOTER =======================*//*# sourceMappingURL=add-common.css.map */
