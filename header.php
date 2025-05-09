@@ -17,6 +17,13 @@
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/pv.css'>
   <?php elseif (is_page('product-list')) : ?>
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/product-list.css'>
+  <?php elseif (is_singular('product')) : ?>
+    <!-- splide -->
+    <link href="<?= get_stylesheet_directory_uri() ?>/css/splide.min.css" rel="stylesheet">
+    <script src="<?= get_stylesheet_directory_uri() ?>/js/splide.min.js"></script>
+    <!-- //splide -->
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/single-product.css'>
+    <script src="<?= get_stylesheet_directory_uri() ?>/js/single-product.js"></script>
   <?php endif; ?>
   <!--style.css-->
 
@@ -134,11 +141,11 @@
 
   <?php elseif (is_page()) : ?>
 
-    <div class="_main_mv">
+    <!-- <div class="_main_mv">
       <span><?php the_field('fv_page_catch'); ?></span>
       <div class="slider-item" style="background-image: url(<?php the_field('fv_page_img'); ?>)"></div>
       <h2><?php the_title(); ?></h2>
-    </div>
+    </div> -->
 
   <?php elseif (is_singular('product')) : ?>
 
@@ -147,12 +154,6 @@
     </div>
 
   <?php else: ?>
-
-    <!-- <div class="_main_mv">
-      <div class="slider-item" style="background-image: url(<?php the_field('fv_page_img'); ?>)"></div>
-      <h2><?php the_title(); ?></h2>
-    </div> -->
-
   <?php endif; ?>
 
   <!--main img-->
