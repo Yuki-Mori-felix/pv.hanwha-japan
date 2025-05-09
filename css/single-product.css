@@ -933,22 +933,33 @@ main.single-products section.compare .wrapper .product .item .imgc img {
   object-position: bottom;
 }
 main.single-products section.compare .wrapper .product .item .name {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 50px;
-  padding-bottom: 10px;
+  position: relative;
+  margin-top: 40px;
   border-bottom: solid 1px var(--col-black);
 }
-main.single-products section.compare .wrapper .product .item .name .txt {
-  font-weight: var(--fw-bold);
-}
-main.single-products section.compare .wrapper .product .item .name .triangle {
+main.single-products section.compare .wrapper .product .item .name::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 1px;
   display: block;
   width: 12px;
   height: 10px;
   background-color: var(--col-black);
   clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+main.single-products section.compare .wrapper .product .item .name .select-product-name {
+  cursor: pointer;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-weight: var(--fw-bold);
+  -webkit-appearance: none; /* ベンダープレフィックス(Google Chrome、Safari用) */
+  -moz-appearance: none; /* ベンダープレフィックス(Firefox用) */
+}
+main.single-products section.compare .wrapper .product .item .name .select-product-name::-ms-expand {
+  display: none; /* select要素のデザインを無効にする（IE用） */
 }
 main.single-products section.compare .wrapper .product .item .more {
   display: inline-block;

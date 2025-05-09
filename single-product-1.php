@@ -394,8 +394,9 @@
 						<img src="<?=$img_path?>/single-product/compare-product-1.jpg" alt="">
 					</div>
 					<div class="name">
-						<p class="txt">Q.TRON M-G2.4+</p>
-						<span class="triangle"></span>
+						<select name="" id="" class="select-product-name">
+							<option value="">Q.TRON M-G2.4+</option>
+						</select>
 					</div>
 					<a href="#" class="more">詳しく見る</a>
 				</div>
@@ -404,8 +405,9 @@
 						<img src="<?=$img_path?>/single-product/compare-product-2.jpg" alt="">
 					</div>
 					<div class="name">
-						<p class="txt">Q.TRON S-G2.4+</p>
-						<span class="triangle"></span>
+						<select name="" id="" class="select-product-name">
+							<option value="">Q.TRON S-G2.4+</option>
+						</select>
 					</div>
 					<a href="#" class="more">詳しく見る</a>
 				</div>
