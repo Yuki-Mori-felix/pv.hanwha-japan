@@ -1,6 +1,21 @@
-<?php /* Template Name: 製品・システム */ ?>
+<?php
+/* Template Name: 製品・システム */
+get_header();
+?>
 
-<?php get_header(); ?>
+<section class="mv-for-page product-list">
+  <div class="mv-img" style="background-image: url(<?php the_field('fv_page_img'); ?>);">
+    <div class="mv-sub-title-area">
+      <div class="border"></div>
+      <div class="mv-sub-title"><?php the_field('page_sub_title') ?></div>
+    </div>
+    <div class="mv-text">
+      <?php $catch = get_field('fv_page_catch'); ?>
+      <?php if ($catch) echo '<span>' . $catch . '</span>'; ?>
+      <h2><?php the_title(); ?></h2>
+    </div>
+  </div>
+</section>
 
 <div class="wrap">
   <div class="wrap_s">
@@ -146,17 +161,17 @@
   <div class="wrap">
     <div class="wrap_s">
       <h2 class="section-title">関連記事</h2>
-    
+
       <div class="related_articles">
         <aside class="related-post-wrap">
           <ul>
             <?php
             $catkwds = array();
-    
+
             if (has_category()) {
-    
+
               $cats = get_the_category();
-    
+
               foreach ($cats as $cat) {
                 $catkwds[] = $cat->term_id;
               }
@@ -176,10 +191,10 @@
                   <a href="<?php the_permalink(); ?>">
                     <?php
                     if (has_post_thumbnail()) {
-    
+
                       the_post_thumbnail('medium');
                     } else {
-    
+
                       echo '<img src="' . get_template_directory_uri() . '/images/no-image.gif">';
                     }
                     ?>
