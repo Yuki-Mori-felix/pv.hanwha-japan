@@ -145,7 +145,6 @@ if (! function_exists('custom_breadcrumb')) {
       //添付ファイルページ ( $wp_obj : WP_Post )
       $post_title = apply_filters('the_title', $wp_obj->post_title);
       echo '<li><span>' . esc_html($post_title) . '</span></li>';
-
     } elseif (is_single() && get_post_type() === 'voice') { // お客様インタビュー(個別ページ) パンくず表示調整
 
       // 固定ページ "page-voice.php" を追加
@@ -162,7 +161,6 @@ if (! function_exists('custom_breadcrumb')) {
 
       // 個別ページの投稿タイトルを表示
       echo '<li><span>' . esc_html(get_the_title()) . '</span></li>';
-  
     } elseif (is_single()) {
 
       //投稿ページ ( $wp_obj : WP_Post )
@@ -436,3 +434,8 @@ function filter_voice_posts()
 
 add_action('wp_ajax_filter_voice', 'filter_voice_posts');
 add_action('wp_ajax_nopriv_filter_voice', 'filter_voice_posts');
+
+// ACF WYSIWYGエディタにTinyMCE テンプレート連携
+add_filter('tinymce_templates_enable_media_buttons', function(){
+return true;
+} );
