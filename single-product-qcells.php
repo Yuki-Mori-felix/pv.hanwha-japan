@@ -10,10 +10,18 @@ $img_path = get_stylesheet_directory_uri() . "/images";
 ?>
 <main class="single-products">
 
+	<section class="top_product_logo">
+		<div class="wrapper">
+			<img src="/wp-content/uploads/2025/04/logo.png" alt="Qcells">
+		</div>
+	</section>
+	<!-- //top_product_logo -->
+
   <?php
   $args = array(
     'post_type'      => 'product', // カスタム投稿タイプを指定
     'posts_per_page' => 1, // 1件のみ取得
+    'p' => get_queried_object_id(), // 現在の投稿IDを取得
     'tax_query'      => array(
       array(
         'taxonomy' => 'product-cat', // カスタムタクソノミーを指定
@@ -423,6 +431,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
           </div>
           <div class="name">
             <?php
+            $current_post_id = get_queried_object_id();
             $args = array(
               'post_type'      => 'product',
               'posts_per_page' => -1,
