@@ -432,6 +432,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
           <div class="name">
             <?php
             $current_post_id = get_queried_object_id();
+            $current_post_url = get_permalink($current_post_id);
             $args = array(
               'post_type'      => 'product',
               'posts_per_page' => -1,
@@ -458,14 +459,11 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               <?php endif; ?>
             </select>
           </div>
-          <a href="#" class="more">詳しく見る</a>
+          <a id="product-more-link" href="<?= esc_url($current_post_url); ?>" class="more">詳しく見る</a>
         </div>
 
         <div class="item">
           <div class="imgc">
-            <img src="<?= $img_path ?>/single-product/compare-product-2.jpg" alt="">
-          </div>
-          <div class="name">
             <?php
             $current_post_id = get_queried_object_id();
 
@@ -500,12 +498,19 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               wp_reset_postdata();
             }
 
-            // 比較対象が1つしかない場合でも、その投稿を選択できるようにする
+            // 比較対象の投稿がある場合のみ設定（null回避）
             if (!empty($available_post_ids)) {
               $default_compare_post_id = $available_post_ids[0]; // 最初の比較対象をデフォルトに
             }
-            ?>
 
+            // 比較対象の投稿の画像を取得
+            $compare_image = (!empty($default_compare_post_id)) ? get_field('image1', $default_compare_post_id) : null;
+            $compare_image_url = (!empty($compare_image['url'])) ? esc_url($compare_image['url']) : $img_path . '/single-product/default-image.jpg'; // 代替画像を設定
+            ?>
+            <img id="compare-product-image" src="<?= $compare_image_url; ?>" alt="">
+          </div>
+          <div class="name">
+            <?php $compare_post_url = (!empty($default_compare_post_id)) ? get_permalink($default_compare_post_id) : '#'; ?>
             <select id="compare-product-select" class="select-product-name">
               <?php if (!empty($available_post_ids)) : ?>
                 <?php foreach ($available_post_ids as $post_id) : ?>
@@ -521,7 +526,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               <?php endif; ?>
             </select>
           </div>
-          <a href="#" class="more">詳しく見る</a>
+          <a id="compare-product-more-link" href="<?= esc_url($compare_post_url); ?>" class="more">詳しく見る</a>
         </div>
       </div>
       <div class="table table-visible">
@@ -537,7 +542,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               <p class="data-txt" id="product-detail-1"><?= esc_html(get_field('product_detail_1')); ?></p>
             </div>
             <div class="item">
-              <p class="data-txt">285W</p>
+              <p class="data-txt" id="compare-product-detail-1"><?= esc_html(get_field('product_detail_1', $default_compare_post_id)); ?></p>
             </div>
           </div>
         </div>
@@ -553,7 +558,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               <p class="data-txt" id="product-detail-2"><?= esc_html(get_field('product_detail_2')); ?></p>
             </div>
             <div class="item">
-              <p class="data-txt">21.5%</p>
+              <p class="data-txt" id="compare-product-detail-2"><?= esc_html(get_field('product_detail_2', $default_compare_post_id)); ?></p>
             </div>
           </div>
         </div>
@@ -569,7 +574,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               <p class="data-txt" id="product-detail-3"><?= esc_html(get_field('product_detail_3')); ?></p>
             </div>
             <div class="item">
-              <p class="data-txt">1,722mm×766mm×30mm</p>
+              <p class="data-txt" id="compare-product-detail-3"><?= esc_html(get_field('product_detail_3', $default_compare_post_id)); ?></p>
             </div>
           </div>
         </div>
@@ -585,7 +590,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               <p class="data-txt" id="product-detail-15"><?= esc_html(get_field('product_detail_15')); ?></p>
             </div>
             <div class="item">
-              <p class="data-txt">25年機器+出力保証</p>
+              <p class="data-txt" id="compare-product-detail-15"><?= esc_html(get_field('product_detail_15', $default_compare_post_id)); ?></p>
             </div>
           </div>
         </div>
@@ -601,7 +606,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               <p class="data-txt" id="product-detail-14"><?= esc_html(get_field('product_detail_14')); ?></p>
             </div>
             <div class="item">
-              <p class="data-txt">¥269,610</p>
+              <p class="data-txt" id="compare-product-detail-14"><?= esc_html(get_field('product_detail_14', $default_compare_post_id)); ?></p>
             </div>
           </div>
         </div>
@@ -618,7 +623,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                   <p class="data-txt" id="product-detail-5"><?= esc_html(get_field('product_detail_5')); ?></p>
                 </div>
                 <div class="item">
-                  <p class="data-txt">13.84A</p>
+                  <p class="data-txt" id="compare-product-detail-5"><?= esc_html(get_field('product_detail_5', $default_compare_post_id)); ?></p>
                 </div>
               </div>
             </div>
@@ -631,7 +636,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                   <p class="data-txt" id="product-detail-6"><?= esc_html(get_field('product_detail_6')); ?></p>
                 </div>
                 <div class="item">
-                  <p class="data-txt">25.91V</p>
+                  <p class="data-txt" id="compare-product-detail-6"><?= esc_html(get_field('product_detail_6', $default_compare_post_id)); ?></p>
                 </div>
               </div>
             </div>
@@ -644,7 +649,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                   <p class="data-txt" id="product-detail-7"><?= esc_html(get_field('product_detail_7')); ?></p>
                 </div>
                 <div class="item">
-                  <p class="data-txt">13.13A</p>
+                  <p class="data-txt" id="compare-product-detail-7"><?= esc_html(get_field('product_detail_7', $default_compare_post_id)); ?></p>
                 </div>
               </div>
             </div>
@@ -657,7 +662,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                   <p class="data-txt" id="product-detail-8"><?= esc_html(get_field('product_detail_8')); ?></p>
                 </div>
                 <div class="item">
-                  <p class="data-txt">21.70V</p>
+                  <p class="data-txt" id="compare-product-detail-8"><?= esc_html(get_field('product_detail_8', $default_compare_post_id)); ?></p>
                 </div>
               </div>
             </div>
@@ -670,7 +675,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                   <p class="data-txt" id="product-detail-4"><?= esc_html(get_field('product_detail_4')); ?></p>
                 </div>
                 <div class="item">
-                  <p class="data-txt">14.9kg</p>
+                  <p class="data-txt" id="compare-product-detail-4"><?= esc_html(get_field('product_detail_4', $default_compare_post_id)); ?></p>
                 </div>
               </div>
             </div>
@@ -683,7 +688,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                   <p class="data-txt" id="product-detail-9"><?= esc_html(get_field('product_detail_9')); ?></p>
                 </div>
                 <div class="item">
-                  <p class="data-txt">アルミニウム合金（アルマイト処理）、黒色</p>
+                  <p class="data-txt" id="compare-product-detail-9"><?= esc_html(get_field('product_detail_9', $default_compare_post_id)); ?></p>
                 </div>
               </div>
             </div>
@@ -696,7 +701,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                   <p class="data-txt" id="product-detail-10"><?= esc_html(get_field('product_detail_10')); ?></p>
                 </div>
                 <div class="item">
-                  <p class="data-txt">4×18（単結晶Q.ANTUM NEOハーフセル）</p>
+                  <p class="data-txt" id="compare-product-detail-10"><?= esc_html(get_field('product_detail_10', $default_compare_post_id)); ?></p>
                 </div>
               </div>
             </div>
@@ -709,7 +714,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                   <p class="data-txt" id="product-detail-11"><?= esc_html(get_field('product_detail_11')); ?></p>
                 </div>
                 <div class="item">
-                  <p class="data-txt">保護クラスIP67(*3)</p>
+                  <p class="data-txt" id="compare-product-detail-11"><?= esc_html(get_field('product_detail_11', $default_compare_post_id)); ?></p>
                 </div>
               </div>
             </div>
@@ -722,7 +727,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                   <p class="data-txt" id="product-detail-12"><?= esc_html(get_field('product_detail_12')); ?></p>
                 </div>
                 <div class="item">
-                  <p class="data-txt">1000V</p>
+                  <p class="data-txt" id="compare-product-detail-12"><?= esc_html(get_field('product_detail_12', $default_compare_post_id)); ?></p>
                 </div>
               </div>
             </div>
@@ -735,7 +740,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                   <p class="data-txt" id="product-detail-13"><?= esc_html(get_field('product_detail_13')); ?></p>
                 </div>
                 <div class="item">
-                  <p class="data-txt">4,000Pa / 4,000Pa</p>
+                  <p class="data-txt" id="compare-product-detail-13"><?= esc_html(get_field('product_detail_13', $default_compare_post_id)); ?></p>
                 </div>
               </div>
             </div>
