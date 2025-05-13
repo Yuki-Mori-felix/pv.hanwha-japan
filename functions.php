@@ -435,6 +435,30 @@ function filter_voice_posts()
 add_action('wp_ajax_filter_voice', 'filter_voice_posts');
 add_action('wp_ajax_nopriv_filter_voice', 'filter_voice_posts');
 
+/*------------------------------------------
+  製品詳細ページ 製品比較機能
+------------------------------------------*/
+function add_custom_meta_to_rest($response, $post, $request)
+{
+  $meta_fields = array();
+
+  // product_detail_1 から product_detail_30 を取得
+  for ($i = 1; $i <= 30; $i++) {
+    $meta_fields[] = "product_detail_$i";
+  }
+
+  // image1 も追加
+  $meta_fields[] = "image1";
+
+  foreach ($meta_fields as $field) {
+    $response->data['meta'][$field] = get_field($field, $post->ID);
+  }
+
+  return $response;
+}
+
+add_filter('rest_prepare_product', 'add_custom_meta_to_rest', 10, 3);
+
 // ACF WYSIWYGエディタにTinyMCE テンプレート連携
 add_filter('tinymce_templates_enable_media_buttons', function(){
 return true;
