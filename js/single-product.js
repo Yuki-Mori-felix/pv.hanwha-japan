@@ -51,6 +51,7 @@ window.addEventListener("load", function () {
 	//--- 呼び出し ---
 	changeAnchorColor();
 	modalWindow();
+	switchTab();
 	//----------------
 
 	//商品スペック アコーディオン
@@ -131,5 +132,47 @@ window.addEventListener("load", function () {
 				modalWindow.classList.remove('visible');
 			});
 		}		
+	}
+
+	//「エネコネクト」の5つの電気のエネルギーマネジメント
+	function switchTab(){
+		const tabBtns = document.querySelectorAll('.eneconnect-item');
+		const tabItems = document.querySelectorAll('.eneconnect-detail-item');
+
+		if(tabBtns.length < 1 || tabItems.length < 1) {
+			console.log('ERROR: コンテンツを取得できませんでした。');			
+			return;
+		}
+
+		tabBtns.forEach((btn, index) => {
+			btn.addEventListener('click', () => {
+				// すべてのボタンを非アクティブにする
+				tabBtns.forEach((i) => {
+					i.classList.remove("active");
+				});
+
+				// すべてのコンテンツを非表示にする
+				tabItems.forEach((i) => {
+					i.classList.remove("active");
+				});
+
+				// クリックされたタブをアクティブにする
+				btn.classList.add("active");
+
+				// 対応するコンテンツを表示
+				const tabItem = tabItems[index];
+				tabItem.classList.add("active");
+
+				const position = tabItem.getBoundingClientRect().top + window.scrollY - 100;
+
+				if(window.innerWidth <= 430){
+					//スマホ版の時はスクロールさせる
+					window.scrollTo({
+						top: position,
+						behavior: "smooth"
+					});
+				}
+			});
+		});
 	}
 });
