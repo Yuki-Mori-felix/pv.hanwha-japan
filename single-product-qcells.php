@@ -10,12 +10,12 @@ $img_path = get_stylesheet_directory_uri() . "/images";
 ?>
 <main class="single-products">
 
-	<section class="top_product_logo">
-		<div class="wrapper">
-			<img src="/wp-content/uploads/2025/04/logo.png" alt="Qcells">
-		</div>
-	</section>
-	<!-- //top_product_logo -->
+  <section class="top_product_logo">
+    <div class="wrapper">
+      <img src="/wp-content/uploads/2025/04/logo.png" alt="Qcells">
+    </div>
+  </section>
+  <!-- //top_product_logo -->
 
   <?php
   $args = array(
@@ -466,8 +466,59 @@ $img_path = get_stylesheet_directory_uri() . "/images";
             <img src="<?= $img_path ?>/single-product/compare-product-2.jpg" alt="">
           </div>
           <div class="name">
-            <select name="" id="" class="select-product-name">
-              <option value="">Q.TRON S-G2.4+</option>
+            <?php
+            $current_post_id = get_queried_object_id();
+
+            // 最新順で投稿を取得
+            $args = array(
+              'post_type'      => 'product',
+              'posts_per_page' => -1,
+              'tax_query'      => array(
+                array(
+                  'taxonomy' => 'product-cat',
+                  'field'    => 'slug',
+                  'terms'    => array('q-cells'),
+                ),
+              ),
+              'orderby'        => 'date',
+              'order'          => 'DESC',
+            );
+
+            $query = new WP_Query($args);
+
+            // デフォルトの比較対象を設定
+            $default_compare_post_id = null;
+            $available_post_ids = [];
+
+            if ($query->have_posts()) {
+              while ($query->have_posts()) {
+                $query->the_post();
+                if (get_the_ID() !== $current_post_id) {
+                  $available_post_ids[] = get_the_ID();
+                }
+              }
+              wp_reset_postdata();
+            }
+
+            // 比較対象が1つしかない場合でも、その投稿を選択できるようにする
+            if (!empty($available_post_ids)) {
+              $default_compare_post_id = $available_post_ids[0]; // 最初の比較対象をデフォルトに
+            }
+            ?>
+
+            <select id="compare-product-select" class="select-product-name">
+              <?php if (!empty($available_post_ids)) : ?>
+                <?php foreach ($available_post_ids as $post_id) : ?>
+                  <?php
+                  $post_object = get_post($post_id);
+                  ?>
+                  <option value="<?php echo $post_id; ?>" <?php echo (intval($post_id) === intval($default_compare_post_id)) ? 'selected' : ''; ?>>
+                    <?php echo esc_html($post_object->post_title); ?>
+                  </option>
+                <?php endforeach; ?>
+              <?php else : ?>
+                <option value="">比較対象の投稿がありません</option>
+              <?php endif; ?>
             </select>
           </div>
           <a href="#" class="more">詳しく見る</a>
