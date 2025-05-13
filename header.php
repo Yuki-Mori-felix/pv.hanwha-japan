@@ -149,9 +149,9 @@
 
   <?php elseif (is_singular('product')) : ?>
 
-    <div class="_product_logo">
+    <!-- <div class="_product_logo">
       <img src="/wp-content/uploads/2025/04/logo.png" alt="qcels">
-    </div>
+    </div> -->
 
   <?php else: ?>
   <?php endif; ?>

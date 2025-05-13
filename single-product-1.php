@@ -10,6 +10,12 @@
 ?>
 <main class="single-products">
 
+	<section class="top_product_logo">
+		<div class="wrapper">
+			<img src="/wp-content/uploads/2025/04/logo.png" alt="Qcells">
+		</div>
+	</section>
+	<!-- //top_product_logo -->
 
 	<section class="overview" id="overview" data-target="overview">
 		<div class="wrapper">
