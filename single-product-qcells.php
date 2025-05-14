@@ -304,7 +304,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                   $post_object = get_post($post_id);
                   ?>
                   <option value="<?php echo $post_id; ?>" <?php echo (intval($post_id) === intval($default_compare_post_id)) ? 'selected' : ''; ?>>
-                    <?php echo esc_html($post_object->post_title); ?>
+                    <?php echo wp_kses_post($post_object->post_title); ?>
                   </option>
                 <?php endforeach; ?>
               <?php else : ?>
@@ -325,10 +325,10 @@ $img_path = get_stylesheet_directory_uri() . "/images";
           </div>
           <div class="product">
             <div class="item">
-              <p class="data-txt" id="product-detail-1"><?= esc_html(get_field('product_detail_1')); ?></p>
+              <p class="data-txt" id="product-detail-1"><?= wp_kses_post(get_field('product_detail_1')); ?></p>
             </div>
             <div class="item">
-              <p class="data-txt" id="compare-product-detail-1"><?= esc_html(get_field('product_detail_1', $default_compare_post_id)); ?></p>
+              <p class="data-txt" id="compare-product-detail-1"><?= wp_kses_post(get_field('product_detail_1', $default_compare_post_id)); ?></p>
             </div>
           </div>
         </div>
@@ -341,10 +341,10 @@ $img_path = get_stylesheet_directory_uri() . "/images";
           </div>
           <div class="product">
             <div class="item">
-              <p class="data-txt" id="product-detail-2"><?= esc_html(get_field('product_detail_2')); ?></p>
+              <p class="data-txt" id="product-detail-2"><?= wp_kses_post(get_field('product_detail_2')); ?></p>
             </div>
             <div class="item">
-              <p class="data-txt" id="compare-product-detail-2"><?= esc_html(get_field('product_detail_2', $default_compare_post_id)); ?></p>
+              <p class="data-txt" id="compare-product-detail-2"><?= wp_kses_post(get_field('product_detail_2', $default_compare_post_id)); ?></p>
             </div>
           </div>
         </div>
@@ -357,10 +357,10 @@ $img_path = get_stylesheet_directory_uri() . "/images";
           </div>
           <div class="product">
             <div class="item">
-              <p class="data-txt" id="product-detail-3"><?= esc_html(get_field('product_detail_3')); ?></p>
+              <p class="data-txt" id="product-detail-3"><?= wp_kses_post(get_field('product_detail_3')); ?></p>
             </div>
             <div class="item">
-              <p class="data-txt" id="compare-product-detail-3"><?= esc_html(get_field('product_detail_3', $default_compare_post_id)); ?></p>
+              <p class="data-txt" id="compare-product-detail-3"><?= wp_kses_post(get_field('product_detail_3', $default_compare_post_id)); ?></p>
             </div>
           </div>
         </div>
@@ -373,10 +373,10 @@ $img_path = get_stylesheet_directory_uri() . "/images";
           </div>
           <div class="product">
             <div class="item">
-              <p class="data-txt" id="product-detail-15"><?= esc_html(get_field('product_detail_15')); ?></p>
+              <p class="data-txt" id="product-detail-15"><?= wp_kses_post(get_field('product_detail_15')); ?></p>
             </div>
             <div class="item">
-              <p class="data-txt" id="compare-product-detail-15"><?= esc_html(get_field('product_detail_15', $default_compare_post_id)); ?></p>
+              <p class="data-txt" id="compare-product-detail-15"><?= wp_kses_post(get_field('product_detail_15', $default_compare_post_id)); ?></p>
             </div>
           </div>
         </div>
@@ -389,10 +389,10 @@ $img_path = get_stylesheet_directory_uri() . "/images";
           </div>
           <div class="product">
             <div class="item">
-              <p class="data-txt" id="product-detail-14"><?= esc_html(get_field('product_detail_14')); ?></p>
+              <p class="data-txt" id="product-detail-14"><?= wp_kses_post(get_field('product_detail_14')); ?></p>
             </div>
             <div class="item">
-              <p class="data-txt" id="compare-product-detail-14"><?= esc_html(get_field('product_detail_14', $default_compare_post_id)); ?></p>
+              <p class="data-txt" id="compare-product-detail-14"><?= wp_kses_post(get_field('product_detail_14', $default_compare_post_id)); ?></p>
             </div>
           </div>
         </div>
@@ -406,10 +406,10 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               </div>
               <div class="product">
                 <div class="item">
-                  <p class="data-txt" id="product-detail-5"><?= esc_html(get_field('product_detail_5')); ?></p>
+                  <p class="data-txt" id="product-detail-5"><?= wp_kses_post(get_field('product_detail_5')); ?></p>
                 </div>
                 <div class="item">
-                  <p class="data-txt" id="compare-product-detail-5"><?= esc_html(get_field('product_detail_5', $default_compare_post_id)); ?></p>
+                  <p class="data-txt" id="compare-product-detail-5"><?= wp_kses_post(get_field('product_detail_5', $default_compare_post_id)); ?></p>
                 </div>
               </div>
             </div>
@@ -419,10 +419,10 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               </div>
               <div class="product">
                 <div class="item">
-                  <p class="data-txt" id="product-detail-6"><?= esc_html(get_field('product_detail_6')); ?></p>
+                  <p class="data-txt" id="product-detail-6"><?= wp_kses_post(get_field('product_detail_6')); ?></p>
                 </div>
                 <div class="item">
-                  <p class="data-txt" id="compare-product-detail-6"><?= esc_html(get_field('product_detail_6', $default_compare_post_id)); ?></p>
+                  <p class="data-txt" id="compare-product-detail-6"><?= wp_kses_post(get_field('product_detail_6', $default_compare_post_id)); ?></p>
                 </div>
               </div>
             </div>
@@ -432,10 +432,10 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               </div>
               <div class="product">
                 <div class="item">
-                  <p class="data-txt" id="product-detail-7"><?= esc_html(get_field('product_detail_7')); ?></p>
+                  <p class="data-txt" id="product-detail-7"><?= wp_kses_post(get_field('product_detail_7')); ?></p>
                 </div>
                 <div class="item">
-                  <p class="data-txt" id="compare-product-detail-7"><?= esc_html(get_field('product_detail_7', $default_compare_post_id)); ?></p>
+                  <p class="data-txt" id="compare-product-detail-7"><?= wp_kses_post(get_field('product_detail_7', $default_compare_post_id)); ?></p>
                 </div>
               </div>
             </div>
@@ -445,10 +445,10 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               </div>
               <div class="product">
                 <div class="item">
-                  <p class="data-txt" id="product-detail-8"><?= esc_html(get_field('product_detail_8')); ?></p>
+                  <p class="data-txt" id="product-detail-8"><?= wp_kses_post(get_field('product_detail_8')); ?></p>
                 </div>
                 <div class="item">
-                  <p class="data-txt" id="compare-product-detail-8"><?= esc_html(get_field('product_detail_8', $default_compare_post_id)); ?></p>
+                  <p class="data-txt" id="compare-product-detail-8"><?= wp_kses_post(get_field('product_detail_8', $default_compare_post_id)); ?></p>
                 </div>
               </div>
             </div>
@@ -458,10 +458,10 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               </div>
               <div class="product">
                 <div class="item">
-                  <p class="data-txt" id="product-detail-4"><?= esc_html(get_field('product_detail_4')); ?></p>
+                  <p class="data-txt" id="product-detail-4"><?= wp_kses_post(get_field('product_detail_4')); ?></p>
                 </div>
                 <div class="item">
-                  <p class="data-txt" id="compare-product-detail-4"><?= esc_html(get_field('product_detail_4', $default_compare_post_id)); ?></p>
+                  <p class="data-txt" id="compare-product-detail-4"><?= wp_kses_post(get_field('product_detail_4', $default_compare_post_id)); ?></p>
                 </div>
               </div>
             </div>
@@ -471,10 +471,10 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               </div>
               <div class="product">
                 <div class="item">
-                  <p class="data-txt" id="product-detail-9"><?= esc_html(get_field('product_detail_9')); ?></p>
+                  <p class="data-txt" id="product-detail-9"><?= wp_kses_post(get_field('product_detail_9')); ?></p>
                 </div>
                 <div class="item">
-                  <p class="data-txt" id="compare-product-detail-9"><?= esc_html(get_field('product_detail_9', $default_compare_post_id)); ?></p>
+                  <p class="data-txt" id="compare-product-detail-9"><?= wp_kses_post(get_field('product_detail_9', $default_compare_post_id)); ?></p>
                 </div>
               </div>
             </div>
@@ -484,10 +484,10 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               </div>
               <div class="product">
                 <div class="item">
-                  <p class="data-txt" id="product-detail-10"><?= esc_html(get_field('product_detail_10')); ?></p>
+                  <p class="data-txt" id="product-detail-10"><?= wp_kses_post(get_field('product_detail_10')); ?></p>
                 </div>
                 <div class="item">
-                  <p class="data-txt" id="compare-product-detail-10"><?= esc_html(get_field('product_detail_10', $default_compare_post_id)); ?></p>
+                  <p class="data-txt" id="compare-product-detail-10"><?= wp_kses_post(get_field('product_detail_10', $default_compare_post_id)); ?></p>
                 </div>
               </div>
             </div>
@@ -497,10 +497,10 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               </div>
               <div class="product">
                 <div class="item">
-                  <p class="data-txt" id="product-detail-11"><?= esc_html(get_field('product_detail_11')); ?></p>
+                  <p class="data-txt" id="product-detail-11"><?= wp_kses_post(get_field('product_detail_11')); ?></p>
                 </div>
                 <div class="item">
-                  <p class="data-txt" id="compare-product-detail-11"><?= esc_html(get_field('product_detail_11', $default_compare_post_id)); ?></p>
+                  <p class="data-txt" id="compare-product-detail-11"><?= wp_kses_post(get_field('product_detail_11', $default_compare_post_id)); ?></p>
                 </div>
               </div>
             </div>
@@ -510,10 +510,10 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               </div>
               <div class="product">
                 <div class="item">
-                  <p class="data-txt" id="product-detail-12"><?= esc_html(get_field('product_detail_12')); ?></p>
+                  <p class="data-txt" id="product-detail-12"><?= wp_kses_post(get_field('product_detail_12')); ?></p>
                 </div>
                 <div class="item">
-                  <p class="data-txt" id="compare-product-detail-12"><?= esc_html(get_field('product_detail_12', $default_compare_post_id)); ?></p>
+                  <p class="data-txt" id="compare-product-detail-12"><?= wp_kses_post(get_field('product_detail_12', $default_compare_post_id)); ?></p>
                 </div>
               </div>
             </div>
@@ -523,10 +523,10 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               </div>
               <div class="product">
                 <div class="item">
-                  <p class="data-txt" id="product-detail-13"><?= esc_html(get_field('product_detail_13')); ?></p>
+                  <p class="data-txt" id="product-detail-13"><?= wp_kses_post(get_field('product_detail_13')); ?></p>
                 </div>
                 <div class="item">
-                  <p class="data-txt" id="compare-product-detail-13"><?= esc_html(get_field('product_detail_13', $default_compare_post_id)); ?></p>
+                  <p class="data-txt" id="compare-product-detail-13"><?= wp_kses_post(get_field('product_detail_13', $default_compare_post_id)); ?></p>
                 </div>
               </div>
             </div>
