@@ -65,6 +65,12 @@ main.single-products {
 		height: auto;
 		vertical-align: top;
 	}
+	table {
+		th,
+		td {
+			padding: 0;
+		}
+	}
 	// -- クラス名ありのコンテンツ
 	.fs-8 {
 		font-size: 8px;
@@ -993,6 +999,7 @@ main.single-products {
 				gap: 34px;
 				width: 468px;
 				@include max {
+					gap: 20px;
 					width: 100%;
 				}
 				&.top {
@@ -1034,7 +1041,7 @@ main.single-products {
 						}
 						.select-product-name {
 							cursor: pointer;
-							width: 100%;
+							width: calc(100% - 18px);
 							margin: 0;
 							padding: 0;
 							border: none;
@@ -1077,14 +1084,16 @@ main.single-products {
 						align-items: flex-start;
 					}
 					.heading {
-						align-self: flex-start;
 						flex: 1;
 						display: flex;
 						align-items: center;
-						gap: 11.6%;
+						gap: 45px;
 						@include max {
 							width: 100%;
 							gap: 12px;
+						}
+						&:not(:has(.txt-acc)) {
+							align-self: flex-start;
 						}
 						.imgc {
 							width: 40px;
@@ -1110,7 +1119,7 @@ main.single-products {
 						padding-top: 15px;
 					}
 					.txt-acc {
-						padding-left: calc(40px + 11.6%);
+						padding-left: calc(40px + 45px);
 						font-size: 12px;
 						font-weight: var(--fw-bold);
 						@include max {
@@ -1120,10 +1129,41 @@ main.single-products {
 							font-size: 10px;
 						}
 					}
+					.product-table {
+						width: 554px;
+						@include max {
+							width: 100%;
+						}
+						.product-table-row {
+							display: flex;
+							align-items: center;
+							column-gap: 32px;
+							@include max {
+								flex-wrap: wrap;
+								column-gap: 20px;
+							}
+							& + .product-table-row {
+								margin-top: 7px;
+							}
+							.detail-label {
+								align-self: flex-start;
+								width: 54px;
+								font-size: 10px;
+								font-weight: var(--fw-bold);
+								@include max {
+									width: 100%;
+								}
+							}
+							.detail-data {
+								flex: 1;
+								font-size: 12px;
+							}
+						}
+					}
 				}
 			}
 			.acc-note {
-				padding-left: calc(40px + 4.9%);
+				padding-left: calc(40px + 45px);
 				margin-top: 20px;
 				font-size: 10px;
 				@include max {
@@ -1182,6 +1222,9 @@ main.single-products {
 				.component-item {
 					max-width: 398px;
 					width: 100%;
+					&.wide {
+						max-width: 484px;
+					}
 					.img {
 						max-width: 140px;
 						width: 100%;
