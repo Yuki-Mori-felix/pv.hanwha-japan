@@ -58,6 +58,10 @@ main.single-products img {
   height: auto;
   vertical-align: top;
 }
+main.single-products table th,
+main.single-products table td {
+  padding: 0;
+}
 main.single-products .fs-8 {
   font-size: 8px;
 }
@@ -1023,6 +1027,7 @@ main.single-products section.compare .wrapper .product {
 }
 @media screen and (max-width: 768px) {
   main.single-products section.compare .wrapper .product {
+    gap: 20px;
     width: 100%;
   }
 }
@@ -1071,7 +1076,7 @@ main.single-products section.compare .wrapper .product .item .name::after {
 }
 main.single-products section.compare .wrapper .product .item .name .select-product-name {
   cursor: pointer;
-  width: 100%;
+  width: calc(100% - 18px);
   margin: 0;
   padding: 0;
   border: none;
@@ -1113,17 +1118,19 @@ main.single-products section.compare .wrapper .table .row {
   }
 }
 main.single-products section.compare .wrapper .table .row .heading {
-  align-self: flex-start;
   flex: 1;
   display: flex;
   align-items: center;
-  gap: 11.6%;
+  gap: 45px;
 }
 @media screen and (max-width: 768px) {
   main.single-products section.compare .wrapper .table .row .heading {
     width: 100%;
     gap: 12px;
   }
+}
+main.single-products section.compare .wrapper .table .row .heading:not(:has(.txt-acc)) {
+  align-self: flex-start;
 }
 main.single-products section.compare .wrapper .table .row .heading .imgc {
   width: 40px;
@@ -1150,7 +1157,7 @@ main.single-products section.compare .wrapper .table .row-acc:not(:first-child) 
   padding-top: 15px;
 }
 main.single-products section.compare .wrapper .table .row-acc .txt-acc {
-  padding-left: calc(40px + 11.6%);
+  padding-left: 85px;
   font-size: 12px;
   font-weight: var(--fw-bold);
 }
@@ -1162,8 +1169,45 @@ main.single-products section.compare .wrapper .table .row-acc .txt-acc {
 main.single-products section.compare .wrapper .table .row-acc .txt-acc .sm {
   font-size: 10px;
 }
+main.single-products section.compare .wrapper .table .row-acc .product-table {
+  width: 554px;
+}
+@media screen and (max-width: 768px) {
+  main.single-products section.compare .wrapper .table .row-acc .product-table {
+    width: 100%;
+  }
+}
+main.single-products section.compare .wrapper .table .row-acc .product-table .product-table-row {
+  display: flex;
+  align-items: center;
+  column-gap: 32px;
+}
+@media screen and (max-width: 768px) {
+  main.single-products section.compare .wrapper .table .row-acc .product-table .product-table-row {
+    flex-wrap: wrap;
+    column-gap: 20px;
+  }
+}
+main.single-products section.compare .wrapper .table .row-acc .product-table .product-table-row + .product-table-row {
+  margin-top: 7px;
+}
+main.single-products section.compare .wrapper .table .row-acc .product-table .product-table-row .detail-label {
+  align-self: flex-start;
+  width: 54px;
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+}
+@media screen and (max-width: 768px) {
+  main.single-products section.compare .wrapper .table .row-acc .product-table .product-table-row .detail-label {
+    width: 100%;
+  }
+}
+main.single-products section.compare .wrapper .table .row-acc .product-table .product-table-row .detail-data {
+  flex: 1;
+  font-size: 12px;
+}
 main.single-products section.compare .wrapper .acc-note {
-  padding-left: calc(40px + 4.9%);
+  padding-left: 85px;
   margin-top: 20px;
   font-size: 10px;
 }
@@ -1223,6 +1267,9 @@ main.single-products section.component .wrapper .component-list {
 main.single-products section.component .wrapper .component-list .component-item {
   max-width: 398px;
   width: 100%;
+}
+main.single-products section.component .wrapper .component-list .component-item.wide {
+  max-width: 484px;
 }
 main.single-products section.component .wrapper .component-list .component-item .img {
   max-width: 140px;
