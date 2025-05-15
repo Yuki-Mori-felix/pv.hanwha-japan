@@ -232,9 +232,9 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                     </li>
                   </ul>
                 </div>
-                <div class="eneconnect-banner">
+                <a href="#" class="eneconnect-banner">
                   <img src="<?= $img_path ?>/single-product/ENECONECT_banner_02.png" alt="">
-                </div>
+                </a>
               </div>
             </div>
           </li>
