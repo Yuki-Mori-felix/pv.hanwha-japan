@@ -74,7 +74,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               </div>
             </div>
             <a href="#" class="eneconnect-banner">
-              <img src="<?= $img_path ?>/single-product/ENECONECT_banner_01.png" alt="エネコネクトの節電サポート 詳しくはこちら">
+              <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/ENECONECT_banner_01.png" alt="エネコネクトの節電サポート 詳しくはこちら">
             </a>
           </div>
           <div class="right">
@@ -165,31 +165,31 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                   <ul class="eneconnect-list">
                     <li class="eneconnect-item active">
                       <div class="img">
-                        <img src="<?= $img_path ?>/single-product/ENECONECT_Apps_icon_1.png" alt="">
+                        <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/ENECONECT_Apps_icon_1.png" alt="">
                       </div>
                       <p class="txt">わたしの電気代</p>
                     </li>
                     <li class="eneconnect-item">
                       <div class="img">
-                        <img src="<?= $img_path ?>/single-product/ENECONECT_Apps_icon_2.png" alt="">
+                        <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/ENECONECT_Apps_icon_2.png" alt="">
                       </div>
                       <p class="txt">スマートメーターレポート</p>
                     </li>
                     <li class="eneconnect-item">
                       <div class="img">
-                        <img src="<?= $img_path ?>/single-product/ENECONECT_Apps_icon_3.png" alt="">
+                        <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/ENECONECT_Apps_icon_3.png" alt="">
                       </div>
                       <p class="txt">そらマネ</p>
                     </li>
                     <li class="eneconnect-item">
                       <div class="img">
-                        <img src="<?= $img_path ?>/single-product/ENECONECT_Apps_icon_4.png" alt="">
+                        <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/ENECONECT_Apps_icon_4.png" alt="">
                       </div>
                       <p class="txt">太陽光発電レポート</p>
                     </li>
                     <li class="eneconnect-item">
                       <div class="img">
-                        <img src="<?= $img_path ?>/single-product/ENECONECT_Apps_icon_5.png" alt="">
+                        <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/ENECONECT_Apps_icon_5.png" alt="">
                       </div>
                       <p class="txt">蓄電池レポート</p>
                     </li>
@@ -197,35 +197,35 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                   <ul class="eneconnect-detail-list">
                     <li class="eneconnect-detail-item active">
                       <div class="img">
-                        <img src="<?= $img_path ?>/single-product/ENECONECT_Apps_image_1.png" alt="">
+                        <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/ENECONECT_Apps_image_1.png" alt="">
                       </div>
                       <p class="detail-label">わたしの電気代</p>
                       <p class="detail-description">選んだ料金プランに合わせて毎日の使用料金を確認</p>
                     </li>
                     <li class="eneconnect-detail-item">
                       <div class="img">
-                        <img src="<?= $img_path ?>/single-product/ENECONECT_Apps_image_2.png" alt="">
+                        <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/ENECONECT_Apps_image_2.png" alt="">
                       </div>
                       <p class="detail-label">スマートメーターレポート</p>
                       <p class="detail-description">日・週・月の使用量と売電量を確認</p>
                     </li>
                     <li class="eneconnect-detail-item">
                       <div class="img">
-                        <img src="<?= $img_path ?>/single-product/ENECONECT_Apps_image_3.png" alt="">
+                        <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/ENECONECT_Apps_image_3.png" alt="">
                       </div>
                       <p class="detail-label">そらマネ</p>
                       <p class="detail-description">設定した条件に合わせて発電量と売電量をガード</p>
                     </li>
                     <li class="eneconnect-detail-item">
                       <div class="img">
-                        <img src="<?= $img_path ?>/single-product/ENECONECT_Apps_image_4.png" alt="">
+                        <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/ENECONECT_Apps_image_4.png" alt="">
                       </div>
                       <p class="detail-label">太陽光発電レポート</p>
                       <p class="detail-description">太陽光発電システムの発電量を日・週・月毎に確認</p>
                     </li>
                     <li class="eneconnect-detail-item">
                       <div class="img">
-                        <img src="<?= $img_path ?>/single-product/ENECONECT_Apps_image_5.png" alt="">
+                        <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/ENECONECT_Apps_image_5.png" alt="">
                       </div>
                       <p class="detail-label">蓄電池レポート</p>
                       <p class="detail-description">蓄電池の日々の稼働状況を確認</p>
@@ -233,7 +233,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                   </ul>
                 </div>
                 <a href="#" class="eneconnect-banner">
-                  <img src="<?= $img_path ?>/single-product/ENECONECT_banner_02.png" alt="">
+                  <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/ENECONECT_banner_02.png" alt="">
                 </a>
               </div>
             </div>
@@ -249,7 +249,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                 <p class="primary-2-ttl">1台で宅内の電気を可視化、家の外から家電の操作。</p>
                 <div class="primary-2-wrapper">
                   <div class="img">
-                    <img src="<?= $img_path ?>/single-product/Cube J-2.png" alt="">
+                    <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/Cube-J-2.png" alt="">
                   </div>
                 </div>
               </div>
@@ -266,7 +266,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                 <p class="primary-2-ttl">コンセントに挿すだけ！インターネットと繋げて操作</p>
                 <div class="primary-2-wrapper">
                   <div class="img">
-                    <img src="<?= $img_path ?>/single-product/Cube J-3.png" alt="">
+                    <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/Cube-J-3.png" alt="">
                   </div>
                 </div>
               </div>
