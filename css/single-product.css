@@ -1473,6 +1473,7 @@ main.hems section.feature .feature_list .item .primary-2 .primary-2-wrapper.enec
   font-weight: var(--fw-bold);
 }
 main.hems section.feature .feature_list .item .primary-2 .eneconnect-banner {
+  display: block;
   max-width: 484px;
   width: 100%;
   margin: 100px auto 0;
