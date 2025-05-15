@@ -4,6 +4,13 @@
     "liveSassCompile.settings.autoprefix": [
         
 		],
+		"liveSassCompile.settings.formats": [
+			{
+				"format": "expanded",
+				"extensionName": ".css",
+				"savePath": "/css"
+			}
+		],
 		"cSpell.words": [
 			"DEPO",
 			"ECHONET",
