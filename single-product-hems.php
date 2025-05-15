@@ -82,7 +82,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               <p class="new">NEW</p>
             <?php endif; ?>
             <h2 class="product-name"><?= the_title(); ?></h2>
-            <p class="product-maker">NEXT DRIVE製</p>
+            <p class="product-maker"><?= wp_kses_post(the_field('manufacturer')); ?></p>
             <h3 class="description"><?= the_field('product_name_blue'); ?></h3>
             <ul class="tag">
               <li class="tag-item"><?= the_field('feat_1'); ?></li>
@@ -138,7 +138,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               </div>
             </div>
             <div class="info-links">
-              <a href="<?= the_field('web_catalog'); ?>" class="link web">WEBカタログ<img src="<?= $img_path ?>/single-product/book-open.svg" alt=""></a>
+              <a href="<?= the_field('web_catalog'); ?>" class="link web" target="_blank" rel="noopener noreferrer">WEBカタログ<img src="<?= $img_path ?>/single-product/book-open.svg" alt=""></a>
               <a href="<?= the_field('catalog_pdf'); ?>" class="link pdf">カタログPDF<img src="<?= $img_path ?>/single-product/download-icon.svg" alt=""></a>
               <div href="<?= the_field('share'); ?>" class="share">シェアする<a href="#" class="round"><img src="<?= $img_path ?>/single-product/share-icon.svg" alt=""></a></div>
             </div>
