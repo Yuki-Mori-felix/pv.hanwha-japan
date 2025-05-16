@@ -96,6 +96,7 @@ main.single-products .accordion .accordion-content {
 main.single-products .accordion .accordion-content .spec03 .spec03-item {
   display: flex;
   align-items: center;
+  column-gap: 32px;
   font-size: 12px;
   line-height: 2;
 }
@@ -104,59 +105,48 @@ main.single-products .accordion .accordion-content .spec03 .spec03-item + .spec0
 }
 main.single-products .accordion .accordion-content .spec03 .spec03-item .label {
   align-self: flex-start;
-  box-sizing: content-box;
-  margin-right: 10px;
   font-weight: var(--fw-bold);
-}
-main.single-products .accordion .accordion-content .spec03 .spec03-item .data,
-main.single-products .accordion .accordion-content .spec03 .spec03-item .detail-data {
-  box-sizing: content-box;
-  margin-left: 10px;
 }
 main.single-products .accordion .accordion-content .spec03 .spec03-item:not(:has(.detail-label)) > * {
   width: 50%;
 }
 main.single-products .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) {
-  display: grid;
-  grid-template-columns: 1fr 54px 50%;
+  display: flex;
+  column-gap: 32px;
 }
 @media screen and (max-width: 768px) {
   main.single-products .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) {
-    display: flex;
     flex-wrap: wrap;
   }
 }
-main.single-products .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .blank {
-  display: block;
-}
-@media screen and (max-width: 768px) {
-  main.single-products .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .blank {
-    display: none;
-  }
+main.single-products .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .label {
+  width: calc(50% - 102px);
 }
 @media screen and (max-width: 768px) {
   main.single-products .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .label {
     width: 100%;
-    padding-bottom: 3px;
   }
 }
-main.single-products .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .detail-label {
+main.single-products .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .detail {
+  flex: 1;
+}
+main.single-products .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .detail .detail-row {
+  display: flex;
+  column-gap: 32px;
+}
+main.single-products .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .detail .detail-row .detail-label {
   align-self: flex-start;
+  width: 54px;
   font-size: 10px;
   font-weight: var(--fw-bold);
 }
 @media screen and (max-width: 768px) {
-  main.single-products .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .detail-label {
-    width: 50%;
+  main.single-products .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .detail .detail-row .detail-label {
+    flex: 1;
   }
 }
-main.single-products .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .detail-data {
-  font-size: 12px;
-}
-@media screen and (max-width: 768px) {
-  main.single-products .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .detail-data {
-    width: calc(50% - 10px);
-  }
+main.single-products .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .detail .detail-row .detail-data {
+  flex: 1;
 }
 main.single-products .accordion .accordion-content .note {
   margin-top: 20px;

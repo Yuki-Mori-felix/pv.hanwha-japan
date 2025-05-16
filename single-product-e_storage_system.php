@@ -87,30 +87,46 @@
 						<ul class="spec03">
 							<li class="spec03-item">
 								<p class="label">蓄電池<span class="fs-8">※1</span></p>
-								<p class="detail-label">種類</p>
-								<p class="detail-data">リチウムイオン電池</p>
-								<span class="blank"></span><!--空コマ-->
-								<p class="detail-label">蓄電容量</p>
-								<p class="detail-data">12.8kWh（初期実効容量11.9kWh）</p>
-								<span class="blank"></span><!--空コマ-->
-								<p class="detail-label">定格電圧</p>
-								<p class="detail-data">DC約200V</p>
+								<div class="detail">
+									<div class="detail-row">
+										<p class="detail-label">種類</p>
+										<p class="detail-data">リチウムイオン電池</p>
+									</div>
+									<div class="detail-row">
+										<p class="detail-label">蓄電容量</p>
+										<p class="detail-data">12.8kWh（初期実効容量11.9kWh）</p>
+									</div>
+									<div class="detail-row">
+										<p class="detail-label">定格電圧</p>
+										<p class="detail-data">DC約200V</p>
+									</div>
+								</div>
 							</li>
 							<li class="spec03-item">
 								<p class="label">入力 5.9kVA<br class="none-max-t"><span class="fs-10">（最大需要電力AC5.9kVA）</span></p>
-								<p class="detail-label">回路数<br class="none-max-t">（太陽光）</p>
-								<p class="detail-data">4回路<br>1回路あたり2.2kW</p>
-								<span class="blank"></span><!--空コマ-->
-								<p class="detail-label">最大電流<br class="none-max-t">（太陽光）</p>
-								<p class="detail-data">短絡耐量：15A<br>動作電流：14A</p>
+								<div class="detail">
+									<div class="detail-row">
+										<p class="detail-label">回路数<br class="none-max-t">（太陽光）</p>
+										<p class="detail-data">4回路<br>1回路あたり2.2kW</p>
+									</div>
+									<div class="detail-row">
+										<p class="detail-label">最大電流<br class="none-max-t">（太陽光）</p>
+										<p class="detail-data">短絡耐量：15A<br>動作電流：14A</p>
+									</div>
+								</div>
 							</li>
 							<li class="spec03-item">
 								<p class="label">出力 6.0kVA<br class="none-max-t"><span class="fs-10">（力率0.95のとき5.7kW）</span></p>
-								<p class="detail-label">連携出力</p>
-								<p class="detail-data">6.0kVA</p>
-								<span class="blank"></span><!--空コマ-->
-								<p class="detail-label">自立出力</p>
-								<p class="detail-data">6.0kVA</p>
+								<div class="detail">
+									<div class="detail-row">
+										<p class="detail-label">連携出力</p>
+										<p class="detail-data">6.0kVA</p>
+									</div>
+									<div class="detail-row">
+										<p class="detail-label">自立出力</p>
+										<p class="detail-data">6.0kVA</p>
+									</div>
+								</div>
 							</li>
 							<li class="spec03-item">
 								<p class="label">対応負荷容量</p>
@@ -122,14 +138,20 @@
 							</li>
 							<li class="spec03-item">
 								<p class="label">環境</p>
-								<p class="detail-label">動作温度<span class="fs-8">※2</span></p>
-								<p class="detail-data">−20℃～＋45℃</p>
-								<span class="blank"></span><!--空コマ-->
-								<p class="detail-label">動作温度</p>
-								<p class="detail-data">15～90%RH</p>
-								<span class="blank"></span><!--空コマ-->
-								<p class="detail-label">設置場所<span class="fs-8">※3</span></p>
-								<p class="detail-data">屋外</p>
+								<div class="detail">
+									<div class="detail-row">
+										<p class="detail-label">動作温度<span class="fs-8">※2</span></p>
+										<p class="detail-data">−20℃～＋45℃</p>
+									</div>
+									<div class="detail-row">
+										<p class="detail-label">動作温度</p>
+										<p class="detail-data">15～90%RH</p>
+									</div>
+									<div class="detail-row">
+										<p class="detail-label">設置場所<span class="fs-8">※3</span></p>
+										<p class="detail-data">屋外</p>
+									</div>
+								</div>
 							</li>
 							<li class="spec03-item">
 								<p class="label">メーカー希望小売価格（税込）</p>
@@ -315,11 +337,16 @@
 								</li>
 								<li class="spec03-item">
 									<p class="label">環境</p>
-									<p class="detail-label">動作温度</p>
-									<p class="detail-data">周囲温度　−10～＋40℃</p>
-									<span class="blank"></span><!--空コマ-->
-									<p class="detail-label">設置場所</p>
-									<p class="detail-data">屋内</p>
+									<div class="detail">
+										<div class="detail-row">
+											<p class="detail-label">動作温度</p>
+											<p class="detail-data">周囲温度　−10～＋40℃</p>
+										</div>
+										<div class="detail-row">
+											<p class="detail-label">設置場所</p>
+											<p class="detail-data">屋内</p>
+										</div>
+									</div>
 								</li>
 								<li class="spec03-item">
 									<p class="label">寸法（横×高さ×奥行）</p>
@@ -331,11 +358,16 @@
 								</li>
 								<li class="spec03-item">
 									<p class="label">外部通信</p>
-									<p class="detail-label">通信機能</p>
-									<p class="detail-data">無線LAN（IEEE802.11b/g/n） 2.4GHz</p>
-									<span class="blank"></span><!--空コマ-->
-									<p class="detail-label">通信プロトコル※</p>
-									<p class="detail-data">ECHONET Lite（Ver.1.13、APPENDIX M）</p>
+									<div class="detail">
+										<div class="detail-row">
+											<p class="detail-label">通信機能</p>
+											<p class="detail-data">無線LAN（IEEE802.11b/g/n） 2.4GHz</p>
+										</div>
+										<div class="detail-row">
+											<p class="detail-label">通信プロトコル<span class="fs-8">※</span></p>
+											<p class="detail-data">ECHONET Lite（Ver.1.13、APPENDIX M）</p>
+										</div>
+									</div>
 								</li>
 								<li class="spec03-item">
 									<p class="label">メーカー希望小売価格（税込）</p>

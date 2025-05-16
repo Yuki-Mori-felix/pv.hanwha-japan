@@ -109,6 +109,7 @@ main.single-products {
 				.spec03-item {
 					display: flex;
 					align-items: center;
+					column-gap: 32px;
 					font-size: 12px;
 					line-height: 2;
 					& + .spec03-item {
@@ -116,14 +117,7 @@ main.single-products {
 					}
 					.label {
 						align-self: flex-start;
-						box-sizing: content-box;
-						margin-right: 10px;
 						font-weight: var(--fw-bold);
-					}
-					.data,
-					.detail-data {
-						box-sizing: content-box;
-						margin-left: 10px;
 					}
 				}
 				.spec03-item:not(:has(.detail-label)) {
@@ -132,36 +126,34 @@ main.single-products {
 					}
 				}
 				.spec03-item:has(.detail-label) {
-					display: grid;
-					grid-template-columns: 1fr 54px 50%;
+					display: flex;
+					column-gap: 32px;
 					@include max {
-						display: flex;
 						flex-wrap: wrap;
 					}
-					.blank {
-						display: block;
-						@include max {
-							display: none;
-						}
-					}
 					.label {
+						width: calc(50% - 102px);
 						@include max {
 							width: 100%;
-							padding-bottom: 3px;
 						}
 					}
-					.detail-label {
-						align-self: flex-start;
-						font-size: 10px;
-						font-weight: var(--fw-bold);
-						@include max {
-							width: 50%;
-						}
-					}
-					.detail-data {
-						font-size: 12px;
-						@include max {
-							width: calc(50% - 10px);
+					.detail {
+						flex: 1;
+						.detail-row {
+							display: flex;
+							column-gap: 32px;
+							.detail-label {
+								align-self: flex-start;
+								width: 54px;
+								font-size: 10px;
+								font-weight: var(--fw-bold);
+								@include max {
+									flex: 1;
+								}
+							}
+							.detail-data {
+								flex: 1;
+							}
 						}
 					}
 				}
