@@ -495,3 +495,12 @@ add_filter('rest_prepare_product', 'add_custom_meta_to_rest', 10, 3);
 add_filter('tinymce_templates_enable_media_buttons', function () {
   return true;
 });
+
+function allow_glb_upload($mimes) {
+	//非標準ファイルをメディアにアップロードできるように設定
+	if (current_user_can('manage_options')) {
+		$mimes['glb'] = 'model/gltf-binary';
+	}
+	return $mimes;
+}
+add_filter('upload_mimes', 'allow_glb_upload');

@@ -557,7 +557,9 @@ $img_path = get_stylesheet_directory_uri() . "/images";
   <div class="modal-window" id="modal-window">
     <div class="modal-wrap">
       <div class="frame">
-        <div class="content"></div>
+        <div class="content">
+          <?= get_field('web_ar') ?>
+        </div>
       </div>
       <div class="close">
         <div class="close-btn"></div>

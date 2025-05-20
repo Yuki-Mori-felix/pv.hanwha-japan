@@ -153,6 +153,10 @@
       <img src="/wp-content/uploads/2025/04/logo.png" alt="qcels">
     </div> -->
 
+    <!-- model-viewer -->
+		<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+		<!-- //model-viewer -->
+
   <?php else: ?>
   <?php endif; ?>
 
