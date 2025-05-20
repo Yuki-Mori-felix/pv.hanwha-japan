@@ -66,141 +66,154 @@ get_header();
 
       </section><!--topic-->
 
-      <section class="total-energy-solutions clearfix"><!--太陽光発電システムからトータルエネルギーソリューションまで-->
-        <div class="content img-size">
-          <img src="/wp-content/uploads/2025/03/concept.png" alt="">
-        </div>
-        <div class="content">
-          <span class="border-solid-bottom-01">ハンファジャパンのPV</span>
-          <h3 class="section-title text-align-l">太陽光発電システムから<br>トータルエネルギー<br>ソリューションまで</h3>
-          <p>優れた性能及びアフターサービス<br>日本全域に根ざした事業拠点と強固な財務安定性を基に、<br>毎年販売量が増加している。</p>
+      <?php
+      $args = array(
+        'post_type' => 'top',
+        'posts_per_page' => -1,
+      );
+      $the_query = new WP_Query($args);
+      ?>
+      <?php if ($the_query->have_posts()): ?>
+        <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+          <section class="total-energy-solutions clearfix"><!--太陽光発電システムからトータルエネルギーソリューションまで-->
+            <div class="content img-size">
+              <img src="<?= wp_kses_post(get_field('top_pv_img')['url']); ?>" alt="">
+            </div>
+            <div class="content">
+              <span class="border-solid-bottom-01"><?= wp_kses_post(get_field('top_pv_title')); ?></span>
+              <h3 class="section-title text-align-l"><?= wp_kses_post(get_field('top_pv_title_blue')); ?></h3>
+              <p><?= wp_kses_post(get_field('top_pv_text')); ?></p>
 
-          <div class="btn-box _link_bt3_b">
-            <a href="" class="btn">詳しくはこちら</a>
-          </div>
+              <div class="btn-box _link_bt3_b">
+                <a href="<?= wp_kses_post(get_field('top_pv_url')); ?>" class="btn">詳しくはこちら</a>
+              </div>
 
-        </div>
-      </section><!--太陽光発電システムからトータルエネルギーソリューションまで-->
+            </div>
+          </section><!--太陽光発電システムからトータルエネルギーソリューションまで-->
 
-      <section class="product section-wrapper"><!--人気の商品-->
-        <h3 class="section-title">製品・システム</h3>
-        <div class="section-inner">
-          <p class="sub-title">カテゴリー別一覧</p>
-        </div>
+          <section class="product section-wrapper"><!--人気の商品-->
+            <h3 class="section-title">製品・システム</h3>
+            <div class="section-inner">
+              <p class="sub-title">カテゴリー別一覧</p>
+            </div>
 
-        <div class="product-category">
-          <ul class="wrap_s">
-            <li>
-              <p class="product-logo"><img src="<?php the_field('puroduct_logo_01', 75); ?>"></p>
-              <h4><a href="#">太陽電池モジュール <br>Re.RISE</a></h4>
-              <p class="product-photo1"><img src="<?php the_field('puroduct_photo_01', 75); ?>"></p>
-              <span class="_link_bt1"><span><a href="/product-cat/002/">もっと見る</a></span></span>
-            </li>
-            <li>
-              <p class="product-logo"><img src="<?php the_field('puroduct_logo_02', 75); ?>"></p>
-              <h4><a href="#">太陽電池モジュール <br>Qcells</a></h4>
-              <p class="product-photo1"><img src="<?php the_field('puroduct_photo_02', 75); ?>"></p>
-              <span class="_link_bt1"><a href="/product/">もっと見る</a></span>
-            </li>
-            <li>
-              <h4><a href="#">拡張型<br>太陽光発電システム<br>Q.READY</a></h4><br>
-              <p class="product-photo1"><img src="<?php the_field('puroduct_photo_03', 75); ?>"></p>
-              <span class="_link_bt2"><a href="/product/">もっと見る</a></span>
-            </li>
-            <li>
-              <h4><a href="#">蓄電システム<br>HEMS</a></h4><br>
-              <p class="product-photo1"><img src="<?php the_field('puroduct_photo_04', 75); ?>"></p>
-              <span class="_link_bt2"><a href="/product-cat/002/">もっと見る</a></span>
-            </li>
-          </ul>
-        </div><!--人気の商品-->
+            <div class="product-category">
+              <ul class="wrap_s">
+                <li>
+                  <p class="product-logo"><img src="<?= wp_kses_post(get_field('puroduct_logo_1')['url']); ?>"></p>
+                  <h4><a href="<?= wp_kses_post(get_field('puroduct_url_1')); ?>"><?= wp_kses_post(get_field('puroduct_title_1')); ?></a></h4>
+                  <p class="product-photo1"><img src="<?= wp_kses_post(get_field('puroduct_photo_1')['url']); ?>"></p>
+                  <span class="_link_bt1"><span><a href="<?= wp_kses_post(get_field('puroduct_url_1')); ?>">もっと見る</a></span></span>
+                </li>
+                <li>
+                  <p class="product-logo"><img src="<?= wp_kses_post(get_field('puroduct_logo_2')['url']); ?>"></p>
+                  <h4><a href="<?= wp_kses_post(get_field('puroduct_url_2')); ?>"><?= wp_kses_post(get_field('puroduct_title_2')); ?></a></h4>
+                  <p class="product-photo1"><img src="<?= wp_kses_post(get_field('puroduct_photo_2')['url']); ?>"></p>
+                  <span class="_link_bt1"><a href="<?= wp_kses_post(get_field('puroduct_url_2')); ?>">もっと見る</a></span>
+                </li>
+                <li>
+                  <h4><a href="<?= wp_kses_post(get_field('puroduct_url_3')); ?>"><?= wp_kses_post(get_field('puroduct_title_3')); ?></a></h4><br>
+                  <p class="product-photo1"><img src="<?= wp_kses_post(get_field('puroduct_photo_3')['url']); ?>"></p>
+                  <span class="_link_bt2"><a href="<?= wp_kses_post(get_field('puroduct_url_3')); ?>">もっと見る</a></span>
+                </li>
+                <li>
+                  <h4><a href="<?= wp_kses_post(get_field('puroduct_url_4')); ?>"><?= wp_kses_post(get_field('puroduct_title_4')); ?></a></h4><br>
+                  <p class="product-photo1"><img src="<?= wp_kses_post(get_field('puroduct_photo_4')['url']); ?>"></p>
+                  <span class="_link_bt2"><a href="<?= wp_kses_post(get_field('puroduct_url_4')); ?>">もっと見る</a></span>
+                </li>
+              </ul>
+            </div><!--人気の商品-->
 
-        <div class="banner1"><!--各種バナー-->
-          <ul class="wrap_s">
-            <li>
-              <h4><a href="#">パワーコンディショナー・<br>モニター</a></h4><br><span class="_link_bt1"><a href="#">もっと見る</a></span>
-              <p class="banner-photo1"><img src="<?php the_field('banner_photo_01', 75); ?>"></p>
-            </li>
-            <li>
-              <h4><a href="#">架台・設置金具</a></h4><br><span class="_link_bt1"><a href="#">もっと見る</a></span>
-              <p class="banner-photo1"><img src="<?php the_field('banner_photo_02', 75); ?>"></p>
-            </li>
-            <li>
-              <h4><a href="#">V2H・その他</a></h4><br><span class="_link_bt1"><a href="#">もっと見る</a></span>
-              <p class="banner-photo1"><img src="<?php the_field('banner_photo_03', 75); ?>"></p>
-            </li>
-          </ul>
-        </div>
-      </section><!--各種バナー--><!--人気の商品-->
+            <div class="banner1"><!--各種バナー-->
+              <ul class="wrap_s">
+                <li>
+                  <h4><a href="<?= wp_kses_post(get_field('puroduct_url_5')); ?>">パワーコンディショナー・<br>モニター</a></h4><br><span class="_link_bt1"><a href="<?= wp_kses_post(get_field('puroduct_url_5')); ?>">もっと見る</a></span>
+                  <p class="banner-photo1"><img src="<?= wp_kses_post(get_field('banner_photo_1')['url']); ?>"></p>
+                </li>
+                <li>
+                  <h4><a href="<?= wp_kses_post(get_field('puroduct_url_6')); ?>">架台・設置金具</a></h4><br><span class="_link_bt1"><a href="<?= wp_kses_post(get_field('puroduct_url_6')); ?>">もっと見る</a></span>
+                  <p class="banner-photo1"><img src="<?= wp_kses_post(get_field('banner_photo_2')['url']); ?>"></p>
+                </li>
+                <li>
+                  <h4><a href="<?= wp_kses_post(get_field('puroduct_url_7')); ?>">V2H・その他</a></h4><br><span class="_link_bt1"><a href="<?= wp_kses_post(get_field('puroduct_url_7')); ?>">もっと見る</a></span>
+                  <p class="banner-photo1"><img src="<?= wp_kses_post(get_field('banner_photo_3')['url']); ?>"></p>
+                </li>
+              </ul>
+            </div>
+          </section><!--各種バナー--><!--人気の商品-->
 
 
-      <div class="retailer-system"><!--販売店用システム-->
-        <div class="_left_contents">
-          <h3>販売店用システム</h3>
-          <P>HANASYS (ハナシス)</p>
-        </div>
-        <div class="_right_contents">
-          <img src="/wp-content/uploads/2025/03/hana.png" alt="HANASYS (ハナシス)">
-        </div>
-      </div><!--販売店用システム-->
+          <div class="retailer-system"><!--販売店用システム-->
+            <div class="_left_contents">
+              <h3>販売店用システム</h3>
+              <P>HANASYS (ハナシス)</p>
+            </div>
+            <div class="_right_contents">
+              <img src="<?= wp_kses_post(get_field('hanasys_banner')['url']); ?>" alt="HANASYS (ハナシス)">
+            </div>
+          </div><!--販売店用システム-->
 
-      <section class="electricity-bill-service"><!--電気料金削減サービス-->
-        <h3>電気料金削減サービス</h3>
+          <section class="electricity-bill-service"><!--電気料金削減サービス-->
+            <h3><?= wp_kses_post(get_field('electricity_title')); ?></h3>
 
-        <div class="electricity-bill-service-inner"><!--service1-->
-          <div class="_left_contents">
-            <div class="item_box -fade-in">
-              <a class="item_link" href="#" target="_blank">
-                <div class="item_content">
-                  <div class="item_image">
-                    <img src="/wp-content/uploads/2025/04/service.png" alt="">
-                  </div>
-                  <div class="item_mask">
-                    <div class="item_mask-text"><img src="/wp-content/uploads/2025/04/ENECONNECT_Logo_White01.svg"></div>
-                    <span class="material-symbols-outlined">open_in_new</span>
-                  </div>
+            <div class="electricity-bill-service-inner"><!--service1-->
+              <div class="_left_contents">
+                <div class="item_box -fade-in">
+                  <a class="item_link" href="<?= wp_kses_post(get_field('electricity_url_content1')); ?>" target="_blank">
+                    <div class="item_content">
+                      <div class="item_image">
+                        <img src="<?= wp_kses_post(get_field('electricity_img_content1')['url']); ?>" alt="">
+                      </div>
+                      <div class="item_mask">
+                        <div class="item_mask-text"><img src="/wp-content/uploads/2025/04/ENECONNECT_Logo_White01.svg"></div>
+                        <span class="material-symbols-outlined">open_in_new</span>
+                      </div>
+                    </div>
+                  </a>
                 </div>
-              </a>
-            </div>
-          </div>
-          <div class="_right_contents">
-            <h4>メインタイトル/ENECONNECT</h4>
-            <p>詳細テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              </div>
+              <div class="_right_contents">
+                <h4><?= wp_kses_post(get_field('electricity_title_content1')); ?></h4>
+                <p><?= wp_kses_post(get_field('electricity_text_content1')); ?></p>
 
-            <div class="btn-box">
-              <a href="" class="btn">詳しくはこちら</a>
-            </div>
-          </div>
-        </div><!--service1-->
-
-        <!--service2-->
-        <div class="electricity-bill-service-inner">
-          <div class="_left_contents">
-            <div class="item_box -fade-in">
-              <a class="item_link" href="#" target="_blank">
-                <div class="item_content">
-                  <div class="item_image">
-                    <img src="/wp-content/uploads/2025/04/service.png" alt="">
-                  </div>
-                  <div class="item_mask">
-                    <div class="item_mask-text"><img src="/wp-content/uploads/2025/04/ENECONNECT_Logo_White01.svg"></div>
-                    <span class="material-symbols-outlined">open_in_new</span>
-                  </div>
+                <div class="btn-box">
+                  <a href="<?= wp_kses_post(get_field('electricity_url_content1')); ?>" class="btn">詳しくはこちら</a>
                 </div>
-              </a>
-            </div>
-          </div>
-          <div class="_right_contents">
-            <h4>メインタイトル/ENECONNECT</h4>
-            <p>詳細テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-            <div class="btn-box">
-              <a href="" class="btn">詳しくはこちら</a>
+              </div>
+            </div><!--service1-->
+
+            <!--service2-->
+            <div class="electricity-bill-service-inner">
+              <div class="_left_contents">
+                <div class="item_box -fade-in">
+                  <a class="item_link" href="<?= wp_kses_post(get_field('electricity_url_content2')); ?>" target="_blank">
+                    <div class="item_content">
+                      <div class="item_image">
+                        <img src="<?= wp_kses_post(get_field('electricity_img_content2')['url']); ?>" alt="">
+                      </div>
+                      <div class="item_mask">
+                        <div class="item_mask-text"><img src="/wp-content/uploads/2025/04/ENECONNECT_Logo_White01.svg"></div>
+                        <span class="material-symbols-outlined">open_in_new</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="_right_contents">
+                <h4><?= wp_kses_post(get_field('electricity_title_content2')); ?></h4>
+                <p><?= wp_kses_post(get_field('electricity_text_content2')); ?></p>
+                <div class="btn-box">
+                  <a href="<?= wp_kses_post(get_field('electricity_url_content2')); ?>" class="btn">詳しくはこちら</a>
+                </div>
+
+              </div>
             </div>
 
-          </div>
-        </div>
-
-      </section><!--電気料金削減サービス-->
+          </section><!--電気料金削減サービス-->
+        <?php endwhile; ?>
+      <?php else: ?>
+      <?php endif;
+      wp_reset_postdata(); ?>
 
       <section class="topic press section-wrapper"><!--pre-release-->
         <h3 class="section-title">プレスリリース</h3>
