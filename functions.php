@@ -49,6 +49,22 @@ function add_custom_post()
     )
   );
 
+  /* TOPページ */
+  register_post_type(
+    'top',
+    array(
+      'label' => 'TOPページ',
+      'public' => true,
+      'show_in_rest' => true,
+      'menu_position' => 5,
+      'supports' => array(
+        'title',
+        'excerpt',
+        'custom-fields',
+      )
+    )
+  );
+
   /* 商品 */
 
   register_post_type(
