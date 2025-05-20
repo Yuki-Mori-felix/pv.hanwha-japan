@@ -65,6 +65,22 @@ function add_custom_post()
     )
   );
 
+  /* 製品・システムページ */
+  register_post_type(
+    'product-list',
+    array(
+      'label' => '製品・システムページ',
+      'public' => true,
+      'show_in_rest' => true,
+      'menu_position' => 5,
+      'supports' => array(
+        'title',
+        'excerpt',
+        'custom-fields',
+      )
+    )
+  );
+
   /* 商品 */
 
   register_post_type(
@@ -476,6 +492,6 @@ function add_custom_meta_to_rest($response, $post, $request)
 add_filter('rest_prepare_product', 'add_custom_meta_to_rest', 10, 3);
 
 // ACF WYSIWYGエディタにTinyMCE テンプレート連携
-add_filter('tinymce_templates_enable_media_buttons', function(){
-return true;
-} );
+add_filter('tinymce_templates_enable_media_buttons', function () {
+  return true;
+});
