@@ -1,3 +1,4 @@
 _backup/
 images/
 *.css.map
+.gitattributes

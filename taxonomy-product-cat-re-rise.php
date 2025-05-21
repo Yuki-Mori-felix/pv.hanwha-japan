@@ -1,14 +1,101 @@
+<?php
+get_header();
+$img_path = get_stylesheet_directory_uri() . "/images";
+?>
 <!-- 製品詳細 ターム(Re.RISE) 一覧ページ -->
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-
-<body>
+<main class="taxonomy-product-cat re-rise">
+  <section class="mv mv-re-rise">
+    <div class="container">
+      <div class="ttlc">
+        <p class="prod-name">Re.RISE<sup>®</sup></p>
+        <h2 class="ttl">国内の住宅環境に最適化した<br>ハンファジャパンオリジナルブランド</h2>
+      </div>
+    </div>
+  </section>
+  <!-- // MV -->
+  <div class="wrap">
+    <?php custom_breadcrumb(); ?>
+  </div>
+  <section class="top">
+    <div class="container">
+      <div class="share">
+        <div class="img"><img src="<?=$img_path?>/tax-prod-cat/share-no1.png" alt=""></div>
+        <div class="img"><img src="<?=$img_path?>/tax-prod-cat/top-share.png" alt=""></div>
+      </div>
+      <div class="panel"><img src="<?=$img_path?>/tax-prod-cat/panel-re-rise.png" alt=""></div>
+    </div>
+  </section>
+  <!-- // TOP -->
+  <section class="intro bg-re-rise">
+    <div class="container">
+      <div class="img"><img src="<?=$img_path?>/tax-prod-cat/logo-re-rise.png" alt=""></div>
+      <div class="ctt">
+        <p class="name col-re-rise">Re.RISE<sup>®</sup></p>
+        <p class="txt">日本の環境でさらに高出力・<br class="none-min-ml">高効率を発揮できるために、 <br>最先端技術を採用した<br class="none-min-ml">最上級の太陽光パネルブランドです。</p>
+      </div>
+    </div>
+  </section>
+  <!-- // INTRO -->
+  <section class="lineup">
+    <div class="container">
+      <h2 class="ttl">ラインナップ</h2>
+      <div class="choose">
+        <button class="all">ALL</button>
+        <div class="series">
+          <select name="" class="select">
+            <option value="">シリーズ</option>
+            <option value="Re.RISE-G4シリーズ">Re.RISE-G4シリーズ</option>
+            <option value="Re.Rise-G3シリーズ">Re.Rise-G3シリーズ</option>
+            <option value="Re.RISE AC">Re.RISE AC</option>
+            <option value="Re.RISE S 230">Re.RISE S 230</option>
+            <option value="Re.RISE-G2 435">Re.RISE-G2 435</option>
+          </select>
+        </div>
+        <div class="size">
+          <select name="" class="select">
+            <option value="">サイズ</option>
+            <option value="一般サイズ">一般サイズ</option>
+            <option value="小型サイズ">小型サイズ</option>
+          </select>
+        </div>
+      </div>
+      <div class="prod-list">
+        <a class="prod-item" href="">
+          <div class="img"><img src="<?=$img_path?>/tax-prod-cat/ms-g4-bag-270.png" alt=""></div>
+          <div class="ttl"><span class="new">NEW</span><h3 class="name">Re.RISE MS-G4 BAG 270</h3></div>
+        </a>
+        <a class="prod-item" href="">
+          <div class="img"><img src="<?=$img_path?>/tax-prod-cat/g4-440.png" alt=""></div>
+          <div class="ttl"><span class="new">NEW</span><h3 class="name">Re.RISE-G4 440</h3></div>
+        </a>
+        <a class="prod-item" href="">
+          <div class="img"><img src="<?=$img_path?>/tax-prod-cat/ms-g4-290.png" alt=""></div>
+          <div class="ttl"><span class="new">NEW</span><h3 class="name">Re.RISE MS-G4 290</h3></div>
+        </a>
+        <a class="prod-item" href="">
+          <div class="img"><img src="<?=$img_path?>/tax-prod-cat/ac.png" alt=""></div>
+          <div class="ttl"><h3 class="name">Re.RISE AC</h3></div>
+        </a>
+        <a class="prod-item" href="">
+          <div class="img"><img src="<?=$img_path?>/tax-prod-cat/g3-440.png" alt=""></div>
+          <div class="ttl"><h3 class="name">Re.RISE-G3 440</h3></div>
+        </a>
+        <a class="prod-item" href="">
+          <div class="img"><img src="<?=$img_path?>/tax-prod-cat/ms-g3-290.png" alt=""></div>
+          <div class="ttl"><h3 class="name">Re.RISE MS-G3 290</h3></div>
+        </a>
+        <a class="prod-item" href="">
+          <div class="img"><img src="<?=$img_path?>/tax-prod-cat/g2-435.png" alt=""></div>
+          <div class="ttl"><h3 class="name">Re.RISE-G2 435</h3></div>
+        </a>
+        <a class="prod-item" href="">
+          <div class="img"><img src="<?=$img_path?>/tax-prod-cat/s-230.png" alt=""></div>
+          <div class="ttl"><h3 class="name">Re.RISE S 230</h3></div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- // LINEUP -->
   <div>
     <?php
     $term_object = get_queried_object();
@@ -36,6 +123,6 @@
     <?php endif; ?>
     <?php wp_reset_postdata(); ?>
   </div>
-</body>
-
-</html>
+</main>
+<!-- // TAXONOMY_PRODUCTS_CAT RE_RISE -->
+<?=get_footer();?>
