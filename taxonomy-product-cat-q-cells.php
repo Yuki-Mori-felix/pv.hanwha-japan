@@ -1,14 +1,73 @@
+<?php
+get_header();
+$img_path = get_stylesheet_directory_uri() . "/images";
+?>
 <!-- 製品詳細 ターム(Qcells) 一覧ページ -->
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-
-<body>
+<main class="taxonomy-product-cat q-cells">
+  <section class="mv mv-q-cells">
+    <div class="container">
+      <div class="ttlc">
+        <p class="prod-name">Qcells</p>
+        <h2 class="ttl">最新の独自技術を採用した<br>グローバル太陽光パネルのパイオニア</h2>
+      </div>
+    </div>
+  </section>
+  <!-- // MV -->
+  <div class="wrap">
+    <?php custom_breadcrumb(); ?>
+  </div>
+  <section class="top">
+    <div class="container">
+      <div class="share">
+        <div class="img"><img src="<?=$img_path?>/tax-prod-cat/share-no1.png" alt=""></div>
+        <div class="img"><img src="<?=$img_path?>/tax-prod-cat/top-share.png" alt=""></div>
+      </div>
+      <div class="panel"><img src="<?=$img_path?>/tax-prod-cat/panel-qcells.png" alt=""></div>
+    </div>
+  </section>
+  <!-- // TOP -->
+  <section class="intro bg-q-cells">
+    <div class="container">
+      <div class="img"><img src="<?=$img_path?>/tax-prod-cat/logo-qcells.png" alt=""></div>
+      <div class="ctt">
+        <p class="name col-q-cells">Qcells</p>
+        <p class="txt">世界で認められた、<br class="none-min-ml">Qcells独自のQ.ANTUM技術を搭載。<br>究極の高効率を実現します。</p>
+      </div>
+    </div>
+  </section>
+  <!-- // INTRO -->
+  <section class="lineup">
+    <div class="container">
+      <h2 class="ttl">ラインナップ</h2>
+      <div class="choose">
+        <button class="all">ALL</button>
+        <div class="series">
+          <select name="" class="select">
+            <option value="">シリーズ</option>
+            <option value="Q.TRONシリーズ">Q.TRONシリーズ</option>
+          </select>
+        </div>
+        <div class="size">
+          <select name="" class="select">
+            <option value="">サイズ</option>
+            <option value="一般サイズ">一般サイズ</option>
+            <option value="小型サイズ">小型サイズ</option>
+          </select>
+        </div>
+      </div>
+      <div class="prod-list">
+        <a class="prod-item" href="">
+          <div class="img"><img src="<?=$img_path?>/tax-prod-cat/m-g24-440.png" alt=""></div>
+          <div class="ttl"><h3 class="name">Q.TRON M-G2.4+ 440</h3></div>
+        </a>
+        <a class="prod-item" href="">
+          <div class="img"><img src="<?=$img_path?>/tax-prod-cat/s-g24.png" alt=""></div>
+          <div class="ttl"><h3 class="name">Q.TRON S-G2.4+</h3></div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- // LINEUP -->
   <div>
     <?php
     $term_object = get_queried_object();
@@ -36,6 +95,6 @@
     <?php endif; ?>
     <?php wp_reset_postdata(); ?>
   </div>
-</body>
-
-</html>
+</main>
+<!-- // TAXONOMY_PRODUCTS_CAT Q_CELLS -->
+<?=get_footer();?>

@@ -24,6 +24,9 @@
     <!-- //splide -->
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/single-product.css'>
     <script src="<?= get_stylesheet_directory_uri() ?>/js/single-product.js"></script>
+  <?php elseif (is_tax('product-cat')) : ?>
+    <link rel='stylesheet' href='<?=get_stylesheet_directory_uri()?>/css/taxonomy-product-cat.css'>
+    <script src="<?=get_stylesheet_directory_uri()?>/js/taxonomy-product-cat.js"></script>
   <?php endif; ?>
   <!--style.css-->
 
@@ -152,6 +155,10 @@
     <!-- <div class="_product_logo">
       <img src="/wp-content/uploads/2025/04/logo.png" alt="qcels">
     </div> -->
+
+    <!-- model-viewer -->
+		<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+		<!-- //model-viewer -->
 
   <?php else: ?>
   <?php endif; ?>
