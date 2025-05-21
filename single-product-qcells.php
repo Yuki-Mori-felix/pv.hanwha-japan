@@ -180,12 +180,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
       <?= the_field('sec_guide'); ?>
       <!-- //guide -->
 
-      <section class="support" data-target="support">
-        <div class="wrapper">
-          <h2 class="sec-ttl" id="support">ご検討から設置後のアフターまでも徹底サポートいたします。</h2>
-          <?= the_field('sec_support'); ?>
-        </div>
-      </section>
+      <?= the_field('sec_support'); ?>
       <!-- //support -->
 
     <?php endwhile; ?>
