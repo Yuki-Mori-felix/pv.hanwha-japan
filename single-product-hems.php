@@ -542,11 +542,6 @@ $img_path = get_stylesheet_directory_uri() . "/images";
 
 
   <div class="fixed-anchor">
-    <a href="#overview" data-id="overview" class="link"><span class="txt">TOP</span></a>
-    <a href="#feature" data-id="feature" class="link"><span class="txt">特長</span></a>
-    <a href="#guide" data-id="guide" class="link"><span class="txt">安心導入ガイド</span></a>
-    <a href="#support" data-id="support" class="link"><span class="txt">徹底サポート</span></a>
-    <a href="#compare" data-id="compare" class="link"><span class="txt">比較</span></a>
   </div>
   <!-- //fixed-anchor -->
 
