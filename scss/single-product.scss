@@ -1231,6 +1231,9 @@ main.single-products {
 		}
 	}
 	//section.compare
+	section.overview + section.component {
+		padding-top: 100px;
+	}
 	section.component {
 		padding-bottom: 100px;
 		.wrapper {
@@ -1250,6 +1253,14 @@ main.single-products {
 					width: 100%;
 					&.wide {
 						max-width: 484px;
+					}
+					&.item-3cols {
+						max-width: 311px;
+						.item-name {
+							min-height: 48px;
+							font-size: 16px;
+							color: var(--col-black);
+						}
 					}
 					.img {
 						max-width: 140px;
