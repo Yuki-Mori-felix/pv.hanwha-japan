@@ -24,7 +24,7 @@
     <!-- //splide -->
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/single-product.css'>
     <script src="<?= get_stylesheet_directory_uri() ?>/js/single-product.js"></script>
-  <?php elseif (is_tax('product-cat')) : ?>
+  <?php elseif (is_page('re-rise') || is_page('q-cells') || is_page('hems') || is_page('storage-system') ) : ?>
     <link rel='stylesheet' href='<?=get_stylesheet_directory_uri()?>/css/taxonomy-product-cat.css'>
     <script src="<?=get_stylesheet_directory_uri()?>/js/taxonomy-product-cat.js"></script>
   <?php endif; ?>
