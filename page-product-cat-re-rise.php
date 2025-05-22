@@ -10,8 +10,8 @@ $img_path = get_stylesheet_directory_uri() . "/images";
   <section class="mv mv-re-rise">
     <div class="container">
       <div class="ttlc">
-        <p class="prod-name">Re.RISE<sup>®</sup></p>
-        <h2 class="ttl">国内の住宅環境に最適化した<br>ハンファジャパンオリジナルブランド</h2>
+        <p class="prod-name"><?= get_field('title_main'); ?></p>
+        <h2 class="ttl"><?= get_field('title_sub') ?></h2>
       </div>
     </div>
   </section>
@@ -34,7 +34,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
       <div class="img"><img src="<?=$img_path?>/tax-prod-cat/logo-re-rise.png" alt=""></div>
       <div class="ctt">
         <p class="name col-re-rise">Re.RISE<sup>®</sup></p>
-        <p class="txt">日本の環境でさらに高出力・<br class="none-min-ml">高効率を発揮できるために、 <br>最先端技術を採用した<br class="none-min-ml">最上級の太陽光パネルブランドです。</p>
+        <p class="txt"><?= get_field('description'); ?></p>
       </div>
     </div>
   </section>

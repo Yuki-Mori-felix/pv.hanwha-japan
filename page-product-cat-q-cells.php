@@ -10,8 +10,8 @@ $img_path = get_stylesheet_directory_uri() . "/images";
   <section class="mv mv-q-cells">
     <div class="container">
       <div class="ttlc">
-        <p class="prod-name">Qcells</p>
-        <h2 class="ttl">最新の独自技術を採用した<br>グローバル太陽光パネルのパイオニア</h2>
+        <p class="prod-name"><?= get_field('title_main'); ?></p>
+        <h2 class="ttl"><?= get_field('title_sub') ?></h2>
       </div>
     </div>
   </section>
@@ -34,7 +34,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
       <div class="img"><img src="<?=$img_path?>/tax-prod-cat/logo-qcells.png" alt=""></div>
       <div class="ctt">
         <p class="name col-q-cells">Qcells</p>
-        <p class="txt">世界で認められた、<br class="none-min-ml">Qcells独自のQ.ANTUM技術を搭載。<br>究極の高効率を実現します。</p>
+        <p class="txt"><?= get_field('description'); ?></p>
       </div>
     </div>
   </section>
