@@ -65,21 +65,6 @@ function add_custom_post()
     )
   );
 
-  /* 製品・システムページ */
-  register_post_type(
-    'product-list',
-    array(
-      'label' => '製品・システムページ',
-      'public' => true,
-      'show_in_rest' => true,
-      'menu_position' => 5,
-      'supports' => array(
-        'title',
-        'excerpt',
-        'custom-fields',
-      )
-    )
-  );
 
   /* 商品 */
 

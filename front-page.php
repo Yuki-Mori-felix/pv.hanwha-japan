@@ -127,15 +127,15 @@ get_header();
             <div class="banner1"><!--各種バナー-->
               <ul class="wrap_s">
                 <li>
-                  <h4><a href="<?= wp_kses_post(get_field('puroduct_url_5')); ?>">パワーコンディショナー・<br>モニター</a></h4><br><span class="_link_bt1"><a href="<?= wp_kses_post(get_field('puroduct_url_5')); ?>">もっと見る</a></span>
+                  <h4><a href="<?= wp_kses_post(get_field('puroduct_url_5')); ?>"><?= wp_kses_post(get_field('puroduct_title_5')); ?></a></h4><br><span class="_link_bt1"><a href="<?= wp_kses_post(get_field('puroduct_url_5')); ?>">もっと見る</a></span>
                   <p class="banner-photo1"><img src="<?= wp_kses_post(get_field('banner_photo_1')['url']); ?>"></p>
                 </li>
                 <li>
-                  <h4><a href="<?= wp_kses_post(get_field('puroduct_url_6')); ?>">架台・設置金具</a></h4><br><span class="_link_bt1"><a href="<?= wp_kses_post(get_field('puroduct_url_6')); ?>">もっと見る</a></span>
+                  <h4><a href="<?= wp_kses_post(get_field('puroduct_url_6')); ?>"><?= wp_kses_post(get_field('puroduct_title_6')); ?></a></h4><br><span class="_link_bt1"><a href="<?= wp_kses_post(get_field('puroduct_url_6')); ?>">もっと見る</a></span>
                   <p class="banner-photo1"><img src="<?= wp_kses_post(get_field('banner_photo_2')['url']); ?>"></p>
                 </li>
                 <li>
-                  <h4><a href="<?= wp_kses_post(get_field('puroduct_url_7')); ?>">V2H・その他</a></h4><br><span class="_link_bt1"><a href="<?= wp_kses_post(get_field('puroduct_url_7')); ?>">もっと見る</a></span>
+                  <h4><a href="<?= wp_kses_post(get_field('puroduct_url_7')); ?>"><?= wp_kses_post(get_field('puroduct_title_7')); ?></a></h4><br><span class="_link_bt1"><a href="<?= wp_kses_post(get_field('puroduct_url_7')); ?>">もっと見る</a></span>
                   <p class="banner-photo1"><img src="<?= wp_kses_post(get_field('banner_photo_3')['url']); ?>"></p>
                 </li>
               </ul>
@@ -149,7 +149,9 @@ get_header();
               <P>HANASYS (ハナシス)</p>
             </div>
             <div class="_right_contents">
-              <img src="<?= wp_kses_post(get_field('hanasys_banner')['url']); ?>" alt="HANASYS (ハナシス)">
+              <a href="<?= wp_kses_post(get_field('hanasys_banner_url')); ?>">
+                <img src="<?= wp_kses_post(get_field('hanasys_banner')['url']); ?>" alt="HANASYS (ハナシス)">
+              </a>
             </div>
           </div><!--販売店用システム-->
 
@@ -216,7 +218,7 @@ get_header();
       wp_reset_postdata(); ?>
 
       <section class="topic press section-wrapper"><!--pre-release-->
-        <h3 class="section-title">プレスリリース</h3>
+        <h3 class="section-title">プレリリース</h3>
 
         <div class="topic-inner">
           <?php

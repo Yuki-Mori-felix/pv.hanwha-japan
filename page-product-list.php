@@ -31,22 +31,22 @@ get_header();
   <div class="wrap_s">
     <ul class="popular_products_category">
       <li class="popular_products_item">
-        <h4><a href="#"><?php the_field('product-list-001',); ?></a></h4>
-        <div class="_list"><img src="<?php the_field('product-photo-001', 163); ?>"></div>
-        <h5><?php the_field('product-list-004', 163); ?></h5>
-        <a class="btn" href="#">詳しくはこちら</a>
+        <h4><a href="<?= wp_kses_post(get_field('product_url1')); ?>"><?= wp_kses_post(get_field('product_title1')); ?></a></h4>
+        <div class="_list"><img src="<?= get_field('product_img1', 163)['url']; ?>"></div>
+        <h5><?= wp_kses_post(get_field('product_name1')); ?></h5>
+        <a class="btn" href="<?= wp_kses_post(get_field('product_url1')); ?>">詳しくはこちら</a>
       </li>
       <li class="popular_products_item">
-        <h4><a href="#"><?php the_field('product-list-002',); ?></a></h4>
-        <div class="_list"><img src="<?php the_field('product-photo-002', 163); ?>"></div>
-        <h5><?php the_field('product-list-005', 163); ?></h5>
-        <a class="btn" href="#">詳しくはこちら</a>
+        <h4><a href="<?= wp_kses_post(get_field('product_url2')); ?>"><?= wp_kses_post(get_field('product_title2')); ?></a></h4>
+        <div class="_list"><img src="<?= get_field('product_img2', 163)['url']; ?>"></div>
+        <h5><?= wp_kses_post(get_field('product_name2')); ?></h5>
+        <a class="btn" href="<?= wp_kses_post(get_field('product_url2')); ?>">詳しくはこちら</a>
       </li>
       <li class="popular_products_item">
-        <h4><a href="#"><?php the_field('product-list-003',); ?></a></h4>
-        <div class="_list"><img src="<?php the_field('product-photo-003', 163); ?>"></div>
-        <h5><?php the_field('product-list-006', 163); ?></h5>
-        <a class="btn" href="#">詳しくはこちら</a>
+        <h4><a href="<?= wp_kses_post(get_field('product_url3')); ?>"><?= wp_kses_post(get_field('product_title3')); ?></a></h4>
+        <div class="_list"><img src="<?= get_field('product_img3', 163)['url']; ?>"></div>
+        <h5><?= wp_kses_post(get_field('product_name3')); ?></h5>
+        <a class="btn" href="<?= wp_kses_post(get_field('product_url3')); ?>">詳しくはこちら</a>
       </li>
     </ul>
   </div>
@@ -69,24 +69,24 @@ get_header();
       <div class="electricity-content wrap_s">
         <ul class="create-list">
           <li>
-            <p class="_list"><img src="<?php the_field('create_electricity_1bst_photo', 163); ?>"></p>
-            <h4><a href="#">太陽電池モジュール<br>Re.RISE&reg;</a></h4>
-            <p class="product-img"><img src="<?php the_field('create_electricity_1st_photo', 163); ?>"></p>
+            <p class="_list"><img src="<?= get_field('create_electricity_1bst_photo', 163)['url']; ?>"></p>
+            <h4><a href="#"><?= the_field('create_electricity_title1', 163) ?></a></h4>
+            <p class="product-img"><img src="<?= get_field('create_electricity_1st_photo', 163)['url']; ?>"></p>
           </li>
           <li>
-            <p class="_list"><img src="<?php the_field('create_electricity_2bst_photo', 163); ?>"></p>
-            <h4><a href="#">太陽電池モジュール<br>Qcells</a></h4>
-            <p class="product-img"><img src="<?php the_field('create_electricity_2st_photo', 163); ?>"></p>
+            <p class="_list"><img src="<?= get_field('create_electricity_2bst_photo', 163)['url']; ?>"></p>
+            <h4><a href="#"><?= the_field('create_electricity_title2', 163) ?></a></h4>
+            <p class="product-img"><img src="<?= get_field('create_electricity_2st_photo', 163)['url']; ?>"></p>
           </li>
           <li>
-            <p class="_list"><img src="<?php the_field('create_electricity_3bst_photo', 163); ?>"></p>
-            <h4><a href="#">パワーコンディショナー</a></h4>
-            <p class="product-img"><img src="<?php the_field('create_electricity_3st_photo', 163); ?>"></p>
+            <p class="_list"><img src="<?= get_field('create_electricity_3bst_photo', 163)['url']; ?>"></p>
+            <h4><a href="#"><?= the_field('create_electricity_title3', 163) ?></a></h4>
+            <p class="product-img"><img src="<?= get_field('create_electricity_3st_photo', 163)['url']; ?>"></p>
           </li>
           <li>
-            <p class="_list"><img src="<?php the_field('create_electricity_4bst_photo', 163); ?>"></p>
-            <h4><a href="#">架台・設置金具</a></h4>
-            <p class="product-img"><img src="<?php the_field('create_electricity_4st_photo', 163); ?>"></p>
+            <p class="_list"><img src="<?= get_field('create_electricity_4bst_photo', 163)['url']; ?>"></p>
+            <h4><a href="#"><?= the_field('create_electricity_title4', 163) ?></a></h4>
+            <p class="product-img"><img src="<?= get_field('create_electricity_4st_photo', 163)['url']; ?>"></p>
           </li>
         </ul>
       </div>
@@ -99,8 +99,8 @@ get_header();
       <div class="electricity-content">
         <ul class="wrap_s">
           <li>
-            <h4><a href="#">蓄電システム</a></h4>
-            <p class="_list"><img src="<?php the_field('create_electricity_1st_photo', 163); ?>"></p>
+            <h4><a href="#"><?php the_field('products_storing_electricity_title', 163); ?></a></h4>
+            <p class="_list"><img src="<?= get_field('create_electricity_1st_photo', 163)['url']; ?>"></p>
           </li>
         </ul>
       </div>
@@ -113,16 +113,16 @@ get_header();
       <div class="electricity-content">
         <ul class="wrap_s">
           <li>
-            <h4><a href="#">拡張型<br>太陽光発電システム<br>Q.READY&reg;</a></h4>
-            <p class="_list"><img src="<?php the_field('puroduct_logo_01', 75); ?>"></p>
+            <h4><a href="#"><?= the_field('use_electricity_title1'); ?></a></h4>
+            <p class="_list"><img src="<?= get_field('use_electricity_img1', 163)['url']; ?>"></p>
           </li>
           <li>
-            <h4><a href="#">HEMS</a></h4>
-            <p class="_list"><img src="<?php the_field('puroduct_logo_02', 75); ?>"></p>
+            <h4><a href="#"><?= the_field('use_electricity_title2'); ?></a></h4>
+            <p class="_list"><img src="<?= get_field('use_electricity_img2', 163)['url']; ?>"></p>
           </li>
           <li>
-            <h4><a href="#">V2H</a></h4>
-            <p class="_list"><img src="<?php the_field('puroduct_logo_02', 75); ?>"></p>
+            <h4><a href="#"><?= the_field('use_electricity_title3'); ?></a></h4>
+            <p class="_list"><img src="<?= get_field('use_electricity_img3', 163)['url']; ?>"></p>
           </li>
         </ul>
       </div>
@@ -138,7 +138,7 @@ get_header();
     <div class="wrap">
       <div class="wrap_s">
         <h2>システム</h2>
-        <a href="#" class="system-button">販売店様専用</a>
+        <a href="<?= get_field('system_button'); ?>" class="system-button">販売店様専用</a>
       </div>
     </div>
   </div>
@@ -147,7 +147,7 @@ get_header();
     <div class="wrap">
       <div class="system-content wrap_s">
         <p>ワンストップ電子発注システムHANASYS</p>
-        <a class="banner" href="#">
+        <a class="banner" href="<?= get_field('banner002_url', 163); ?>">
           <img src="<?php the_field('banner002', 163); ?>" alt="ワンストップ電子発注システムHANASYS">
         </a>
       </div>

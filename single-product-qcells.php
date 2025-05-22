@@ -171,36 +171,16 @@ $img_path = get_stylesheet_directory_uri() . "/images";
       </section>
       <!-- //overview -->
 
-      <section class="feature" data-target="feature">
-        <div class="wrapper">
-          <h2 class="sec-ttl" id="feature">特長</h2>
-        </div>
-        <?= the_field('sec_feat') ?>
-      </section>
+      <?= the_field('sec_feat') ?>
       <!-- //feature -->
 
-      <section class="warranty" data-target="warranty">
-        <div class="wrapper">
-          <h2 class="sec-ttl" id="warranty">保証</h2>
-          <?= the_field('sec_warranty') ?>
-        </div>
-      </section>
+      <?= the_field('sec_warranty') ?>
       <!-- //warranty -->
 
-      <section class="guide" data-target="guide">
-        <div class="wrapper">
-          <h2 class="sec-ttl" id="guide">安心導入ガイド</h2>
-          <?= the_field('sec_guide'); ?>
-        </div>
-      </section>
+      <?= the_field('sec_guide'); ?>
       <!-- //guide -->
 
-      <section class="support" data-target="support">
-        <div class="wrapper">
-          <h2 class="sec-ttl" id="support">ご検討から設置後のアフターまでも徹底サポートいたします。</h2>
-          <?= the_field('sec_support'); ?>
-        </div>
-      </section>
+      <?= the_field('sec_support'); ?>
       <!-- //support -->
 
     <?php endwhile; ?>
@@ -545,12 +525,6 @@ $img_path = get_stylesheet_directory_uri() . "/images";
   <!-- //compare -->
 
   <div class="fixed-anchor">
-    <a href="#overview" data-id="overview" class="link"><span class="txt">TOP</span></a>
-    <a href="#feature" data-id="feature" class="link"><span class="txt">特長</span></a>
-    <a href="#warranty" data-id="warranty" class="link"><span class="txt">保証</span></a>
-    <a href="#guide" data-id="guide" class="link"><span class="txt">安心導入ガイド</span></a>
-    <a href="#support" data-id="support" class="link"><span class="txt">徹底サポート</span></a>
-    <a href="#compare" data-id="compare" class="link"><span class="txt">比較</span></a>
   </div>
   <!-- //fixed-anchor -->
 

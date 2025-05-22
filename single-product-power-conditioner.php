@@ -860,13 +860,6 @@
 
 
 	<div class="fixed-anchor">
-		<a href="#overview" data-id="overview" class="link"><span class="txt">TOP</span></a>
-		<a href="#feature" data-id="feature" class="link"><span class="txt">特長</span></a>
-		<a href="#warranty" data-id="warranty" class="link"><span class="txt">保証</span></a>
-		<a href="#component" data-id="component" class="link"><span class="txt">構成品</span></a>
-		<a href="#guide" data-id="guide" class="link"><span class="txt">安心導入ガイド</span></a>
-		<a href="#support" data-id="support" class="link"><span class="txt">徹底サポート</span></a>
-		<a href="#compare" data-id="compare" class="link"><span class="txt">比較</span></a>
 	</div>
 	<!-- //fixed-anchor -->
 

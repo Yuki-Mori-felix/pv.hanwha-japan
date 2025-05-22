@@ -1274,6 +1274,9 @@ main.single-products section.compare .wrapper .banner {
     margin-top: 50px;
   }
 }
+main.single-products section.overview + section.component {
+  padding-top: 100px;
+}
 main.single-products section.component {
   padding-bottom: 100px;
 }
@@ -1297,6 +1300,14 @@ main.single-products section.component .wrapper .component-list .component-item 
 }
 main.single-products section.component .wrapper .component-list .component-item.wide {
   max-width: 484px;
+}
+main.single-products section.component .wrapper .component-list .component-item.item-3cols {
+  max-width: 311px;
+}
+main.single-products section.component .wrapper .component-list .component-item.item-3cols .item-name {
+  min-height: 48px;
+  font-size: 16px;
+  color: var(--col-black);
 }
 main.single-products section.component .wrapper .component-list .component-item .img {
   max-width: 140px;

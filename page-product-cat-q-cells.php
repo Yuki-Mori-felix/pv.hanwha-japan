@@ -1,4 +1,7 @@
 <?php
+/*
+Template Name: Qcells製品一覧
+*/ 
 get_header();
 $img_path = get_stylesheet_directory_uri() . "/images";
 ?>
@@ -76,7 +79,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
       'post_type' => 'product',
       'posts_per_page' => -1,
       'taxonomy' => 'product-cat',
-      'term' => $term_slug
+      'term' => 'q-cells',
     );
     $the_query = new WP_Query($args);
     ?>

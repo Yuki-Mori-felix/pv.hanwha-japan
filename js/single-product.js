@@ -3,7 +3,10 @@
 //--- 商品詳細 ---//
 
 document.addEventListener( 'DOMContentLoaded', function() {
+	//--- 呼び出し ---
+	createAnchor();
 	slider();
+	//----------------
 
 	function slider(){
 		//スライダー
@@ -39,11 +42,60 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
 		function sliderPerPage(){
 			let splideSliders = splideElemL.querySelector('.splide__slide.is-visible');
+			
+			if(!splideSliders) return;
+			
 			let ariaLabel = splideSliders.getAttribute('aria-label');
 			let perPage = document.getElementById('per_page');
 			
 			perPage.textContent = ariaLabel.replace(' of ', '/');
 		}
+	}
+
+	//アンカーリンクの自動作成
+	function createAnchor(){
+		const sections = document.querySelectorAll('main.single-products section');
+		const fixedAnchor = document.querySelector('.fixed-anchor');
+		
+		if(sections.length <= 0 || !fixedAnchor) return;
+		
+		sections.forEach(section => {
+			
+			//情報取得
+      const dataTarget = section.dataset.target;
+      let secTitle = section.querySelector(".sec-ttl")?.textContent;
+
+			//空の時はスキップ
+			if(!dataTarget) return;
+
+			//secTitleを上書き
+			switch(dataTarget){
+				case 'overview':
+					secTitle = 'TOP';
+					break;
+				case 'support':
+					secTitle = '徹底サポート';
+					break;
+				case 'compare':
+					secTitle = '比較';
+					break;
+			}
+
+			//タグ用意
+      const a = document.createElement("a");
+      const span = document.createElement("span");
+			
+			//タグに属性等を付与
+      a.href = `#${dataTarget}`;
+			a.classList.add('link');
+			a.dataset.id = dataTarget;
+			span.classList.add('txt');
+      span.textContent = secTitle;
+
+			//html生成
+			a.appendChild(span);
+			fixedAnchor.appendChild(a);
+    });
 	}
 });
 
