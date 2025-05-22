@@ -1,0 +1,455 @@
+@use "breakpoint" as *;
+
+main.contact {
+  // 変数
+	// --font-weight
+	--fw-reg: 400;
+	--fw-med: 500;
+	--fw-bold: 700;
+	// --color
+	--col-orange: #ee7744;
+	--col-lit-orange: #ee77441a;
+	--col-navy: #3366aa;
+	--col-gray: #ccc;
+	--col-black: #333;
+	// ここまで 変数
+	// main内 共通
+  * {
+    font-family: "Noto Sans JP", sans-serif !important;
+  }
+	p,
+	h2,
+	h3,
+	h4,
+	h5,
+	ul {
+		margin: 0;
+		padding: 0;
+		font-weight: var(--fw-reg);
+		color: var(--col-black);
+		line-height: calc(32 / 20);
+	}
+	img {
+		width: 100%;
+		height: auto;
+		vertical-align: top;
+	}
+	button,
+  input,
+  optgroup,
+  textarea,
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    vertical-align: middle;
+    color: inherit;
+    font: inherit;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    border-radius: 0;
+    text-align: inherit;
+    resize: none;
+  }
+  label,
+  select {
+    cursor: pointer;
+  }
+  label {
+    font-weight: var(--fw-reg);
+    margin-bottom: initial;
+  }
+  input[type=submit] {
+    background: initial;
+    &:hover {
+      background: initial;
+    }
+  }
+  input,
+  select,
+  textarea {
+    border-radius: 4px;
+    border: 1px solid #DDDDDD;
+    padding: 8px;
+  }
+  #placeholder {
+    
+  }
+  // --各フォーム共通 ラジオボタンとチェックボックス
+  input[type=radio],
+  input[type=checkbox] {
+    cursor: pointer;
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      display: block; 
+      position: absolute;
+    }
+    &::before {
+      background-color: #fff;
+      bottom: 2px;
+      left: 0;
+    }
+    &::after {
+      opacity: 0;
+    }
+    &:checked::after {
+      opacity: 1;
+    }
+  }
+  // ラジオボタン
+  input[type=radio] {
+    padding: 7px; // label手前に余白を開ける
+    margin-right: 8px;
+    &::before {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 1px solid #707070;
+    }
+    &::after {
+      width: 8px;
+      height: 8px;
+      background-color: var(--col-navy);
+      border-radius: 50%;
+      top: 1px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  // チェックボックス
+  input[type=checkbox] {
+    padding: 8px; // label手前に余白を開ける
+    margin-right: 14px;
+    &::before {
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      border: 2px solid var(--col-black);
+    }
+    &::after {
+      width: 10px;
+      height: 5px;
+      border-bottom: 2px solid #fff;
+      border-left: 2px solid #fff;
+      transform: rotate(315deg);
+      top: 2px;
+      left: 3px;
+    }
+    &:checked::before {
+      background-color: var(--col-navy);
+      border: 2px solid var(--col-navy);
+    }
+  }
+  // -- クラス名ありのコンテンツ
+  .none {
+    &-max {
+      &-l {
+        @include max(l) {
+          display: none;
+        }
+      }
+      &-t {
+        @include max {
+          display: none;
+        }
+      }
+      &-ml {
+        @include max(ml) {
+          display: none;
+        }
+      }
+    }
+    &-min {
+      &-l {
+        @include min(l) {
+          display: none;
+        }
+      }
+      &-t {
+        @include min {
+          display: none;
+        }
+      }
+      &-ml {
+        @include min(ml) {
+          display: none;
+        }
+      }
+    }
+  }
+  .wrapper {
+    max-width: 1280px;
+    width: 100%;
+    margin: auto;
+  }
+  .container {
+    max-width: 1000px;
+    width: calc(100% - 30px);
+		margin: auto;
+		padding: 0;
+  }
+  .link {
+    display: block;
+    max-width: 312px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    .inner {
+      font-size: 12px;
+      font-weight: var(--fw-bold);
+      letter-spacing: 0.08em !important;
+      padding-left: 30px;
+      position: relative;
+      display: block;
+      width: fit-content;
+      margin: auto;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  // ここまで main内 共通
+
+  > .mv {
+    padding: 135px 0 173px;
+    background: url(../images/contact/mv-contact.png) no-repeat center bottom / cover;
+    > .ttl {
+      text-align: center;
+      font-size: 40px;
+      font-weight: var(--fw-bold);
+    }
+  }
+  // MV
+  > .top {
+    padding: 0 0 100px;
+    * {
+      text-align: center;
+    }
+    > .container {
+      > .lead,
+      > .txt {
+        letter-spacing: 0.04em !important;
+      }
+      > .lead {
+        font-size: 20px;
+      }
+      > .txt {
+        margin-top: 30px;
+        font-size: 12px;
+        line-height: 2;
+      }
+      > .links {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+        > .link.quotation {
+          background-color: #7777771A;
+          border: 1px solid #777777;
+          color: #777777;
+          > .inner::before {
+            background: url(../images/contact/icon-calculator.svg) no-repeat center / cover;
+          }
+        }
+        > .link.catalog-a {
+          background-color: #3366AA1A;
+          border: 1px solid var(--col-navy);
+          color: var(--col-navy);
+          > .inner::before {
+            background: url(../images/contact/icon-book.svg) no-repeat center / cover;
+          }
+        }
+      }
+    }
+  }
+  // TOP
+  > .sec-form {
+    padding: 30px 0 100px;
+    border-top: 1px solid var(--col-gray);
+    > .container {
+      * {
+        letter-spacing: 0.04em !important;
+      }
+      .form {
+        .row {
+          display: flex;
+          align-items: center;
+          &:not(:nth-of-type(1)) {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #F5F5F5;
+          }
+          .form-label,
+          .labelc {
+            width: 34.7%;
+            min-width: 230px;
+          }
+          .form-label {
+            font-weight: var(--fw-bold);
+            .req {
+              font-size: 8px;
+              margin-left: 8px;
+              color: var(--col-orange);
+              vertical-align: middle;
+              letter-spacing: 0 !important;
+            }
+          }
+          .input {
+            max-width: 656px;
+            width: 100%;
+            select {
+              width: 100%;
+            }
+            .wpcf7-list-item {
+              margin-left: initial;
+            }
+          }
+          .input-s,
+          .postcode,
+          .add-item {
+            max-width: 315px;
+            width: 100%;
+          }
+          &.utype {
+            .wpcf7-list-item:last-child {
+              margin-left: 30px;
+            }
+          }
+          &.utrigger {
+            .input-check {
+              display: grid;
+              gap: 5px;
+            }
+          }
+          &.uagree {
+            padding-top: 40px;
+            display: block;
+            .privacy-txt {
+              text-align: center;
+              position: relative;
+              .privacy-link {
+                color: var(--col-navy);
+                text-decoration: underline;
+                font-weight: var(--fw-bold);
+              }
+              .wpcf7-list-item-label { // チェックボックスのテキストを非表示
+                display: none;
+              }
+              .wpcf7-not-valid-tip { // uagreeだけエラーメッセージの場所を変更
+                position: absolute;
+                left: 10px;
+                width: 125px;
+              }
+            }
+          }
+        }
+        .note {
+          font-size: 12px;
+          line-height: calc(18 / 12);
+          margin-top: 5px;
+        }
+        .form-btn {
+          max-width: 226px;
+          width: 100%;
+          margin: 40px auto 0;
+          
+          border-radius: 5px;
+          background-color: var(--col-navy);
+          box-shadow: 0 3px 6px #0000004D;
+          position: relative;
+          z-index: 0;
+          &:hover::before {
+            transform: scale(1, 1);
+          }
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FFFFFF33;
+            transform: scale(0, 1);
+            transform-origin: left top;
+            transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+            z-index: 1;
+          }
+          .wpcf7-spinner { // 送信するときのくるくるを非表示
+            display: none;
+          }
+          .submit-btn {
+            width: 100%;
+            padding: 18px;
+            text-align: center;
+            color: #fff;
+            font-weight: var(--fw-bold);
+            position: relative;
+            z-index: 2;
+          }
+        }
+      }
+    }
+  }
+  // SEC_FORM
+  > .info {
+    padding: 40px 0;
+    background: var(--col-gray);
+    > .container {
+      max-width: 983px;
+      display: flex;
+      @include max(l) {
+        flex-direction: column;
+        align-items: center;
+      }
+      > .ctt {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        @include max {
+          max-width: 410px;
+          width: 100%;
+        }
+        &:nth-of-type(2) {
+          justify-content: end;
+          border-left: 1px solid var(--col-black);
+          @include max(l) {
+            justify-content: start;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid var(--col-black);
+            border-left: initial;
+          }
+        }
+        > .img {
+          width: 32px;
+        }
+        > .detail {
+          > .head {
+            font-size: 16px;
+            font-weight: var(--fw-bold);
+          }
+          > .txt {
+            margin-top: 10px;
+            font-size: 12px;
+            line-height: 2;
+          }
+        }
+      }
+    }
+  }
+  // INFO
+}
+// フォーム関連　共通
