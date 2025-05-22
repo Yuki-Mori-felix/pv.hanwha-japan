@@ -1,13 +1,5 @@
 @use "breakpoint" as *;
 
-// html[lang="ja"] * {
-// 	letter-spacing: 0.5em !important;
-// }
-
-main.taxonomy-product-cat * {
-  letter-spacing: unset !important;
-}
-
 main.taxonomy-product-cat {
   // 変数
 	// --font-weight
@@ -405,7 +397,7 @@ main.taxonomy-product-cat {
             }
             .ttl {
               .name {
-                opacity: .7;
+                opacity: .8;
               }
             }
           }
