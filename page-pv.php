@@ -24,43 +24,53 @@ require get_stylesheet_directory() . '/include/my_variables.php';
 
 <section class="popular_products_now"><!--数字で見るハンファジャパンの実績-->
   <div class="wrap">
-    <h3>数字で見るハンファジャパンの実績</h3>
+    <h3><?= get_field('popular_products_title') ?></h3>
     <div class="_contents001">
       <div class="_box1">
         <ul class="wrap_s">
-          <li>
-            <img src="/wp-content/uploads/2025/02/1200x1200.png" alt="新築住宅シェア">
-            <div class="textarea">
-              <div class="title">新築住宅シェア</div>
-              <div class="year">(2003・2004年)</div>
-              <div class="caution">※出展：月間スマートハウスNo.108(2024年2月号)<br>月間スマートハウスNo.120（2025年2月号）</div>
-            </div>
-          </li>
-          <li>
-            <img src="/wp-content/uploads/2025/02/1200x1200.png" alt="国内住宅用メーカーシェア">
-            <div class="textarea">
-              <div class="title">国内住宅用<br>メーカーシェア</div>
-              <div class="year">(2004年)</div>
-              <div class="caution">※出展：月間スマートハウスNo.108(2024年2月号)</div>
-            </div>
-          </li>
-          <li>
-            <img src="/wp-content/uploads/2025/02/1200x1200.png" alt="住宅用販売累計棟数(2004年)">
-            <div class="textarea">
-              <div class="title">住宅用販売<br>累計棟数</div>
-              <div class="year">(2004年)</div>
-            </div>
-          </li>
-          <li>
-            <img src="/wp-content/uploads/2025/02/1200x1200.png" alt="モジュール累計出荷量(2004年)">
-            <div class="textarea">
-              <div class="title">モジュール<br>累計出荷量</div>
-              <div class="year">(2004年)</div>
-            </div>
-          </li>
+          <?php if (get_field('popular_products_img1')): ?>
+            <li>
+              <img src="<?= get_field('popular_products_img1')['url']; ?>" alt="<?= get_field('popular_products_img1')['alt']; ?>">
+              <div class="textarea">
+                <div class="title"><?= get_field('popular_products_title1'); ?></div>
+                <div class="year"><?= get_field('popular_products_year1'); ?></div>
+                <div class="caution"><?= get_field('popular_products_caution1'); ?></div>
+              </div>
+            </li>
+          <?php endif; ?>
+          <?php if (get_field('popular_products_img2')): ?>
+            <li>
+              <img src="<?= get_field('popular_products_img2')['url']; ?>" alt="<?= get_field('popular_products_img2')['alt']; ?>">
+              <div class="textarea">
+                <div class="title"><?= get_field('popular_products_title2'); ?></div>
+                <div class="year"><?= get_field('popular_products_year2'); ?></div>
+                <div class="caution"><?= get_field('popular_products_caution2'); ?></div>
+              </div>
+            </li>
+          <?php endif; ?>
+          <?php if (get_field('popular_products_img3')): ?>
+            <li>
+              <img src="<?= get_field('popular_products_img3')['url']; ?>" alt="<?= get_field('popular_products_img3')['alt']; ?>">
+              <div class="textarea">
+                <div class="title"><?= get_field('popular_products_title3'); ?></div>
+                <div class="year"><?= get_field('popular_products_year3'); ?></div>
+                <div class="caution"><?= get_field('popular_products_caution3'); ?></div>
+              </div>
+            </li>
+          <?php endif; ?>
+          <?php if (get_field('popular_products_img4')): ?>
+            <li>
+              <img src="<?= get_field('popular_products_img4')['url']; ?>" alt="<?= get_field('popular_products_img4')['alt']; ?>">
+              <div class="textarea">
+                <div class="title"><?= get_field('popular_products_title4'); ?></div>
+                <div class="year"><?= get_field('popular_products_year4'); ?></div>
+                <div class="caution"><?= get_field('popular_products_caution4'); ?></div>
+              </div>
+            </li>
+          <?php endif; ?>
         </ul>
         <div class="wrap">
-          <h3>日本で40年間以上培った経験と実績で、<br>日本に最適化した太陽光発電システムをご提供します。</h3>
+          <h3><?= get_field('popular_products_bottom_text'); ?></h3>
         </div>
       </div>
     </div>
@@ -68,20 +78,18 @@ require get_stylesheet_directory() . '/include/my_variables.php';
 </section>
 
 <div class="_contents002">
-  <h3>太陽光で生活の向上を実現できるように</h3>
+  <h3><?= get_field('contents002_title_main'); ?></h3>
 
   <div class="_contents002_inner">
     <div class="wrap">
       <div class="wrap_s">
         <div class="_box1">
-          <img src="/wp-content/uploads/2025/02/1200x1200.png" alt="">
+          <img src="<?= get_field('contents002_img')['url']; ?>" alt="<?= get_field('contents002_img')['alt']; ?>">
         </div>
       </div>
       <div class="_box2">
-        <p class="_box2-title">私たちハンファジャパンは</p>
-        <p class="_box2-text">太陽光を通じて<br><span class="orange">お客様の生活の向上</span>を<br>実現できるよう
-          <br>サポートいたします。
-        </p>
+        <p class="_box2-title"><?= get_field('contents002_title'); ?></p>
+        <?= get_field('contents002_contents'); ?>
       </div>
     </div>
   </div><!--_contents002_inner-->
@@ -98,22 +106,19 @@ require get_stylesheet_directory() . '/include/my_variables.php';
 
         <div class="section-title-area">
           <div class="wrap_s">
-            <h2 class="section-title"><span class="orange">ハンファジャパン</span><br>太陽光事業の沿革品</span></h2>
+            <?= get_field('contents003_title'); ?>
           </div>
         </div>
 
         <div class="_contents003_inner">
           <div class="_box1">
             <div class="wrap_s">
-              <img src="">
+              <img src="<?= get_field('contents003_img')['url']; ?>">
             </div>
           </div>
 
           <div class="_box2">
-            <p class="wrap_s">
-              1984年日本に根差して以来、<br>
-              ハンファジャパンの太陽光発電は今まで絶えず<span class="orange">進化、成長</span>してきました。
-            </p>
+            <?= get_field('contents003_text'); ?>
           </div>
         </div>
 
@@ -125,18 +130,18 @@ require get_stylesheet_directory() . '/include/my_variables.php';
       <section class="_main_sub_title _product_contant"><!--日本各地に広がる拠点-->
         <div class="section-title-area">
           <div class="wrap_s">
-            <h2 class="section-title"><span class="orange">日本各地に広がる</span><br>拠点</span></h2>
+            <?= get_field('contents004_title') ?>
           </div>
         </div>
 
         <div class="_contents004_inner wrap">
           <div class="wrap_s">
             <div class="_box1">
-              <img src="">
+              <img src="<?= get_field('contents004_img')['url']; ?>">
             </div>
             <div class="_box2">
-              <p>北海道から沖縄まで<br><span class="orange">全国どこでも</span>即時対応。</p>
-              <a class="btn" href="#">詳しくはこちら</a>
+              <?= get_field('contents004_text'); ?>
+              <a class="btn" href="<?= get_field('contents004_url') ?>">詳しくはこちら</a>
             </div>
           </div>
         </div>
@@ -148,7 +153,7 @@ require get_stylesheet_directory() . '/include/my_variables.php';
       <section class="_main_sub_title _product_contant"><!--選ばれる理由-->
         <div class="section-title-area">
           <div class="wrap_s">
-            <h2 class="section-title"><span class="orange">選ばれる</span><br>4つの理由</span></h2>
+            <?= get_field('contents005_title'); ?>
           </div>
         </div>
 
@@ -157,40 +162,28 @@ require get_stylesheet_directory() . '/include/my_variables.php';
           <div class="wrap">
             <div class="wrap_s">
               <ul class="reason-list">
-                <li class="reason-item">
-                  <a class="reason-link" href="#">
-                    <div class="reason-text"><span class="num">1</span>圧倒的な実績</div>
-                    <div class="reason-detail">詳しく見る</div>
-                  </a>
-                </li>
-                <li class="reason-item">
-                  <a class="reason-link" href="#">
-                    <div class="reason-text"><span class="num">2</span>毎年続く成長</div>
-                    <div class="reason-detail">詳しく見る</div>
-                  </a>
-                </li>
-                <li class="reason-item">
-                  <a class="reason-link" href="#">
-                    <div class="reason-text"><span class="num">3</span>最先端技術、厳格な品質管理</div>
-                    <div class="reason-detail">詳しく見る</div>
-                  </a>
-                </li>
-                <li class="reason-item">
-                  <a class="reason-link" href="#">
-                    <div class="reason-text"><span class="num">4</span>最後まで手厚くサポート</div>
-                    <div class="reason-detail">詳しく見る</div>
-                  </a>
-                </li>
+                <?php if (get_field('contents005_text1')): ?>
+                  <li class="reason-item"><?= get_field('contents005_text1'); ?></li>
+                <?php endif; ?>
+                <?php if (get_field('contents005_text2')): ?>
+                  <li class="reason-item"><?= get_field('contents005_text2'); ?></li>
+                <?php endif; ?>
+                <?php if (get_field('contents005_text3')): ?>
+                  <li class="reason-item"><?= get_field('contents005_text3'); ?></li>
+                <?php endif; ?>
+                <?php if (get_field('contents005_text4')): ?>
+                  <li class="reason-item"><?= get_field('contents005_text4'); ?></li>
+                <?php endif; ?>
               </ul>
             </div>
             <div class="reason-img">
-              <img src="" alt="">
+              <img src="<?= get_field('contents005_img')['url']; ?>" alt="<?= get_field('contents005_img')['alt']; ?>">
             </div>
           </div>
 
           <div class="banner">
-            <a href="#">
-              <img src="<?= $img_path ?>/pv/banner.png" alt="">
+            <a href="<?= get_field('contents005_url') ?>">
+              <img src="<?= get_field('contents005_banner_img')['url'] ?>" alt="<?= get_field('contents005_banner_img')['alt'] ?>">
             </a>
           </div>
         </div>
@@ -206,28 +199,33 @@ require get_stylesheet_directory() . '/include/my_variables.php';
   <section class="_main_sub_title _product_contant"><!--導入されたお客様の声-->
 
     <div class="wrap_s">
-      <h2 class="section-title">ご購入されたお客様の声</h2>
-      <p>お客様の嬉しい声をご紹介します。</p>
+      <?= get_field('contents006_title'); ?>
     </div>
 
     <div class="_contents006_inner">
       <div class="wrap">
         <div class="_box1">
           <ul class="voice-list">
-            <li class="voice-item">
-              <img src="/wp-content/uploads/2025/04/voice.png" alt="">
-              <p class="voice-text">「電気代が約半分の金額に<br>　なっていた」</p>
-            </li>
-            <li class="voice-item">
-              <img src="/wp-content/uploads/2025/04/voice.png" alt="">
-              <p class="voice-text">「発電量が期待以上。<br>　家族みんなで応援しています」</p>
-            </li>
-            <li class="voice-item">
-              <img src="/wp-content/uploads/2025/04/voice.png" alt="">
-              <p class="voice-text">「非常時の備えとしての安心感は、<br>　以前までとまったく違います」</p>
-            </li>
+            <?php if (get_field('contents006_img1')['url']): ?>
+              <li class="voice-item">
+                <img src="<?= get_field('contents006_img1')['url']; ?>" alt="<?= get_field('contents006_img1')['alt']; ?>">
+                <?= get_field('contents006_text1') ?>
+              </li>
+            <?php endif; ?>
+            <?php if (get_field('contents006_img2')['url']): ?>
+              <li class="voice-item">
+                <img src="<?= get_field('contents006_img2')['url']; ?>" alt="<?= get_field('contents006_img2')['alt']; ?>">
+                <?= get_field('contents006_text2') ?>
+              </li>
+            <?php endif; ?>
+            <?php if (get_field('contents006_img3')['url']): ?>
+              <li class="voice-item">
+                <img src="<?= get_field('contents006_img3')['url']; ?>" alt="<?= get_field('contents006_img3')['alt']; ?>">
+                <?= get_field('contents006_text3') ?>
+              </li>
+            <?php endif; ?>
           </ul>
-          <div class="next-more1"><a href="/category/topics/">もっと見る</a></div>
+          <div class="next-more1"><a href="<?= get_field('contents006_url') ?>">もっと見る</a></div>
         </div>
       </div>
     </div>
@@ -244,21 +242,27 @@ require get_stylesheet_directory() . '/include/my_variables.php';
         <div class="wrap_s">
           <div class="_box1">
             <ul>
-              <li>
-                <img src="<?= $img_path ?>/pv/pv.jpg" alt="">
-                <div class="title">ハンファジャパン・ハンファについて</div>
-                <p>ハンファジャパンとグローバル企業のハンファについてご説明します。</p>
-              </li>
-              <li>
-                <img src="<?= $img_path ?>/pv/pv.jpg" alt="">
-                <div class="title">太陽光発電とグリーンエネルギー</div>
-                <p>太陽光発電の導入とグリーンエネルギーのメリットをご確認いただけます。</p>
-              </li>
-              <li>
-                <img src="<?= $img_path ?>/pv/pv.jpg" alt="">
-                <div class="title">サステナビリティ</div>
-                <p>ハンファジャパンがめざす</p>
-              </li>
+              <?php if (get_field('contents007_img1')['url']): ?>
+                <li>
+                  <img src="<?= get_field('contents007_img1')['url'] ?>" alt="<?= get_field('contents007_img1')['alt'] ?>">
+                  <div class="title"><?= get_field('contents007_title1') ?></div>
+                  <p><?= get_field('contents007_text1') ?></p>
+                </li>
+              <?php endif; ?>
+              <?php if (get_field('contents007_img2')['url']): ?>
+                <li>
+                  <img src="<?= get_field('contents007_img2')['url'] ?>" alt="<?= get_field('contents007_img2')['alt'] ?>">
+                  <div class="title"><?= get_field('contents007_title2') ?></div>
+                  <p><?= get_field('contents007_text2') ?></p>
+                </li>
+              <?php endif; ?>
+              <?php if (get_field('contents007_img3')['url']): ?>
+                <li>
+                  <img src="<?= get_field('contents007_img3')['url'] ?>" alt="<?= get_field('contents007_img3')['alt'] ?>">
+                  <div class="title"><?= get_field('contents007_title3') ?></div>
+                  <p><?= get_field('contents007_text3') ?></p>
+                </li>
+              <?php endif; ?>
             </ul>
           </div>
         </div>
