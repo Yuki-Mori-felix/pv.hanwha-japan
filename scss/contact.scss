@@ -14,7 +14,7 @@ main.contact {
 	--col-black: #333;
 	// ここまで 変数
 	// main内 共通
-  * {
+  &:not(.fas) { // font-awesome以外に適用
     font-family: "Noto Sans JP", sans-serif !important;
   }
 	p,

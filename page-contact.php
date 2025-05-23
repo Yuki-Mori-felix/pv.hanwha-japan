@@ -1,4 +1,7 @@
 <?php
+/*
+Template Name: お問い合わせ
+*/
 get_header();
 $img_path = get_stylesheet_directory_uri() . "/images";
 $current_server = $_SERVER["HTTP_HOST"];
