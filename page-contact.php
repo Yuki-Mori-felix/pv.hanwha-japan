@@ -3,9 +3,7 @@
 Template Name: お問い合わせ
 */
 get_header();
-$img_path = get_stylesheet_directory_uri() . "/images";
-$current_server = $_SERVER["HTTP_HOST"];
-$form_id = $current_server === "pv.hanwha-japan.com" ? "bc3e21b" : "529dfca"; // cf7のフォームid
+$form_id = is_public_server() ? "bc3e21b" : "529dfca"; // cf7のフォームid
 ?>
 <main class="contact">
   <section class="mv">
@@ -35,7 +33,7 @@ $form_id = $current_server === "pv.hanwha-japan.com" ? "bc3e21b" : "529dfca"; //
   <section class="info">
     <div class="container">
       <div class="ctt customer">
-        <div class="img"><img src="<?=$img_path?>/contact/icon-customer.svg" alt=""></div>
+        <div class="img"><img src="<?=get_img_path()?>/contact/icon-customer.svg" alt=""></div>
         <div class="detail">
           <p class="head">お客さまご相談センター</p>
           <p class="txt">
@@ -46,7 +44,7 @@ $form_id = $current_server === "pv.hanwha-japan.com" ? "bc3e21b" : "529dfca"; //
         </div>
       </div>
       <div class="ctt repair">
-        <div class="img"><img src="<?=$img_path?>/contact/icon-repair.svg" alt=""></div>
+        <div class="img"><img src="<?=get_img_path()?>/contact/icon-repair.svg" alt=""></div>
         <div class="detail">
           <p class="head">修理のご用命</p>
           <p class="txt">
