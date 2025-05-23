@@ -29,9 +29,7 @@
     <script src="<?=get_stylesheet_directory_uri()?>/js/product-cat.js"></script>
   <?php elseif (is_page('contact') || is_page('contact-quotation') || is_page('contact-catalog') || is_page('catalog')) : ?>
     <link rel='stylesheet' href='<?=get_stylesheet_directory_uri()?>/css/contact.css'>
-  <?php elseif (is_page('contact') || is_page('contact-quotation') || is_page('contact-catalog')) : ?>
     <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
-  <?php elseif (is_page('contact-catalog') || is_page('catalog')) : ?>
     <script src="<?=get_stylesheet_directory_uri()?>/js/contact.js"></script>
   <?php endif; ?>
   <!--style.css-->
