@@ -219,6 +219,14 @@ main.taxonomy-product-cat {
           @include max {
             text-align: center;
           }
+          @include max(ml) {
+            text-align: left;
+          }
+          br {
+            @include max(ml) {
+              display: none;
+            }
+          }
         }
       }
     }

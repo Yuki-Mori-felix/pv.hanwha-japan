@@ -215,6 +215,16 @@ main.taxonomy-product-cat > .intro > .container > .ctt > .txt {
     text-align: center;
   }
 }
+@media screen and (max-width: 425px) {
+  main.taxonomy-product-cat > .intro > .container > .ctt > .txt {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 425px) {
+  main.taxonomy-product-cat > .intro > .container > .ctt > .txt br {
+    display: none;
+  }
+}
 main.taxonomy-product-cat > .lineup {
   padding: 100px 0 120px;
 }
