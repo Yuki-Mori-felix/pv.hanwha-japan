@@ -78,7 +78,6 @@ function add_custom_post()
       'menu_position' => 5,
       'supports' => array(
         'title',
-        'editor',
         'thumbnail',
         'revisions',
         'excerpt',
