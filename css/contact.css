@@ -1,3 +1,7 @@
+.page #content {
+  padding-bottom: 0 !important;
+}
+
 main.contact {
   --fw-reg: 400;
   --fw-med: 500;
@@ -145,6 +149,15 @@ main.contact input[type=checkbox]:checked::before {
   background-color: var(--col-navy);
   border: 2px solid var(--col-navy);
 }
+main.contact input[type=file]::file-selector-button {
+  background-color: #F5F5F5;
+  line-height: 1.5;
+  margin-right: 10px;
+  padding: 4px 14px;
+  border: 1px solid #919090;
+  border-radius: 12px;
+  cursor: pointer;
+}
 @media screen and (max-width: 1024px) {
   main.contact .none-max-l {
     display: none;
@@ -186,14 +199,49 @@ main.contact .container {
   margin: auto;
   padding: 0;
 }
-main.contact .link {
+main.contact .links {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+@media screen and (max-width: 768px) {
+  main.contact .links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+main.contact .links .link {
   display: block;
   max-width: 312px;
   width: 100%;
   padding: 10px;
   border-radius: 20px;
 }
-main.contact .link .inner {
+main.contact .links .link.contact {
+  background-color: rgba(238, 119, 68, 0.1019607843);
+  border: 1px solid var(--col-orange);
+  color: var(--col-orange);
+}
+main.contact .links .link.contact > .inner::before {
+  background: url(../images/contact/icon-mail.svg) no-repeat center/cover;
+}
+main.contact .links .link.quotation {
+  background-color: rgba(119, 119, 119, 0.1019607843);
+  border: 1px solid #777777;
+  color: #777777;
+}
+main.contact .links .link.quotation > .inner::before {
+  background: url(../images/contact/icon-calculator.svg) no-repeat center/cover;
+}
+main.contact .links .link.catalog {
+  background-color: rgba(51, 102, 170, 0.1019607843);
+  border: 1px solid var(--col-navy);
+  color: var(--col-navy);
+}
+main.contact .links .link.catalog > .inner::before {
+  background: url(../images/contact/icon-book.svg) no-repeat center/cover;
+}
+main.contact .links .link .inner {
   font-size: 12px;
   font-weight: var(--fw-bold);
   letter-spacing: 0.08em !important;
@@ -203,7 +251,7 @@ main.contact .link .inner {
   width: fit-content;
   margin: auto;
 }
-main.contact .link .inner::before {
+main.contact .links .link .inner::before {
   content: "";
   position: absolute;
   left: 0;
@@ -252,31 +300,6 @@ main.contact > .top > .container > .txt {
 }
 main.contact > .top > .container > .links {
   margin-top: 40px;
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-}
-@media screen and (max-width: 768px) {
-  main.contact > .top > .container > .links {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-main.contact > .top > .container > .links > .link.quotation {
-  background-color: rgba(119, 119, 119, 0.1019607843);
-  border: 1px solid #777777;
-  color: #777777;
-}
-main.contact > .top > .container > .links > .link.quotation > .inner::before {
-  background: url(../images/contact/icon-calculator.svg) no-repeat center/cover;
-}
-main.contact > .top > .container > .links > .link.catalog-a {
-  background-color: rgba(51, 102, 170, 0.1019607843);
-  border: 1px solid var(--col-navy);
-  color: var(--col-navy);
-}
-main.contact > .top > .container > .links > .link.catalog-a > .inner::before {
-  background: url(../images/contact/icon-book.svg) no-repeat center/cover;
 }
 main.contact > .sec-form {
   padding: 30px 0 100px;
@@ -296,7 +319,7 @@ main.contact > .sec-form > .container .form .row {
     gap: 15px;
   }
 }
-main.contact > .sec-form > .container .form .row:not(.udescription) {
+main.contact > .sec-form > .container .form .row:not(:nth-of-type(2)) {
   margin-top: 30px;
   padding-top: 30px;
   border-top: 1px solid #F5F5F5;
@@ -334,6 +357,9 @@ main.contact > .sec-form > .container .form .row .add-item {
   max-width: 315px;
   width: 100%;
 }
+main.contact > .sec-form > .container .form .row .input-radio {
+  display: flex;
+}
 main.contact > .sec-form > .container .form .row.udescription .input {
   position: relative;
 }
@@ -348,8 +374,24 @@ main.contact > .sec-form > .container .form .row.udescription .input::after {
   border-bottom: 1px solid var(--col-black);
   transform: rotate(45deg);
 }
-main.contact > .sec-form > .container .form .row.utype .wpcf7-list-item:last-child {
-  margin-left: 30px;
+main.contact > .sec-form > .container .form .row.utype .input-radio, main.contact > .sec-form > .container .form .row.ubrand .input-radio {
+  gap: 30px;
+}
+main.contact > .sec-form > .container .form .row.uhousing .input-radio, main.contact > .sec-form > .container .form .row.uproduct .input-radio {
+  gap: 10px;
+}
+@media screen and (max-width: 425px) {
+  main.contact > .sec-form > .container .form .row.uproduct .input-radio {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+main.contact > .sec-form > .container .form .row.uconstruction .input-radio {
+  flex-direction: column;
+  gap: 5px;
+}
+main.contact > .sec-form > .container .form .row.ufile .input-file {
+  font-size: 10px;
 }
 main.contact > .sec-form > .container .form .row.uaddress .add-list {
   margin-top: 10px;
@@ -365,7 +407,7 @@ main.contact > .sec-form > .container .form .row.uaddress .add-list {
 main.contact > .sec-form > .container .form .row.ucontent textarea {
   height: 160px;
 }
-main.contact > .sec-form > .container .form .row.utrigger .input-check {
+main.contact > .sec-form > .container .form .row.utime .input-check, main.contact > .sec-form > .container .form .row.utrigger .input-check {
   display: grid;
   gap: 5px;
 }
@@ -387,8 +429,14 @@ main.contact > .sec-form > .container .form .row.uagree .privacy-txt .wpcf7-list
 }
 main.contact > .sec-form > .container .form .row.uagree .privacy-txt .wpcf7-not-valid-tip {
   position: absolute;
-  left: 10px;
-  width: 125px;
+  left: 0;
+  width: 140px;
+  text-align: left;
+}
+@media screen and (max-width: 560px) {
+  main.contact > .sec-form > .container .form .row.uagree .privacy-txt .wpcf7-not-valid-tip {
+    top: 45px;
+  }
 }
 main.contact > .sec-form > .container .form .note {
   font-size: 12px;
@@ -490,4 +538,13 @@ main.contact > .info > .container > .ctt > .detail > .txt {
   margin-top: 10px;
   font-size: 12px;
   line-height: 2;
+}
+
+main.contact.quotation > .mv {
+  background: url(../images/contact/mv-contact-quotation.png) no-repeat center bottom/cover;
+}
+main.contact.quotation > .sec-form > .container > .links {
+  margin-top: 80px;
+  padding-top: 80px;
+  border-top: 1px solid var(--col-gray);
 }/*# sourceMappingURL=contact.css.map */
