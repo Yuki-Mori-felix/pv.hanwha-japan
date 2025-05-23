@@ -491,11 +491,11 @@ add_filter('upload_mimes', 'allow_glb_upload');
 
 ### 汎用関数
 function get_theme_path() {
-  return get_template_directory_uri();
+  return get_stylesheet_directory_uri();
 }
 
 function get_img_path() {
-  return get_template_directory_uri() . "/images";
+  return get_stylesheet_directory_uri() . "/images";
 }
 
 function get_my_home_url($text = "") {
