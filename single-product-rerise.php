@@ -173,7 +173,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         <div class="rerise-video">
           <img src="<?= $img_path ?>/single-product/Re.RISE_top_video.jpg" alt="">
         </div>
-        <a href="" class="rerise-banner">
+        <a href="https://www.hanwha-rerise.jp/rerise-g3/" class="rerise-banner" target="_blank" rel="noopener noreferrer">
           <img src="<?= $img_path ?>/single-product/Re.RISE_banner.jpg" alt="">
         </a>
       </section>
