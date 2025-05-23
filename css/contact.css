@@ -61,12 +61,21 @@ main.contact input[type=submit] {
 main.contact input[type=submit]:hover {
   background: initial;
 }
-main.contact input,
+main.contact input[type=text],
+main.contact input[type=email],
+main.contact input[type=tel],
 main.contact select,
 main.contact textarea {
   border-radius: 4px;
   border: 1px solid #DDDDDD;
   padding: 8px;
+}
+main.contact input[type=text]::placeholder,
+main.contact input[type=email]::placeholder,
+main.contact input[type=tel]::placeholder,
+main.contact select::placeholder,
+main.contact textarea::placeholder {
+  color: #DDDDDD;
 }
 main.contact input[type=radio],
 main.contact input[type=checkbox] {
@@ -213,6 +222,11 @@ main.contact > .mv > .ttl {
   font-size: 40px;
   font-weight: var(--fw-bold);
 }
+@media screen and (max-width: 768px) {
+  main.contact > .mv > .ttl {
+    font-size: 32px;
+  }
+}
 main.contact > .top {
   padding: 0 0 100px;
 }
@@ -226,6 +240,11 @@ main.contact > .top > .container > .txt {
 main.contact > .top > .container > .lead {
   font-size: 20px;
 }
+@media screen and (max-width: 768px) {
+  main.contact > .top > .container > .lead {
+    font-size: 16px;
+  }
+}
 main.contact > .top > .container > .txt {
   margin-top: 30px;
   font-size: 12px;
@@ -236,6 +255,12 @@ main.contact > .top > .container > .links {
   display: flex;
   justify-content: center;
   gap: 32px;
+}
+@media screen and (max-width: 768px) {
+  main.contact > .top > .container > .links {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 main.contact > .top > .container > .links > .link.quotation {
   background-color: rgba(119, 119, 119, 0.1019607843);
@@ -264,15 +289,27 @@ main.contact > .sec-form > .container .form .row {
   display: flex;
   align-items: center;
 }
-main.contact > .sec-form > .container .form .row:not(:nth-of-type(1)) {
+@media screen and (max-width: 768px) {
+  main.contact > .sec-form > .container .form .row {
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+  }
+}
+main.contact > .sec-form > .container .form .row:not(.udescription) {
   margin-top: 30px;
   padding-top: 30px;
   border-top: 1px solid #F5F5F5;
 }
 main.contact > .sec-form > .container .form .row .form-label,
 main.contact > .sec-form > .container .form .row .labelc {
-  width: 34.7%;
-  min-width: 230px;
+  width: 347px;
+}
+@media screen and (max-width: 768px) {
+  main.contact > .sec-form > .container .form .row .form-label,
+  main.contact > .sec-form > .container .form .row .labelc {
+    width: 100%;
+  }
 }
 main.contact > .sec-form > .container .form .row .form-label {
   font-weight: var(--fw-bold);
@@ -291,17 +328,42 @@ main.contact > .sec-form > .container .form .row .input {
 main.contact > .sec-form > .container .form .row .input select {
   width: 100%;
 }
-main.contact > .sec-form > .container .form .row .input .wpcf7-list-item {
-  margin-left: initial;
-}
 main.contact > .sec-form > .container .form .row .input-s,
 main.contact > .sec-form > .container .form .row .postcode,
 main.contact > .sec-form > .container .form .row .add-item {
   max-width: 315px;
   width: 100%;
 }
+main.contact > .sec-form > .container .form .row.udescription .input {
+  position: relative;
+}
+main.contact > .sec-form > .container .form .row.udescription .input::after {
+  content: "";
+  position: absolute;
+  right: 9px;
+  top: 18px;
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid var(--col-black);
+  border-bottom: 1px solid var(--col-black);
+  transform: rotate(45deg);
+}
 main.contact > .sec-form > .container .form .row.utype .wpcf7-list-item:last-child {
   margin-left: 30px;
+}
+main.contact > .sec-form > .container .form .row.uaddress .add-list {
+  margin-top: 10px;
+  display: flex;
+  gap: 32px;
+}
+@media screen and (max-width: 1024px) {
+  main.contact > .sec-form > .container .form .row.uaddress .add-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+main.contact > .sec-form > .container .form .row.ucontent textarea {
+  height: 160px;
 }
 main.contact > .sec-form > .container .form .row.utrigger .input-check {
   display: grid;
@@ -371,6 +433,12 @@ main.contact > .sec-form > .container .form .form-btn .submit-btn {
   font-weight: var(--fw-bold);
   position: relative;
   z-index: 2;
+}
+main.contact > .sec-form > .container .form .wpcf7-not-valid-tip {
+  margin-top: 5px;
+}
+main.contact > .sec-form > .container .form .wpcf7-list-item {
+  margin-left: initial;
 }
 main.contact > .info {
   padding: 40px 0;

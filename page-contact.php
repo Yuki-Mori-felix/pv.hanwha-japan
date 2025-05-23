@@ -1,6 +1,8 @@
 <?php
 get_header();
 $img_path = get_stylesheet_directory_uri() . "/images";
+$current_server = $_SERVER["HTTP_HOST"];
+$form_id = $current_server === "pv.hanwha-japan.com" ? "bc3e21b" : "529dfca"; // cf7のフォームid
 ?>
 <main class="contact">
   <section class="mv">
@@ -23,7 +25,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
   <!-- // TOP -->
   <section class="sec-form">
     <div class="container">
-      <?php echo do_shortcode('[contact-form-7 id="529dfca" title="お問い合わせ" html_class="h-adr form"]');?>
+      <?php echo do_shortcode('[contact-form-7 id="' . $form_id . '" title="お問い合わせ" html_class="h-adr form"]');?>
     </div>
   </section>
   <!-- // SEC_FORM -->
