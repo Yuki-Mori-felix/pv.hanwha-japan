@@ -197,7 +197,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
             <div class="txt">
               簡単な操作で年間発電量と<br>年間電気料金の削減見込みをご確認いただけます。
             </div>
-            <a href="" class="simulator-link">発電量シミュレーター</a>
+            <a class="simulator-link" href="https://q-musubi.q-cells.jp/qm/pwrgnSimulation/step1?_gl=1*1nfcoe4*_gcl_aw*R0NMLjE3NDUzODM2NjMuQ2owS0NRancyTjJfQmhDQUFSSXNBSzRwRWtVc0NiSkRaRHN5X0plZU9yVUlVcWg1akhZVF9KbzJUcXY3ZlBjR1ZEMVdweWRBUGdMVWtIY2FBbUxXRUFMd193Y0I.*_gcl_au*OTE2MzgwNDQyLjE3NDUxOTQyNTc" target="_blank" rel="noopener noreferrer">発電量シミュレーター</a>
           </div>
         </div>
       </section>
