@@ -92,7 +92,8 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               <li class="tag-item"><?= the_field('feat_2'); ?></li>
               <li class="tag-item"><?= the_field('feat_3'); ?></li>
             </ul>
-            <ul class="spec01">
+            <?= get_field('product_detail_area', false, false); ?>
+            <!-- <ul class="spec01">
               <li class="spec01-item">
                 <p class="txt"><span class="bold">公称最大出力</span><span class="sm">（+5%/-0W）</span><br><?= the_field('product_detail_1'); ?></p>
               </li>
@@ -160,27 +161,27 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                 <p class="txt">製品仕様を詳しく見る</p>
                 <span class="icon"></span>
               </div>
-            </div>
+            </div> -->
             <div class="info-links">
               <a href="<?= the_field('web_catalog'); ?>" class="link web" target="_blank" rel="noopener noreferrer">WEBカタログ<img src="<?= $img_path ?>/single-product/book-open.svg" alt=""></a>
               <a href="<?= the_field('catalog_pdf'); ?>" class="link pdf">カタログPDF<img src="<?= $img_path ?>/single-product/download-icon.svg" alt=""></a>
-              <div href="<?= the_field('share'); ?>" class="share">シェアする<a href="#" class="round"><img src="<?= $img_path ?>/single-product/share-icon.svg" alt=""></a></div>
+              <div href="<?= the_field('share'); ?>" class="share">シェアする<a href="<?= the_field('share'); ?>" class="round"><img src="<?= $img_path ?>/single-product/share-icon.svg" alt=""></a></div>
             </div>
           </div>
         </div>
       </section>
       <!-- //overview -->
 
-      <?= the_field('sec_feat') ?>
+      <?= the_field('sec_feat', false, false) ?>
       <!-- //feature -->
 
-      <?= the_field('sec_warranty') ?>
+      <?= the_field('sec_warranty', false, false) ?>
       <!-- //warranty -->
 
-      <?= the_field('sec_guide'); ?>
+      <?= the_field('sec_guide', false, false); ?>
       <!-- //guide -->
 
-      <?= the_field('sec_support'); ?>
+      <?= the_field('sec_support', false, false); ?>
       <!-- //support -->
 
     <?php endwhile; ?>
