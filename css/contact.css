@@ -8,7 +8,7 @@ main.contact {
   --col-gray: #ccc;
   --col-black: #333;
 }
-main.contact * {
+main.contact:not(.fas) {
   font-family: "Noto Sans JP", sans-serif !important;
 }
 main.contact p,
