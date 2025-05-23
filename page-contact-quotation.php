@@ -1,13 +1,13 @@
 <?php
 /*
-Template Name: お問い合わせ
+Template Name: お見積り依頼
 */
 get_header();
-$form_id = is_public_server() ? "bc3e21b" : "529dfca"; // cf7のフォームid
+$form_id = is_public_server() ? "fc48203" : "2aa1f57"; // cf7のフォームid
 ?>
-<main class="contact">
+<main class="contact quotation">
   <section class="mv">
-    <h2 class="ttl">お問い合わせ</h2>
+    <h2 class="ttl">お見積り依頼</h2>
   </section>
   <!-- // MV -->
   <div class="wrap">
@@ -15,18 +15,21 @@ $form_id = is_public_server() ? "bc3e21b" : "529dfca"; // cf7のフォームid
   </div>
   <section class="top">
     <div class="container">
-      <p class="lead">ご意見やご要望等は、お気軽にお問い合わせください。</p>
-      <p class="txt">下記フォームに必要事項をご記入の上、送信してください。<br>後日担当者より、ご連絡させていただきます。</p>
-      <div class="links">
-        <a href="<?=get_my_home_url("/contact-catalog/quotation")?>" class="link quotation"><span class="inner">お見積り依頼はこちら</span></a>
-        <a href="<?=get_my_home_url("/contact-catalog/catalog")?>" class="link catalog"><span class="inner">カタログ請求・ダウンロードはこちら</span></a>
-      </div>
+      <p class="lead">以下のフォームよりお見積りいただけます。</p>
+      <p class="txt">
+        お見積り依頼頂きました内容に関しては弊社にて確認後、担当よりご連絡させて頂きます。<br>
+        お見積り内容によっては、協力会社と共有する場合もございますので、予めご了承ください。
+      </p>
     </div>
   </section>
   <!-- // TOP -->
   <section class="sec-form">
     <div class="container">
-      <?php echo do_shortcode('[contact-form-7 id="' . $form_id . '" title="お問い合わせ" html_class="h-adr form"]');?>
+      <?php echo do_shortcode('[contact-form-7 id="' . $form_id . '" title="お見積り依頼" html_class="h-adr form"]');?>
+      <div class="links">
+        <a href="<?=get_my_home_url("/contact-catalog/catalog")?>" class="link catalog"><span class="inner">カタログ請求・ダウンロードはこちら</span></a>
+        <a href="<?=get_my_home_url("/contact-catalog/contact")?>" class="link contact"><span class="inner">お問い合わせはこちら</span></a>
+      </div>
     </div>
   </section>
   <!-- // SEC_FORM -->

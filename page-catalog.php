@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: カタログ請求
+Template Name: WEBカタログ・ダウンロード
 */
 get_header();
 ?>
@@ -11,7 +11,7 @@ get_header();
   </div>
   <section>
     <div class="wrap">
-      <h1>カタログ請求</h1>
+      <h1>WEBカタログ・ダウンロード</h1>
     </div>
   </section>
 </main>
