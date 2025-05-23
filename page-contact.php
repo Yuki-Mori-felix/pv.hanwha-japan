@@ -18,7 +18,7 @@ $form_id = is_public_server() ? "bc3e21b" : "529dfca"; // cf7のフォームid
       <p class="lead">ご意見やご要望等は、お気軽にお問い合わせください。</p>
       <p class="txt">下記フォームに必要事項をご記入の上、送信してください。<br>後日担当者より、ご連絡させていただきます。</p>
       <div class="links">
-        <a href="<?=get_my_home_url("/service-support/quotation")?>" class="link quotation"><span class="inner">お見積り依頼はこちら</span></a>
+        <a href="<?=get_my_home_url("/service-support/contact-quotation")?>" class="link quotation"><span class="inner">お見積り依頼はこちら</span></a>
         <a href="<?=get_my_home_url("/service-support/catalog")?>" class="link catalog"><span class="inner">カタログ請求・ダウンロードはこちら</span></a>
       </div>
     </div>
