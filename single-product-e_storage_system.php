@@ -94,7 +94,8 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               <li class="tag-item"><?= the_field('feat_2'); ?></li>
               <li class="tag-item"><?= the_field('feat_3'); ?></li>
             </ul>
-            <ul class="spec01">
+            <?= get_field('product_detail_area', false, false); ?>
+            <!-- <ul class="spec01">
               <li class="spec01-item">
                 <p class="txt"><span class="bold">蓄電地容量</span><br><?= the_field('product_detail_1'); ?></p>
               </li>
@@ -200,11 +201,11 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                 <p class="txt">製品仕様を詳しく見る</p>
                 <span class="icon"></span>
               </div>
-            </div>
+            </div> -->
             <div class="info-links">
-              <a href="#" class="link web">WEBカタログ<img src="<?= $img_path ?>/single-product/book-open.svg" alt=""></a>
-              <a href="#" class="link pdf">カタログPDF<img src="<?= $img_path ?>/single-product/download-icon.svg" alt=""></a>
-              <div href="#" class="share">シェアする<a href="#" class="round"><img src="<?= $img_path ?>/single-product/share-icon.svg" alt=""></a></div>
+              <a href="<?= the_field('web_catalog'); ?>" class="link web">WEBカタログ<img src="<?= $img_path ?>/single-product/book-open.svg" alt=""></a>
+              <a href="<?= the_field('catalog_pdf'); ?>" class="link pdf">カタログPDF<img src="<?= $img_path ?>/single-product/download-icon.svg" alt=""></a>
+              <div href="#" class="share">シェアする<a href="<?= the_field('share'); ?>" class="round"><img src="<?= $img_path ?>/single-product/share-icon.svg" alt=""></a></div>
             </div>
           </div>
         </div>
@@ -212,48 +213,23 @@ $img_path = get_stylesheet_directory_uri() . "/images";
       <!-- //overview -->
 
 
-      <section class="feature" data-target="feature">
-        <div class="wrapper">
-          <h2 class="sec-ttl" id="feature">特長</h2>
-        </div>
-        <?= the_field('sec_feat') ?>
-      </section>
+      <?= the_field('sec_feat', false, false) ?>
       <!-- //feature -->
 
 
-      <section class="warranty" data-target="warranty">
-        <div class="wrapper">
-          <h2 class="sec-ttl" id="warranty">保証</h2>
-          <?= the_field('sec_warranty') ?>
-        </div>
-      </section>
+      <?= the_field('sec_warranty', false, false) ?>
       <!-- //warranty -->
 
 
-      <section class="component" data-target="component">
-        <div class="wrapper">
-          <h2 class="sec-ttl" id="component">構成品</h2>
-          <?= the_field('sec_component'); ?>
-        </div>
-      </section>
+      <?= the_field('sec_component', false, false); ?>
       <!-- //component -->
 
 
-      <section class="guide" data-target="guide">
-        <div class="wrapper">
-          <h2 class="sec-ttl" id="guide">安心導入ガイド</h2>
-          <?= the_field('sec_guide'); ?>
-        </div>
-      </section>
+      <?= the_field('sec_guide', false, false); ?>
       <!-- //guide -->
 
 
-      <section class="support" data-target="support">
-        <div class="wrapper">
-          <h2 class="sec-ttl" id="support">ご検討から設置後のアフターまでも徹底サポートいたします。</h2>
-          <?= the_field('sec_support'); ?>
-        </div>
-      </section>
+      <?= the_field('sec_support', false, false); ?>
       <!-- //support -->
 
     <?php endwhile; ?>
@@ -604,7 +580,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
           <span class="icon"></span>
         </div>
       </div>
-      <a href="#" class="banner">
+      <a href="<?= get_field('compare_link'); ?>" class="banner">
         <img src="<?= $img_path ?>/single-product/PDH_HEMS_Product details_banner.png" alt="蓄電システム・HEMS製品一覧ページへ">
       </a>
     </div>
@@ -619,7 +595,9 @@ $img_path = get_stylesheet_directory_uri() . "/images";
   <div class="modal-window" id="modal-window">
     <div class="modal-wrap">
       <div class="frame">
-        <div class="content"></div>
+        <div class="content">
+          <?= get_field('web_ar') ?>
+        </div>
       </div>
       <div class="close">
         <div class="close-btn"></div>
