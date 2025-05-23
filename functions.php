@@ -488,3 +488,25 @@ function allow_glb_upload($mimes) {
 	return $mimes;
 }
 add_filter('upload_mimes', 'allow_glb_upload');
+
+### 汎用関数
+function get_theme_path() {
+  return get_template_directory_uri();
+}
+
+function get_img_path() {
+  return get_template_directory_uri() . "/images";
+}
+
+function get_my_home_url($text = "") {
+	if(!empty($text)){
+		return esc_url(home_url('/'.$text));
+	}else{
+		return esc_url(home_url());
+	}
+	return $text;
+}
+
+function is_public_server() {
+  return $_SERVER["HTTP_HOST"] === "pv.hanwha-japan.com";
+}
