@@ -89,7 +89,8 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               <li class="tag-item"><?= the_field('feat_2'); ?></li>
               <li class="tag-item"><?= the_field('feat_3'); ?></li>
             </ul>
-            <ul class="spec01">
+            <?= get_field('product_detail_area', false, false); ?>
+            <!-- <ul class="spec01">
               <li class="spec01-item">
                 <p class="txt"><span class="bold">データ通信方式</span><br><?= the_field('product_detail_1'); ?></p>
               </li>
@@ -136,41 +137,29 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                 <p class="txt">製品仕様を詳しく見る</p>
                 <span class="icon"></span>
               </div>
-            </div>
+            </div> -->
             <div class="info-links">
               <a href="<?= the_field('web_catalog'); ?>" class="link web" target="_blank" rel="noopener noreferrer">WEBカタログ<img src="<?= $img_path ?>/single-product/book-open.svg" alt=""></a>
               <a href="<?= the_field('catalog_pdf'); ?>" class="link pdf">カタログPDF<img src="<?= $img_path ?>/single-product/download-icon.svg" alt=""></a>
-              <div href="<?= the_field('share'); ?>" class="share">シェアする<a href="#" class="round"><img src="<?= $img_path ?>/single-product/share-icon.svg" alt=""></a></div>
+              <div href="" class="share">シェアする<a href="<?= the_field('share'); ?>" class="round"><img src="<?= $img_path ?>/single-product/share-icon.svg" alt=""></a></div>
             </div>
           </div>
         </div>
       </section>
       <!-- //overview -->
 
-      <section class="feature" data-target="feature">
-        <div class="wrapper">
-          <h2 class="sec-ttl" id="feature">特長</h2>
-        </div>
-        <?= the_field('sec_feat'); ?>
-      </section>
+      <?= the_field('sec_component', false, false); ?>
+      <!-- //component -->
+
+      <?= the_field('sec_feat', false, false); ?>
       <!-- //feature -->
 
 
-      <section class="guide" data-target="guide">
-        <div class="wrapper">
-          <h2 class="sec-ttl" id="guide">安心導入ガイド</h2>
-          <?= the_field('sec_guide'); ?>
-        </div>
-      </section>
+      <?= the_field('sec_guide', false, false); ?>
       <!-- //guide -->
 
 
-      <section class="support" data-target="support">
-        <div class="wrapper">
-          <h2 class="sec-ttl" id="support">ご検討から設置後のアフターまでも徹底サポートいたします。</h2>
-          <?= the_field('sec_support'); ?>
-        </div>
-      </section>
+      <?= the_field('sec_support', false, false); ?>
       <!-- //support -->
 
     <?php endwhile; ?>
@@ -326,7 +315,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
           </div>
           <div class="product">
             <div class="item">
-              <p class="data-txt" id="product-detail-3"><?= wp_kses_post(get_field('product_detail_6')); ?></p>
+              <p class="data-txt" id="product-detail-6"><?= wp_kses_post(get_field('product_detail_6')); ?></p>
             </div>
             <div class="item">
               <p class="data-txt" id="compare-product-detail-6"><?= wp_kses_post(get_field('product_detail_6', $default_compare_post_id)); ?></p>
