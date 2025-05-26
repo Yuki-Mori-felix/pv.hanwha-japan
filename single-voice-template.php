@@ -30,7 +30,7 @@ Template Post Type: voice
 					<div class="overview-prof-img">
 						<img src="<?= get_field('voice_img')['url'] ?>" alt="">
 					</div>
-					<p class="overview-prof-figure"><?= get_field('voice_address') ?></p>
+					<p class="overview-prof-figure"><?= get_field('voice_address', $post_id, false) ?></p>
 				</div>
 				<div class="overview-status">
 					<div class="overview-status-head">
@@ -55,7 +55,7 @@ Template Post Type: voice
 								if(!empty(get_field($key))){
 									echo '<li class="os-item">'.
 													'<div class="os-label">'.$label.'</div>'.
-													'<div class="os-data">'.get_field($key).'</div>'.
+													'<div class="os-data">'.get_field($key, $post_id, false).'</div>'.
 												'</li>';
 								}
 							}
@@ -75,7 +75,7 @@ Template Post Type: voice
 						<div class="prob-img">
 							<img src="" alt="">
 						</div>
-						<?=get_field('customer_concerns')?>
+						<?=get_field('customer_concerns', $post_id, false)?>
 					</div>
 					<div class="prob-arrow">
 						<img src="" alt="">
@@ -85,7 +85,7 @@ Template Post Type: voice
 						<div class="prob-img">
 							<img src="" alt="">
 						</div>
-						<?=get_field('solution')?>
+						<?=get_field('solution', $post_id, false)?>
 					</div>
 				</div>
 			</div>
