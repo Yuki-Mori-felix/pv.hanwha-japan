@@ -508,7 +508,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
           <span class="icon"></span>
         </div>
       </div>
-      <a href="#" class="banner">
+      <a href="<?= the_field('compare_link'); ?>" class="banner">
         <img src="" alt="パワーコンディショナ・モニター一覧ページへ">
       </a>
     </div>
