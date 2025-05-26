@@ -13,6 +13,9 @@
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/add.css'>
   <?php elseif (is_page('voice') || is_page('interview') || is_singular('voice')) : ?>
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/voice.css'>
+		<?php if(is_singular()): ?>
+			<script src="<?= get_stylesheet_directory_uri() ?>/js/single-voice.js"></script>
+		<?php endif; ?>
   <?php elseif (is_page('pv')) : ?>
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/pv.css'>
   <?php elseif (is_page('product-list')) : ?>
