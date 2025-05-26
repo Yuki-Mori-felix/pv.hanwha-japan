@@ -970,41 +970,48 @@ main.single-products section.support .wrapper > .support_list {
     margin-top: 40px;
   }
 }
-main.single-products section.support .wrapper > .support_list > .item {
+main.single-products section.support .wrapper > .support_list .item {
   flex: 1;
-  display: flex;
-  align-items: center;
-  gap: 23px;
   margin-left: 9%;
 }
 @media screen and (max-width: 768px) {
-  main.single-products section.support .wrapper > .support_list > .item {
+  main.single-products section.support .wrapper > .support_list .item {
     margin-left: 0;
+  }
+}
+main.single-products section.support .wrapper > .support_list .item a {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+@media screen and (max-width: 768px) {
+  main.single-products section.support .wrapper > .support_list .item a {
     gap: 15px;
   }
 }
-main.single-products section.support .wrapper > .support_list > .item .imgc {
+main.single-products section.support .wrapper > .support_list .item .imgc {
+  display: block;
   width: 70px;
 }
 @media screen and (max-width: 768px) {
-  main.single-products section.support .wrapper > .support_list > .item .imgc {
+  main.single-products section.support .wrapper > .support_list .item .imgc {
     width: 40px;
   }
 }
-main.single-products section.support .wrapper > .support_list > .item .txt {
+main.single-products section.support .wrapper > .support_list .item .txt {
   flex: 1;
   font-size: 20px;
   font-weight: var(--fw-med);
 }
 @media screen and (max-width: 768px) {
-  main.single-products section.support .wrapper > .support_list > .item .txt {
+  main.single-products section.support .wrapper > .support_list .item .txt {
     font-size: 16px;
   }
 }
-main.single-products section.support .wrapper > .support_list > .item:hover .txt-faq {
+main.single-products section.support .wrapper > .support_list .item:hover .txt-faq {
   color: var(--col-orange);
 }
-main.single-products section.support .wrapper > .support_list > .item:hover .txt-after {
+main.single-products section.support .wrapper > .support_list .item:hover .txt-after {
   color: var(--col-navy);
 }
 main.single-products section.support .wrapper > .support_list .border {
@@ -1625,7 +1632,11 @@ main.e_storage_system section.overview .wrapper .left .ess_certification .ess_ct
 
 main.rerise {
   --feature-section-gradation: linear-gradient(136deg, #fff, var(--col-orange));
-  --compare-section-gradation: linear-gradient(to bottom, var(--col-orange), #fff);
+  --compare-section-gradation: linear-gradient(
+  	to bottom,
+  	var(--col-orange),
+  	#fff
+  );
 }
 main.rerise section.overview .rerise-video {
   max-width: 656px;
