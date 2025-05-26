@@ -1568,41 +1568,48 @@ main.single-voice section.support .wrapper > .support_list {
     margin-top: 40px;
   }
 }
-main.single-voice section.support .wrapper > .support_list > .item {
+main.single-voice section.support .wrapper > .support_list .item {
   flex: 1;
-  display: flex;
-  align-items: center;
-  gap: 23px;
   margin-left: 9%;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.support .wrapper > .support_list > .item {
+  main.single-voice section.support .wrapper > .support_list .item {
     margin-left: 0;
+  }
+}
+main.single-voice section.support .wrapper > .support_list .item a {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+@media screen and (max-width: 768px) {
+  main.single-voice section.support .wrapper > .support_list .item a {
     gap: 15px;
   }
 }
-main.single-voice section.support .wrapper > .support_list > .item .imgc {
+main.single-voice section.support .wrapper > .support_list .item .imgc {
+  display: block;
   width: 70px;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.support .wrapper > .support_list > .item .imgc {
+  main.single-voice section.support .wrapper > .support_list .item .imgc {
     width: 40px;
   }
 }
-main.single-voice section.support .wrapper > .support_list > .item .txt {
+main.single-voice section.support .wrapper > .support_list .item .txt {
   flex: 1;
   font-size: 20px;
   font-weight: var(--fw-med);
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.support .wrapper > .support_list > .item .txt {
+  main.single-voice section.support .wrapper > .support_list .item .txt {
     font-size: 16px;
   }
 }
-main.single-voice section.support .wrapper > .support_list > .item:hover .txt-faq {
+main.single-voice section.support .wrapper > .support_list .item:hover .txt-faq {
   color: var(--col-orange);
 }
-main.single-voice section.support .wrapper > .support_list > .item:hover .txt-after {
+main.single-voice section.support .wrapper > .support_list .item:hover .txt-after {
   color: var(--col-navy);
 }
 main.single-voice section.support .wrapper > .support_list .border {

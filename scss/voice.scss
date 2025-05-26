@@ -1651,17 +1651,23 @@ main.single-voice {
 					gap: 20px;
 					margin-top: 40px;
 				}
-				> .item {
+				.item {
 					flex: 1;
-					display: flex;
-					align-items: center;
-					gap: 23px;
+
 					margin-left: 9%;
 					@include max {
 						margin-left: 0;
-						gap: 15px;
+					}
+					a {
+						display: flex;
+						align-items: center;
+						gap: 23px;
+						@include max {
+							gap: 15px;
+						}
 					}
 					.imgc {
+						display: block;
 						width: 70px;
 						@include max {
 							width: 40px;
