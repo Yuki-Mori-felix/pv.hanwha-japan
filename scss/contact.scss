@@ -237,12 +237,45 @@ main.contact {
           background: url(../images/contact/icon-calculator.svg) no-repeat center / cover;
         }
       }
-      &.catalog {
+      &.catalog-a {
         background-color: #3366AA1A;
         border: 1px solid var(--col-navy);
         color: var(--col-navy);
         > .inner::before {
           background: url(../images/contact/icon-book.svg) no-repeat center / cover;
+        }
+      }
+      // &.catalog-b {
+        
+      // }
+      &.catalog-c {
+        background-color: var(--col-navy);
+        box-shadow: 0 3px 6px #0000004D;
+        color: #fff;
+        position: relative;
+        z-index: 0;
+        &:hover {
+          opacity: 1;
+          &::before {
+            transform: scale(1, 1);
+          }
+        }
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #FFFFFF33;
+          transform: scale(0, 1);
+          transform-origin: left top;
+          transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+          z-index: 1;
+        }
+        > .inner::before {
+          background: url(../images/contact/icon-book-white.png) no-repeat center / cover;
         }
       }
       .inner {
@@ -468,7 +501,6 @@ main.contact {
           max-width: 226px;
           width: 100%;
           margin: 40px auto 0;
-          
           border-radius: 5px;
           background-color: var(--col-navy);
           box-shadow: 0 3px 6px #0000004D;
@@ -580,3 +612,218 @@ main.contact.quotation {
   }
 }
 // お見積り依頼
+main.contact.catalog-dl {
+  > .mv {
+    background: url(../images/contact/mv-catalog.png) no-repeat center bottom / cover;
+  }
+  // MV
+  > .download {
+    padding: 76px 0 100px;
+    background-color: #EE77440D;
+    * {
+      letter-spacing: 0.04em !important;
+    }
+    > .container {
+      > .list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px 0;
+        padding-bottom: 40px;
+        border-bottom: 1px solid var(--col-gray);
+        @include max {
+          grid-template-columns: initial;
+        }
+        * {
+          text-align: center;
+        }
+        > .item {
+          &:nth-child(n+4):nth-child(-n+6),
+          &:nth-child(n+10):nth-child(-n+12)
+          &:nth-child(n+16):nth-child(-n+18) {
+            padding: 40px 0;
+            border-top: 1px solid var(--col-gray);
+            border-bottom: 1px solid var(--col-gray);
+            @include max {
+              padding: 40px 0 0;
+              border-bottom: initial;
+            }
+          }
+          &:not(:first-of-type) {
+            @include max {
+              padding-top: 40px;
+              border-top: 1px solid var(--col-gray);
+            }
+          }
+          > .name {
+            font-size: 20px;
+            font-weight: var(--fw-bold);
+          }
+          > .year {
+            font-size: 16px;
+            font-weight: var(--fw-bold);
+          }
+          > .img {
+            max-width: 204px;
+            width: 100%;
+            margin: 10px auto 0;
+            padding-bottom: 10px;
+          }
+          > .module,
+          > .series {
+            font-size: 12px;
+          }
+          > .series {
+            margin-top: 5px;
+            font-weight: var(--fw-bold);
+          }
+          > .link {
+            display: block;
+            max-width: 204px;
+            width: 100%;
+            margin: 10px auto 0;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: var(--fw-bold);
+            padding: 8px;
+            &.web {
+              background-color: var(--col-orange);
+              color: #fff;
+            }
+            &.pdf {
+              background-color: #fff;
+              border: 1px solid var(--col-orange);
+              color: var(--col-orange);
+              &:hover {
+                background-color: #EE77441A;
+              }
+              .inner {
+                padding-right: 16px;
+                position: relative;
+                display: block;
+                width: fit-content;
+                margin: auto;
+                line-height: 1.4;
+                &::after {
+                  content: "";
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                  bottom: 0;
+                  margin: auto;
+                  width: 14px;
+                  height: 15px;
+                  background: url(../images/contact/icon-dl.svg) no-repeat center / cover;
+                }
+              }
+            }
+          }
+        }
+      }
+      > .note {
+        margin-top: 40px;
+        > .txt-bol {
+          font-weight: var(--fw-bold);
+          > .link {
+            color: var(--col-navy);
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  // DOWNLOAD
+  > .system {
+    padding: 100px 0;
+    > .container {
+      > .ttl {
+        padding: 14px 32px;
+        background-color: #F5F5F5;
+        font-size: 20px;
+        font-weight: var(--fw-reg);
+        position: relative;
+        transition: all .3s;
+        &:hover {
+          background-color: #BBBBBB;
+          color: #fff;
+          &::after,
+          &::before {
+            background-color: #fff;
+          }
+        }
+        &.active {
+          background-color: #BBBBBB;
+          color: #fff;
+          &::after,
+          &::before {
+            background-color: #fff;
+          }
+          &::after {
+            transform: rotate(0deg);
+          }
+        }
+        &::after,
+        &::before {
+          content: "";
+          position: absolute;
+          right: 32px;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          width: 11px;
+          height: 1px;
+          background-color: var(--col-black);
+          transition: all .3s;
+        }
+        &::after {
+          transform: rotate(90deg);
+        }
+        // &::before {
+        //   width: 1px;
+        //   height: 12px;
+        //   right: 38px;
+        // }
+      }
+      > .ctt {
+        overflow: hidden;
+				height: 0;
+				transition: all .3s;
+        > .list {
+          max-width: 655px;
+          width: 100%;
+          margin: auto;
+          > .item {
+            margin-top: 40px;
+            > .ttl {
+              font-size: 14px;
+              font-weight: var(--fw-bold);
+              border-bottom: 1px solid var(--col-black);
+              padding-bottom: 5px;
+            }
+            > .list {
+              margin-top: 15px;
+              > .item {
+                border-bottom: 1px solid #F5F5F5;
+                padding: 5px 25px;
+                display: flex;
+                gap: 22px;
+                > .name,
+                > .txt {
+                  font-size: 10px;
+                  color: #666666;
+                }
+                > .name {
+                  width: 95px;
+                }
+                > .txt {
+                  width: 75%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // SYSTEM
+}
+// WEBカタログ・ダウンロード
