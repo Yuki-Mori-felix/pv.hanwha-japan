@@ -548,7 +548,18 @@ $img_path = get_stylesheet_directory_uri() . "/images";
   <div class="modal-window" id="modal-window">
     <div class="modal-wrap">
       <div class="frame">
-        <div class="content"></div>
+        <div class="content">
+          <model-viewer
+            alt="3D"
+            src="<?= get_field('web_ar') ?>"
+            ar
+            environment-image=""
+            poster=""
+            shadow-intensity="1"
+            camera-controls
+            touch-action="pan-y">
+          </model-viewer>
+        </div>
       </div>
       <div class="close">
         <div class="close-btn"></div>
