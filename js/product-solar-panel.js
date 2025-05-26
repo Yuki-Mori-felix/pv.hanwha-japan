@@ -24,12 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 					if (targetElement && !isCompare) {
 						const fieldKey = field.replace(/-/g, "_");
-						targetElement.textContent = data.meta?.[fieldKey] || "ー";
+						targetElement.innerHTML = data.meta?.[fieldKey] || "ー";
 					}
 
 					if (compareTargetElement && isCompare) {
 						const fieldKey = field.replace(/-/g, "_");
-						compareTargetElement.textContent = data.meta?.[fieldKey] || "ー";
+						compareTargetElement.innerHTML = data.meta?.[fieldKey] || "ー";
 					}
 				});
 
