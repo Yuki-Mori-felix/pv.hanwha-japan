@@ -44,8 +44,8 @@ Template Post Type: voice
 						$overview_status_list = [
 							'solar_panel' => '太陽光パネル',
 							'installation_capacity' => '設置容量',
-							'kind_of_roof' => '屋根の種類',
 							'storage_battery' => '蓄電池',
+							'kind_of_roof' => '屋根の種類',
 							'retailer' => '販売店',
 						];
 					?>
@@ -78,7 +78,8 @@ Template Post Type: voice
 						<?=get_field('customer_concerns', $post_id, false)?>
 					</div>
 					<div class="prob-arrow">
-						<img src="" alt="">
+						<p class="prob-arrow-part part-1"></p>
+						<p class="prob-arrow-part part-2"></p>
 					</div>
 					<div class="prob-item solution">
 						<div class="prob-ttl">ハンファジャパンで<br>解決しました</div>
