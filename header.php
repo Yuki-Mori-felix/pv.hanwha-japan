@@ -30,6 +30,7 @@
   <?php elseif (is_page('re-rise') || is_page('q-cells') || is_page('hems') || is_page('storage-system') ) : ?>
     <link rel='stylesheet' href='<?=get_stylesheet_directory_uri()?>/css/product-cat.css'>
     <script src="<?=get_stylesheet_directory_uri()?>/js/product-cat.js"></script>
+    <script src="<?= get_stylesheet_directory_uri(); ?>/js/sort-product-cat.js"></script>
   <?php elseif (is_page('contact') || is_page('contact-quotation') || is_page('contact-catalog') || is_page('catalog')) : ?>
     <link rel='stylesheet' href='<?=get_stylesheet_directory_uri()?>/css/contact.css'>
     <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
