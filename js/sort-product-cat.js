@@ -11,41 +11,43 @@ document.addEventListener("DOMContentLoaded", function () {
 		.getElementById("product-term")
 		.getAttribute("data-term"); // PHPからターム値を取得
 
-	function fetchFilteredProducts() {
+	async function fetchFilteredProducts() {
 		const filter1Value = filter1Select.value;
 		const filter2Value = filter2Select.value;
 
-		const xhr = new XMLHttpRequest();
-		xhr.open("POST", "/wp-admin/admin-ajax.php", true);
-		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		try {
+			const response = await fetch("/wp-admin/admin-ajax.php", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/x-www-form-urlencoded",
+				},
+				body: new URLSearchParams({
+					action: "filter_products",
+					filter1: filter1Value,
+					filter2: filter2Value,
+					term_slug: termSlug,
+				}),
+			});
 
-		xhr.onreadystatechange = function () {
-			if (xhr.readyState === 4 && xhr.status === 200) {
-				productList.innerHTML = xhr.responseText;
+			if (!response.ok) {
+				throw new Error(`HTTP error! status: ${response.status}`);
 			}
-		};
 
-		xhr.send(
-			`action=filter_products&filter1=${encodeURIComponent(
-				filter1Value
-			)}&filter2=${encodeURIComponent(
-				filter2Value
-			)}&term_slug=${encodeURIComponent(termSlug)}`
-		);
+			const data = await response.text();
+			productList.innerHTML = data;
+		} catch (error) {
+			console.error("Error fetching filtered products:", error);
+		}
 	}
 
 	filter1Select.addEventListener("change", fetchFilteredProducts);
 	filter2Select.addEventListener("change", fetchFilteredProducts);
 
 	allButton.addEventListener("click", function () {
-		// セレクトボックスをデフォルトに戻す
 		filter1Select.value = "";
 		filter2Select.value = "";
-
-		// 絞り込みなしで全投稿を取得
 		fetchFilteredProducts();
 	});
 
-	// 初回ロード時にデータを取得
 	fetchFilteredProducts();
 });
