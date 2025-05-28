@@ -566,6 +566,5 @@ $img_path = get_stylesheet_directory_uri() . "/images";
   <!-- //modal-window -->
 
 </main>
-<script src="<?= get_stylesheet_directory_uri() ?>/js/product-solar-panel.js"></script>
 <?php
 get_footer();
