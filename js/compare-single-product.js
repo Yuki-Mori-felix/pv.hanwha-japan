@@ -1,3 +1,4 @@
+/*============= 製品比較機能（製品詳細ページ） =============*/
 document.addEventListener("DOMContentLoaded", function () {
 	const productSelect = document.getElementById("product-select");
 	const compareSelect = document.getElementById("compare-product-select");
