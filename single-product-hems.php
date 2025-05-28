@@ -73,9 +73,11 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                 <img src="<?= $img_path ?>/single-product/web-ar.svg" alt="3D">
               </div>
             </div>
-            <a href="#" class="eneconnect-banner">
-              <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/ENECONECT_banner_01.png" alt="エネコネクトの節電サポート 詳しくはこちら">
-            </a>
+            <?php if (get_field('hems_banner')): ?>
+              <a href="<?= get_field('hems_banner'); ?>" class="eneconnect-banner">
+                <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/ENECONECT_banner_01.png" alt="エネコネクトの節電サポート 詳しくはこちら">
+              </a>
+            <?php endif; ?>
           </div>
           <div class="right">
             <?php if (get_field('new_switch')): ?>
