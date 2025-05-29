@@ -23,7 +23,7 @@ Template Post Type: voice
 
 		<section class="overview">
 			<div class="overview-ttl">
-				<h3 class="txt"><?= get_field('voice_title', $post_id, false) ?></h3>
+				<h3 class="txt"><?= the_field('voice_title') ?></h3>
 			</div>
 			<div class="sv-wrap">
 				<div class="overview-prof">
