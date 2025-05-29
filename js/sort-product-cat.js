@@ -40,12 +40,34 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	}
 
+	// 疑似セレクトボックスの変更でソート機能を実行
+	document.querySelectorAll(".custom-options li").forEach((option) => {
+		option.addEventListener("click", function () {
+      fetchFilteredProducts();
+		});
+	});
+
 	filter1Select.addEventListener("change", fetchFilteredProducts);
 	filter2Select.addEventListener("change", fetchFilteredProducts);
 
-	allButton.addEventListener("click", function () {
+	allButton.addEventListener("click", function () { // ALLボタン押下時の処理
+		// 疑似セレクトボックスを削除
+		document
+			.querySelectorAll(".custom-select")
+			.forEach((elem) => elem.remove());
+
+		// セレクトボックスの値をリセット
 		filter1Select.value = "";
 		filter2Select.value = "";
+
+		// `change` イベントを発火させる
+		filter1Select.dispatchEvent(new Event("change"));
+		filter2Select.dispatchEvent(new Event("change"));
+
+		// 疑似セレクトボックスを再生成
+		if (window.selectChoice) {
+			window.selectChoice();
+		}
 		fetchFilteredProducts();
 	});
 
