@@ -8,6 +8,9 @@
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!--Details page Accordion-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
   <!--style.css-->
   <?php if (is_front_page() || is_home() ) : ?>
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/add.css'>
@@ -49,8 +52,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward_ios,open_in_new" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward_ios,open_in_new" />
 
-  <!--Details page Accordion-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
   <script>
     $(function() {
