@@ -97,7 +97,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         <button class="all">ALL</button>
         <div class="series">
           <select id="filter1" class="select">
-            <option value="">シリーズを選択</option>
+            <option value="">シリーズ</option>
             <?php
             foreach ($acf_filter1_choices as $choice_key => $choice_value):
               if (isset($filter1_choices[$choice_key])): ?>
@@ -109,7 +109,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         </div>
         <div class="size">
           <select id="filter2" class="select">
-            <option value="">カテゴリを選択</option>
+            <option value="">サイズ</option>
             <?php
             foreach ($acf_filter2_choices as $choice_key => $choice_value):
               if (isset($filter2_choices[$choice_key])): ?>
