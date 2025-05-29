@@ -1358,9 +1358,9 @@ main.single-voice section.message .common-voice-content .cvc-item .cvc-wrap .cvc
   height: auto;
   vertical-align: top;
 }
-main.single-voice section.why .common-voice-content .cvc-item .cvc-wrap .cvc-img-list .cvc-figure,
-main.single-voice section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-img-list .cvc-figure,
-main.single-voice section.message .common-voice-content .cvc-item .cvc-wrap .cvc-img-list .cvc-figure {
+main.single-voice section.why .common-voice-content .cvc-item .cvc-wrap .cvc-img-list .cvc-img .cvc-figure,
+main.single-voice section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-img-list .cvc-img .cvc-figure,
+main.single-voice section.message .common-voice-content .cvc-item .cvc-wrap .cvc-img-list .cvc-img .cvc-figure {
   margin-top: 10px;
   margin-bottom: 0;
   text-align: center;
