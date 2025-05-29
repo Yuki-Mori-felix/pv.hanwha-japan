@@ -464,4 +464,20 @@ main.taxonomy-product-cat > .lineup > .container > .prod-list > .prod-item > .tt
   font-size: 20px;
   font-weight: var(--fw-bold);
   transition: opacity 0.3s;
+}
+main.taxonomy-product-cat > .compare > .wrapper {
+  width: calc(100% - 30px);
+}
+main.taxonomy-product-cat > .compare > .wrapper > .btn {
+  color: white;
+  background: var(--col-navy);
+  width: 312px;
+  padding-block: 18px;
+  text-align: center;
+  margin-top: 100px;
+  margin-inline: auto;
+  border-radius: 30px;
+}
+main.taxonomy-product-cat > .compare > .wrapper > .btn:hover::after {
+  background: #3D7ABB;
 }/*# sourceMappingURL=product-cat.css.map */

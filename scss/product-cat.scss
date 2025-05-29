@@ -442,5 +442,24 @@ main.taxonomy-product-cat {
       }
     }
   }
+  // COMPARE
+  > .compare {
+    > .wrapper {
+      width: calc(100% - 30px);
+      > .btn {
+        color: white;
+        background: var(--col-navy);
+        width: 312px;
+        padding-block: 18px;
+        text-align: center;
+        margin-top: 100px;
+        margin-inline: auto;
+        border-radius: 30px;
+        &:hover::after {
+          background: #3D7ABB;
+        }
+      }
+    }
+  }
 }
 // 製品詳細 ターム 一覧ページ 共通
