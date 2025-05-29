@@ -422,9 +422,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
           <span class="icon"></span>
         </div>
       </div>
-      <a href="<?= the_field('compare_link'); ?>" class="banner">
-        <img src="<?= $img_path ?>/single-product/Re.RISE_Product details_banner.png" alt="Re.RISE太陽光パネル製品一覧ページへ">
-      </a>
+      <a href="<?= home_url(); ?>/product-list/" class="btn">製品・システム 一覧</a>
     </div>
   </section>
   <!-- //compare -->
