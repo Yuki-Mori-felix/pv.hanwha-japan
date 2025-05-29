@@ -32,6 +32,7 @@
     <script src="<?= get_stylesheet_directory_uri() ?>/js/single-product.js"></script>
     <script src="<?= get_stylesheet_directory_uri() ?>/js/compare-single-product.js"></script>
   <?php elseif (is_page('re-rise') || is_page('q-cells') || is_page('hems') || is_page('storage-system') ) : ?>
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/single-product.css'>
     <link rel='stylesheet' href='<?=get_stylesheet_directory_uri()?>/css/product-cat.css'>
     <script src="<?=get_stylesheet_directory_uri()?>/js/product-cat.js"></script>
     <script src="<?= get_stylesheet_directory_uri(); ?>/js/sort-product-cat.js"></script>
