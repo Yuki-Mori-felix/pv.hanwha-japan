@@ -33,6 +33,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
 			for (let i = 0; i < originalSelect.options.length; i++) {
 				const option = originalSelect.options[i];
+        if (option.value === "") continue; // デフォルトの選択肢 (`option[value=""]`) をスキップ
 				const li = document.createElement("li");
 				li.textContent = option.text;
 				li.dataset.value = option.value;
