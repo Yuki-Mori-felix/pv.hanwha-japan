@@ -42,88 +42,95 @@ $img_path = get_stylesheet_directory_uri() . "/images";
   <section class="lineup">
     <div class="container">
       <h2 class="ttl">ラインナップ</h2>
+      <?php
+      $term_slug = 're-rise'; // このページで表示させたいターム値
+
+      $filter1_choices = [];
+      $filter2_choices = [];
+      $acf_filter1_choices = [];
+      $acf_filter2_choices = [];
+
+      $args = array(
+        'post_type'      => 'product',
+        'posts_per_page' => -1,
+        'tax_query'      => array(
+          array(
+            'taxonomy' => 'product-cat',
+            'field'    => 'slug',
+            'terms'    => $term_slug,
+          ),
+        ),
+      );
+      $the_query = new WP_Query($args);
+
+      if ($the_query->have_posts()):
+        while ($the_query->have_posts()): $the_query->the_post();
+          // 各投稿のコンテキストでフィールドオブジェクトを取得
+          $acf_filter1_object = get_field_object('filter1');
+          $acf_filter2_object = get_field_object('filter2');
+
+          // フィールドオブジェクトが取得できた場合、選択肢をセット
+          if ($acf_filter1_object) {
+            $acf_filter1_choices = $acf_filter1_object['choices']; // 各投稿が選択できる値
+          }
+          if ($acf_filter2_object) {
+            $acf_filter2_choices = $acf_filter2_object['choices']; // 各投稿が選択できる値
+          }
+
+          // 各投稿が選択した値を取得
+          $filter1_value = get_field('filter1');
+          $filter2_value = get_field('filter2');
+
+          if ($filter1_value && isset($acf_filter1_choices[$filter1_value])) {
+            $filter1_choices[$filter1_value] = $acf_filter1_choices[$filter1_value]; // ACF順で取得
+          }
+          if ($filter2_value && isset($acf_filter2_choices[$filter2_value])) {
+            $filter2_choices[$filter2_value] = $acf_filter2_choices[$filter2_value]; // ACF順で取得
+          }
+        endwhile;
+        wp_reset_postdata();
+      endif;
+      ?>
+
+      <!-- フィルタリング用セレクトボックス -->
       <div class="choose">
         <button class="all">ALL</button>
         <div class="series">
-          <select name="" class="select">
-            <option value="">シリーズ</option>
-            <option value="Re.RISE-G4シリーズ">Re.RISE-G4シリーズ</option>
-            <option value="Re.Rise-G3シリーズ">Re.Rise-G3シリーズ</option>
-            <option value="Re.RISE AC">Re.RISE AC</option>
-            <option value="Re.RISE S 230">Re.RISE S 230</option>
-            <option value="Re.RISE-G2 435">Re.RISE-G2 435</option>
+          <select id="filter1" class="select">
+            <option value="">シリーズを選択</option>
+            <?php
+            foreach ($acf_filter1_choices as $choice_key => $choice_value):
+              if (isset($filter1_choices[$choice_key])): ?>
+                <option value="<?php echo esc_attr($choice_key); ?>"><?php echo esc_html($choice_value); ?></option>
+            <?php endif;
+            endforeach;
+            ?>
           </select>
         </div>
         <div class="size">
-          <select name="" class="select">
-            <option value="">サイズ</option>
-            <option value="一般サイズ">一般サイズ</option>
-            <option value="小型サイズ">小型サイズ</option>
+          <select id="filter2" class="select">
+            <option value="">カテゴリを選択</option>
+            <?php
+            foreach ($acf_filter2_choices as $choice_key => $choice_value):
+              if (isset($filter2_choices[$choice_key])): ?>
+                <option value="<?php echo esc_attr($choice_key); ?>"><?php echo esc_html($choice_value); ?></option>
+            <?php endif;
+            endforeach;
+            ?>
           </select>
         </div>
       </div>
-      <div class="prod-list">
-        <a class="prod-item" href="">
-          <div class="img"><img src="<?=$img_path?>/tax-prod-cat/ms-g4-bag-270.png" alt=""></div>
-          <div class="ttl"><span class="new">NEW</span><h3 class="name">Re.RISE MS-G4 BAG 270</h3></div>
-        </a>
-        <a class="prod-item" href="">
-          <div class="img"><img src="<?=$img_path?>/tax-prod-cat/g4-440.png" alt=""></div>
-          <div class="ttl"><span class="new">NEW</span><h3 class="name">Re.RISE-G4 440</h3></div>
-        </a>
-        <a class="prod-item" href="">
-          <div class="img"><img src="<?=$img_path?>/tax-prod-cat/ms-g4-290.png" alt=""></div>
-          <div class="ttl"><span class="new">NEW</span><h3 class="name">Re.RISE MS-G4 290</h3></div>
-        </a>
-        <a class="prod-item" href="">
-          <div class="img"><img src="<?=$img_path?>/tax-prod-cat/ac.png" alt=""></div>
-          <div class="ttl"><h3 class="name">Re.RISE AC</h3></div>
-        </a>
-        <a class="prod-item" href="">
-          <div class="img"><img src="<?=$img_path?>/tax-prod-cat/g3-440.png" alt=""></div>
-          <div class="ttl"><h3 class="name">Re.RISE-G3 440</h3></div>
-        </a>
-        <a class="prod-item" href="">
-          <div class="img"><img src="<?=$img_path?>/tax-prod-cat/ms-g3-290.png" alt=""></div>
-          <div class="ttl"><h3 class="name">Re.RISE MS-G3 290</h3></div>
-        </a>
-        <a class="prod-item" href="">
-          <div class="img"><img src="<?=$img_path?>/tax-prod-cat/g2-435.png" alt=""></div>
-          <div class="ttl"><h3 class="name">Re.RISE-G2 435</h3></div>
-        </a>
-        <a class="prod-item" href="">
-          <div class="img"><img src="<?=$img_path?>/tax-prod-cat/s-230.png" alt=""></div>
-          <div class="ttl"><h3 class="name">Re.RISE S 230</h3></div>
-        </a>
-      </div>
+
+
+      <!-- sort-product-cat.jsにターム値を取得させる -->
+      <div id="product-term" data-term="<?php echo esc_attr($term_slug); ?>"></div>
+
+      <!-- 商品一覧（AJAXで更新） -->
+      <div class="prod-list"></div>
+
     </div>
   </section>
   <!-- // LINEUP -->
-  <div>
-    <?php
-    $args = array(
-      'post_type' => 'product',
-      'posts_per_page' => -1,
-      'taxonomy' => 'product-cat',
-      'term' => 're-rise',
-    );
-    $the_query = new WP_Query($args);
-    ?>
-    <?php if ($the_query->have_posts()): ?>
-      <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
-
-        <!-- 繰り返し処理する内容 -->
-        <article>
-          <a href="<?php the_permalink(); ?>">
-            <h2><?php the_title(); ?></h2>
-          </a>
-        </article>
-        <!-- 繰り返し処理する内容 -->
-
-      <?php endwhile; ?>
-    <?php endif; ?>
-    <?php wp_reset_postdata(); ?>
-  </div>
 </main>
 <!-- // TAXONOMY_PRODUCTS_CAT RE_RISE -->
 <?=get_footer();?>
