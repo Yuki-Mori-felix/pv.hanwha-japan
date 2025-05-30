@@ -44,6 +44,8 @@
   <?php elseif (is_page('faq')) : ?>
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/faq.css'>
     <script src="<?= get_stylesheet_directory_uri() ?>/js/faq.js"></script>
+  <?php elseif (is_page('after-follow')) : ?>
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/after-follow.css'>
   <?php endif; ?>
   <!--style.css-->
 
