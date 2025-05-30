@@ -41,6 +41,9 @@
     <link rel='stylesheet' href='<?=get_stylesheet_directory_uri()?>/css/contact.css'>
     <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
     <script src="<?=get_stylesheet_directory_uri()?>/js/contact.js"></script>
+  <?php elseif (is_page('faq')) : ?>
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/faq.css'>
+    <script src="<?= get_stylesheet_directory_uri() ?>/js/faq.js"></script>
   <?php endif; ?>
   <!--style.css-->
 
