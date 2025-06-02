@@ -213,7 +213,10 @@
 				.contact-button {
 					font-size: 12px;
 					line-height: 1;
-					display: block;
+					display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
 					width: 96%;
 					max-width: 312px;
           margin-inline: auto;
@@ -230,10 +233,14 @@
 				}
 
         .num {
+          font-size: 24px;
           font-family: 'Figtree';
           color: #3366aa;
-          font-size: 24px;
           margin-bottom: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 15px;
 
           .icon {
             width: 32px;

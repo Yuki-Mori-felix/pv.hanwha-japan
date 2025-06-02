@@ -78,7 +78,7 @@ require get_stylesheet_directory() . '/include/my_variables.php';
           </div>
           <div class="apply-title">WEBでのお申込み</div>
           <div class="appply-text">当サイトから簡単にお申し込みいただけます。</div>
-          <a class="contact-button" href="https://pv.hanwha-japan.com/service-support/contact/"><span class="icon"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/contact_envelope-alt.svg" alt=""></span>お問い合わせはこちら</a>
+          <a class="contact-button" href="https://pv.hanwha-japan.com/service-support/contact/"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/contact_envelope-alt.svg" alt="">お問い合わせはこちら</a>
         </div>
         <div class="apply-item">
           <div class="apply-icon">
@@ -86,7 +86,7 @@ require get_stylesheet_directory() . '/include/my_variables.php';
           </div>
           <div class="apply-title">お電話でのお申込み</div>
           <div class="appply-text">下記のフリーダイヤルにおかけください。</div>
-          <div class="num"><span class="icon"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/freedial-icon.svg" alt=""></span>0120-801-170</div>
+          <div class="num"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/freedial-icon.svg" alt="">0120-801-170</div>
           <div class="time">
             受付時間 09：00～17：00（12：00～13：00を除く）<br>
             <span>※土日・祝日および年末年始を除く</span>
