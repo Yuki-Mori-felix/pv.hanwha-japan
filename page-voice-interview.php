@@ -48,7 +48,7 @@ get_header();
             // WP_Query の引数を設定
             $args = array(
               'post_type'      => 'voice',  // カスタム投稿タイプ
-              'posts_per_page' => 5,        // 表示する投稿数
+              'posts_per_page' => -1,        // 表示する投稿数
               'orderby'        => 'date',   // 日付順
               'order'          => 'DESC'    // 降順
             );
