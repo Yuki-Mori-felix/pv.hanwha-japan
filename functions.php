@@ -115,7 +115,8 @@ function add_custom_post()
         'revisions',
         'excerpt',
         'custom-fields',
-      )
+			),
+			'taxonomies'=> ['voice-cat', 'voice-post-format'],
     )
   );
 
@@ -124,6 +125,17 @@ function add_custom_post()
     'voice',
     array(
       'label' => 'カテゴリー',
+      'hierarchical' => true,
+      'public' => true,
+      'show_in_rest' => true,
+    )
+  );
+
+	register_taxonomy(
+    'voice-post-format',
+    'voice',
+    array(
+      'label' => '投稿ジャンル',
       'hierarchical' => true,
       'public' => true,
       'show_in_rest' => true,

@@ -2,7 +2,7 @@
 <?php
 get_header();
 /*
-Template Name: お客様インタビュー詳細（販売店なし）
+Template Name: お客様インタビュー詳細（一般）
 Template Post Type: voice
 */
 ?>
