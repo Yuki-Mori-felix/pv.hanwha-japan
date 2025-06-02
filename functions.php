@@ -397,7 +397,7 @@ function filter_voice_posts()
 
   $args = array(
     'post_type'      => 'voice',
-    'posts_per_page' => 5,
+    'posts_per_page' => -1,
     'orderby'        => 'date',
     'order'          => 'DESC',
   );
