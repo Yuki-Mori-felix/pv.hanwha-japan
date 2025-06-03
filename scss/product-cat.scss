@@ -1,6 +1,7 @@
 @use "breakpoint" as *;
 
 main.taxonomy-product-cat {
+  position: relative;
   // 変数
 	// --font-weight
 	--fw-reg: 400;
@@ -114,6 +115,30 @@ main.taxonomy-product-cat {
   .bg-q-cells {
     background: transparent linear-gradient(90deg, rgb(#FFFFFF, .2) 0%, rgb(#3366aa, .2) 100%) 0% 0% no-repeat padding-box;
   }
+  // パワーコンディショナ、V2H、架台のintroセクション共通bg
+  .bg-other {
+    background: transparent linear-gradient(90deg, rgb(#FFFFFF, .2) 0%, rgb(#999999, .2) 100%) 0% 0% no-repeat padding-box;
+  }
+  // 蓄電システム
+  .mv-storage-system {
+    background: url(../images/tax-prod-cat/mv-storage-system.png) no-repeat center bottom / cover;
+  }
+  // HEMS
+  .mv-hems {
+    background: url(../images/tax-prod-cat/mv-hems.png) no-repeat center bottom / cover;
+  }
+  // パワーコンディショナ
+  .mv-power-conditioner {
+    background: url(../images/tax-prod-cat/mv-power-conditioner.png) no-repeat center bottom / cover;
+  }
+  .intro-power-conditioner {
+    max-width: 226px;
+    left: 0;
+    bottom: 60px;
+    @include max {
+      bottom: initial;
+    }
+  }
   // ここまで main内 共通
 
   > .mv {
@@ -151,11 +176,19 @@ main.taxonomy-product-cat {
   }
   // MV
   > .top {
-    padding: 0 0 100px;
+    margin-top: -400px;
+    @include max(l) {
+      margin-top: -40vw;
+    }
+    @include max {
+      margin-top: initial;
+    }
     > .container {
+      display: flex;
+      justify-content: end;
+      align-items: end;
       position: relative;
       @include max {
-        display: flex;
         flex-direction: column-reverse;
         align-items: center;
         gap: 32px;
@@ -164,23 +197,20 @@ main.taxonomy-product-cat {
         display: flex;
         align-items: center;
         gap: 32px;
+        width: 49%;
+        @include max {
+          width: 100%;
+          justify-content: center;
+        }
         > .img {
           max-width: 226px;
-          width: 22%;
-          @include max {
-            width: 100%;
-          }
+          width: 100%;
         }
       }
-      > .panel {
-        position: absolute;
-        right: 0;
-        bottom: -18px;
+      .prod-img {
         max-width: 484px;
         width: 50%;
         @include max {
-          position: relative;
-          bottom: initial;
           width: 100%;
         }
       }
@@ -188,22 +218,12 @@ main.taxonomy-product-cat {
   }
   // TOP
   > .intro {
-    padding: 66px 0;
     > .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       max-width: 830px;
-      @include max {
-        flex-direction: column;
-        gap: 40px;
-      }
+      display: flex;
+      align-items: center;
       * {
         letter-spacing: 0.04em !important;
-      }
-      > .img {
-        max-width: 226px;
-        width: 100%;
       }
       > .ctt {
         > .name {
@@ -214,8 +234,6 @@ main.taxonomy-product-cat {
           }
         }
         > .txt {
-          margin-top: 40px;
-          font-size: 14px;
           @include max {
             text-align: center;
           }
@@ -233,13 +251,13 @@ main.taxonomy-product-cat {
   }
   // INTRO
   > .lineup {
-    padding: 100px 0 120px;
     > .container {
       * {
         letter-spacing: 0.04em !important;
       }
       > .ttl {
         font-size: 32px;
+        font-weight: var(--fw-bold);
         text-align: center;
       }
       > .choose {
@@ -382,7 +400,7 @@ main.taxonomy-product-cat {
           }
         }
       }
-      > .prod-list {
+      .prod-list {
         margin-top: 80px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -442,7 +460,7 @@ main.taxonomy-product-cat {
       }
     }
   }
-  // COMPARE
+  // LINEUP
   > .compare {
     > .wrapper {
       width: calc(100% - 30px);
@@ -461,5 +479,166 @@ main.taxonomy-product-cat {
       }
     }
   }
+  // COMPARE
 }
 // 製品詳細 ターム 一覧ページ 共通
+
+main.taxonomy-product-cat.re-rise,
+main.taxonomy-product-cat.q-cells,
+main.taxonomy-product-cat.power-conditioner,
+main.taxonomy-product-cat.bracket,
+main.taxonomy-product-cat.v2h {
+  > .lineup {
+    padding: 100px 0 120px;
+  }
+  // LINEUP
+}
+// Re.RISE Qcells パワーコンディショナ V2H 架台
+
+main.taxonomy-product-cat.re-rise,
+main.taxonomy-product-cat.q-cells {
+  > .top {
+    padding: 0 0 100px;
+  }
+  // TOP
+  > .intro {
+    padding: 66px 0;
+    > .container {
+      justify-content: space-between;
+      @include max {
+        flex-direction: column;
+        gap: 40px;
+      }
+      > .img {
+        max-width: 226px;
+        width: 100%;
+      }
+      > .ctt {
+        > .name {
+          font-size: 32px;
+          font-weight: var(--fw-bold);
+          @include max {
+            text-align: center;
+          }
+        }
+        > .txt {
+          margin-top: 40px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  // INTRO
+}
+// Re.RISE Qcells
+
+main.taxonomy-product-cat.power-conditioner,
+main.taxonomy-product-cat.bracket,
+main.taxonomy-product-cat.v2h {
+  > .top {
+    padding: 0 0 42px;
+  }
+  // TOP
+  > .intro {
+    > .container {
+      height: 242px;
+      justify-content: end;
+      position: relative;
+      @include max {
+        height: auto;
+        padding: 66px 0;
+        flex-direction: column-reverse;
+        gap: 40px;
+      }
+      > .img {
+        width: 25%;
+        position: absolute;
+        @include max {
+          position: relative;
+          width: 100%;
+        }
+      }
+      > .ctt {
+        max-width: 484px;
+        width: 100%;
+        > .txt {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  // INTRO
+}
+// パワーコンディショナ V2H 架台
+
+main.taxonomy-product-cat.storage-system,
+main.taxonomy-product-cat.hems {
+  > .lineup {
+    padding: 40px 0 120px;
+  }
+  // LINEUP
+}
+// 蓄電システム HEMS
+
+main.taxonomy-product-cat.storage-system {
+  > .lineup {
+    .typec {
+      margin-top: 80px;
+      &.ready {
+        > .type {
+          &::before {
+            background-color: var(--col-orange);
+          }
+          > .txt {
+            color: var(--col-orange);
+            border: 1px solid var(--col-orange);
+          }
+        }
+      }
+      &.hybrid {
+        > .type {
+          &::before {
+            background-color: var(--col-navy);
+          }
+          > .txt {
+            color: var(--col-navy);
+            border: 1px solid var(--col-navy);
+          }
+        }
+      }
+      > .type {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+          width: 100%;
+          height: 1px;
+          @include max(ml) {
+            content: none;
+          }
+        }
+        > .txt {
+          width: 312px;
+          margin: auto;
+          padding: 13px 0 12px;
+          font-size: 15px;
+          font-weight: var(--fw-bold);
+          line-height: 1;
+          text-align: center;
+          border-radius: 25px;
+          background-color: #fff;
+          position: relative;
+        }
+      }
+    }
+    .prod-list {
+      margin-top: 40px;
+    }
+  }
+  // LINEUP
+}
+// 蓄電システム
