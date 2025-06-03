@@ -6,7 +6,53 @@ get_header();
 $img_path = get_stylesheet_directory_uri() . "/images";
 ?>
 <!-- 製品詳細 ターム(HEMS) 一覧ページ -->
-<main class="taxonomy-product-cat single-products">
+<main class="taxonomy-product-cat hems single-products">
+  <section class="mv mv-hems">
+    <div class="container">
+      <div class="ttlc">
+        <p class="prod-name"><?= get_field('title_main'); ?></p>
+        <h2 class="ttl"><?= get_field('title_sub') ?></h2>
+      </div>
+    </div>
+  </section>
+  <!-- // MV -->
+  <div class="wrap">
+    <?php custom_breadcrumb(); ?>
+  </div>
+  <section class="top">
+    <div class="container">
+      <div class="prod-img"><img src="<?=$img_path?>/tax-prod-cat/pi-hems.png" alt=""></div>
+    </div>
+  </section>
+  <!-- // TOP -->
+  <section class="lineup">
+    <div class="container">
+      <h2 class="ttl">ラインナップ</h2>
+      
+      <div class="prod-list">
+        <a href="" class="prod-item">
+          <div class="img"><img src="<?=$img_path?>/tax-prod-cat/cube-j.png" alt=""></div>
+          <div class="ttl">
+            <h3 class="name">Cube J</h3>
+          </div>
+        </a>
+        <a href="" class="prod-item">
+          <div class="img"><img src="<?=$img_path?>/tax-prod-cat/atto.png" alt=""></div>
+          <div class="ttl">
+            <h3 class="name">Atto</h3>
+          </div>
+        </a>
+        <a href="" class="prod-item">
+          <div class="img"><img src="<?=$img_path?>/tax-prod-cat/dummy.png" alt=""></div>
+          <div class="ttl">
+            <h3 class="name">Edge</h3>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </section>
+  <!-- // LINEUP -->
   <section class="compare" data-target="compare">
     <div class="wrapper">
       <h2 class="sec-ttl" id="compare">製品を比較する</h2>
