@@ -1,0 +1,690 @@
+@charset "UTF-8";
+/*
+  拠点詳細、実績詳細、推移詳細、技術詳細、サポート詳細、受賞・実績詳細ページ用CSS
+*/
+.under-pv {
+  /*___ 拠点詳細、実績詳細、推移詳細、技術詳細、サポート詳細、受賞・実績詳細ページ共通 ___*/
+  /*====================== END OF MV ======================*/
+  /*___ 拠点詳細、実績詳細、推移詳細、技術詳細、サポート詳細、受賞・実績詳細ページ共通 ___*/
+  /*====================== END OF LOCATION TOP ======================*/
+  /*====================== END OF SALES SUPPORT ======================*/
+  /*====================== END OF DISTRIBUTION ======================*/
+  /*====================== END OF SERVICE SUPPORT ======================*/
+  /*====================== END OF UNDER PV LIST ======================*/
+  /*====================== END OF AWARD ======================*/
+  /*====================== END OF US MARKET ======================*/
+  /*====================== END OF US MARKET ======================*/
+}
+.under-pv h2 {
+  text-align: center;
+  font-size: min(32px, 2.5vw);
+  color: #333;
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 768px) {
+  .under-pv h2 {
+    font-size: 24px;
+  }
+}
+.under-pv .location-button {
+  background: #3366aa;
+  color: white;
+  display: block;
+  text-align: center;
+  width: 90%;
+  max-width: 398px;
+  margin-inline: auto;
+  border-radius: 30px;
+  margin-block: 120px;
+  line-height: 1;
+}
+.under-pv .location-button:hover::after {
+  background: #3d7abb;
+}
+.under-pv .mv {
+  position: relative;
+  height: 426px;
+}
+.under-pv .mv .back-img {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.under-pv .mv .back-img .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 40px;
+  font-weight: var(--fw-bold);
+  width: 94%;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .mv .back-img .title {
+    font-size: 32px;
+  }
+}
+.under-pv .location-wrap {
+  max-width: 742px;
+  width: 70%;
+  margin-inline: auto 0;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .location-wrap {
+    width: 100%;
+  }
+}
+.under-pv .location-top {
+  margin-top: -600px;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .location-top {
+    margin-top: unset;
+  }
+}
+.under-pv .location-menu {
+  position: sticky;
+  top: 100px;
+  z-index: 9999;
+  background: rgb(255, 255, 255) no-repeat padding-box;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  max-width: 30vw;
+  width: 280px;
+  padding: 25px 90px 75px 20px;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .location-menu {
+    display: none;
+  }
+}
+.under-pv .location-menu .nav-title {
+  position: relative;
+  font-size: min(20px, 2vw);
+  margin-bottom: 40px;
+  width: fit-content;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .location-menu .nav-title {
+    font-size: 16px;
+  }
+}
+.under-pv .location-menu .nav-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: -40px;
+  width: 240px;
+  height: 2px;
+  background: #ee7744;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .location-menu .nav-title::after {
+    width: 180px;
+  }
+}
+.under-pv .location-menu .parent-link:hover,
+.under-pv .location-menu .child-link:hover {
+  color: #ee7744;
+}
+.under-pv .location-menu .parent-link {
+  display: block;
+  margin-bottom: 40px;
+  width: fit-content;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .location-menu .parent-link {
+    font-size: 14px;
+  }
+}
+.under-pv .location-menu ul {
+  padding-left: 40px;
+  width: fit-content;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .location-menu ul {
+    padding-left: 15px;
+  }
+}
+.under-pv .location-menu ul li {
+  position: relative;
+  margin-bottom: 30px;
+  font-size: 12px;
+  width: fit-content;
+}
+.under-pv .location-menu ul li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  height: 2px;
+  width: 0;
+  background: #ee7744;
+  transition: width 0.3s ease;
+}
+.under-pv .location-menu ul li:hover::before {
+  width: 10px;
+}
+.under-pv .location-top {
+  position: relative;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .location-top {
+    transform: translateY(0);
+  }
+}
+.under-pv .location-top::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 240px;
+  width: 100%;
+  background: transparent linear-gradient(270deg, #ffffff 0%, #999999 100%) 0% 0% no-repeat padding-box;
+  opacity: 0.2;
+}
+.under-pv .location-top .wrap_s {
+  width: 94%;
+  margin-inline: auto;
+}
+.under-pv .location-top .wrap_s .location-top-img {
+  max-width: 656px;
+  margin-inline: auto 0;
+}
+.under-pv .location-top .location-menu {
+  position: sticky;
+  top: 80px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  max-width: 280px;
+  padding: 25px 90px 75px 20px;
+}
+.under-pv .location-top .location-menu .nav-title {
+  position: relative;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.under-pv .location-top .location-menu .nav-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: -40px;
+  width: 240px;
+  height: 2px;
+  background: #ee7744;
+}
+.under-pv .location-top .location-menu .parent-link:hover,
+.under-pv .location-top .location-menu .child-link:hover {
+  color: #ee7744;
+}
+.under-pv .location-top .location-menu .parent-link {
+  display: block;
+  margin-bottom: 40px;
+}
+.under-pv .location-top .location-menu ul {
+  padding-left: 40px;
+}
+.under-pv .location-top .location-menu ul li {
+  position: relative;
+  margin-bottom: 30px;
+  font-size: 12px;
+}
+.under-pv .location-top .location-menu ul li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  height: 2px;
+  width: 0;
+  background: #ee7744;
+  transition: width 0.3s ease;
+}
+.under-pv .location-top .location-menu ul li:hover::before {
+  width: 10px;
+}
+.under-pv .sales-support .wrap_s {
+  width: 94%;
+}
+.under-pv .sales-support .wrap_s .sales-content .sales-item {
+  margin-bottom: 85px;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .sales-support .wrap_s .sales-content .sales-item {
+    margin-bottom: 60px;
+  }
+}
+.under-pv .sales-support .wrap_s .sales-content .sales-item h3 {
+  font-size: 20px;
+  color: #333;
+  background: #f5f5f5;
+  padding: 5px 9px 6px;
+  margin-bottom: 45px;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .sales-support .wrap_s .sales-content .sales-item h3 {
+    margin-bottom: 30px;
+  }
+}
+.under-pv .sales-support .wrap_s .sales-content .sales-item .sales-item-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: min(120px, 1vw);
+}
+@media screen and (max-width: 768px) {
+  .under-pv .sales-support .wrap_s .sales-content .sales-item .sales-item-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.under-pv .sales-support .wrap_s .sales-content .sales-item .sales-item-flex .sales-item-img {
+  max-width: 220px;
+}
+.under-pv .sales-support .wrap_s .sales-content .sales-item .sales-item-flex .sales-item-text:has(.only-text) {
+  margin-inline: auto;
+}
+.under-pv .sales-support .wrap_s .sales-content .sales-item .sales-item-flex .sales-item-text h4 {
+  font-size: 16px;
+}
+.under-pv .sales-support .wrap_s .sales-content .sales-item .sales-item-flex .sales-item-text p {
+  font-size: 12px;
+  font-weight: 400;
+}
+.under-pv .sales-support .wrap_s .sales-content .sales-item .sales-item-flex .sales-item-text .only-text {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 0;
+}
+.under-pv .sales-support .wrap_s .sales-content .sales-item .sales-item-flex .sales-item-text .map iframe {
+  height: 100px;
+  width: 400px;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .sales-support .wrap_s .sales-content .sales-item .sales-item-flex .sales-item-text .map iframe {
+    height: 200px;
+  }
+}
+.under-pv .distribution {
+  padding-block: 80px;
+  background-image: url("https://pv.hanwha-japan.com/wp-content/uploads/2025/06/net-work_bg_img1.jpg");
+  margin-bottom: 40px;
+}
+.under-pv .distribution .wrap_s .distribution-list {
+  max-width: 484px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+  place-items: center;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .distribution .wrap_s .distribution-list {
+    column-gap: 10px;
+  }
+}
+.under-pv .distribution .wrap_s .distribution-list li {
+  background: #fff;
+  width: 140px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.under-pv .distribution .wrap_s .distribution-text {
+  text-align: center;
+}
+.under-pv .service-support {
+  padding-block: 100px 245px;
+  background-image: url("https://pv.hanwha-japan.com/wp-content/uploads/2025/06/net-work_bg_img2.jpg");
+}
+.under-pv .service-support .service-support-text {
+  text-align: center;
+}
+.under-pv .achievement .under-pv-list,
+.under-pv .transition .under-pv-list,
+.under-pv .technology .under-pv-list,
+.under-pv .support .under-pv-list {
+  max-width: 1280px;
+  margin-inline: auto;
+}
+.under-pv .achievement .under-pv-list li,
+.under-pv .transition .under-pv-list li,
+.under-pv .technology .under-pv-list li,
+.under-pv .support .under-pv-list li {
+  display: flex;
+  align-items: center;
+  gap: min(120px, 10vw);
+  width: 94%;
+  margin-bottom: 100px;
+  margin-inline: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .achievement .under-pv-list li,
+  .under-pv .transition .under-pv-list li,
+  .under-pv .technology .under-pv-list li,
+  .under-pv .support .under-pv-list li {
+    flex-direction: column;
+    margin-inline: auto;
+  }
+}
+.under-pv .achievement .under-pv-list li:nth-child(even),
+.under-pv .transition .under-pv-list li:nth-child(even),
+.under-pv .technology .under-pv-list li:nth-child(even),
+.under-pv .support .under-pv-list li:nth-child(even) {
+  flex-direction: row-reverse;
+  margin-inline: auto 0;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .achievement .under-pv-list li:nth-child(even),
+  .under-pv .transition .under-pv-list li:nth-child(even),
+  .under-pv .technology .under-pv-list li:nth-child(even),
+  .under-pv .support .under-pv-list li:nth-child(even) {
+    flex-direction: column;
+    margin-inline: auto;
+  }
+}
+.under-pv .achievement .under-pv-list li img,
+.under-pv .transition .under-pv-list li img,
+.under-pv .technology .under-pv-list li img,
+.under-pv .support .under-pv-list li img {
+  width: 60%;
+  max-width: 624px;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .achievement .under-pv-list li img,
+  .under-pv .transition .under-pv-list li img,
+  .under-pv .technology .under-pv-list li img,
+  .under-pv .support .under-pv-list li img {
+    width: 94%;
+  }
+}
+.under-pv .achievement .under-pv-list li .text-area,
+.under-pv .transition .under-pv-list li .text-area,
+.under-pv .technology .under-pv-list li .text-area,
+.under-pv .support .under-pv-list li .text-area {
+  width: 40%;
+  max-width: 400px;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .achievement .under-pv-list li .text-area,
+  .under-pv .transition .under-pv-list li .text-area,
+  .under-pv .technology .under-pv-list li .text-area,
+  .under-pv .support .under-pv-list li .text-area {
+    width: 94%;
+  }
+}
+.under-pv .achievement .under-pv-list li .text-area .title,
+.under-pv .transition .under-pv-list li .text-area .title,
+.under-pv .technology .under-pv-list li .text-area .title,
+.under-pv .support .under-pv-list li .text-area .title {
+  font-size: 20px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .achievement .under-pv-list li .text-area .title,
+  .under-pv .transition .under-pv-list li .text-area .title,
+  .under-pv .technology .under-pv-list li .text-area .title,
+  .under-pv .support .under-pv-list li .text-area .title {
+    font-size: 18px;
+  }
+}
+.under-pv .achievement .under-pv-list li .text-area .annotation,
+.under-pv .transition .under-pv-list li .text-area .annotation,
+.under-pv .technology .under-pv-list li .text-area .annotation,
+.under-pv .support .under-pv-list li .text-area .annotation {
+  font-size: 10px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+.under-pv .achievement .under-pv-list li .text-area p,
+.under-pv .transition .under-pv-list li .text-area p,
+.under-pv .technology .under-pv-list li .text-area p,
+.under-pv .support .under-pv-list li .text-area p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 2;
+}
+.under-pv .award .wrap {
+  padding: 0;
+}
+.under-pv .award .wrap .award-list {
+  margin-top: 100px;
+}
+.under-pv .award .wrap .award-list li {
+  margin-inline: auto;
+  margin-bottom: 90px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .award .wrap .award-list li {
+    margin-bottom: 130px;
+  }
+}
+.under-pv .award .wrap .award-list li::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+  height: 200px;
+  width: 96%;
+  max-width: 1140px;
+  background-image: url(../images/pv/under-pv/award_new_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .award .wrap .award-list li::after {
+    width: 100%;
+  }
+}
+.under-pv .award .wrap .award-list li:nth-child(even)::after {
+  left: unset;
+  right: 0;
+}
+.under-pv .award .wrap .award-list li:nth-child(even) .list-wrap {
+  flex-direction: row-reverse;
+}
+.under-pv .award .wrap .award-list li:nth-child(2)::after {
+  transform: translateY(-50%) scaleX(-1) scaleY(-1);
+}
+.under-pv .award .wrap .award-list li:nth-child(4)::after {
+  background-image: url(../images/pv/under-pv/award_old_bg.jpg);
+}
+.under-pv .award .wrap .award-list li:nth-child(5)::after {
+  background-image: url(../images/pv/under-pv/award_old_bg.jpg);
+  transform: translateY(-50%) scaleX(-1) scaleY(-1);
+}
+.under-pv .award .wrap .award-list li .list-wrap {
+  max-width: 656px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  gap: min(32px, 11vw);
+  position: relative;
+  z-index: 2;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .award .wrap .award-list li .list-wrap {
+    gap: 10px;
+    width: 94%;
+  }
+}
+.under-pv .award .wrap .award-list li img {
+  max-width: 226px;
+  width: 30%;
+  aspect-ratio: 1/1;
+  transform: translateY(-40px);
+}
+@media screen and (max-width: 768px) {
+  .under-pv .award .wrap .award-list li img {
+    transform: unset;
+  }
+}
+.under-pv .award .wrap .award-list li .text-area {
+  width: 60%;
+}
+.under-pv .award .wrap .award-list li .text-area .title {
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.5;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .award .wrap .award-list li .text-area .title {
+    font-size: 16px;
+  }
+}
+.under-pv .award .wrap .award-list li .text-area .annotation {
+  font-size: 10px;
+  text-align: center;
+}
+.under-pv .us-market .wrap .us-market-top {
+  max-width: 656px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  place-items: center;
+  gap: 32px;
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .us-market .wrap .us-market-top {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  .under-pv .us-market .wrap .us-market-top img {
+    width: 40%;
+    min-width: 150px;
+  }
+}
+.under-pv .us-market .wrap .us-market-top .text-area .title {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.under-pv .us-market .wrap .us-market-top .text-area p {
+  font-size: 10px;
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
+}
+.under-pv .us-market .wrap .us-market-list {
+  max-width: 1000px;
+  margin-inline: auto;
+}
+.under-pv .us-market .wrap .us-market-list li {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 32px;
+  border-bottom: 1px solid #CCC;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .us-market .wrap .us-market-list li {
+    flex-direction: column;
+  }
+}
+.under-pv .us-market .wrap .us-market-list li:first-child {
+  padding-top: 40px;
+  border-top: 1px solid #CCC;
+}
+.under-pv .us-market .wrap .us-market-list li:last-child {
+  border-bottom: unset;
+  margin-bottom: 60px;
+}
+.under-pv .us-market .wrap .us-market-list li .item {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .us-market .wrap .us-market-list li .item {
+    width: 100%;
+  }
+}
+.under-pv .us-market .wrap .us-market-list li .item img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  object-position: center;
+  margin-bottom: 10px;
+}
+.under-pv .us-market .wrap .us-market-list li .item .text-area {
+  text-align: center;
+}
+.under-pv .us-market .wrap .us-market-list li .item .text-area .item-title {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.under-pv .us-market .wrap .us-market-list li .item .text-area .text-blue {
+  color: #3366AA;
+}
+.under-pv .award-area {
+  background-image: url(../images/pv/under-pv/award_list_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-block: 100px;
+}
+.under-pv .award-area h2 {
+  margin-bottom: 40px;
+}
+.under-pv .award-area .award-area-wrap {
+  width: 100%;
+  max-width: 656px;
+  margin-inline: auto;
+  background: white;
+  padding: 80px 86px;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .award-area .award-area-wrap {
+    width: 94%;
+    padding: 10vw 7vw;
+  }
+}
+.under-pv .award-area .award-area-wrap .award-area-item {
+  margin-bottom: 80px;
+}
+.under-pv .award-area .award-area-wrap .award-area-item:last-child {
+  margin-bottom: 0;
+}
+.under-pv .award-area .award-area-wrap .award-area-item .year {
+  font-size: 20px;
+  color: #EE7744;
+  margin-bottom: 10px;
+}
+.under-pv .award-area .award-area-wrap .award-area-item .title {
+  font-weight: 400;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 30px;
+}
+.under-pv .award-area .award-area-wrap .award-area-item .title::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  background-image: url(../images/pv/under-pv/crown_icon.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+.under-pv .award-area .award-area-wrap .award-area-item .annotation {
+  font-size: 10px;
+  font-weight: 400;
+}/*# sourceMappingURL=under-pv.css.map */
