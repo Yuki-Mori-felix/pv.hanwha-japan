@@ -17,13 +17,24 @@ html {
   background-color: rgba(51, 102, 170, 0.08);
 }
 #content .mv-for-page .mv-img {
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: relative;
+  margin-inline: auto 0;
   height: 85%;
   width: 90%;
   background-size: cover;
   background-position: bottom center;
+}
+#content .mv-for-page .mv-img::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  max-height: 300px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  opacity: 0.5;
+  z-index: 0;
 }
 #content .mv-for-page .mv-sub-title-area {
   position: relative;
@@ -46,6 +57,11 @@ html {
   color: white;
   letter-spacing: 6px !important;
 }
+@media screen and (max-width: 768px) {
+  #content .mv-for-page .mv-sub-title-area .mv-sub-title {
+    font-size: 18px;
+  }
+}
 #content .mv-for-page .mv-text {
   position: absolute;
   bottom: 10%;
@@ -60,6 +76,11 @@ html {
   background: linear-gradient(90deg, #3366aa 0%, #000000 50%, #ee7744 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media screen and (max-width: 768px) {
+  #content .mv-for-page .mv-text h2 {
+    font-size: 32px;
+  }
 }
 #content .mv-for-page .mv-text span {
   font-size: 20px;
