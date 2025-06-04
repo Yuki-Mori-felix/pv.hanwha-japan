@@ -1293,7 +1293,8 @@ main.single-voice section.changes .common-voice-content .cvc-item .cvc-wrap .cvc
 main.single-voice section.message .common-voice-content .cvc-item .cvc-wrap .cvc-textarea > * {
   max-width: 398px;
   width: 100%;
-  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 main.single-voice section.why .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-title,
 main.single-voice section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-title,
@@ -1372,7 +1373,8 @@ main.single-voice section.changes .common-voice-content .cvc-item .cvc-note,
 main.single-voice section.message .common-voice-content .cvc-item .cvc-note {
   max-width: 1000px;
   width: calc(100% - 40px);
-  margin: 40px auto 0;
+  margin: auto;
+  margin-top: 40px;
   padding-left: 1em;
   text-indent: -1em;
   font-size: 10px;
