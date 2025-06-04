@@ -1,0 +1,253 @@
+@use "breakpoint" as *;
+
+.about {
+	.section-back {
+		position: relative;
+		z-index: 0;
+		padding-block: 90px 160px;
+		&::before {
+			content: "";
+			position: absolute;
+			z-index: -2;
+			top: 0;
+			left: 0;
+			width: 366px;
+			height: 100%;
+			background-image: url(../images/about/hanwhaJP_building_BG.jpg);
+      background-size: cover;
+      background-position: center;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			top: 72px;
+			left: -18px;
+			writing-mode: vertical-lr;
+			font-size: 120px;
+			color: white;
+			line-height: 0.8;
+			background-image: url(../images/about/Hanwha\ Japan.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 95px;
+			height: 100%;
+			@include max {
+				left: -12px;
+				width: 60px;
+			}
+		}
+
+		&:has(.hanwha) {
+			&::before {
+				background-image: url(../images/about/Hanwha_Building_BG.jpg);
+			}
+			&::after {
+				background-image: url(../images/about/Hanwha.svg);
+				height: 100%;
+				left: 0;
+			}
+		}
+
+		.section-title-area {
+			position: relative;
+			margin-bottom: 30px;
+			&::after {
+				content: "";
+				position: absolute;
+				height: 1px;
+				background: #ee7744;
+				max-width: 1140px;
+				width: 90%;
+			}
+
+			h2 {
+				font-size: 48px;
+				font-weight: bold;
+				color: #333;
+				margin-bottom: 22px;
+				.orange {
+					font-size: 32px;
+					color: #ee7744;
+				}
+			}
+		}
+
+		.wrap_s {
+			width: 94%;
+
+			.title-en {
+				font-size: 24px;
+				color: #ee7744;
+				margin-bottom: 80px;
+			}
+
+			.hanwha-japan-list {
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				gap: min(32px, 11vw);
+				margin-bottom: 80px;
+
+				li {
+					text-align: center;
+					width: 226px;
+
+					.title {
+						font-size: 20px;
+						min-height: 57px;
+						margin-bottom: 10px;
+					}
+
+					.num {
+            font-family: "Figtree";
+						font-size: 100px;
+						line-height: 1;
+						color: #ee7744;
+					}
+
+					.num-text {
+						color: #ee7744;
+					}
+				}
+			}
+
+			.hanwha-japan-text {
+				text-align: center;
+				margin-bottom: 80px;
+			}
+
+			.hanwha-japan-detail {
+				display: grid;
+				grid-template-columns: 1.2fr 1fr;
+				place-items: center;
+				gap: min(118px, 9vw);
+				@include max {
+					grid-template-columns: 1fr;
+					gap: 20px;
+				}
+
+				img {
+					object-fit: cover;
+					box-shadow: 0px 5px 40px #00000033;
+					@include max {
+						max-width: 484px;
+						width: 94%;
+						margin-inline: auto;
+					}
+				}
+
+				.text-area {
+					font-size: 14px;
+					font-weight: 400;
+					@include max {
+						max-width: 484px;
+						margin-inline: auto;
+					}
+				}
+			}
+
+			.hanwha-list {
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				gap: min(32px, 11vw);
+				margin-bottom: 80px;
+
+				li {
+					width: 312px;
+					text-align: center;
+
+					.title {
+						font-size: 20px;
+						margin-bottom: 30px;
+					}
+
+					.icon {
+						width: fit-content;
+						height: fit-content;
+						margin-bottom: 30px;
+
+						img {
+							width: 60px;
+							height: 60px;
+							object-fit: contain;
+						}
+					}
+
+					.num-text {
+						font-size: 20px;
+						line-height: 1;
+						color: #ee7744;
+						margin-bottom: 10px;
+
+						.num {
+							font-size: 60px;
+							font-family: "Figtree";
+						}
+					}
+
+					p {
+						font-size: 10px;
+					}
+				}
+			}
+		}
+	}
+
+	.button-area {
+		margin-bottom: 100px;
+
+		p {
+			font-size: 14px;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+
+		.btn {
+			display: block;
+			width: 312px;
+			text-align: center;
+			border-radius: 5;
+			margin-inline: auto;
+			background: #3366aa;
+			&:hover::after {
+				background: #3d7abb;
+			}
+		}
+	}
+
+	.parts-bottom-content {
+    .wrap_s {
+      width: 94%;
+      margin-inline: auto;
+    }
+		ul {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+			gap: 32px;
+
+      li {
+        max-width: 312px;
+        margin-inline: auto;
+        
+        img {
+          border-radius: 10px;
+          margin-bottom: 20px;
+        }
+
+        .title {
+          margin-bottom: 15px;
+          line-height: 1.5;
+        }
+
+        p {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 1.6;
+        }
+      }
+		}
+	}
+}
+/*========== END OF ABOUT ==========*/

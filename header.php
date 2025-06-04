@@ -21,6 +21,11 @@
 		<?php endif; ?>
   <?php elseif (is_page('pv')) : ?>
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/pv.css'>
+  <!-- <?php elseif (is_page('about')) : ?>
+    <link rel="stylesheet" href="<?= get_stylesheet_directory_uri() ?>/css/odometer-theme-default.css">
+    <script src="<?= get_stylesheet_directory_uri() ?>/js//odometer.min.js"></script> -->
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/about.css'>
+    <!-- <script src="<?= get_stylesheet_directory_uri() ?>/js/about.js"></script> -->
   <?php elseif (is_page('location-details') || is_page('achievement-details') || is_page('award-details') || is_page('support-details') || is_page('technology-details') || is_page('transition-details') ) : ?>
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/under-pv.css'>
   <?php elseif (is_page('product-list')) : ?>
