@@ -1,4 +1,8 @@
 /* 全ページ共通 */
+html {
+	scroll-behavior: smooth;
+}
+
 #content {
 	padding-top: 0;
 

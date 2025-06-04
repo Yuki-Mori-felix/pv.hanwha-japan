@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /* 全ページ共通 */
+html {
+  scroll-behavior: smooth;
+}
+
 #content {
   padding-top: 0;
   /* メイン画像用CSS */
