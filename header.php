@@ -21,8 +21,8 @@
 		<?php endif; ?>
   <?php elseif (is_page('pv')) : ?>
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/pv.css'>
-  <!-- <?php elseif (is_page('about')) : ?>
-    <link rel="stylesheet" href="<?= get_stylesheet_directory_uri() ?>/css/odometer-theme-default.css">
+  <?php elseif (is_page('about')) : ?>
+    <!-- <link rel="stylesheet" href="<?= get_stylesheet_directory_uri() ?>/css/odometer-theme-default.css">
     <script src="<?= get_stylesheet_directory_uri() ?>/js//odometer.min.js"></script> -->
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/about.css'>
     <!-- <script src="<?= get_stylesheet_directory_uri() ?>/js/about.js"></script> -->
