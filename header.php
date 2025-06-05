@@ -26,6 +26,10 @@
     <script src="<?= get_stylesheet_directory_uri() ?>/js//odometer.min.js"></script> -->
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/about.css'>
     <!-- <script src="<?= get_stylesheet_directory_uri() ?>/js/about.js"></script> -->
+  <?php elseif (is_page('green-energy')) : ?>
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/green-energy.css'>
+  <?php elseif (is_page('sustainability')) : ?>
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/sustainability.css'>
   <?php elseif (is_page('location-details') || is_page('achievement-details') || is_page('award-details') || is_page('support-details') || is_page('technology-details') || is_page('transition-details') ) : ?>
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/under-pv.css'>
   <?php elseif (is_page('product-list')) : ?>
