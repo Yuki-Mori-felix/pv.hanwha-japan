@@ -592,3 +592,15 @@ function ajax_filter_products()
 // AJAX アクションを追加
 add_action('wp_ajax_filter_products', 'ajax_filter_products');
 add_action('wp_ajax_nopriv_filter_products', 'ajax_filter_products');
+
+/*------------------------------------------
+	クラシックエディタ 独自ボタン追加
+------------------------------------------*/
+add_action('admin_print_footer_scripts', 'add_btn_admin_editor', 100);
+
+function add_btn_admin_editor() {	?>
+		<script type="text/javascript">
+		//QTags.addButton('ID', 'ボタンのラベル', '開始タグ', '終了タグ');
+		QTags.addButton('br', '改行', '<br>', '');
+		</script>
+<?php	}
