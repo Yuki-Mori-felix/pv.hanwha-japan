@@ -11,7 +11,7 @@ Template Post Type: voice
 	</div>
 	<!-- //breadcrumb -->
 
-	<main id="main" class="single-voice template-v2">
+	<main id="main" class="single-voice template-general">
 
 		<section class="single-voice-top-title">
 			<div class="sv-wrap">

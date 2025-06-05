@@ -788,8 +788,8 @@
 	margin: auto;
 }
 
-// テンプレート(販売店なし)
-main.single-voice {
+// テンプレート(一般)
+main.single-voice.template-general {
 	@mixin sv-img-replacement($width: 100%, $height: 100px) {
 		display: inline-block;
 		width: $width;
@@ -1739,6 +1739,6 @@ main.single-voice {
 	}
 	//section.support
 }
-//main.single-voice.template-v2
+//main.single-voice.template-general
 
 /*_____ お客様インタビュー 個別ページ _____*/

@@ -616,7 +616,7 @@
   margin: auto;
 }
 
-main.single-voice {
+main.single-voice.template-general {
   --fw-reg: 400;
   --fw-med: 500;
   --fw-bold: 700;
@@ -626,143 +626,143 @@ main.single-voice {
   --col-gray: #ccc;
   --col-black: #333;
 }
-main.single-voice p,
-main.single-voice h2,
-main.single-voice h3,
-main.single-voice h4,
-main.single-voice h5,
-main.single-voice ul {
+main.single-voice.template-general p,
+main.single-voice.template-general h2,
+main.single-voice.template-general h3,
+main.single-voice.template-general h4,
+main.single-voice.template-general h5,
+main.single-voice.template-general ul {
   margin: 0;
   padding: 0;
   font-weight: var(--fw-reg);
   color: var(--col-black);
   line-height: 1.6;
 }
-main.single-voice h2,
-main.single-voice h3,
-main.single-voice h4 {
+main.single-voice.template-general h2,
+main.single-voice.template-general h3,
+main.single-voice.template-general h4 {
   font-weight: var(--fw-bold);
 }
-main.single-voice section {
+main.single-voice.template-general section {
   max-width: 1280px;
   width: 100%;
   margin: auto;
 }
-main.single-voice .sv-wrap {
+main.single-voice.template-general .sv-wrap {
   max-width: 1000px;
   width: calc(100% - 40px);
   margin: auto;
 }
-main.single-voice .wrapper {
+main.single-voice.template-general .wrapper {
   max-width: 1000px;
   width: calc(100% - 30px);
   margin: auto;
   padding: 0;
 }
-main.single-voice .sec-ttl {
+main.single-voice.template-general .sec-ttl {
   text-align: center;
   font-size: 32px;
   font-weight: var(--fw-bold);
   line-height: 1.2;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice .sec-ttl {
+  main.single-voice.template-general .sec-ttl {
     font-size: 24px;
   }
 }
-main.single-voice .accordion .accordion-content {
+main.single-voice.template-general .accordion .accordion-content {
   display: none;
 }
-main.single-voice .accordion .accordion-content .spec03 .spec03-item {
+main.single-voice.template-general .accordion .accordion-content .spec03 .spec03-item {
   display: flex;
   align-items: center;
   column-gap: 32px;
   font-size: 12px;
   line-height: 2;
 }
-main.single-voice .accordion .accordion-content .spec03 .spec03-item + .spec03-item {
+main.single-voice.template-general .accordion .accordion-content .spec03 .spec03-item + .spec03-item {
   margin-top: 10px;
 }
-main.single-voice .accordion .accordion-content .spec03 .spec03-item .label {
+main.single-voice.template-general .accordion .accordion-content .spec03 .spec03-item .label {
   align-self: flex-start;
   font-weight: var(--fw-bold);
 }
-main.single-voice .accordion .accordion-content .spec03 .spec03-item:not(:has(.detail-label)) > * {
+main.single-voice.template-general .accordion .accordion-content .spec03 .spec03-item:not(:has(.detail-label)) > * {
   width: 50%;
 }
-main.single-voice .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) {
+main.single-voice.template-general .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) {
   display: flex;
   column-gap: 32px;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) {
+  main.single-voice.template-general .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) {
     flex-wrap: wrap;
   }
 }
-main.single-voice .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .label {
+main.single-voice.template-general .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .label {
   width: calc(50% - 102px);
 }
 @media screen and (max-width: 768px) {
-  main.single-voice .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .label {
+  main.single-voice.template-general .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .label {
     width: 100%;
   }
 }
-main.single-voice .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .detail {
+main.single-voice.template-general .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .detail {
   flex: 1;
 }
-main.single-voice .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .detail .detail-row {
+main.single-voice.template-general .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .detail .detail-row {
   display: flex;
   column-gap: 32px;
 }
-main.single-voice .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .detail .detail-row .detail-label {
+main.single-voice.template-general .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .detail .detail-row .detail-label {
   align-self: flex-start;
   width: 54px;
   font-size: 10px;
   font-weight: var(--fw-bold);
 }
 @media screen and (max-width: 768px) {
-  main.single-voice .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .detail .detail-row .detail-label {
+  main.single-voice.template-general .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .detail .detail-row .detail-label {
     flex: 1;
   }
 }
-main.single-voice .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .detail .detail-row .detail-data {
+main.single-voice.template-general .accordion .accordion-content .spec03 .spec03-item:has(.detail-label) .detail .detail-row .detail-data {
   flex: 1;
 }
-main.single-voice .accordion .accordion-content .spec03 .spec03-item:has(.data-1col) {
+main.single-voice.template-general .accordion .accordion-content .spec03 .spec03-item:has(.data-1col) {
   flex-direction: column;
 }
-main.single-voice .accordion .accordion-content .spec03 .spec03-item:has(.data-1col) .label {
+main.single-voice.template-general .accordion .accordion-content .spec03 .spec03-item:has(.data-1col) .label {
   width: 100%;
 }
-main.single-voice .accordion .accordion-content .spec03 .spec03-item:has(.data-1col) .data-1col {
+main.single-voice.template-general .accordion .accordion-content .spec03 .spec03-item:has(.data-1col) .data-1col {
   width: 100%;
 }
-main.single-voice .accordion .accordion-content .spec03 .spec03-item:has(.data-2cols) {
+main.single-voice.template-general .accordion .accordion-content .spec03 .spec03-item:has(.data-2cols) {
   flex-direction: column;
 }
-main.single-voice .accordion .accordion-content .spec03 .spec03-item:has(.data-2cols) .label {
+main.single-voice.template-general .accordion .accordion-content .spec03 .spec03-item:has(.data-2cols) .label {
   width: 100%;
 }
-main.single-voice .accordion .accordion-content .spec03 .spec03-item:has(.data-2cols) .data-2cols {
+main.single-voice.template-general .accordion .accordion-content .spec03 .spec03-item:has(.data-2cols) .data-2cols {
   display: flex;
   align-items: center;
   gap: 32px;
   width: 100%;
 }
-main.single-voice .accordion .accordion-content .spec03 .spec03-item:has(.data-2cols) .data-2cols > * {
+main.single-voice.template-general .accordion .accordion-content .spec03 .spec03-item:has(.data-2cols) .data-2cols > * {
   flex: 1;
 }
-main.single-voice .accordion .accordion-content .spec03 .spec03-item:has(.data-2cols) .data-2cols .d2-label {
+main.single-voice.template-general .accordion .accordion-content .spec03 .spec03-item:has(.data-2cols) .data-2cols .d2-label {
   align-self: flex-start;
 }
-main.single-voice .accordion .accordion-content .note {
+main.single-voice.template-general .accordion .accordion-content .note {
   margin-top: 20px;
   font-size: 10px;
 }
-main.single-voice .accordion .accordion-content .note + .note {
+main.single-voice.template-general .accordion .accordion-content .note + .note {
   margin-top: 5px;
 }
-main.single-voice .accordion .accordion-btn {
+main.single-voice.template-general .accordion .accordion-btn {
   cursor: pointer;
   position: relative;
   padding: 12px 0 11px;
@@ -771,14 +771,14 @@ main.single-voice .accordion .accordion-btn {
   font-size: 12px;
   line-height: 1;
 }
-main.single-voice .accordion .accordion-btn .icon {
+main.single-voice.template-general .accordion .accordion-btn .icon {
   position: absolute;
   right: 20px;
   top: 15px;
   width: 12px;
   height: 12px;
 }
-main.single-voice .accordion .accordion-btn .icon::before, main.single-voice .accordion .accordion-btn .icon::after {
+main.single-voice.template-general .accordion .accordion-btn .icon::before, main.single-voice.template-general .accordion .accordion-btn .icon::after {
   content: "";
   position: absolute;
   top: 6px;
@@ -787,30 +787,30 @@ main.single-voice .accordion .accordion-btn .icon::before, main.single-voice .ac
   height: 1px;
   background-color: var(--col-gray);
 }
-main.single-voice .accordion .accordion-btn .icon::after {
+main.single-voice.template-general .accordion .accordion-btn .icon::after {
   transform: rotate(90deg);
 }
-main.single-voice .accordion.open .accordion-btn .icon::after {
+main.single-voice.template-general .accordion.open .accordion-btn .icon::after {
   transform: rotate(0deg);
 }
-main.single-voice .accordion.typeB .accordion-btn {
+main.single-voice.template-general .accordion.typeB .accordion-btn {
   padding: 7px 0 6px;
 }
-main.single-voice .accordion.typeB .accordion-btn .icon {
+main.single-voice.template-general .accordion.typeB .accordion-btn .icon {
   top: 10px;
   right: 10px;
 }
-main.single-voice section.single-voice-top-title .title-ja {
+main.single-voice.template-general section.single-voice-top-title .title-ja {
   text-align: center;
   color: #333;
   font-size: 40px;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.single-voice-top-title .title-ja {
+  main.single-voice.template-general section.single-voice-top-title .title-ja {
     font-size: 32px;
   }
 }
-main.single-voice section.single-voice-top-title .title-en {
+main.single-voice.template-general section.single-voice-top-title .title-en {
   display: block;
   margin-top: 10px;
   text-align: center;
@@ -818,20 +818,20 @@ main.single-voice section.single-voice-top-title .title-en {
   font-weight: var(--fw-med);
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.single-voice-top-title .title-en {
+  main.single-voice.template-general section.single-voice-top-title .title-en {
     margin-top: 3px;
     font-size: 18px;
   }
 }
-main.single-voice section.overview {
+main.single-voice.template-general section.overview {
   padding: 80px 0;
 }
-main.single-voice section.overview .overview-ttl {
+main.single-voice.template-general section.overview .overview-ttl {
   background: transparent linear-gradient(90deg, #333333 0%, #767676 100%) 0% 0% no-repeat padding-box;
   background-size: min(1140px, 100% - 15px);
   padding: 37px 15px;
 }
-main.single-voice section.overview .overview-ttl .txt {
+main.single-voice.template-general section.overview .overview-ttl .txt {
   max-width: 1000px;
   width: calc(100% - 30px);
   margin: auto;
@@ -839,102 +839,102 @@ main.single-voice section.overview .overview-ttl .txt {
   color: #fff;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.overview .overview-ttl .txt {
+  main.single-voice.template-general section.overview .overview-ttl .txt {
     font-size: 24px;
   }
 }
-main.single-voice section.overview .sv-wrap {
+main.single-voice.template-general section.overview .sv-wrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px 11.8%;
   margin-top: 60px;
 }
-main.single-voice section.overview .sv-wrap .overview-prof {
+main.single-voice.template-general section.overview .sv-wrap .overview-prof {
   max-width: 398px;
   width: 100%;
 }
-main.single-voice section.overview .sv-wrap .overview-prof .overview-prof-img {
+main.single-voice.template-general section.overview .sv-wrap .overview-prof .overview-prof-img {
   overflow: hidden;
   width: 100%;
   aspect-ratio: 1;
   border-radius: 50%;
 }
-main.single-voice section.overview .sv-wrap .overview-prof .overview-prof-img img {
+main.single-voice.template-general section.overview .sv-wrap .overview-prof .overview-prof-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
-main.single-voice section.overview .sv-wrap .overview-prof .overview-prof-figure {
+main.single-voice.template-general section.overview .sv-wrap .overview-prof .overview-prof-figure {
   margin-top: 15px;
   text-align: center;
   font-size: 20px;
   font-weight: var(--fw-bold);
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.overview .sv-wrap .overview-prof .overview-prof-figure {
+  main.single-voice.template-general section.overview .sv-wrap .overview-prof .overview-prof-figure {
     font-size: 18px;
   }
 }
-main.single-voice section.overview .sv-wrap .overview-status {
+main.single-voice.template-general section.overview .sv-wrap .overview-status {
   flex: 1;
   min-width: 398px;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.overview .sv-wrap .overview-status {
+  main.single-voice.template-general section.overview .sv-wrap .overview-status {
     min-width: 0;
   }
 }
-main.single-voice section.overview .sv-wrap .overview-status .overview-status-head {
+main.single-voice.template-general section.overview .sv-wrap .overview-status .overview-status-head {
   display: flex;
   justify-content: left;
   align-items: center;
   gap: 20px;
   margin-bottom: 20px;
 }
-main.single-voice section.overview .sv-wrap .overview-status .overview-status-head img {
+main.single-voice.template-general section.overview .sv-wrap .overview-status .overview-status-head img {
   max-width: 65px;
   width: 100%;
 }
-main.single-voice section.overview .sv-wrap .overview-status .overview-status-head .os-ttl .os-ttl-ja {
+main.single-voice.template-general section.overview .sv-wrap .overview-status .overview-status-head .os-ttl .os-ttl-ja {
   font-size: 20px;
   line-height: 1;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.overview .sv-wrap .overview-status .overview-status-head .os-ttl .os-ttl-ja {
+  main.single-voice.template-general section.overview .sv-wrap .overview-status .overview-status-head .os-ttl .os-ttl-ja {
     font-size: 18px;
   }
 }
-main.single-voice section.overview .sv-wrap .overview-status .overview-status-head .os-ttl .os-ttl-en {
+main.single-voice.template-general section.overview .sv-wrap .overview-status .overview-status-head .os-ttl .os-ttl-en {
   margin-top: 5px;
   font-size: 12px;
   font-weight: var(--fw-reg);
   color: #999999;
   line-height: 1;
 }
-main.single-voice section.overview .sv-wrap .overview-status .overview-status-list .os-item {
+main.single-voice.template-general section.overview .sv-wrap .overview-status .overview-status-list .os-item {
   font-size: 14px;
   display: flex;
   gap: min(85px, 6vw);
   padding-block: 20px;
   border-bottom: 1px solid #ddd;
 }
-main.single-voice section.overview .sv-wrap .overview-status .overview-status-list .os-item:first-child {
+main.single-voice.template-general section.overview .sv-wrap .overview-status .overview-status-list .os-item:first-child {
   border-top: 1px solid #ddd;
 }
-main.single-voice section.overview .sv-wrap .overview-status .overview-status-list .os-item .os-label {
+main.single-voice.template-general section.overview .sv-wrap .overview-status .overview-status-list .os-item .os-label {
   width: 90px;
   font-weight: var(--fw-bold);
 }
-main.single-voice section.overview .sv-wrap .overview-status .overview-status-list .os-item .os-data {
+main.single-voice.template-general section.overview .sv-wrap .overview-status .overview-status-list .os-item .os-data {
   font-weight: var(--fw-reg);
 }
-main.single-voice .problem {
+main.single-voice.template-general .problem {
   position: relative;
   padding-block: 95px 100px;
 }
-main.single-voice .problem::before {
+main.single-voice.template-general .problem::before {
   content: "";
   position: absolute;
   top: 0;
@@ -944,19 +944,19 @@ main.single-voice .problem::before {
   background: linear-gradient(90deg, #3366aa 0%, #cccccc 50%, #ee7744 100%);
   opacity: 0.2; /* ここで背景のみ透過 */
 }
-main.single-voice .problem .sv-wrap {
+main.single-voice.template-general .problem .sv-wrap {
   position: relative;
 }
-main.single-voice .problem .sv-wrap .prob-content {
+main.single-voice.template-general .problem .sv-wrap .prob-content {
   display: flex;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice .problem .sv-wrap .prob-content {
+  main.single-voice.template-general .problem .sv-wrap .prob-content {
     flex-direction: column;
     align-items: center;
   }
 }
-main.single-voice .problem .sv-wrap .prob-content .prob-item {
+main.single-voice.template-general .problem .sv-wrap .prob-content .prob-item {
   flex: 1;
   display: grid;
   grid-template-columns: 1fr 28.9256198347%;
@@ -965,11 +965,11 @@ main.single-voice .problem .sv-wrap .prob-content .prob-item {
   column-gap: 15px;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice .problem .sv-wrap .prob-content .prob-item {
+  main.single-voice.template-general .problem .sv-wrap .prob-content .prob-item {
     width: 100%;
   }
 }
-main.single-voice .problem .sv-wrap .prob-content .prob-item .prob-ttl {
+main.single-voice.template-general .problem .sv-wrap .prob-content .prob-item .prob-ttl {
   grid-area: ttl;
   position: relative;
   padding-left: 10.3305785124%;
@@ -978,42 +978,42 @@ main.single-voice .problem .sv-wrap .prob-content .prob-item .prob-ttl {
   color: var(--prob-ttl-txt-col);
 }
 @media screen and (max-width: 768px) {
-  main.single-voice .problem .sv-wrap .prob-content .prob-item .prob-ttl {
+  main.single-voice.template-general .problem .sv-wrap .prob-content .prob-item .prob-ttl {
     font-size: 20px;
   }
 }
-main.single-voice .problem .sv-wrap .prob-content .prob-item .prob-img {
+main.single-voice.template-general .problem .sv-wrap .prob-content .prob-item .prob-img {
   grid-area: img;
   position: relative;
 }
-main.single-voice .problem .sv-wrap .prob-content .prob-item .prob-img img {
+main.single-voice.template-general .problem .sv-wrap .prob-content .prob-item .prob-img img {
   display: inline-block;
   width: 80px;
   height: 130px;
   background-color: plum;
 }
-main.single-voice .problem .sv-wrap .prob-content .prob-item .prob-list {
+main.single-voice.template-general .problem .sv-wrap .prob-content .prob-item .prob-list {
   grid-area: list;
   margin-top: -20px;
   padding: 50px 10.3305785124%;
   background-color: #fff;
   border-radius: 10px;
 }
-main.single-voice .problem .sv-wrap .prob-content .prob-item .prob-list .prob-dot {
+main.single-voice.template-general .problem .sv-wrap .prob-content .prob-item .prob-list .prob-dot {
   position: relative;
   font-weight: var(--fw-bold);
 }
-main.single-voice .problem .sv-wrap .prob-content .prob-item .prob-list .prob-dot + .prob-dot {
+main.single-voice.template-general .problem .sv-wrap .prob-content .prob-item .prob-list .prob-dot + .prob-dot {
   margin-top: 20px;
 }
-main.single-voice .problem .sv-wrap .prob-content .prob-item.customer .prob-ttl {
+main.single-voice.template-general .problem .sv-wrap .prob-content .prob-item.customer .prob-ttl {
   --prob-ttl-txt-col: #3366aa;
   padding-top: 0.5em;
 }
-main.single-voice .problem .sv-wrap .prob-content .prob-item.customer .prob-dot {
+main.single-voice.template-general .problem .sv-wrap .prob-content .prob-item.customer .prob-dot {
   padding-left: 18px;
 }
-main.single-voice .problem .sv-wrap .prob-content .prob-item.customer .prob-dot::before {
+main.single-voice.template-general .problem .sv-wrap .prob-content .prob-item.customer .prob-dot::before {
   content: "";
   display: block;
   position: absolute;
@@ -1024,13 +1024,13 @@ main.single-voice .problem .sv-wrap .prob-content .prob-item.customer .prob-dot:
   background-color: #333333;
   border-radius: 50%;
 }
-main.single-voice .problem .sv-wrap .prob-content .prob-item.solution .prob-ttl {
+main.single-voice.template-general .problem .sv-wrap .prob-content .prob-item.solution .prob-ttl {
   --prob-ttl-txt-col: #ee7744;
 }
-main.single-voice .problem .sv-wrap .prob-content .prob-item.solution .prob-dot {
+main.single-voice.template-general .problem .sv-wrap .prob-content .prob-item.solution .prob-dot {
   padding-left: 22px;
 }
-main.single-voice .problem .sv-wrap .prob-content .prob-item.solution .prob-dot::before {
+main.single-voice.template-general .problem .sv-wrap .prob-content .prob-item.solution .prob-dot::before {
   content: "";
   display: block;
   position: absolute;
@@ -1041,7 +1041,7 @@ main.single-voice .problem .sv-wrap .prob-content .prob-item.solution .prob-dot:
   background-color: #ee7744;
   border-radius: 50%;
 }
-main.single-voice .problem .sv-wrap .prob-content .prob-item.solution .prob-dot::after {
+main.single-voice.template-general .problem .sv-wrap .prob-content .prob-item.solution .prob-dot::after {
   content: "";
   display: block;
   position: absolute;
@@ -1053,17 +1053,17 @@ main.single-voice .problem .sv-wrap .prob-content .prob-item.solution .prob-dot:
   border-bottom: solid 2px #fff;
   transform: rotate(-45deg);
 }
-main.single-voice .problem .sv-wrap .prob-content .prob-arrow {
+main.single-voice.template-general .problem .sv-wrap .prob-content .prob-arrow {
   position: relative;
   width: 32px;
   padding-top: 20px;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice .problem .sv-wrap .prob-content .prob-arrow {
+  main.single-voice.template-general .problem .sv-wrap .prob-content .prob-arrow {
     padding-bottom: 20px;
   }
 }
-main.single-voice .problem .sv-wrap .prob-content .prob-arrow .prob-arrow-part {
+main.single-voice.template-general .problem .sv-wrap .prob-content .prob-arrow .prob-arrow-part {
   position: absolute;
   top: auto;
   width: 14px;
@@ -1073,43 +1073,43 @@ main.single-voice .problem .sv-wrap .prob-content .prob-arrow .prob-arrow-part {
   transform: rotate(45deg);
 }
 @media screen and (max-width: 768px) {
-  main.single-voice .problem .sv-wrap .prob-content .prob-arrow .prob-arrow-part {
+  main.single-voice.template-general .problem .sv-wrap .prob-content .prob-arrow .prob-arrow-part {
     transform: rotate(135deg);
   }
 }
-main.single-voice .problem .sv-wrap .prob-content .prob-arrow .prob-arrow-part.part-1 {
+main.single-voice.template-general .problem .sv-wrap .prob-content .prob-arrow .prob-arrow-part.part-1 {
   left: 1px;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice .problem .sv-wrap .prob-content .prob-arrow .prob-arrow-part.part-1 {
+  main.single-voice.template-general .problem .sv-wrap .prob-content .prob-arrow .prob-arrow-part.part-1 {
     top: 3px;
     left: 9px;
   }
 }
-main.single-voice .problem .sv-wrap .prob-content .prob-arrow .prob-arrow-part.part-2 {
+main.single-voice.template-general .problem .sv-wrap .prob-content .prob-arrow .prob-arrow-part.part-2 {
   left: 11px;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice .problem .sv-wrap .prob-content .prob-arrow .prob-arrow-part.part-2 {
+  main.single-voice.template-general .problem .sv-wrap .prob-content .prob-arrow .prob-arrow-part.part-2 {
     top: 13px;
     left: 9px;
   }
 }
-main.single-voice section.why,
-main.single-voice section.changes,
-main.single-voice section.message {
+main.single-voice.template-general section.why,
+main.single-voice.template-general section.changes,
+main.single-voice.template-general section.message {
   padding-block: 80px;
 }
-main.single-voice section.why .common-voice-title,
-main.single-voice section.changes .common-voice-title,
-main.single-voice section.message .common-voice-title {
+main.single-voice.template-general section.why .common-voice-title,
+main.single-voice.template-general section.changes .common-voice-title,
+main.single-voice.template-general section.message .common-voice-title {
   overflow: hidden;
   position: relative;
   padding: 12px 15px;
 }
-main.single-voice section.why .common-voice-title::before,
-main.single-voice section.changes .common-voice-title::before,
-main.single-voice section.message .common-voice-title::before {
+main.single-voice.template-general section.why .common-voice-title::before,
+main.single-voice.template-general section.changes .common-voice-title::before,
+main.single-voice.template-general section.message .common-voice-title::before {
   color: var(--sec-main-color);
   opacity: 0.05;
   position: absolute;
@@ -1119,15 +1119,15 @@ main.single-voice section.message .common-voice-title::before {
   line-height: 0.8;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.why .common-voice-title::before,
-  main.single-voice section.changes .common-voice-title::before,
-  main.single-voice section.message .common-voice-title::before {
+  main.single-voice.template-general section.why .common-voice-title::before,
+  main.single-voice.template-general section.changes .common-voice-title::before,
+  main.single-voice.template-general section.message .common-voice-title::before {
     font-size: 84px;
   }
 }
-main.single-voice section.why .common-voice-title::after,
-main.single-voice section.changes .common-voice-title::after,
-main.single-voice section.message .common-voice-title::after {
+main.single-voice.template-general section.why .common-voice-title::after,
+main.single-voice.template-general section.changes .common-voice-title::after,
+main.single-voice.template-general section.message .common-voice-title::after {
   content: "";
   display: block;
   position: absolute;
@@ -1138,9 +1138,9 @@ main.single-voice section.message .common-voice-title::after {
   height: 2px;
   background: var(--sec-main-color);
 }
-main.single-voice section.why .common-voice-title .cvt-txt,
-main.single-voice section.changes .common-voice-title .cvt-txt,
-main.single-voice section.message .common-voice-title .cvt-txt {
+main.single-voice.template-general section.why .common-voice-title .cvt-txt,
+main.single-voice.template-general section.changes .common-voice-title .cvt-txt,
+main.single-voice.template-general section.message .common-voice-title .cvt-txt {
   position: relative;
   max-width: 1000px;
   margin: auto;
@@ -1150,227 +1150,227 @@ main.single-voice section.message .common-voice-title .cvt-txt {
   letter-spacing: 2.88px !important;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.why .common-voice-title .cvt-txt,
-  main.single-voice section.changes .common-voice-title .cvt-txt,
-  main.single-voice section.message .common-voice-title .cvt-txt {
+  main.single-voice.template-general section.why .common-voice-title .cvt-txt,
+  main.single-voice.template-general section.changes .common-voice-title .cvt-txt,
+  main.single-voice.template-general section.message .common-voice-title .cvt-txt {
     font-size: 20px;
   }
 }
-main.single-voice section.why .common-voice-title .cvt-txt .cvt-bold,
-main.single-voice section.changes .common-voice-title .cvt-txt .cvt-bold,
-main.single-voice section.message .common-voice-title .cvt-txt .cvt-bold {
+main.single-voice.template-general section.why .common-voice-title .cvt-txt .cvt-bold,
+main.single-voice.template-general section.changes .common-voice-title .cvt-txt .cvt-bold,
+main.single-voice.template-general section.message .common-voice-title .cvt-txt .cvt-bold {
   font-size: 32px;
   font-weight: var(--fw-bold);
   color: var(--sec-main-color);
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.why .common-voice-title .cvt-txt .cvt-bold,
-  main.single-voice section.changes .common-voice-title .cvt-txt .cvt-bold,
-  main.single-voice section.message .common-voice-title .cvt-txt .cvt-bold {
+  main.single-voice.template-general section.why .common-voice-title .cvt-txt .cvt-bold,
+  main.single-voice.template-general section.changes .common-voice-title .cvt-txt .cvt-bold,
+  main.single-voice.template-general section.message .common-voice-title .cvt-txt .cvt-bold {
     font-size: 25px;
   }
 }
-main.single-voice section.why .common-voice-content .cvc-item,
-main.single-voice section.changes .common-voice-content .cvc-item,
-main.single-voice section.message .common-voice-content .cvc-item {
+main.single-voice.template-general section.why .common-voice-content .cvc-item,
+main.single-voice.template-general section.changes .common-voice-content .cvc-item,
+main.single-voice.template-general section.message .common-voice-content .cvc-item {
   margin-top: 60px;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.why .common-voice-content .cvc-item,
-  main.single-voice section.changes .common-voice-content .cvc-item,
-  main.single-voice section.message .common-voice-content .cvc-item {
+  main.single-voice.template-general section.why .common-voice-content .cvc-item,
+  main.single-voice.template-general section.changes .common-voice-content .cvc-item,
+  main.single-voice.template-general section.message .common-voice-content .cvc-item {
     width: calc(100% - 40px);
     margin: 60px auto 0;
   }
 }
-main.single-voice section.why .common-voice-content .cvc-item:nth-child(odd) .cvc-wrap,
-main.single-voice section.changes .common-voice-content .cvc-item:nth-child(odd) .cvc-wrap,
-main.single-voice section.message .common-voice-content .cvc-item:nth-child(odd) .cvc-wrap {
+main.single-voice.template-general section.why .common-voice-content .cvc-item:nth-child(odd) .cvc-wrap,
+main.single-voice.template-general section.changes .common-voice-content .cvc-item:nth-child(odd) .cvc-wrap,
+main.single-voice.template-general section.message .common-voice-content .cvc-item:nth-child(odd) .cvc-wrap {
   justify-content: flex-start;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.why .common-voice-content .cvc-item:nth-child(odd) .cvc-wrap,
-  main.single-voice section.changes .common-voice-content .cvc-item:nth-child(odd) .cvc-wrap,
-  main.single-voice section.message .common-voice-content .cvc-item:nth-child(odd) .cvc-wrap {
+  main.single-voice.template-general section.why .common-voice-content .cvc-item:nth-child(odd) .cvc-wrap,
+  main.single-voice.template-general section.changes .common-voice-content .cvc-item:nth-child(odd) .cvc-wrap,
+  main.single-voice.template-general section.message .common-voice-content .cvc-item:nth-child(odd) .cvc-wrap {
     flex-direction: column-reverse;
     align-items: center;
   }
 }
-main.single-voice section.why .common-voice-content .cvc-item:nth-child(odd) .cvc-textarea,
-main.single-voice section.changes .common-voice-content .cvc-item:nth-child(odd) .cvc-textarea,
-main.single-voice section.message .common-voice-content .cvc-item:nth-child(odd) .cvc-textarea {
+main.single-voice.template-general section.why .common-voice-content .cvc-item:nth-child(odd) .cvc-textarea,
+main.single-voice.template-general section.changes .common-voice-content .cvc-item:nth-child(odd) .cvc-textarea,
+main.single-voice.template-general section.message .common-voice-content .cvc-item:nth-child(odd) .cvc-textarea {
   padding: 50px 54px 50px 30px;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.why .common-voice-content .cvc-item:nth-child(odd) .cvc-textarea,
-  main.single-voice section.changes .common-voice-content .cvc-item:nth-child(odd) .cvc-textarea,
-  main.single-voice section.message .common-voice-content .cvc-item:nth-child(odd) .cvc-textarea {
+  main.single-voice.template-general section.why .common-voice-content .cvc-item:nth-child(odd) .cvc-textarea,
+  main.single-voice.template-general section.changes .common-voice-content .cvc-item:nth-child(odd) .cvc-textarea,
+  main.single-voice.template-general section.message .common-voice-content .cvc-item:nth-child(odd) .cvc-textarea {
     margin-top: -20px;
     margin-left: 0;
     margin-right: auto;
     padding: 60px 30px 50px;
   }
 }
-main.single-voice section.why .common-voice-content .cvc-item:nth-child(odd) .cvc-img-list,
-main.single-voice section.changes .common-voice-content .cvc-item:nth-child(odd) .cvc-img-list,
-main.single-voice section.message .common-voice-content .cvc-item:nth-child(odd) .cvc-img-list {
+main.single-voice.template-general section.why .common-voice-content .cvc-item:nth-child(odd) .cvc-img-list,
+main.single-voice.template-general section.changes .common-voice-content .cvc-item:nth-child(odd) .cvc-img-list,
+main.single-voice.template-general section.message .common-voice-content .cvc-item:nth-child(odd) .cvc-img-list {
   margin-left: -54px;
   margin-right: 20px;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.why .common-voice-content .cvc-item:nth-child(odd) .cvc-img-list,
-  main.single-voice section.changes .common-voice-content .cvc-item:nth-child(odd) .cvc-img-list,
-  main.single-voice section.message .common-voice-content .cvc-item:nth-child(odd) .cvc-img-list {
+  main.single-voice.template-general section.why .common-voice-content .cvc-item:nth-child(odd) .cvc-img-list,
+  main.single-voice.template-general section.changes .common-voice-content .cvc-item:nth-child(odd) .cvc-img-list,
+  main.single-voice.template-general section.message .common-voice-content .cvc-item:nth-child(odd) .cvc-img-list {
     margin-left: auto;
     margin-right: 0;
   }
 }
-main.single-voice section.why .common-voice-content .cvc-item:nth-child(even) .cvc-wrap,
-main.single-voice section.changes .common-voice-content .cvc-item:nth-child(even) .cvc-wrap,
-main.single-voice section.message .common-voice-content .cvc-item:nth-child(even) .cvc-wrap {
+main.single-voice.template-general section.why .common-voice-content .cvc-item:nth-child(even) .cvc-wrap,
+main.single-voice.template-general section.changes .common-voice-content .cvc-item:nth-child(even) .cvc-wrap,
+main.single-voice.template-general section.message .common-voice-content .cvc-item:nth-child(even) .cvc-wrap {
   justify-content: flex-end;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.why .common-voice-content .cvc-item:nth-child(even) .cvc-wrap,
-  main.single-voice section.changes .common-voice-content .cvc-item:nth-child(even) .cvc-wrap,
-  main.single-voice section.message .common-voice-content .cvc-item:nth-child(even) .cvc-wrap {
+  main.single-voice.template-general section.why .common-voice-content .cvc-item:nth-child(even) .cvc-wrap,
+  main.single-voice.template-general section.changes .common-voice-content .cvc-item:nth-child(even) .cvc-wrap,
+  main.single-voice.template-general section.message .common-voice-content .cvc-item:nth-child(even) .cvc-wrap {
     flex-direction: column;
     align-items: center;
   }
 }
-main.single-voice section.why .common-voice-content .cvc-item:nth-child(even) .cvc-img-list,
-main.single-voice section.changes .common-voice-content .cvc-item:nth-child(even) .cvc-img-list,
-main.single-voice section.message .common-voice-content .cvc-item:nth-child(even) .cvc-img-list {
+main.single-voice.template-general section.why .common-voice-content .cvc-item:nth-child(even) .cvc-img-list,
+main.single-voice.template-general section.changes .common-voice-content .cvc-item:nth-child(even) .cvc-img-list,
+main.single-voice.template-general section.message .common-voice-content .cvc-item:nth-child(even) .cvc-img-list {
   margin-right: -54px;
   margin-left: 20px;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.why .common-voice-content .cvc-item:nth-child(even) .cvc-img-list,
-  main.single-voice section.changes .common-voice-content .cvc-item:nth-child(even) .cvc-img-list,
-  main.single-voice section.message .common-voice-content .cvc-item:nth-child(even) .cvc-img-list {
+  main.single-voice.template-general section.why .common-voice-content .cvc-item:nth-child(even) .cvc-img-list,
+  main.single-voice.template-general section.changes .common-voice-content .cvc-item:nth-child(even) .cvc-img-list,
+  main.single-voice.template-general section.message .common-voice-content .cvc-item:nth-child(even) .cvc-img-list {
     margin-left: 0;
     margin-right: auto;
   }
 }
-main.single-voice section.why .common-voice-content .cvc-item:nth-child(even) .cvc-textarea,
-main.single-voice section.changes .common-voice-content .cvc-item:nth-child(even) .cvc-textarea,
-main.single-voice section.message .common-voice-content .cvc-item:nth-child(even) .cvc-textarea {
+main.single-voice.template-general section.why .common-voice-content .cvc-item:nth-child(even) .cvc-textarea,
+main.single-voice.template-general section.changes .common-voice-content .cvc-item:nth-child(even) .cvc-textarea,
+main.single-voice.template-general section.message .common-voice-content .cvc-item:nth-child(even) .cvc-textarea {
   padding: 50px 30px 50px 54px;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.why .common-voice-content .cvc-item:nth-child(even) .cvc-textarea,
-  main.single-voice section.changes .common-voice-content .cvc-item:nth-child(even) .cvc-textarea,
-  main.single-voice section.message .common-voice-content .cvc-item:nth-child(even) .cvc-textarea {
+  main.single-voice.template-general section.why .common-voice-content .cvc-item:nth-child(even) .cvc-textarea,
+  main.single-voice.template-general section.changes .common-voice-content .cvc-item:nth-child(even) .cvc-textarea,
+  main.single-voice.template-general section.message .common-voice-content .cvc-item:nth-child(even) .cvc-textarea {
     margin-top: -20px;
     margin-left: auto;
     margin-right: 0;
     padding: 60px 30px 50px;
   }
 }
-main.single-voice section.why .common-voice-content .cvc-item .cvc-wrap,
-main.single-voice section.changes .common-voice-content .cvc-item .cvc-wrap,
-main.single-voice section.message .common-voice-content .cvc-item .cvc-wrap {
+main.single-voice.template-general section.why .common-voice-content .cvc-item .cvc-wrap,
+main.single-voice.template-general section.changes .common-voice-content .cvc-item .cvc-wrap,
+main.single-voice.template-general section.message .common-voice-content .cvc-item .cvc-wrap {
   width: 100%;
   display: flex;
   align-items: flex-start;
 }
-main.single-voice section.why .common-voice-content .cvc-item .cvc-wrap .cvc-textarea,
-main.single-voice section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-textarea,
-main.single-voice section.message .common-voice-content .cvc-item .cvc-wrap .cvc-textarea {
+main.single-voice.template-general section.why .common-voice-content .cvc-item .cvc-wrap .cvc-textarea,
+main.single-voice.template-general section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-textarea,
+main.single-voice.template-general section.message .common-voice-content .cvc-item .cvc-wrap .cvc-textarea {
   width: 55.46875%;
   background-color: var(--cvc-textarea-bg-color);
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.why .common-voice-content .cvc-item .cvc-wrap .cvc-textarea,
-  main.single-voice section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-textarea,
-  main.single-voice section.message .common-voice-content .cvc-item .cvc-wrap .cvc-textarea {
+  main.single-voice.template-general section.why .common-voice-content .cvc-item .cvc-wrap .cvc-textarea,
+  main.single-voice.template-general section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-textarea,
+  main.single-voice.template-general section.message .common-voice-content .cvc-item .cvc-wrap .cvc-textarea {
     max-width: 484px;
     width: calc(100% - 40px);
   }
 }
-main.single-voice section.why .common-voice-content .cvc-item .cvc-wrap .cvc-textarea > *,
-main.single-voice section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-textarea > *,
-main.single-voice section.message .common-voice-content .cvc-item .cvc-wrap .cvc-textarea > * {
+main.single-voice.template-general section.why .common-voice-content .cvc-item .cvc-wrap .cvc-textarea > *,
+main.single-voice.template-general section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-textarea > *,
+main.single-voice.template-general section.message .common-voice-content .cvc-item .cvc-wrap .cvc-textarea > * {
   max-width: 398px;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
 }
-main.single-voice section.why .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-title,
-main.single-voice section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-title,
-main.single-voice section.message .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-title {
+main.single-voice.template-general section.why .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-title,
+main.single-voice.template-general section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-title,
+main.single-voice.template-general section.message .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-title {
   font-size: 20px;
   border-bottom: 1px solid #666;
   padding-bottom: 20px;
   margin-bottom: 30px;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.why .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-title,
-  main.single-voice section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-title,
-  main.single-voice section.message .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-title {
+  main.single-voice.template-general section.why .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-title,
+  main.single-voice.template-general section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-title,
+  main.single-voice.template-general section.message .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-title {
     font-size: 18px;
   }
 }
-main.single-voice section.why .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-text,
-main.single-voice section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-text,
-main.single-voice section.message .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-text {
+main.single-voice.template-general section.why .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-text,
+main.single-voice.template-general section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-text,
+main.single-voice.template-general section.message .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-text {
   font-size: 13px;
   font-weight: 400;
   line-height: 2;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.why .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-text,
-  main.single-voice section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-text,
-  main.single-voice section.message .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-text {
+  main.single-voice.template-general section.why .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-text,
+  main.single-voice.template-general section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-text,
+  main.single-voice.template-general section.message .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-text {
     line-height: 1.7;
   }
 }
-main.single-voice section.why .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-text .cvc-bold,
-main.single-voice section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-text .cvc-bold,
-main.single-voice section.message .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-text .cvc-bold {
+main.single-voice.template-general section.why .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-text .cvc-bold,
+main.single-voice.template-general section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-text .cvc-bold,
+main.single-voice.template-general section.message .common-voice-content .cvc-item .cvc-wrap .cvc-textarea .cvc-text .cvc-bold {
   font-weight: 600;
 }
-main.single-voice section.why .common-voice-content .cvc-item .cvc-wrap .cvc-img-list,
-main.single-voice section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-img-list,
-main.single-voice section.message .common-voice-content .cvc-item .cvc-wrap .cvc-img-list {
+main.single-voice.template-general section.why .common-voice-content .cvc-item .cvc-wrap .cvc-img-list,
+main.single-voice.template-general section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-img-list,
+main.single-voice.template-general section.message .common-voice-content .cvc-item .cvc-wrap .cvc-img-list {
   position: relative;
   max-width: 484px;
   width: calc(44.53125% + 54px);
   padding-top: 60px;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.why .common-voice-content .cvc-item .cvc-wrap .cvc-img-list,
-  main.single-voice section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-img-list,
-  main.single-voice section.message .common-voice-content .cvc-item .cvc-wrap .cvc-img-list {
+  main.single-voice.template-general section.why .common-voice-content .cvc-item .cvc-wrap .cvc-img-list,
+  main.single-voice.template-general section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-img-list,
+  main.single-voice.template-general section.message .common-voice-content .cvc-item .cvc-wrap .cvc-img-list {
     width: calc(100% - 40px);
     padding-top: 0;
   }
 }
-main.single-voice section.why .common-voice-content .cvc-item .cvc-wrap .cvc-img-list .cvc-img + .cvc-img,
-main.single-voice section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-img-list .cvc-img + .cvc-img,
-main.single-voice section.message .common-voice-content .cvc-item .cvc-wrap .cvc-img-list .cvc-img + .cvc-img {
+main.single-voice.template-general section.why .common-voice-content .cvc-item .cvc-wrap .cvc-img-list .cvc-img + .cvc-img,
+main.single-voice.template-general section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-img-list .cvc-img + .cvc-img,
+main.single-voice.template-general section.message .common-voice-content .cvc-item .cvc-wrap .cvc-img-list .cvc-img + .cvc-img {
   margin-top: 40px;
 }
-main.single-voice section.why .common-voice-content .cvc-item .cvc-wrap .cvc-img-list .cvc-img img,
-main.single-voice section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-img-list .cvc-img img,
-main.single-voice section.message .common-voice-content .cvc-item .cvc-wrap .cvc-img-list .cvc-img img {
+main.single-voice.template-general section.why .common-voice-content .cvc-item .cvc-wrap .cvc-img-list .cvc-img img,
+main.single-voice.template-general section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-img-list .cvc-img img,
+main.single-voice.template-general section.message .common-voice-content .cvc-item .cvc-wrap .cvc-img-list .cvc-img img {
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1607843137);
   width: 100%;
   height: auto;
   vertical-align: top;
 }
-main.single-voice section.why .common-voice-content .cvc-item .cvc-wrap .cvc-img-list .cvc-img .cvc-figure,
-main.single-voice section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-img-list .cvc-img .cvc-figure,
-main.single-voice section.message .common-voice-content .cvc-item .cvc-wrap .cvc-img-list .cvc-img .cvc-figure {
+main.single-voice.template-general section.why .common-voice-content .cvc-item .cvc-wrap .cvc-img-list .cvc-img .cvc-figure,
+main.single-voice.template-general section.changes .common-voice-content .cvc-item .cvc-wrap .cvc-img-list .cvc-img .cvc-figure,
+main.single-voice.template-general section.message .common-voice-content .cvc-item .cvc-wrap .cvc-img-list .cvc-img .cvc-figure {
   margin-top: 10px;
   margin-bottom: 0;
   text-align: center;
   font-size: 12px;
   font-weight: var(--fw-bold);
 }
-main.single-voice section.why .common-voice-content .cvc-item .cvc-note,
-main.single-voice section.changes .common-voice-content .cvc-item .cvc-note,
-main.single-voice section.message .common-voice-content .cvc-item .cvc-note {
+main.single-voice.template-general section.why .common-voice-content .cvc-item .cvc-note,
+main.single-voice.template-general section.changes .common-voice-content .cvc-item .cvc-note,
+main.single-voice.template-general section.message .common-voice-content .cvc-item .cvc-note {
   max-width: 1000px;
   width: calc(100% - 40px);
   margin: auto;
@@ -1382,60 +1382,60 @@ main.single-voice section.message .common-voice-content .cvc-item .cvc-note {
   line-height: 1.3;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.why .common-voice-content .cvc-item .cvc-note,
-  main.single-voice section.changes .common-voice-content .cvc-item .cvc-note,
-  main.single-voice section.message .common-voice-content .cvc-item .cvc-note {
+  main.single-voice.template-general section.why .common-voice-content .cvc-item .cvc-note,
+  main.single-voice.template-general section.changes .common-voice-content .cvc-item .cvc-note,
+  main.single-voice.template-general section.message .common-voice-content .cvc-item .cvc-note {
     width: 100%;
   }
 }
-main.single-voice section.why .common-voice-content .cvc-item .cvc-note + .cvc-note,
-main.single-voice section.changes .common-voice-content .cvc-item .cvc-note + .cvc-note,
-main.single-voice section.message .common-voice-content .cvc-item .cvc-note + .cvc-note {
+main.single-voice.template-general section.why .common-voice-content .cvc-item .cvc-note + .cvc-note,
+main.single-voice.template-general section.changes .common-voice-content .cvc-item .cvc-note + .cvc-note,
+main.single-voice.template-general section.message .common-voice-content .cvc-item .cvc-note + .cvc-note {
   margin-top: 4px;
 }
-main.single-voice section.why {
+main.single-voice.template-general section.why {
   --sec-main-color: #3366aa;
   --cvc-textarea-bg-color: #f5f5f5;
 }
-main.single-voice section.why .common-voice-title::before {
+main.single-voice.template-general section.why .common-voice-title::before {
   content: "WHY";
 }
-main.single-voice section.changes {
+main.single-voice.template-general section.changes {
   background-color: #f5f5f5;
   --sec-main-color: #ee7744;
   --cvc-textarea-bg-color: #fff;
 }
-main.single-voice section.changes .common-voice-title::before {
+main.single-voice.template-general section.changes .common-voice-title::before {
   content: "CHANGES";
 }
-main.single-voice section.message {
+main.single-voice.template-general section.message {
   --sec-main-color: #88bbbb;
   --cvc-textarea-bg-color: #f5f5f5;
 }
-main.single-voice section.message .common-voice-title::before {
+main.single-voice.template-general section.message .common-voice-title::before {
   content: "MESSAGE";
 }
-main.single-voice section.contact-us {
+main.single-voice.template-general section.contact-us {
   padding-block: 80px;
   border-block: 1px solid #cccccc;
 }
-main.single-voice section.contact-us .sv-wrap .sec-ttl {
+main.single-voice.template-general section.contact-us .sv-wrap .sec-ttl {
   text-align: center;
   font-size: 32px;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.contact-us .sv-wrap .sec-ttl {
+  main.single-voice.template-general section.contact-us .sv-wrap .sec-ttl {
     font-size: 24px;
   }
 }
-main.single-voice section.contact-us .sv-wrap .contact-links {
+main.single-voice.template-general section.contact-us .sv-wrap .contact-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 32px;
   margin-top: 40px;
 }
-main.single-voice section.contact-us .sv-wrap .contact-links .contact-link {
+main.single-voice.template-general section.contact-us .sv-wrap .contact-links .contact-link {
   max-width: 312px;
   width: 100%;
   padding: 18px;
@@ -1447,16 +1447,16 @@ main.single-voice section.contact-us .sv-wrap .contact-links .contact-link {
   color: #fff;
   line-height: 1;
 }
-main.single-voice section.contact-us .sv-wrap .contact-links .contact-link.link-1 {
+main.single-voice.template-general section.contact-us .sv-wrap .contact-links .contact-link.link-1 {
   background-color: #ee7744;
 }
-main.single-voice section.contact-us .sv-wrap .contact-links .contact-link.link-2 {
+main.single-voice.template-general section.contact-us .sv-wrap .contact-links .contact-link.link-2 {
   background-color: #3366aa;
 }
-main.single-voice section.back-to-archive {
+main.single-voice.template-general section.back-to-archive {
   padding-block: 40px;
 }
-main.single-voice section.back-to-archive .sv-wrap .to-archive-btn {
+main.single-voice.template-general section.back-to-archive .sv-wrap .to-archive-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1464,28 +1464,28 @@ main.single-voice section.back-to-archive .sv-wrap .to-archive-btn {
   width: fit-content;
   margin: auto;
 }
-main.single-voice section.back-to-archive .sv-wrap .to-archive-btn:hover {
+main.single-voice.template-general section.back-to-archive .sv-wrap .to-archive-btn:hover {
   opacity: 1;
 }
-main.single-voice section.back-to-archive .sv-wrap .to-archive-btn:hover .to-archive-txt {
+main.single-voice.template-general section.back-to-archive .sv-wrap .to-archive-btn:hover .to-archive-txt {
   color: #ee7744;
 }
-main.single-voice section.back-to-archive .sv-wrap .to-archive-btn:hover .to-archive-icon {
+main.single-voice.template-general section.back-to-archive .sv-wrap .to-archive-btn:hover .to-archive-icon {
   background-color: #ee7744;
 }
-main.single-voice section.back-to-archive .sv-wrap .to-archive-btn .to-archive-txt {
+main.single-voice.template-general section.back-to-archive .sv-wrap .to-archive-btn .to-archive-txt {
   width: fit-content;
   font-weight: var(--fw-bold);
   line-height: 1;
 }
-main.single-voice section.back-to-archive .sv-wrap .to-archive-btn .to-archive-icon {
+main.single-voice.template-general section.back-to-archive .sv-wrap .to-archive-btn .to-archive-icon {
   position: relative;
   width: 30px;
   height: 30px;
   background-color: #333333;
   border-radius: 50%;
 }
-main.single-voice section.back-to-archive .sv-wrap .to-archive-btn .to-archive-icon:before {
+main.single-voice.template-general section.back-to-archive .sv-wrap .to-archive-btn .to-archive-icon:before {
   content: "";
   display: block;
   width: 8px;
@@ -1494,11 +1494,11 @@ main.single-voice section.back-to-archive .sv-wrap .to-archive-btn .to-archive-i
   border-right: 2px solid #fff;
   transform: translate(10px, 11px) rotate(45deg);
 }
-main.single-voice section.guide {
+main.single-voice.template-general section.guide {
   padding: 80px 0;
   background-color: #f5f5f5;
 }
-main.single-voice section.guide .flow {
+main.single-voice.template-general section.guide .flow {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -1506,37 +1506,37 @@ main.single-voice section.guide .flow {
   margin-top: 80px;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.guide .flow {
+  main.single-voice.template-general section.guide .flow {
     row-gap: 20px;
     margin-top: 40px;
   }
 }
 @media screen and (max-width: 425px) {
-  main.single-voice section.guide .flow {
+  main.single-voice.template-general section.guide .flow {
     flex-direction: column;
     align-items: center;
   }
 }
-main.single-voice section.guide .flow .step {
+main.single-voice.template-general section.guide .flow .step {
   position: relative;
   width: 226px;
 }
 @media screen and (max-width: 425px) {
-  main.single-voice section.guide .flow .step {
+  main.single-voice.template-general section.guide .flow .step {
     max-width: 226px;
     width: 100%;
   }
 }
-main.single-voice section.guide .flow .step:not(:last-child) {
+main.single-voice.template-general section.guide .flow .step:not(:last-child) {
   margin-right: 32px;
 }
 @media screen and (max-width: 425px) {
-  main.single-voice section.guide .flow .step:not(:last-child) {
+  main.single-voice.template-general section.guide .flow .step:not(:last-child) {
     margin-right: 0;
     margin-bottom: 40px;
   }
 }
-main.single-voice section.guide .flow .step:not(:last-child)::before {
+main.single-voice.template-general section.guide .flow .step:not(:last-child)::before {
   content: "";
   position: absolute;
   top: 120px;
@@ -1549,7 +1549,7 @@ main.single-voice section.guide .flow .step:not(:last-child)::before {
   transform: rotate(45deg);
 }
 @media screen and (max-width: 425px) {
-  main.single-voice section.guide .flow .step:not(:last-child)::before {
+  main.single-voice.template-general section.guide .flow .step:not(:last-child)::before {
     top: auto;
     right: auto;
     bottom: -30px;
@@ -1558,104 +1558,104 @@ main.single-voice section.guide .flow .step:not(:last-child)::before {
     transform: rotate(135deg) translateX(-50%);
   }
 }
-main.single-voice section.guide .flow .step .no {
+main.single-voice.template-general section.guide .flow .step .no {
   font-size: 12px;
   font-weight: var(--fw-bold);
   color: var(--col-navy);
   line-height: 1;
 }
-main.single-voice section.guide .flow .step .step-ttl {
+main.single-voice.template-general section.guide .flow .step .step-ttl {
   margin-top: 10px;
   text-align: center;
   font-size: 20px;
   font-weight: var(--fw-bold);
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.guide .flow .step .step-ttl {
+  main.single-voice.template-general section.guide .flow .step .step-ttl {
     font-size: 16px;
   }
 }
-main.single-voice section.guide .flow .step .imgc {
+main.single-voice.template-general section.guide .flow .step .imgc {
   width: 120px;
   aspect-ratio: 1;
   margin: 20px auto 0;
 }
-main.single-voice section.guide .flow .step .accordion.typeB {
+main.single-voice.template-general section.guide .flow .step .accordion.typeB {
   margin-top: 20px;
 }
-main.single-voice section.guide .flow .step .accordion.typeB .accordion-btn .txt {
+main.single-voice.template-general section.guide .flow .step .accordion.typeB .accordion-btn .txt {
   font-weight: var(--fw-bold);
   color: #666;
 }
-main.single-voice section.guide .flow .step .accordion.typeB .accordion-content {
+main.single-voice.template-general section.guide .flow .step .accordion.typeB .accordion-content {
   padding-top: 20px;
 }
-main.single-voice section.guide .flow .step .accordion.typeB .accordion-content .txt {
+main.single-voice.template-general section.guide .flow .step .accordion.typeB .accordion-content .txt {
   font-size: 12px;
   font-weight: var(--fw-med);
   line-height: 2;
 }
-main.single-voice section.support {
+main.single-voice.template-general section.support {
   padding: 100px 0;
 }
-main.single-voice section.support .wrapper > .support_list {
+main.single-voice.template-general section.support .wrapper > .support_list {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 85px;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.support .wrapper > .support_list {
+  main.single-voice.template-general section.support .wrapper > .support_list {
     flex-direction: column;
     gap: 20px;
     margin-top: 40px;
   }
 }
-main.single-voice section.support .wrapper > .support_list .item {
+main.single-voice.template-general section.support .wrapper > .support_list .item {
   flex: 1;
   margin-left: 9%;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.support .wrapper > .support_list .item {
+  main.single-voice.template-general section.support .wrapper > .support_list .item {
     margin-left: 0;
   }
 }
-main.single-voice section.support .wrapper > .support_list .item a {
+main.single-voice.template-general section.support .wrapper > .support_list .item a {
   display: flex;
   align-items: center;
   gap: 23px;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.support .wrapper > .support_list .item a {
+  main.single-voice.template-general section.support .wrapper > .support_list .item a {
     gap: 15px;
   }
 }
-main.single-voice section.support .wrapper > .support_list .item .imgc {
+main.single-voice.template-general section.support .wrapper > .support_list .item .imgc {
   display: block;
   width: 70px;
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.support .wrapper > .support_list .item .imgc {
+  main.single-voice.template-general section.support .wrapper > .support_list .item .imgc {
     width: 40px;
   }
 }
-main.single-voice section.support .wrapper > .support_list .item .txt {
+main.single-voice.template-general section.support .wrapper > .support_list .item .txt {
   flex: 1;
   font-size: 20px;
   font-weight: var(--fw-med);
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.support .wrapper > .support_list .item .txt {
+  main.single-voice.template-general section.support .wrapper > .support_list .item .txt {
     font-size: 16px;
   }
 }
-main.single-voice section.support .wrapper > .support_list .item:hover .txt-faq {
+main.single-voice.template-general section.support .wrapper > .support_list .item:hover .txt-faq {
   color: var(--col-orange);
 }
-main.single-voice section.support .wrapper > .support_list .item:hover .txt-after {
+main.single-voice.template-general section.support .wrapper > .support_list .item:hover .txt-after {
   color: var(--col-navy);
 }
-main.single-voice section.support .wrapper > .support_list .border {
+main.single-voice.template-general section.support .wrapper > .support_list .border {
   display: block;
   width: 1px;
   height: 80px;
@@ -1663,7 +1663,7 @@ main.single-voice section.support .wrapper > .support_list .border {
   background-color: var(--col-black);
 }
 @media screen and (max-width: 768px) {
-  main.single-voice section.support .wrapper > .support_list .border {
+  main.single-voice.template-general section.support .wrapper > .support_list .border {
     display: none;
   }
 }
