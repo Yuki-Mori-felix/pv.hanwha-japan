@@ -1,0 +1,471 @@
+@charset "UTF-8";
+.sustainability {
+  /*========== END OF SOLAR PANEL ==========*/
+  /*========== END OF SOLAR BENEFIT ==========*/
+  /*========== END OF GREEN ENERGY ==========*/
+}
+.sustainability h2 {
+  font-size: 32px;
+  color: #333;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .sustainability h2 {
+    font-size: 28px;
+  }
+}
+.sustainability .btn {
+  display: block;
+  width: 312px;
+  text-align: center;
+  background: #3366aa;
+  line-height: 1;
+}
+.sustainability .btn:hover::after {
+  background: #3d7abb;
+}
+.sustainability .sustainability-top {
+  background-size: cover;
+  background-position: center;
+  padding-block: 84px 120px;
+}
+.sustainability .sustainability-top .wrap_s {
+  width: 94%;
+}
+.sustainability .sustainability-top .wrap_s h2 {
+  margin-bottom: 40px;
+}
+.sustainability .sustainability-top .wrap_s p {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.6;
+}
+@media screen and (max-width: 768px) {
+  .sustainability .sustainability-top .wrap_s p {
+    font-size: 14px;
+  }
+}
+.sustainability .our-goal {
+  padding-block: 100px;
+}
+.sustainability .our-goal .wrap_s {
+  width: 94%;
+}
+.sustainability .our-goal .wrap_s h2 {
+  margin-bottom: 60px;
+}
+.sustainability .our-goal .wrap_s h2 .sm {
+  font-size: 24px;
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .sustainability .our-goal .wrap_s h2 .sm {
+    font-size: 20px;
+  }
+}
+.sustainability .our-goal .wrap_s .our-goal-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: min(32px, 11vw);
+}
+.sustainability .our-goal .wrap_s .our-goal-list li {
+  text-align: center;
+  max-width: 312px;
+  margin-inline: auto;
+}
+.sustainability .our-goal .wrap_s .our-goal-list li .num {
+  font-family: "Figtree";
+  font-size: 32px;
+  color: #ee7744;
+  border-bottom: 1px solid #ee7744;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .sustainability .our-goal .wrap_s .our-goal-list li .num {
+    font-size: 28px;
+  }
+}
+.sustainability .our-goal .wrap_s .our-goal-list li .title {
+  font-size: 24px;
+  margin-bottom: 30px;
+  min-height: 70px;
+}
+@media screen and (max-width: 768px) {
+  .sustainability .our-goal .wrap_s .our-goal-list li .title {
+    font-size: 20px;
+  }
+}
+.sustainability .our-goal .wrap_s .our-goal-list li img {
+  width: 312px;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 50px;
+}
+.sustainability .our-goal .wrap_s .our-goal-list li .btn {
+  border-radius: 30px;
+  margin-inline: auto;
+}
+.sustainability .our-goal-bottom-text {
+  text-align: center;
+}
+.sustainability .our-goal-bottom-text .wrap_s {
+  width: 94%;
+}
+.sustainability .our-goal-bottom-text .wrap_s p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+.sustainability .our-goal-bottom-text .wrap_s h3 {
+  font-size: 32px;
+  color: #ee7744;
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 768px) {
+  .sustainability .our-goal-bottom-text .wrap_s h3 {
+    font-size: 28px;
+  }
+}
+.sustainability .section-back {
+  position: relative;
+  z-index: 0;
+  padding-block: 90px 0;
+  margin-bottom: 100px;
+}
+.sustainability .section-back::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  width: 194px;
+  height: 100%;
+  background-image: url(../images/about/hanwhaJP_building_BG.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.sustainability .section-back::after {
+  content: "GREEN ACTION";
+  position: absolute;
+  z-index: -1;
+  top: 72px;
+  left: -5px;
+  writing-mode: vertical-lr;
+  font-size: 120px;
+  color: white;
+  line-height: 0.8;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 95px;
+  height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .sustainability .section-back::after {
+    left: -12px;
+    width: 60px;
+  }
+}
+.sustainability .section-back .section-title-area {
+  position: relative;
+  margin-bottom: 95px;
+}
+.sustainability .section-back .section-title-area::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background: #ee7744;
+  max-width: 1140px;
+  width: 90%;
+}
+.sustainability .section-back .section-title-area h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: left;
+}
+.sustainability .section-back .section-title-area h2 .orange {
+  font-size: 80px;
+  font-family: "Figtree";
+  color: #ee7744;
+  margin-right: 20px;
+  line-height: 1;
+}
+.sustainability .section-back .wrap_s {
+  width: 94%;
+  margin-bottom: 120px;
+}
+@media screen and (max-width: 768px) {
+  .sustainability .section-back .wrap_s {
+    margin-bottom: 90px;
+  }
+}
+.sustainability .section-back .wrap_s:last-of-type {
+  margin-bottom: 0;
+}
+.sustainability .section-back .wrap_s .green-action-content .green-action-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: min(32px, 11vw);
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 768px) {
+  .sustainability .section-back .wrap_s .green-action-content .green-action-grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sustainability .section-back .wrap_s .green-action-content .green-action-grid .text-area {
+    max-width: 484px;
+    margin-inline: auto;
+  }
+}
+.sustainability .section-back .wrap_s .green-action-content .green-action-grid .text-area .title {
+  font-size: 20px;
+  color: #ee7744;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .sustainability .section-back .wrap_s .green-action-content .green-action-grid .text-area .title {
+    font-size: 18px;
+  }
+}
+.sustainability .section-back .wrap_s .green-action-content .green-action-grid .text-area p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 2;
+}
+.sustainability .section-back .wrap_s .green-action-content .green-action-grid .text-area p:last-of-type {
+  margin-bottom: 40px;
+}
+.sustainability .section-back .wrap_s .green-action-content .green-action-grid .text-area .annotation {
+  font-size: 10px;
+  font-weight: 400;
+}
+.sustainability .section-back .wrap_s .green-action-content .green-action-grid .text-area .btn {
+  width: 226px;
+}
+@media screen and (max-width: 768px) {
+  .sustainability .section-back .wrap_s .green-action-content .green-action-grid .text-area .btn {
+    margin-inline: auto;
+  }
+}
+.sustainability .section-back .wrap_s .green-action-content .green-action-grid img {
+  width: 398px;
+  height: 240px;
+  object-fit: contain;
+  object-position: center;
+}
+@media screen and (max-width: 768px) {
+  .sustainability .section-back .wrap_s .green-action-content .green-action-grid img {
+    max-width: 398px;
+    margin-inline: auto;
+  }
+}
+.sustainability .section-back .wrap_s .green-action-content h3 {
+  font-size: 24px;
+  color: #3366aa;
+  text-align: center;
+  border-block: 1px solid #3366aa;
+  margin-inline: auto;
+  padding-block: 10px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .sustainability .section-back .wrap_s .green-action-content h3 {
+    margin-bottom: 30px;
+  }
+}
+.sustainability .section-back .wrap_s .green-action-content .action-img {
+  max-width: 656px;
+  height: fit-content;
+  margin-inline: auto;
+  margin-bottom: 80px;
+}
+.sustainability .section-back .wrap_s .green-action-content .action-img img {
+  width: 100%;
+  height: auto;
+}
+.sustainability .section-back .wrap_s .green-action-content .action-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: min(32px, 11vw);
+  margin-bottom: 80px;
+}
+.sustainability .section-back .wrap_s .green-action-content .action-list li {
+  text-align: center;
+  max-width: 300px;
+  margin-inline: auto;
+}
+.sustainability .section-back .wrap_s .green-action-content .action-list li .num {
+  font-family: "Figtree";
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #ee7744;
+}
+.sustainability .section-back .wrap_s .green-action-content .action-list li img {
+  width: 312px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+  .sustainability .section-back .wrap_s .green-action-content .action-list li img {
+    margin-bottom: 10px;
+  }
+}
+.sustainability .section-back .wrap_s .green-action-content .action-list li .title {
+  font-size: 20px;
+}
+@media screen and (max-width: 768px) {
+  .sustainability .section-back .wrap_s .green-action-content .action-list li .title {
+    font-size: 18px;
+  }
+}
+.sustainability .section-back .wrap_s .green-action-content .action-detail-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(226px, 1fr));
+  gap: min(32px, 11vw);
+  margin-bottom: ５0px;
+}
+.sustainability .section-back .wrap_s .green-action-content .action-detail-list li {
+  max-width: 226px;
+  margin-inline: auto;
+}
+.sustainability .section-back .wrap_s .green-action-content .action-detail-list li img {
+  height: 128px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.sustainability .section-back .wrap_s .green-action-content .action-detail-list li .day {
+  font-size: 11px;
+  color: #666;
+}
+.sustainability .section-back .wrap_s .green-action-content .action-detail-list li .title {
+  font-size: 12px;
+}
+.sustainability .section-back .wrap_s .green-action-content .next-more1 {
+  padding: 0;
+}
+.sustainability .section-back .wrap_s .green-action-content .environment-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: min(32px, 11vw);
+  margin-bottom: 50px;
+}
+.sustainability .section-back .wrap_s .green-action-content .environment-list li {
+  max-width: 312px;
+  margin-inline: auto;
+  text-align: center;
+}
+.sustainability .section-back .wrap_s .green-action-content .environment-list li img {
+  width: 140px;
+  height: 100px;
+  object-fit: contain;
+  object-position: center;
+  margin-bottom: 20px;
+}
+.sustainability .section-back .wrap_s .green-action-content .environment-list li .title {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.sustainability .section-back .wrap_s .green-action-content .environment-list li p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+.sustainability .section-back .wrap_s .green-action-content .action-button-area {
+  max-width: 656px;
+  margin-inline: auto;
+  margin-top: 30px;
+  background: rgba(51, 102, 170, 0.0588235294);
+  border: 1px solid #3366aa;
+  border-radius: 10px;
+  padding-block: 40px;
+}
+.sustainability .section-back .wrap_s .green-action-content .action-button-area p {
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.8;
+}
+.sustainability .section-back .wrap_s .green-action-content .action-button-area p .orange {
+  color: #ee7744;
+}
+.sustainability .section-back .wrap_s .green-action-content .action-button-area .btn {
+  margin-inline: auto;
+}
+.sustainability .about-green-energy {
+  background-size: cover;
+  background-position: center;
+  padding-block: 80px 100px;
+  margin-bottom: 100px;
+}
+.sustainability .about-green-energy .wrap_s {
+  width: 94%;
+}
+.sustainability .about-green-energy .wrap_s h2 {
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 768px) {
+  .sustainability .about-green-energy .wrap_s h2 {
+    margin-bottom: 40px;
+  }
+}
+.sustainability .about-green-energy .wrap_s .text-area {
+  width: 50%;
+  max-width: 500px;
+  margin-inline: auto 0;
+}
+@media screen and (max-width: 768px) {
+  .sustainability .about-green-energy .wrap_s .text-area {
+    width: 100%;
+  }
+}
+.sustainability .about-green-energy .wrap_s .text-area .title {
+  margin-bottom: 40px;
+}
+.sustainability .about-green-energy .wrap_s .text-area .title .line {
+  font-size: 20px;
+  background: white;
+  padding: 4px 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.sustainability .about-green-energy .wrap_s .text-area p {
+  max-width: 398px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 2;
+}
+.sustainability .parts-bottom-content .wrap_s {
+  width: 94%;
+  margin-inline: auto;
+}
+.sustainability .parts-bottom-content ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
+}
+.sustainability .parts-bottom-content ul li {
+  max-width: 312px;
+  margin-inline: auto;
+}
+.sustainability .parts-bottom-content ul li img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.sustainability .parts-bottom-content ul li .title {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+.sustainability .parts-bottom-content ul li p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+}/*# sourceMappingURL=sustainability.css.map */
