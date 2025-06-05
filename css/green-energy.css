@@ -1,0 +1,411 @@
+.green-energy {
+  /*========== END OF SOLAR PANEL ==========*/
+  /*========== END OF SOLAR BENEFIT ==========*/
+  /*========== END OF GREEN ENERGY ==========*/
+}
+.green-energy h2 {
+  font-size: 32px;
+  color: #333;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .green-energy h2 {
+    font-size: 28px;
+  }
+}
+.green-energy .btn {
+  display: block;
+  width: 312px;
+  text-align: center;
+  border-radius: 30px;
+  margin-inline: auto;
+  background: #3366aa;
+  line-height: 1;
+}
+.green-energy .btn:hover::after {
+  background: #3d7abb;
+}
+.green-energy .about-solar-panel {
+  background-size: cover;
+  background-position: center;
+  padding-block: 80px 100px;
+}
+.green-energy .about-solar-panel .wrap_s {
+  width: 94%;
+}
+.green-energy .about-solar-panel .wrap_s h2 {
+  margin-bottom: 40px;
+}
+.green-energy .about-solar-panel .wrap_s p {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.6;
+}
+@media screen and (max-width: 768px) {
+  .green-energy .about-solar-panel .wrap_s p {
+    font-size: 14px;
+  }
+}
+.green-energy .about-solar-panel .structure {
+  background: rgba(255, 255, 255, 0.7019607843) 0% 0% no-repeat padding-box;
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+}
+.green-energy .about-solar-panel .structure .structure-wrap {
+  max-width: 828px;
+  width: 90%;
+  margin-inline: auto;
+  padding-block: 70px 80px;
+}
+.green-energy .about-solar-panel .structure .structure-wrap .title {
+  font-size: 32px;
+  color: #ee7744;
+  text-align: center;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 768px) {
+  .green-energy .about-solar-panel .structure .structure-wrap .title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+}
+.green-energy .about-solar-panel .structure .structure-wrap .structure-detail {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  gap: min(32px, 11vw);
+  place-items: center;
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 768px) {
+  .green-energy .about-solar-panel .structure .structure-wrap .structure-detail {
+    grid-template-columns: 1fr;
+    margin-bottom: 40px;
+  }
+}
+.green-energy .about-solar-panel .structure .structure-wrap .structure-detail img {
+  width: 570px;
+  height: 340px;
+  object-fit: contain;
+  object-position: center;
+}
+@media screen and (max-width: 768px) {
+  .green-energy .about-solar-panel .structure .structure-wrap .structure-detail img {
+    height: auto;
+  }
+}
+.green-energy .about-solar-panel .structure .structure-wrap .structure-detail .text-area {
+  font-size: 14px;
+  font-weight: 400;
+}
+.green-energy .about-solar-panel .structure .structure-wrap .structure-md-text {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.green-energy .about-solar-panel .structure .structure-wrap .housing-solar {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  padding-block: 40px;
+}
+.green-energy .about-solar-panel .structure .structure-wrap .housing-solar .title {
+  font-size: 24px;
+  color: #3366aa;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .green-energy .about-solar-panel .structure .structure-wrap .housing-solar .title {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}
+.green-energy .about-solar-panel .structure .structure-wrap .housing-solar .housing-solar-list {
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+  margin-inline: auto;
+}
+.green-energy .solar-benefit {
+  padding-block: 100px;
+}
+.green-energy .solar-benefit .wrap_s {
+  width: 94%;
+}
+.green-energy .solar-benefit .wrap_s h2 {
+  margin-bottom: 60px;
+}
+.green-energy .solar-benefit .wrap_s h2 .sm {
+  font-size: 24px;
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .green-energy .solar-benefit .wrap_s h2 .sm {
+    font-size: 20px;
+  }
+}
+.green-energy .solar-benefit .wrap_s .solar-benefit-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: min(32px, 11vw);
+}
+.green-energy .solar-benefit .wrap_s .solar-benefit-list li {
+  text-align: center;
+  max-width: 312px;
+  margin-inline: auto;
+}
+.green-energy .solar-benefit .wrap_s .solar-benefit-list li .num {
+  font-family: "Figtree";
+  font-size: 32px;
+  color: #ee7744;
+  border-bottom: 1px solid #ee7744;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .green-energy .solar-benefit .wrap_s .solar-benefit-list li .num {
+    font-size: 28px;
+  }
+}
+.green-energy .solar-benefit .wrap_s .solar-benefit-list li .title {
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 768px) {
+  .green-energy .solar-benefit .wrap_s .solar-benefit-list li .title {
+    font-size: 20px;
+  }
+}
+.green-energy .solar-benefit .wrap_s .solar-benefit-list li img {
+  width: 312px;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 50px;
+}
+.green-energy .section-back {
+  position: relative;
+  z-index: 0;
+  padding-block: 90px 100px;
+}
+.green-energy .section-back::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  width: 366px;
+  height: 100%;
+  background-color: rgba(238, 119, 68, 0.08);
+  background-size: cover;
+  background-position: center;
+}
+.green-energy .section-back::after {
+  content: "MERIT";
+  position: absolute;
+  z-index: -1;
+  top: 72px;
+  left: -5px;
+  writing-mode: vertical-lr;
+  font-size: 120px;
+  color: white;
+  line-height: 0.8;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 95px;
+  height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .green-energy .section-back::after {
+    left: -12px;
+    width: 60px;
+  }
+}
+.green-energy .section-back .section-title-area {
+  position: relative;
+  margin-bottom: 95px;
+}
+.green-energy .section-back .section-title-area::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background: #ee7744;
+  max-width: 1140px;
+  width: 90%;
+}
+.green-energy .section-back .section-title-area h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: left;
+}
+.green-energy .section-back .section-title-area h2 .orange {
+  font-size: 80px;
+  font-family: "Figtree";
+  color: #ee7744;
+  margin-right: 20px;
+  line-height: 1;
+}
+.green-energy .section-back .wrap_s {
+  width: 94%;
+  margin-bottom: 120px;
+}
+@media screen and (max-width: 768px) {
+  .green-energy .section-back .wrap_s {
+    margin-bottom: 90px;
+  }
+}
+.green-energy .section-back .wrap_s:last-of-type {
+  margin-bottom: 0;
+}
+.green-energy .section-back .wrap_s .merit-content .merit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: min(32px, 11vw);
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 768px) {
+  .green-energy .section-back .wrap_s .merit-content .merit-grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .green-energy .section-back .wrap_s .merit-content .merit-grid .text-area {
+    max-width: 484px;
+    margin-inline: auto;
+  }
+}
+.green-energy .section-back .wrap_s .merit-content .merit-grid .text-area .title {
+  font-size: 20px;
+  color: #ee7744;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .green-energy .section-back .wrap_s .merit-content .merit-grid .text-area .title {
+    font-size: 18px;
+  }
+}
+.green-energy .section-back .wrap_s .merit-content .merit-grid .text-area p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 2;
+}
+.green-energy .section-back .wrap_s .merit-content .merit-grid .text-area .annotation {
+  font-size: 10px;
+  font-weight: 400;
+}
+.green-energy .section-back .wrap_s .merit-content .merit-grid img {
+  height: 320px;
+  object-fit: contain;
+  object-position: center;
+}
+@media screen and (max-width: 768px) {
+  .green-energy .section-back .wrap_s .merit-content .merit-grid img {
+    max-width: 484px;
+    margin-inline: auto;
+  }
+}
+.green-energy .section-back .wrap_s .merit-content h3 {
+  font-size: 24px;
+  color: #3366aa;
+  text-align: center;
+  border-block: 1px solid #3366aa;
+  max-width: 484px;
+  margin-inline: auto;
+  padding-block: 10px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .green-energy .section-back .wrap_s .merit-content h3 {
+    margin-bottom: 30px;
+  }
+}
+.green-energy .section-back .wrap_s .merit-content .solution-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: min(32px, 11vw);
+}
+.green-energy .section-back .wrap_s .merit-content .solution-list li {
+  text-align: center;
+}
+.green-energy .section-back .wrap_s .merit-content .solution-list li img {
+  height: 180px;
+  object-fit: contain;
+  object-position: center;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .green-energy .section-back .wrap_s .merit-content .solution-list li img {
+    margin-bottom: 10px;
+  }
+}
+.green-energy .about-green-energy {
+  background-size: cover;
+  background-position: center;
+  padding-block: 80px 100px;
+  margin-bottom: 100px;
+}
+.green-energy .about-green-energy .wrap_s {
+  width: 94%;
+}
+.green-energy .about-green-energy .wrap_s h2 {
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 768px) {
+  .green-energy .about-green-energy .wrap_s h2 {
+    margin-bottom: 40px;
+  }
+}
+.green-energy .about-green-energy .wrap_s .text-area {
+  width: 50%;
+  max-width: 500px;
+  margin-inline: auto 0;
+}
+@media screen and (max-width: 768px) {
+  .green-energy .about-green-energy .wrap_s .text-area {
+    width: 100%;
+  }
+}
+.green-energy .about-green-energy .wrap_s .text-area .title {
+  margin-bottom: 40px;
+}
+.green-energy .about-green-energy .wrap_s .text-area .title .line {
+  font-size: 20px;
+  background: white;
+  padding: 4px 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.green-energy .about-green-energy .wrap_s .text-area p {
+  max-width: 398px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 2;
+}
+.green-energy .parts-bottom-content .wrap_s {
+  width: 94%;
+  margin-inline: auto;
+}
+.green-energy .parts-bottom-content ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
+}
+.green-energy .parts-bottom-content ul li {
+  max-width: 312px;
+  margin-inline: auto;
+}
+.green-energy .parts-bottom-content ul li img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.green-energy .parts-bottom-content ul li .title {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+.green-energy .parts-bottom-content ul li p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+}/*# sourceMappingURL=green-energy.css.map */
