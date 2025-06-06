@@ -7,7 +7,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
 ?>
 <!-- 製品詳細 ターム(HEMS) 一覧ページ -->
 <main class="taxonomy-product-cat hems single-products">
-  <section class="mv mv-hems">
+  <section class="mv" style="background-image: url(https://pv.hanwha-japan.com/wp-content/uploads/2025/06/Sample_HEMS_Lineup_FV_BG.jpg)">
     <div class="container">
       <div class="ttlc">
         <p class="prod-name"><?= get_field('title_main'); ?></p>

@@ -304,7 +304,9 @@ main.contact {
 
   > .mv {
     padding: 135px 0 173px;
-    background: url(../images/contact/mv-contact.png) no-repeat center bottom / cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
     > .ttl {
       text-align: center;
       font-size: 40px;
@@ -598,9 +600,6 @@ main.contact {
 // フォーム関連　共通
 
 main.contact.quotation {
-  > .mv {
-    background: url(../images/contact/mv-contact-quotation.png) no-repeat center bottom / cover;
-  }
   > .sec-form {
     > .container {
       > .links {
@@ -613,10 +612,6 @@ main.contact.quotation {
 }
 // お見積り依頼
 main.contact.catalog-dl {
-  > .mv {
-    background: url(../images/contact/mv-catalog.png) no-repeat center bottom / cover;
-  }
-  // MV
   > .download {
     padding: 76px 0 100px;
     background-color: #EE77440D;

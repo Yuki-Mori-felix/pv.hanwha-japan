@@ -293,7 +293,9 @@ main.contact .links .link .inner::before {
 }
 main.contact > .mv {
   padding: 135px 0 173px;
-  background: url(../images/contact/mv-contact.png) no-repeat center bottom/cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
 }
 main.contact > .mv > .ttl {
   text-align: center;
@@ -570,18 +572,12 @@ main.contact > .info > .container > .ctt > .detail > .txt {
   line-height: 2;
 }
 
-main.contact.quotation > .mv {
-  background: url(../images/contact/mv-contact-quotation.png) no-repeat center bottom/cover;
-}
 main.contact.quotation > .sec-form > .container > .links {
   margin-top: 80px;
   padding-top: 80px;
   border-top: 1px solid var(--col-gray);
 }
 
-main.contact.catalog-dl > .mv {
-  background: url(../images/contact/mv-catalog.png) no-repeat center bottom/cover;
-}
 main.contact.catalog-dl > .download {
   padding: 76px 0 100px;
   background-color: rgba(238, 119, 68, 0.0509803922);

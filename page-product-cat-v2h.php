@@ -7,316 +7,193 @@ $img_path = get_stylesheet_directory_uri() . "/images";
 ?>
 <!-- 製品詳細 ターム(V2H) 一覧ページ -->
 <main class="taxonomy-product-cat single-products">
-  <section class="compare" data-target="compare">
-    <div class="wrapper">
-      <h2 class="sec-ttl" id="compare">製品を比較する</h2>
-      <div class="product top">
-        <?php
-        // **指定した2つの投稿IDをデフォルトとの比較製品として設定**
-        $default_product_id = get_field('default_product'); // 任意の投稿IDを設定
-        $default_compare_id = get_field('default_compare_product'); // 任意の比較対象の投稿IDを設定
-
-        // 最新の投稿のリストを取得（セレクトボックス用）
-        $args = array(
-          'post_type'      => 'product',
-          'posts_per_page' => -1,
-          'tax_query'      => array(
-            array(
-              'taxonomy' => 'product-cat',
-              'field'    => 'slug',
-              'terms'    => array('storage-system'), // ターム値を変更可能
-            ),
-          ),
-        );
-
-        $query = new WP_Query($args);
-        $post_ids = [];
-
-        if ($query->have_posts()) {
-          while ($query->have_posts()) {
-            $query->the_post();
-            $post_ids[get_the_ID()] = get_the_title(); // 投稿IDをキーにタイトルを保存
-          }
-          wp_reset_postdata();
-        }
-
-        // **投稿IDが未設定の場合は、最新の投稿を使用**
-        if (!$default_product_id || !$default_compare_id) {
-          $latest_posts = array_keys($post_ids); // 投稿IDを取得
-
-          $default_product_id = $latest_posts[0] ?? null; // 最新の投稿
-          $default_compare_id = $latest_posts[1] ?? null; // 2番目の投稿
-        }
-
-        // 投稿IDに基づいて画像URLを取得
-        $product_image_url = esc_url(get_field('image1', $default_product_id)['url'] ?? '');
-        $compare_image_url = esc_url(get_field('image1', $default_compare_id)['url'] ?? '');
-        ?>
-
-        <!-- メインの製品 -->
-        <div class="item">
-          <div class="imgc">
-            <img id="product-image" src="<?= $product_image_url; ?>" alt="">
-          </div>
-          <div class="name">
-            <select id="product-select" class="select-product-name">
-              <?php foreach ($post_ids as $post_id => $title) : ?>
-                <option value="<?= $post_id; ?>" <?= ($post_id === $default_product_id) ? 'selected' : ''; ?>>
-                  <?= esc_html($title); ?>
-                </option>
-              <?php endforeach; ?>
-            </select>
-          </div>
-          <a id="product-more-link" href="<?= esc_url(get_permalink($default_product_id)); ?>" class="more">詳しく見る</a>
-        </div>
-
-        <!-- 比較対象の製品 -->
-        <div class="item">
-          <div class="imgc">
-            <img id="compare-product-image" src="<?= $compare_image_url; ?>" alt="">
-          </div>
-          <div class="name">
-            <select id="compare-product-select" class="select-product-name">
-              <?php foreach ($post_ids as $post_id => $title) : ?>
-                <option value="<?= $post_id; ?>" <?= ($post_id === $default_compare_id) ? 'selected' : ''; ?>>
-                  <?= esc_html($title); ?>
-                </option>
-              <?php endforeach; ?>
-            </select>
-          </div>
-          <a id="compare-product-more-link" href="<?= esc_url(get_permalink($default_compare_id)); ?>" class="more">詳しく見る</a>
-        </div>
-
-
+  <section class="mv" style="background-image: url(https://pv.hanwha-japan.com/wp-content/uploads/2025/06/Sample_HEMS_Lineup_FV_BG.jpg)">
+    <div class="container">
+      <div class="ttlc">
+        <p class="prod-name"><?= get_field('title_main'); ?></p>
+        <h2 class="ttl"><?= get_field('title_sub') ?></h2>
       </div>
-      <div class="table table-visible">
-        <div class="row row-t">
-          <div class="heading">
-            <div class="imgc">
-              <img src="<?= $img_path ?>/single-product/compare_icon_1.svg" alt="">
-            </div>
-            <p class="txt">公称最大出力<span class="sm">（+5W / -0W）</span></p>
-          </div>
-          <div class="product">
-            <div class="item">
-              <p class="data-txt" id="product-detail-1"><?= wp_kses_post(get_field('product_detail_1')); ?></p>
-            </div>
-            <div class="item">
-              <p class="data-txt" id="compare-product-detail-1"><?= wp_kses_post(get_field('product_detail_1', $default_compare_post_id)); ?></p>
-            </div>
-          </div>
-        </div>
-        <div class="row row-t">
-          <div class="heading">
-            <div class="imgc">
-              <img src="<?= $img_path ?>/single-product/compare_icon_2.svg" alt="">
-            </div>
-            <p class="txt">最大変換効率</p>
-          </div>
-          <div class="product">
-            <div class="item">
-              <p class="data-txt" id="product-detail-2"><?= wp_kses_post(get_field('product_detail_2')); ?></p>
-            </div>
-            <div class="item">
-              <p class="data-txt" id="compare-product-detail-2"><?= wp_kses_post(get_field('product_detail_2', $default_compare_post_id)); ?></p>
-            </div>
-          </div>
-        </div>
-        <div class="row row-t">
-          <div class="heading">
-            <div class="imgc">
-              <img src="<?= $img_path ?>/single-product/compare_icon_3.svg" alt="">
-            </div>
-            <p class="txt">外形寸法<span class="sm">（横×高さ×奥行）</span></p>
-          </div>
-          <div class="product">
-            <div class="item">
-              <p class="data-txt" id="product-detail-3"><?= wp_kses_post(get_field('product_detail_3')); ?></p>
-            </div>
-            <div class="item">
-              <p class="data-txt" id="compare-product-detail-3"><?= wp_kses_post(get_field('product_detail_3', $default_compare_post_id)); ?></p>
-            </div>
-          </div>
-        </div>
-        <div class="row row-t">
-          <div class="heading">
-            <div class="imgc">
-              <img src="<?= $img_path ?>/single-product/compare_icon_4.svg" alt="">
-            </div>
-            <p class="txt">保証</p>
-          </div>
-          <div class="product">
-            <div class="item">
-              <p class="data-txt" id="product-detail-15"><?= wp_kses_post(get_field('product_detail_15')); ?></p>
-            </div>
-            <div class="item">
-              <p class="data-txt" id="compare-product-detail-15"><?= wp_kses_post(get_field('product_detail_15', $default_compare_post_id)); ?></p>
-            </div>
-          </div>
-        </div>
-        <div class="row row-t">
-          <div class="heading">
-            <div class="imgc">
-              <img src="<?= $img_path ?>/single-product/compare_icon_5.svg" alt="">
-            </div>
-            <p class="txt">メーカー希望小売価格<span class="sm">（税込）</span></p>
-          </div>
-          <div class="product">
-            <div class="item">
-              <p class="data-txt" id="product-detail-14"><?= wp_kses_post(get_field('product_detail_14')); ?></p>
-            </div>
-            <div class="item">
-              <p class="data-txt" id="compare-product-detail-14"><?= wp_kses_post(get_field('product_detail_14', $default_compare_post_id)); ?></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="accordion typeA">
-        <div class="accordion-content">
-          <div class="table">
-            <div class="row row-acc">
-              <div class="heading">
-                <p class="txt-acc">公称短絡電流（Isc）</p>
-              </div>
-              <div class="product">
-                <div class="item">
-                  <p class="data-txt" id="product-detail-5"><?= wp_kses_post(get_field('product_detail_5')); ?></p>
-                </div>
-                <div class="item">
-                  <p class="data-txt" id="compare-product-detail-5"><?= wp_kses_post(get_field('product_detail_5', $default_compare_post_id)); ?></p>
-                </div>
-              </div>
-            </div>
-            <div class="row row-acc">
-              <div class="heading">
-                <p class="txt-acc">公称開放電圧（Voc）</p>
-              </div>
-              <div class="product">
-                <div class="item">
-                  <p class="data-txt" id="product-detail-6"><?= wp_kses_post(get_field('product_detail_6')); ?></p>
-                </div>
-                <div class="item">
-                  <p class="data-txt" id="compare-product-detail-6"><?= wp_kses_post(get_field('product_detail_6', $default_compare_post_id)); ?></p>
-                </div>
-              </div>
-            </div>
-            <div class="row row-acc">
-              <div class="heading">
-                <p class="txt-acc">公称最大出力動作電流（Imp）</p>
-              </div>
-              <div class="product">
-                <div class="item">
-                  <p class="data-txt" id="product-detail-7"><?= wp_kses_post(get_field('product_detail_7')); ?></p>
-                </div>
-                <div class="item">
-                  <p class="data-txt" id="compare-product-detail-7"><?= wp_kses_post(get_field('product_detail_7', $default_compare_post_id)); ?></p>
-                </div>
-              </div>
-            </div>
-            <div class="row row-acc">
-              <div class="heading">
-                <p class="txt-acc">公称最大出力動作電圧（Vmp）</p>
-              </div>
-              <div class="product">
-                <div class="item">
-                  <p class="data-txt" id="product-detail-8"><?= wp_kses_post(get_field('product_detail_8')); ?></p>
-                </div>
-                <div class="item">
-                  <p class="data-txt" id="compare-product-detail-8"><?= wp_kses_post(get_field('product_detail_8', $default_compare_post_id)); ?></p>
-                </div>
-              </div>
-            </div>
-            <div class="row row-acc">
-              <div class="heading">
-                <p class="txt-acc">質量</p>
-              </div>
-              <div class="product">
-                <div class="item">
-                  <p class="data-txt" id="product-detail-4"><?= wp_kses_post(get_field('product_detail_4')); ?></p>
-                </div>
-                <div class="item">
-                  <p class="data-txt" id="compare-product-detail-4"><?= wp_kses_post(get_field('product_detail_4', $default_compare_post_id)); ?></p>
-                </div>
-              </div>
-            </div>
-            <div class="row row-acc">
-              <div class="heading">
-                <p class="txt-acc">フレーム材料</p>
-              </div>
-              <div class="product">
-                <div class="item">
-                  <p class="data-txt" id="product-detail-9"><?= wp_kses_post(get_field('product_detail_9')); ?></p>
-                </div>
-                <div class="item">
-                  <p class="data-txt" id="compare-product-detail-9"><?= wp_kses_post(get_field('product_detail_9', $default_compare_post_id)); ?></p>
-                </div>
-              </div>
-            </div>
-            <div class="row row-acc">
-              <div class="heading">
-                <p class="txt-acc">セル</p>
-              </div>
-              <div class="product">
-                <div class="item">
-                  <p class="data-txt" id="product-detail-10"><?= wp_kses_post(get_field('product_detail_10')); ?></p>
-                </div>
-                <div class="item">
-                  <p class="data-txt" id="compare-product-detail-10"><?= wp_kses_post(get_field('product_detail_10', $default_compare_post_id)); ?></p>
-                </div>
-              </div>
-            </div>
-            <div class="row row-acc">
-              <div class="heading">
-                <p class="txt-acc">防汚テック防汚仕様</p>
-              </div>
-              <div class="product">
-                <div class="item">
-                  <p class="data-txt" id="product-detail-11"><?= wp_kses_post(get_field('product_detail_11')); ?></p>
-                </div>
-                <div class="item">
-                  <p class="data-txt" id="compare-product-detail-11"><?= wp_kses_post(get_field('product_detail_11', $default_compare_post_id)); ?></p>
-                </div>
-              </div>
-            </div>
-            <div class="row row-acc">
-              <div class="heading">
-                <p class="txt-acc">最大システム電圧（Vsys）</p>
-              </div>
-              <div class="product">
-                <div class="item">
-                  <p class="data-txt" id="product-detail-12"><?= wp_kses_post(get_field('product_detail_12')); ?></p>
-                </div>
-                <div class="item">
-                  <p class="data-txt" id="compare-product-detail-12"><?= wp_kses_post(get_field('product_detail_12', $default_compare_post_id)); ?></p>
-                </div>
-              </div>
-            </div>
-            <div class="row row-acc">
-              <div class="heading">
-                <p class="txt-acc">最大圧風荷重 / 最大表面荷重</p>
-              </div>
-              <div class="product">
-                <div class="item">
-                  <p class="data-txt" id="product-detail-13"><?= wp_kses_post(get_field('product_detail_13')); ?></p>
-                </div>
-                <div class="item">
-                  <p class="data-txt" id="compare-product-detail-13"><?= wp_kses_post(get_field('product_detail_13', $default_compare_post_id)); ?></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-btn">
-          <p class="txt">すべての仕様を比較</p>
-          <span class="icon"></span>
-        </div>
-      </div>
-      <a href="<?= the_field('compare_link'); ?>" class="banner">
-        <img src="<?= $img_path ?>/single-product/qcells_banner.png" alt="Qcells太陽光パネル製品一覧ページへ">
-      </a>
     </div>
   </section>
-  <!-- //compare -->
+  <!-- // MV -->
+  <table cellspacing="0" cellpadding="0" class="table03">
+    <tbody style="display: table-row-group;">
+      <tr>
+        <td colspan="2"></td>
+        <td>パワーユニット（本体／壁掛、据置）</td>
+        <td class="separator">プラグホルダ（操作部／壁掛、ポール）</td>
+      </tr>
+      <tr class="b-text">
+        <td colspan="2">型番</td>
+        <td>VSG3-666CN7</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="2">ケーブル</td>
+        <td>7.5m(5.1kg)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="2" rowspan="2">外形寸法<br>
+            （横幅:Ｗ×高さ:Ｈ×奥行:Ｄ）</td>
+        <td rowspan="2">W 470㎜×H 620㎜×D 200㎜（突起部除く）</td>
+        <td rowspan="2" class="separator">W 160㎜×H 355㎜×D 160㎜（突起部除く）</td>
+      </tr>
+      <tr> </tr>
+      <tr>
+        <td colspan="2" rowspan="3">重量</td>
+        <td>パワーユニット（本体／設置金具除く）：26.2kg</td>
+        <td class="separator">プラグホルダ（操作部／設置金具除く）：7.9kg</td>
+      </tr>
+      <tr>
+        <td>壁掛時合計：29.4kg</td>
+        <td class="separator">壁掛時合計：8.5kg</td>
+      </tr>
+      <tr>
+        <td>据置時合計：30.5kg</td>
+        <td class="separator">ポール時合計：12.2kg</td>
+      </tr>
+      <tr>
+        <td rowspan="4">充電部<br>
+            （系統連系時）</td>
+        <td>電気方式</td>
+        <td colspan="2">単相2線式（接続は単相3線式）</td>
+      </tr>
+      <tr>
+        <td>定格電圧</td>
+        <td colspan="2">AC202V ± 12V</td>
+      </tr>
+      <tr>
+        <td>定格周波数</td>
+        <td colspan="2">50または60Hz</td>
+      </tr>
+      <tr>
+        <td>出力電力<sup>※1</sup></td>
+        <td colspan="2">6kW未満</td>
+      </tr>
+      <tr>
+        <td rowspan="4">放電部<br>
+            家庭への放電<br>
+            （系統連系時）</td>
+        <td>電気方式</td>
+        <td colspan="2">単相2線式（接続は単相3線式）</td>
+      </tr>
+      <tr>
+        <td>定格電圧</td>
+        <td colspan="2">AC202V ± 12V</td>
+      </tr>
+      <tr>
+        <td>定格周波数</td>
+        <td colspan="2">50または60Hz</td>
+      </tr>
+      <tr>
+        <td>AC出力電力<sup>※2</sup></td>
+        <td colspan="2">6kW未満</td>
+      </tr>
+      <tr>
+        <td rowspan="4">放電部<br>
+            家庭への放電<br>
+            （自立出力時）</td>
+        <td>電気方式</td>
+        <td colspan="2">単相3線式</td>
+      </tr>
+      <tr>
+        <td>定格電圧</td>
+        <td colspan="2">AC202V　/　AC101V</td>
+      </tr>
+      <tr>
+        <td>定格周波数</td>
+        <td colspan="2">50または60Hz</td>
+      </tr>
+      <tr>
+        <td>AC出力電力<sup>※2</sup></td>
+        <td colspan="2">6kVA未満(片相3kVA未満)</td>
+      </tr>
+      <tr>
+        <td rowspan="2">変換効率<br>
+            （系統連系時）</td>
+        <td rowspan="2">EV<br>
+            （放電時）<sup>※3</sup><sup>※4</sup></td>
+        <td colspan="2" rowspan="2">94％<br>
+            （定格出力時）</td>
+      </tr>
+      <tr> </tr>
+      <tr>
+        <td colspan="2">待機電力</td>
+        <td colspan="2">15W以下</td>
+      </tr>
+      <tr>
+        <td colspan="2">EV側電圧範囲</td>
+        <td colspan="2">DC150V～DC450V</td>
+      </tr>
+      <tr>
+        <td colspan="2">不要輻射<sup>※5</sup></td>
+        <td colspan="2">VCCI Class B準拠</td>
+      </tr>
+      <tr>
+        <td colspan="2">IP等級</td>
+        <td colspan="2">IP55相当</td>
+      </tr>
+      <tr>
+        <td rowspan="4">設置環境</td>
+        <td>設置条件</td>
+        <td colspan="2">屋外、標高2000m以下/-20℃～+50℃</td>
+      </tr>
+      <tr>
+        <td>塩害地設置</td>
+        <td colspan="2">〇</td>
+      </tr>
+      <tr>
+        <td>重塩害地対応<sup>※6</sup></td>
+        <td colspan="2">オプション</td>
+      </tr>
+      <tr>
+        <td>動作温度<sup>※7</sup></td>
+        <td colspan="2">-20℃～+50℃</td>
+      </tr>
+      <tr>
+        <td colspan="2">周囲湿度</td>
+        <td colspan="2">30%～90%(結露なきこと)</td>
+      </tr>
+      <tr>
+        <td colspan="2">冷却方式</td>
+        <td colspan="2">自然空冷</td>
+      </tr>
+      <tr>
+        <td colspan="2">運転時騒音<sup>※8</sup></td>
+        <td colspan="2">40dB-A以下</td>
+      </tr>
+      <tr>
+        <td colspan="2">操作<sup>※9</sup></td>
+        <td colspan="2">本体ボタン/スマートフォンアプリ/室内リモコン(オプション品)</td>
+      </tr>
+      <tr>
+        <td colspan="2">保証期間<sup>※10</sup></td>
+        <td colspan="2">10年</td>
+      </tr>
+      <tr>
+        <td colspan="2">希望小売価格（税込価格）<sup>※11</sup></td>
+        <td colspan="2">¥1,408,000</td>
+      </tr>
+    </tbody>
+    <tfoot style="display: table-footer-group;">
+      <tr>
+        <td colspan="4">
+          ※1機器の入力値であり、実際の充電出力を保証している数値ではありません。契約電力や家庭での使用状況および車両の充電率によって異なります。<br>
+          ※2 車両の状況により電力が低下する場合があります。<br>
+          ※3 電気自動車損失除く。<br>
+          ※4 家庭の消費が1kW未満の場合、変換効率が低下します。<br>
+          ※5 受信障害となる場合がありますので、ラジオ、テレビ、アマチュア無線等の電波を利用する機器はパワーユニット（本体）から3m以上離して設置してください。<br>
+          ※6 希望小売価格1,408,000円（税込）<br>
+          ※7 直射日光が当たる場合等の高温時、充放電電力量が抑制されることがあります。<br>
+          ※8 JIS C1509-1で規定するA特性サウンドレベルを示します。製品正面中央から1m、高さ1mの距離での測定値です。<br>
+          ※9 スマートフォンアプリは室内でのみご使用可能です。<br>
+          ※10「 事前確認書」「設置完了報告書」が提出された場合の期間です。<br>
+          ※11 自動切替開閉器を含みます。
+        </td>
+      </tr>
+    </tfoot>
+  </table>
   <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/single-product.css'>
   <script src="<?= get_stylesheet_directory_uri() ?>/js/compare-page-product.js"></script>
 </main>

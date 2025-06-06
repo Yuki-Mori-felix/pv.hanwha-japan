@@ -1,9 +1,8 @@
 "use strict";
 
 window.addEventListener("DOMContentLoaded", function() {
-
-  // =====================
-  //  関数
+	// =====================
+  //  ラインナップのselect
   // =====================
   window.selectChoice = function() {
 		// すでにカスタムセレクトボックスがある場合、処理を実行しない
@@ -99,4 +98,44 @@ window.addEventListener("DOMContentLoaded", function() {
 	};
 
   selectChoice();
+
+	// =====================
+  //  関数呼び出し
+  // =====================
+	bracket();
+
+	// =====================
+  //  関数
+  // =====================
+
+	// 架台・設置金具
+	function bracket() {
+		const bracketElem = document.querySelector("main.bracket");
+
+		if (!bracketElem) return;
+
+		modal();
+
+		// 一般架台・設置金具 モーダルの開閉
+    function modal() {
+      const modalBlocks = document.querySelectorAll(".modal-block");
+
+			modalBlocks.forEach(function (block) {
+				const openBtn = block.querySelector(".modal-open");
+				const modal = block.querySelector(".modal");
+
+				openBtn.addEventListener("click", function () {
+					modal.classList.add("is-active");
+				});
+
+				const closeBtns = modal.querySelectorAll(".modal-close");
+				closeBtns.forEach(function (closeBtn) {
+					closeBtn.addEventListener("click", function (e) {
+						e.preventDefault();
+						modal.classList.remove("is-active");
+					});
+				});
+			});
+    }
+	}
 });

@@ -7,7 +7,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
 ?>
 <!-- 製品詳細 ターム(蓄電システム) 一覧ページ -->
 <main class="taxonomy-product-cat storage-system single-products">
-  <section class="mv mv-storage-system">
+  <section class="mv" style="background-image: url(https://pv.hanwha-japan.com/wp-content/uploads/2025/06/Sample_PCS_Lineup_FV_BG.jpg)">
     <div class="container">
       <div class="ttlc">
         <p class="prod-name"><?= get_field('title_main'); ?></p>
