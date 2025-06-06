@@ -621,3 +621,21 @@ function my_remove_admin_bar() {
 			show_admin_bar(false);
 	}
 }
+
+/*------------------------------------------
+	管理画面 固定ページ デフォルトのエディタ非表示
+------------------------------------------*/
+function hide_editor_for_specific_pages() {
+    global $pagenow, $post;
+    
+    // 管理画面の投稿編集ページのみ適用
+    if ($pagenow !== 'post.php' || !isset($post)) {
+        return;
+    }
+
+    // 固定ページの場合（投稿タイプ 'page' のみ適用）
+    if ($post->post_type === 'page') {
+        remove_post_type_support('page', 'editor');
+    }
+}
+add_action('admin_head', 'hide_editor_for_specific_pages');
