@@ -604,3 +604,20 @@ function add_btn_admin_editor() {	?>
 		QTags.addButton('br', '改行', '<br>', '');
 		</script>
 <?php	}
+
+/*------------------------------------------
+	デバッグ用
+------------------------------------------*/
+function my_output_log($data){
+	$file_path =  __DIR__ ."/my-log.txt";
+	file_put_contents($file_path, print_r($data, true));
+}
+
+add_action('after_setup_theme', 'my_remove_admin_bar');
+
+function my_remove_admin_bar() {
+	$user_name = wp_get_current_user()->user_login;
+	if ($user_name === 'dev' && !is_admin()) {
+			show_admin_bar(false);
+	}
+}
