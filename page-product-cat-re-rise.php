@@ -7,7 +7,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
 ?>
 <!-- 製品詳細 ターム(Re.RISE) 一覧ページ -->
 <main class="taxonomy-product-cat re-rise single-products rerise">
-  <section class="mv mv-re-rise">
+  <section class="mv" style="background-image: url(https://pv.hanwha-japan.com/wp-content/uploads/2025/06/Sample_PCS_Lineup_FV_BG.jpg)">
     <div class="container">
       <div class="ttlc">
         <p class="prod-name"><?= get_field('title_main'); ?></p>
