@@ -7,7 +7,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
 ?>
 <!-- 製品詳細 ターム(架台・設置金具) 一覧ページ -->
 <main class="taxonomy-product-cat bracket single-products">
-  <section class="mv" style="background-image: url(https://pv.hanwha-japan.com/wp-content/uploads/2025/06/Sample_PCS_Lineup_FV_BG.jpg)">
+  <section class="mv" style="background-image: url(<?= get_field('fv_page_img'); ?>)">
     <div class="container">
       <div class="ttlc">
         <p class="prod-name"><?= get_field('title_main'); ?></p>
@@ -29,9 +29,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
     <div class="container">
       <div class="img intro-bracket"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/img_Q-ROBUST_02.png" alt=""></div>
       <div class="ctt">
-        <p class="txt">
-          優秀な強度で、<br>多様な屋根材に太陽電池モジュールを設置できます。
-        </p>
+        <p class="txt"><?= get_field('description'); ?></p>
       </div>
     </div>
   </section>
@@ -412,7 +410,5 @@ $img_path = get_stylesheet_directory_uri() . "/images";
     </div>
   </section>
   <!-- // WALL_SURFACE -->
-  <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/single-product.css'>
-  <script src="<?= get_stylesheet_directory_uri() ?>/js/compare-page-product.js"></script>
 </main>
 <?= get_footer(); ?>

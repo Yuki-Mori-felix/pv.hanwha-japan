@@ -7,7 +7,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
 ?>
 <!-- 製品詳細 ターム(蓄電システム) 一覧ページ -->
 <main class="taxonomy-product-cat storage-system single-products">
-  <section class="mv" style="background-image: url(https://pv.hanwha-japan.com/wp-content/uploads/2025/06/Sample_PCS_Lineup_FV_BG.jpg)">
+  <section class="mv" style="background-image: url(<?= get_field('fv_page_img'); ?>)">
     <div class="container">
       <div class="ttlc">
         <p class="prod-name"><?= get_field('title_main'); ?></p>
@@ -29,7 +29,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
     <div class="container">
       <h2 class="ttl">ラインナップ</h2>
       <?php
-      $term_slug = 're-rise'; // このページで表示させたいターム値
+      $term_slug = 'storage-system'; // このページで表示させたいターム値
 
       $filter1_choices = [];
       $filter2_choices = [];
@@ -428,13 +428,9 @@ $img_path = get_stylesheet_directory_uri() . "/images";
           <span class="icon"></span>
         </div>
       </div>
-      <a href="<?= the_field('compare_link'); ?>" class="banner">
-        <img src="<?= $img_path ?>/single-product/qcells_banner.png" alt="Qcells太陽光パネル製品一覧ページへ">
-      </a>
+      <a href="<?= home_url(); ?>/product-list/" class="btn">製品・システム 一覧</a>
     </div>
   </section>
   <!-- //compare -->
-  <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/single-product.css'>
-  <script src="<?= get_stylesheet_directory_uri() ?>/js/compare-page-product.js"></script>
 </main>
 <?= get_footer(); ?>

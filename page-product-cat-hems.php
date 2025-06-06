@@ -7,7 +7,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
 ?>
 <!-- 製品詳細 ターム(HEMS) 一覧ページ -->
 <main class="taxonomy-product-cat hems single-products">
-  <section class="mv" style="background-image: url(https://pv.hanwha-japan.com/wp-content/uploads/2025/06/Sample_HEMS_Lineup_FV_BG.jpg)">
+  <section class="mv" style="background-image: url(<?= get_field('fv_page_img'); ?>)">
     <div class="container">
       <div class="ttlc">
         <p class="prod-name"><?= get_field('title_main'); ?></p>
@@ -70,7 +70,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
             array(
               'taxonomy' => 'product-cat',
               'field'    => 'slug',
-              'terms'    => array('storage-system'), // ターム値を変更可能
+              'terms'    => array('hems'), // ターム値を変更可能
             ),
           ),
         );
@@ -357,13 +357,9 @@ $img_path = get_stylesheet_directory_uri() . "/images";
           <span class="icon"></span>
         </div>
       </div>
-      <a href="<?= the_field('compare_link'); ?>" class="banner">
-        <img src="<?= $img_path ?>/single-product/qcells_banner.png" alt="Qcells太陽光パネル製品一覧ページへ">
-      </a>
+      <a href="<?= home_url(); ?>/product-list/" class="btn">製品・システム 一覧</a>
     </div>
   </section>
   <!-- //compare -->
-  <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/single-product.css'>
-  <script src="<?= get_stylesheet_directory_uri() ?>/js/compare-page-product.js"></script>
 </main>
 <?= get_footer(); ?>

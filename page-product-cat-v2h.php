@@ -7,7 +7,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
 ?>
 <!-- 製品詳細 ターム(V2H) 一覧ページ -->
 <main class="taxonomy-product-cat single-products">
-  <section class="mv" style="background-image: url(https://pv.hanwha-japan.com/wp-content/uploads/2025/06/Sample_HEMS_Lineup_FV_BG.jpg)">
+  <section class="mv" style="background-image: url(<?= get_field('fv_page_img'); ?>)">
     <div class="container">
       <div class="ttlc">
         <p class="prod-name"><?= get_field('title_main'); ?></p>
@@ -194,7 +194,5 @@ $img_path = get_stylesheet_directory_uri() . "/images";
       </tr>
     </tfoot>
   </table>
-  <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/single-product.css'>
-  <script src="<?= get_stylesheet_directory_uri() ?>/js/compare-page-product.js"></script>
 </main>
 <?= get_footer(); ?>
