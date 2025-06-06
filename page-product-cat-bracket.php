@@ -34,7 +34,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
     </div>
   </section>
   <!-- // INTRO -->
-  <section class="bracket-menu">
+  <!-- <section class="bracket-menu">
     <div class="container">
       <ul class="menu-list">
         <li class="menu-item"><a href="#general" class="menu-btn">一般架台・設置金具</a></li>
@@ -48,9 +48,10 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         </li>
       </ul>
     </div>
-  </section>
+  </section> -->
+  <?= get_field('content_1', false, false) ?>
   <!-- // BRACKET_MENU -->
-  <section class="general" id="general">
+  <!-- <section class="general" id="general">
     <div class="container">
       <h2 class="sec-ttl">一般架台・設置金具</h2>
       <div class="table">
@@ -287,9 +288,10 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
+  <?= get_field('content_2', false, false) ?>
   <!-- // GENERAL -->
-  <section class="qrobust" id="qrobust">
+  <!-- <section class="qrobust" id="qrobust">
     <h3 class="sub-ttl">積雪地域対応</h3>
     <h2 class="sec-ttl">Q.ROBUST®シリーズ</h2>
     <div class="mv">
@@ -341,9 +343,10 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
+  <?= get_field('content_3', false, false) ?>
   <!-- // QROBUST -->
-  <section class="wall-surface" id="wall-surface">
+  <!-- <section class="wall-surface" id="wall-surface">
     <div class="container">
       <h3 class="sub-ttl">豪雪地帯も安心</h3>
       <h2 class="sec-ttl">壁面設置架台</h2>
@@ -408,7 +411,8 @@ $img_path = get_stylesheet_directory_uri() . "/images";
       </div>
       <a href="<?= home_url(); ?>/product-list/" class="btn">製品・システム 一覧</a>
     </div>
-  </section>
+  </section> -->
+  <?= get_field('content_4', false, false) ?>
   <!-- // WALL_SURFACE -->
 </main>
 <?= get_footer(); ?>
