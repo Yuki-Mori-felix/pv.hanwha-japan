@@ -162,7 +162,7 @@
   font-family: "Figtree", "Noto Sans JP", sans-serif !important;
   font-style: bold;
   font-size: 20px;
-  color: #3366AA;
+  color: #3366aa;
   letter-spacing: 40px;
   line-height: 0.6;
 }
@@ -171,7 +171,7 @@
   font-family: "Figtree", "Noto Sans JP", sans-serif !important;
   font-style: bold;
   font-size: 48px;
-  color: #3366AA;
+  color: #3366aa;
   letter-spacing: 40px;
   line-height: 1.5;
 }
@@ -289,11 +289,19 @@ p {
   line-height: 2.4;
 }
 
-li, ul, ol {
+li,
+ul,
+ol {
   list-style: none;
 }
 
-h2, h3, h4, h5, p, li, ul {
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+ul {
   font-family: "Noto Sans JP", sans-serif !important;
 }
 
@@ -301,7 +309,7 @@ h3.section-title {
   font-size: clamp(1.75rem, 1.7117rem + 0.1361vw, 1.875rem) !important;
   padding: 50px 0pc 0px 0px;
   letter-spacing: 1.28px;
-  color: #3366AA;
+  color: #3366aa;
   opacity: 1;
   line-height: 48px;
 }
@@ -349,12 +357,6 @@ a:hover {
 }
 
 /*nav*/
-a.mega-menu-link {
-  font-size: clamp(1rem, 0.9617rem + 0.1361vw, 1.125rem) !important;
-  font-weight: bold;
-  padding: 0px 30px !important;
-}
-
 .mv-btn {
   background: #f3f3f3;
   color: #ff701e;
@@ -397,7 +399,7 @@ h2.head-border.text-line-right {
 ._link_bt1 a {
   font-size: clamp(1rem, 0.9617rem + 0.1361vw, 1.125rem);
   font-weight: bold;
-  background: #3366AA;
+  background: #3366aa;
   text-align: center;
   color: #ffffff;
   border-radius: 30px;
@@ -427,7 +429,7 @@ h2.head-border.text-line-right {
 }
 
 .slide_right_border_002 {
-  border-right: 5px solid #3366AA !important;
+  border-right: 5px solid #3366aa !important;
 }
 
 .slide_right_border_003 {
@@ -479,7 +481,7 @@ h2.head-border.text-line-right {
 
 /*カタログ請求*/
 .c-btn2 {
-  background: #3366AA;
+  background: #3366aa;
   border-right: 10px solid #ff701e;
   border-radius: 0px;
   color: #ffffff;
@@ -493,14 +495,14 @@ h2.head-border.text-line-right {
 .c-btn2.slide {
   box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.4);
   background: #ffffff;
-  color: #3366AA;
+  color: #3366aa;
   overflow: hidden;
   /*position: relative;*/
   z-index: 1;
 }
 
 .c-btn2.slide::after {
-  background: #3366AA;
+  background: #3366aa;
   position: absolute;
   top: 0;
   left: 0;
@@ -619,27 +621,27 @@ h2.head-border.text-line-right {
 
 /* selected link */
 ._mv_link_bt a:active {
-  color: #3366AA;
+  color: #3366aa;
 }
 
 /*popular_products_category*/
 .popular_products_category a:link {
-  color: #3366AA;
+  color: #3366aa;
 }
 
 /* visited link */
 .popular_products_category a:visited {
-  color: #3366AA;
+  color: #3366aa;
 }
 
 /* mouse over link */
 .popular_products_category a:hover {
-  color: #3366AA;
+  color: #3366aa;
 }
 
 /* selected link */
 .popular_products_category a:active {
-  color: #3366AA;
+  color: #3366aa;
 }
 
 /*page*/

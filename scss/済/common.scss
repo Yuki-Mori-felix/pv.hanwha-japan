@@ -2,12 +2,12 @@
 $black: #000000;
 $white: #ffffff;
 $red: red;
-$blue: #3366AA;
-$Silver_Grey:#999999;
-$sumi:#333333;
-$gray:#666666;
-$orange:#ee7744;
-$gray02:#777777;
+$blue: #3366aa;
+$Silver_Grey: #999999;
+$sumi: #333333;
+$gray: #666666;
+$orange: #ee7744;
+$gray02: #777777;
 
 /*line-height*/
 $lh-1: 1;
@@ -19,7 +19,7 @@ $lh-6: 0.5;
 $lh-7: 0.6;
 $lh-8: 0.57;
 $lh-9: 0.68;
-$lh-10: 0.70;
+$lh-10: 0.7;
 $lh-11: 0.71;
 $lh-12: 0.76;
 $lh-13: 0.8;
@@ -55,644 +55,625 @@ $ls-5: 80px;
 /*-------------------------------------------*/
 
 .font-styles-001 {
-    font-family: $font-primary1;
-    font-style: normal; 
-    font-size: $fs-xs;
-    color: $Silver_Grey;
-    letter-spacing: $ls-1;
-    line-height: $lh-4;
+	font-family: $font-primary1;
+	font-style: normal;
+	font-size: $fs-xs;
+	color: $Silver_Grey;
+	letter-spacing: $ls-1;
+	line-height: $lh-4;
 }
 
 .font-styles-002 {
-    font-family: $font-primary1;
-    font-style: normal; 
-    font-size: $fs-xxl;
-    color: $sumi;
-    letter-spacing: $ls-1;
-    line-height: $lh-2;
+	font-family: $font-primary1;
+	font-style: normal;
+	font-size: $fs-xxl;
+	color: $sumi;
+	letter-spacing: $ls-1;
+	line-height: $lh-2;
 }
 
 .font-styles-003 {
-    font-family: $font-primary1;
-    font-style: normal; 
-    font-size: $fs-lg;
-    color: $sumi;
-    letter-spacing: $ls-2;
-    line-height: $lh-6;
+	font-family: $font-primary1;
+	font-style: normal;
+	font-size: $fs-lg;
+	color: $sumi;
+	letter-spacing: $ls-2;
+	line-height: $lh-6;
 }
 
 .font-styles-004 {
-    font-family: $font-primary1;
-    font-style: normal; 
-    font-size: $fs-xxxxl;
-    color: $sumi;
-    letter-spacing: $ls-1;
-    line-height: $lh-9;
+	font-family: $font-primary1;
+	font-style: normal;
+	font-size: $fs-xxxxl;
+	color: $sumi;
+	letter-spacing: $ls-1;
+	line-height: $lh-9;
 }
 
 .font-styles-005 {
-    font-family: $font-primary1;
-    font-style: normal; 
-    font-size: $fs-xxl;
-    color: $sumi;
-    letter-spacing: $ls-1;
-    line-height: $lh-11;
+	font-family: $font-primary1;
+	font-style: normal;
+	font-size: $fs-xxl;
+	color: $sumi;
+	letter-spacing: $ls-1;
+	line-height: $lh-11;
 }
 
 .font-styles-006 {
-    font-family: $font-primary1;
-    font-style: normal; 
-    font-size: $fs-xxxl;
-    color: $white;
-    letter-spacing: $ls-3;
-    line-height: $lh-7;
+	font-family: $font-primary1;
+	font-style: normal;
+	font-size: $fs-xxxl;
+	color: $white;
+	letter-spacing: $ls-3;
+	line-height: $lh-7;
 }
 
 .font-styles-007 {
-    font-family: $font-primary1;
-    font-style: normal; 
-    font-size: $fs-xxxl;
-    color: $sumi;
-    letter-spacing: $ls-4;
-    line-height: $lh-7;
+	font-family: $font-primary1;
+	font-style: normal;
+	font-size: $fs-xxxl;
+	color: $sumi;
+	letter-spacing: $ls-4;
+	line-height: $lh-7;
 }
 
 .font-styles-008 {
-    font-family: $font-primary1;
-    font-style: normal; 
-    font-size: $fs-sm;
-    color: $Silver_Grey;
-    letter-spacing: $ls-1;
-    line-height: $lh-1;
+	font-family: $font-primary1;
+	font-style: normal;
+	font-size: $fs-sm;
+	color: $Silver_Grey;
+	letter-spacing: $ls-1;
+	line-height: $lh-1;
 }
 
 .font-styles-009 {
-    font-family: $font-primary1;
-    font-style: normal; 
-    font-size: $fs-sm;
-    color: $sumi;
-    letter-spacing: $ls-1;
-    line-height: $lh-1;
+	font-family: $font-primary1;
+	font-style: normal;
+	font-size: $fs-sm;
+	color: $sumi;
+	letter-spacing: $ls-1;
+	line-height: $lh-1;
 }
 
 .font-styles-010 {
-    font-family: $font-primary1;
-    font-style: normal; 
-    font-size: $fs-xxxxxxl;
-    color: $sumi;
-    letter-spacing: $ls-1;
-    line-height: $lh-9;
+	font-family: $font-primary1;
+	font-style: normal;
+	font-size: $fs-xxxxxxl;
+	color: $sumi;
+	letter-spacing: $ls-1;
+	line-height: $lh-9;
 }
 
 .font-styles-011 {
-    font-family: $font-primary1;
-    font-style: bold; 
-    font-size: $fs-xxxxxxl;
-    color: $sumi;
-    letter-spacing: $ls-1;
-    line-height: $lh-1;
+	font-family: $font-primary1;
+	font-style: bold;
+	font-size: $fs-xxxxxxl;
+	color: $sumi;
+	letter-spacing: $ls-1;
+	line-height: $lh-1;
 }
 
 .font-styles-012 {
-    font-family: $font-primary1;
-    font-style: bold; 
-    font-size: $fs-xxxxxxl;
-    color: $white;
-    letter-spacing: $ls-1;
-    line-height: $lh-1;
+	font-family: $font-primary1;
+	font-style: bold;
+	font-size: $fs-xxxxxxl;
+	color: $white;
+	letter-spacing: $ls-1;
+	line-height: $lh-1;
 }
 
 .font-styles-013 {
-    font-family: $font-primary1;
-    font-style: normal ;
-    font-size: $fs-xxxl;
-    color: $sumi;
-    letter-spacing: $ls-1;
-    line-height: $lh-7;
+	font-family: $font-primary1;
+	font-style: normal;
+	font-size: $fs-xxxl;
+	color: $sumi;
+	letter-spacing: $ls-1;
+	line-height: $lh-7;
 }
 
 .font-styles-014 {
-    font-family: $font-primary1;
-    font-style: normal ;
-    font-size: $fs-xxxl;
-    color: $white;
-    letter-spacing: $ls-1;
-    line-height: $lh-7;
+	font-family: $font-primary1;
+	font-style: normal;
+	font-size: $fs-xxxl;
+	color: $white;
+	letter-spacing: $ls-1;
+	line-height: $lh-7;
 }
 
 .font-styles-015 {
-    font-family: $font-primary1;
-    font-style: bold ;
-    font-size: $fs-xxxxxxll;
-    color: $white;
-    letter-spacing: $ls-1;
-    line-height: $lh-17;
+	font-family: $font-primary1;
+	font-style: bold;
+	font-size: $fs-xxxxxxll;
+	color: $white;
+	letter-spacing: $ls-1;
+	line-height: $lh-17;
 }
 
 .font-styles-016 {
-    font-family: $font-primary1;
-    font-style: bold ;
-    font-size: $fs-xxxxl;
-    color: $sumi;
-    letter-spacing: $ls-1;
-    line-height: $lh-15;
+	font-family: $font-primary1;
+	font-style: bold;
+	font-size: $fs-xxxxl;
+	color: $sumi;
+	letter-spacing: $ls-1;
+	line-height: $lh-15;
 }
 
 .font-styles-017 {
-    font-family: $font-primary1;
-    font-style: bold ;
-    font-size: $fs-xxxxxll;
-    color: $sumi;
-    letter-spacing: $ls-1;
-    line-height: $lh-1;
+	font-family: $font-primary1;
+	font-style: bold;
+	font-size: $fs-xxxxxll;
+	color: $sumi;
+	letter-spacing: $ls-1;
+	line-height: $lh-1;
 }
 
 .font-styles-018 {
-    font-family: $font-primary1;
-    font-style: bold ;
-    font-size: $fs-xxxl;
-    color: $blue;
-    letter-spacing: $ls-1;
-    line-height: $lh-7;
+	font-family: $font-primary1;
+	font-style: bold;
+	font-size: $fs-xxxl;
+	color: $blue;
+	letter-spacing: $ls-1;
+	line-height: $lh-7;
 }
 
 .font-styles-019 {
-    font-family: $font-primary1;
-    font-style: bold ;
-    font-size: $fs-xxxxxxl;
-    color: $blue;
-    letter-spacing: $ls-1;
-    line-height: $lh-2;
+	font-family: $font-primary1;
+	font-style: bold;
+	font-size: $fs-xxxxxxl;
+	color: $blue;
+	letter-spacing: $ls-1;
+	line-height: $lh-2;
 }
 
 .font-styles-020 {
-    font-family: $font-primary1;
-    font-style: bold ;
-    font-size: $fs-xxxxxxl;
-    color: $orange;
-    letter-spacing: $ls-1;
-    line-height: $lh-2;
+	font-family: $font-primary1;
+	font-style: bold;
+	font-size: $fs-xxxxxxl;
+	color: $orange;
+	letter-spacing: $ls-1;
+	line-height: $lh-2;
 }
 
 .font-styles-021 {
-    font-family: $font-primary1;
-    font-style: bold ;
-    font-size: $fs-xxl;
-    color: $orange;
-    letter-spacing: $ls-1;
-    line-height: $lh-6;
+	font-family: $font-primary1;
+	font-style: bold;
+	font-size: $fs-xxl;
+	color: $orange;
+	letter-spacing: $ls-1;
+	line-height: $lh-6;
 }
 
 .font-styles-022 {
-    font-family: $font-primary1;
-    font-style: bold ;
-    font-size: $fs-sm;
-    color: $sumi;
-    letter-spacing: $ls-2;
-    line-height: $lh-5;
+	font-family: $font-primary1;
+	font-style: bold;
+	font-size: $fs-sm;
+	color: $sumi;
+	letter-spacing: $ls-2;
+	line-height: $lh-5;
 }
 
 .font-styles-023 {
-    font-family: $font-primary1;
-    font-style: bold ;
-    font-size: $fs-xxl;
-    color: $gray;
-    letter-spacing: $ls-2;
-    line-height: $lh-7;
+	font-family: $font-primary1;
+	font-style: bold;
+	font-size: $fs-xxl;
+	color: $gray;
+	letter-spacing: $ls-2;
+	line-height: $lh-7;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /*body*/
-body{
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  font-optical-sizing: auto;
-  font-weight: bold !important;
-  font-style: normal;
-  letter-spacing: 1.28px;
-  transition-duration: 500ms;
+body {
+	font-family: "Figtree", "Noto Sans JP", sans-serif !important;
+	font-optical-sizing: auto;
+	font-weight: bold !important;
+	font-style: normal;
+	letter-spacing: 1.28px;
+	transition-duration: 500ms;
 }
 
 /*header*/
 .navigation-top {
-  position: static;
+	position: static;
 }
 ._main_mv {
-  max-width: 100%;
-  height: 70vh;
-  overflow: hidden;
-  position: relative;
-  img{
-    max-width: 100%;
-    width: 100%;
-  }
-  span {
-    color: $white;
-    top: 60%;
-    left: 15%;
-}
+	max-width: 100%;
+	height: 70vh;
+	overflow: hidden;
+	position: relative;
+	img {
+		max-width: 100%;
+		width: 100%;
+	}
+	span {
+		color: $white;
+		top: 60%;
+		left: 15%;
+	}
 }
 
 /*page-template-page-product-list*/
 .page-template-page-product-list .slider-item {
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    right: -140px;
-    bottom: 100px;
-  .wrap{
-    max-width: 1000px;
-    margin :0px;
-  }
+	width: 100%;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	right: -140px;
+	bottom: 100px;
+	.wrap {
+		max-width: 1000px;
+		margin: 0px;
+	}
 }
 
 /*page single*/
 .slider-item {
-  width: 100%;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+	width: 100%;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
-
 
 /*commom*/
 .clearfix::after {
-    content: " ";
-    display: block;
-    clear: both;
+	content: " ";
+	display: block;
+	clear: both;
 }
-.wrap{
-    max-width: 1280px;
-    width: 100%;
+.wrap {
+	max-width: 1280px;
+	width: 100%;
 }
-.wrap_s{
-    max-width: 1000px;
-    margin: 0 auto;
+.wrap_s {
+	max-width: 1000px;
+	margin: 0 auto;
 }
 p {
-  line-height: 2.4;
+	line-height: 2.4;
 }
-li, ul, ol{
-    list-style: none;
+li,
+ul,
+ol {
+	list-style: none;
 }
-h2,h3,h4,h5,p,li,ul{
-    font-family: "Noto Sans JP", sans-serif !important;
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+ul {
+	font-family: "Noto Sans JP", sans-serif !important;
 }
 h3.section-title {
-    font-size: clamp(1.75rem, 1.7117rem + 0.1361vw, 1.875rem) !important;
-    padding: 50px 0pc 0px 0px;
-    letter-spacing: 1.28px;
-    color: $blue;
-    opacity: 1;
-    line-height: 48px;
+	font-size: clamp(1.75rem, 1.7117rem + 0.1361vw, 1.875rem) !important;
+	padding: 50px 0pc 0px 0px;
+	letter-spacing: 1.28px;
+	color: $blue;
+	opacity: 1;
+	line-height: 48px;
 }
 
 /*text-align*/
-.text-align-l{
-    text-align: left;
+.text-align-l {
+	text-align: left;
 }
 
 /*display-frex*/
-.display-frex{
-    display: flex;
+.display-frex {
+	display: flex;
 }
-.justify-con{
-    justify-content: space-between;
+.justify-con {
+	justify-content: space-between;
 }
 
 /*position*/
-.position_re{
-    position: relative;
+.position_re {
+	position: relative;
 }
-.position_ab{
-    position: absolute;
+.position_ab {
+	position: absolute;
 }
-.position_st{
-    position: static;
+.position_st {
+	position: static;
 }
 
 /*solid*/
-.border-solid-bottom-01{
-    border-bottom: solid 3px #ddd;
-    padding: 10px 0px;
+.border-solid-bottom-01 {
+	border-bottom: solid 3px #ddd;
+	padding: 10px 0px;
 }
 
 /*link*/
-a:hover{
-    opacity: 0.8;
+a:hover {
+	opacity: 0.8;
 }
-._right_bt a:hover{
-    opacity: 1;
+._right_bt a:hover {
+	opacity: 1;
 }
 
 /*nav*/
-a.mega-menu-link {
-  font-size: clamp(1rem, 0.9617rem + 0.1361vw, 1.125rem) !important;
-  font-weight: bold;
-  padding: 0px 30px !important;
-}
 .mv-btn {
-    background: #f3f3f3;
-    color: #ff701e;
-    overflow: hidden;
-    z-index: 1;
-    padding: 40px 20px;
+	background: #f3f3f3;
+	color: #ff701e;
+	overflow: hidden;
+	z-index: 1;
+	padding: 40px 20px;
 }
 .mv-btn2 {
-    background: #f3f3f3;
-    color: #ff701e;
-    overflow: hidden;
-    z-index: 1;
-    padding: 40px 20px;
+	background: #f3f3f3;
+	color: #ff701e;
+	overflow: hidden;
+	z-index: 1;
+	padding: 40px 20px;
 }
 
 /*サイドボタン*/
 .side_bt_position_01 {
-  font-size: 14px;
+	font-size: 14px;
 	position: fixed;
-  height: 140px;
+	height: 140px;
 	right: 0px;
 	bottom: 30.9%;
 	writing-mode: vertical-rl;
-  z-index: 9999999999 !important;
+	z-index: 9999999999 !important;
 }
 
 /*製品・システム*/
-.page-template-page-product-list{
-  ._main_mv{
-    background: #ddd;
-  }
+.page-template-page-product-list {
+	._main_mv {
+		background: #ddd;
+	}
 }
 h2.head-border.text-line-right {
-  position: absolute;
-  top: 100px;
-  z-index: 2;
-  color: $white;
+	position: absolute;
+	top: 100px;
+	z-index: 2;
+	color: $white;
 }
 ._link_bt1 a {
-  font-size: clamp(1rem, 0.9617rem + 0.1361vw, 1.125rem);
-  font-weight: bold;
-  background: $blue;
-  text-align: center;
-  color: $white;
-  border-radius: 30px;
-  line-height: 10px;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3019607843);
-  text-box: none;
+	font-size: clamp(1rem, 0.9617rem + 0.1361vw, 1.125rem);
+	font-weight: bold;
+	background: $blue;
+	text-align: center;
+	color: $white;
+	border-radius: 30px;
+	line-height: 10px;
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3019607843);
+	text-box: none;
 }
 
-
-
 @media screen and (max-width: 1054px) {
-
 }
 
 .side_bt_position_02 {
-  font-size: 14px;
+	font-size: 14px;
 	position: fixed;
-  height: 140px;
+	height: 140px;
 	right: 0px;
-  bottom: 15.5%;
+	bottom: 15.5%;
 	writing-mode: vertical-rl;
-  z-index: 9999999999 !important;
+	z-index: 9999999999 !important;
 }
 @media screen and (max-width: 1054px) {
-
 }
 
 .side_bt_position_03 {
-  font-size: 14px;
-  position: fixed;
-  height: 140px;
-  right: 0px;
-  bottom: 0px;
-  writing-mode: vertical-rl;
-  z-index: 9999999999 !important;
+	font-size: 14px;
+	position: fixed;
+	height: 140px;
+	right: 0px;
+	bottom: 0px;
+	writing-mode: vertical-rl;
+	z-index: 9999999999 !important;
 }
 @media screen and (max-width: 1054px) {
-
 }
 
-.slide_right_border_002{
+.slide_right_border_002 {
 	border-right: 5px solid $blue !important;
 }
-.slide_right_border_003{
+.slide_right_border_003 {
 	border-right: 5px solid #777777 !important;
 }
 
 .c-btn {
-  background: #ff701e;
-  border-right: 5px solid #ff701e;
-  border-radius: 0px;
-  color: $white;
-  display: block;
-  font-weight: bold;
-  max-width: 300px;
-  padding: 15px 20px;
-  text-align: center;
+	background: #ff701e;
+	border-right: 5px solid #ff701e;
+	border-radius: 0px;
+	color: $white;
+	display: block;
+	font-weight: bold;
+	max-width: 300px;
+	padding: 15px 20px;
+	text-align: center;
 }
 
 .c-btn.slide {
-  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.4);
-  background: $white;
-  color: #ff701e;
-  overflow: hidden;
-  /*position: relative;*/
-  z-index: 1;
+	box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.4);
+	background: $white;
+	color: #ff701e;
+	overflow: hidden;
+	/*position: relative;*/
+	z-index: 1;
 }
 .c-btn.slide::after {
-  background: #ff701e;
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: '';
-  width: 100%;
-  height: 100%;
-  transform: scale(0, 1);
-  transform-origin: right top;
-  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
-  z-index: -1;
+	background: #ff701e;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 100%;
+	transform: scale(0, 1);
+	transform-origin: right top;
+	transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+	z-index: -1;
 }
 .c-btn.slide:hover {
-  color: $white;
+	color: $white;
 }
 .c-btn.slide:hover::after {
-  transform: scale(1, 1);
+	transform: scale(1, 1);
 }
 
 /*カタログ請求*/
 .c-btn2 {
-  background: $blue;
-  border-right: 10px solid #ff701e;
-  border-radius: 0px;
-  color: $white;
-  display: block;
-  font-weight: bold;
-  max-width: 300px;
-  padding: 15px 20px;
-  text-align: center;
+	background: $blue;
+	border-right: 10px solid #ff701e;
+	border-radius: 0px;
+	color: $white;
+	display: block;
+	font-weight: bold;
+	max-width: 300px;
+	padding: 15px 20px;
+	text-align: center;
 }
 .c-btn2.slide {
-  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.4);
-  background: $white;
-  color: $blue;
-  overflow: hidden;
-  /*position: relative;*/
-  z-index: 1;
+	box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.4);
+	background: $white;
+	color: $blue;
+	overflow: hidden;
+	/*position: relative;*/
+	z-index: 1;
 }
 .c-btn2.slide::after {
-  background: $blue;
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: '';
-  width: 100%;
-  height: 100%;
-  transform: scale(0, 1);
-  transform-origin: right top;
-  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
-  z-index: -1;
+	background: $blue;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 100%;
+	transform: scale(0, 1);
+	transform-origin: right top;
+	transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+	z-index: -1;
 }
 .c-btn2.slide:hover {
-  color: $white;
-  }
+	color: $white;
+}
 .c-btn2.slide:hover::after {
-  transform: scale(1, 1);
+	transform: scale(1, 1);
 }
 /*お見積り請求書*/
 .c-btn3 {
-  background: #777777;
-  border-right: 10px solid #ff701e;
-  border-radius: 0px;
-  color: $white;
-  display: block;
-  font-weight: bold;
-  max-width: 300px;
-  padding: 15px 20px;
-  text-align: center;
+	background: #777777;
+	border-right: 10px solid #ff701e;
+	border-radius: 0px;
+	color: $white;
+	display: block;
+	font-weight: bold;
+	max-width: 300px;
+	padding: 15px 20px;
+	text-align: center;
 }
 .c-btn3.slide {
-  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.4);
-  background: $white;
-  color: #777777;
-  overflow: hidden;
-  /*position: relative;*/
-  z-index: 1;
+	box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.4);
+	background: $white;
+	color: #777777;
+	overflow: hidden;
+	/*position: relative;*/
+	z-index: 1;
 }
 .c-btn3.slide::after {
-  background: #777777;
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: '';
-  width: 100%;
-  height: 100%;
-  transform: scale(0, 1);
-  transform-origin: right top;
-  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
-  z-index: -1;
+	background: #777777;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 100%;
+	transform: scale(0, 1);
+	transform-origin: right top;
+	transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+	z-index: -1;
 }
 .c-btn3.slide:hover {
-  color: $white;
+	color: $white;
 }
 .c-btn3.slide:hover::after {
-  transform: scale(1, 1);
+	transform: scale(1, 1);
 }
 
 @media screen and (max-width: 1054px) {
-  footer .footer-buttom{
-  display: none;
-}
-footer ._end li:nth-child(2) {
-  border-left: 1px #ddd solid;
-  padding-right: 0px;
-}
-footer ._left-contents ul {
-  display: flex;
-  justify-content: space-around;
-}
-footer ._end {
-  max-width: 100%;
-  display: block;
-}
-footer ._copyright {
-  text-align: center;
-}
-.logo {
-  top: 5%;
-}
-.topic-inner ul ._overflow-hidden-topic{
-  margin: 0 auto;
-}
-.topic-inner ul h3 {
-  text-align: left;
-  padding: 10px 9%;
-}
-.item_box {
-  width: 100%;
-  max-width: 95%;
-  margin: 0 auto;
-  border: solid 5px $white;
-}
+	footer .footer-buttom {
+		display: none;
+	}
+	footer ._end li:nth-child(2) {
+		border-left: 1px #ddd solid;
+		padding-right: 0px;
+	}
+	footer ._left-contents ul {
+		display: flex;
+		justify-content: space-around;
+	}
+	footer ._end {
+		max-width: 100%;
+		display: block;
+	}
+	footer ._copyright {
+		text-align: center;
+	}
+	.logo {
+		top: 5%;
+	}
+	.topic-inner ul ._overflow-hidden-topic {
+		margin: 0 auto;
+	}
+	.topic-inner ul h3 {
+		text-align: left;
+		padding: 10px 9%;
+	}
+	.item_box {
+		width: 100%;
+		max-width: 95%;
+		margin: 0 auto;
+		border: solid 5px $white;
+	}
 }
 
 /*link*/
 /* unvisited link */
 ._mv_link_bt a:link {
-  color: $white;
+	color: $white;
 }
 /* visited link */
 ._mv_link_bt a:visited {
-  color: $white;
+	color: $white;
 }
 /* mouse over link */
 ._mv_link_bt a:hover {
-  color: $black;
+	color: $black;
 }
 /* selected link */
 ._mv_link_bt a:active {
-  color: $blue;
+	color: $blue;
 }
 
 /*popular_products_category*/
 .popular_products_category a:link {
-  color: $blue;
+	color: $blue;
 }
 /* visited link */
 .popular_products_category a:visited {
-  color: $blue;
+	color: $blue;
 }
 /* mouse over link */
 .popular_products_category a:hover {
-  color: $blue;
+	color: $blue;
 }
 /* selected link */
 .popular_products_category a:active {
-  color: $blue;
+	color: $blue;
 }
-
-
-
-
-
 
 /*page*/
 .page .navigation-top {
-  top: 0;
-  z-index: 3;
+	top: 0;
+	z-index: 3;
 }
 
 /*pankuzu*/
@@ -719,7 +700,7 @@ footer ._copyright {
 
 .breadcrumb .fa-home {
 	font-size: 11px;
-	padding-right: 3px;	
+	padding-right: 3px;
 }
 
 .breadcrumb .fa-chevron-right {

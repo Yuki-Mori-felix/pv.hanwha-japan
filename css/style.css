@@ -518,30 +518,6 @@
   max-width: 100%;
 }
 
-.mega-menu-item a {
-  width: 100%;
-  height: 60px !important;
-  line-height: 60px !important;
-}
-
-.mega-nav_contact {
-  background: #3366aa !important;
-}
-.mega-nav_contact a {
-  color: #fff !important;
-}
-.mega-nav_contact a :hover {
-  background: #3366aa !important;
-}
-
-li#mega-menu-55-0 a {
-  color: #000 !important;
-}
-
-/*
-#mega-menu-wrap-top #mega-menu-top > li.mega-menu-item.mega-toggle-on > a.mega-menu-link {
-    background: #3366aa;
-}*/
 h2.head-border.text-line-right {
   color: #fff;
   font-size: clamp(1.25rem, 1.2117rem + 0.1361vw, 1.375rem);
@@ -896,19 +872,6 @@ h2.head-border.text-line-right {
 
 .total-energy-solutions-img {
   max-width: 50%;
-}
-
-/*mega menu*/
-#mega-menu-wrap-top,
-#mega-menu-wrap-top #mega-menu-top,
-#mega-menu-wrap-top #mega-menu-top ul.mega-sub-menu,
-#mega-menu-wrap-top #mega-menu-top li.mega-menu-item,
-#mega-menu-wrap-top #mega-menu-top li.mega-menu-row,
-#mega-menu-wrap-top #mega-menu-top li.mega-menu-column,
-#mega-menu-wrap-top #mega-menu-top a.mega-menu-link,
-#mega-menu-wrap-top #mega-menu-top span.mega-menu-badge,
-#mega-menu-wrap-top #mega-menu-top + button.mega-close {
-  line-height: 4.8;
 }
 
 /*nav*/
@@ -1608,21 +1571,6 @@ footer ._inner ._contenner ._sns ul img {
   .header .nav {
     display: none;
   }
-  body.mega-menu-top .navigation-top .wrap {
-    padding: 0px;
-  }
-  #mega-menu-wrap-top .mega-menu-toggle {
-    background: #ffffff;
-  }
-  #mega-menu-wrap-top .mega-menu-toggle .mega-toggle-block-0 .mega-toggle-animated-inner,
-  #mega-menu-wrap-top .mega-menu-toggle .mega-toggle-block-0 .mega-toggle-animated-inner::before,
-  #mega-menu-wrap-top .mega-menu-toggle .mega-toggle-block-0 .mega-toggle-animated-inner::after {
-    background-color: #000;
-  }
-  body.mega-menu-top .navigation-top nav {
-    margin-left: 0;
-    height: 60px;
-  }
   .electricity-bill-service {
     background: url(/wp-content/uploads/2025/02/header.jpg);
     background-position-x: 300px;
@@ -1735,35 +1683,6 @@ footer ._inner ._contenner ._sns ul img {
 }
 /*sp*/
 @media only screen and (max-width: 1054px) {
-  #mega-menu-wrap-top .mega-menu-toggle + #mega-menu-top {
-    right: -300px !important;
-    left: unset;
-  }
-}
-@media only screen and (max-width: 1054px) {
-  #mega-menu-wrap-top .mega-menu-toggle.mega-menu-open + #mega-menu-top {
-    right: 0 !important;
-    left: unset;
-  }
-}
-@media only screen and (max-width: 1054px) {
-  #mega-menu-wrap-top .mega-menu-toggle + #mega-menu-top {
-    position: fixed;
-    display: block;
-    width: 400px;
-    max-width: 100%;
-    height: 100vh;
-    max-height: 100vh;
-    top: 0;
-    left: 20%;
-    box-sizing: border-box;
-    transition: left 200msease-in-out, right 200msease-in-out, visibility 200msease-in-out;
-    overflow-y: auto;
-    overflow-x: hidden;
-    z-index: 9999999999;
-    overscroll-behavior: contain;
-    visibility: hidden;
-  }
   .main-catchphrase p {
     display: grid;
     place-items: center;
@@ -1771,12 +1690,6 @@ footer ._inner ._contenner ._sns ul img {
   }
   .banner1 .banner-photo1 {
     width: 50%;
-  }
-  #mega-menu-wrap-top #mega-menu-top li.mega-menu-item-has-children > a.mega-menu-link > span.mega-indicator:after {
-    content: "+";
-  }
-  #mega-menu-wrap-top #mega-menu-top li.mega-menu-item-has-children.mega-toggle-on > a.mega-menu-link > span.mega-indicator:after {
-    content: "-";
   }
   .wrap {
     padding-left: 1em;
@@ -2281,11 +2194,19 @@ p {
   overflow-wrap: break-word;
 }
 
-li, ul, ol {
+li,
+ul,
+ol {
   list-style: none;
 }
 
-h2, h3, h4, h5, p, li, ul {
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+ul {
   font-family: "Noto Sans JP", sans-serif !important;
 }
 
@@ -2297,7 +2218,7 @@ h3.section-title {
   font-size: clamp(1.75rem, 1.7117rem + 0.1361vw, 1.875rem) !important;
   padding: 50px 0pc 0px 0px;
   letter-spacing: 1.28px;
-  color: #3366AA;
+  color: #3366aa;
   opacity: 1;
   line-height: 48px;
 }
@@ -2345,20 +2266,6 @@ a:hover {
 }
 
 /*nav*/
-.mega-menu-item {
-  padding: 0px 30px;
-}
-
-#mega-menu-wrap-top #mega-menu-top > li.mega-menu-item > a.mega-menu-link {
-  padding: 0px 10px 0px;
-  margin: 0px 10px;
-}
-
-a.mega-menu-link {
-  font-size: clamp(1rem, 0.9617rem + 0.1361vw, 1.125rem) !important;
-  font-weight: bold;
-}
-
 .mv-btn {
   background: #f3f3f3;
   color: #ff701e;
@@ -2375,26 +2282,12 @@ a.mega-menu-link {
   padding: 40px 20px;
 }
 
-.mega-menu-wrap-top > li > a {
-  font-weight: bold;
-}
-
 .back_color > a {
-  background: #3366AA;
+  background: #3366aa;
 }
 
 .navigation-top {
   background: #e5e5e5;
-}
-
-ul#mega-menu-top {
-  line-height: 0px !important;
-}
-
-/*sub menu*/
-#mega-menu-wrap-top #mega-menu-top > li.mega-menu-megamenu > ul.mega-sub-menu {
-  background: #fff;
-  padding: 0px 200px;
 }
 
 /*サイドボタン*/
@@ -2424,7 +2317,7 @@ h2.head-border.text-line-right {
 ._link_bt1 a {
   font-size: clamp(1rem, 0.9617rem + 0.1361vw, 1.125rem);
   font-weight: bold;
-  background: #3366AA;
+  background: #3366aa;
   text-align: center;
   color: #ffffff;
   border-radius: 30px;
@@ -2454,7 +2347,7 @@ h2.head-border.text-line-right {
 }
 
 .slide_right_border_002 {
-  border-right: 5px solid #3366AA !important;
+  border-right: 5px solid #3366aa !important;
 }
 
 .slide_right_border_003 {
@@ -2534,8 +2427,8 @@ h2.head-border.text-line-right {
   font-size: 16px;
   text-decoration: none;
   background-color: #fff;
-  color: #3366AA;
-  border-right: #3366AA 10px solid;
+  color: #3366aa;
+  border-right: #3366aa 10px solid;
   text-align: center;
   z-index: 2;
   overflow: hidden;
@@ -2563,7 +2456,7 @@ h2.head-border.text-line-right {
 .btn2:hover::after {
   top: 0;
   right: 0;
-  background-color: #3366AA;
+  background-color: #3366aa;
 }
 
 .btn2::after {
@@ -2682,7 +2575,7 @@ h2.head-border.text-line-right {
 
 /* selected link */
 ._mv_link_bt a:active {
-  color: #3366AA;
+  color: #3366aa;
 }
 
 /* _left_navi link */
@@ -2711,22 +2604,22 @@ h2.head-border.text-line-right {
 
 /*popular_products_category*/
 .popular_products_category a:link {
-  color: #3366AA;
+  color: #3366aa;
 }
 
 /* visited link */
 .popular_products_category a:visited {
-  color: #3366AA;
+  color: #3366aa;
 }
 
 /* mouse over link */
 .popular_products_category a:hover {
-  color: #3366AA;
+  color: #3366aa;
 }
 
 /* selected link */
 .popular_products_category a:active {
-  color: #3366AA;
+  color: #3366aa;
 }
 
 /*page*/

@@ -570,27 +570,7 @@ $ls-5: 80px;
 		max-width: 100%;
 	}
 }
-.mega-menu-item a {
-	width: 100%;
-	height: 60px !important;
-	line-height: 60px !important;
-}
-.mega-nav_contact {
-	background: #3366aa !important;
-	a {
-		color: #fff !important;
-		:hover {
-			background: #3366aa !important;
-		}
-	}
-}
-li#mega-menu-55-0 a {
-	color: #000 !important;
-}
-/*
-#mega-menu-wrap-top #mega-menu-top > li.mega-menu-item.mega-toggle-on > a.mega-menu-link {
-    background: #3366aa;
-}*/
+
 h2.head-border.text-line-right {
 	color: #fff;
 	font-size: clamp(1.25rem, 1.2117rem + 0.1361vw, 1.375rem);
@@ -935,19 +915,6 @@ h2.head-border.text-line-right {
 }
 .total-energy-solutions-img {
 	max-width: 50%;
-}
-
-/*mega menu*/
-#mega-menu-wrap-top,
-#mega-menu-wrap-top #mega-menu-top,
-#mega-menu-wrap-top #mega-menu-top ul.mega-sub-menu,
-#mega-menu-wrap-top #mega-menu-top li.mega-menu-item,
-#mega-menu-wrap-top #mega-menu-top li.mega-menu-row,
-#mega-menu-wrap-top #mega-menu-top li.mega-menu-column,
-#mega-menu-wrap-top #mega-menu-top a.mega-menu-link,
-#mega-menu-wrap-top #mega-menu-top span.mega-menu-badge,
-#mega-menu-wrap-top #mega-menu-top + button.mega-close {
-	line-height: 4.8;
 }
 
 /*nav*/
@@ -1658,30 +1625,6 @@ footer {
 	.header .nav {
 		display: none;
 	}
-	body.mega-menu-top .navigation-top .wrap {
-		padding: 0px;
-	}
-	#mega-menu-wrap-top .mega-menu-toggle {
-		background: $white;
-	}
-	#mega-menu-wrap-top
-		.mega-menu-toggle
-		.mega-toggle-block-0
-		.mega-toggle-animated-inner,
-	#mega-menu-wrap-top
-		.mega-menu-toggle
-		.mega-toggle-block-0
-		.mega-toggle-animated-inner::before,
-	#mega-menu-wrap-top
-		.mega-menu-toggle
-		.mega-toggle-block-0
-		.mega-toggle-animated-inner::after {
-		background-color: #000;
-	}
-	body.mega-menu-top .navigation-top nav {
-		margin-left: 0;
-		height: 60px;
-	}
 	.electricity-bill-service {
 		background: url(/wp-content/uploads/2025/02/header.jpg);
 		background-position-x: 300px;
@@ -1795,36 +1738,6 @@ footer {
 
 /*sp*/
 @media only screen and (max-width: 1054px) {
-	#mega-menu-wrap-top .mega-menu-toggle + #mega-menu-top {
-		right: -300px !important;
-		left: unset;
-	}
-}
-@media only screen and (max-width: 1054px) {
-	#mega-menu-wrap-top .mega-menu-toggle.mega-menu-open + #mega-menu-top {
-		right: 0 !important;
-		left: unset;
-	}
-}
-@media only screen and (max-width: 1054px) {
-	#mega-menu-wrap-top .mega-menu-toggle + #mega-menu-top {
-		position: fixed;
-		display: block;
-		width: 400px;
-		max-width: 100%;
-		height: 100vh;
-		max-height: 100vh;
-		top: 0;
-		left: 20%;
-		box-sizing: border-box;
-		transition: left 200msease-in-out, right 200msease-in-out,
-			visibility 200msease-in-out;
-		overflow-y: auto;
-		overflow-x: hidden;
-		z-index: 9999999999;
-		overscroll-behavior: contain;
-		visibility: hidden;
-	}
 	.main-catchphrase {
 		p {
 			display: grid;
@@ -1834,20 +1747,6 @@ footer {
 	}
 	.banner1 .banner-photo1 {
 		width: 50%;
-	}
-	#mega-menu-wrap-top
-		#mega-menu-top
-		li.mega-menu-item-has-children
-		> a.mega-menu-link
-		> span.mega-indicator:after {
-		content: "+";
-	}
-	#mega-menu-wrap-top
-		#mega-menu-top
-		li.mega-menu-item-has-children.mega-toggle-on
-		> a.mega-menu-link
-		> span.mega-indicator:after {
-		content: "-";
 	}
 	.wrap {
 		padding-left: 1em;
