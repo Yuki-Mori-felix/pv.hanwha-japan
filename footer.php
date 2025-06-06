@@ -99,7 +99,7 @@
 
 </body>
 <?php 
-if (is_page('voice') || is_page('interview')) {
+if (is_page('interview')) {
   echo '<script src="' . get_stylesheet_directory_uri() . '/js/voice.js"></script>';
 }
 ?>

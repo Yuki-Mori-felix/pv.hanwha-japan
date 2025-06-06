@@ -1,0 +1,276 @@
+@use "breakpoint" as *;
+
+#content {
+	padding-bottom: 0 !important;
+}
+
+.voice {
+	.voice-top {
+		padding-bottom: 110px;
+		@include max {
+			padding-bottom: 80px;
+		}
+
+		.wrap_s {
+			width: 94%;
+
+			h2 {
+				font-size: 32px;
+				color: #333;
+				text-align: center;
+				margin-bottom: 10px;
+				@include max {
+					font-size: 28px;
+				}
+			}
+
+			p {
+				text-align: center;
+				margin-bottom: 60px;
+			}
+
+			/*_____ Splide用CSS _____*/
+			.splide__track {
+				max-width: 850px;
+				margin-inline: auto;
+				margin-bottom: 40px;
+				min-height: 350px;
+				@include max {
+					margin-bottom: 20px;
+				}
+			}
+			.splide__pagination {
+				gap: 20px;
+				bottom: unset;
+			}
+			.splide__pagination__page.is-active {
+				background: #333;
+			}
+			.splide__arrow {
+				width: 3em;
+				height: 3em;
+				background: #eee;
+        opacity: 1;
+        @include max {
+          width: 2em;
+          height: 2em;
+        }
+				&:hover {
+					background: #eee;
+					opacity: 0.8;
+				}
+
+        svg {
+          fill: #333;
+        }
+			}
+			/*_____ Splide用CSS _____*/
+
+			.voice-top-list {
+				li {
+					max-width: 252px;
+
+					img {
+						width: 252px;
+						height: 180px;
+						object-fit: contain;
+						object-position: center;
+					}
+
+					.text-area {
+						position: relative;
+						background: #ffffff 0% 0% no-repeat padding-box;
+						box-shadow: 0px 5px 20px #00000033;
+						border-radius: 10px;
+						min-height: 150px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						&::before {
+							content: "";
+							position: absolute;
+							top: -20px;
+							left: 50%;
+							margin-left: -15px;
+							border: 10px solid transparent;
+							border-bottom: 10px solid #fff;
+						}
+
+						p {
+							font-size: 20px;
+							line-height: 1.5;
+							margin: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+	/*========== END OF VOICE TOP ==========*/
+
+	.section-back {
+		position: relative;
+		z-index: 0;
+		padding-block: 80px 120px;
+		&::before {
+			content: "";
+			position: absolute;
+			z-index: -2;
+			top: 0;
+			left: 0;
+			max-width: 796px;
+			width: 65%;
+			height: 100%;
+			background-image: url(../images/about/hanwhaJP_building_BG.jpg);
+			background-size: cover;
+			background-position: center;
+		}
+		&::after {
+			content: "INTERVIEW";
+			position: absolute;
+			z-index: -1;
+			top: 72px;
+			left: -18px;
+			writing-mode: vertical-lr;
+			font-size: 120px;
+			color: white;
+			line-height: 0.8;
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 95px;
+			height: 100%;
+			@include max {
+				left: -12px;
+				width: 60px;
+			}
+		}
+
+		.section-title-area {
+			position: relative;
+			margin-bottom: 50px;
+			&::after {
+				content: "";
+				position: absolute;
+				height: 2px;
+				background: #333;
+				max-width: 1140px;
+				width: 90%;
+			}
+
+			h2 {
+				font-size: 48px;
+				font-weight: bold;
+				color: #333;
+				margin-bottom: 10px;
+			}
+		}
+
+		.interview {
+			.wrap_s {
+				width: 94%;
+				.title-sub {
+					margin-bottom: 60px;
+				}
+
+				.interview-list {
+					max-width: 743px;
+					margin-inline: auto;
+					margin-bottom: 80px;
+					@include max {
+						margin-bottom: 50px;
+					}
+
+					li {
+						margin-bottom: 40px;
+
+						a {
+							display: grid;
+							grid-template-columns: repeat(2, 1fr);
+							gap: 118px;
+							place-items: center;
+							@include max {
+								grid-template-columns: 1fr;
+								gap: 20px;
+							}
+							&:hover {
+								opacity: unset;
+								img {
+									opacity: 0.9;
+								}
+								.title {
+									color: #ee7744;
+								}
+							}
+
+							img {
+								width: 312px;
+								height: 230px;
+								object-fit: cover;
+								object-position: center;
+								box-shadow: 0px 5px 20px #0000004d;
+							}
+
+							.text-area {
+								.address {
+									font-size: 16px;
+									font-weight: 400;
+									line-height: 1;
+									color: #666;
+									margin-bottom: 30px;
+									position: relative;
+									@include max {
+										font-size: 14px;
+									}
+									&::before {
+										content: "";
+										position: absolute;
+										z-index: -1;
+										bottom: -15px;
+										right: 0;
+										width: 150%;
+										height: 1px;
+										background: #ccc;
+										@include max {
+											width: 100%;
+										}
+									}
+								}
+
+								.title {
+									font-size: 24px;
+									line-height: 1.5;
+									@include max {
+										font-size: 20px;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.voice-btn-wrap {
+					max-width: 743px;
+					margin-inline: auto;
+
+					.btn {
+						display: block;
+						width: 312px;
+						text-align: center;
+						border-radius: 5;
+						margin-inline: auto 0;
+						background: #3366aa;
+						border-radius: 30px;
+						line-height: 1;
+						@include max {
+							margin-inline: auto;
+						}
+						&:hover::after {
+							background: #3d7abb;
+						}
+					}
+				}
+			}
+		}
+	}
+	/*========== END OF INTERVIEW ==========*/
+}

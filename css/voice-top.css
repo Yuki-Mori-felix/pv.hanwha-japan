@@ -1,0 +1,270 @@
+@charset "UTF-8";
+#content {
+  padding-bottom: 0 !important;
+}
+
+.voice {
+  /*========== END OF VOICE TOP ==========*/
+  /*========== END OF INTERVIEW ==========*/
+}
+.voice .voice-top {
+  padding-bottom: 110px;
+}
+@media screen and (max-width: 768px) {
+  .voice .voice-top {
+    padding-bottom: 80px;
+  }
+}
+.voice .voice-top .wrap_s {
+  width: 94%;
+  /*_____ Splide用CSS _____*/
+  /*_____ Splide用CSS _____*/
+}
+.voice .voice-top .wrap_s h2 {
+  font-size: 32px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  .voice .voice-top .wrap_s h2 {
+    font-size: 28px;
+  }
+}
+.voice .voice-top .wrap_s p {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.voice .voice-top .wrap_s .splide__track {
+  max-width: 850px;
+  margin-inline: auto;
+  margin-bottom: 40px;
+  min-height: 350px;
+}
+@media screen and (max-width: 768px) {
+  .voice .voice-top .wrap_s .splide__track {
+    margin-bottom: 20px;
+  }
+}
+.voice .voice-top .wrap_s .splide__pagination {
+  gap: 20px;
+  bottom: unset;
+}
+.voice .voice-top .wrap_s .splide__pagination__page.is-active {
+  background: #333;
+}
+.voice .voice-top .wrap_s .splide__arrow {
+  width: 3em;
+  height: 3em;
+  background: #eee;
+  opacity: 1;
+}
+@media screen and (max-width: 768px) {
+  .voice .voice-top .wrap_s .splide__arrow {
+    width: 2em;
+    height: 2em;
+  }
+}
+.voice .voice-top .wrap_s .splide__arrow:hover {
+  background: #eee;
+  opacity: 0.8;
+}
+.voice .voice-top .wrap_s .splide__arrow svg {
+  fill: #333;
+}
+.voice .voice-top .wrap_s .voice-top-list li {
+  max-width: 252px;
+}
+.voice .voice-top .wrap_s .voice-top-list li img {
+  width: 252px;
+  height: 180px;
+  object-fit: contain;
+  object-position: center;
+}
+.voice .voice-top .wrap_s .voice-top-list li .text-area {
+  position: relative;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.voice .voice-top .wrap_s .voice-top-list li .text-area::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -15px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+}
+.voice .voice-top .wrap_s .voice-top-list li .text-area p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+}
+.voice .section-back {
+  position: relative;
+  z-index: 0;
+  padding-block: 80px 120px;
+}
+.voice .section-back::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  max-width: 796px;
+  width: 65%;
+  height: 100%;
+  background-image: url(../images/about/hanwhaJP_building_BG.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.voice .section-back::after {
+  content: "INTERVIEW";
+  position: absolute;
+  z-index: -1;
+  top: 72px;
+  left: -18px;
+  writing-mode: vertical-lr;
+  font-size: 120px;
+  color: white;
+  line-height: 0.8;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 95px;
+  height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .voice .section-back::after {
+    left: -12px;
+    width: 60px;
+  }
+}
+.voice .section-back .section-title-area {
+  position: relative;
+  margin-bottom: 50px;
+}
+.voice .section-back .section-title-area::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: #333;
+  max-width: 1140px;
+  width: 90%;
+}
+.voice .section-back .section-title-area h2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+.voice .section-back .interview .wrap_s {
+  width: 94%;
+}
+.voice .section-back .interview .wrap_s .title-sub {
+  margin-bottom: 60px;
+}
+.voice .section-back .interview .wrap_s .interview-list {
+  max-width: 743px;
+  margin-inline: auto;
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 768px) {
+  .voice .section-back .interview .wrap_s .interview-list {
+    margin-bottom: 50px;
+  }
+}
+.voice .section-back .interview .wrap_s .interview-list li {
+  margin-bottom: 40px;
+}
+.voice .section-back .interview .wrap_s .interview-list li a {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 118px;
+  place-items: center;
+}
+@media screen and (max-width: 768px) {
+  .voice .section-back .interview .wrap_s .interview-list li a {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+.voice .section-back .interview .wrap_s .interview-list li a:hover {
+  opacity: unset;
+}
+.voice .section-back .interview .wrap_s .interview-list li a:hover img {
+  opacity: 0.9;
+}
+.voice .section-back .interview .wrap_s .interview-list li a:hover .title {
+  color: #ee7744;
+}
+.voice .section-back .interview .wrap_s .interview-list li a img {
+  width: 312px;
+  height: 230px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3019607843);
+}
+.voice .section-back .interview .wrap_s .interview-list li a .text-area .address {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  color: #666;
+  margin-bottom: 30px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .voice .section-back .interview .wrap_s .interview-list li a .text-area .address {
+    font-size: 14px;
+  }
+}
+.voice .section-back .interview .wrap_s .interview-list li a .text-area .address::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: -15px;
+  right: 0;
+  width: 150%;
+  height: 1px;
+  background: #ccc;
+}
+@media screen and (max-width: 768px) {
+  .voice .section-back .interview .wrap_s .interview-list li a .text-area .address::before {
+    width: 100%;
+  }
+}
+.voice .section-back .interview .wrap_s .interview-list li a .text-area .title {
+  font-size: 24px;
+  line-height: 1.5;
+}
+@media screen and (max-width: 768px) {
+  .voice .section-back .interview .wrap_s .interview-list li a .text-area .title {
+    font-size: 20px;
+  }
+}
+.voice .section-back .interview .wrap_s .voice-btn-wrap {
+  max-width: 743px;
+  margin-inline: auto;
+}
+.voice .section-back .interview .wrap_s .voice-btn-wrap .btn {
+  display: block;
+  width: 312px;
+  text-align: center;
+  border-radius: 5;
+  margin-inline: auto 0;
+  background: #3366aa;
+  border-radius: 30px;
+  line-height: 1;
+}
+@media screen and (max-width: 768px) {
+  .voice .section-back .interview .wrap_s .voice-btn-wrap .btn {
+    margin-inline: auto;
+  }
+}
+.voice .section-back .interview .wrap_s .voice-btn-wrap .btn:hover::after {
+  background: #3d7abb;
+}/*# sourceMappingURL=voice-top.css.map */
