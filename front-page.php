@@ -26,9 +26,8 @@ get_header();
         <div class="topic-inner">
           <?php
           $args = [
-            'post_type' => 'post', // カスタム投稿名が「gourmet」の場合
-            'posts_per_page' => 3, // 表示する数
-            'category_name' => 'topics', //カテゴリースラッグを指定
+            'post_type' => 'top', // カスタム投稿名が「gourmet」の場合
+            'posts_per_page' => -1, // 表示する数
             'post_status' => 'publish', //公開の記事だけ
             'order' => 'DESC', //表示する順番（逆はASC）
           ];
@@ -36,23 +35,36 @@ get_header();
 
           <?php if ($my_query->have_posts()): // 投稿がある場合
           ?>
+            <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
 
-            <ul class="wrap_s">
-
-              <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
-
+              <ul class="wrap_s">
                 <li>
-                  <a href="<?php the_permalink(); ?>" class="">
+                  <a href="<?= get_field('content_1_url'); ?>" class="">
                     <div class="_overflow-hidden-topic">
-                      <?php the_post_thumbnail('full'); ?>
+                      <img src="<?= get_field('content_1_img')['url']; ?>" alt="">
                     </div>
-                    <h3><?php the_title(); ?></h3>
+                    <h3><?= get_field('content_1_title'); ?></h3>
                   </a>
                 </li>
+                <li>
+                  <a href="<?= get_field('content_2_url'); ?>" class="">
+                    <div class="_overflow-hidden-topic">
+                      <img src="<?= get_field('content_2_img')['url']; ?>" alt="">
+                    </div>
+                    <h3><?= get_field('content_2_title'); ?></h3>
+                  </a>
+                </li>
+                <li>
+                  <a href="<?= get_field('content_3_url'); ?>" class="">
+                    <div class="_overflow-hidden-topic">
+                      <img src="<?= get_field('content_3_img')['url']; ?>" alt="">
+                    </div>
+                    <h3><?= get_field('content_3_title'); ?></h3>
+                  </a>
+                </li>
+              </ul>
 
-              <?php endwhile; ?>
-
-            </ul>
+            <?php endwhile; ?>
 
           <?php else: // 投稿がない場合
           ?>
