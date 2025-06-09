@@ -25,33 +25,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
     </div>
   </section>
   <!-- // TOP -->
-  <section class="lineup">
-    <div class="container">
-      <h2 class="ttl">ラインナップ</h2>
-      
-      <div class="prod-list">
-        <a href="" class="prod-item">
-          <div class="img"><img src="<?=$img_path?>/tax-prod-cat/cube-j.png" alt=""></div>
-          <div class="ttl">
-            <h3 class="name">Cube J</h3>
-          </div>
-        </a>
-        <a href="" class="prod-item">
-          <div class="img"><img src="<?=$img_path?>/tax-prod-cat/atto.png" alt=""></div>
-          <div class="ttl">
-            <h3 class="name">Atto</h3>
-          </div>
-        </a>
-        <a href="" class="prod-item">
-          <div class="img"><img src="<?=$img_path?>/tax-prod-cat/dummy.png" alt=""></div>
-          <div class="ttl">
-            <h3 class="name">Edge</h3>
-          </div>
-        </a>
-      </div>
-
-    </div>
-  </section>
+  <?= get_field('content_1', false, false); ?>
   <!-- // LINEUP -->
   <section class="compare" data-target="compare">
     <div class="wrapper">
