@@ -1597,7 +1597,7 @@ footer ._inner ._contenner ._sns ul img {
     bottom: 0px;
     background-color: #ffffff;
     padding: 0px 0px 0px;
-    z-index: 999999999999;
+    z-index: 999999999;
   }
   ._footer_fixed_bt ul {
     display: flex;

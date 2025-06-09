@@ -121,19 +121,19 @@
 
   <header id="masthead" class="site-header">
 
-    <div class="logo"><a href="<?php echo esc_url(home_url('/')); ?>"><img src="/wp-content/uploads/2025/03/logo.png" alt="ハンファジャパン"></a></div>
-
-    <div class="header">
-      <ul class="nav">
-        <li><a href="">ハンファジャパン</a></li>
-        <li><a href="">グリーンアライアンス</a></li>
-        <li><a href=""><i class="fa-solid fa-magnifying-glass"></i>サイト内検索</a></li>
+		
+		<div class="masthead-top">
+			<ul class="mht-list">
+				<li class="mht-item mht-item-common"><a href="">ハンファジャパン</a></li>
+        <li class="mht-item mht-item-common"><a href="">グリーンアライアンス</a></li>
+        <li class="mht-item site-search"><a href=""><i class="fa-solid fa-magnifying-glass" style="color: #3366aa;"></i>サイト内検索</a></li>
       </ul>
     </div>
-
+		
     <?php if (has_nav_menu('top')) : ?>
-      <div class="navigation-top">
-        <div class="wrap">
+      <div class="nav-menu-top">
+				<a href="<?php echo esc_url(home_url('/')); ?>" class="nmt-logo"><img src="/wp-content/uploads/2025/03/logo.png" alt="ハンファジャパン"></a>
+        <div class="nmt-wrap">
           <?php get_template_part('template-parts/navigation/navigation', 'top'); ?>
         </div><!-- .wrap -->
       </div><!-- .navigation-top -->
