@@ -94,6 +94,19 @@ main.taxonomy-product-cat {
 		margin: auto;
 		padding: 0;
   }
+  .btn {
+    color: white;
+    background: var(--col-navy);
+    width: 312px;
+    padding-block: 18px;
+    text-align: center;
+    margin-top: 120px;
+    margin-inline: auto;
+    border-radius: 30px;
+    &:hover::after {
+      background: #3D7ABB;
+    }
+  }
   // -- 各製品ごとのCSS
   // Re.RISE
   .col-re-rise {
@@ -136,6 +149,17 @@ main.taxonomy-product-cat {
       bottom: initial;
     }
   }
+  // V2H
+  .intro-v2h {
+    max-width: 398px;
+    width: 100%;
+    left: 0;
+    bottom: -70px;
+    @include max(l) {
+      width: 34%;
+      bottom: initial;
+    }
+  }
   // ここまで main内 共通
 
   > .mv {
@@ -160,6 +184,17 @@ main.taxonomy-product-cat {
           letter-spacing: 0.04em !important;
           @include max {
             font-size: 48px;
+          }
+          > .txt-small {
+            font-size: 20px;
+            font-weight: 300;
+            letter-spacing: 0.16em !important;
+            @include max(l) {
+              display: block;
+            }
+            @include max {
+              font-size: 14px;
+            }
           }
         }
         > .ttl {
@@ -1124,19 +1159,6 @@ main.taxonomy-product-cat.bracket {
           }
         }
       }
-      > .btn {
-        color: white;
-        background: var(--col-navy);
-        width: 312px;
-        padding-block: 18px;
-        text-align: center;
-        margin-top: 120px;
-        margin-inline: auto;
-        border-radius: 30px;
-        &:hover::after {
-          background: #3D7ABB;
-        }
-      }
     }
     > .explanation {
       margin-top: 80px;
@@ -1278,3 +1300,238 @@ main.taxonomy-product-cat.bracket {
   }
 }
 // 架台・設置金具
+
+main.taxonomy-product-cat.v2h {
+  > .intro {
+    > .container {
+      max-width: 915px;
+    }
+  }
+  > .power-station ,
+  > .tribrid {
+    > .container {
+      > .sec-ttl {
+        font-size: 32px;
+        font-weight: var(--fw-bold);
+        text-align: center;
+        @include max {
+          font-size: 26px;
+        }
+        br {
+          display: none;
+          @include max {
+            display: block;
+          }
+        }
+      }
+      > .sub-ttl {
+        font-size: 24px;
+        font-weight: var(--fw-bold);
+        text-align: center;
+        color: var(--col-navy);
+        padding-top: 30px;
+        margin-top: 30px;
+        border-top: 1px solid #999999;
+        @include max {
+          font-size: 16px;
+        }
+      }
+      > .img {
+        margin-top: 54px;
+        @include max {
+          overflow-x: scroll;
+        }
+        img {
+          @include max {
+            width: 850px;
+            max-width: initial;
+          }
+        }
+      }
+      .com-list {
+        display: grid;
+        gap: 20px;
+        .com-item {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          @include max {
+            gap: 10px;
+          }
+          .com-icon {
+            max-width: 80px;
+            min-width: 80px;
+            @include max {
+              max-width: 60px;
+              min-width: 60px;
+            }
+          }
+          .com-txt {
+            font-size: 20px;
+            font-weight: var(--fw-bold);
+            @include max {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+      .note {
+        margin-bottom: 40px;
+        > .txt {
+          display: block;
+          font-weight: var(--fw-reg);
+          margin: 2px 0;
+        }
+      }
+      .accordion {
+        @include max(1044px) {
+          margin-top: 40px;
+        }
+        > .accordion-btn {
+          max-width: 484px;
+          width: 100%;
+          margin-left: auto;
+          @include max(1044px) {
+            margin-left: initial;
+            margin: auto;
+          }
+        }
+        > .accordion-content {
+          margin: 40px 0;
+          @include max(1044px) {
+            overflow-x: scroll;
+          }
+          table {
+            width: 1000px;
+            margin: 0;
+            tbody {
+              tr {
+                border-bottom: initial;
+                &.b-text td {
+                  font-weight: var(--fw-bold);
+                }
+                td {
+                  font-size: 14px;
+                  font-weight: var(--fw-reg);
+                  border-bottom: 1px solid #eee;
+                  vertical-align: middle;
+                  padding: 10px 5px 10px 15px;
+                  position: relative;
+                  &.separator::before {
+                    content: "";
+                    width: 10px;
+                    height: 100%;
+                    position: absolute;
+                    background: #fff;
+                    left: -2px;
+                    top: 2px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // 共通
+  > .power-station {
+    padding-top: 120px;
+    > .container {
+      > .ps-detailc {
+        margin-top: 60px;
+        > .ps-detail {
+          display: flex;
+          justify-content: center;
+          align-items: start;
+          gap: 118px;
+          @include max(1044px) {
+            gap: 20px;
+          }
+          @include max {
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+          }
+          > .img {
+            max-width: 312px;
+            width: 35%;
+            @include max {
+              width: 100%;
+            }
+          }
+        }
+      }
+      > .more-btn {
+        display: block;
+        max-width: 484px;
+        width: 100%;
+        margin: 80px auto 0;
+      }
+    }
+  }
+  // POWER_STATION
+  > .tribrid {
+    padding: 140px 0 120px;
+    > .container {
+      > .list {
+        margin-top: 60px;
+        > .item {
+          &:not(:first-of-type) {
+            margin-top: 109px;
+          }
+          > .tribrid-content {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap: 118px;
+            @include max(1044px) {
+              gap: 40px;
+            }
+            @include max {
+              flex-direction: column;
+            }
+            > .img {
+              max-width: 312px;
+              width: 65%;
+              position: relative;
+              @include max {
+                width: 100%;
+              }
+              > .txt {
+                position: absolute;
+                left: 0;
+                bottom: 20px;
+                font-size: 14px;
+                font-weight: var(--fw-bold);
+              }
+            }
+            > .meta {
+              max-width: 484px;
+              width: 100%;
+              > .name {
+                font-size: 24px;
+                font-weight: var(--fw-bold);
+                @include max {
+                  font-size: 20px;
+                }
+              }
+              > .type {
+                font-size: 16px;
+                color: #999999;
+                margin-top: 5px 0;
+              }
+              > .com-list {
+                margin-top: 20px;
+                padding-top: 30px;
+                border-top: 1px solid #CCCCCC;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // TRIBRID
+}
+// V2H
