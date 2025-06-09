@@ -343,4 +343,113 @@ footer#colophon ._end .wrap_s ._copyright {
   color: #999;
 }
 
-/*======================= END OF FOOTER =======================*//*# sourceMappingURL=add-common.css.map */
+/*======================= END OF FOOTER =======================*/
+.err {
+  padding-top: 168px;
+}
+.err .wrap_s {
+  max-width: unset;
+}
+.err .wrap_s .error_logo {
+  width: 150px;
+  margin-inline: auto;
+}
+.err .wrap_s .cont_err {
+  padding: 0 50px;
+}
+@media screen and (max-width: 768px) {
+  .err .wrap_s .cont_err {
+    padding: 0 35px;
+  }
+}
+.err .wrap_s .cont_err .err_ty {
+  padding-bottom: 100px;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .err .wrap_s .cont_err .err_ty {
+    padding-bottom: 50px;
+  }
+}
+.err .wrap_s .cont_err .err_ty .err_tit {
+  padding-top: 60px;
+  font-size: 72px;
+  line-height: 72px;
+  color: #009ee3;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .err .wrap_s .cont_err .err_ty .err_tit {
+    padding-top: 20px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+.err .wrap_s .cont_err .err_ty .txt_s {
+  padding-top: 38px;
+  font-size: 48px;
+  line-height: 50px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .err .wrap_s .cont_err .err_ty .txt_s {
+    padding-top: 11px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+.err .wrap_s .cont_err .err_ty .txt {
+  padding-top: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  .err .wrap_s .cont_err .err_ty .txt {
+    padding-top: 25px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+.err .wrap_s .cont_err .err_ty .btn_area {
+  margin-top: 70px;
+}
+@media screen and (max-width: 768px) {
+  .err .wrap_s .cont_err .err_ty .btn_area {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.err .wrap_s .cont_err .err_ty .btn_area .btn_m {
+  display: inline-block;
+  position: relative;
+  height: 40px;
+  padding: 0 38px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 40px;
+  width: 250px;
+  margin: 10px;
+}
+@media screen and (max-width: 768px) {
+  .err .wrap_s .cont_err .err_ty .btn_area .btn_m {
+    padding: 0;
+    width: calc(100% - 75px);
+  }
+}
+.err .wrap_s .cont_err .err_ty .btn_area .btn_ty02 {
+  background: #062b55;
+  color: #fff !important;
+  transition: all 0.4s;
+}
+.err .wrap_s .cont_err .err_ty .btn_area .btn_ty06 {
+  background: #fff;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  color: #000;
+  transition: all 0.4s;
+}/*# sourceMappingURL=add-common.css.map */

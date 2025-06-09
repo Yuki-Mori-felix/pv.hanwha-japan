@@ -19,8 +19,8 @@ html {
 
 		.mv-img {
 			// position: absolute;
-      position: relative;
-      margin-inline: auto 0;
+			position: relative;
+			margin-inline: auto 0;
 			// top: 0;
 			// right: 0;
 			height: 85%;
@@ -63,9 +63,9 @@ html {
 				font-weight: 500;
 				color: white;
 				letter-spacing: 6px !important;
-        @include max {
-          font-size: 18px;
-        }
+				@include max {
+					font-size: 18px;
+				}
 			}
 		}
 
@@ -88,9 +88,9 @@ html {
 				);
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
-        @include max {
-          font-size: 32px;
-        }
+				@include max {
+					font-size: 32px;
+				}
 			}
 
 			span {
@@ -424,3 +424,110 @@ footer#colophon {
 	}
 }
 /*======================= END OF FOOTER =======================*/
+
+.err {
+	padding-top: 168px;
+
+	.wrap_s {
+		max-width: unset;
+
+		.error_logo {
+			width: 150px;
+			margin-inline: auto;
+		}
+
+		.cont_err {
+			padding: 0 50px;
+			@include max {
+				padding: 0 35px;
+			}
+
+			.err_ty {
+				padding-bottom: 100px;
+				text-align: center;
+				@include max {
+					padding-bottom: 50px;
+				}
+
+				.err_tit {
+					padding-top: 60px;
+					font-size: 72px;
+					line-height: 72px;
+					color: #009ee3;
+					font-weight: 600;
+					margin-bottom: 0;
+					@include max {
+						padding-top: 20px;
+						font-size: 28px;
+						line-height: 28px;
+					}
+				}
+
+				.txt_s {
+					padding-top: 38px;
+					font-size: 48px;
+					line-height: 50px;
+					font-weight: 600;
+					margin-bottom: 0;
+					@include max {
+						padding-top: 11px;
+						font-size: 24px;
+						line-height: 30px;
+					}
+				}
+
+				.txt {
+					padding-top: 20px;
+					font-size: 14px;
+					line-height: 20px;
+          font-weight: 400;
+					@include max {
+						padding-top: 25px;
+						font-size: 16px;
+						line-height: 26px;
+					}
+				}
+
+				.btn_area {
+					margin-top: 70px;
+					@include max {
+						margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+					}
+
+					.btn_m {
+						display: inline-block;
+						position: relative;
+						height: 40px;
+						padding: 0 38px;
+						font-size: 14px;
+						font-weight: 600;
+						line-height: 40px;
+						width: 250px;
+						margin: 10px;
+            @include max {
+              padding: 0;
+              width: calc(100% - 75px);
+            }
+					}
+
+					.btn_ty02 {
+						background: #062b55;
+						color: #fff !important;
+						transition: all 0.4s;
+					}
+
+					.btn_ty06 {
+						background: #fff;
+						border: 1px solid #333;
+						box-sizing: border-box;
+						color: #000;
+						transition: all 0.4s;
+					}
+				}
+			}
+		}
+	}
+}
