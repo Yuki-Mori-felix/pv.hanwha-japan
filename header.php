@@ -39,6 +39,8 @@
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/sustainability.css'>
   <?php elseif (is_page('location-details') || is_page('achievement-details') || is_page('award-details') || is_page('support-details') || is_page('technology-details') || is_page('transition-details') ) : ?>
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/under-pv.css'>
+  <?php elseif (is_page('storage-system-hems')) : ?>
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/storage-system-hems.css'>
   <?php elseif (is_page('product-list')) : ?>
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/product-list.css'>
   <?php elseif (is_singular('product')) : ?>
