@@ -79,6 +79,19 @@ main.taxonomy-product-cat .container {
   margin: auto;
   padding: 0;
 }
+main.taxonomy-product-cat .btn {
+  color: white;
+  background: var(--col-navy);
+  width: 312px;
+  padding-block: 18px;
+  text-align: center;
+  margin-top: 120px;
+  margin-inline: auto;
+  border-radius: 30px;
+}
+main.taxonomy-product-cat .btn:hover::after {
+  background: #3D7ABB;
+}
 main.taxonomy-product-cat .col-re-rise {
   color: var(--col-orange);
 }
@@ -121,6 +134,18 @@ main.taxonomy-product-cat .intro-bracket {
     bottom: initial;
   }
 }
+main.taxonomy-product-cat .intro-v2h {
+  max-width: 398px;
+  width: 100%;
+  left: 0;
+  bottom: -70px;
+}
+@media screen and (max-width: 1024px) {
+  main.taxonomy-product-cat .intro-v2h {
+    width: 34%;
+    bottom: initial;
+  }
+}
 main.taxonomy-product-cat > .mv {
   height: 360px;
   background-repeat: no-repeat;
@@ -148,6 +173,21 @@ main.taxonomy-product-cat > .mv > .container > .ttlc > .prod-name {
 @media screen and (max-width: 768px) {
   main.taxonomy-product-cat > .mv > .container > .ttlc > .prod-name {
     font-size: 48px;
+  }
+}
+main.taxonomy-product-cat > .mv > .container > .ttlc > .prod-name > .txt-small {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.16em !important;
+}
+@media screen and (max-width: 1024px) {
+  main.taxonomy-product-cat > .mv > .container > .ttlc > .prod-name > .txt-small {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  main.taxonomy-product-cat > .mv > .container > .ttlc > .prod-name > .txt-small {
+    font-size: 14px;
   }
 }
 main.taxonomy-product-cat > .mv > .container > .ttlc > .ttl {
@@ -1150,19 +1190,6 @@ main.taxonomy-product-cat.bracket > .wall-surface > .container > .list > .item >
 main.taxonomy-product-cat.bracket > .wall-surface > .container > .list > .item > .img {
   margin-top: 30px;
 }
-main.taxonomy-product-cat.bracket > .wall-surface > .container > .btn {
-  color: white;
-  background: var(--col-navy);
-  width: 312px;
-  padding-block: 18px;
-  text-align: center;
-  margin-top: 120px;
-  margin-inline: auto;
-  border-radius: 30px;
-}
-main.taxonomy-product-cat.bracket > .wall-surface > .container > .btn:hover::after {
-  background: #3D7ABB;
-}
 main.taxonomy-product-cat.bracket > .wall-surface > .explanation {
   margin-top: 80px;
   padding: 40px 0;
@@ -1308,4 +1335,278 @@ main.taxonomy-product-cat.bracket .note > .txt {
   text-indent: -11px;
   padding-left: 11px;
   margin: 2px 0;
+}
+
+main.taxonomy-product-cat.v2h > .intro > .container {
+  max-width: 915px;
+}
+main.taxonomy-product-cat.v2h > .power-station > .container > .sec-ttl,
+main.taxonomy-product-cat.v2h > .tribrid > .container > .sec-ttl {
+  font-size: 32px;
+  font-weight: var(--fw-bold);
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  main.taxonomy-product-cat.v2h > .power-station > .container > .sec-ttl,
+  main.taxonomy-product-cat.v2h > .tribrid > .container > .sec-ttl {
+    font-size: 26px;
+  }
+}
+main.taxonomy-product-cat.v2h > .power-station > .container > .sec-ttl br,
+main.taxonomy-product-cat.v2h > .tribrid > .container > .sec-ttl br {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  main.taxonomy-product-cat.v2h > .power-station > .container > .sec-ttl br,
+  main.taxonomy-product-cat.v2h > .tribrid > .container > .sec-ttl br {
+    display: block;
+  }
+}
+main.taxonomy-product-cat.v2h > .power-station > .container > .sub-ttl,
+main.taxonomy-product-cat.v2h > .tribrid > .container > .sub-ttl {
+  font-size: 24px;
+  font-weight: var(--fw-bold);
+  text-align: center;
+  color: var(--col-navy);
+  padding-top: 30px;
+  margin-top: 30px;
+  border-top: 1px solid #999999;
+}
+@media screen and (max-width: 768px) {
+  main.taxonomy-product-cat.v2h > .power-station > .container > .sub-ttl,
+  main.taxonomy-product-cat.v2h > .tribrid > .container > .sub-ttl {
+    font-size: 16px;
+  }
+}
+main.taxonomy-product-cat.v2h > .power-station > .container > .img,
+main.taxonomy-product-cat.v2h > .tribrid > .container > .img {
+  margin-top: 54px;
+}
+@media screen and (max-width: 768px) {
+  main.taxonomy-product-cat.v2h > .power-station > .container > .img,
+  main.taxonomy-product-cat.v2h > .tribrid > .container > .img {
+    overflow-x: scroll;
+  }
+}
+@media screen and (max-width: 768px) {
+  main.taxonomy-product-cat.v2h > .power-station > .container > .img img,
+  main.taxonomy-product-cat.v2h > .tribrid > .container > .img img {
+    width: 850px;
+    max-width: initial;
+  }
+}
+main.taxonomy-product-cat.v2h > .power-station > .container .com-list,
+main.taxonomy-product-cat.v2h > .tribrid > .container .com-list {
+  display: grid;
+  gap: 20px;
+}
+main.taxonomy-product-cat.v2h > .power-station > .container .com-list .com-item,
+main.taxonomy-product-cat.v2h > .tribrid > .container .com-list .com-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media screen and (max-width: 768px) {
+  main.taxonomy-product-cat.v2h > .power-station > .container .com-list .com-item,
+  main.taxonomy-product-cat.v2h > .tribrid > .container .com-list .com-item {
+    gap: 10px;
+  }
+}
+main.taxonomy-product-cat.v2h > .power-station > .container .com-list .com-item .com-icon,
+main.taxonomy-product-cat.v2h > .tribrid > .container .com-list .com-item .com-icon {
+  max-width: 80px;
+  min-width: 80px;
+}
+@media screen and (max-width: 768px) {
+  main.taxonomy-product-cat.v2h > .power-station > .container .com-list .com-item .com-icon,
+  main.taxonomy-product-cat.v2h > .tribrid > .container .com-list .com-item .com-icon {
+    max-width: 60px;
+    min-width: 60px;
+  }
+}
+main.taxonomy-product-cat.v2h > .power-station > .container .com-list .com-item .com-txt,
+main.taxonomy-product-cat.v2h > .tribrid > .container .com-list .com-item .com-txt {
+  font-size: 20px;
+  font-weight: var(--fw-bold);
+}
+@media screen and (max-width: 768px) {
+  main.taxonomy-product-cat.v2h > .power-station > .container .com-list .com-item .com-txt,
+  main.taxonomy-product-cat.v2h > .tribrid > .container .com-list .com-item .com-txt {
+    font-size: 16px;
+  }
+}
+main.taxonomy-product-cat.v2h > .power-station > .container .note,
+main.taxonomy-product-cat.v2h > .tribrid > .container .note {
+  margin-bottom: 40px;
+}
+main.taxonomy-product-cat.v2h > .power-station > .container .note > .txt,
+main.taxonomy-product-cat.v2h > .tribrid > .container .note > .txt {
+  display: block;
+  font-weight: var(--fw-reg);
+  margin: 2px 0;
+}
+@media screen and (max-width: 1044px) {
+  main.taxonomy-product-cat.v2h > .power-station > .container .accordion,
+  main.taxonomy-product-cat.v2h > .tribrid > .container .accordion {
+    margin-top: 40px;
+  }
+}
+main.taxonomy-product-cat.v2h > .power-station > .container .accordion > .accordion-btn,
+main.taxonomy-product-cat.v2h > .tribrid > .container .accordion > .accordion-btn {
+  max-width: 484px;
+  width: 100%;
+  margin-left: auto;
+}
+@media screen and (max-width: 1044px) {
+  main.taxonomy-product-cat.v2h > .power-station > .container .accordion > .accordion-btn,
+  main.taxonomy-product-cat.v2h > .tribrid > .container .accordion > .accordion-btn {
+    margin-left: initial;
+    margin: auto;
+  }
+}
+main.taxonomy-product-cat.v2h > .power-station > .container .accordion > .accordion-content,
+main.taxonomy-product-cat.v2h > .tribrid > .container .accordion > .accordion-content {
+  margin: 40px 0;
+}
+@media screen and (max-width: 1044px) {
+  main.taxonomy-product-cat.v2h > .power-station > .container .accordion > .accordion-content,
+  main.taxonomy-product-cat.v2h > .tribrid > .container .accordion > .accordion-content {
+    overflow-x: scroll;
+  }
+}
+main.taxonomy-product-cat.v2h > .power-station > .container .accordion > .accordion-content table,
+main.taxonomy-product-cat.v2h > .tribrid > .container .accordion > .accordion-content table {
+  width: 1000px;
+  margin: 0;
+}
+main.taxonomy-product-cat.v2h > .power-station > .container .accordion > .accordion-content table tbody tr,
+main.taxonomy-product-cat.v2h > .tribrid > .container .accordion > .accordion-content table tbody tr {
+  border-bottom: initial;
+}
+main.taxonomy-product-cat.v2h > .power-station > .container .accordion > .accordion-content table tbody tr.b-text td,
+main.taxonomy-product-cat.v2h > .tribrid > .container .accordion > .accordion-content table tbody tr.b-text td {
+  font-weight: var(--fw-bold);
+}
+main.taxonomy-product-cat.v2h > .power-station > .container .accordion > .accordion-content table tbody tr td,
+main.taxonomy-product-cat.v2h > .tribrid > .container .accordion > .accordion-content table tbody tr td {
+  font-size: 14px;
+  font-weight: var(--fw-reg);
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+  padding: 10px 5px 10px 15px;
+  position: relative;
+}
+main.taxonomy-product-cat.v2h > .power-station > .container .accordion > .accordion-content table tbody tr td.separator::before,
+main.taxonomy-product-cat.v2h > .tribrid > .container .accordion > .accordion-content table tbody tr td.separator::before {
+  content: "";
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  background: #fff;
+  left: -2px;
+  top: 2px;
+}
+main.taxonomy-product-cat.v2h > .power-station {
+  padding-top: 120px;
+}
+main.taxonomy-product-cat.v2h > .power-station > .container > .ps-detailc {
+  margin-top: 60px;
+}
+main.taxonomy-product-cat.v2h > .power-station > .container > .ps-detailc > .ps-detail {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 118px;
+}
+@media screen and (max-width: 1044px) {
+  main.taxonomy-product-cat.v2h > .power-station > .container > .ps-detailc > .ps-detail {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main.taxonomy-product-cat.v2h > .power-station > .container > .ps-detailc > .ps-detail {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+}
+main.taxonomy-product-cat.v2h > .power-station > .container > .ps-detailc > .ps-detail > .img {
+  max-width: 312px;
+  width: 35%;
+}
+@media screen and (max-width: 768px) {
+  main.taxonomy-product-cat.v2h > .power-station > .container > .ps-detailc > .ps-detail > .img {
+    width: 100%;
+  }
+}
+main.taxonomy-product-cat.v2h > .power-station > .container > .more-btn {
+  display: block;
+  max-width: 484px;
+  width: 100%;
+  margin: 80px auto 0;
+}
+main.taxonomy-product-cat.v2h > .tribrid {
+  padding: 140px 0 120px;
+}
+main.taxonomy-product-cat.v2h > .tribrid > .container > .list {
+  margin-top: 60px;
+}
+main.taxonomy-product-cat.v2h > .tribrid > .container > .list > .item:not(:first-of-type) {
+  margin-top: 109px;
+}
+main.taxonomy-product-cat.v2h > .tribrid > .container > .list > .item > .tribrid-content {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 118px;
+}
+@media screen and (max-width: 1044px) {
+  main.taxonomy-product-cat.v2h > .tribrid > .container > .list > .item > .tribrid-content {
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main.taxonomy-product-cat.v2h > .tribrid > .container > .list > .item > .tribrid-content {
+    flex-direction: column;
+  }
+}
+main.taxonomy-product-cat.v2h > .tribrid > .container > .list > .item > .tribrid-content > .img {
+  max-width: 312px;
+  width: 65%;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  main.taxonomy-product-cat.v2h > .tribrid > .container > .list > .item > .tribrid-content > .img {
+    width: 100%;
+  }
+}
+main.taxonomy-product-cat.v2h > .tribrid > .container > .list > .item > .tribrid-content > .img > .txt {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  font-size: 14px;
+  font-weight: var(--fw-bold);
+}
+main.taxonomy-product-cat.v2h > .tribrid > .container > .list > .item > .tribrid-content > .meta {
+  max-width: 484px;
+  width: 100%;
+}
+main.taxonomy-product-cat.v2h > .tribrid > .container > .list > .item > .tribrid-content > .meta > .name {
+  font-size: 24px;
+  font-weight: var(--fw-bold);
+}
+@media screen and (max-width: 768px) {
+  main.taxonomy-product-cat.v2h > .tribrid > .container > .list > .item > .tribrid-content > .meta > .name {
+    font-size: 20px;
+  }
+}
+main.taxonomy-product-cat.v2h > .tribrid > .container > .list > .item > .tribrid-content > .meta > .type {
+  font-size: 16px;
+  color: #999999;
+  margin-top: 5px 0;
+}
+main.taxonomy-product-cat.v2h > .tribrid > .container > .list > .item > .tribrid-content > .meta > .com-list {
+  margin-top: 20px;
+  padding-top: 30px;
+  border-top: 1px solid #CCCCCC;
 }/*# sourceMappingURL=product-cat.css.map */
