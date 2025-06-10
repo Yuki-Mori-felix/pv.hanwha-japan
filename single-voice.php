@@ -1,5 +1,8 @@
 <?php
-
+/* 
+Template Name: お客様インタビュー(販売店) 
+Template Post Type: voice
+*/
 get_header(); ?>
 
 <div class="wrap">
@@ -9,14 +12,13 @@ get_header(); ?>
   </div>
 
   <div id="primary" class="content-area">
-    <main id="main" class="site-main">
+    <main id="main" class="single-voice template-store template-general">
 
-
-      <section class="single-voice">
+      <section class="single-voice-detail">
         <h2 class="section-title">お客様インタビュー</h2>
         <span class="section-title-en">USER INTERVIEW</span>
         <h3 class="voice-title">
-          <div class="wrap_s">北向きの屋根でも予想以上の発電を実現</div>
+          <div class="wrap_s"><?= get_field('voice_title'); ?></div>
         </h3>
         <div class="wrap_s">
           <div class="voice-detail">
@@ -33,22 +35,32 @@ get_header(); ?>
                 </div>
               </div>
               <ul class="status-list">
-                <li class="status-item">
-                  <div class="status-title">太陽光パネル</div>
-                  <div class="status-text">ダミーテキストダミーテキストダミーテキスト</div>
-                </li>
-                <li class="status-item">
-                  <div class="status-title">蓄電池</div>
-                  <div class="status-text">ダミーテキストダミーテキストダミーテキスト</div>
-                </li>
-                <li class="status-item">
-                  <div class="status-title">屋根の種類</div>
-                  <div class="status-text">ダミーテキストダミーテキストダミーテキスト</div>
-                </li>
-                <li class="status-item">
-                  <div class="status-title">販売店</div>
-                  <div class="status-text">ダミーテキストダミーテキストダミーテキスト</div>
-                </li>
+                <?php if (get_field('solar_panel')): ?>
+                  <li class="status-item">
+                    <div class="status-title">太陽光パネル</div>
+                    <div class="status-text"><?= get_field('solar_panel'); ?></div>
+                  </li>
+                <?php endif; ?>
+                <?php if (get_field('storage_battery')): ?>
+                  <li class="status-item">
+                    <div class="status-title">蓄電池</div>
+                    <div class="status-text"><?= get_field('storage_battery'); ?></div>
+                  </li>
+                <?php endif; ?>
+                <?php if (get_field('kind_of_roof')): ?>
+                  <li class="status-item">
+                    <div class="status-title">屋根の種類</div>
+                    <div class="status-text"><?= get_field('kind_of_roof'); ?></div>
+                  </li>
+                <?php endif; ?>
+                <?php if (get_field('store')): ?>
+                  <li class="status-item">
+                    <div class="status-title">販売店</div>
+                    <div class="status-text">
+                      <?= get_field('store', false, false); ?>
+                    </div>
+                  </li>
+                <?php endif; ?>
               </ul>
             </div>
           </div>
@@ -57,173 +69,81 @@ get_header(); ?>
       <!-- single-voice -->
 
       <section class="problem">
-        <div class="wrap">
-          <div class="wrap_s">
-            <div class="problem-titles">
-              <div class="problem-title">お客様の悩み</div>
-              <div class="problem-title">ハンファジャパンで<br>解決しました</div>
-            </div>
-            <div class="problem-content">
-              <ul class="problem-list">
-                <li class="problem-item">ダミーテキストダミーテキストダミーテキスト</li>
-                <li class="problem-item">ダミーテキストダミーテキストダミーテキスト</li>
-              </ul>
-              <ul class="problem-list">
-                <li class="problem-item">ダミーテキストダミーテキストダミーテキスト</li>
-                <li class="problem-item">ダミーテキストダミーテキストダミーテキスト</li>
-                <li class="problem-item">ダミーテキストダミーテキストダミーテキスト</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- problem-area -->
-
-      <section class="inspiration">
-        <div class="single-voice-title-area">
-          <div class="wrap">
-            <div class="wrap_s">
-              <h3 class="single-voice-title">導入を決めた<span class="bold">きっかけ</span></h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="inspiration-content">
-          <div class="inspiration-background">
-            <div class="wrap_s">
-              <div class="inspiration-textarea">
-                <h4 class="inspiration-title">ダミーテキスト<br>ダミーテキスト</h4>
-                <p class="inspiration-text">
-                  ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
-                </p>
+        <div class="sv-wrap">
+          <div class="prob-content">
+            <div class="prob-item customer">
+              <div class="prob-ttl">お客様の悩み</div>
+              <div class="prob-img">
+                <img src="" alt="">
               </div>
-              <div class="inspiration-img">
-                <img src="<?= get_stylesheet_directory_uri() ?>/images/voice/house.png" alt="">
-              </div>
+              <?= get_field('customer_concerns', $post_id, false) ?>
             </div>
-          </div>
-
-          <div class="inspiration-background">
-            <div class="wrap_s">
-              <div class="inspiration-img">
-                <img src="<?= get_stylesheet_directory_uri() ?>/images/voice/house.png" alt="">
+            <div class="prob-arrow">
+              <p class="prob-arrow-part part-1"></p>
+              <p class="prob-arrow-part part-2"></p>
+            </div>
+            <div class="prob-item solution">
+              <div class="prob-ttl">ハンファジャパンで<br>解決しました</div>
+              <div class="prob-img">
+                <img src="" alt="">
               </div>
-              <div class="inspiration-textarea">
-                <h4 class="inspiration-title">ダミーテキスト<br>ダミーテキスト</h4>
-                <p class="inspiration-text">
-                  ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
-                </p>
-              </div>
+              <?= get_field('solution', $post_id, false) ?>
             </div>
           </div>
         </div>
       </section>
-      <!-- inspiration -->
+      <!-- problem -->
 
-
-      <section class="benefit">
-        <div class="single-voice-title-area">
-          <div class="wrap">
-            <div class="wrap_s">
-              <h3 class="single-voice-title">導入後の<span class="bold">変化</span></h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="benefit-content">
-          <div class="benefit-background">
-            <div class="wrap_s">
-              <div class="benefit-textarea">
-                <h4 class="benefit-title">ダミーテキスト<br>ダミーテキスト</h4>
-                <p class="benefit-text">
-                  ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
-                </p>
-              </div>
-              <div class="benefit-img">
-                <img src="<?= get_stylesheet_directory_uri() ?>/images/voice/house.png" alt="">
-              </div>
-            </div>
-          </div>
-
-          <div class="benefit-background">
-            <div class="wrap_s">
-              <div class="benefit-img">
-                <img src="<?= get_stylesheet_directory_uri() ?>/images/voice/house.png" alt="">
-              </div>
-              <div class="benefit-textarea">
-                <p class="benefit-text">
-                  ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- benefit -->
-
-
-      <section class="message">
-        <div class="single-voice-title-area">
-          <div class="wrap">
-            <div class="wrap_s">
-              <h3 class="single-voice-title">ご検討中の方に<span class="bold">伝えたいこと</span></h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="message-content">
-          <div class="message-background">
-            <div class="wrap_s">
-              <div class="message-textarea">
-                <h4 class="message-title">ダミーテキスト<br>ダミーテキスト</h4>
-                <p class="message-text">
-                  ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
-                </p>
-              </div>
-              <div class="message-img">
-                <img src="<?= get_stylesheet_directory_uri() ?>/images/voice/house.png" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- message -->
-
+      <?= get_field('main_content', false, false); ?>
+      <!-- WHY, CHANGES, MESSAGE -->
 
       <section class="store-info">
         <h2 class="section-title">販売店情報</h2>
         <div class="wrap">
           <div class="wrap_s">
-            <div class="store-info-title">ダミーテキストダミーテキストダミーテキスト</div>
+            <div class="store-info-title"><?= get_field('title'); ?></div>
             <div class="store-info-content">
-              <div class="store-info-img"><img src="<?= get_stylesheet_directory_uri() ?>/images/test.png" alt=""></div>
+              <div class="store-info-img"><img src="<?= get_field('logo')['url']; ?>" alt=""></div>
               <div class="store-info-textarea">
-                <div class="company-name">新エネルギーシステム株式会社</div>
-                <div class="location"><img src="<?= get_stylesheet_directory_uri() ?>/images/location.svg" alt="">〒031-00012 青森県八戸市十日市字登手2-1</div>
-                <div class="tel"><img src="<?= get_stylesheet_directory_uri() ?>/images/phone.svg" alt="">0178-51-6091</div>
-                <div class="site"><img src="<?= get_stylesheet_directory_uri() ?>/images/language.svg" alt=""><a href="https://google.com" class="site-link" target="_blank">https://google.com</a></div>
+                <div class="company-name"><?= get_field('company'); ?></div>
+                <div class="location"><img src="<?= get_stylesheet_directory_uri() ?>/images/location.svg" alt="">〒<?= get_field('address'); ?></div>
+                <div class="tel"><img src="<?= get_stylesheet_directory_uri() ?>/images/phone.svg" alt=""><?= get_field('tel'); ?></div>
+                <div class="site"><img src="<?= get_stylesheet_directory_uri() ?>/images/language.svg" alt=""><a href="<?= get_field('url'); ?>" class="site-link" target="_blank"><?= get_field('url'); ?></a></div>
                 <div class="sns-icons">
-                  <a href="#" class="sns-link">
-                    <img src="<?= get_stylesheet_directory_uri() ?>/images/facebook_icon.png" alt="" class="sns-icon">
-                  </a>
-                  <a href="#" class="sns-link">
-                    <img src="<?= get_stylesheet_directory_uri() ?>/images/instagram_icon.png" alt="" class="sns-icon">
-                  </a>
-                  <a href="#" class="sns-link">
-                    <img src="<?= get_stylesheet_directory_uri() ?>/images/x_icon.png" alt="" class="sns-icon">
-                  </a>
-                  <a href="#" class="sns-link">
-                    <img src="<?= get_stylesheet_directory_uri() ?>/images/line_icon.png" alt="" class="sns-icon">
-                  </a>
+                  <?php if (get_field('link_1')): ?>
+                    <a href="<?= get_field('link_1'); ?>" class="sns-link" target="_blank">
+                      <img src="<?= get_stylesheet_directory_uri() ?>/images/facebook_icon.png" alt="" class="sns-icon">
+                    </a>
+                  <?php endif; ?>
+                  <?php if (get_field('link_2')): ?>
+                    <a href="<?= get_field('link_2'); ?>" class="sns-link" target="_blank">
+                      <img src="<?= get_stylesheet_directory_uri() ?>/images/instagram_icon.png" alt="" class="sns-icon">
+                    </a>
+                  <?php endif; ?>
+                  <?php if (get_field('link_3')): ?>
+                    <a href="<?= get_field('link_3'); ?>" class="sns-link" target="_blank">
+                      <img src="<?= get_stylesheet_directory_uri() ?>/images/x_icon.png" alt="" class="sns-icon">
+                    </a>
+                  <?php endif; ?>
+                  <?php if (get_field('link_4')): ?>
+                    <a href="<?= get_field('link_4'); ?>" class="sns-link" target="_blank">
+                      <img src="<?= get_stylesheet_directory_uri() ?>/images/line_icon.png" alt="" class="sns-icon">
+                    </a>
+                  <?php endif; ?>
                 </div>
               </div>
             </div>
-            <div class="store-info-detail">
+            <?= get_field('store_content', false, false); ?>
+            <!-- <div class="store-info-detail">
               <div class="store-info-detail-img">
-                <img src="<?= get_stylesheet_directory_uri() ?>/images/voice/test.png" alt="">
-                <div class="img-info">ダミーテキスト</div>
-                <img src="<?= get_stylesheet_directory_uri() ?>/images/voice/test.png" alt="">
-                <div class="img-info">ダミーテキスト</div>
+                <div class="img-wrap">
+                  <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/test.png" alt="">
+                  <div class="img-info">ダミーテキスト</div>
+                </div>
+                <div class="img-wrap">
+                  <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/test.png" alt="">
+                  <div class="img-info">ダミーテキスト</div>
+                </div>
               </div>
               <div class="store-info-detail-text">
                 <p>
@@ -243,7 +163,7 @@ get_header(); ?>
 
             <div class="green-alliance">
               <div class="green-alliance-logo">
-                <img src="<?= get_stylesheet_directory_uri() ?>/images/voice/logo.png" alt="">
+                <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/green-logo.png" alt="">
               </div>
               <div class="green-alliance-textarea">
                 <div class="green-alliance-title">グリーンアライアンス加盟店</div>
@@ -252,16 +172,11 @@ get_header(); ?>
                 </p>
                 <a href="#" class="green-alliance-link" target="_blank" rel="noopener noreferrer">詳しくはこちら</a>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
       <!-- store-info -->
-
-
-
-
-
 
     </main><!-- #main -->
   </div><!-- #primary -->
