@@ -141,6 +141,38 @@ function add_custom_post()
       'show_in_rest' => true,
     )
   );
+
+
+	/* ニュース */
+
+	register_post_type(
+		'news',
+		array(
+			'label' => 'ニュース',
+			'public' => true,
+			'has_archive' => true,
+			'show_in_rest' => true,
+			'menu_position' => 5,
+			'supports' => array(
+				'title',
+				'thumbnail',
+				'revisions',
+				'excerpt',
+				'custom-fields',
+			)
+		)
+	);
+
+	register_taxonomy(
+    'news-post-format',
+    'news',
+    array(
+      'label' => 'カテゴリー',
+      'hierarchical' => true,
+      'public' => true,
+      'show_in_rest' => true,
+    )
+  );
 }
 add_action('init', 'add_custom_post');
 
@@ -639,3 +671,42 @@ function hide_editor_for_specific_pages() {
     }
 }
 add_action('admin_head', 'hide_editor_for_specific_pages');
+
+
+/*------------------------------------------
+	ショートコード
+------------------------------------------*/
+
+if (!function_exists('my_header_news_shortcode')) {
+	//ヘッダー内ニュース用
+	function my_header_news_shortcode(){
+		$result = "";
+
+		$args = array(
+			'post_type'      => 'news',
+			'posts_per_page' => 3,
+			'post_status' => 'publish',
+			'orderby', ['date' => 'ASC'],
+		);
+	
+		$news_query = new WP_Query($args);
+
+		if ($news_query->have_posts()){
+			while($news_query->have_posts()) : $news_query->the_post();
+
+			$terms = get_the_terms(get_the_ID(), 'news-post-format');
+			$result .= '<a href="'.get_the_permalink().'" class="my-news-link">
+									<div class="my-news-img">
+										'.get_the_post_thumbnail().'
+									</div>
+									<p class="my-news-date">'.get_the_date('Y.m.d').'　'.$terms[0]->name.'</p>
+									<p class="my-news-title">'.get_the_title().'</p>
+								</a>';
+
+			endwhile; wp_reset_postdata();
+		}
+
+		return $result;
+	}
+	add_shortcode( 'header-news', 'my_header_news_shortcode' );
+}
