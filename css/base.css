@@ -2228,6 +2228,9 @@ header#masthead #mega-menu-wrap-top #mega-menu-top > li.mega-menu-item ul.mega-s
 header#masthead #mega-menu-wrap-top #mega-menu-top > li.mega-menu-item.my-mega-menu-contact {
   background: linear-gradient(to right, #3366aa, #284d81);
 }
+header#masthead #mega-menu-wrap-top #mega-menu-top > li.mega-menu-item.my-mega-menu-contact:hover a.mega-menu-link {
+  color: #3366aa;
+}
 header#masthead #mega-menu-wrap-top #mega-menu-top > li.mega-menu-item.my-mega-menu-contact a.mega-menu-link {
   color: #fff;
 }
@@ -2253,6 +2256,7 @@ header#masthead #mega-menu-wrap-top #mega-menu-top > li.mega-menu-item.my-mega-m
 }
 header#masthead #mega-menu-wrap-top #mega-menu-top > li.mega-menu-item.my-mega-menu-contact ul.mega-sub-menu .link-v2 {
   display: block;
+  width: fit-content;
   font-size: 12px;
   font-weight: 300;
   line-height: 1.4;
@@ -2311,38 +2315,42 @@ header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row
 header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row a.my-sub-menu-title:hover::before {
   border-color: #3366aa;
 }
-header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row .my-sub-menu-grid .img {
+header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row a.my-sub-menu-grid {
+  display: block;
+  min-height: 187px;
+}
+header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row a.my-sub-menu-grid .img {
   overflow: hidden;
   width: 100%;
   aspect-ratio: 226/140;
   background-color: #fafafa;
 }
-header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row .my-sub-menu-grid .img img {
+header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row a.my-sub-menu-grid .img img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   object-position: center;
   transition: transform 0.3s;
 }
-header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row .my-sub-menu-grid p {
+header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row a.my-sub-menu-grid p {
   margin: 10px 0 0;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
 }
-header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row .my-sub-menu-grid:hover .img img {
+header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row a.my-sub-menu-grid:hover .img img {
   transform: scale(1.1);
 }
-header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row .my-sub-menu-grid:hover p {
+header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row a.my-sub-menu-grid:hover p {
   opacity: 1;
   color: #3366aa;
   font-weight: 600;
 }
-header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row .my-sub-menu-grid.external p {
+header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row a.my-sub-menu-grid.external p {
   position: relative;
   padding-right: 15px;
 }
-header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row .my-sub-menu-grid.external p::before {
+header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row a.my-sub-menu-grid.external p::before {
   content: "";
   position: absolute;
   right: 0;

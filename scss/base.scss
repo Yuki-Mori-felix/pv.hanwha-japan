@@ -2322,6 +2322,11 @@ header#masthead {
 			}
 			&.my-mega-menu-contact {
 				background: linear-gradient(to right, $blue, #284d81);
+				&:hover {
+					a.mega-menu-link {
+						color: $blue;
+					}
+				}
 				a.mega-menu-link {
 					color: #fff;
 					&:hover {
@@ -2344,6 +2349,7 @@ header#masthead {
 					}
 					.link-v2 {
 						display: block;
+						width: fit-content;
 						font-size: 12px;
 						font-weight: 300;
 						line-height: 1.4;
@@ -2406,7 +2412,9 @@ header#masthead {
 						}
 					}
 				}
-				.my-sub-menu-grid {
+				a.my-sub-menu-grid {
+					display: block;
+					min-height: 187px;
 					.img {
 						overflow: hidden;
 						width: 100%;
