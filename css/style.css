@@ -2258,7 +2258,7 @@ header#masthead #mega-menu-wrap-top #mega-menu-top > li.mega-menu-item.my-mega-m
   display: block;
   width: fit-content;
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.4;
 }
 header#masthead #mega-menu-wrap-top #mega-menu-top > li.mega-menu-item.my-mega-menu-contact ul.mega-sub-menu .link-v2:hover {
@@ -2433,6 +2433,7 @@ header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row
   display: inline-block;
   max-width: 220px;
   width: 100%;
+  vertical-align: top;
 }
 header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row .my-news-sec .my-news-link + .my-news-link {
   margin-left: 20px;
