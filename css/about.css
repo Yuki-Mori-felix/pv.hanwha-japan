@@ -1,7 +1,7 @@
 .about .section-back {
   position: relative;
   z-index: 0;
-  padding-block: 90px 160px;
+  padding-block: 120px 80px;
 }
 .about .section-back::before {
   content: "";
@@ -19,7 +19,7 @@
   content: "";
   position: absolute;
   z-index: -1;
-  top: 72px;
+  top: 120px;
   left: -18px;
   writing-mode: vertical-lr;
   font-size: 120px;
@@ -37,12 +37,16 @@
     width: 60px;
   }
 }
+.about .section-back:has(.hanwha) {
+  padding-block: 80px;
+}
 .about .section-back:has(.hanwha)::before {
   background-image: url(../images/about/Hanwha_Building_BG.jpg);
 }
 .about .section-back:has(.hanwha)::after {
   background-image: url(../images/about/Hanwha.svg);
   height: 100%;
+  top: 80px;
   left: 0;
 }
 .about .section-back .section-title-area {
@@ -129,7 +133,7 @@
 }
 .about .section-back .wrap_s .hanwha-japan-detail .text-area {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
 }
 @media screen and (max-width: 768px) {
   .about .section-back .wrap_s .hanwha-japan-detail .text-area {
@@ -155,7 +159,7 @@
 .about .section-back .wrap_s .hanwha-list li .icon {
   width: fit-content;
   height: fit-content;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .about .section-back .wrap_s .hanwha-list li .icon img {
   width: 60px;
@@ -167,6 +171,9 @@
   line-height: 1;
   color: #ee7744;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
 }
 .about .section-back .wrap_s .hanwha-list li .num-text .num {
   font-size: 60px;
