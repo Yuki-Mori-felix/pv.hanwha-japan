@@ -2351,7 +2351,7 @@ header#masthead {
 						display: block;
 						width: fit-content;
 						font-size: 12px;
-						font-weight: 300;
+						font-weight: 400;
 						line-height: 1.4;
 						&:hover {
 							opacity: 1;
@@ -2530,6 +2530,7 @@ header#masthead {
 						display: inline-block;
 						max-width: 220px;
 						width: 100%;
+						vertical-align: top;
 						& + .my-news-link {
 							margin-left: 20px;
 							@include max($header-bp) {
