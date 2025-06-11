@@ -24,66 +24,70 @@ get_header();
   <!-- // TOP -->
   <section class="download">
     <div class="container">
-      <ul class="list">
-        <li class="item">
+      <ul class="cat-list">
+        <li class="cat-item">
           <h3 class="name">Qcells住宅用カタログ</h3>
           <p class="year">2024年版</p>
-          <div class="img"><img src="<?=get_img_path()?>/contact/catalog-qcells-2024.png" alt=""></div>
+          <div class="img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/catalog-qcells-2024.png" alt=""></div>
           <p class="module">メインモジュール</p>
           <p class="series">Q.TRON-G2.4+シリーズ</p>
           <a href="" class="link web" target="_blank" rel="noopener noreferrer">WEBカタログ</a>
           <a href="" class="link pdf" target="_blank" rel="noopener noreferrer"><span class="inner">PDF</span></a>
         </li>
-        <li class="item">
+        <li class="cat-item">
           <h3 class="name">Qcells住宅用カタログ</h3>
           <p class="year">2023年10月版</p>
-          <div class="img"><img src="<?=get_img_path()?>/contact/catalog-qcells-202310.png" alt=""></div>
+          <div class="img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/catalog-qcells-202310.png" alt=""></div>
           <p class="module">メインモジュール</p>
           <p class="series">Q.PEAK DUO-G11シリーズ</p>
           <a href="" class="link web" target="_blank" rel="noopener noreferrer">WEBカタログ</a>
           <a href="" class="link pdf" target="_blank" rel="noopener noreferrer"><span class="inner">PDF</span></a>
         </li>
-        <li class="item">
+        <li class="cat-item">
           <h3 class="name">Qcells住宅用カタログ</h3>
           <p class="year">2023年6月版</p>
-          <div class="img"><img src="<?=get_img_path()?>/contact/catalog-qcells-202306.png" alt=""></div>
+          <div class="img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/catalog-qcells-202306.png" alt=""></div>
           <p class="module">メインモジュール</p>
           <p class="series">Q.PEAK DUO-G11Sシリーズ</p>
           <a href="" class="link web" target="_blank" rel="noopener noreferrer">WEBカタログ</a>
           <a href="" class="link pdf" target="_blank" rel="noopener noreferrer"><span class="inner">PDF</span></a>
         </li>
-        <li class="item">
+      </ul>
+      <ul class="cat-list">
+        <li class="cat-item">
           <h3 class="name">Re.RISE®住宅用カタログ</h3>
           <p class="year">2024年版</p>
-          <div class="img"><img src="<?=get_img_path()?>/contact/catalog-rerise-2024.png" alt=""></div>
+          <div class="img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/catalog-rerise-2024.png" alt=""></div>
           <p class="module">メインモジュール</p>
           <p class="series">Re.RISE-G3シリーズ</p>
           <a href="" class="link web" target="_blank" rel="noopener noreferrer">WEBカタログ</a>
           <a href="" class="link pdf" target="_blank" rel="noopener noreferrer"><span class="inner">PDF</span></a>
         </li>
-        <li class="item">
+        <li class="cat-item">
           <h3 class="name">Q.READYカタログ</h3>
           <p class="year">2024年版</p>
-          <div class="img"><img src="<?=get_img_path()?>/contact/catalog-qready-2024.png" alt=""></div>
+          <div class="img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/catalog-qready-2024.png" alt=""></div>
           <a href="" class="link web" target="_blank" rel="noopener noreferrer">WEBカタログ</a>
           <a href="" class="link pdf" target="_blank" rel="noopener noreferrer"><span class="inner">PDF</span></a>
         </li>
-        <li class="item">
+        <li class="cat-item">
           <h3 class="name">Q.TRONカタログ</h3>
           <p class="year">2023年版</p>
-          <div class="img"><img src="<?=get_img_path()?>/contact/catalog-qtron-2023.png" alt=""></div>
-          <a href="" class="link web" target="_blank" rel="noopener noreferrer">WEBカタログ</a>
-          <a href="" class="link pdf" target="_blank" rel="noopener noreferrer"><span class="inner">PDF</span></a>
-        </li>
-        <li class="item">
-          <h3 class="name">産業用カタログ</h3>
-          <p class="year">2021年版</p>
-          <div class="img"><img src="<?=get_img_path()?>/contact/catalog-industrial-2021.png" alt=""></div>
+          <div class="img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/catalog-qtron-2023.png" alt=""></div>
           <a href="" class="link web" target="_blank" rel="noopener noreferrer">WEBカタログ</a>
           <a href="" class="link pdf" target="_blank" rel="noopener noreferrer"><span class="inner">PDF</span></a>
         </li>
       </ul>
-      <div class="note">
+      <ul class="cat-list">
+        <li class="cat-item">
+          <h3 class="name">産業用カタログ</h3>
+          <p class="year">2021年版</p>
+          <div class="img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/catalog-industrial-2021.png" alt=""></div>
+          <a href="" class="link web" target="_blank" rel="noopener noreferrer">WEBカタログ</a>
+          <a href="" class="link pdf" target="_blank" rel="noopener noreferrer"><span class="inner">PDF</span></a>
+        </li>
+      </ul>
+      <div class="cat-note">
         <p class="txt txt-bol">
           ※各種資料ダウンロードは<a href="" class="link">Q.PARTNERS</a>ページにてダウンロードできます。お探しの資料がない場合は、お問い合わせを通じてご申請ください。
         </p>
