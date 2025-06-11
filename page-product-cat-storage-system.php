@@ -137,6 +137,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         $args = array(
           'post_type'      => 'product',
           'posts_per_page' => -1,
+          'post_status' => 'publish',
           'tax_query'      => array(
             array(
               'taxonomy' => 'product-cat',
