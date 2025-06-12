@@ -712,11 +712,16 @@ if (!function_exists('my_header_news_shortcode')) {
 	add_shortcode( 'header-news', 'my_header_news_shortcode' );
 }
 
+/*------------------------------------------
+	カタログ請求 フォーム内のカタログ部数選択
+  バリデーション一部カスタム
+------------------------------------------*/
+
 add_filter('wpcf7_validate_number', 'validate_catalog_group', 20, 2);
 
 function validate_catalog_group($result, $tag) {
   $tag_name = $tag['name'];
-  $catalog_fields = ['cat-noc-1', 'cat-noc-2', 'cat-noc-3', 'cat-noc-4', 'cat-noc-5'];
+  $catalog_fields = ['cat-noc-1', 'cat-noc-2', 'cat-noc-3', 'cat-noc-4', 'cat-noc-5']; // カタログ部数の全項目
 
   // 初回だけ、全体チェックを走らせる
   if ($tag_name === $catalog_fields[0]) {
@@ -728,7 +733,7 @@ function validate_catalog_group($result, $tag) {
         break;
       }
     }
-    if (!$filled) {
+    if (!$filled) { // グループ内に1つも値が入ってなければ、cat-noc-1にエラーが出るようにする
       $result->invalidate($tag, '');
     }
   }
