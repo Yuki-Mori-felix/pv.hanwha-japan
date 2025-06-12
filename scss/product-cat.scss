@@ -15,9 +15,6 @@ main.taxonomy-product-cat {
 	--col-black: #333;
 	// ここまで 変数
 	// main内 共通
-  &:not(.fas) { // font-awesome以外に適用
-    font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-  }
 	p,
 	h2,
 	h3,
