@@ -711,3 +711,27 @@ if (!function_exists('my_header_news_shortcode')) {
 	}
 	add_shortcode( 'header-news', 'my_header_news_shortcode' );
 }
+
+add_filter('wpcf7_validate_number', 'validate_catalog_group', 20, 2);
+
+function validate_catalog_group($result, $tag) {
+  $tag_name = $tag['name'];
+  $catalog_fields = ['cat-noc-1', 'cat-noc-2', 'cat-noc-3', 'cat-noc-4', 'cat-noc-5'];
+
+  // 初回だけ、全体チェックを走らせる
+  if ($tag_name === $catalog_fields[0]) {
+    $filled = false;
+    foreach ($catalog_fields as $field) {
+      $val = isset($_POST[$field]) ? trim($_POST[$field]) : '';
+      if ($val !== '' && is_numeric($val)) {
+        $filled = true;
+        break;
+      }
+    }
+    if (!$filled) {
+      $result->invalidate($tag, '');
+    }
+  }
+
+  return $result;
+}
