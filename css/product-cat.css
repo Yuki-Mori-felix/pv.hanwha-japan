@@ -9,9 +9,6 @@ main.taxonomy-product-cat {
   --col-gray: #ccc;
   --col-black: #333;
 }
-main.taxonomy-product-cat:not(.fas) {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-}
 main.taxonomy-product-cat p,
 main.taxonomy-product-cat h2,
 main.taxonomy-product-cat h3,
