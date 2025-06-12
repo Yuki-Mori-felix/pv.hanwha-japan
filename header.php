@@ -129,7 +129,7 @@
   <?php wp_body_open(); ?>
 
   <header id="masthead" class="site-header">
-
+    <?php get_search_form(); ?>
 		
 		<div class="masthead-top">
 			<ul class="mht-list">
