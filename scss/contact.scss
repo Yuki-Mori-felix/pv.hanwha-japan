@@ -549,6 +549,7 @@ main.contact {
       }
       .wpcf7-not-valid-tip {
         margin-top: 5px;
+        font-size: 14px;
       }
       .wpcf7-list-item {
         margin-left: initial;
@@ -902,6 +903,10 @@ main.contact.contact-catalog {
             margin-bottom: 40px;
           }
         }
+        .catalog-err-msg {
+          display: none;
+          text-align: center;
+        }
         .cat-list {
           gap: 40px 32px;
           padding-bottom: 20px;
@@ -1000,6 +1005,13 @@ main.contact.contact-catalog {
                       width: 2px;
                       height: 12px;
                     }
+                  }
+                  .wpcf7-not-valid-tip {
+                    position: absolute;
+                    width: 235px;
+                    left: -25px;
+                    font-size: 14px;
+                    text-align: left;
                   }
                 }
               }

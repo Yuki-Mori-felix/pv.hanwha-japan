@@ -44,7 +44,17 @@ window.addEventListener("DOMContentLoaded", function() {
       const incBtn = group.querySelector(".increment");
       const decBtn = group.querySelector(".decrement");
 
-      incBtn.addEventListener("click", () => {
+      input.addEventListener("change", () => { // 直接入力
+        if (input.value !== '') {
+          group.parentElement.classList.add("choose");
+        } else {
+          group.parentElement.classList.remove("choose");
+        }
+
+        catalogNumCheck();
+      })
+
+      incBtn.addEventListener("click", () => { // プラスボタン
         let current = parseInt(input.value) || 0;
         let max = parseInt(input.max) || 9999;
         let step = parseInt(input.step) || 1;
@@ -56,7 +66,7 @@ window.addEventListener("DOMContentLoaded", function() {
         catalogNumCheck();
       });
 
-      decBtn.addEventListener("click", () => {
+      decBtn.addEventListener("click", () => { // マイナスボタン
         let current = parseInt(input.value) || 0;
         let step = parseInt(input.step) || 1;
         if (current <= 1) {
@@ -88,4 +98,30 @@ window.addEventListener("DOMContentLoaded", function() {
       }
     }
   }
+
+  // CF7 エラーメッセージが出ている箇所までスクロールさせる
+  document.addEventListener('wpcf7invalid', function (event) {
+    const form = event.target;
+
+    setTimeout(() => {
+      const catA = form.querySelector('input[name="cat-noc-1"]');
+      const catalogErrorMsg = form.querySelector('.catalog-err-msg');
+      const defaultErrorMsg = form.querySelector('.input-address .wpcf7-not-valid');
+      const catAHasError = catA && catA.classList.contains('wpcf7-not-valid'); // catAにエラーがあるか
+
+      if (catAHasError) {
+        // catA にエラー → エラーメッセージ表示＋スクロール
+        catalogErrorMsg.style.display = 'block';
+        catalogErrorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        // catA にエラーがない → エラーメッセージ非表示
+        catalogErrorMsg.style.display = 'none';
+
+        if (defaultErrorMsg) {
+          // 他の項目にエラー → そこにスクロール
+          defaultErrorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+    }, 100);
+  });
 });

@@ -527,6 +527,7 @@ main.contact > .sec-form .form .form-btn .submit-btn {
 }
 main.contact > .sec-form .form .wpcf7-not-valid-tip {
   margin-top: 5px;
+  font-size: 14px;
 }
 main.contact > .sec-form .form .wpcf7-list-item {
   margin-left: initial;
@@ -873,6 +874,10 @@ main.contact.contact-catalog > .sec-form .choices-catalog > .container > .txt {
     margin-bottom: 40px;
   }
 }
+main.contact.contact-catalog > .sec-form .choices-catalog > .container .catalog-err-msg {
+  display: none;
+  text-align: center;
+}
 main.contact.contact-catalog > .sec-form .choices-catalog > .container .cat-list {
   gap: 40px 32px;
   padding-bottom: 20px;
@@ -981,6 +986,13 @@ main.contact.contact-catalog > .sec-form .choices-catalog > .container .cat-list
   background-color: #fff;
   width: 2px;
   height: 12px;
+}
+main.contact.contact-catalog > .sec-form .choices-catalog > .container .cat-list .cat-item .cat-num .noc-wrap p .wpcf7-not-valid-tip {
+  position: absolute;
+  width: 235px;
+  left: -25px;
+  font-size: 14px;
+  text-align: left;
 }
 main.contact.contact-catalog > .sec-form .input-address {
   padding-top: 100px;
