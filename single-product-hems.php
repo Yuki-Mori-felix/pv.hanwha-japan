@@ -246,7 +246,8 @@ $img_path = get_stylesheet_directory_uri() . "/images";
 
             // 比較対象の投稿がある場合のみ設定（null回避）
             if (!empty($available_post_ids)) {
-              $default_compare_post_id = $available_post_ids[0]; // 最初の比較対象をデフォルトに
+              // $default_compare_post_id = $available_post_ids[0]; // 最初の比較対象をデフォルトに
+              $default_compare_post_id = 852; // Cube Jの投稿ID
             }
 
             // 比較対象の投稿の画像を取得

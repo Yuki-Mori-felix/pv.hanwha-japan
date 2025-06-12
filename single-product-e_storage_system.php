@@ -315,7 +315,11 @@ $img_path = get_stylesheet_directory_uri() . "/images";
 
             // 比較対象の投稿がある場合のみ設定（null回避）
             if (!empty($available_post_ids)) {
-              $default_compare_post_id = $available_post_ids[0]; // 最初の比較対象をデフォルトに
+              // $default_compare_post_id = $available_post_ids[0]; // 最初の比較対象をデフォルトに
+              $default_compare_post_id = 2119; // Q.READY-B97-1の投稿ID
+
+              // 比較製品が設定されていない場合は最新の投稿を対象に設定
+              // $default_compare_post_id = !empty(get_field('compare_product')) ? get_field('compare_product') : $available_post_ids[0];
             }
 
             // 比較対象の投稿の画像を取得
