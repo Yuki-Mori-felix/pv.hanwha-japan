@@ -413,9 +413,10 @@ main.single-products {
 				}
 				.product-name {
 					margin-top: 20px;
-					font-family: "Figtree", serif !important;
+					font-family: "Figtree", "Noto Sans JP" !important;
 					font-size: 48px;
 					font-weight: var(--fw-bold);
+          line-height: 1.2;
 					@include max {
 						font-size: 30px;
 					}
@@ -1083,6 +1084,9 @@ main.single-products {
 							font-weight: var(--fw-bold);
 							-webkit-appearance: none; /* ベンダープレフィックス(Google Chrome、Safari用) */
 							-moz-appearance: none; /* ベンダープレフィックス(Firefox用) */
+              white-space: pre-wrap;
+              line-height: 1.3;
+              font-size: clamp(0.875rem, 0.826rem + 0.22vw, 1rem);
 							&::-ms-expand {
 								display: none; /* select要素のデザインを無効にする（IE用） */
 							}
@@ -1706,7 +1710,7 @@ main.power_conditioner {
 		display: inline-block;
 		width: 100%;
 		height: $height;
-		background-color: plum;
+		// background-color: plum;
 	}
 	--compare-section-gradation: linear-gradient(to bottom, #999999, #fff);
 	section.overview {

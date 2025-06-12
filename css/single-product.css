@@ -390,9 +390,10 @@ main.single-products section.overview .wrapper > .right .format {
 }
 main.single-products section.overview .wrapper > .right .product-name {
   margin-top: 20px;
-  font-family: "Figtree", serif !important;
+  font-family: "Figtree", "Noto Sans JP" !important;
   font-size: 48px;
   font-weight: var(--fw-bold);
+  line-height: 1.2;
 }
 @media screen and (max-width: 768px) {
   main.single-products section.overview .wrapper > .right .product-name {
@@ -1112,6 +1113,9 @@ main.single-products section.compare .wrapper .product .item .name .select-produ
   font-weight: var(--fw-bold);
   -webkit-appearance: none; /* ベンダープレフィックス(Google Chrome、Safari用) */
   -moz-appearance: none; /* ベンダープレフィックス(Firefox用) */
+  white-space: pre-wrap;
+  line-height: 1.3;
+  font-size: clamp(0.875rem, 0.826rem + 0.22vw, 1rem);
 }
 main.single-products section.compare .wrapper .product .item .name .select-product-name::-ms-expand {
   display: none; /* select要素のデザインを無効にする（IE用） */
@@ -1740,7 +1744,6 @@ main.power_conditioner section.overview .pcs-banner img {
   display: inline-block;
   width: 100%;
   height: 100px;
-  background-color: plum;
 }
 main.power_conditioner section.feature .feature_list .item:last-child {
   padding-bottom: 100px;
@@ -1773,7 +1776,6 @@ main.power_conditioner section.feature .feature_list .item .primary-2 .primary-2
   display: inline-block;
   width: 100%;
   height: 400px;
-  background-color: plum;
 }
 main.power_conditioner section.feature .feature_list .item .primary-2 .primary-2-wrapper .images {
   display: flex;
@@ -1829,7 +1831,6 @@ main.power_conditioner section.warranty .wrapper .w-content .graph img {
   display: inline-block;
   width: 100%;
   height: 212px;
-  background-color: plum;
 }
 main.power_conditioner section.component {
   padding-bottom: 100px;
@@ -1838,7 +1839,6 @@ main.power_conditioner section.component .wrapper .component-list .component-ite
   display: inline-block;
   width: 100%;
   height: 178px;
-  background-color: plum;
 }
 main.power_conditioner section.component .wrapper .component-list .component-item .accordion .spec03-item .label {
   align-self: center;
@@ -1847,19 +1847,16 @@ main.power_conditioner section.compare .wrapper .product .item .imgc img {
   display: inline-block;
   width: 100%;
   height: 100%;
-  background-color: plum;
 }
 main.power_conditioner section.compare .wrapper .table .row:nth-child(2) .heading .imgc img, main.power_conditioner section.compare .wrapper .table .row:nth-child(5) .heading .imgc img {
   display: inline-block;
   width: 100%;
   height: 40px;
-  background-color: plum;
 }
 main.power_conditioner section.compare .wrapper .banner img {
   display: inline-block;
   width: 100%;
   height: 100px;
-  background-color: plum;
 }
 main.power_conditioner section.compare .wrapper .product {
   align-items: center;
