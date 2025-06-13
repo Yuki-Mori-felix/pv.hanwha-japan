@@ -5,13 +5,211 @@
 /*font size*/
 /*letter-spacing*/
 /*-------------------------------------------*/
-/*space*/
-.hana_sys_banner {
-  margin: 100px 0px;
+.font-styles-001 {
+  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
+  font-style: normal;
+  font-size: 8px;
+  color: #999999;
+  letter-spacing: 40px;
+  line-height: 3;
 }
 
-.products_that_generate_electricity_title {
-  padding: 0px 0px 100px;
+.font-styles-002 {
+  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
+  font-style: normal;
+  font-size: 16px;
+  color: #333333;
+  letter-spacing: 40px;
+  line-height: 1.5;
+}
+
+.font-styles-003 {
+  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
+  font-style: normal;
+  font-size: 12px;
+  color: #333333;
+  letter-spacing: 0px;
+  line-height: 0.5;
+}
+
+.font-styles-004 {
+  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
+  font-style: normal;
+  font-size: 24px;
+  color: #333333;
+  letter-spacing: 40px;
+  line-height: 0.68;
+}
+
+.font-styles-005 {
+  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
+  font-style: normal;
+  font-size: 16px;
+  color: #333333;
+  letter-spacing: 40px;
+  line-height: 0.71;
+}
+
+.font-styles-006 {
+  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
+  font-style: normal;
+  font-size: 20px;
+  color: #ffffff;
+  letter-spacing: 300px;
+  line-height: 0.6;
+}
+
+.font-styles-007 {
+  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
+  font-style: normal;
+  font-size: 20px;
+  color: #333333;
+  letter-spacing: 100px;
+  line-height: 0.6;
+}
+
+.font-styles-008 {
+  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
+  font-style: normal;
+  font-size: 10px;
+  color: #999999;
+  letter-spacing: 40px;
+  line-height: 1;
+}
+
+.font-styles-009 {
+  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
+  font-style: normal;
+  font-size: 10px;
+  color: #333333;
+  letter-spacing: 40px;
+  line-height: 1;
+}
+
+.font-styles-010 {
+  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
+  font-style: normal;
+  font-size: 48px;
+  color: #333333;
+  letter-spacing: 40px;
+  line-height: 0.68;
+}
+
+.font-styles-011 {
+  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
+  font-style: bold;
+  font-size: 48px;
+  color: #333333;
+  letter-spacing: 40px;
+  line-height: 1;
+}
+
+.font-styles-012 {
+  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
+  font-style: bold;
+  font-size: 48px;
+  color: #ffffff;
+  letter-spacing: 40px;
+  line-height: 1;
+}
+
+.font-styles-013 {
+  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
+  font-style: normal;
+  font-size: 20px;
+  color: #333333;
+  letter-spacing: 40px;
+  line-height: 0.6;
+}
+
+.font-styles-014 {
+  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
+  font-style: normal;
+  font-size: 20px;
+  color: #ffffff;
+  letter-spacing: 40px;
+  line-height: 0.6;
+}
+
+.font-styles-015 {
+  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
+  font-style: bold;
+  font-size: 120px;
+  color: #ffffff;
+  letter-spacing: 40px;
+  line-height: 3.75;
+}
+
+.font-styles-016 {
+  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
+  font-style: bold;
+  font-size: 24px;
+  color: #333333;
+  letter-spacing: 40px;
+  line-height: 0.85;
+}
+
+.font-styles-017 {
+  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
+  font-style: bold;
+  font-size: 32px;
+  color: #333333;
+  letter-spacing: 40px;
+  line-height: 1;
+}
+
+.font-styles-018 {
+  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
+  font-style: bold;
+  font-size: 20px;
+  color: #3366aa;
+  letter-spacing: 40px;
+  line-height: 0.6;
+}
+
+.font-styles-019 {
+  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
+  font-style: bold;
+  font-size: 48px;
+  color: #3366aa;
+  letter-spacing: 40px;
+  line-height: 1.5;
+}
+
+.font-styles-020 {
+  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
+  font-style: bold;
+  font-size: 48px;
+  color: #ee7744;
+  letter-spacing: 40px;
+  line-height: 1.5;
+}
+
+.font-styles-021 {
+  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
+  font-style: bold;
+  font-size: 16px;
+  color: #ee7744;
+  letter-spacing: 40px;
+  line-height: 0.5;
+}
+
+.font-styles-022 {
+  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
+  font-style: bold;
+  font-size: 10px;
+  color: #333333;
+  letter-spacing: 0px;
+  line-height: 0.41;
+}
+
+.font-styles-023 {
+  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
+  font-style: bold;
+  font-size: 16px;
+  color: #666666;
+  letter-spacing: 0px;
+  line-height: 0.6;
 }
 
 /*body*/
@@ -38,6 +236,11 @@ body {
 ._main_mv img {
   max-width: 100%;
   width: 100%;
+}
+._main_mv span {
+  color: #ffffff;
+  top: 60%;
+  left: 15%;
 }
 
 /*page-template-page-product-list*/
@@ -80,12 +283,10 @@ body {
 .wrap_s {
   max-width: 1000px;
   margin: 0 auto;
-  position: relative;
 }
 
 p {
   line-height: 2.4;
-  overflow-wrap: break-word;
 }
 
 li,
@@ -101,11 +302,7 @@ h5,
 p,
 li,
 ul {
-  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
-}
-
-h3 {
-  position: relative;
+  font-family: "Noto Sans JP", sans-serif !important;
 }
 
 h3.section-title {
@@ -146,7 +343,7 @@ h3.section-title {
 
 /*solid*/
 .border-solid-bottom-01 {
-  border-bottom: solid 3px #1b1b1b;
+  border-bottom: solid 3px #ddd;
   padding: 10px 0px;
 }
 
@@ -176,14 +373,6 @@ a:hover {
   padding: 40px 20px;
 }
 
-.back_color > a {
-  background: #3366aa;
-}
-
-.navigation-top {
-  background: #e5e5e5;
-}
-
 /*サイドボタン*/
 .side_bt_position_01 {
   font-size: 14px;
@@ -198,7 +387,6 @@ a:hover {
 /*製品・システム*/
 .page-template-page-product-list ._main_mv {
   background: #ddd;
-  height: 100vh;
 }
 
 h2.head-border.text-line-right {
@@ -248,171 +436,135 @@ h2.head-border.text-line-right {
   border-right: 5px solid #777777 !important;
 }
 
-/*お問い合わせ*/
-.btn1-box {
-  position: fixed;
-  top: 57.6%;
-  right: 0%;
-  transform: translate(0%, -50%);
-  margin: 0;
-  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.4);
-}
-
-.btn1 {
-  position: relative;
+.c-btn {
+  background: #ff701e;
+  border-right: 5px solid #ff701e;
+  border-radius: 0px;
+  color: #ffffff;
   display: block;
-  line-height: 78px;
-  font-size: 16px;
-  text-decoration: none;
-  background-color: #fff;
-  color: #ee7744;
-  border-right: #ee7744 10px solid;
+  font-weight: bold;
+  max-width: 300px;
+  padding: 15px 20px;
   text-align: center;
-  z-index: 2;
+}
+
+.c-btn.slide {
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.4);
+  background: #ffffff;
+  color: #ff701e;
   overflow: hidden;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-  writing-mode: vertical-rl;
-  padding: 30px 0px;
+  /*position: relative;*/
+  z-index: 1;
 }
 
-.btn1:hover {
-  color: #fff;
-}
-
-.btn1::after,
-.btn1::before {
+.c-btn.slide::after {
+  background: #ff701e;
   position: absolute;
-  z-index: -1;
-  display: block;
+  top: 0;
+  left: 0;
   content: "";
-  box-sizing: border-box;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.btn1:hover::after {
-  top: 0;
-  right: 0;
-  background-color: #ee7744;
-}
-
-.btn1::after {
-  top: 0;
-  right: -200px;
   width: 100%;
   height: 100%;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
 }
 
-/*カタログ*/
-.btn2-box {
-  position: fixed;
-  top: 74.5%;
-  right: 0%;
-  transform: translate(0%, -50%);
-  margin: 0;
-  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.4);
+.c-btn.slide:hover {
+  color: #ffffff;
 }
 
-.btn2 {
-  position: relative;
+.c-btn.slide:hover::after {
+  transform: scale(1, 1);
+}
+
+/*カタログ請求*/
+.c-btn2 {
+  background: #3366aa;
+  border-right: 10px solid #ff701e;
+  border-radius: 0px;
+  color: #ffffff;
   display: block;
-  line-height: 78px;
-  font-size: 16px;
-  text-decoration: none;
-  background-color: #fff;
+  font-weight: bold;
+  max-width: 300px;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.c-btn2.slide {
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.4);
+  background: #ffffff;
   color: #3366aa;
-  border-right: #3366aa 10px solid;
-  text-align: center;
-  z-index: 2;
   overflow: hidden;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-  writing-mode: vertical-rl;
-  padding: 30px 0px;
+  /*position: relative;*/
+  z-index: 1;
 }
 
-.btn2:hover {
-  color: #fff;
-}
-
-.btn2::after,
-.btn2::before {
+.c-btn2.slide::after {
+  background: #3366aa;
   position: absolute;
-  z-index: -1;
-  display: block;
+  top: 0;
+  left: 0;
   content: "";
-  box-sizing: border-box;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.btn2:hover::after {
-  top: 0;
-  right: 0;
-  background-color: #3366aa;
-}
-
-.btn2::after {
-  top: 0;
-  right: -200px;
   width: 100%;
   height: 100%;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
 }
 
-/*お見積り*/
-.btn3-box {
-  position: fixed;
-  bottom: 0px;
-  right: 0%;
-  margin: 0;
+.c-btn2.slide:hover {
+  color: #ffffff;
+}
+
+.c-btn2.slide:hover::after {
+  transform: scale(1, 1);
+}
+
+/*お見積り請求書*/
+.c-btn3 {
+  background: #777777;
+  border-right: 10px solid #ff701e;
+  border-radius: 0px;
+  color: #ffffff;
+  display: block;
+  font-weight: bold;
+  max-width: 300px;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.c-btn3.slide {
   box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.4);
-}
-
-.btn3 {
-  position: relative;
-  display: block;
-  line-height: 78px;
-  font-size: 16px;
-  text-decoration: none;
-  background-color: #fff;
-  color: #999999;
-  border-right: #999999 10px solid;
-  text-align: center;
-  z-index: 2;
+  background: #ffffff;
+  color: #777777;
   overflow: hidden;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-  writing-mode: vertical-rl;
-  padding: 30px 0px;
+  /*position: relative;*/
+  z-index: 1;
 }
 
-.btn3:hover {
-  color: #fff;
-}
-
-.btn3::after,
-.btn3::before {
+.c-btn3.slide::after {
+  background: #777777;
   position: absolute;
-  z-index: -1;
-  display: block;
+  top: 0;
+  left: 0;
   content: "";
-  box-sizing: border-box;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.btn3:hover::after {
-  top: 0;
-  right: 0;
-  background-color: #999999;
-}
-
-.btn3::after {
-  top: 0;
-  right: -200px;
   width: 100%;
   height: 100%;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
+
+.c-btn3.slide:hover {
+  color: #ffffff;
+}
+
+.c-btn3.slide:hover::after {
+  transform: scale(1, 1);
 }
 
 @media screen and (max-width: 1054px) {
@@ -472,30 +624,6 @@ h2.head-border.text-line-right {
   color: #3366aa;
 }
 
-/* _left_navi link */
-._left_navi a {
-  text-decoration: underline;
-}
-
-._left_navi a:link {
-  color: #000000;
-}
-
-/* visited link */
-._left_navi a:visited {
-  color: #000000;
-}
-
-/* mouse over link */
-._left_navi a:hover {
-  color: red;
-}
-
-/* selected link */
-._left_navi a:active {
-  color: red;
-}
-
 /*popular_products_category*/
 .popular_products_category a:link {
   color: #3366aa;
@@ -520,13 +648,6 @@ h2.head-border.text-line-right {
 .page .navigation-top {
   top: 0;
   z-index: 3;
-}
-
-.content {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0px;
-  line-height: 2.4;
 }
 
 /*pankuzu*/
@@ -558,9 +679,4 @@ h2.head-border.text-line-right {
 
 .breadcrumb .fa-chevron-right {
   padding: 0 10px;
-}
-
-/*single.php*/
-div#comments {
-  display: none;
 }/*# sourceMappingURL=common.css.map */

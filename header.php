@@ -135,7 +135,7 @@
 			<ul class="mht-list">
 				<li class="mht-item mht-item-common"><a href="">ハンファジャパン</a></li>
         <li class="mht-item mht-item-common"><a href="">グリーンアライアンス</a></li>
-        <li class="mht-item site-search"><a href=""><i class="fa-solid fa-magnifying-glass" style="color: #3366aa;"></i>サイト内検索</a></li>
+        <li class="mht-item site-search"><i class="fa-solid fa-magnifying-glass" style="color: #3366aa;"></i>サイト内検索</li>
       </ul>
     </div>
 		

@@ -1,52 +1,11 @@
 <div class="search-form">
-  <div class="wrap_s">
-    <form id="form" action="<?= home_url(); ?>" method="get">
-      <input id="s-box" name="s" type="text" placeholder="キーワードを入力" />
-      <button type="submit" id="s-btn-area">
-        <div id="s-btn">検索</div>
-      </button>
+  <div class="s-wrap">
+    <form class="form" id="form" action="<?= home_url(); ?>" method="get">
+      <input class="s-box" name="s" type="text" placeholder="キーワードを入力" />
+      <button type="submit" class="s-btn"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/btn_header_search.svg" alt="検索"></button>
     </form>
+    <?php if (!is_page("search")) :?>
+      <div class="s-close-btn"><span class="inner"></span></div>
+    <?php endif;?>
   </div>
 </div>
-<style>
-  #form {
-    position: relative;
-  }
-
-  #s-box {
-    height: 40px;
-    width: 450px;
-    padding: 0 10px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    border-radius: 2px;
-    border: solid 3px #eaeaea;
-    outline: 0;
-  }
-
-  #s-btn-area {
-    height: 50px;
-    position: absolute;
-    left: 250px;
-    top: 0;
-    background: none;
-    color: #666;
-    border: none;
-    font-size: 20px;
-    outline: 0;
-  }
-
-  #s-btn {
-    background-color: black;
-    width: 50px;
-    height: 30px;
-    position: relative;
-    right: 20px;
-    bottom: 10px;
-    border-radius: 3px;
-    font-size: 16px;
-    color: #fff;
-    line-height: 31px;
-  }
-</style>
