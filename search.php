@@ -12,7 +12,7 @@ get_header();
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
     $args = array(
       's' => get_search_query(),
-      'posts_per_page' => 1, // 1ページあたりの表示件数
+      'posts_per_page' => 6, // 1ページあたりの表示件数
       'paged' => $paged
     );
     $search_query = new WP_Query($args);
