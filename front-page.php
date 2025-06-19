@@ -17,7 +17,7 @@ get_header();
   <div id="primary" class="content-area">
     <main id="main" class="site-main">
 
-      <section class="topic section-wrapper"><!--topic-->
+      <section id="topics" class="topic section-wrapper"><!--topic-->
         <h3 class="section-title">TOPICS</h3>
         <div class="section-inner">
           <p></p>

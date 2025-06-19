@@ -13,7 +13,7 @@
 
   <!--style.css-->
   <?php if (is_front_page() || is_home() ) : ?>
-    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/add.css'>
+    <!-- <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/add.css'> -->
   <?php elseif (is_page('interview') || is_singular('voice')) : ?>
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/voice.css'>
 		<?php if(is_singular()): ?>
@@ -81,49 +81,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward_ios,open_in_new" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward_ios,open_in_new" />
 
-
-  <script>
-    $(function() {
-      $(".dropdown, .dropdown").hide();
-      $(".btn-more").click(function() {
-        $(".trigger").prev().slideToggle();
-        $(this).toggleClass("close");
-      });
-    });
-
-    $(function() {
-      $(".dropdown1, .dropdown1").hide();
-      $(".btn-more1").click(function() {
-        $(".trigger1").prev().slideToggle();
-        $(this).toggleClass("close");
-      });
-    });
-
-    $(function() {
-      $(".dropdown2, .dropdown2").hide();
-      $(".btn-more2").click(function() {
-        $(".trigger2").prev().slideToggle();
-        $(this).toggleClass("close");
-      });
-    });
-
-    $(function() {
-      $(".dropdown3, .dropdown3").hide();
-      $(".btn-more3").click(function() {
-        $(".trigger3").prev().slideToggle();
-        $(this).toggleClass("close");
-      });
-    });
-
-    $(function() {
-      $(".dropdown4, .dropdown4").hide();
-      $(".btn-more4").click(function() {
-        $(".trigger4").prev().slideToggle();
-        $(this).toggleClass("close");
-      });
-    });
-  </script><!--Details page Accordion-->
-
   <?php wp_head(); ?>
 </head>
 
@@ -158,9 +115,9 @@
     <div class="main-mv"><!--main_slide-->
 
       <div class="main-catchphrase"><!--catchphrase-->
-
-        <p><?php bloginfo('description'); ?></p>
-
+        <div class="wrap_S">
+          <h1>ハンファジャパンの太陽光発電で贅沢な毎日を。</h1>
+        </div>
       </div><!--catchphrase-->
 
       <!--buttom-->
@@ -171,13 +128,22 @@
       <?php echo do_shortcode('[smartslider3 slider="1"]'); ?>
 
       <div class="scroll_down" id="type07"><!--scroll animation-->
-        <a href="#">
+        <!-- <a href="#">
           <span class="text">Scroll</span>
           <div class="arrow"></div>
           <div class="arrow"></div>
           <div class="arrow"></div>
-        </a>
+        </a> -->
       </div><!--scroll animation-->
+
+      <a href="#topics" class="scroll_text">SCROLL</a>
+      <a href="#topics">
+        <div class="cp_arrows">
+          <div class="cp_arrow"></div>
+          <div class="cp_arrow"></div>
+          <div class="cp_arrow"></div>
+        </div>
+      </a>
 
     </div><!--main_slide-->
 

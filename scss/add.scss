@@ -1,13 +1,53 @@
+@use "breakpoint" as *;
+/* -------------------
+  TOPページ用 追加CSS
+------------------- */ 
 .navigation-top {
   background: #e5e5e5;
 }
 /*_____ navigation _____*/ 
 
 .main-mv {
+  height: 625px;
+  @include max {
+    height: 80dvh;
+  }
+
+  .main-catchphrase {
+    width: 94%;
+    margin-inline: auto;
+
+    h1 {
+      font-size: clamp(2.5rem, 1.979rem + 0.69vw, 2.813rem);
+      color: white;
+      @include max {
+        font-size: clamp(1.75rem, 1.643rem + 0.48vw, 2rem);
+      }
+    }
+  }
+
   .btn-box {
+    top: unset;
+    left: 50%;
+    bottom: 200px;
+    transform: translateX(-50%);
+    z-index: 10;
+    margin: 0;
+    width: fit-content;
+    height: fit-content;
+    @include max {
+      bottom: 20dvh;
+    }
+
     .btn {
       font-size: 16px;
       border-radius: 5px;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 140px;
 
       &:hover {
         color: white;
@@ -19,9 +59,72 @@
       }
     }
   }
+
+  .scroll_text {
+    font-family: 'Figtree';
+    position: absolute;
+    bottom: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: block;
+    color: white;
+    font-size: 10px;
+    font-weight: 500;
+  }
+  .cp_arrows {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cp_arrows .cp_arrow {/*矢印を配置するベースの設定*/
+    position: absolute;
+    width: 20px;
+    height: 4px;
+    opacity: 0;/*スタートは透明*/
+    transform: scale(0.3);/*スタートは30%に縮小*/
+    animation: arrow-move07 3s ease-out infinite;
+  }
+  .cp_arrows .cp_arrow:first-child {/*1秒ずらしてアニメーション*/
+    animation: arrow-move07 3s ease-out 1s infinite;
+  }
+  .cp_arrows .cp_arrow:nth-child(2) {/*2秒ずらしてアニメーション*/
+    animation: arrow-move07 3s ease-out 2s infinite;
+  }
+  .cp_arrows .cp_arrow:before,
+  .cp_arrows .cp_arrow:after {/*矢印全体の設定*/
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 2px;
+  }
+  .cp_arrows .cp_arrow:before {/*矢印左の線の位置と傾斜*/
+    left: 1px;
+    transform: skewY(35deg);
+  }
+  .cp_arrows .cp_arrow:after {/*矢印左の線の位置と傾斜*/
+    right: 1px;
+    transform: skewY(-35deg);
+  }
+  @keyframes arrow-move07 {
+    25% { opacity: 0.6;}
+    43% { transform: translateY(1em); opacity: 0.8;}
+    62% { transform: translateY(2em); opacity: 1;}
+    100% { transform: translateY(3em) scale(0.5); opacity: 0;}
+  }
 }
 
 .topic {
+  padding-bottom: 140px;
   
   .section-title {
     color: #333;
@@ -65,18 +168,23 @@
         a {
 
           ._overflow-hidden-topic {
-            position: relative;
-            &::after {
-              content: "";
-              position: absolute;
-              right: 20px;
-              bottom: 20px;
-              background-image: url(/wp-content/uploads/2025/03/download.png);
-              background-size: contain;
-              background-repeat: no-repeat;
-              width: 40px;
-              height: 40px;
-              opacity: .7;
+            // position: relative;
+            // &::after {
+            //   content: "";
+            //   position: absolute;
+            //   right: 20px;
+            //   bottom: 20px;
+            //   background-image: url(/wp-content/uploads/2025/03/download.png);
+            //   background-size: contain;
+            //   background-repeat: no-repeat;
+            //   width: 40px;
+            //   height: 40px;
+            //   opacity: .7;
+            // }
+
+            img {
+              height: 312px;
+              object-fit: cover;
             }
           }
         }
@@ -86,12 +194,22 @@
 }
 /*_____ topic _____*/ 
 
+.top_movie {
+  display: block;
+  text-align: center;
+
+  video {
+    margin-bottom: 140px;
+  }
+}
+/*_____ top_movie _____*/ 
+
 .total-energy-solutions {
   &::before {
     content: " ";
     display: block;
     clear: both;
-    background: #3366AA14;
+    background: #3366AA14 !important;
     width: 1000px;
     height: 600px;
     position: absolute;
@@ -113,9 +231,22 @@
   
     &:nth-child(2) {
       padding-top: 140px;
+      @include max {
+        padding-top: 0;
+        width: 90vw;
+
+        .section-title {
+          padding-top: 10px;
+          line-height: 1.5;
+        }
+      }
 
       .border-solid-bottom-01 {
         border-bottom: solid 1px #1b1b1b;
+      }
+
+      .btn-box {
+        max-width: 226px;
       }
     }
 
@@ -139,19 +270,62 @@
 
   .section-title {
     color: #333;
+
+    .sub-title {
+      margin-bottom: 0;
+    }
   }
 
   .product-category {
 
     .wrap_s {
+      @include max {
+        padding-top: 0;
+      }
 
       li {
+        background-size: cover;
+        &:nth-child(1), &:nth-child(2) {
+          background-image: url(../images/top/Module_BG_TopBanner_01.jpg);
+        }
+        &:nth-child(3), &:nth-child(4) {
+          background-image: url(../images/top/ESS-HEMS_BG_TopBanner_01.jpg);
+          .product-photo1 {
+            height: fit-content;
+            margin-bottom: 0;
+            @include max {
+              top: unset;
+              bottom: 0;
+            }
+          }
+        }
+
+        @media screen and (max-width: 1054px) {
+          max-width: 484px;
+          margin-inline: auto;
+        }
+
+        &:has(._link_bt1) {
+          .product-photo1 {
+            bottom: 0;
+            top: unset;
+            right: 4vw;
+            max-width: 172px;
+            height: fit-content;
+            margin-bottom: 0;
+            @include max {
+              max-width: 150px;
+            }
+          }
+        }
 
         h4 {
           font-size: 20px;
         }
 
-        ._link_bt2 {
+        ._link_bt1,
+        ._link_bt2
+        {
           position: absolute;
           bottom: 40px;
         }
@@ -164,9 +338,11 @@
     .wrap_s {
 
       li {
+        background-image: url(../images/top/PCS_BG_TopBanner_01.jpg);
+        background-size: cover;
         max-width: 312px;
         @media screen and (max-width: 1054px) {
-          max-width: unset;
+          margin-inline: auto;
           margin-bottom: 20px;
         }
 
@@ -183,11 +359,43 @@
 /*_____ product _____*/ 
 
 .retailer-system {
+  margin-bottom: 230px;
+  @include max {
+    margin-bottom: 0;
+  }
+
+  ._left_contents {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 70px;
+    @media screen and (max-width: 1054px) {
+      height: 200px;
+      max-width: 600px;
+      width: 94%;
+      padding-bottom: 30px;
+      padding-inline: 40px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
 
   ._right_contents {
+    max-width: 656px !important;
+    @media screen and (max-width: 1054px) {
+      max-width: 500px !important;
+      width: 90% !important;
+    }
 
     img {
       box-shadow: 0px 5px 20px #00000033;
+      width: 100%;
+      height: auto;
     }
   }
 }
@@ -195,9 +403,12 @@
 
 .electricity-bill-service {
   background: unset;
-  padding: 60px 0 140px;
+  padding: 80px 0 140px;
   position: relative;
   z-index: 0;
+  @include max {
+    padding-block: 40px 70px;
+  }
 
   &::before {
     content: "";
@@ -213,7 +424,12 @@
   }
 
   h3 {
-    padding: 0;
+    font-size: clamp(1.75rem, 1.7117rem + 0.1361vw, 1.875rem);
+    padding: 0 !important;
+    margin-bottom: 80px;
+    @include max {
+      margin-bottom: 30px;
+    }
   }
 
   .electricity-bill-service-inner {
@@ -257,16 +473,16 @@
   
           &:hover {
             border: unset;
-            outline: 2px solid white;
+            // outline: 2px solid white;
             opacity: 1;
   
             .item_content {
   
               .item_image {
   
-                img {
-                  scale: (1.1);
-                }
+                // img {
+                //   scale: (1.1);
+                // }
               }
             }
             img {
@@ -371,6 +587,8 @@
 
           .press-title {
             font-weight: 400;
+            padding: 0;
+            text-align: left;
           }
         }
 
