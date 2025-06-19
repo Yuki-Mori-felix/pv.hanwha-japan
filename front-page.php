@@ -74,9 +74,26 @@ get_header();
           <?php endif;
           wp_reset_postdata(); ?>
 
-          <div class="next-more1 wrap_s"><a href="/category/topics/">もっと見る</a></div>
-
       </section><!--topic-->
+
+      <section class="top_movie"><!--movie-->
+        <?php
+        $args = array(
+          'post_type' => 'top',
+          'posts_per_page' => -1,
+        );
+        $the_query = new WP_Query($args);
+        ?>
+        <?php if ($the_query->have_posts()): ?>
+          <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+            <?php if (get_field('movie_url')): ?>
+              <video src="<?= get_field('movie_url'); ?>" width="640px" height="360px" autoplay muted loop></video>
+            <?php endif; ?>
+          <?php endwhile; ?>
+        <?php else: ?>
+        <?php endif;
+        wp_reset_postdata(); ?>
+      </section><!--movie-->
 
       <?php
       $args = array(
@@ -178,10 +195,10 @@ get_header();
                       <div class="item_image">
                         <img src="<?= wp_kses_post(get_field('electricity_img_content1')['url']); ?>" alt="">
                       </div>
-                      <div class="item_mask">
+                      <!-- <div class="item_mask">
                         <div class="item_mask-text"><img src="/wp-content/uploads/2025/04/ENECONNECT_Logo_White01.svg"></div>
                         <span class="material-symbols-outlined">open_in_new</span>
-                      </div>
+                      </div> -->
                     </div>
                   </a>
                 </div>
@@ -205,10 +222,10 @@ get_header();
                       <div class="item_image">
                         <img src="<?= wp_kses_post(get_field('electricity_img_content2')['url']); ?>" alt="">
                       </div>
-                      <div class="item_mask">
+                      <!-- <div class="item_mask">
                         <div class="item_mask-text"><img src="/wp-content/uploads/2025/04/ENECONNECT_Logo_White01.svg"></div>
                         <span class="material-symbols-outlined">open_in_new</span>
-                      </div>
+                      </div> -->
                     </div>
                   </a>
                 </div>
