@@ -811,3 +811,67 @@ function validate_catalog_group($result, $tag) {
 
   return $result;
 }
+
+/*------------------------------------------
+	カタログ請求 お見積依頼 管理者側の自動返信メールの宛先に
+  エリアごとに振り分けられた支店のアドレスを追加
+------------------------------------------*/
+
+add_action('wpcf7_before_send_mail', 'add_branch_email_by_pref', 1);
+
+function add_branch_email_by_pref($contact_form) {
+  $submission = WPCF7_Submission::get_instance();
+  if (!$submission) return;
+
+  // 都道府県を取得
+  $posted_data = $submission->get_posted_data();
+  $pref_raw = isset($posted_data['upref']) ? $posted_data['upref'] : '';
+  $pref = is_array($pref_raw) ? $pref_raw[0] : $pref_raw;
+
+  // 各支店に振り分ける都道府県のグループ
+  $group_housing_sales = ['茨城県', '栃木県', '群馬県', '千葉県', '神奈川県', '東京都', '埼玉県', '山梨県', '長野県']; // 住宅営業課
+  $group_sendai = ['北海道', '青森県', '秋田県', '岩手県', '宮城県', '山形県', '福島県', '新潟県']; // 仙台支店
+  $group_nagoya = ['富山県', '岐阜県', '愛知県', '静岡県', '石川県', '福井県', '三重県']; // 名古屋支店
+  $group_osaka = ['大阪府', '京都府', '奈良県', '兵庫県', '和歌山県', '滋賀県']; // 大阪支店
+  $group_fukuoka = ['鳥取県', '岡山県', '広島県', '島根県', '香川県', '徳島県', '高知県', '愛媛県', '山口県', '福岡県', '大分県', '宮崎県', '佐賀県', '長崎県', '熊本県', '鹿児島県', '沖縄県']; // 福岡支店
+
+  // 支店ごとのメールアドレス
+  $branch_emails = [
+     // 'group_housing_sales' => 'murayama.a@qcells.com',
+     // 'group_sendai' => 'dept10021607@qcells.com',
+     // 'group_nagoya' => 'dept10021606@qcells.com',
+     // 'group_osaka' => 'dept10021605@qcells.com',
+     // 'group_fukuoka' => 'dept10021604@qcells.com',
+    'group_housing_sales' => 'okura@felixjapan.net',
+    'group_sendai' => 'mori@felixjapan.net',
+    'group_nagoya' => 'a.takeshita@felixjapan.net',
+    'group_osaka' => 'pikaran721@gmail.com',
+    'group_fukuoka' => 'y.okura.721@gmail.com',
+  ];
+
+  $additional_email = '';
+
+  // 選ばれた都道府県がどのグループに属しているか判定
+  if (in_array($pref, $group_housing_sales)) {
+    $additional_email = $branch_emails['group_housing_sales'];
+  } elseif (in_array($pref, $group_sendai)) {
+    $additional_email = $branch_emails['group_sendai'];
+  } elseif (in_array($pref, $group_nagoya)) {
+    $additional_email = $branch_emails['group_nagoya'];
+  } elseif (in_array($pref, $group_osaka)) {
+    $additional_email = $branch_emails['group_osaka'];
+  } elseif (in_array($pref, $group_fukuoka)) {
+    $additional_email = $branch_emails['group_fukuoka'];
+  }
+
+  if ($additional_email) {
+    $mail_prop = $contact_form->get_properties();
+    $mail = $mail_prop['mail'];
+    // 既存の送信先に追加（カンマ区切り）
+    $mail['recipient'] .= ', ' . $additional_email;
+    // 追加後に書き戻す
+    $mail_prop['mail'] = $mail;
+    $contact_form->set_properties($mail_prop);
+  }
+}
+
