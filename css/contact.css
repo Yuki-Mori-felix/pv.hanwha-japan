@@ -348,6 +348,20 @@ main.contact > .sec-form {
 main.contact > .sec-form .container * {
   letter-spacing: 0.04em !important;
 }
+main.contact > .sec-form .form .rowc.company-name {
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+main.contact > .sec-form .form .rowc.company-name.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+main.contact > .sec-form .form .rowc .row.ucompany {
+  margin-top: initial;
+  border-top: initial;
+}
 main.contact > .sec-form .form .row {
   display: flex;
   align-items: center;
@@ -450,6 +464,15 @@ main.contact > .sec-form .form .row.ucontent textarea {
 main.contact > .sec-form .form .row.utime .input-check, main.contact > .sec-form .form .row.utrigger .input-check {
   display: grid;
   gap: 5px;
+}
+main.contact > .sec-form .form .row.utime .input-other, main.contact > .sec-form .form .row.utrigger .input-other {
+  max-width: 315px;
+  width: 100%;
+  margin-top: -15px;
+}
+main.contact > .sec-form .form .row.utime .input-other:disabled, main.contact > .sec-form .form .row.utrigger .input-other:disabled {
+  border: 1px solid #b7b7b7;
+  background-color: #ccc;
 }
 main.contact > .sec-form .form .row.uagree {
   padding-top: 40px;
