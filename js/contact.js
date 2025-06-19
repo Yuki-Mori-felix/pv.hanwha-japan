@@ -102,6 +102,9 @@ window.addEventListener("DOMContentLoaded", function() {
   // CF7 エラーメッセージが出ている箇所までスクロールさせる
   document.addEventListener('wpcf7invalid', function (event) {
     const form = event.target;
+    const contactCatalog = document.querySelector("main.contact-catalog");
+
+    if (!contactCatalog) return;
 
     setTimeout(() => {
       const catA = form.querySelector('input[name="cat-noc-1"]');

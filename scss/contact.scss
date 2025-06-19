@@ -358,6 +358,22 @@ main.contact {
       }
     }
     .form {
+      .rowc {
+        &.company-name {
+          height: 0;
+          visibility: hidden;
+          opacity: 0;
+          transition: all .3s;
+          &.is-visible {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+        .row.ucompany {
+          margin-top: initial;
+          border-top: initial;
+        }
+      }
       .row {
         display: flex;
         align-items: center;
@@ -472,6 +488,15 @@ main.contact {
           .input-check {
             display: grid;
             gap: 5px;
+          }
+          .input-other {
+            max-width: 315px;
+            width: 100%;
+            margin-top: -15px;
+            &:disabled {
+              border: 1px solid #b7b7b7;
+              background-color: #ccc;
+            }
           }
         }
         &.uagree {
