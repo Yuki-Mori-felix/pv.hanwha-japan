@@ -26,7 +26,7 @@ require get_stylesheet_directory() . '/include/my_variables.php';
         ?>
             <li>
               <a href="<?= the_permalink(); ?>">
-                <div class="img"><img src="<?= get_field('img')['url']; ?>" alt=""></div>
+                <div class="img"><?php the_post_thumbnail('full'); ?></div>
                 <div class="post-info"><span class="date">2025.06.05</span><span class="cat"><?= $term_name; ?></span></div>
                 <p><?= the_title(); ?></p>
               </a>
