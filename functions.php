@@ -626,6 +626,77 @@ function ajax_filter_products()
 add_action('wp_ajax_filter_products', 'ajax_filter_products');
 add_action('wp_ajax_nopriv_filter_products', 'ajax_filter_products');
 
+// `storage-system` 専用の処理
+function ajax_filter_products_storage_system()
+{
+  $filter1 = isset($_POST['filter1']) ? sanitize_text_field($_POST['filter1']) : '';
+  $filter2 = isset($_POST['filter2']) ? sanitize_text_field($_POST['filter2']) : '';
+  $term_slug = isset($_POST['term_slug']) ? sanitize_text_field($_POST['term_slug']) : '';
+
+  $meta_query = array('relation' => 'AND');
+
+  if (!empty($filter1)) {
+    $meta_query[] = array(
+      'key'     => 'filter1',
+      'value'   => $filter1,
+      'compare' => '='
+    );
+  }
+
+  if (!empty($filter2)) {
+    $meta_query[] = array(
+      'key'     => 'filter2',
+      'value'   => $filter2,
+      'compare' => '='
+    );
+  }
+
+  $args = array(
+    'post_type'      => 'product',
+    'posts_per_page' => -1,
+    'post_status'    => 'publish',
+    'tax_query'      => array(
+      array(
+        'taxonomy' => 'product-cat',
+        'field'    => 'slug',
+        'terms'    => $term_slug,
+      ),
+    ),
+    'meta_query' => $meta_query,
+  );
+
+  $query = new WP_Query($args);
+
+  $ready_items = '';
+  $hybrid_items = '';
+
+  if ($query->have_posts()):
+    while ($query->have_posts()): $query->the_post();
+      $filter2_value = get_field('filter2');
+      $html = '<a class="prod-item" href="' . get_permalink() . '">';
+      $html .= '<div class="img"><img src="' . esc_url(get_field('image1')['url']) . '" alt=""></div>';
+      $html .= '<div class="ttl"><h3 class="name">' . get_the_title() . '</h3></div>';
+      $html .= '</a>';
+
+      if ($filter2_value == 'レディ型') {
+        $ready_items .= $html;
+      } elseif ($filter2_value == 'ハイブリッド型') {
+        $hybrid_items .= $html;
+      }
+    endwhile;
+    wp_reset_postdata();
+  endif;
+
+  // ✅ `ready-list` と `hybrid-list` にそれぞれの投稿を設定
+  echo '<div id="ready-list">' . (!empty($ready_items) ? $ready_items : '<p>該当する商品がありません</p>') . '</div>';
+  echo '<div id="hybrid-list">' . (!empty($hybrid_items) ? $hybrid_items : '<p>該当する商品がありません</p>') . '</div>';
+
+  die();
+}
+
+add_action('wp_ajax_filter_products_storage_system', 'ajax_filter_products_storage_system');
+add_action('wp_ajax_nopriv_filter_products_storage_system', 'ajax_filter_products_storage_system');
+
 /*------------------------------------------
 	クラシックエディタ 独自ボタン追加
 ------------------------------------------*/

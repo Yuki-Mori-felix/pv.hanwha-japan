@@ -114,11 +114,11 @@ $img_path = get_stylesheet_directory_uri() . "/images";
       <!-- 商品一覧（AJAXで更新） -->
       <div class="typec ready">
         <div class="type"><p class="txt">レディ型</p></div>
-        <div class="prod-list"></div>
+        <div id="ready-list" class="prod-list"></div>
       </div>
       <div class="typec hybrid">
         <div class="type"><p class="txt">ハイブリッド型</p></div>
-        <div class="prod-list"></div>
+        <div id="hybrid-list" class="prod-list"></div>
       </div>
 
     </div>
