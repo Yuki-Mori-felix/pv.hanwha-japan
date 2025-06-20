@@ -78,21 +78,23 @@ require get_stylesheet_directory() . '/include/my_variables.php';
 </section>
 
 <div class="_contents002">
-  <h3><?= get_field('contents002_title_main'); ?></h3>
-
-  <div class="_contents002_inner">
-    <div class="wrap">
-      <div class="wrap_s">
-        <div class="_box1">
-          <img src="<?= get_field('contents002_img')['url']; ?>" alt="<?= get_field('contents002_img')['alt']; ?>">
+  <div class="wrap">
+    <h3><?= get_field('contents002_title_main'); ?></h3>
+  
+    <div class="_contents002_inner">
+      <div class="wrap">
+        <div class="wrap_s">
+          <div class="_box1">
+            <img src="<?= get_field('contents002_img')['url']; ?>" alt="<?= get_field('contents002_img')['alt']; ?>">
+          </div>
+        </div>
+        <div class="_box2">
+          <p class="_box2-title"><?= get_field('contents002_title'); ?></p>
+          <?= get_field('contents002_contents'); ?>
         </div>
       </div>
-      <div class="_box2">
-        <p class="_box2-title"><?= get_field('contents002_title'); ?></p>
-        <?= get_field('contents002_contents'); ?>
-      </div>
-    </div>
-  </div><!--_contents002_inner-->
+    </div><!--_contents002_inner-->
+  </div>
 
 </div><!--_contents002-->
 
@@ -184,6 +186,7 @@ require get_stylesheet_directory() . '/include/my_variables.php';
           <div class="banner">
             <a href="<?= get_field('contents005_url') ?>">
               <img src="<?= get_field('contents005_banner_img')['url'] ?>" alt="<?= get_field('contents005_banner_img')['alt'] ?>">
+              <div class="banner-text-back"><span class="banner-text">受賞・実績</span></div>
             </a>
           </div>
         </div>
