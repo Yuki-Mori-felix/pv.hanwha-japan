@@ -1,4 +1,22 @@
 @charset "UTF-8";
+.product-list .mv-img .mv-text {
+  z-index: 2 !important;
+}
+.product-list .mv-img .fv_add_img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  height: fit-content;
+  width: 60vw;
+  max-width: 620px;
+}
+@media screen and (max-width: 768px) {
+  .product-list .mv-img .fv_add_img {
+    bottom: 110px;
+  }
+}
+
 /*_____  _____*/
 .popular_products_now {
   margin-bottom: 118px;
@@ -18,7 +36,7 @@
 }
 .popular_products_now .wrap_s .popular_products_category .popular_products_item h5 {
   padding: 0;
-  font-size: 24px;
+  font-size: clamp(1.25rem, 1.163rem + 0.38vw, 1.625rem);
   font-weight: bold;
   color: #333;
   margin-bottom: 30px;
@@ -95,7 +113,7 @@
   z-index: 1;
   color: white;
   writing-mode: vertical-rl;
-  font-size: min(120px, 11vw);
+  font-size: min(120px, 20vw);
   letter-spacing: 4.8px;
   line-height: 0.8;
   opacity: 0.8;
@@ -120,6 +138,13 @@
   text-align: center;
   border: 1px solid #cccccc;
 }
+@media screen and (max-width: 768px) {
+  .section-back:has(.system) .main-title .wrap_s .system-button {
+    top: 85px;
+    right: unset;
+    left: 0;
+  }
+}
 .section-back .main-title {
   margin-bottom: 90px;
 }
@@ -142,7 +167,7 @@
   }
 }
 .section-back .main-title .wrap_s h2 {
-  font-size: 48px;
+  font-size: clamp(2.5rem, 2.356rem + 0.64vw, 3.125rem);
   color: #3366aa;
   margin-bottom: 10px;
 }
@@ -150,6 +175,7 @@
   padding-block: 40px 70px;
   margin-bottom: 60px;
   position: relative;
+  background-size: cover;
 }
 .section-back .electricity h3 {
   font-size: 20px;
@@ -159,8 +185,11 @@
   color: #333;
 }
 .section-back .electricity h3 span {
-  font-size: 48px;
+  font-size: clamp(2.5rem, 2.356rem + 0.64vw, 3.125rem);
   font-weight: bold;
+}
+.section-back .create_electricity {
+  background-image: url(../images/product-list/Products_TopPage_Product_BG_01.jpg);
 }
 .section-back .create_electricity .electricity-content {
   position: relative;
@@ -192,14 +221,14 @@
 .section-back .create_electricity .electricity-content .create-list li ._list img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .section-back .create_electricity .electricity-content .create-list li h4 {
   font-size: 16px;
   margin-bottom: 17px;
 }
 .section-back .store_electricity {
-  background-image: url(/wp-content/uploads/2025/02/header.jpg);
+  background-image: url(../images/product-list/Products_TopPage_Product_BG_02.jpg);
 }
 .section-back .store_electricity h3 {
   color: white;
@@ -228,7 +257,7 @@
   margin-inline: auto;
 }
 .section-back .use_electricity {
-  background-image: url(/wp-content/uploads/2025/02/header.jpg);
+  background-image: url(../images/product-list/Products_TopPage_Product_BG_03.jpg);
 }
 .section-back .use_electricity .electricity-content ul {
   display: grid;
