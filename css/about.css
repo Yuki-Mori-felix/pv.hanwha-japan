@@ -1,7 +1,27 @@
+@media screen and (max-width: 768px) {
+  .about .mv-for-page .mv-img::after {
+    height: 45% !important;
+  }
+}
+.about .wrap_s:has(#breadcrumb) {
+  width: 94%;
+  height: 0;
+  position: relative;
+  z-index: 10;
+}
+.about #breadcrumb {
+  margin-top: 0;
+  padding-top: 40px;
+}
 .about .section-back {
   position: relative;
   z-index: 0;
   padding-block: 120px 80px;
+}
+@media screen and (max-width: 768px) {
+  .about .section-back {
+    padding-bottom: 40px;
+  }
 }
 .about .section-back::before {
   content: "";
@@ -9,7 +29,7 @@
   z-index: -2;
   top: 0;
   left: 0;
-  width: 366px;
+  width: min(366px, 30vw);
   height: 100%;
   background-image: url(../images/about/hanwhaJP_building_BG.jpg);
   background-size: cover;
@@ -40,6 +60,11 @@
 .about .section-back:has(.hanwha) {
   padding-block: 80px;
 }
+@media screen and (max-width: 768px) {
+  .about .section-back:has(.hanwha) {
+    padding-bottom: 40px;
+  }
+}
 .about .section-back:has(.hanwha)::before {
   background-image: url(../images/about/Hanwha_Building_BG.jpg);
 }
@@ -62,7 +87,7 @@
   width: 90%;
 }
 .about .section-back .section-title-area h2 {
-  font-size: 48px;
+  font-size: clamp(2.25rem, 2.048rem + 0.9vw, 3.125rem);
   font-weight: bold;
   color: #333;
   margin-bottom: 22px;
@@ -75,9 +100,14 @@
   width: 94%;
 }
 .about .section-back .wrap_s .title-en {
-  font-size: 24px;
+  font-size: clamp(1.125rem, 1.01rem + 0.51vw, 1.625rem);
   color: #ee7744;
   margin-bottom: 80px;
+}
+@media screen and (max-width: 768px) {
+  .about .section-back .wrap_s .title-en {
+    margin-bottom: 40px;
+  }
 }
 .about .section-back .wrap_s .hanwha-japan-list {
   display: flex;
@@ -95,6 +125,11 @@
   min-height: 57px;
   margin-bottom: 10px;
 }
+@media screen and (max-width: 768px) {
+  .about .section-back .wrap_s .hanwha-japan-list li .title {
+    min-height: unset;
+  }
+}
 .about .section-back .wrap_s .hanwha-japan-list li .num {
   font-family: "Figtree";
   font-size: 100px;
@@ -105,6 +140,7 @@
   color: #ee7744;
 }
 .about .section-back .wrap_s .hanwha-japan-text {
+  font-size: clamp(1rem, 0.913rem + 0.38vw, 1.375rem);
   text-align: center;
   margin-bottom: 80px;
 }
