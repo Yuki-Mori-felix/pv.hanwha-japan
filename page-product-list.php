@@ -14,6 +14,7 @@ get_header();
       <?php if ($catch) echo '<span>' . $catch . '</span>'; ?>
       <h2><?php the_title(); ?></h2>
     </div>
+    <div class="fv_add_img"><img src="<?= get_stylesheet_directory_uri(); ?>/images/product-list/Products_TopPage_FV_01.png" alt=""></div>
   </div>
 </section>
 
