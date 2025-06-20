@@ -769,9 +769,9 @@ if (!function_exists('my_header_news_shortcode')) {
   バリデーション一部カスタム
 ------------------------------------------*/
 
-add_filter('wpcf7_validate_number', 'validate_catalog_group', 20, 2);
+add_filter('pcf7_validatwe_number', 'custom_validate_catalog_group', 20, 2);
 
-function validate_catalog_group($result, $tag) {
+function custom_validate_catalog_group($result, $tag) {
   $tag_name = $tag['name'];
   $catalog_fields = ['cat-noc-1', 'cat-noc-2', 'cat-noc-3', 'cat-noc-4', 'cat-noc-5']; // カタログ部数の全項目
 
@@ -794,7 +794,48 @@ function validate_catalog_group($result, $tag) {
 }
 
 /*------------------------------------------
-	カタログ請求 お見積依頼 管理者側の自動返信メールの宛先に
+	お見積り依頼 選択によって必須項目が変わる
+  バリデーション一部カスタム
+------------------------------------------*/
+
+add_filter('wpcf7_validate_select', 'custom_validate_est_fields', 20, 2);
+add_filter('wpcf7_validate_text', 'custom_validate_est_fields', 20, 2);
+add_filter('wpcf7_validate_radio', 'custom_validate_est_fields', 20, 2);
+
+function custom_validate_est_fields($result, $tag) {
+  $tag_name = $tag->name;
+
+  // POSTデータ取得（念のため全部チェック）
+  $uhousing = isset($_POST['est-uhousing']) ? sanitize_text_field($_POST['est-uhousing']) : '';
+  $uyoc = isset($_POST['est-uyoc']) ? sanitize_text_field($_POST['est-uyoc']) : '';
+  $umaterial = isset($_POST['est-umaterial']) ? sanitize_text_field($_POST['est-umaterial']) : '';
+  $ushape = isset($_POST['est-ushape']) ? sanitize_text_field($_POST['est-ushape']) : '';
+  $uconstruction = isset($_POST['est-uconstruction']) ? sanitize_text_field($_POST['est-uconstruction']) : '';
+
+  if ($uhousing === '既築住宅') { // 「既築住宅」の場合だけ以下の3つを必須にする
+    if ($tag_name === 'est-uyoc' && ($uyoc === '' || $uyoc === '---')) {
+      $result->invalidate($tag, '築年数を選択してください。');
+    }
+
+    if ($tag_name === 'est-umaterial' && $umaterial === '') {
+      $result->invalidate($tag, '屋根材を入力してください。');
+    }
+
+    if ($tag_name === 'est-ushape' && $ushape === '') {
+      $result->invalidate($tag, '屋根形状を入力してください。');
+    }
+  } elseif ($uhousing === '新築住宅') { // 「新築住宅」の場合だけ着工予定日が未選択の場合エラーを出す
+    if ($tag_name === 'est-uconstruction' && $uconstruction === '未選択') {
+      $result->invalidate($tag, '着工予定日を選択してください。');
+    }
+  }
+
+  return $result;
+}
+
+/*------------------------------------------
+	カタログ請求 お見積依頼 
+  管理者側の自動返信メールの宛先に
   エリアごとに振り分けられた支店のアドレスを追加
 ------------------------------------------*/
 

@@ -80,6 +80,7 @@ main.contact {
     background-color: #fff;
     &::placeholder {
       color: #DDDDDD;
+      font-size: 13px;
     }
   }
   // --各フォーム共通 ラジオボタンとチェックボックス
@@ -350,7 +351,7 @@ main.contact {
   }
   // TOP
   > .sec-form {
-    padding: 30px 0 100px;
+    padding: 0 0 100px;
     border-top: 1px solid var(--col-gray);
     .container {
       * {
@@ -369,23 +370,16 @@ main.contact {
             opacity: 1;
           }
         }
-        .row.ucompany {
-          margin-top: initial;
-          border-top: initial;
-        }
       }
       .row {
         display: flex;
         align-items: center;
+        padding: 30px 0;
+        border-top: 1px solid #F5F5F5;
         @include max {
           flex-direction: column;
           align-items: start;
           gap: 15px;
-        }
-        &:not(:nth-of-type(2)) {
-          margin-top: 30px;
-          padding-top: 30px;
-          border-top: 1px solid #F5F5F5;
         }
         .form-label,
         .labelc {
@@ -420,27 +414,40 @@ main.contact {
         .input-radio {
           display: flex;
         }
-        &.udescription {
-          .input {
-            position: relative;
-            &::after {
-              content: "";
-              position: absolute;
-              right: 9px;
-              top: 18px;
-              width: 8px;
-              height: 8px;
-              border-right: 1px solid var(--col-black);
-              border-bottom: 1px solid var(--col-black);
-              transform: rotate(45deg);
-            }
+        .input-other {
+          max-width: 315px;
+          width: 100%;
+          margin-top: -15px;
+          &:disabled {
+            border: 1px solid #b7b7b7;
+            background-color: #ccc;
           }
+        }
+        .select-arrow {
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            right: 9px;
+            top: 18px;
+            width: 8px;
+            height: 8px;
+            border-right: 1px solid var(--col-black);
+            border-bottom: 1px solid var(--col-black);
+            transform: rotate(45deg);
+          }
+        }
+        &.udescription {
+          border-top: initial;
         }
         &.utype,
         &.ubrand {
           .input-radio {
             gap: 30px;
           }
+        }
+        &.ubrand {
+          border-top: initial;
         }
         &.uhousing,
         &.uproduct {
@@ -488,15 +495,6 @@ main.contact {
           .input-check {
             display: grid;
             gap: 5px;
-          }
-          .input-other {
-            max-width: 315px;
-            width: 100%;
-            margin-top: -15px;
-            &:disabled {
-              border: 1px solid #b7b7b7;
-              background-color: #ccc;
-            }
           }
         }
         &.uagree {
@@ -637,6 +635,33 @@ main.contact.quotation {
         margin-top: 80px;
         padding-top: 80px;
         border-top: 1px solid var(--col-gray);
+      }
+    }
+    .form {
+      .row {
+        .input {
+          .add-list {
+            display: grid;
+            gap: 16px;
+          }
+        }
+      }
+      .setup-product,
+      .new-house,
+      .existing-house {
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s;
+        &.is-visible {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+      .uconstruction {
+        .wpcf7-list-item.first {
+          display: none;
+        }
       }
     }
   }
@@ -906,11 +931,6 @@ main.contact.contact-catalog {
     border-top: initial;
     .form {
       .row {
-        &:not(:nth-of-type(1)) {
-          margin-top: 30px;
-          padding-top: 30px;
-          border-top: 1px solid #F5F5F5;
-        }
         &.utype {
           margin-top: 80px;
           border-top: 1px solid #CCCCCC;

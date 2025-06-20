@@ -80,6 +80,7 @@ main.contact input[type=number]::placeholder,
 main.contact select::placeholder,
 main.contact textarea::placeholder {
   color: #DDDDDD;
+  font-size: 13px;
 }
 main.contact input[type=radio],
 main.contact input[type=checkbox] {
@@ -342,7 +343,7 @@ main.contact > .top > .container > .links {
   margin-top: 40px;
 }
 main.contact > .sec-form {
-  padding: 30px 0 100px;
+  padding: 0 0 100px;
   border-top: 1px solid var(--col-gray);
 }
 main.contact > .sec-form .container * {
@@ -358,13 +359,11 @@ main.contact > .sec-form .form .rowc.company-name.is-visible {
   visibility: visible;
   opacity: 1;
 }
-main.contact > .sec-form .form .rowc .row.ucompany {
-  margin-top: initial;
-  border-top: initial;
-}
 main.contact > .sec-form .form .row {
   display: flex;
   align-items: center;
+  padding: 30px 0;
+  border-top: 1px solid #F5F5F5;
 }
 @media screen and (max-width: 768px) {
   main.contact > .sec-form .form .row {
@@ -372,11 +371,6 @@ main.contact > .sec-form .form .row {
     align-items: start;
     gap: 15px;
   }
-}
-main.contact > .sec-form .form .row:not(:nth-of-type(2)) {
-  margin-top: 30px;
-  padding-top: 30px;
-  border-top: 1px solid #F5F5F5;
 }
 main.contact > .sec-form .form .row .form-label,
 main.contact > .sec-form .form .row .labelc {
@@ -414,10 +408,19 @@ main.contact > .sec-form .form .row .add-item {
 main.contact > .sec-form .form .row .input-radio {
   display: flex;
 }
-main.contact > .sec-form .form .row.udescription .input {
+main.contact > .sec-form .form .row .input-other {
+  max-width: 315px;
+  width: 100%;
+  margin-top: -15px;
+}
+main.contact > .sec-form .form .row .input-other:disabled {
+  border: 1px solid #b7b7b7;
+  background-color: #ccc;
+}
+main.contact > .sec-form .form .row .select-arrow {
   position: relative;
 }
-main.contact > .sec-form .form .row.udescription .input::after {
+main.contact > .sec-form .form .row .select-arrow::after {
   content: "";
   position: absolute;
   right: 9px;
@@ -428,8 +431,14 @@ main.contact > .sec-form .form .row.udescription .input::after {
   border-bottom: 1px solid var(--col-black);
   transform: rotate(45deg);
 }
+main.contact > .sec-form .form .row.udescription {
+  border-top: initial;
+}
 main.contact > .sec-form .form .row.utype .input-radio, main.contact > .sec-form .form .row.ubrand .input-radio {
   gap: 30px;
+}
+main.contact > .sec-form .form .row.ubrand {
+  border-top: initial;
 }
 main.contact > .sec-form .form .row.uhousing .input-radio, main.contact > .sec-form .form .row.uproduct .input-radio {
   gap: 10px;
@@ -464,15 +473,6 @@ main.contact > .sec-form .form .row.ucontent textarea {
 main.contact > .sec-form .form .row.utime .input-check, main.contact > .sec-form .form .row.utrigger .input-check {
   display: grid;
   gap: 5px;
-}
-main.contact > .sec-form .form .row.utime .input-other, main.contact > .sec-form .form .row.utrigger .input-other {
-  max-width: 315px;
-  width: 100%;
-  margin-top: -15px;
-}
-main.contact > .sec-form .form .row.utime .input-other:disabled, main.contact > .sec-form .form .row.utrigger .input-other:disabled {
-  border: 1px solid #b7b7b7;
-  background-color: #ccc;
 }
 main.contact > .sec-form .form .row.uagree {
   padding-top: 40px;
@@ -608,6 +608,27 @@ main.contact.quotation > .sec-form > .container > .links {
   margin-top: 80px;
   padding-top: 80px;
   border-top: 1px solid var(--col-gray);
+}
+main.contact.quotation > .sec-form .form .row .input .add-list {
+  display: grid;
+  gap: 16px;
+}
+main.contact.quotation > .sec-form .form .setup-product,
+main.contact.quotation > .sec-form .form .new-house,
+main.contact.quotation > .sec-form .form .existing-house {
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+main.contact.quotation > .sec-form .form .setup-product.is-visible,
+main.contact.quotation > .sec-form .form .new-house.is-visible,
+main.contact.quotation > .sec-form .form .existing-house.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+main.contact.quotation > .sec-form .form .uconstruction .wpcf7-list-item.first {
+  display: none;
 }
 
 main.contact.catalog-dl .cat-list,
@@ -871,11 +892,6 @@ main.contact.contact-catalog > .top > .container .scroll-btn.active:hover {
 }
 main.contact.contact-catalog > .sec-form {
   border-top: initial;
-}
-main.contact.contact-catalog > .sec-form .form .row:not(:nth-of-type(1)) {
-  margin-top: 30px;
-  padding-top: 30px;
-  border-top: 1px solid #F5F5F5;
 }
 main.contact.contact-catalog > .sec-form .form .row.utype {
   margin-top: 80px;
