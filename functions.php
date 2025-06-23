@@ -176,6 +176,12 @@ function add_custom_post()
 }
 add_action('init', 'add_custom_post');
 
+function customize_menus(){
+global $menu;
+$menu[19] = $menu[10];  //メディアの移動
+unset($menu[10]);
+}
+add_action( 'admin_menu', 'customize_menus' );
 
 
 
