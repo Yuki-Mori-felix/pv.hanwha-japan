@@ -1,10 +1,9 @@
 <?php
-/* Template Name: ニュース（一覧） */
 require get_stylesheet_directory() . '/include/my_variables.php';
 ?>
 <?php get_header(); ?>
 <main class="single-news">
-  <section class="news-area" style="min-height: 100vh;">
+  <section class="single-news-area">
     <div class="wrap_s">
       <?php
       // カテゴリを取得
@@ -13,10 +12,11 @@ require get_stylesheet_directory() . '/include/my_variables.php';
         $term = $terms[0]; // 最初の1つだけ取得
       }
       ?>
-      <div class="post-info"><span class="date">2025</span><span class="cat"><?= esc_html($term->name); ?></span></div>
+      <div class="post-info"><span class="date"><?php the_time('Y.m.d'); ?></span><span class="cat"><?= esc_html($term->name); ?></span></div>
       <h1 class="title"><?= the_title(); ?></h1>
-      <div class="img"><img src="<?= get_field('img')['url']; ?>" alt=""></div>
-      <div class="detail"><?= get_field('contents') ?></div>
+      <div class="top-img"><?php the_post_thumbnail('full'); ?></div>
+      <div class="detail"><?= get_field('contents', false, false) ?></div>
+      <a class="btn" href="<?= home_url(); ?>/news/">一覧に戻る</a>
     </div>
   </section>
 </main>
