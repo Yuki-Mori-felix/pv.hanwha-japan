@@ -358,6 +358,28 @@ if (! function_exists('custom_breadcrumb')) {
       }
       // 投稿自身の表示
       echo '<li><span>' . esc_html(strip_tags($page_title)) . '</span></li>';
+    } elseif (is_post_type_archive()) {
+      // カスタム投稿タイプのアーカイブ（例：archive-news.php）
+
+      $post_type = get_post_type_object(get_post_type());
+      $slug = $post_type->rewrite['slug']; // スラッグ取得（例: news）
+
+      // 固定ページをスラッグで取得
+      $linked_page = get_page_by_path($slug);
+      if ($linked_page) {
+        $title = get_the_title($linked_page);
+        $link = get_permalink($linked_page);
+
+        echo '<li><a href="' . esc_url($link) . '"><span>' . esc_html($title) . '</span></a></li>';
+
+        $json_array[] = array(
+          'id' => $link,
+          'name' => $title
+        );
+      } else {
+        // 固定ページがなければ投稿タイプのラベルを表示
+        echo '<li><span>' . esc_html($post_type->labels->name) . '</span></li>';
+      }
     } elseif (is_archive()) {
 
       //タームアーカイブ ( $wp_obj : WP_Term )
