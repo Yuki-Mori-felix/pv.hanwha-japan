@@ -2,7 +2,7 @@
 
 .news {
 	.news-area {
-    padding-bottom: 80px;
+		padding-bottom: 80px;
 		.wrap_s {
 			width: 94%;
 			margin-inline: auto;
@@ -132,81 +132,111 @@
 		}
 	}
 }
+//*========== END OF NEWS ==========*
 
 .single-news {
-  padding-bottom: 120px;
+	padding-bottom: 120px;
 
-  .single-news-area {
+	.single-news-area {
+		.wrap_s {
+			width: 94%;
 
-    .wrap_s {
-      width: 94%;
+			.post-info {
+				display: flex;
+				align-items: center;
+				gap: 15px;
 
-      .post-info {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        
-        .date {
-          font-size: clamp(0.875rem, 0.817rem + 0.26vw, 1.125rem);
-        }
-        
-        .cat {
-          background: #3366aa;
-          color: white;
-          padding: 5px 20px;
-          border-radius: 20px;
-        }
-      }
+				.date {
+					font-size: clamp(0.875rem, 0.817rem + 0.26vw, 1.125rem);
+				}
 
-      .title {
-        padding-top: 10px;
-        font-size: clamp(1.625rem, 1.51rem + 0.51vw, 2.125rem);
-      }
+				.cat {
+					background: #3366aa;
+					color: white;
+					padding: 5px 20px;
+					border-radius: 20px;
+				}
+			}
 
-      .top-img {
-        margin-bottom: 40px;
-        @include max {
-          margin-bottom: 20px;
-        }
+			.title {
+				padding-top: 10px;
+				font-size: clamp(1.625rem, 1.51rem + 0.51vw, 2.125rem);
+			}
 
-        img {
-          width: 100%;
-        }
-      }
+			.top-img {
+				margin-bottom: 40px;
+				@include max {
+					margin-bottom: 20px;
+				}
 
-      .detail {
-        margin-bottom: 100px;
+				img {
+					width: 100%;
+				}
+			}
 
-        a {
-          &:hover {
-            text-decoration: underline;
-          }
-        }
+			.detail {
+				margin-bottom: 100px;
 
-        p {
-          font-size: clamp(1rem, 0.971rem + 0.13vw, 1.125rem) !important;
-          font-weight: 400;
-        }
+				a {
+					&:hover {
+						text-decoration: underline;
+					}
+				}
 
-        strong {
-          font-size: clamp(1.375rem, 1.346rem + 0.13vw, 1.5rem);
-        }
+				p {
+					font-size: clamp(1rem, 0.971rem + 0.13vw, 1.125rem) !important;
+					font-weight: 400;
+				}
 
-        img {
-          width: 100%;
-          max-width: 100%;
-          height: auto;
-          margin-bottom: 30px;
-        }
-      }
+				strong {
+					font-size: clamp(1.375rem, 1.346rem + 0.13vw, 1.5rem);
+				}
 
-      .btn {
-        margin-inline: auto;
-        background: #3366aa;
-        &:hover::after {
-          background: #3d7abb;
-        }
-      }
-    }
-  }
+				img {
+					width: 100%;
+					max-width: 100%;
+					height: auto;
+					margin-bottom: 30px;
+				}
+			}
+
+			.btn {
+				margin-inline: auto;
+				background: #3366aa;
+				&:hover::after {
+					background: #3d7abb;
+				}
+			}
+		}
+	}
+}
+//*========== END OF SINGLE NEWS ==========*
+
+/*___ ページネーション ___*/
+#pagination {
+	width: fit-content;
+	margin-inline: auto;
+
+	.page-numbers {
+		font-weight: 400;
+
+		&.current {
+			font-weight: 500;
+			color: black;
+			border-bottom: 1px solid #3366aa;
+		}
+	}
+
+	.prev,
+	.next {
+		background: white;
+		border: 1px solid #3366aa;
+		border-radius: 50%;
+		color: #3366aa;
+		margin-inline: 5px;
+		&:hover {
+			opacity: 0.8;
+			color: #3366aa;
+		}
+	}
 }

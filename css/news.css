@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .news .news-area {
   padding-bottom: 80px;
 }
@@ -141,4 +142,31 @@
 }
 .single-news .single-news-area .wrap_s .btn:hover::after {
   background: #3d7abb;
+}
+
+/*___ ページネーション ___*/
+#pagination {
+  width: fit-content;
+  margin-inline: auto;
+}
+#pagination .page-numbers {
+  font-weight: 400;
+}
+#pagination .page-numbers.current {
+  font-weight: 500;
+  color: black;
+  border-bottom: 1px solid #3366aa;
+}
+#pagination .prev,
+#pagination .next {
+  background: white;
+  border: 1px solid #3366aa;
+  border-radius: 50%;
+  color: #3366aa;
+  margin-inline: 5px;
+}
+#pagination .prev:hover,
+#pagination .next:hover {
+  opacity: 0.8;
+  color: #3366aa;
 }/*# sourceMappingURL=news.css.map */
