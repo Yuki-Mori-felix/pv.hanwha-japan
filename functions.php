@@ -173,6 +173,36 @@ function add_custom_post()
       'show_in_rest' => true,
     )
   );
+
+  /* ブログ */
+	register_post_type(
+		'blog-post',
+		array(
+			'label' => 'ブログ',
+			'public' => true,
+      'rewrite' => ['slug' => 'blog', 'with_front' => false],
+			'show_in_rest' => true,
+			'menu_position' => 5,
+			'supports' => array(
+				'title',
+				'thumbnail',
+				'revisions',
+				'excerpt',
+				'custom-fields',
+			)
+		)
+	);
+
+	register_taxonomy(
+    'blog-cat',
+    'blog-post',
+    array(
+      'label' => 'カテゴリー',
+      'hierarchical' => true,
+      'public' => true,
+      'show_in_rest' => true,
+    )
+  );
 }
 add_action('init', 'add_custom_post');
 
@@ -183,6 +213,19 @@ unset($menu[10]);
 }
 add_action( 'admin_menu', 'customize_menus' );
 
+/*------------------------------------------
+  固定ページ（ブログ一覧）でぺージネーション有効
+------------------------------------------*/
+function add_blog_pagination_rewrite() {
+  add_rewrite_rule(
+    '^blog/page/([0-9]+)/?$',
+    'index.php?pagename=blog&paged=$matches[1]',
+    'top'
+  );
+}
+add_action('init', 'add_blog_pagination_rewrite');
+
+// 忘れずに一度「設定 > パーマリンク」で保存して rewrite を反映させる！
 
 
 /*========================== パンくずリスト表示設定 ==========================*/
