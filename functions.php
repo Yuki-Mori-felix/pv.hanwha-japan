@@ -186,6 +186,7 @@ function add_custom_post()
 			'supports' => array(
 				'title',
 				'thumbnail',
+        'editor',
 				'revisions',
 				'excerpt',
 				'custom-fields',
@@ -201,6 +202,18 @@ function add_custom_post()
       'hierarchical' => true,
       'public' => true,
       'show_in_rest' => true,
+    )
+  );
+
+  register_taxonomy(
+    'blog-tag',
+    'blog-post',
+    array(
+      'label' => 'タグ',
+      'hierarchical' => false,  //階層構造
+      'public' => true,
+      'show_in_rest' => true,
+      'update_count_callback' => '_update_post_term_count', // タグのように使いたい場合に追加
     )
   );
 }
@@ -363,7 +376,7 @@ if (! function_exists('custom_breadcrumb')) {
         // 最下層のタームを表示
         echo '<li>' .
           ' <a href="' . $term_link . '">' .
-          '<span>' . $term_name . '</span>' .
+          // '<span>' . $term_name . '</span>' .
           '</a> / ' .
           '</li>';
         //JSON-LDデータ
@@ -1024,3 +1037,40 @@ function add_branch_email_by_pref($contact_form) {
   }
 }
 
+/*------------------------------------------
+	カスタム投稿「商品」「ニュース」「ブログ」カテゴリ選択をラジオボタンに
+------------------------------------------*/
+function convert_taxonomy_checkboxes_to_radio() {
+  $screen = get_current_screen();
+  if ( ! $screen ) return;
+  
+  // 対象にしたい投稿タイプとタクソノミーの組み合わせ
+  $targets = [
+    'product' => ['product-cat'],
+    'blog-post' => ['blog-cat'],
+    'news'      => ['news-post-format'],
+    // 必要があればここに追加
+  ];
+  
+  $post_type = $screen->post_type;
+  
+  if ( ! isset( $targets[ $post_type ] ) ) return;
+  
+  ?>
+  <script type="text/javascript">
+  jQuery(function($) {
+    <?php foreach ( $targets[ $post_type ] as $taxonomy ) : ?>
+      var $checkboxes = $('#taxonomy-<?php echo esc_js( $taxonomy ); ?> input[type="checkbox"]');
+      $checkboxes.each(function() {
+        $(this).replaceWith($(this).clone().attr('type', 'radio'));
+      });
+      
+      $(document).on('change', '#taxonomy-<?php echo esc_js( $taxonomy ); ?> input[type="radio"]', function() {
+        $('#taxonomy-<?php echo esc_js( $taxonomy ); ?> input[type="radio"]').not(this).prop('checked', false);
+      });
+    <?php endforeach; ?>
+  });
+  </script>
+  <?php
+}
+add_action( 'admin_print_footer_scripts', 'convert_taxonomy_checkboxes_to_radio' );
