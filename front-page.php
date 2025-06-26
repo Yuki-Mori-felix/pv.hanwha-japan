@@ -174,7 +174,7 @@ get_header();
 
           <div class="retailer-system"><!--販売店用システム-->
             <div class="_left_contents">
-              <h3>販売店用システム</h3>
+              <h3>販売店様用システム</h3>
               <P>HANASYS (ハナシス)</p>
             </div>
             <div class="_right_contents">
