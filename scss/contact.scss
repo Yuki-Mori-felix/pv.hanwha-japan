@@ -579,7 +579,10 @@ main.contact {
   // SEC_FORM
   > .info {
     padding: 40px 0;
-    background: var(--col-gray);
+    background-image: url(../images/blog/Repair\ Announcement\ bg.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     > .container {
       max-width: 983px;
       display: flex;

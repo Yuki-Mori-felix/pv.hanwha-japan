@@ -554,7 +554,10 @@ main.contact > .sec-form .form .wpcf7-list-item {
 }
 main.contact > .info {
   padding: 40px 0;
-  background: var(--col-gray);
+  background-image: url(../images/blog/Repair\ Announcement\ bg.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 main.contact > .info > .container {
   max-width: 983px;
