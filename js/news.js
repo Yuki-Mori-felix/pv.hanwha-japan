@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const buttons = document.querySelectorAll(".filter-button");
 	const newsList = document.querySelector(".news-list");
 	const pagination = document.getElementById("pagination");
+	const preloadedData = {};
 
 	// 現在のページ番号を取得（URLから）
 	const getCurrentPage = () => {
@@ -41,14 +42,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 			// AJAX URL生成
 			let url = `/wp-admin/admin-ajax.php?action=filter_news&term_id=${termId}`;
-			if (termId === "all") {
-				url += `&paged=1`; // 「すべて」では1ページ目から再表示
+
+			if (preloadedData[termId]) {
+				newsList.innerHTML = preloadedData[termId];
+				pagination.style.display = "none";
+				return;
 			}
 
 			fetch(url)
 				.then((response) => response.text())
 				.then((data) => {
 					newsList.innerHTML = data;
+					preloadedData[termId] = data; // キャッシュ保存！
 
 					// ページネーションの表示/非表示
 					if (termId === "all") {
