@@ -1074,3 +1074,31 @@ function convert_taxonomy_checkboxes_to_radio() {
   <?php
 }
 add_action( 'admin_print_footer_scripts', 'convert_taxonomy_checkboxes_to_radio' );
+
+
+/*------------------------------------------
+	ブログ記事の閲覧数をカウント
+------------------------------------------*/
+function set_post_views($postID) {
+
+  // ログインユーザの閲覧はカウントしない
+  if (is_user_logged_in()) return;
+
+  $ip = $_SERVER['REMOTE_ADDR'];
+  $meta_key_time = 'view_block_time_' . md5($ip);
+  $meta_key_count = 'post_views_count';
+  $interval = 3600; // 同一IPアドレスからの再訪問をカウントするインターバル（秒）
+
+  $last_view_time = get_post_meta($postID, $meta_key_time, true);
+  $now = time();
+
+  if (!$last_view_time || ($now - $last_view_time) > $interval) { //初回訪問かインターバルを超えた再訪問の場合
+    // カウント更新
+    $count = get_post_meta($postID, $meta_key_count, true);
+    $count = $count ? intval($count) + 1 : 1;
+    update_post_meta($postID, $meta_key_count, $count);
+
+    // 最終アクセス時間を記録
+    update_post_meta($postID, $meta_key_time, $now);
+  }
+}
