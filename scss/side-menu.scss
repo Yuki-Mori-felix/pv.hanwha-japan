@@ -1,0 +1,167 @@
+@use "breakpoint" as *;
+
+aside.side-menu {
+	max-width: 227px;
+  @include max {
+    max-width: 350px;
+    margin-inline: auto;
+  }
+
+	.title {
+		font-weight: bold;
+		font-size: 20px;
+		border-bottom: 1px solid #3366aa;
+		margin-bottom: 20px;
+		padding-bottom: 5px;
+	}
+
+	.side-content {
+		margin-bottom: 40px;
+
+		.cat-list {
+			li {
+				margin-bottom: 20px;
+
+				a {
+					font-size: 14px;
+					display: block;
+					position: relative;
+					&:hover {
+						color: #ee7744;
+						&::after {
+							right: 0;
+							border-color: #3333334d;
+						}
+					}
+					&::after {
+						content: "";
+						position: absolute;
+						top: 50%;
+						right: 10px;
+						width: 8px;
+						height: 8px;
+						border-top: solid 1px #333;
+						border-right: solid 1px #333;
+						position: absolute;
+						transform: rotate(45deg) translateY(-50%);
+						transition: right ease 0.3s;
+					}
+				}
+			}
+		} /*_____ カテゴリー _____*/
+
+		form {
+			display: grid;
+			grid-template-columns: 172px 54px;
+      height: 40px;
+
+      input {
+        border-radius: 4px 0 0 4px;
+        font-size: 12px;
+        &::placeholder {
+          color: #ccc;
+        }
+      }
+
+			button {
+        font-size: 12px;
+				background: #3366aa;
+        color: white;
+				border-radius: 0px 4px 4px 0px;
+        padding: 0;
+        &:hover {
+          opacity: .8;
+        }
+        img {
+          width: 20px;
+          height: 20px;
+          vertical-align: middle;
+        }
+			}
+		} /*_____ 検索 _____*/
+
+    .blog-list {
+
+      li {
+        margin-bottom: 25px;
+        
+        a {
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          gap: 10px;
+
+          img {
+            width: 76px;
+            height: 50px;
+            object-fit: cover;
+          }
+
+          .text-area {
+            .cat {
+              font-size: 9px;
+              font-weight: 400;
+              color: white;
+              background: #3366aa;
+              border-radius: 15px;
+              width: fit-content;
+              padding: 3px 10px;
+              margin-bottom: 6px;
+            }
+
+            h2 {
+              font-size: 12px;
+              font-weight: 400;
+              color: #333;
+              margin: 0;
+              padding: 0;
+              line-height: 1.5;
+            }
+          }
+        }
+      }
+    } /*_____ 新着記事 _____*/
+
+		.tag-list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: left;
+
+			li {
+				width: 50%;
+				margin-bottom: 10px;
+
+				a {
+					position: relative;
+					font-size: 12px;
+					padding-left: 20px;
+					&:hover {
+						color: #3366aa;
+					}
+					&::before {
+						content: "＃ ";
+						position: absolute;
+						top: 50%;
+						left: 0;
+						transform: translateY(-50%);
+					}
+				}
+			}
+		} /*_____ おすすめタグ _____*/
+	}
+
+  .side-menu-img {
+    width: fit-content;
+    @include max {
+      margin-inline: auto;
+    }
+
+    a {
+      display: block;
+      
+      img {
+        height: 140px;
+        object-fit: cover;
+      }
+    }
+  }
+}

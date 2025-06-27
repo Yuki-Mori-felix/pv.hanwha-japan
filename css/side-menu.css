@@ -1,0 +1,149 @@
+@charset "UTF-8";
+aside.side-menu {
+  max-width: 227px;
+}
+@media screen and (max-width: 768px) {
+  aside.side-menu {
+    max-width: 350px;
+    margin-inline: auto;
+  }
+}
+aside.side-menu .title {
+  font-weight: bold;
+  font-size: 20px;
+  border-bottom: 1px solid #3366aa;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+}
+aside.side-menu .side-content {
+  margin-bottom: 40px;
+  /*_____ カテゴリー _____*/
+  /*_____ 検索 _____*/
+  /*_____ 新着記事 _____*/
+  /*_____ おすすめタグ _____*/
+}
+aside.side-menu .side-content .cat-list li {
+  margin-bottom: 20px;
+}
+aside.side-menu .side-content .cat-list li a {
+  font-size: 14px;
+  display: block;
+  position: relative;
+}
+aside.side-menu .side-content .cat-list li a:hover {
+  color: #ee7744;
+}
+aside.side-menu .side-content .cat-list li a:hover::after {
+  right: 0;
+  border-color: rgba(51, 51, 51, 0.3019607843);
+}
+aside.side-menu .side-content .cat-list li a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  border-top: solid 1px #333;
+  border-right: solid 1px #333;
+  position: absolute;
+  transform: rotate(45deg) translateY(-50%);
+  transition: right ease 0.3s;
+}
+aside.side-menu .side-content form {
+  display: grid;
+  grid-template-columns: 172px 54px;
+  height: 40px;
+}
+aside.side-menu .side-content form input {
+  border-radius: 4px 0 0 4px;
+  font-size: 12px;
+}
+aside.side-menu .side-content form input::placeholder {
+  color: #ccc;
+}
+aside.side-menu .side-content form button {
+  font-size: 12px;
+  background: #3366aa;
+  color: white;
+  border-radius: 0px 4px 4px 0px;
+  padding: 0;
+}
+aside.side-menu .side-content form button:hover {
+  opacity: 0.8;
+}
+aside.side-menu .side-content form button img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+aside.side-menu .side-content .blog-list li {
+  margin-bottom: 25px;
+}
+aside.side-menu .side-content .blog-list li a {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+}
+aside.side-menu .side-content .blog-list li a img {
+  width: 76px;
+  height: 50px;
+  object-fit: cover;
+}
+aside.side-menu .side-content .blog-list li a .text-area .cat {
+  font-size: 9px;
+  font-weight: 400;
+  color: white;
+  background: #3366aa;
+  border-radius: 15px;
+  width: fit-content;
+  padding: 3px 10px;
+  margin-bottom: 6px;
+}
+aside.side-menu .side-content .blog-list li a .text-area h2 {
+  font-size: 12px;
+  font-weight: 400;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+aside.side-menu .side-content .tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+aside.side-menu .side-content .tag-list li {
+  width: 50%;
+  margin-bottom: 10px;
+}
+aside.side-menu .side-content .tag-list li a {
+  position: relative;
+  font-size: 12px;
+  padding-left: 20px;
+}
+aside.side-menu .side-content .tag-list li a:hover {
+  color: #3366aa;
+}
+aside.side-menu .side-content .tag-list li a::before {
+  content: "＃ ";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+aside.side-menu .side-menu-img {
+  width: fit-content;
+}
+@media screen and (max-width: 768px) {
+  aside.side-menu .side-menu-img {
+    margin-inline: auto;
+  }
+}
+aside.side-menu .side-menu-img a {
+  display: block;
+}
+aside.side-menu .side-menu-img a img {
+  height: 140px;
+  object-fit: cover;
+}/*# sourceMappingURL=side-menu.css.map */
