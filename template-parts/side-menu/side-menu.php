@@ -44,7 +44,43 @@ require get_stylesheet_directory() . '/include/my_variables.php';
 
   <div class="title">人気の記事ランキング</div>
   <div class="side-content">
-    <?php echo do_shortcode('[wpp post_type="blog-post" limit=5]'); ?>
+    <?php
+    $args = [
+      'post_type' => 'blog-post',
+      'posts_per_page' => 5,
+      'meta_key' => 'post_views_count',
+      'orderby' => 'meta_value_num',
+      'order' => 'DESC'
+    ];
+    $query = new WP_Query($args);
+    ?>
+    <?php if ($query->have_posts()) : ?>
+      <ul class="blog-list ranking">
+        <?php while ($query->have_posts()) : $query->the_post(); ?>
+          <?php
+          $views = get_post_meta(get_the_ID(), 'post_views_count', true);
+          $views = $views ? intval($views) : 0;
+          $thumb_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+          $terms = get_the_terms(get_the_ID(), 'blog-cat');
+          $term_name = ($terms && !is_wp_error($terms)) ? esc_html($terms[0]->name) : '';
+          ?>
+          <li>
+            <a href="<?php the_permalink(); ?>">
+              <img src="<?php echo esc_url($thumb_url); ?>" alt="<?php the_title_attribute(); ?>">
+              <div class="text-area">
+                <div class="cat"><?php echo $term_name; ?></div>
+                <h2><?php the_title(); ?></h2>
+                <?php if (is_user_logged_in()): ?>
+                  <!-- <p class="views">閲覧数：<?php echo number_format($views); ?> 回</p> -->
+                <?php endif; ?>
+              </div>
+            </a>
+          </li>
+        <?php endwhile; ?>
+
+      </ul>
+      <?php wp_reset_postdata(); ?>
+    <?php endif; ?>
   </div>
 
 
