@@ -6,7 +6,7 @@ get_header();
 $form_id = is_public_server() ? "fc48203" : "2aa1f57"; // cf7のフォームid
 ?>
 <main class="contact quotation">
-  <section class="mv" style="background-image: url(https://pv.hanwha-japan.com/wp-content/uploads/2025/06/mv-contact-quotation.png)">
+  <section class="mv" style="background-image: url(<?= get_field('fv_page_img'); ?>)">
     <h2 class="ttl">お見積り依頼</h2>
   </section>
   <!-- // MV -->

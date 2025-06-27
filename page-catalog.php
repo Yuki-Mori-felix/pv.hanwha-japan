@@ -5,7 +5,7 @@ Template Name: WEBカタログ・ダウンロード
 get_header();
 ?>
 <main class="contact catalog-dl">
-  <section class="mv" style="background-image: url(https://pv.hanwha-japan.com/wp-content/uploads/2025/06/mv-catalog.png)">
+  <section class="mv" style="background-image: url(<?= get_field('fv_page_img'); ?>)">
     <h2 class="ttl">WEBカタログ・ダウンロード</h2>
   </section>
   <!-- // MV -->

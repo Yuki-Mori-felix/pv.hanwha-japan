@@ -7,7 +7,7 @@ $form_id = is_public_server() ? "99a0cdb" : "de8d9bf"; // cf7のフォームid
 ?>
 
 <main class="contact contact-catalog">
-  <section class="mv" style="background-image: url(https://pv.hanwha-japan.com/wp-content/uploads/2025/06/mv-catalog.png)">
+  <section class="mv" style="background-image: url(<?= get_field('fv_page_img'); ?>)">
     <h2 class="ttl">WEBカタログ・ダウンロード</h2>
   </section>
   <!-- // MV -->
