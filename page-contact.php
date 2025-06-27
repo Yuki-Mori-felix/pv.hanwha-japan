@@ -7,7 +7,7 @@ $form_id = is_public_server() ? "bc3e21b" : "529dfca"; // cf7のフォームid
 ?>
 <main class="contact">
   <section class="mv" style="background-image: url(<?= get_field('fv_page_img'); ?>)">
-    <h2 class="ttl">お問い合わせ</h2>
+    <h2 class="ttl"><?= the_title(); ?></h2>
   </section>
   <!-- // MV -->
   <div class="wrap">

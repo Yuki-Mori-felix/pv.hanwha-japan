@@ -6,7 +6,7 @@ get_header();
 ?>
 <main class="contact catalog-dl">
   <section class="mv" style="background-image: url(<?= get_field('fv_page_img'); ?>)">
-    <h2 class="ttl">WEBカタログ・ダウンロード</h2>
+    <h2 class="ttl"><?= the_title(); ?></h2>
   </section>
   <!-- // MV -->
   <div class="wrap">
