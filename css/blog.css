@@ -563,7 +563,9 @@
   background: #EE7744;
   color: white;
   width: 40px;
+  height: 40px;
   text-align: center;
+  vertical-align: middle;
 }
 #pagination .prev,
 #pagination .next {
