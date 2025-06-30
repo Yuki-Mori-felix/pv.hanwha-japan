@@ -3,6 +3,14 @@
 html {
   scroll-behavior: smooth;
 }
+@media screen and (max-width: 768px) {
+  html {
+    font-size: clamp(0.875rem, 0.821rem + 0.24vw, 1rem) !important;
+  }
+}
+html .wrap_s:has(#breadcrumb) {
+  width: 94%;
+}
 
 #content {
   padding-top: 0;
@@ -12,6 +20,11 @@ html {
   position: relative;
   height: 600px;
   background: rgba(238, 119, 68, 0.08);
+}
+@media screen and (max-width: 768px) {
+  #content .mv-for-page {
+    height: 80vh;
+  }
 }
 #content .mv-for-page.product-list {
   background-color: rgba(51, 102, 170, 0.08);
@@ -30,11 +43,16 @@ html {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 50%;
+  height: 55%;
   max-height: 300px;
   background: #ffffff 0% 0% no-repeat padding-box;
   opacity: 0.5;
   z-index: 0;
+}
+@media screen and (max-width: 768px) {
+  #content .mv-for-page .mv-img::after {
+    height: 40%;
+  }
 }
 #content .mv-for-page .mv-sub-title-area {
   position: relative;
@@ -51,7 +69,7 @@ html {
   position: absolute;
   top: 48px;
   left: 7vw;
-  font-size: 20px;
+  font-size: clamp(1.125rem, 1.067rem + 0.26vw, 1.375rem);
   font-family: "Figtree";
   font-weight: 500;
   color: white;
@@ -69,7 +87,8 @@ html {
   z-index: 1;
 }
 #content .mv-for-page .mv-text h2 {
-  font-size: 45px;
+  font-size: clamp(2rem, 1.813rem + 0.83vw, 2.813rem);
+  text-align: left;
   width: fit-content;
   margin: 0;
   padding: 0;
@@ -77,16 +96,11 @@ html {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-@media screen and (max-width: 768px) {
-  #content .mv-for-page .mv-text h2 {
-    font-size: 32px;
-  }
-}
 #content .mv-for-page .mv-text span {
-  font-size: 20px;
+  font-size: clamp(1rem, 0.942rem + 0.26vw, 1.25rem);
   font-weight: 500;
   display: block;
-  margin-bottom: 58px;
+  margin-bottom: min(55px, 2vw);
 }
 
 /*======================= END OF COMMON =======================*/
