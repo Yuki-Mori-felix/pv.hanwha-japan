@@ -69,6 +69,10 @@
   <?php elseif (is_post_type_archive('news') || is_singular('news')) : ?>
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/news.css'>
     <script src="<?= get_stylesheet_directory_uri() ?>/js/news.js"></script>
+  <?php elseif (is_page('blog') || is_singular('blog-post')) : ?>
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/side-menu.css'>
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/blog.css'>
+    <script src="<?=get_stylesheet_directory_uri()?>/js/blog.js"></script>
   <?php endif; ?>
   <!--style.css-->
 
