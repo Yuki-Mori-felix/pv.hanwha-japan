@@ -89,7 +89,7 @@
   </div>
 
 </footer>
--
+
 
 
 </div><!-- .site-content-contain -->
@@ -98,10 +98,5 @@
 
 
 </body>
-<?php 
-if (is_page('interview')) {
-  echo '<script src="' . get_stylesheet_directory_uri() . '/js/voice.js"></script>';
-}
-?>
 <script src="<?= get_stylesheet_directory_uri() ?>/js/script.js"></script>
 </html>
