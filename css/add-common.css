@@ -293,7 +293,7 @@ footer#colophon ._fixed_button .btn-box .btn:hover::after {
   transform: scale(1, 1);
 }
 footer#colophon ._fixed_button .btn1-box .btn1 {
-  color: #ee7744;
+  color: #333;
   border-right: #ee7744 10px solid;
   border-radius: 5px 0 0 0;
   border-bottom: 1px solid #ccc;
@@ -302,7 +302,7 @@ footer#colophon ._fixed_button .btn1-box .btn1::after {
   border-radius: 5px 0 0 0;
 }
 footer#colophon ._fixed_button .btn2-box .btn2 {
-  color: #3366aa;
+  color: #333;
   border-right: #3366aa 10px solid;
   border-bottom: 1px solid #ccc;
 }
@@ -310,7 +310,7 @@ footer#colophon ._fixed_button .btn2-box .btn2::after {
   background: #3366aa;
 }
 footer#colophon ._fixed_button .btn3-box .btn3 {
-  color: #999;
+  color: #333;
   border-right: #999 10px solid;
 }
 footer#colophon ._fixed_button .btn3-box .btn3::after {
