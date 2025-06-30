@@ -5,9 +5,9 @@ require get_stylesheet_directory() . '/include/my_variables.php';
 <?php get_header(); ?>
 <main class="blog">
 
-  <section class="mv">
+  <section class="mv" style="background-image: url(<?= get_field('fv_page_img'); ?>);">
     <div class="back-img">
-      <h1 class="title">ブログ</h1>
+      <h1 class="title"><?= the_title(); ?></h1>
     </div>
   </section>
   <!--========== END OF MV ==========-->
