@@ -21,6 +21,8 @@
 					width: 94%;
 					max-width: 1000px;
 					margin-inline: auto;
+          overflow-x: scroll;
+          scrollbar-width: none;
 
 					.news-category-buttons {
 						display: flex;
@@ -35,6 +37,7 @@
 								color: #333333;
 								font-size: 14px;
 								border-radius: 35px;
+                white-space: nowrap;
 
 								&.active {
 									color: white;

@@ -19,6 +19,8 @@
   width: 94%;
   max-width: 1000px;
   margin-inline: auto;
+  overflow-x: scroll;
+  scrollbar-width: none;
 }
 .news .news-area .wrap_s .post-filter-area .news-category-wrap .news-category-buttons {
   display: flex;
@@ -32,6 +34,7 @@
   color: #333333;
   font-size: 14px;
   border-radius: 35px;
+  white-space: nowrap;
 }
 .news .news-area .wrap_s .post-filter-area .news-category-wrap .news-category-buttons li .filter-button.active {
   color: white;
