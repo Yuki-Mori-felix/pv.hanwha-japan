@@ -247,14 +247,14 @@ get_header();
       wp_reset_postdata(); ?>
 
       <section class="topic press section-wrapper"><!--pre-release-->
-        <h3 class="section-title">プレリリース</h3>
+        <h3 class="section-title">ニュース</h3>
 
         <div class="topic-inner">
           <?php
           $args = [
-            'post_type' => 'post', // カスタム投稿名が「gourmet」の場合
+            'post_type' => 'news', // カスタム投稿名が「gourmet」の場合
             'posts_per_page' => 3, // 表示する数
-            'category_name' => 'pre-release', //カテゴリースラッグを指定
+            // 'category_name' => 'pre-release', //カテゴリースラッグを指定
             'post_status' => 'publish', //公開の記事だけ
             'order' => 'DESC', //表示する順番（逆はASC）
           ];
@@ -294,7 +294,7 @@ get_header();
           <?php endif;
           wp_reset_postdata(); ?>
 
-          <div class="next-more1 wrap_s"><a href="/category/topics/">もっと見る</a></div>
+          <div class="next-more1 wrap_s"><a href="<?= home_url(); ?>/news/">もっと見る</a></div>
 
       </section><!--pre-release-->
 
