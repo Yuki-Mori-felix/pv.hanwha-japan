@@ -91,7 +91,8 @@ aside.side-menu {
           gap: 10px;
 
           img {
-            width: 76px;
+            width: 100%;
+            min-width: 76px;
             height: 50px;
             object-fit: cover;
           }
@@ -119,6 +120,63 @@ aside.side-menu {
           }
         }
       }
+      
+      &.ranking {
+        li {
+          position: relative;
+          &::before {
+            pointer-events: none;
+            font-family: "Figtree";
+            font-size: 14px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            width: 28px;
+            height: 28px;
+            color: #ee7744;
+            background-color: white;
+            border: 1px solid #ee7744;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          &:first-child {
+            &::before {
+              content: "1";
+            }
+          }
+          &:nth-child(2) {
+            &::before {
+              content: "2";
+              color: #3366aa;
+              border: 1px solid #3366aa;
+            }
+          }
+          &:nth-child(3) {
+            &::before {
+              content: "3";
+              color: #88BBBB;
+              border: 1px solid #88BBBB;
+            }
+          }
+          &:nth-child(4) {
+            &::before {
+              content: "4";
+              color: #FFEE55;
+              border: 1px solid #FFEE55;
+            }
+          }
+          &:nth-child(5) {
+            &::before {
+              content: "5";
+              color: #333;
+              border: 1px solid #333;
+            }
+          }
+        }
+      }/*_____ 人気記事 _____*/
+
     } /*_____ 新着記事 _____*/
 
 		.tag-list {

@@ -77,6 +77,9 @@ aside.side-menu .side-content form button img {
   height: 20px;
   vertical-align: middle;
 }
+aside.side-menu .side-content .blog-list {
+  /*_____ 人気記事 _____*/
+}
 aside.side-menu .side-content .blog-list li {
   margin-bottom: 25px;
 }
@@ -86,7 +89,8 @@ aside.side-menu .side-content .blog-list li a {
   gap: 10px;
 }
 aside.side-menu .side-content .blog-list li a img {
-  width: 76px;
+  width: 100%;
+  min-width: 76px;
   height: 50px;
   object-fit: cover;
 }
@@ -107,6 +111,49 @@ aside.side-menu .side-content .blog-list li a .text-area h2 {
   margin: 0;
   padding: 0;
   line-height: 1.5;
+}
+aside.side-menu .side-content .blog-list.ranking li {
+  position: relative;
+}
+aside.side-menu .side-content .blog-list.ranking li::before {
+  pointer-events: none;
+  font-family: "Figtree";
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  color: #ee7744;
+  background-color: white;
+  border: 1px solid #ee7744;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+aside.side-menu .side-content .blog-list.ranking li:first-child::before {
+  content: "1";
+}
+aside.side-menu .side-content .blog-list.ranking li:nth-child(2)::before {
+  content: "2";
+  color: #3366aa;
+  border: 1px solid #3366aa;
+}
+aside.side-menu .side-content .blog-list.ranking li:nth-child(3)::before {
+  content: "3";
+  color: #88BBBB;
+  border: 1px solid #88BBBB;
+}
+aside.side-menu .side-content .blog-list.ranking li:nth-child(4)::before {
+  content: "4";
+  color: #FFEE55;
+  border: 1px solid #FFEE55;
+}
+aside.side-menu .side-content .blog-list.ranking li:nth-child(5)::before {
+  content: "5";
+  color: #333;
+  border: 1px solid #333;
 }
 aside.side-menu .side-content .tag-list {
   display: flex;
