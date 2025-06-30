@@ -57,18 +57,18 @@
   <!--pc-->
   <div class="_fixed_button"><!--fixed_button-->
 
-    <div class="btn-box btn1-box"><a href="" class="btn btn1">お問い合わせ</a></div>
-    <div class="btn-box btn2-box"><a href="" class="btn btn2">カタログ請求</a></div>
-    <div class="btn-box btn3-box"><a href="" class="btn btn3">お見積依頼書</a></div>
+    <div class="btn-box btn1-box"><a href="/service-support/contact/" class="btn btn1">お問い合わせ</a></div>
+    <div class="btn-box btn2-box"><a href="/service-support/contact-catalog/" class="btn btn2">カタログ請求</a></div>
+    <div class="btn-box btn3-box"><a href="/service-support/contact-quotation/" class="btn btn3">お見積り依頼</a></div>
 
   </div>
 
   <!--sp-->
   <div class="_footer_fixed_bt"><!--fixed_button-->
     <ul>
-      <li><a href="#"><i class="fa-solid fa-envelope"></i><span class="_footer_text_01">お問い合わせ</span></a></li>
-      <li><a href="#"><i class="fa-solid fa-book-open"></i><span class="_footer_text_01">カタログ請求</span></a></li>
-      <li><a href="#"><i class="fa-solid fa-calculator"></i><span class="_footer_text_01">お見積り依頼書</span></a></li>
+      <li><a href="/service-support/contact/"><i class="fa-solid fa-envelope"></i><span class="_footer_text_01">お問い合わせ</span></a></li>
+      <li><a href="/service-support/contact-catalog/"><i class="fa-solid fa-book-open"></i><span class="_footer_text_01">カタログ請求</span></a></li>
+      <li><a href="/service-support/contact-quotation/"><i class="fa-solid fa-calculator"></i><span class="_footer_text_01">お見積り依頼</span></a></li>
     </ul>
   </div>
 
