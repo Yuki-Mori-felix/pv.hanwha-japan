@@ -16,6 +16,7 @@
     <!-- <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/add.css'> -->
   <?php elseif (is_page('interview') || is_singular('voice')) : ?>
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/voice.css'>
+    <script src="<?= get_stylesheet_directory_uri() ?>/js/voice.js"></script>
 		<?php if(is_singular()): ?>
 			<script src="<?= get_stylesheet_directory_uri() ?>/js/single-voice.js"></script>
 		<?php endif; ?>
