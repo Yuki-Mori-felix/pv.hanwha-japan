@@ -2,9 +2,15 @@
 require get_stylesheet_directory() . '/include/my_variables.php';
 ?>
 <?php get_header(); ?>
+<?php
+// 閲覧数カウント 関数の呼び出し
+if (is_singular('blog-post')) {
+  set_post_views(get_the_ID());
+}
+?>
 <main class="single-blog">
   <section class="mv">
-    <div class="back-img" style="background-image: url(<?= get_field('fv_page_img'); ?>);">
+    <div class="back-img">
       <h1 class="title">ブログ</h1>
     </div>
   </section>
@@ -27,10 +33,10 @@ require get_stylesheet_directory() . '/include/my_variables.php';
         <div class="post-info"><span class="date"><?= get_the_date('Y.m.d'); ?></span><span class="cat"><?= esc_html($term->name); ?></span></div>
         <h1 class="title"><?= the_title(); ?></h1>
         <ul class="icon-list">
-          <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode( get_permalink() ); ?>" target="_blank"><img src="<?= $img_path; ?>/side-menu/Facebook_Logo_Primary.png" alt=""></a></li>
-          <li><a href="#"><img src="<?= $img_path; ?>/side-menu/logo-black.png" alt=""></a></li>
+          <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" rel="nofollow noopener" target="_blank"><img src="<?= $img_path; ?>/side-menu/Facebook_Logo_Primary.png" alt=""></a></li>
+          <li><a href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_permalink()); ?>" rel="nofollow noopener" target="_blank"><img src="<?= $img_path; ?>/side-menu/logo-black.png" alt=""></a></li>
           <li><a href="#"><img src="<?= $img_path; ?>/side-menu/threads-logo-black-01.png" alt=""></a></li>
-          <li><a href="#"><img src="<?= $img_path; ?>/side-menu/LINE_Brand_icon.png" alt=""></a></li>
+          <li><a href="https://social-plugins.line.me/lineit/share?url=<?php echo urlencode(get_permalink()); ?>" rel="nofollow noopener" target="_blank"><img src="<?= $img_path; ?>/side-menu/LINE_Brand_icon.png" alt=""></a></li>
           <li><a href="#"><img src="<?= $img_path; ?>/side-menu/link_icon.png" alt=""></a></li>
         </ul>
         <div class="img"><?php the_post_thumbnail('full'); ?></div>
@@ -51,10 +57,10 @@ require get_stylesheet_directory() . '/include/my_variables.php';
           </div>
 
           <ul class="icon-list">
-            <li><a href="#"><img src="<?= $img_path; ?>/side-menu/Facebook_Logo_Primary.png" alt=""></a></li>
-            <li><a href="#"><img src="<?= $img_path; ?>/side-menu/logo-black.png" alt=""></a></li>
+            <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" rel="nofollow noopener" target="_blank"><img src="<?= $img_path; ?>/side-menu/Facebook_Logo_Primary.png" alt=""></a></li>
+            <li><a href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_permalink()); ?>" rel="nofollow noopener" target="_blank"><img src="<?= $img_path; ?>/side-menu/logo-black.png" alt=""></a></li>
             <li><a href="#"><img src="<?= $img_path; ?>/side-menu/threads-logo-black-01.png" alt=""></a></li>
-            <li><a href="#"><img src="<?= $img_path; ?>/side-menu/LINE_Brand_icon.png" alt=""></a></li>
+            <li><a href="https://social-plugins.line.me/lineit/share?url=<?php echo urlencode(get_permalink()); ?>" rel="nofollow noopener" target="_blank"><img src="<?= $img_path; ?>/side-menu/LINE_Brand_icon.png" alt=""></a></li>
             <li><a href="#"><img src="<?= $img_path; ?>/side-menu/link_icon.png" alt=""></a></li>
           </ul>
         </div>
