@@ -37,7 +37,7 @@ get_header();
 <section class="products_that_generate_electricity_title"><!--関連記事-->
   <div class="wrap">
     <div class="wrap_s">
-      <h2 class="section-title">関連記事</h2>
+      <h2 class="section-title">関連情報</h2>
 
       <div class="related_articles">
         <aside class="related-post-wrap">
