@@ -17,7 +17,7 @@
 }
 .under-pv h2 {
   text-align: center;
-  font-size: clamp(1.875rem, 1.817rem + 0.26vw, 2.125rem);
+  font-size: clamp(1.625rem, 1.51rem + 0.51vw, 2.125rem);
   color: #333;
   margin-bottom: 80px;
 }
@@ -32,6 +32,11 @@
   border-radius: 30px;
   margin-block: 120px;
   line-height: 1;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .location-button {
+    margin-block: 60px;
+  }
 }
 .under-pv .location-button:hover::after {
   background: #3d7abb;
@@ -52,14 +57,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 40px;
+  font-size: clamp(2rem, 1.856rem + 0.64vw, 2.625rem);
   font-weight: var(--fw-bold);
   width: 94%;
-}
-@media screen and (max-width: 768px) {
-  .under-pv .mv .back-img .title {
-    font-size: 32px;
-  }
 }
 .under-pv .location-wrap {
   max-width: 742px;
@@ -173,7 +173,7 @@
 .under-pv .location-top::before {
   content: "";
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   top: 50%;
   transform: translateY(-50%);
   height: 240px;
@@ -186,6 +186,8 @@
   margin-inline: auto;
 }
 .under-pv .location-top .wrap_s .location-top-img {
+  position: relative;
+  z-index: 1;
   max-width: 656px;
   margin-inline: auto 0;
 }
@@ -340,6 +342,11 @@
   padding-block: 100px 245px;
   background-image: url("https://pv.hanwha-japan.com/wp-content/uploads/2025/06/net-work_bg_img2.jpg");
 }
+@media screen and (max-width: 768px) {
+  .under-pv .service-support {
+    padding-block: 100px;
+  }
+}
 .under-pv .service-support .service-support-text {
   text-align: center;
 }
@@ -371,6 +378,7 @@
   .under-pv .support .under-pv-list li {
     flex-direction: column;
     margin-inline: auto;
+    margin-bottom: 80px;
   }
 }
 .under-pv .achievement .under-pv-list li:nth-child(even),

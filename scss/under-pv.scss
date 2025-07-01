@@ -8,7 +8,7 @@
   /*___ 拠点詳細、実績詳細、推移詳細、技術詳細、サポート詳細、受賞・実績詳細ページ共通 ___*/
 	h2 {
 		text-align: center;
-		font-size: clamp(1.875rem, 1.817rem + 0.26vw, 2.125rem);
+		font-size: clamp(1.625rem, 1.51rem + 0.51vw, 2.125rem);
 		color: #333;
 		margin-bottom: 80px;
 	}
@@ -24,6 +24,9 @@
 		border-radius: 30px;
 		margin-block: 120px;
     line-height: 1;
+    @include max {
+      margin-block: 60px;
+    }
 		&:hover::after {
 			background: #3d7abb;
 		}
@@ -45,12 +48,9 @@
 				left: 50%;
 				transform: translate(-50%, -50%);
 				text-align: center;
-				font-size: 40px;
+				font-size: clamp(2rem, 1.856rem + 0.64vw, 2.625rem);
 				font-weight: var(--fw-bold);
         width: 94%;
-				@include max {
-					font-size: 32px;
-				}
 			}
 		}
 	}
@@ -165,7 +165,7 @@
 		&::before {
 			content: "";
 			position: absolute;
-			z-index: -1;
+			z-index: 0;
 			top: 50%;
 			transform: translateY(-50%);
 			height: 240px;
@@ -178,6 +178,8 @@
 			width: 94%;
 			margin-inline: auto;
 			.location-top-img {
+        position: relative;
+        z-index: 1;
 				max-width: 656px;
 				margin-inline: auto 0;
 			}
@@ -357,6 +359,9 @@
 	.service-support {
 		padding-block: 100px 245px;
 		background-image: url("https://pv.hanwha-japan.com/wp-content/uploads/2025/06/net-work_bg_img2.jpg");
+    @include max {
+      padding-block: 100px;
+    }
 
 		.service-support-text {
 			text-align: center;
@@ -386,6 +391,7 @@
 				@include max {
 					flex-direction: column;
 					margin-inline: auto;
+          margin-bottom: 80px;
 				}
 				&:nth-child(even) {
 					flex-direction: row-reverse;
