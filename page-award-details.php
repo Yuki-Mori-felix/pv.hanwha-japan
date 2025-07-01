@@ -26,7 +26,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
   <?= get_field('content_3', false, false); ?>
   <!--========== END OF  ==========-->
 
-  <a href="<?= home_url(); ?>/pv" class="btn location-button">ハンファジャパンの太陽光発電について</a>
+  <a href="<?= home_url(); ?>/pv" class="btn location-button">ハンファジャパンの太陽光発電</a>
 
 </main>
 <?php get_footer(); ?>
