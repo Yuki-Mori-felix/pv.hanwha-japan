@@ -78,7 +78,7 @@
   z-index: 0;
 }
 .section-back:has(.electricity)::after {
-  content: "PRODUCT";
+  content: "PRODUCTS";
   position: absolute;
   top: 40px;
   left: 0;
