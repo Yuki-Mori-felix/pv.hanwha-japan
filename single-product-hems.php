@@ -231,7 +231,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
             $query = new WP_Query($args);
 
             // デフォルトの比較対象を設定
-            $default_compare_post_id = null;
+            $default_compare_post_id = 852; // 比較対象の投稿ID
             $available_post_ids = [];
 
             if ($query->have_posts()) {
@@ -244,10 +244,20 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               wp_reset_postdata();
             }
 
-            // 比較対象の投稿がある場合のみ設定（null回避）
+            // 比較対象の投稿がある場合のみ条件で上書き
             if (!empty($available_post_ids)) {
-              // $default_compare_post_id = $available_post_ids[0]; // 最初の比較対象をデフォルトに
-              $default_compare_post_id = 852; // Cube Jの投稿ID
+              if ($current_post_id == $default_compare_post_id) {
+                // 現在の投稿が比較対象の投稿と同じ場合：現在の投稿を除く最新投稿を取得
+                foreach ($available_post_ids as $id) {
+                  if ($id != $default_compare_post_id) {
+                    $default_compare_post_id = $id;
+                    break;
+                  }
+                }
+              } elseif (!in_array($default_compare_post_id, $available_post_ids)) {
+                // 比較対象の投稿IDがそもそも存在しない場合
+                $default_compare_post_id = $available_post_ids[0];
+              }
             }
 
             // 比較対象の投稿の画像を取得
@@ -525,7 +535,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
           <span class="icon"></span>
         </div>
       </div>
-      <a href="#" class="banner">
+      <a href="<?= home_url(); ?>/proudct-list/hems/" class="banner">
         <img src="<?= $img_path ?>/single-product/Product details_banner.png" alt="蓄電システム・HEMS 製品一覧ページへ">
       </a>
     </div>

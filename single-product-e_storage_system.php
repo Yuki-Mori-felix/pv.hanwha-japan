@@ -85,7 +85,9 @@ $img_path = get_stylesheet_directory_uri() . "/images";
             </ul>
           </div>
           <div class="right">
-            <p class="format"><?= the_field('model'); ?></p>
+            <?php if (get_field('model')): ?>
+              <p class="format"><?= get_field('model'); ?></p>
+            <?php endif; ?>
             <h2 class="product-name"><?= the_title(); ?></h2>
             <p class="product-maker"><?= the_field('manufacturer') ?></p>
             <h3 class="description"><?= the_field('product_name_blue'); ?></h3>
@@ -300,7 +302,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
             $query = new WP_Query($args);
 
             // デフォルトの比較対象を設定
-            $default_compare_post_id = null;
+            $default_compare_post_id = 2119;
             $available_post_ids = [];
 
             if ($query->have_posts()) {
@@ -313,13 +315,20 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               wp_reset_postdata();
             }
 
-            // 比較対象の投稿がある場合のみ設定（null回避）
+            // 比較対象の投稿がある場合のみ条件で上書き
             if (!empty($available_post_ids)) {
-              // $default_compare_post_id = $available_post_ids[0]; // 最初の比較対象をデフォルトに
-              $default_compare_post_id = 2119; // Q.READY-B97-1の投稿ID
-
-              // 比較製品が設定されていない場合は最新の投稿を対象に設定
-              // $default_compare_post_id = !empty(get_field('compare_product')) ? get_field('compare_product') : $available_post_ids[0];
+              if ($current_post_id == $default_compare_post_id) {
+                // 現在の投稿が比較対象の投稿と同じ場合：現在の投稿を除く最新投稿を取得
+                foreach ($available_post_ids as $id) {
+                  if ($id != $default_compare_post_id) {
+                    $default_compare_post_id = $id;
+                    break;
+                  }
+                }
+              } elseif (!in_array($default_compare_post_id, $available_post_ids)) {
+                // 比較対象の投稿IDがそもそも存在しない場合
+                $default_compare_post_id = $available_post_ids[0];
+              }
             }
 
             // 比較対象の投稿の画像を取得
@@ -584,7 +593,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
           <span class="icon"></span>
         </div>
       </div>
-      <a href="<?= get_field('compare_link'); ?>" class="banner">
+      <a href="<?= home_url(); ?>/proudct-list/storage-system/" class="banner">
         <img src="<?= $img_path ?>/single-product/PDH_HEMS_Product details_banner.png" alt="蓄電システム・HEMS製品一覧ページへ">
       </a>
     </div>

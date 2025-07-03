@@ -140,9 +140,11 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         </div>
       </div>
     </div>
-    <a href="<?= get_field('product_url'); ?>" class="pcs-banner">
-      <img src="<?= $img_path ?>/single-product/" alt="一目でわかるQREADY® 詳しくはこちら">
-    </a>
+    <?php if (get_field('product_url')): ?>
+      <a href="<?= get_field('product_url'); ?>" class="pcs-banner" target="_blank">
+        <img src="<?= $img_path ?>/single-product/" alt="一目でわかるQREADY® 詳しくはこちら">
+      </a>
+    <?php endif; ?>
   </section>
   <!-- //overview -->
 
@@ -229,7 +231,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
             $query = new WP_Query($args);
 
             // デフォルトの比較対象を設定
-            $default_compare_post_id = null;
+            $default_compare_post_id = 1241;
             $available_post_ids = [];
 
             if ($query->have_posts()) {
@@ -242,10 +244,20 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               wp_reset_postdata();
             }
 
-            // 比較対象の投稿がある場合のみ設定（null回避）
+            // 比較対象の投稿がある場合のみ条件で上書き
             if (!empty($available_post_ids)) {
-              // $default_compare_post_id = $available_post_ids[0]; // 最初の比較対象をデフォルトに
-              $default_compare_post_id = 1241; // Q.READY-B97-1の投稿ID
+              if ($current_post_id == $default_compare_post_id) {
+                // 現在の投稿が比較対象の投稿と同じ場合：現在の投稿を除く最新投稿を取得
+                foreach ($available_post_ids as $id) {
+                  if ($id != $default_compare_post_id) {
+                    $default_compare_post_id = $id;
+                    break;
+                  }
+                }
+              } elseif (!in_array($default_compare_post_id, $available_post_ids)) {
+                // 比較対象の投稿IDがそもそも存在しない場合
+                $default_compare_post_id = $available_post_ids[0];
+              }
             }
 
             // 比較対象の投稿の画像を取得
@@ -509,7 +521,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
           <span class="icon"></span>
         </div>
       </div>
-      <a href="<?= the_field('compare_link'); ?>" class="banner">
+      <a href="<?= home_url(); ?>/proudct-list/power-conditioner/" class="banner">
         <img src="" alt="パワーコンディショナ・モニター一覧ページへ">
       </a>
     </div>
