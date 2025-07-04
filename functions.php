@@ -1102,3 +1102,34 @@ function set_post_views($postID) {
     update_post_meta($postID, $meta_key_time, $now);
   }
 }
+
+/*------------------------------------------
+	問い合わせ／カタログ請求／見積依頼
+  不正アクセス防止のリダイレクト処理
+------------------------------------------*/
+// add_action('template_redirect', function () {
+//   session_start();
+
+//   // 今のリクエストのURLパスを取得
+//   $uri = $_SERVER['REQUEST_URI'];
+
+//   // 対象パターンと、それぞれのリダイレクト先を定義
+//   $redirect_map = [
+//     '/contact/confirm' => '/service-support/contact/',
+//     '/contact/complete'  => '/service-support/contact/',
+//     '/contact-catalog/confirm' => '/service-support/contact-catalog/',
+//     '/contact-catalog/complete'  => '/service-support/contact-catalog/',
+//     '/contact-quotation/confirm' => '/service-support/contact-quotation/',
+//     '/contact-quotation/complete'  => '/service-support/contact-quotation/',
+//   ];
+
+//   foreach ($redirect_map as $path => $redirect_to) {
+//     if (strpos($uri, $path) !== false) {
+//       // セッションが「存在していないとき」だけリダイレクトする
+//       if (!isset($_POST)) {
+//         wp_redirect(home_url($redirect_to));
+//         exit;
+//       }
+//     }
+//   }
+// });

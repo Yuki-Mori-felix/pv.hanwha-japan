@@ -1,14 +1,10 @@
 <?php
 /*
-Template Name: カタログ請求
+Template Name: カタログ請求--完了
 */
 get_header();
-$form_id = is_public_server() ? "99a0cdb" : "de8d9bf"; // cf7のフォームid
-var_dump($_SESSION["cf7msm"]);
-var_dump($_POST);
 ?>
-
-<main class="contact contact-catalog">
+<main class="contact complete">
   <section class="mv" style="background-image: url(<?= get_field('fv_page_img'); ?>)">
     <h2 class="ttl"><?= the_title(); ?></h2>
   </section>
@@ -18,25 +14,13 @@ var_dump($_POST);
   </div>
   <section class="top">
     <div class="container">
-      <p class="lead">紙カタログをご用意しております。</p>
-      <p class="txt">こちらに掲載のないカタログをご希望の方はご要望欄にご記入ください。</p>
+      <p class="lead">この度はカタログ請求をしていただき、ありがとうございます。<br>後日担当者より、ご連絡させていただきます。</p>
       <div class="links">
-        <a href="<?=get_my_home_url("/service-support/catalog")?>" class="link catalog-b"><span class="inner">WEBカタログ・ダウンロードはこちら</span></a>
+        <a href="<?=get_my_home_url()?>" class="btn">TOPへ戻る</a>
       </div>
-      <a href="#input-address" class="scroll-btn">お届け先情報のご入力へ</a>
     </div>
   </section>
   <!-- // TOP -->
-  <section class="sec-form">
-    <?php echo do_shortcode('[contact-form-7 id="' . $form_id . '" title="カタログ請求" html_class="h-adr form"]');?>
-    <div class="container">
-      <div class="links">
-        <a href="<?=get_my_home_url("/service-support/contact-quotation")?>" class="link quotation"><span class="inner">お見積り依頼はこちら</span></a>
-        <a href="<?=get_my_home_url("/service-support/contact")?>" class="link contact"><span class="inner">お問い合わせはこちら</span></a>
-      </div>
-    </div>
-  </section>
-  <!-- // SEC_FORM -->
   <section class="info">
     <div class="container">
       <div class="ctt customer">
@@ -65,5 +49,5 @@ var_dump($_POST);
   </section>
   <!-- // INFO -->
 </main>
-<!-- // CONTACT CONTACT_CATALOG -->
-<?php get_footer(); ?>
+<!-- // CONTACT -->
+<?=get_footer();?>
