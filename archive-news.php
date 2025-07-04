@@ -40,7 +40,7 @@ require get_stylesheet_directory() . '/include/my_variables.php';
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $args = array(
           'post_type'      => 'news',
-          'posts_per_page' => 18, // 表示件数(functions.phpの数と合わせる)
+          'posts_per_page' => 21, // 表示件数(functions.phpの数と合わせる)
           'orderby'        => 'date',
           'order'          => 'DESC',
           'paged'          => $paged,
