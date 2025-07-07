@@ -227,18 +227,24 @@ unset($menu[10]);
 add_action( 'admin_menu', 'customize_menus' );
 
 /*------------------------------------------
-  固定ページ（ブログ一覧）でぺージネーション有効
+  固定ページでぺージネーション有効
 ------------------------------------------*/
-function add_blog_pagination_rewrite() {
+function add_custom_pagination_rewrite() {
+  // blogページのページネーション
   add_rewrite_rule(
     '^blog/page/([0-9]+)/?$',
     'index.php?pagename=blog&paged=$matches[1]',
     'top'
   );
-}
-add_action('init', 'add_blog_pagination_rewrite');
 
-// 忘れずに一度「設定 > パーマリンク」で保存して rewrite を反映させる！
+  // voice/interviewページのページネーション
+  add_rewrite_rule(
+    '^voice/interview/page/([0-9]+)/?$',
+    'index.php?pagename=voice/interview&paged=$matches[1]',
+    'top'
+  );
+}
+add_action('init', 'add_custom_pagination_rewrite');
 
 
 /*========================== パンくずリスト表示設定 ==========================*/
