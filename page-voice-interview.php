@@ -22,21 +22,25 @@ get_header();
         <div class="post-filter-area">
           <div class="voice-category-wrap">
             <ul class="voice-category-buttons">
-              <!-- すべてボタンを追加 -->
+              <!-- すべてボタン -->
               <li>
-                <button class="filter-button active" data-term-id="all">すべて</button>
+                <a class="filter-button<?php if (!isset($_GET['term_id'])) echo ' active'; ?>" href="<?php echo get_permalink(); ?>">すべて</a>
               </li>
               <?php
               $terms = get_terms(array(
-                'taxonomy'   => 'voice-cat', // カスタムタクソノミーのスラッグ
-                'hide_empty' => false,       // 投稿がないカテゴリも表示
+                'taxonomy'   => 'voice-cat',
+                'hide_empty' => false,
               ));
 
               foreach ($terms as $term) : ?>
                 <li>
-                  <button class="filter-button" data-term-id="<?php echo $term->term_id; ?>">
-                    <?php echo $term->name; ?>
-                  </button>
+                  <form method="GET" action="<?php echo get_permalink(); ?>">
+                    <input type="hidden" name="term_id" value="<?php echo $term->term_id; ?>">
+                    <button type="submit"
+                      class="filter-button <?php if (isset($_GET['term_id']) && $_GET['term_id'] == $term->term_id) echo 'active'; ?>">
+                      <?php echo esc_html($term->name); ?>
+                    </button>
+                  </form>
                 </li>
               <?php endforeach; ?>
             </ul>
@@ -45,13 +49,26 @@ get_header();
         <div class="voice-list-wrap">
           <ul class="voice-list">
             <?php
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            $selected_term_id = (isset($_GET['term_id']) && $_GET['term_id'] !== 'all') ? intval($_GET['term_id']) : null;
             // WP_Query の引数を設定
             $args = array(
               'post_type'      => 'voice',  // カスタム投稿タイプ
-              'posts_per_page' => -1,        // 表示する投稿数
+              'posts_per_page' => 21,        // 表示する投稿数
               'orderby'        => 'date',   // 日付順
-              'order'          => 'DESC'    // 降順
+              'order'          => 'DESC',    // 降順]
+              'paged'          => $paged,
             );
+
+            if ($selected_term_id) {
+              $args['tax_query'] = array(
+                array(
+                  'taxonomy' => 'voice-cat',
+                  'field'    => 'term_id',
+                  'terms'    => $selected_term_id,
+                ),
+              );
+            }
             ?>
 
             <?php
@@ -104,6 +121,30 @@ get_header();
               <p><?php echo '投稿がありません。'; ?></p>
             <?php endif; ?>
           </ul>
+          <div class="pnavi" id="pagination">
+            <?php
+            global $wp_rewrite;
+            $paginate_base = get_pagenum_link(1);
+            if (strpos($paginate_base, '?') || !$wp_rewrite->using_permalinks()) {
+              $paginate_format = '';
+              $paginate_base = add_query_arg('paged', '%#%');
+            } else {
+              $paginate_format = (substr($paginate_base, -1, 1) == '/' ? '' : '/') .
+                user_trailingslashit('page/%#%/', 'paged');
+              $paginate_base .= '%_%';
+            }
+            echo paginate_links(array(
+              'base' => $paginate_base,
+              'format' => $paginate_format,
+              'total' => $voice_query->max_num_pages,
+              'mid_size' => 2,
+              'end_size' => 1,
+              'current' => ($paged ? $paged : 1),
+              'prev_text' => '<',
+              'next_text' => '>',
+            ));
+            ?>
+          </div>
         </div>
 
       </section>
