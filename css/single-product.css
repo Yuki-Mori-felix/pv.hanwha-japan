@@ -1647,6 +1647,10 @@ main.rerise section.overview .rerise-video {
   width: calc(100% - 30px);
   margin: 100px auto 0;
 }
+main.rerise section.overview .rerise-video iframe {
+  width: 100%;
+  height: 390px;
+}
 main.rerise section.overview .rerise-banner {
   display: block;
   max-width: 656px;

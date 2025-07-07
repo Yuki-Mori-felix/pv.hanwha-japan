@@ -1638,6 +1638,11 @@ main.rerise {
 			max-width: 656px;
 			width: calc(100% - 30px);
 			margin: 100px auto 0;
+
+      iframe {
+        width: 100%;
+        height: 390px;
+      }
 		}
 		.rerise-banner {
 			display: block;
