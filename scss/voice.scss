@@ -56,6 +56,10 @@
 				border-radius: 35px;
 
 				li {
+          a { // すべてボタン用
+            display: block;
+            padding: 0.75em 2em;
+          }
 					.filter-button {
 						background: unset;
 						color: #333333;
@@ -177,6 +181,35 @@
 			}
 		}
 	}
+
+  /*___ ページネーション ___*/
+  #pagination {
+    width: fit-content;
+    margin-inline: auto;
+
+    .page-numbers {
+      font-weight: 400;
+
+      &.current {
+        font-weight: 500;
+        color: black;
+        border-bottom: 1px solid #3366aa;
+      }
+    }
+
+    .prev,
+    .next {
+      background: white;
+      border: 1px solid #3366aa;
+      border-radius: 50%;
+      color: #3366aa;
+      margin-inline: 5px;
+      &:hover {
+        opacity: 0.8;
+        color: #3366aa;
+      }
+    }
+  }
 }
 /*_____ お客様インタビュー 一覧ページ _____*/
 

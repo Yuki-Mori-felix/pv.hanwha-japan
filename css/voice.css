@@ -26,6 +26,9 @@
   letter-spacing: 0.8px;
 }
 
+.archive-voice {
+  /*___ ページネーション ___*/
+}
 .archive-voice .section-title {
   font-size: 32px;
   text-align: center;
@@ -49,6 +52,10 @@
   background: white;
   width: fit-content;
   border-radius: 35px;
+}
+.archive-voice .post-filter-area .voice-category-wrap .voice-category-buttons li a {
+  display: block;
+  padding: 0.75em 2em;
 }
 .archive-voice .post-filter-area .voice-category-wrap .voice-category-buttons li .filter-button {
   background: unset;
@@ -143,6 +150,31 @@
 }
 .archive-voice .voice-list-wrap .voice-list .voice-item a .voice-item-cat:has(.solar-storage) {
   background: #3366aa;
+}
+.archive-voice #pagination {
+  width: fit-content;
+  margin-inline: auto;
+}
+.archive-voice #pagination .page-numbers {
+  font-weight: 400;
+}
+.archive-voice #pagination .page-numbers.current {
+  font-weight: 500;
+  color: black;
+  border-bottom: 1px solid #3366aa;
+}
+.archive-voice #pagination .prev,
+.archive-voice #pagination .next {
+  background: white;
+  border: 1px solid #3366aa;
+  border-radius: 50%;
+  color: #3366aa;
+  margin-inline: 5px;
+}
+.archive-voice #pagination .prev:hover,
+.archive-voice #pagination .next:hover {
+  opacity: 0.8;
+  color: #3366aa;
 }
 
 /*_____ お客様インタビュー 一覧ページ _____*/
