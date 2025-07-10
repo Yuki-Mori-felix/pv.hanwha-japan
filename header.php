@@ -98,8 +98,9 @@
 		
 		<div class="masthead-top">
 			<ul class="mht-list">
-				<li class="mht-item mht-item-common"><a href="">ハンファジャパン</a></li>
-        <li class="mht-item mht-item-common"><a href="">グリーンアライアンス</a></li>
+				<li class="mht-item mht-item-common"><a href="https://www.hanwha-japan.com/" target="_blank">ハンファジャパン</a></li>
+        <li class="mht-item mht-item-common"><a href="https://greenalliancejp.com/" target="_blank">グリーンアライアンス</a></li>
+        <li class="mht-item mht-item-common"><a href="https://q-partners.q-cells.jp/?_gl=1*db2q4w*_gcl_aw*R0NMLjE3NTAxMzg4ODQuRUFJYUlRb2JDaE1JdjVtS3VxYmpqUU1WRjhvV0JSM2huaG0wRUFBWUFTQUFFZ0tpQ19EX0J3RQ..*_gcl_au*OTE2MzgwNDQyLjE3NDUxOTQyNTc." target="_blank">Q.PARTNERS</a></li>
         <li class="mht-item site-search"><i class="fa-solid fa-magnifying-glass" style="color: #3366aa;"></i>サイト内検索</li>
       </ul>
     </div>
