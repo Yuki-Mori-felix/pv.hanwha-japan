@@ -14,7 +14,7 @@ require get_stylesheet_directory() . '/include/my_variables.php';
         <p class="txt">申し訳ございませんが、お探しのページが見つかりませんでした。お探しのページは削除されたか、URLが変更された可能性がございます。</p>
         <div class="btn_area">
           <!-- <a href="javascript:history.back();" class="btn_m btn_ty06">前ページ</a> -->
-          <a href="https://pv.hanwha-japan.com/about/" class="btn_m btn_ty02">About Hanwha Japan</a>
+          <a href="https://pv.hanwha-japan.com/about/" class="btn_m btn_ty02">メインページへ戻る</a>
           <!-- <a href="" class="btn_m btn_ty06">次ページ</a> -->
         </div>
       </article>
