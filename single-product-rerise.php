@@ -12,7 +12,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
 
   <section class="top_product_logo">
     <div class="wrapper">
-      <img src="" alt="Re.RISE">
+      <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/rerise_logo_rgb-scaled.png" alt="Re.RISE">
     </div>
   </section>
   <!-- //top_product_logo -->
@@ -69,9 +69,11 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                   </div>
                 </div>
               </div>
-              <div class="web-ar" id="web-ar">
-                <img src="<?= $img_path ?>/single-product/web-ar.svg" alt="3D">
-              </div>
+              <?php if (get_field('web_ar')): ?>
+                <div class="web-ar" id="web-ar">
+                  <img src="<?= $img_path ?>/single-product/web-ar.svg" alt="3D">
+                </div>
+              <?php endif; ?>
             </div>
             <ul class="certification">
               <li class="ctf-item-1">
@@ -170,12 +172,13 @@ $img_path = get_stylesheet_directory_uri() . "/images";
             </div>
           </div>
         </div>
-        <div class="rerise-video">
-          <img src="<?= $img_path ?>/single-product/Re.RISE_top_video.jpg" alt="">
-        </div>
-        <a href="https://www.hanwha-rerise.jp/rerise-g3/" class="rerise-banner" target="_blank" rel="noopener noreferrer">
-          <img src="<?= $img_path ?>/single-product/Re.RISE_banner.jpg" alt="">
-        </a>
+        <?php if (get_field('youtube')): ?>
+          <div class="rerise-video">
+            <?= get_field('youtube'); ?>
+          </div>
+        <?php endif; ?>
+
+        <?= get_field('g3_url'); ?>
       </section>
       <!-- //overview -->
 
@@ -187,12 +190,12 @@ $img_path = get_stylesheet_directory_uri() . "/images";
       <!-- //warranty -->
 
 
-      <section class="simulator" data-target="simulator">
+      <!-- <section class="simulator" data-target="simulator">
         <div class="wrapper">
           <h2 class="sec-ttl" id="simulator">発電量シミュレーター</h2>
           <div class="simulator-content">
             <div class="img">
-              <img src="<?= $img_path ?>/single-product/Power_generation_simulator.png" alt="">
+              <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/07/Power_generation_simulator.png" alt="">
             </div>
             <div class="txt">
               簡単な操作で年間発電量と<br>年間電気料金の削減見込みをご確認いただけます。
@@ -200,7 +203,8 @@ $img_path = get_stylesheet_directory_uri() . "/images";
             <a class="simulator-link" href="https://q-musubi.q-cells.jp/qm/pwrgnSimulation/step1?_gl=1*1nfcoe4*_gcl_aw*R0NMLjE3NDUzODM2NjMuQ2owS0NRancyTjJfQmhDQUFSSXNBSzRwRWtVc0NiSkRaRHN5X0plZU9yVUlVcWg1akhZVF9KbzJUcXY3ZlBjR1ZEMVdweWRBUGdMVWtIY2FBbUxXRUFMd193Y0I.*_gcl_au*OTE2MzgwNDQyLjE3NDUxOTQyNTc" target="_blank" rel="noopener noreferrer">発電量シミュレーター</a>
           </div>
         </div>
-      </section>
+      </section> -->
+      <?= the_field('sec_simulator', false, false) ?>
       <!-- //simulator -->
 
       <?= the_field('sec_guide', false, false); ?>
@@ -530,7 +534,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
           <span class="icon"></span>
         </div>
       </div>
-      <a href="<?= the_field('compare_link'); ?>" class="banner">
+      <a href="<?= home_url(); ?>/proudct-list/re-rise/" class="banner">
         <img src="<?= $img_path ?>/single-product/Re.RISE_Product details_banner.png" alt="Re.RISE太陽光パネル製品一覧ページへ">
       </a>
     </div>
