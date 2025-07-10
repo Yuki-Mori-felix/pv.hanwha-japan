@@ -69,9 +69,11 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                   </div>
                 </div>
               </div>
-              <div class="web-ar" id="web-ar">
-                <img src="<?= $img_path ?>/single-product/web-ar.svg" alt="3D">
-              </div>
+              <?php if (get_field('web_ar')): ?>
+                <div class="web-ar" id="web-ar">
+                  <img src="<?= $img_path ?>/single-product/web-ar.svg" alt="3D">
+                </div>
+              <?php endif; ?>
             </div>
             <?php if (get_field('hems_banner')): ?>
               <a href="<?= get_field('hems_banner'); ?>" class="eneconnect-banner">
