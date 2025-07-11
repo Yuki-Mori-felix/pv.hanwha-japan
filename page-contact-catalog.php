@@ -4,8 +4,6 @@ Template Name: カタログ請求
 */
 get_header();
 $form_id = is_public_server() ? "99a0cdb" : "de8d9bf"; // cf7のフォームid
-var_dump($_SESSION["cf7msm"]);
-var_dump($_POST);
 ?>
 
 <main class="contact contact-catalog">
