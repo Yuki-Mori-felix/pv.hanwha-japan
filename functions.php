@@ -704,17 +704,14 @@ function is_public_server() {
 /*------------------------------------------
   製品一覧ページ AJAX フィルタリング処理
 ------------------------------------------*/
-function ajax_filter_products()
-{
-  // フィルタの値を受け取る
+function ajax_filter_products() {
   $filter1 = isset($_POST['filter1']) ? sanitize_text_field($_POST['filter1']) : '';
   $filter2 = isset($_POST['filter2']) ? sanitize_text_field($_POST['filter2']) : '';
   $term_slug = isset($_POST['term_slug']) ? sanitize_text_field($_POST['term_slug']) : '';
 
-  // クエリの条件を作成
   $meta_query = array('relation' => 'AND');
 
-  if (!empty($filter1)) {
+  if ($filter1 !== '') {
     $meta_query[] = array(
       'key'     => 'filter1',
       'value'   => $filter1,
@@ -722,74 +719,7 @@ function ajax_filter_products()
     );
   }
 
-  if (!empty($filter2)) {
-    $meta_query[] = array(
-      'key'     => 'filter2',
-      'value'   => $filter2,
-      'compare' => '='
-    );
-  }
-
-  $args = array(
-    'post_type'      => 'product',
-    'posts_per_page' => -1,
-    'post_status' => 'publish',
-    'tax_query'      => array(
-      array(
-        'taxonomy' => 'product-cat',
-        'field'    => 'slug',
-        'terms'    => $term_slug, // 受け取ったターム値を動的に適用
-      ),
-    ),
-    'meta_query' => $meta_query,
-  );
-
-  $query = new WP_Query($args);
-
-  if ($query->have_posts()):
-    while ($query->have_posts()): $query->the_post();
-    ?>
-      <a class="prod-item" href="<?php the_permalink(); ?>">
-        <div class="img"><img src="<?= esc_url(get_field('image1')['url']); ?>" alt=""></div>
-        <div class="ttl">
-          <?php if (get_field('new_switch')): ?>
-            <p class="new">NEW</p>
-          <?php endif; ?>
-          <h3 class="name"><?php the_title(); ?></h3>
-        </div>
-      </a>
-<?php
-    endwhile;
-    wp_reset_postdata();
-  else:
-    echo '<p>該当する商品がありません</p>';
-  endif;
-
-  die();
-}
-
-// AJAX アクションを追加
-add_action('wp_ajax_filter_products', 'ajax_filter_products');
-add_action('wp_ajax_nopriv_filter_products', 'ajax_filter_products');
-
-// `storage-system` 専用の処理
-function ajax_filter_products_storage_system()
-{
-  $filter1 = isset($_POST['filter1']) ? sanitize_text_field($_POST['filter1']) : '';
-  $filter2 = isset($_POST['filter2']) ? sanitize_text_field($_POST['filter2']) : '';
-  $term_slug = isset($_POST['term_slug']) ? sanitize_text_field($_POST['term_slug']) : '';
-
-  $meta_query = array('relation' => 'AND');
-
-  if (!empty($filter1)) {
-    $meta_query[] = array(
-      'key'     => 'filter1',
-      'value'   => $filter1,
-      'compare' => '='
-    );
-  }
-
-  if (!empty($filter2)) {
+  if ($filter2 !== '') {
     $meta_query[] = array(
       'key'     => 'filter2',
       'value'   => $filter2,
@@ -809,31 +739,110 @@ function ajax_filter_products_storage_system()
       ),
     ),
     'meta_query' => $meta_query,
+    'fields' => 'ids', // 投稿IDだけ取得
   );
 
   $query = new WP_Query($args);
 
-  $ready_items = '';
+  if ($query->have_posts()) {
+    foreach ($query->posts as $post_id) {
+      $title = get_the_title($post_id);
+      $permalink = get_permalink($post_id);
+      $image_id = get_post_meta($post_id, 'image1', true);
+      $image_url = wp_get_attachment_url($image_id);
+
+      $new_switch = get_post_meta($post_id, 'new_switch', true);
+
+      echo '<a class="prod-item" href="' . esc_url($permalink) . '">';
+      echo '  <div class="img"><img src="' . esc_url($image_url) . '" alt=""></div>';
+      echo '  <div class="ttl">';
+      if ($new_switch === '1') {
+        echo '    <p class="new">NEW</p>';
+      }
+      echo '    <h3 class="name">' . esc_html($title) . '</h3>';
+      echo '  </div>';
+      echo '</a>';
+    }
+  } else {
+    echo '<p>該当する商品がありません</p>';
+  }
+
+  wp_reset_postdata();
+  die();
+}
+
+// AJAX アクションを追加
+add_action('wp_ajax_filter_products', 'ajax_filter_products');
+add_action('wp_ajax_nopriv_filter_products', 'ajax_filter_products');
+
+// `storage-system` 専用の処理
+function ajax_filter_products_storage_system() {
+  $filter1   = isset($_POST['filter1'])   ? sanitize_text_field($_POST['filter1'])   : '';
+  $filter2   = isset($_POST['filter2'])   ? sanitize_text_field($_POST['filter2'])   : '';
+  $term_slug = isset($_POST['term_slug']) ? sanitize_text_field($_POST['term_slug']) : '';
+
+  $meta_query = array('relation' => 'AND');
+
+  if (!empty($filter1)) {
+    $meta_query[] = array(
+      'key'     => 'filter1',
+      'value'   => $filter1,
+      'compare' => '=',
+    );
+  }
+
+  if (!empty($filter2)) {
+    $meta_query[] = array(
+      'key'     => 'filter2',
+      'value'   => $filter2,
+      'compare' => '=',
+    );
+  }
+
+  $args = array(
+    'post_type'      => 'product',
+    'posts_per_page' => -1,
+    'post_status'    => 'publish',
+    'tax_query'      => array(
+      array(
+        'taxonomy' => 'product-cat',
+        'field'    => 'slug',
+        'terms'    => $term_slug,
+      ),
+    ),
+    'meta_query' => $meta_query,
+    'fields'     => 'ids', // 投稿IDのみ取得
+  );
+
+  $query = new WP_Query($args);
+
+  $ready_items  = '';
   $hybrid_items = '';
 
-  if ($query->have_posts()):
-    while ($query->have_posts()): $query->the_post();
-      $filter2_value = get_field('filter2');
-      $html = '<a class="prod-item" href="' . get_permalink() . '">';
-      $html .= '<div class="img"><img src="' . esc_url(get_field('image1')['url']) . '" alt=""></div>';
-      $html .= '<div class="ttl"><h3 class="name">' . get_the_title() . '</h3></div>';
+  if ($query->have_posts()) {
+    foreach ($query->posts as $post_id) {
+      $title         = get_the_title($post_id);
+      $permalink     = get_permalink($post_id);
+      $image_id      = get_post_meta($post_id, 'image1', true);
+      $filter2_value = get_post_meta($post_id, 'filter2', true);
+
+      $image_url = is_numeric($image_id)
+        ? wp_get_attachment_url($image_id)
+        : (is_array($image_id) && isset($image_id['url']) ? $image_id['url'] : '');
+
+      $html  = '<a class="prod-item" href="' . esc_url($permalink) . '">';
+      $html .= '<div class="img"><img src="' . esc_url($image_url) . '" alt=""></div>';
+      $html .= '<div class="ttl"><h3 class="name">' . esc_html($title) . '</h3></div>';
       $html .= '</a>';
 
-      if ($filter2_value == 'レディ型') {
+      if ($filter2_value === 'レディ型') {
         $ready_items .= $html;
-      } elseif ($filter2_value == 'ハイブリッド型') {
+      } elseif ($filter2_value === 'ハイブリッド型') {
         $hybrid_items .= $html;
       }
-    endwhile;
-    wp_reset_postdata();
-  endif;
+    }
+  }
 
-  // ✅ `ready-list` と `hybrid-list` にそれぞれの投稿を設定
   echo '<div id="ready-list">' . (!empty($ready_items) ? $ready_items : '<p>該当する商品がありません</p>') . '</div>';
   echo '<div id="hybrid-list">' . (!empty($hybrid_items) ? $hybrid_items : '<p>該当する商品がありません</p>') . '</div>';
 
