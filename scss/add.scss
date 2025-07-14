@@ -8,10 +8,7 @@
 /*_____ navigation _____*/ 
 
 .main-mv {
-  height: 625px;
-  @include max {
-    height: 80dvh;
-  }
+  height: calc(100vh - 70px);
 
   .main-catchphrase {
     width: 94%;
@@ -412,7 +409,7 @@
 
   &::before {
     content: "";
-    background-image: url(/wp-content/uploads/2025/02/header.jpg);
+    background-image: url(/wp-content/uploads/2025/07/electricity-bill-service_bg.jpg);
     background-size: cover;
     background-position: center;
     position: absolute;
