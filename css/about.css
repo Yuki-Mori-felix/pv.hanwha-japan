@@ -136,9 +136,6 @@
   line-height: 1;
   color: #ee7744;
 }
-.about .section-back .wrap_s .hanwha-japan-list li .num-text {
-  color: #ee7744;
-}
 .about .section-back .wrap_s .hanwha-japan-text {
   font-size: clamp(1rem, 0.913rem + 0.38vw, 1.375rem);
   text-align: center;

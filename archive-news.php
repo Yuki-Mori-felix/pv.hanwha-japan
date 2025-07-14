@@ -9,7 +9,7 @@ require get_stylesheet_directory() . '/include/my_variables.php';
   </div>
   <section class="news-area">
     <div class="wrap_s">
-      <h1>NEWS</h1>
+      <h1>ニュース</h1>
 
       <div class="post-filter-area">
         <div class="news-category-wrap">
@@ -91,6 +91,7 @@ require get_stylesheet_directory() . '/include/my_variables.php';
         ));
         ?>
       </div>
+      <a href="/" class="btn news-top-btn">TOPに戻る</a>
     </div>
   </section>
 </main>

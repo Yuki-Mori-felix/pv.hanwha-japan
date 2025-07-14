@@ -452,6 +452,9 @@ main.single-products {
 						font-size: 12px;
 						font-weight: var(--fw-med);
 						line-height: 1.2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 						@include max {
 							padding: 12px;
 							flex: 0 0 fit-content;

@@ -436,6 +436,9 @@ main.single-products section.overview .wrapper > .right .tag .tag-item {
   font-size: 12px;
   font-weight: var(--fw-med);
   line-height: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media screen and (max-width: 768px) {
   main.single-products section.overview .wrapper > .right .tag .tag-item {

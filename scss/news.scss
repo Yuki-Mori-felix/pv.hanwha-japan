@@ -132,6 +132,22 @@
 					}
 				}
 			}
+
+      .news-top-btn {
+        display: block;
+        width: 312px;
+        text-align: center;
+        border-radius: 30px;
+        margin-inline: auto;
+        background: #3366aa;
+        line-height: 1;
+        margin-inline: auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        &:hover::after {
+          background: #3d7abb;
+        }
+      }
 		}
 	}
 }
@@ -165,6 +181,23 @@
 				padding-top: 10px;
 				font-size: clamp(1.625rem, 1.51rem + 0.51vw, 2.125rem);
 			}
+
+      .icon-list {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        gap: 20px;
+        margin-bottom: 20px;
+
+        li {
+          width: 30px;
+          height: 30px;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
 
 			.top-img {
 				margin-bottom: 40px;

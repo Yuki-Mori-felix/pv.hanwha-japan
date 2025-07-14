@@ -200,7 +200,7 @@
   background-position: center;
 }
 .green-energy .section-back::after {
-  content: "MERIT";
+  content: "MERITS";
   position: absolute;
   z-index: -1;
   top: 72px;

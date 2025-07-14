@@ -168,7 +168,7 @@ if (is_singular('blog-post')) {
       <div class="links">
         <a href="<?= get_my_home_url("/service-support/contact") ?>" class="link contact"><span class="inner">お問い合わせはこちら</span></a>
         <a href="<?= get_my_home_url("/service-support/contact-quotation") ?>" class="link quotation"><span class="inner">お見積り依頼はこちら</span></a>
-        <a href="<?= get_my_home_url("/service-support/catalog") ?>" class="link catalog-a"><span class="inner">カタログ請求・ダウンロードはこちら</span></a>
+        <a href="<?= get_my_home_url("/service-support/catalog") ?>" class="link catalog-a"><span class="inner">WEBカタログはこちら</span></a>
       </div>
     </div>
   </section>
