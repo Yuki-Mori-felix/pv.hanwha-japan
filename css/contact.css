@@ -638,6 +638,9 @@ main.contact.quotation > .sec-form .form .existing-house.is-visible {
 main.contact.quotation > .sec-form .form .uconstruction .wpcf7-list-item.first {
   display: none;
 }
+main.contact.quotation > .sec-form .wpcf7 form.sent .wpcf7-response-output {
+  display: none;
+}
 
 main.contact.catalog-dl .cat-list,
 main.contact.contact-catalog .cat-list {

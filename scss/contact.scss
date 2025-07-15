@@ -671,6 +671,9 @@ main.contact.quotation {
         }
       }
     }
+    .wpcf7 form.sent .wpcf7-response-output {
+      display: none;
+    }
   }
   // SEC_FORM
 }

@@ -127,4 +127,11 @@ window.addEventListener("DOMContentLoaded", function() {
       }
     }, 100);
   });
+
+  // CF7 見積依頼フォームが送信されたら完了ページへリダイレクトさせる
+  document.addEventListener('wpcf7mailsent', function (event) {
+    if (event.target.classList.contains('form-quotation')) {
+      window.location.href = "/service-support/contact-quotation/complete/";
+    }
+  }, false);
 });

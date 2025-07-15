@@ -25,7 +25,7 @@ $form_id = is_public_server() ? "fc48203" : "2aa1f57"; // cf7のフォームid
   <!-- // TOP -->
   <section class="sec-form">
     <div class="container">
-      <?php echo do_shortcode('[contact-form-7 id="' . $form_id . '" title="お見積り依頼" html_class="h-adr form"]');?>
+      <?php echo do_shortcode('[contact-form-7 id="' . $form_id . '" title="お見積り依頼" html_class="h-adr form form-quotation"]');?>
       <div class="links">
         <a href="<?=get_my_home_url("/service-support/catalog")?>" class="link catalog-a"><span class="inner">カタログ請求・ダウンロードはこちら</span></a>
         <a href="<?=get_my_home_url("/service-support/contact")?>" class="link contact"><span class="inner">お問い合わせはこちら</span></a>
