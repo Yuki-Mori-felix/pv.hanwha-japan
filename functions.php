@@ -748,7 +748,7 @@ function ajax_filter_products() {
     foreach ($query->posts as $post_id) {
       $title = get_the_title($post_id);
       $permalink = get_permalink($post_id);
-      $image_id = get_post_meta($post_id, 'image1', true);
+      $image_id = get_post_meta($post_id, 'lineup', true);
       $image_url = wp_get_attachment_url($image_id);
 
       $new_switch = get_post_meta($post_id, 'new_switch', true);
@@ -823,7 +823,7 @@ function ajax_filter_products_storage_system() {
     foreach ($query->posts as $post_id) {
       $title         = get_the_title($post_id);
       $permalink     = get_permalink($post_id);
-      $image_id      = get_post_meta($post_id, 'image1', true);
+      $image_id      = get_post_meta($post_id, 'lineup', true);
       $filter2_value = get_post_meta($post_id, 'filter2', true);
 
       $image_url = is_numeric($image_id)
