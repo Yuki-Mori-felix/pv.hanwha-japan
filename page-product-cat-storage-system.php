@@ -114,12 +114,64 @@ $img_path = get_stylesheet_directory_uri() . "/images";
       <!-- 商品一覧（AJAXで更新） -->
       <div class="typec ready">
         <div class="type"><p class="txt">レディ型</p></div>
-        <div id="ready-list" class="prod-list"></div>
+        <div id="ready-list" class="prod-list">
+          <?php
+          $args = array(
+            'post_type'      => 'product',
+            'posts_per_page' => -1,
+            'post_status'    => 'publish',
+            'tax_query'      => array(
+              array(
+                'taxonomy' => 'product-cat',
+                'field'    => 'slug',
+                'terms'    => 'storage-system',
+              ),
+            ),
+            'fields' => 'ids', // 投稿IDのみ取得して軽量化
+          );
+          $query = new WP_Query($args);
+
+          $ready_items = '';
+          $hybrid_items = '';
+
+          if ($query->have_posts()) {
+            foreach ($query->posts as $post_id) {
+              $title      = get_the_title($post_id);
+              $permalink  = get_permalink($post_id);
+              $image_id   = get_post_meta($post_id, 'lineup', true);
+              $image_url  = wp_get_attachment_url($image_id);
+              $filter2    = get_post_meta($post_id, 'filter2', true);
+
+              $html  = '<a class="prod-item" href="' . esc_url($permalink) . '">';
+              $html .= '<div class="img"><img src="' . esc_url($image_url) . '" alt=""></div>';
+              $html .= '<div class="ttl"><h3 class="name">' . esc_html($title) . '</h3></div>';
+              $html .= '</a>';
+
+              if ($filter2 === 'レディ型') {
+                $ready_items .= $html;
+              } elseif ($filter2 === 'ハイブリッド型') {
+                $hybrid_items .= $html;
+              }
+            }
+          }
+          echo !empty($ready_items) ? $ready_items : '<p>該当する商品がありません</p>';
+          ?>
+        </div>
       </div>
+
       <div class="typec hybrid">
         <div class="type"><p class="txt">ハイブリッド型</p></div>
-        <div id="hybrid-list" class="prod-list"></div>
+        <div id="hybrid-list" class="prod-list">
+          <?php
+          echo !empty($hybrid_items) ? $hybrid_items : '<p>該当する商品がありません</p>';
+          ?>
+        </div>
       </div>
+
+      <!-- <div class="typec hybrid">
+        <div class="type"><p class="txt">ハイブリッド型</p></div>
+        <div id="hybrid-list" class="prod-list"></div>
+      </div> -->
 
     </div>
   </section>

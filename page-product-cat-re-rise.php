@@ -126,7 +126,62 @@ $img_path = get_stylesheet_directory_uri() . "/images";
       <div id="product-term" data-term="<?php echo esc_attr($term_slug); ?>"></div>
 
       <!-- 商品一覧（AJAXで更新） -->
-      <div class="prod-list"></div>
+      <!-- <div class="prod-list"></div> -->
+      <div class="prod-list">
+        <?php
+          $args = array(
+            'post_type'      => 'product',
+            'posts_per_page' => -1,
+            'post_status'    => 'publish',
+            'tax_query'      => array(
+              array(
+                'taxonomy' => 'product-cat',
+                'field'    => 'slug',
+                'terms'    => $term_slug,
+              ),
+            ),
+            'fields' => 'ids', // 投稿IDのみ取得で高速化
+          );
+
+          $query = new WP_Query($args);
+
+          if ($query->have_posts()) {
+            foreach ($query->posts as $post_id) {
+              $title      = get_the_title($post_id);
+              $permalink  = get_permalink($post_id);
+              $image_data = get_post_meta($post_id, 'lineup', true);
+              $new_switch = get_post_meta($post_id, 'new_switch', true);
+
+              // 画像取得（ACFが画像ID保存形式の場合）
+              $image_url = is_numeric($image_data)
+                ? wp_get_attachment_url($image_data)
+                : (is_array($image_data) && isset($image_data['url']) ? $image_data['url'] : '');
+
+              ?>
+              <a class="prod-item" href="<?php echo esc_url($permalink); ?>">
+                <div class="img">
+                  <?php if ($image_url): ?>
+                    <img src="<?php echo esc_url($image_url); ?>" alt="">
+                  <?php else: ?>
+                    <img src="/path/to/default.jpg" alt="No image">
+                  <?php endif; ?>
+                </div>
+                <div class="ttl">
+                  <?php if ($new_switch === '1'): ?>
+                    <p class="new">NEW</p>
+                  <?php endif; ?>
+                  <h3 class="name"><?php echo esc_html($title); ?></h3>
+                </div>
+              </a>
+              <?php
+            }
+          } else {
+            echo '<p>該当する商品がありません</p>';
+          }
+
+          wp_reset_postdata();
+        ?>
+      </div>
 
     </div>
   </section>
