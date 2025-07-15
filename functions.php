@@ -924,11 +924,11 @@ if (!function_exists('my_header_news_shortcode')) {
   バリデーション一部カスタム
 ------------------------------------------*/
 
-add_filter('pcf7_validatwe_number', 'custom_validate_catalog_group', 20, 2);
+add_filter('wpcf7_validate_number', 'custom_validate_catalog_group', 20, 2);
 
 function custom_validate_catalog_group($result, $tag) {
   $tag_name = $tag['name'];
-  $catalog_fields = ['cat-noc-1', 'cat-noc-2', 'cat-noc-3', 'cat-noc-4', 'cat-noc-5']; // カタログ部数の全項目
+  $catalog_fields = ['cat-noc-1', 'cat-noc-2', 'cat-noc-3']; // カタログ部数の全項目
 
   // 初回だけ、全体チェックを走らせる
   if ($tag_name === $catalog_fields[0]) {
@@ -954,7 +954,6 @@ function custom_validate_catalog_group($result, $tag) {
 ------------------------------------------*/
 
 add_filter('wpcf7_validate_select', 'custom_validate_est_fields', 20, 2);
-add_filter('wpcf7_validate_text', 'custom_validate_est_fields', 20, 2);
 add_filter('wpcf7_validate_radio', 'custom_validate_est_fields', 20, 2);
 
 function custom_validate_est_fields($result, $tag) {
@@ -972,11 +971,11 @@ function custom_validate_est_fields($result, $tag) {
       $result->invalidate($tag, '築年数を選択してください。');
     }
 
-    if ($tag_name === 'est-umaterial' && $umaterial === '') {
+    if ($tag_name === 'est-umaterial' && ($umaterial === '' || $umaterial === '---')) {
       $result->invalidate($tag, '屋根材を入力してください。');
     }
 
-    if ($tag_name === 'est-ushape' && $ushape === '') {
+    if ($tag_name === 'est-ushape' && ($ushape === '' || $ushape === '---')) {
       $result->invalidate($tag, '屋根形状を入力してください。');
     }
   } elseif ($uhousing === '新築住宅') { // 「新築住宅」の場合だけ着工予定日が未選択の場合エラーを出す
