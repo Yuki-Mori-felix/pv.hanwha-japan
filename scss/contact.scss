@@ -423,10 +423,6 @@ main.contact {
           max-width: 315px;
           width: 100%;
           margin-top: -15px;
-          &:disabled {
-            border: 1px solid #b7b7b7;
-            background-color: #ccc;
-          }
         }
         .select-arrow {
           position: relative;
@@ -532,6 +528,9 @@ main.contact {
         font-size: 12px;
         line-height: calc(18 / 12);
         margin-top: 5px;
+        &.col-red {
+          color: #dc3232;
+        }
       }
       .form-btn {
         max-width: 226px;

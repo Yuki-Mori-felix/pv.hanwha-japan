@@ -419,10 +419,6 @@ main.contact > .sec-form .form .row .input-other {
   width: 100%;
   margin-top: -15px;
 }
-main.contact > .sec-form .form .row .input-other:disabled {
-  border: 1px solid #b7b7b7;
-  background-color: #ccc;
-}
 main.contact > .sec-form .form .row .select-arrow {
   position: relative;
 }
@@ -511,6 +507,9 @@ main.contact > .sec-form .form .note {
   font-size: 12px;
   line-height: 1.5;
   margin-top: 5px;
+}
+main.contact > .sec-form .form .note.col-red {
+  color: #dc3232;
 }
 main.contact > .sec-form .form .form-btn {
   max-width: 226px;
