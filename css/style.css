@@ -2329,10 +2329,21 @@ header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row
   min-height: 187px;
 }
 header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row a.my-sub-menu-grid .img {
+  position: relative;
   overflow: hidden;
   width: 100%;
   aspect-ratio: 226/140;
   background-color: #fafafa;
+}
+header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row a.my-sub-menu-grid .img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.3s;
 }
 header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row a.my-sub-menu-grid .img img {
   width: 100%;
@@ -2340,6 +2351,7 @@ header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row
   object-fit: contain;
   object-position: center;
   transition: transform 0.3s;
+  position: relative;
 }
 header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row a.my-sub-menu-grid p {
   margin: 10px 0 0;
@@ -2347,7 +2359,7 @@ header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row
   font-weight: 400;
   line-height: 1.5;
 }
-header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row a.my-sub-menu-grid:hover .img img {
+header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row a.my-sub-menu-grid:hover .img::before {
   transform: scale(1.1);
 }
 header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row a.my-sub-menu-grid:hover p {
