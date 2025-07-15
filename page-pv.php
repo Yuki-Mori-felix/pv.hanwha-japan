@@ -77,7 +77,7 @@ require get_stylesheet_directory() . '/include/my_variables.php';
   </div>
 </section>
 
-<div class="_contents002">
+<div class="_contents002" style="background-image: url('<?= get_field('contents002_back_img')['url']; ?>');">
   <div class="wrap">
     <h3><?= get_field('contents002_title_main'); ?></h3>
   

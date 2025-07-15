@@ -49,6 +49,8 @@
 ._contents002 {
   padding-block: 100px 160px !important;
   margin-bottom: 0 !important;
+  background-size: contain;
+  background-position: bottom left !important;
 }
 @media screen and (max-width: 768px) {
   ._contents002 {
@@ -377,6 +379,7 @@
 .section-back ._contents005 ._contents005_inner .banner a img {
   width: 100%;
   border-radius: 10px;
+  box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
 }
 .section-back ._contents005 ._contents005_inner .banner a .banner-text-back {
   max-width: 484px;
