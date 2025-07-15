@@ -248,6 +248,9 @@
   margin-inline: auto;
 }
 .about .parts-bottom-content ul li img {
+  width: 312px;
+  height: 226px;
+  object-fit: cover;
   border-radius: 10px;
   margin-bottom: 20px;
 }
