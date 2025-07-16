@@ -356,7 +356,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         <div class="row row-t">
           <div class="heading">
             <div class="imgc">
-              <img src="" alt="">
+              <img src="<?= $img_path ?>/single-product/comparison_icon_quality.svg" alt="">
             </div>
             <p class="txt">質量</p>
           </div>
@@ -524,7 +524,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         </div>
       </div>
       <a href="<?= home_url(); ?>/proudct-list/power-conditioner/" class="banner">
-        <img src="" alt="パワーコンディショナ・モニター一覧ページへ">
+        <img src="<?= $img_path ?>/single-product/PDH_monitor_Product details_banner.webp" alt="パワーコンディショナ・モニター一覧ページへ">
       </a>
     </div>
   </section>
