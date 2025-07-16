@@ -3,6 +3,7 @@ window.addEventListener("DOMContentLoaded", function() {
   //  関数呼び出し
   // =====================
   search();
+  footerAddMargin();
 
   // =====================
   //  関数
@@ -27,6 +28,21 @@ window.addEventListener("DOMContentLoaded", function() {
         searchForm.classList.add("active");
         searchForm.style.height = searchForm.scrollHeight + 'px';
       }
+    }
+  }
+
+  // 1054px以下は固定ボタンの分フッターにマージンを入れる
+  function footerAddMargin() {
+    const sticky = document.querySelector('._footer_fixed_bt');
+    const footer = document.querySelector('.site-footer');
+    console.log("test");
+
+    if (!sticky || !footer) return;
+
+    const fixedBtnHeight = sticky.offsetHeight;
+
+    if (window.matchMedia('(max-width: 1055px)').matches) {
+      footer.style.marginBottom = fixedBtnHeight + 'px';
     }
   }
 });

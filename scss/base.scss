@@ -1731,10 +1731,13 @@ footer {
 	}
 	._end ._left-contents {
 		padding: 30px 0px;
+		@include max {
+			padding: initial;
+		}
 	}
 	footer ._end li {
 		text-align: center;
-		width: 50%;
+		// width: 50%;
 	}
 }
 

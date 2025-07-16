@@ -1676,9 +1676,15 @@ footer ._inner ._contenner ._sns ul img {
   ._end ._left-contents {
     padding: 30px 0px;
   }
+}
+@media screen and (max-width: 1054px) and (max-width: 768px) {
+  ._end ._left-contents {
+    padding: initial;
+  }
+}
+@media screen and (max-width: 1054px) {
   footer ._end li {
     text-align: center;
-    width: 50%;
   }
 }
 /*sp*/
