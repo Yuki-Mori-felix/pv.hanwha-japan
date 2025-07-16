@@ -3,7 +3,7 @@
 Template Name: お見積り依頼
 */
 get_header();
-$form_id = is_public_server() ? "fc48203" : "2aa1f57"; // cf7のフォームid
+$form_id = is_public_server() ? "fc48203" : "722591f"; // cf7のフォームid
 ?>
 <main class="contact quotation">
   <section class="mv" style="background-image: url(<?= get_field('fv_page_img'); ?>)">

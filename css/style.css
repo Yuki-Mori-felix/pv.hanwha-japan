@@ -2215,6 +2215,7 @@ header#masthead .menu-scroll-down {
 }
 header#masthead #mega-menu-wrap-top #mega-menu-top > li.mega-menu-item > a.mega-menu-link {
   line-height: 50px;
+  font-size: 16px;
 }
 @media screen and (max-width: 1054px) {
   header#masthead #mega-menu-wrap-top #mega-menu-top > li.mega-menu-item > a.mega-menu-link {
