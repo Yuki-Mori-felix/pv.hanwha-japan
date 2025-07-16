@@ -3,7 +3,7 @@
 Template Name: お問い合わせ
 */
 get_header();
-$form_id = is_public_server() ? "bc3e21b" : "529dfca"; // cf7のフォームid
+$form_id = is_public_server() ? "bc3e21b" : "c274000"; // cf7のフォームid
 ?>
 <main class="contact">
   <section class="mv" style="background-image: url(<?= get_field('fv_page_img'); ?>)">

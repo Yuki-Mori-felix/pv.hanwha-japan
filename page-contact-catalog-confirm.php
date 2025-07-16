@@ -3,7 +3,7 @@
 Template Name: カタログ請求--確認
 */
 get_header();
-$form_id = is_public_server() ? "058f6ed" : "b7bdf52"; // cf7のフォームid
+$form_id = is_public_server() ? "058f6ed" : "4061147"; // cf7のフォームid
 ?>
 
 <main class="contact contact-catalog confirm">

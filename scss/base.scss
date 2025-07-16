@@ -2328,6 +2328,7 @@ header#masthead {
 		> li.mega-menu-item {
 			> a.mega-menu-link {
 				line-height: 50px;
+				font-size: clamp(0.9375rem, 0.4796rem + 0.6944vw, 1rem); // 16px→15px 1200px→1055px
 				@include max($header-bp) {
 					line-height: 40px;
 				}
@@ -2611,5 +2612,10 @@ header#masthead {
 				}
 			}
 		}
+	}
+
+	#mega-menu-wrap-top .mega-menu-toggle.mega-menu-open .mega-toggle-block-0 .mega-toggle-animated-slider .mega-toggle-animated-inner,
+	#mega-menu-wrap-top .mega-menu-toggle.mega-menu-open .mega-toggle-block-0 .mega-toggle-animated-slider .mega-toggle-animated-inner::after {
+		background-color: #fff;
 	}
 }
