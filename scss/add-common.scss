@@ -392,6 +392,10 @@ footer#colophon {
 		.wrap_s {
 			display: flex;
 			justify-content: space-between;
+			@include max {
+				flex-direction: column;
+				align-items: center;
+			}
 
 			._left-contents {
 				ul {

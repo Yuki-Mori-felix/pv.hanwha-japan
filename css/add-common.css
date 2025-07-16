@@ -327,6 +327,12 @@ footer#colophon ._end .wrap_s {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  footer#colophon ._end .wrap_s {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 footer#colophon ._end .wrap_s ._left-contents ul {
   display: flex;
   align-items: center;
