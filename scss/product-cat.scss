@@ -44,42 +44,6 @@ main.taxonomy-product-cat {
     font-size: 60%;
   }
   // -- クラス名ありのコンテンツ
-  .none {
-    &-max {
-      &-l {
-        @include max(l) {
-          display: none;
-        }
-      }
-      &-t {
-        @include max {
-          display: none;
-        }
-      }
-      &-ml {
-        @include max(ml) {
-          display: none;
-        }
-      }
-    }
-    &-min {
-      &-l {
-        @include min(l) {
-          display: none;
-        }
-      }
-      &-t {
-        @include min {
-          display: none;
-        }
-      }
-      &-ml {
-        @include min(ml) {
-          display: none;
-        }
-      }
-    }
-  }
   .wrapper {
     max-width: 1280px;
     width: 100%;

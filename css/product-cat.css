@@ -35,36 +35,6 @@ main.taxonomy-product-cat table td {
 main.taxonomy-product-cat sup {
   font-size: 60%;
 }
-@media screen and (max-width: 1024px) {
-  main.taxonomy-product-cat .none-max-l {
-    display: none;
-  }
-}
-@media screen and (max-width: 768px) {
-  main.taxonomy-product-cat .none-max-t {
-    display: none;
-  }
-}
-@media screen and (max-width: 425px) {
-  main.taxonomy-product-cat .none-max-ml {
-    display: none;
-  }
-}
-@media screen and (min-width: 1025px) {
-  main.taxonomy-product-cat .none-min-l {
-    display: none;
-  }
-}
-@media screen and (min-width: 769px) {
-  main.taxonomy-product-cat .none-min-t {
-    display: none;
-  }
-}
-@media screen and (min-width: 426px) {
-  main.taxonomy-product-cat .none-min-ml {
-    display: none;
-  }
-}
 main.taxonomy-product-cat .wrapper {
   max-width: 1280px;
   width: 100%;
