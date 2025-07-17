@@ -13,23 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		.getElementById("product-term")
 		.getAttribute("data-term"); // PHPからターム値を取得
 
-	// // ✅ 追加: filter2 の選択肢変更時の処理
-	// filter2Select.addEventListener("change", function () {
-	// 	if (termSlug !== "storage-system") return; // ✅ 追加: 他のタームでは実行しない
-
-	// 	const filter2Value = filter2Select.value;
-
-	// 	// ✅ 追加: ready / hybrid の prod-list を切り替え
-	// 	document.querySelector(".ready").style.display =
-	// 		filter2Value === "" || filter2Value === filter2Select.options[1].value
-	// 			? "block"
-	// 			: "none";
-	// 	document.querySelector(".hybrid").style.display =
-	// 		filter2Value === "" || filter2Value === filter2Select.options[2].value
-	// 			? "block"
-	// 			: "none";
-	// });
-
 	async function fetchFilteredProducts() {
 		const filter1Value = filter1Select.value;
 		const filter2Value = filter2Select.value;
@@ -59,13 +42,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 			const data = await response.text();
 			productList.innerHTML = data;
-			// readyList.innerHTML = data;
-			// hybridList.innerHTML = data;
-			// ✅ `data` を HTML として解析
+
+			// `data` を HTML として解析
 			const parser = new DOMParser();
 			const doc = parser.parseFromString(data, "text/html");
 
-			// ✅ `#ready-list` の内容を更新
+			// `#ready-list` の内容を更新
 			const readyItems = doc.querySelector("#ready-list");
 			if (readyItems) {
 				readyList.innerHTML = readyItems.innerHTML;
@@ -73,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				readyList.innerHTML = "<p>該当する商品がありません</p>";
 			}
 
-			// ✅ `#hybrid-list` の内容を更新
+			// `#hybrid-list` の内容を更新
 			const hybridItems = doc.querySelector("#hybrid-list");
 			if (hybridItems) {
 				hybridList.innerHTML = hybridItems.innerHTML;
@@ -105,16 +87,12 @@ document.addEventListener("DOMContentLoaded", function () {
 		filter1Select.value = "";
 		filter2Select.value = "";
 
-		// `change` イベントを発火させる
-		filter1Select.dispatchEvent(new Event("change"));
-		filter2Select.dispatchEvent(new Event("change"));
+    fetchFilteredProducts();
 
 		// 疑似セレクトボックスを再生成
 		if (window.selectChoice) {
 			window.selectChoice();
 		}
-		fetchFilteredProducts();
 	});
 
-	fetchFilteredProducts();
 });
