@@ -321,6 +321,11 @@ main.contact > .mv > .ttl {
 main.contact > .top {
   padding: 0 0 100px;
 }
+@media screen and (max-width: 768px) {
+  main.contact > .top {
+    padding: 0 0 50px;
+  }
+}
 main.contact > .top * {
   text-align: center;
 }
@@ -347,6 +352,11 @@ main.contact > .top > .container > .links {
 main.contact > .sec-form {
   padding: 0 0 100px;
   border-top: 1px solid var(--col-gray);
+}
+@media screen and (max-width: 768px) {
+  main.contact > .sec-form {
+    padding: 0 0 50px;
+  }
 }
 main.contact > .sec-form .container * {
   letter-spacing: 0.04em !important;
@@ -521,6 +531,11 @@ main.contact > .sec-form .form .form-btn {
   position: relative;
   z-index: 0;
 }
+@media screen and (max-width: 768px) {
+  main.contact > .sec-form .form .form-btn {
+    margin: 20px auto 0;
+  }
+}
 main.contact > .sec-form .form .form-btn:hover::before {
   transform: scale(1, 1);
 }
@@ -616,6 +631,12 @@ main.contact.quotation > .sec-form > .container > .links {
   margin-top: 80px;
   padding-top: 80px;
   border-top: 1px solid var(--col-gray);
+}
+@media screen and (max-width: 768px) {
+  main.contact.quotation > .sec-form > .container > .links {
+    margin-top: 40px;
+    padding-top: 40px;
+  }
 }
 main.contact.quotation > .sec-form .form .row .input .add-list {
   display: grid;
@@ -762,11 +783,21 @@ main.contact.catalog-dl > .download {
   padding: 76px 0 100px;
   background-color: rgba(238, 119, 68, 0.0509803922);
 }
+@media screen and (max-width: 768px) {
+  main.contact.catalog-dl > .download {
+    padding: 40px 0 50px;
+  }
+}
 main.contact.catalog-dl > .download * {
   letter-spacing: 0.04em !important;
 }
 main.contact.catalog-dl > .system {
   padding: 100px 0;
+}
+@media screen and (max-width: 768px) {
+  main.contact.catalog-dl > .system {
+    padding: 50px 0;
+  }
 }
 main.contact.catalog-dl > .system > .container > .ttl {
   padding: 14px 32px;
@@ -851,6 +882,11 @@ main.contact.catalog-dl > .system > .container > .ctt > .list > .item > .list > 
 main.contact.contact-catalog > .top {
   padding: 0 0 80px;
 }
+@media screen and (max-width: 768px) {
+  main.contact.contact-catalog > .top {
+    padding: 0;
+  }
+}
 main.contact.contact-catalog > .top > .container .scroll-btn {
   display: none;
   max-width: 312px;
@@ -908,6 +944,11 @@ main.contact.contact-catalog > .sec-form .form .row.utype {
   margin-top: 80px;
   border-top: 1px solid #CCCCCC;
 }
+@media screen and (max-width: 768px) {
+  main.contact.contact-catalog > .sec-form .form .row.utype {
+    margin-top: 40px;
+  }
+}
 main.contact.contact-catalog > .sec-form .form .row .input .add-list {
   display: grid;
   gap: 16px;
@@ -916,13 +957,18 @@ main.contact.contact-catalog > .sec-form .choices-catalog {
   padding: 100px 0;
   background-color: rgba(51, 102, 170, 0.0509803922);
 }
+@media screen and (max-width: 768px) {
+  main.contact.contact-catalog > .sec-form .choices-catalog {
+    padding: 50px 0;
+  }
+}
 main.contact.contact-catalog > .sec-form .choices-catalog > .container > .txt {
   text-align: center;
   margin-bottom: 60px;
 }
 @media screen and (max-width: 768px) {
   main.contact.contact-catalog > .sec-form .choices-catalog > .container > .txt {
-    margin-bottom: 40px;
+    margin-bottom: 0;
   }
 }
 main.contact.contact-catalog > .sec-form .choices-catalog > .container .catalog-err-msg {
@@ -1048,6 +1094,11 @@ main.contact.contact-catalog > .sec-form .choices-catalog > .container .cat-list
 main.contact.contact-catalog > .sec-form .input-address {
   padding-top: 100px;
 }
+@media screen and (max-width: 768px) {
+  main.contact.contact-catalog > .sec-form .input-address {
+    padding-top: 50px;
+  }
+}
 main.contact.contact-catalog > .sec-form .input-address > .container > .ttl,
 main.contact.contact-catalog > .sec-form .input-address > .container > .lead,
 main.contact.contact-catalog > .sec-form .input-address > .container > .txt {
@@ -1056,6 +1107,11 @@ main.contact.contact-catalog > .sec-form .input-address > .container > .txt {
 main.contact.contact-catalog > .sec-form .input-address > .container > .ttl {
   font-size: 32px;
   font-weight: var(--fw-bold);
+}
+@media screen and (max-width: 768px) {
+  main.contact.contact-catalog > .sec-form .input-address > .container > .ttl {
+    font-size: 24px;
+  }
 }
 main.contact.contact-catalog > .sec-form .input-address > .container > .lead {
   font-size: 16px;
@@ -1069,6 +1125,12 @@ main.contact.contact-catalog > .sec-form > .container > .links {
   margin-top: 80px;
   padding-top: 80px;
   border-top: 1px solid var(--col-gray);
+}
+@media screen and (max-width: 768px) {
+  main.contact.contact-catalog > .sec-form > .container > .links {
+    margin-top: 40px;
+    padding-top: 40px;
+  }
 }
 
 main.contact.confirm > .sec-form .form .row .select-arrow::after {

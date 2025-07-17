@@ -326,6 +326,9 @@ main.contact {
   // MV
   > .top {
     padding: 0 0 100px;
+    @include max {
+      padding: 0 0 50px;
+    }
     * {
       text-align: center;
     }
@@ -354,6 +357,9 @@ main.contact {
   > .sec-form {
     padding: 0 0 100px;
     border-top: 1px solid var(--col-gray);
+    @include max {
+      padding: 0 0 50px;
+    }
     .container {
       * {
         letter-spacing: 0.04em !important;
@@ -541,6 +547,9 @@ main.contact {
         box-shadow: 0 3px 6px #0000004D;
         position: relative;
         z-index: 0;
+        @include max {
+          margin: 20px auto 0;
+        }
         &:hover::before {
           transform: scale(1, 1);
         }
@@ -642,6 +651,10 @@ main.contact.quotation {
         margin-top: 80px;
         padding-top: 80px;
         border-top: 1px solid var(--col-gray);
+        @include max {
+          margin-top: 40px;
+          padding-top: 40px;
+        }
       }
     }
     .form {
@@ -785,6 +798,9 @@ main.contact.catalog-dl {
   > .download {
     padding: 76px 0 100px;
     background-color: #EE77440D;
+    @include max {
+      padding: 40px 0 50px;
+    }
     * {
       letter-spacing: 0.04em !important;
     }
@@ -792,6 +808,9 @@ main.contact.catalog-dl {
   // DOWNLOAD
   > .system {
     padding: 100px 0;
+    @include max {
+      padding: 50px 0;
+    }
     > .container {
       > .ttl {
         padding: 14px 32px;
@@ -889,6 +908,9 @@ main.contact.catalog-dl {
 main.contact.contact-catalog {
   > .top {
     padding: 0 0 80px;
+    @include max {
+      padding: 0;
+    }
     > .container {
       .scroll-btn {
         display: none;
@@ -944,6 +966,9 @@ main.contact.contact-catalog {
         &.utype {
           margin-top: 80px;
           border-top: 1px solid #CCCCCC;
+          @include max {
+            margin-top: 40px;
+          }
         }
         .input {
           .add-list {
@@ -956,12 +981,15 @@ main.contact.contact-catalog {
     .choices-catalog {
       padding: 100px 0;
       background-color: #3366AA0D;
+      @include max {
+        padding: 50px 0;
+      }
       > .container {
         > .txt {
           text-align: center;
           margin-bottom: 60px;
           @include max {
-            margin-bottom: 40px;
+            margin-bottom: 0;
           }
         }
         .catalog-err-msg {
@@ -1084,6 +1112,9 @@ main.contact.contact-catalog {
     // カタログ部数選択
     .input-address {
       padding-top: 100px;
+      @include max {
+        padding-top: 50px;
+      }
       > .container {
         > .ttl,
         > .lead,
@@ -1093,6 +1124,9 @@ main.contact.contact-catalog {
         > .ttl {
           font-size: 32px;
           font-weight: var(--fw-bold);
+          @include max {
+            font-size: 24px;
+          }
         }
         > .lead {
           font-size: 16px;
@@ -1110,6 +1144,10 @@ main.contact.contact-catalog {
         margin-top: 80px;
         padding-top: 80px;
         border-top: 1px solid var(--col-gray);
+        @include max {
+          margin-top: 40px;
+          padding-top: 40px;
+        }
       }
     }
   }

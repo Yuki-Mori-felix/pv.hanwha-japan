@@ -98,5 +98,5 @@
 
 
 </body>
-<script src="<?= get_stylesheet_directory_uri() ?>/js/script.js"></script>
+<script src="<?= get_stylesheet_directory_uri() ?>/js/script.js<?=get_last_modified("script.js", "js")?>"></script>
 </html>

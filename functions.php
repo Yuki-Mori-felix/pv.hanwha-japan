@@ -1116,3 +1116,14 @@ function set_post_views($postID) {
     update_post_meta($postID, $meta_key_time, $now);
   }
 }
+
+/*------------------------------------------
+	各ファイル共通キャッシュクリア
+------------------------------------------*/
+function get_last_modified($file_name, $path) {
+  $file_path = get_stylesheet_directory() . "/{$path}/{$file_name}";
+
+  if (!file_exists($file_path)) return;
+
+  return "?ver=" . date('YmdHis', filemtime($file_path));
+}

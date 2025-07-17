@@ -18,6 +18,8 @@
 			text-align: center;
 			font-size: 40px;
 			font-weight: var(--fw-bold);
+			width: 100%;
+			padding: 0 10px;
 			@include max {
 				font-size: 32px;
 			}
@@ -28,6 +30,9 @@
 
 .faq-links {
 	margin-bottom: 100px;
+	@include max {
+		margin-bottom: 50px;
+	}
 
 	.wrap_s {
 		max-width: 800px;
@@ -84,6 +89,9 @@
 
 		.accordian_ty.faq {
 			margin-bottom: 80px;
+			@include max {
+				margin-bottom: 40px;
+			}
 
 			.list {
 				&:last-of-type {
