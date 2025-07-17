@@ -68,11 +68,6 @@ main.single-products .fs-8 {
 main.single-products .fs-10 {
   font-size: 10px;
 }
-@media screen and (max-width: 768px) {
-  main.single-products .none-max-t {
-    display: none;
-  }
-}
 main.single-products .wrapper {
   max-width: 1000px;
   width: calc(100% - 30px);
