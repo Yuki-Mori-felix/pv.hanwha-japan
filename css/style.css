@@ -676,7 +676,6 @@ h2.head-border.text-line-right {
   font-size: 14px;
   font-family: "Josefin Sans", sans-serif;
   letter-spacing: 0.2em;
-  text-transform: uppercase;
   width: 24px;
   height: 24px;
   text-decoration: none;
@@ -688,7 +687,6 @@ h2.head-border.text-line-right {
   margin-left: -14px;
   font-size: 12px;
   color: #ffffff;
-  text-transform: uppercase;
   white-space: nowrap;
   letter-spacing: 2px;
 }
@@ -1676,9 +1674,15 @@ footer ._inner ._contenner ._sns ul img {
   ._end ._left-contents {
     padding: 30px 0px;
   }
+}
+@media screen and (max-width: 1054px) and (max-width: 768px) {
+  ._end ._left-contents {
+    padding: initial;
+  }
+}
+@media screen and (max-width: 1054px) {
   footer ._end li {
     text-align: center;
-    width: 50%;
   }
 }
 /*sp*/
@@ -2215,7 +2219,7 @@ header#masthead .menu-scroll-down {
 }
 header#masthead #mega-menu-wrap-top #mega-menu-top > li.mega-menu-item > a.mega-menu-link {
   line-height: 50px;
-  font-size: 16px;
+  font-size: clamp(0.9375rem, 0.4796rem + 0.6944vw, 1rem);
 }
 @media screen and (max-width: 1054px) {
   header#masthead #mega-menu-wrap-top #mega-menu-top > li.mega-menu-item > a.mega-menu-link {
@@ -2490,6 +2494,10 @@ header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row
 header#masthead #mega-menu-wrap-top #mega-menu-top .mega-sub-menu .mega-menu-row .my-blog-sec a.my-bottom-link {
   float: unset;
   margin-top: 20px;
+}
+header#masthead #mega-menu-wrap-top .mega-menu-toggle.mega-menu-open .mega-toggle-block-0 .mega-toggle-animated-slider .mega-toggle-animated-inner,
+header#masthead #mega-menu-wrap-top .mega-menu-toggle.mega-menu-open .mega-toggle-block-0 .mega-toggle-animated-slider .mega-toggle-animated-inner::after {
+  background-color: #fff;
 }
 
 /*color*/

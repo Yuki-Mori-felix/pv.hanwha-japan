@@ -356,7 +356,7 @@
   width: min(538px, 40vw);
   z-index: -1;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1054px) {
   .section-back ._contents005 ._contents005_inner .wrap .reason-img {
     display: none;
   }

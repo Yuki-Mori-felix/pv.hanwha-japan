@@ -33,9 +33,15 @@
   margin-block: 120px;
   line-height: 1;
 }
+@media screen and (max-width: 1054px) {
+  .under-pv .location-button {
+    max-width: 290px;
+  }
+}
 @media screen and (max-width: 768px) {
   .under-pv .location-button {
     margin-block: 60px;
+    max-width: 398px;
   }
 }
 .under-pv .location-button:hover::after {
@@ -87,7 +93,7 @@
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
   max-width: 30vw;
   width: 280px;
-  padding: 25px 90px 75px 20px;
+  padding: 25px 20px 75px 20px;
 }
 @media screen and (max-width: 768px) {
   .under-pv .location-menu {
@@ -464,6 +470,9 @@
 .under-pv .award .wrap {
   padding: 0;
 }
+.under-pv .award .wrap h2 {
+  padding: 0 10px;
+}
 .under-pv .award .wrap .award-list {
   margin-top: 100px;
 }
@@ -525,7 +534,8 @@
 @media screen and (max-width: 768px) {
   .under-pv .award .wrap .award-list li .list-wrap {
     gap: 10px;
-    width: 94%;
+    width: 96%;
+    justify-content: center;
   }
 }
 .under-pv .award .wrap .award-list li img {
@@ -541,6 +551,11 @@
 }
 .under-pv .award .wrap .award-list li .text-area {
   width: 60%;
+}
+@media screen and (max-width: 768px) {
+  .under-pv .award .wrap .award-list li .text-area {
+    width: 70%;
+  }
 }
 .under-pv .award .wrap .award-list li .text-area .title {
   font-size: 20px;
