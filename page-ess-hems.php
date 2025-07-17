@@ -13,7 +13,8 @@ require get_stylesheet_directory() . '/include/my_variables.php';
         <div class="mv-sub-title"><?php the_field('page_sub_title') ?></div>
       </div>
       <div class="mv-text wrap_s">
-        <?php if (the_field('fv_page_catch')) '<span>' . the_field('fv_page_catch') . '</span>'; ?>
+        <?php $catch = get_field('fv_page_catch'); ?>
+        <?php if ($catch) echo '<span>' . $catch . '</span>'; ?>
         <h2><?php the_title(); ?></h2>
       </div>
     </div>

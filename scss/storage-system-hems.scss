@@ -2,6 +2,7 @@
 
 .storage-system-hems {
   .mv-for-page {
+    background-color: rgba(51, 102, 170, 0.08) !important;
     .mv-img {
       &::before {
         content: "";
@@ -40,6 +41,46 @@
 			background: #3d7abb;
 		}
 	}
+
+  .btn-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 80px;
+    @include max {
+      flex-direction: column;
+      margin-bottom: 50px;
+    }
+
+    .ess-hems-btn {
+      display: block;
+      font-size: 12px;
+      color: #3366aa;
+      background: #3366AA1A;
+      text-align: center;
+      width: 100%;
+      max-width: 312px;
+      border: 1px solid #3366aa;
+      padding-block: 12px 11px;
+      border-radius: 30px;
+      &:hover {
+        opacity: unset;
+        background: #3366aa;
+        color: white;
+      }
+
+      &:nth-child(2) {
+        color: #ee7744;
+        border-color: #ee7744;
+        background: #EE77441A;
+        &:hover {
+          background: #ee7744;
+          color: white;
+        }
+      }
+    }
+  }
 
 	.about-storage-system {
 		padding-bottom: 100px;
@@ -165,6 +206,9 @@
 			&::before {
 				background-color: rgba(238, 119, 68, 0.08);
 			}
+      &::after {
+        content: "HYBRID";
+      }
 			.section-title-area {
 				&::after {
 					background: #ee7744;
@@ -268,7 +312,13 @@
 
 				.btn {
 					width: 140px;
+          height: 50px;
+          padding-block: 13px;
 					border-radius: 25px;
+          line-height: unset;
+          &::before, &::after {
+            content: unset;
+          }
 					@include max {
 						margin-inline: auto;
 					}
@@ -286,10 +336,10 @@
 					max-width: 226px;
 
 					a {
-						&:hover {
+            &:hover {
+              opacity: 1;
 							img {
 								scale: 1.1;
-								opacity: 1;
 							}
 							.title {
 								opacity: 0.6;
@@ -309,6 +359,10 @@
 	.system-type {
 		background: rgba(51, 109, 170, 0.2);
 		padding-block: 100px;
+
+    h2 {
+      margin-bottom: 60px;
+    }
 
 		.system-type-grid {
       background: white;
@@ -338,7 +392,7 @@
 
 					img {
 						width: 400px;
-						height: 400px;
+						height: auto;
 						object-fit: contain;
 						object-position: center;
 						margin-inline: auto;
