@@ -1774,11 +1774,6 @@ main.power_conditioner {
 						max-width: 824px;
 						width: 100%;
 						margin: 20px auto 0;
-						.img {
-							img {
-								@include img-replacement(400px);
-							}
-						}
 						.images {
 							display: flex;
 							flex-wrap: wrap;
