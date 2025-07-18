@@ -767,6 +767,11 @@ main.search {
 				display: none;
 			}
 		}
+		&-500 {
+			@include max(500px) {
+				display: none;
+			}
+		}
 	}
 	&-min {
 		&-l {
@@ -781,6 +786,11 @@ main.search {
 		}
 		&-ml {
 			@include min(ml) {
+				display: none;
+			}
+		}
+		&-500 {
+			@include min(501px) {
 				display: none;
 			}
 		}
