@@ -52,7 +52,11 @@ require get_stylesheet_directory() . '/include/my_variables.php';
   <?= get_field('content_3', false, false); ?>
   <!--========== END OF SERVICE SUPPORT  ==========-->
 
-  <a href="<?= home_url(); ?>/pv" class="btn location-button">ハンファジャパンの太陽光発電</a>
+  <div class="wrap_s">
+    <div class="location-wrap">
+      <a href="<?= home_url(); ?>/pv" class="btn location-button">ハンファジャパンの太陽光発電</a>
+    </div>
+  </div>
 
 </main>
 <?php get_footer(); ?>

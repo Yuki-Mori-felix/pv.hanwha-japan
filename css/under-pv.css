@@ -33,15 +33,9 @@
   margin-block: 120px;
   line-height: 1;
 }
-@media screen and (max-width: 1054px) {
-  .under-pv .location-button {
-    max-width: 290px;
-  }
-}
 @media screen and (max-width: 768px) {
   .under-pv .location-button {
     margin-block: 60px;
-    max-width: 398px;
   }
 }
 .under-pv .location-button:hover::after {
@@ -138,6 +132,9 @@
   .under-pv .location-menu .parent-link {
     font-size: 14px;
   }
+}
+.under-pv .location-menu .child-link {
+  font-family: "Figtree", "Noto Sans JP" !important;
 }
 .under-pv .location-menu ul {
   padding-left: 40px;

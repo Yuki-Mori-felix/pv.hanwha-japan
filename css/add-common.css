@@ -694,6 +694,11 @@ main.search > .wrap_s .error-results .error-txt {
     display: none;
   }
 }
+@media screen and (max-width: 500px) {
+  .none-max-500 {
+    display: none;
+  }
+}
 @media screen and (min-width: 1025px) {
   .none-min-l {
     display: none;
@@ -706,6 +711,11 @@ main.search > .wrap_s .error-results .error-txt {
 }
 @media screen and (min-width: 426px) {
   .none-min-ml {
+    display: none;
+  }
+}
+@media screen and (min-width: 501px) {
+  .none-min-500 {
     display: none;
   }
 }/*# sourceMappingURL=add-common.css.map */

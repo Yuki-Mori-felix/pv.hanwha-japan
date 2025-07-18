@@ -66,6 +66,9 @@
   flex-direction: column;
   align-items: center;
 }
+.faq-links .wrap_s .faq-nav li a:hover img {
+  transform: translateY(-5px);
+}
 @media screen and (max-width: 768px) {
   .faq-links .wrap_s .faq-nav li a {
     font-size: 14px;
@@ -73,6 +76,7 @@
 }
 .faq-links .wrap_s .faq-nav li a img {
   margin-bottom: 10px;
+  transition: transform 0.3s ease;
 }
 
 /*====================== END OF FAQ LINKS ======================*/
