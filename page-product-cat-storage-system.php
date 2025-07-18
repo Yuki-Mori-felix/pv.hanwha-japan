@@ -219,8 +219,8 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         }
 
         // 投稿IDに基づいて画像URLを取得
-        $product_image_url = esc_url(get_field('image1', $default_product_id)['url'] ?? '');
-        $compare_image_url = esc_url(get_field('image1', $default_compare_id)['url'] ?? '');
+        $product_image_url = esc_url(get_field('compare_img', $default_product_id)['url'] ?? '');
+        $compare_image_url = esc_url(get_field('compare_img', $default_compare_id)['url'] ?? '');
         ?>
 
         <!-- メインの製品 -->

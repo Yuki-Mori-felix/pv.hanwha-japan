@@ -52,11 +52,11 @@ document.addEventListener("DOMContentLoaded", function () {
 				);
 
 				if (!isCompare && productImage) {
-					productImage.setAttribute("src", data.meta?.image1?.url || "");
+					productImage.setAttribute("src", data.meta?.compare_img?.url || "");
 				}
 
 				if (isCompare && compareProductImage) {
-					compareProductImage.setAttribute("src", data.meta?.image1?.url || "");
+					compareProductImage.setAttribute("src", data.meta?.compare_img?.url || "");
 				}
 
 				if (!isCompare && productMoreLink) {
