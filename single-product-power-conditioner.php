@@ -176,7 +176,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
       <div class="product top">
         <div class="item">
           <div class="imgc">
-            <img id="product-image" src="<?= esc_url(get_field('image1')['url']); ?>" alt="">
+            <img id="product-image" src="<?= esc_url(get_field('compare_img')['url']); ?>" alt="">
           </div>
           <div class="name">
             <?php
@@ -263,7 +263,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
             }
 
             // 比較対象の投稿の画像を取得
-            $compare_image = (!empty($default_compare_post_id)) ? get_field('image1', $default_compare_post_id) : null;
+            $compare_image = (!empty($default_compare_post_id)) ? get_field('compare_img', $default_compare_post_id) : null;
             $compare_image_url = (!empty($compare_image['url'])) ? esc_url($compare_image['url']) : $img_path . '/single-product/default-image.jpg'; // 代替画像を設定
             ?>
             <img id="compare-product-image" src="<?= $compare_image_url; ?>" alt="">
@@ -292,7 +292,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         <div class="row row-t">
           <div class="heading">
             <div class="imgc">
-              <img src="<?= $img_path ?>/single-product/compare_icon_2.svg" alt="">
+              <img src="<?= $img_path ?>/single-product/comparison_icon_Data_communication_method.svg" alt="">
             </div>
             <p class="txt">変換効率</p>
           </div>
@@ -308,7 +308,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         <div class="row row-t">
           <div class="heading">
             <div class="imgc">
-              <img src="" alt="">
+              <img src="<?= $img_path ?>/single-product/comparison_icon_size.svg" alt="">
             </div>
             <p class="txt">設置場所</p>
           </div>
@@ -324,7 +324,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         <div class="row row-t">
           <div class="heading">
             <div class="imgc">
-              <img src="<?= $img_path ?>/single-product/compare_icon_1.svg" alt="">
+              <img src="<?= $img_path ?>/single-product/comparison_icon_Compatible appliances.svg" alt="">
             </div>
             <p class="txt">定格出力</p>
           </div>
@@ -340,7 +340,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         <div class="row row-t">
           <div class="heading">
             <div class="imgc">
-              <img src="<?= $img_path ?>/single-product/comparison_icon_size.svg" alt="">
+              <img src="<?= $img_path ?>/single-product/comparison_icon_Installation_Method.svg" alt="">
             </div>
             <p class="txt">寸法（高さx横x奥行）</p>
           </div>
@@ -356,7 +356,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         <div class="row row-t">
           <div class="heading">
             <div class="imgc">
-              <img src="<?= $img_path ?>/single-product/comparison_icon_quality.svg" alt="">
+              <img src="<?= $img_path ?>/single-product/comparison_icon_Operation_check.svg" alt="">
             </div>
             <p class="txt">質量</p>
           </div>

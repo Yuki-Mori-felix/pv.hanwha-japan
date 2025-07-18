@@ -196,7 +196,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
       <div class="product top">
         <div class="item">
           <div class="imgc">
-            <img id="product-image" src="<?= esc_url(get_field('image1')['url']); ?>" alt="">
+            <img id="product-image" src="<?= esc_url(get_field('compare_img')['url']); ?>" alt="">
           </div>
           <div class="name">
             <?php
@@ -273,7 +273,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
             }
 
             // 比較対象の投稿の画像を取得
-            $compare_image = (!empty($default_compare_post_id)) ? get_field('image1', $default_compare_post_id) : null;
+            $compare_image = (!empty($default_compare_post_id)) ? get_field('compare_img', $default_compare_post_id) : null;
             $compare_image_url = (!empty($compare_image['url'])) ? esc_url($compare_image['url']) : $img_path . '/single-product/default-image.jpg'; // 代替画像を設定
             ?>
             <img id="compare-product-image" src="<?= $compare_image_url; ?>" alt="">

@@ -36,12 +36,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 				// メインの画像の変更
 				if (!isCompare && productImage) {
-					productImage.setAttribute("src", data.meta?.image1?.url || "");
+					productImage.setAttribute("src", data.meta?.compare_img?.url || "");
 				}
 
 				// 比較対象の画像の変更
 				if (isCompare && compareProductImage) {
-					compareProductImage.setAttribute("src", data.meta?.image1?.url || "");
+					compareProductImage.setAttribute("src", data.meta?.compare_img?.url || "");
 				}
 
 				// メインの「詳しく見る」リンクの変更

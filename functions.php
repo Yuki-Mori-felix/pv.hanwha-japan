@@ -654,7 +654,7 @@ function add_custom_meta_to_rest($response, $post, $request)
   }
 
   // image1 も追加
-  $meta_fields[] = "image1";
+  $meta_fields[] = "compare_img";
 
   foreach ($meta_fields as $field) {
     $response->data['meta'][$field] = get_field($field, $post->ID);
