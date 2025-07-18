@@ -116,7 +116,7 @@ require get_stylesheet_directory() . '/include/my_variables.php';
       <div class="links">
         <a href="<?= get_my_home_url("/service-support/contact") ?>" class="link contact"><span class="inner">お問い合わせはこちら</span></a>
         <a href="<?= get_my_home_url("/service-support/contact-quotation") ?>" class="link quotation"><span class="inner">お見積り依頼はこちら</span></a>
-        <a href="<?= get_my_home_url("/service-support/catalog") ?>" class="link catalog-a"><span class="inner">WEBカタログはこちら</span></a>
+        <a href="<?= get_my_home_url("/service-support/catalog") ?>" class="link catalog-a"><span class="inner">WEBカタログ・ダウンロードはこちら</span></a>
       </div>
     </div>
   </section>
