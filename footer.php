@@ -16,9 +16,9 @@
         <div class="_logo"><a href="<?php echo esc_url(home_url('/')); ?>"><img src="/wp-content/uploads/2025/03/footer_logo.png"></a></div>
         <div class="_sns">
           <ul>
-            <li><a href="#"><img src="/wp-content/uploads/2025/03/YouTube-icon@2x.png"></a></li>
-            <li><a href="#"><img src="/wp-content/uploads/2025/03/X-logo@2x.png"></a></li>
-            <li><a href="#"><img src="/wp-content/uploads/2025/03/Instagram_Glyph_Black@2x.png"></a></li>
+            <li><a href="https://www.youtube.com/@hanwhajapan_pv" rel="nofollow noopener" target="_blank"><img src="/wp-content/uploads/2025/03/YouTube-icon@2x.png"></a></li>
+            <li><a href="https://x.com/hanwhajapan_pv" rel="nofollow noopener" target="_blank"><img src="/wp-content/uploads/2025/03/X-logo@2x.png"></a></li>
+            <li><a href="https://www.instagram.com/hanwhajapan_pv" rel="nofollow noopener" target="_blank"><img src="/wp-content/uploads/2025/03/Instagram_Glyph_Black@2x.png"></a></li>
           </ul>
         </div>
 
@@ -77,8 +77,8 @@
     <div class="wrap_s">
       <div class="_left-contents">
         <ul>
-          <li><a href="#">プライバシーポリシー</a></li>
-          <li><a href="#">SNSガイドライン</a></li>
+          <li><a href="https://www.q-cells.jp/qcells/policy" rel="nofollow noopener" target="_blank">プライバシーポリシー</a></li>
+          <li><a href="https://www.q-cells.jp/qcells/sns_guideline" rel="nofollow noopener" target="_blank">SNSガイドライン</a></li>
         </ul>
       </div>
 
