@@ -30,30 +30,75 @@
   transform: translateX(-50%);
   z-index: 10;
   margin: 0;
-  width: fit-content;
-  height: fit-content;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  width: 94%;
 }
 @media screen and (max-width: 768px) {
   .main-mv .btn-box {
     bottom: 20dvh;
+    gap: 15px;
   }
 }
-.main-mv .btn-box .btn {
+.main-mv .btn-box .mv-btn {
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 10px;
+  overflow: hidden;
   margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 140px;
+  padding: 0 0 14px;
+  display: grid;
+  gap: 10px;
+  place-content: center;
+  max-width: 226px;
+  background-color: rgba(255, 255, 255, 0.9019607843);
+  height: auto;
+  font-size: 14px;
+  color: #666666;
+  font-weight: 700;
 }
-.main-mv .btn-box .btn:hover {
-  color: white;
+@media screen and (max-width: 768px) {
+  .main-mv .btn-box .mv-btn {
+    gap: 5px;
+  }
+}
+.main-mv .btn-box .mv-btn:hover {
+  background-color: #FFFFFF;
   opacity: 1;
 }
-.main-mv .btn-box .btn:hover::after {
-  background-color: #F18F52;
+.main-mv .btn-box .mv-btn:hover .btn-txt::after {
+  right: 17px;
+}
+.main-mv .btn-box .mv-btn .btn-txt {
+  font-size: 14px;
+  color: #666666;
+  font-weight: 700;
+  line-height: initial;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .main-mv .btn-box .mv-btn .btn-txt {
+    font-size: 12px;
+  }
+}
+.main-mv .btn-box .mv-btn .btn-txt::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  bottom: 6px;
+  width: 9px;
+  height: 9px;
+  border-right: 1px solid #666666;
+  border-top: 1px solid #666666;
+  transform: rotate(45deg);
+  transition: all 0.2s;
+}
+@media screen and (max-width: 768px) {
+  .main-mv .btn-box .mv-btn .btn-txt::after {
+    bottom: 5px;
+    width: 7px;
+    height: 7px;
+  }
 }
 .main-mv .scroll_text {
   font-family: "Figtree";

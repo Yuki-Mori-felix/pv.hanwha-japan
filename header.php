@@ -15,65 +15,65 @@
   <?php if (is_front_page() || is_home() ) : ?>
     <!-- <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/add.css'> -->
   <?php elseif (is_page('interview') || is_singular('voice')) : ?>
-    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/voice.css'>
-    <script src="<?= get_stylesheet_directory_uri() ?>/js/voice.js"></script>
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/voice.css<?=get_last_modified("voice.css", "css")?>'>
+    <script src="<?= get_stylesheet_directory_uri() ?>/js/voice.js<?=get_last_modified("voice.js", "js")?>"></script>
 		<?php if(is_singular()): ?>
-			<script src="<?= get_stylesheet_directory_uri() ?>/js/single-voice.js"></script>
+			<script src="<?= get_stylesheet_directory_uri() ?>/js/single-voice.js<?=get_last_modified("single-voice.js", "js")?>"></script>
 		<?php endif; ?>
   <?php elseif (is_page('voice')): ?>
     <!-- splide -->
     <link href="<?= get_stylesheet_directory_uri() ?>/css/splide.min.css" rel="stylesheet">
     <script src="<?= get_stylesheet_directory_uri() ?>/js/splide.min.js"></script>
     <!-- //splide -->
-    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/voice-top.css'>
-    <script src="<?= get_stylesheet_directory_uri() ?>/js/voice-top.js"></script>
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/voice-top.css<?=get_last_modified("voice-top.css", "css")?>'>
+    <script src="<?= get_stylesheet_directory_uri() ?>/js/voice-top.js<?=get_last_modified("voice-top.js", "js")?>"></script>
   <?php elseif (is_page('pv')) : ?>
-    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/pv.css'>
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/pv.css<?=get_last_modified("pv.css", "css")?>'>
   <?php elseif (is_page('about')) : ?>
     <link rel="stylesheet" href="<?= get_stylesheet_directory_uri() ?>/css/odometer-theme-default.css">
     <script src="<?= get_stylesheet_directory_uri() ?>/js//odometer.min.js"></script>
-    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/about.css'>
-    <script src="<?= get_stylesheet_directory_uri() ?>/js/about.js"></script>
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/about.css<?=get_last_modified("about.css", "css")?>'>
+    <script src="<?= get_stylesheet_directory_uri() ?>/js/about.js<?=get_last_modified("about.js", "js")?>"></script>
   <?php elseif (is_page('green-energy')) : ?>
-    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/green-energy.css'>
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/green-energy.css<?=get_last_modified("green-energy.css", "css")?>'>
   <?php elseif (is_page('sustainability')) : ?>
-    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/sustainability.css'>
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/sustainability.css<?=get_last_modified("sustainability.css", "css")?>'>
   <?php elseif (is_page('location-details') || is_page('achievement-details') || is_page('award-details') || is_page('support-details') || is_page('technology-details') || is_page('transition-details') ) : ?>
-    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/under-pv.css'>
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/under-pv.css<?=get_last_modified("under-pv.css", "css")?>'>
   <?php elseif (is_page('ess-hems')) : ?>
-    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/storage-system-hems.css'>
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/storage-system-hems.css<?=get_last_modified("storage-system-hems.css", "css")?>'>
   <?php elseif (is_page('product-list')) : ?>
-    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/product-list.css'>
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/product-list.css<?=get_last_modified("product-list.css", "css")?>'>
   <?php elseif (is_singular('product')) : ?>
     <!-- splide -->
     <link href="<?= get_stylesheet_directory_uri() ?>/css/splide.min.css" rel="stylesheet">
     <script src="<?= get_stylesheet_directory_uri() ?>/js/splide.min.js"></script>
     <!-- //splide -->
-    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/single-product.css'>
-    <script src="<?= get_stylesheet_directory_uri() ?>/js/single-product.js"></script>
-    <script src="<?= get_stylesheet_directory_uri() ?>/js/compare-single-product.js"></script>
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/single-product.css<?=get_last_modified("single-product.css", "css")?>'>
+    <script src="<?= get_stylesheet_directory_uri() ?>/js/single-product.js<?=get_last_modified("single-product.js", "js")?>"></script>
+    <script src="<?= get_stylesheet_directory_uri() ?>/js/compare-single-product.js<?=get_last_modified("compare-single-product.js", "js")?>"></script>
   <?php elseif (is_page('re-rise') || is_page('q-cells') || is_page('hems') || is_page('storage-system') || is_page('power-conditioner') ||is_page('bracket') ||is_page('v2h')) : ?>
-    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/single-product.css'>
-    <link rel='stylesheet' href='<?=get_stylesheet_directory_uri()?>/css/product-cat.css'>
-    <script src="<?=get_stylesheet_directory_uri()?>/js/product-cat.js"></script>
-    <script src="<?= get_stylesheet_directory_uri(); ?>/js/sort-product-cat.js"></script>
-    <script src="<?= get_stylesheet_directory_uri() ?>/js/compare-page-product.js"></script>
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/single-product.css<?=get_last_modified("single-product.css", "css")?>'>
+    <link rel='stylesheet' href='<?=get_stylesheet_directory_uri()?>/css/product-cat.css<?=get_last_modified("product-cat.css", "css")?>'>
+    <script src="<?=get_stylesheet_directory_uri()?>/js/product-cat.js<?=get_last_modified("product-cat.js", "js")?>"></script>
+    <script src="<?= get_stylesheet_directory_uri(); ?>/js/sort-product-cat.js<?=get_last_modified("sort-product-cat.js", "js")?>"></script>
+    <script src="<?= get_stylesheet_directory_uri() ?>/js/compare-page-product.js<?=get_last_modified("compare-page-product.js", "js")?>"></script>
   <?php elseif (is_page('contact') || is_page('contact-quotation') || is_page('contact-catalog') || is_page('catalog') || is_page('confirm') || is_page('complete')) : ?>
-    <link rel='stylesheet' href='<?=get_stylesheet_directory_uri()?>/css/contact.css'>
+    <link rel='stylesheet' href='<?=get_stylesheet_directory_uri()?>/css/contact.css<?=get_last_modified("contact.css", "css")?>'>
     <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
-    <script src="<?=get_stylesheet_directory_uri()?>/js/contact.js"></script>
+    <script src="<?=get_stylesheet_directory_uri()?>/js/contact.js<?=get_last_modified("contact.js", "js")?>"></script>
   <?php elseif (is_page('faq')) : ?>
-    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/faq.css'>
-    <script src="<?= get_stylesheet_directory_uri() ?>/js/faq.js"></script>
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/faq.css<?=get_last_modified("faq.css", "css")?>'>
+    <script src="<?= get_stylesheet_directory_uri() ?>/js/faq.js<?=get_last_modified("faq.js", "js")?>"></script>
   <?php elseif (is_page('after-follow')) : ?>
-    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/after-follow.css'>
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/after-follow.css<?=get_last_modified("after-follow.css", "css")?>'>
   <?php elseif (is_post_type_archive('news') || is_singular('news')) : ?>
-    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/news.css'>
-    <script src="<?= get_stylesheet_directory_uri() ?>/js/news.js"></script>
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/news.css<?=get_last_modified("news.css", "css")?>'>
+    <script src="<?= get_stylesheet_directory_uri() ?>/js/news.js<?=get_last_modified("news.js", "js")?>"></script>
   <?php elseif (is_page('blog') || is_singular('blog-post')) : ?>
-    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/side-menu.css'>
-    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/blog.css'>
-    <script src="<?=get_stylesheet_directory_uri()?>/js/blog.js"></script>
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/side-menu.css<?=get_last_modified("side-menu.css", "css")?>'>
+    <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/blog.css<?=get_last_modified("blog.css", "css")?>'>
+    <script src="<?=get_stylesheet_directory_uri()?>/js/blog.js<?=get_last_modified("blog.js", "js")?>"></script>
   <?php endif; ?>
   <!--style.css-->
 
@@ -129,7 +129,14 @@
 
       <!--buttom-->
       <div class="btn-box _mv_link_bt">
-        <a href="" class="btn">製品はこちら</a>
+        <a href="<?=get_my_home_url("/product-list/re-rise")?>" class="mv-btn">
+          <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/07/Top_FV_ReRISE_Logo.png" alt="">
+          <span class="btn-txt">製品はこちら</span>
+        </a>
+        <a href="<?=get_my_home_url("/product-list/q-cells")?>" class="mv-btn">
+          <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/07/Top_FV_Qcells_Logo.png" alt="">
+          <span class="btn-txt">製品はこちら</span>
+        </a>
       </div>
 
       <?php echo do_shortcode('[smartslider3 slider="1"]'); ?>
