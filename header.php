@@ -107,8 +107,7 @@
 		
     <?php if (has_nav_menu('top')) : ?>
       <div class="nav-menu-top">
-				<a href="<?php echo esc_url(home_url('/')); ?>" class="nmt-logo"><img src="/wp-content/uploads/2025/03/logo.png" alt="ハンファジャパン"></a>
-				<!-- <a href="<?php echo esc_url(home_url('/')); ?>" class="nmt-logo"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/07/navi_brand_Logo.png" alt="ハンファジャパン"></a> -->
+				<a href="<?php echo esc_url(home_url('/')); ?>" class="nmt-logo"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/07/navi_brand_Logo.png" alt="ハンファジャパン"></a>
         <div class="nmt-wrap">
           <?php get_template_part('template-parts/navigation/navigation', 'top'); ?>
         </div><!-- .wrap -->

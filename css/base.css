@@ -2204,22 +2204,38 @@ header#masthead .nav-menu-top .nmt-logo {
   z-index: 2;
   display: block;
   height: 100%;
-  padding: 12px 30px;
 }
-@media screen and (max-width: 1054px) {
-  header#masthead .nav-menu-top .nmt-logo {
-    padding: 7px 15px;
-  }
+header#masthead .nav-menu-top .nmt-logo:hover {
+  opacity: 1;
+}
+header#masthead .nav-menu-top .nmt-logo:hover::before {
+  transform: scale(1, 1);
+}
+header#masthead .nav-menu-top .nmt-logo::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: 0.3s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: 1;
 }
 header#masthead .nav-menu-top .nmt-logo img {
   height: 100%;
+  position: relative;
+  z-index: 10;
 }
 header#masthead .menu-scroll-down {
   display: none;
 }
 header#masthead #mega-menu-wrap-top #mega-menu-top > li.mega-menu-item > a.mega-menu-link {
   line-height: 50px;
-  font-size: clamp(0.9375rem, 0.4796rem + 0.6944vw, 1rem);
+  font-size: clamp(0.875rem, -0.0345rem + 1.3793vw, 1rem);
 }
 @media screen and (max-width: 1054px) {
   header#masthead #mega-menu-wrap-top #mega-menu-top > li.mega-menu-item > a.mega-menu-link {
