@@ -25,7 +25,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         <div class="img"><img src="<?=$img_path?>/tax-prod-cat/share-no1.png" alt=""></div>
         <div class="img"><img src="<?=$img_path?>/tax-prod-cat/top-share.png" alt=""></div>
       </div>
-      <div class="prod-img"><img src="<?=$img_path?>/tax-prod-cat/pi-qcells.png" alt=""></div>
+      <div class="prod-img"><img src="<?=get_field('top_product_img')['url'];?>" alt=""></div>
     </div>
   </section>
   <!-- // TOP -->

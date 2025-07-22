@@ -21,7 +21,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
   </div>
   <section class="top">
     <div class="container">
-      <div class="prod-img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/V2H_Lineup_FV.png" alt=""></div>
+      <div class="prod-img"><img src="<?=get_field('top_product_img')['url'];?>" alt=""></div>
     </div>
   </section>
   <!-- // TOP -->
