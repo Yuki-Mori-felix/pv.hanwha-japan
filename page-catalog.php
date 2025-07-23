@@ -62,7 +62,7 @@ get_header();
       </ul>
       <div class="cat-note">
         <p class="txt txt-bol">
-          ※各種資料ダウンロードは<a href="" class="link">Q.PARTNERS</a>ページにてダウンロードできます。お探しの資料がない場合は、お問い合わせを通じてご申請ください。
+          ※各種資料ダウンロードは<a href="https://q-partners.q-cells.jp/?_gl=1*db2q4w*_gcl_aw*R0NMLjE3NTAxMzg4ODQuRUFJYUlRb2JDaE1JdjVtS3VxYmpqUU1WRjhvV0JSM2huaG0wRUFBWUFTQUFFZ0tpQ19EX0J3RQ..*_gcl_au*OTE2MzgwNDQyLjE3NDUxOTQyNTc." class="link" rel="nofollow noopener" target="_blank">Q.PARTNERS</a>ページにてダウンロードできます。お探しの資料がない場合は、お問い合わせを通じてご申請ください。
         </p>
         <p class="txt">
           いただきましたお問い合わせは、確認後、担当者より連絡いたします。<br>
