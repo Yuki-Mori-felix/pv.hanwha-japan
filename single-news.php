@@ -22,7 +22,7 @@ require get_stylesheet_directory() . '/include/my_variables.php';
         <li><a href="#"><img src="<?= $img_path; ?>/side-menu/link_icon.png" alt=""></a></li>
       </ul>
       <div class="top-img"><?php the_post_thumbnail('full'); ?></div>
-      <div class="detail"><?= get_field('contents', false, false) ?></div>
+      <div class="detail"><?= the_content(); ?></div>
       <a class="btn" href="<?= home_url(); ?>/news/">一覧に戻る</a>
     </div>
   </section>
