@@ -554,39 +554,6 @@ main.contact {
     }
   }
   // SEC_FORM
-  > .info {
-    padding: 40px 0;
-    background-image: url(../images/blog/Repair\ Announcement\ bg.webp);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    > .container {
-      > .ctt {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
-        @include max {
-          gap: 30px;
-        }
-        > .img {
-          width: 32px;
-        }
-        > .detail {
-          > .head {
-            font-size: 16px;
-            font-weight: var(--fw-bold);
-          }
-          > .txt {
-            margin-top: 10px;
-            font-size: 12px;
-            line-height: 2;
-          }
-        }
-      }
-    }
-  }
-  // INFO
 }
 // フォーム関連　共通
 
