@@ -852,6 +852,63 @@ main.single-products section.warranty .wrapper > .warranty_list > .item .note {
   margin-top: 40px;
   font-size: 10px;
 }
+main.single-products section.simulator {
+  padding-bottom: 100px;
+}
+main.single-products section.simulator .wrapper .simulator-content {
+  max-width: 656px;
+  width: 100%;
+  margin: 80px auto 0;
+  display: grid;
+  grid-template-columns: 21.3% 73.7%;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "img txt" "img link";
+  gap: 40px 4.8%;
+}
+@media screen and (max-width: 768px) {
+  main.single-products section.simulator .wrapper .simulator-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "img" "txt" "link";
+  }
+}
+main.single-products section.simulator .wrapper .simulator-content .img {
+  grid-area: img;
+}
+@media screen and (max-width: 768px) {
+  main.single-products section.simulator .wrapper .simulator-content .img {
+    max-width: 140px;
+    width: 100%;
+    margin: auto;
+  }
+}
+main.single-products section.simulator .wrapper .simulator-content .txt {
+  grid-area: txt;
+  font-size: 20px;
+  font-weight: var(--fw-med);
+}
+@media screen and (max-width: 768px) {
+  main.single-products section.simulator .wrapper .simulator-content .txt {
+    font-size: 18px;
+  }
+}
+main.single-products section.simulator .wrapper .simulator-content .simulator-link {
+  grid-area: link;
+  max-width: 310px;
+  width: 100%;
+  padding: 18px 10px;
+  background-color: var(--col-navy);
+  box-shadow: rgba(0, 0, 0, 0.3019607843) 0px 3px 6px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: var(--fw-bold);
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  main.single-products section.simulator .wrapper .simulator-content .simulator-link {
+    margin: auto;
+  }
+}
 main.single-products section.guide {
   padding: 80px 0;
   background-color: #f5f5f5;

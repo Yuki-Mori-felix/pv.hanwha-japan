@@ -180,6 +180,9 @@ $img_path = get_stylesheet_directory_uri() . "/images";
       <?= the_field('sec_warranty', false, false) ?>
       <!-- //warranty -->
 
+      <?= the_field('sec_simulator', false, false) ?>
+      <!-- //simulator -->
+
       <?= the_field('sec_guide', false, false); ?>
       <!-- //guide -->
 
