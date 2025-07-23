@@ -114,9 +114,9 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         <div class="row row-t">
           <div class="heading">
             <div class="imgc">
-              <img src="<?= $img_path ?>/single-product/compare_icon_1.svg" alt="">
+              <img src="<?= $img_path ?>/single-product/comparison_icon_Data_communication_method.svg" alt="">
             </div>
-            <p class="txt">公称最大出力<span class="sm">（+5W / -0W）</span></p>
+            <p class="txt">データ通信方式</p>
           </div>
           <div class="product">
             <div class="item">
@@ -130,9 +130,9 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         <div class="row row-t">
           <div class="heading">
             <div class="imgc">
-              <img src="<?= $img_path ?>/single-product/compare_icon_2.svg" alt="">
+              <img src="<?= $img_path ?>/single-product/comparison_icon_size.svg" alt="">
             </div>
-            <p class="txt">最大変換効率</p>
+            <p class="txt">寸法（高さx横x奥行）</p>
           </div>
           <div class="product">
             <div class="item">
@@ -146,48 +146,48 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         <div class="row row-t">
           <div class="heading">
             <div class="imgc">
-              <img src="<?= $img_path ?>/single-product/compare_icon_3.svg" alt="">
+              <img src="<?= $img_path ?>/single-product/comparison_icon_Compatible appliances.svg" alt="">
             </div>
-            <p class="txt">外形寸法<span class="sm">（横×高さ×奥行）</span></p>
+            <p class="txt">対応家電</p>
           </div>
           <div class="product">
             <div class="item">
-              <p class="data-txt" id="product-detail-3"><?= wp_kses_post(get_field('product_detail_3')); ?></p>
+              <p class="data-txt" id="product-detail-6"><?= wp_kses_post(get_field('product_detail_6')); ?></p>
             </div>
             <div class="item">
-              <p class="data-txt" id="compare-product-detail-3"><?= wp_kses_post(get_field('product_detail_3', $default_compare_post_id)); ?></p>
+              <p class="data-txt" id="compare-product-detail-6"><?= wp_kses_post(get_field('product_detail_6', $default_compare_post_id)); ?></p>
             </div>
           </div>
         </div>
         <div class="row row-t">
           <div class="heading">
             <div class="imgc">
-              <img src="<?= $img_path ?>/single-product/compare_icon_4.svg" alt="">
+              <img src="<?= $img_path ?>/single-product/comparison_icon_Installation_Method.svg" alt="">
             </div>
-            <p class="txt">保証</p>
+            <p class="txt">設置方式</p>
           </div>
           <div class="product">
             <div class="item">
-              <p class="data-txt" id="product-detail-15"><?= wp_kses_post(get_field('product_detail_15')); ?></p>
+              <p class="data-txt" id="product-detail-8"><?= wp_kses_post(get_field('product_detail_8')); ?></p>
             </div>
             <div class="item">
-              <p class="data-txt" id="compare-product-detail-15"><?= wp_kses_post(get_field('product_detail_15', $default_compare_post_id)); ?></p>
+              <p class="data-txt" id="compare-product-detail-8"><?= wp_kses_post(get_field('product_detail_8', $default_compare_post_id)); ?></p>
             </div>
           </div>
         </div>
         <div class="row row-t">
           <div class="heading">
             <div class="imgc">
-              <img src="<?= $img_path ?>/single-product/compare_icon_5.svg" alt="">
+              <img src="<?= $img_path ?>/single-product/comparison_icon_Operation_check.svg" alt="">
             </div>
-            <p class="txt">メーカー希望小売価格<span class="sm">（税込）</span></p>
+            <p class="txt">作動確認</span></p>
           </div>
           <div class="product">
             <div class="item">
-              <p class="data-txt" id="product-detail-14"><?= wp_kses_post(get_field('product_detail_14')); ?></p>
+              <p class="data-txt" id="product-detail-10"><?= wp_kses_post(get_field('product_detail_10')); ?></p>
             </div>
             <div class="item">
-              <p class="data-txt" id="compare-product-detail-14"><?= wp_kses_post(get_field('product_detail_14', $default_compare_post_id)); ?></p>
+              <p class="data-txt" id="compare-product-detail-10"><?= wp_kses_post(get_field('product_detail_10', $default_compare_post_id)); ?></p>
             </div>
           </div>
         </div>
@@ -197,59 +197,20 @@ $img_path = get_stylesheet_directory_uri() . "/images";
           <div class="table">
             <div class="row row-acc">
               <div class="heading">
-                <p class="txt-acc">公称短絡電流（Isc）</p>
+                <p class="txt-acc">型名</p>
               </div>
               <div class="product">
                 <div class="item">
-                  <p class="data-txt" id="product-detail-5"><?= wp_kses_post(get_field('product_detail_5')); ?></p>
+                  <p class="data-txt" id="product-detail-3"><?= wp_kses_post(get_field('product_detail_3')); ?></p>
                 </div>
                 <div class="item">
-                  <p class="data-txt" id="compare-product-detail-5"><?= wp_kses_post(get_field('product_detail_5', $default_compare_post_id)); ?></p>
+                  <p class="data-txt" id="compare-product-detail-3"><?= wp_kses_post(get_field('product_detail_3', $default_compare_post_id)); ?></p>
                 </div>
               </div>
             </div>
             <div class="row row-acc">
               <div class="heading">
-                <p class="txt-acc">公称開放電圧（Voc）</p>
-              </div>
-              <div class="product">
-                <div class="item">
-                  <p class="data-txt" id="product-detail-6"><?= wp_kses_post(get_field('product_detail_6')); ?></p>
-                </div>
-                <div class="item">
-                  <p class="data-txt" id="compare-product-detail-6"><?= wp_kses_post(get_field('product_detail_6', $default_compare_post_id)); ?></p>
-                </div>
-              </div>
-            </div>
-            <div class="row row-acc">
-              <div class="heading">
-                <p class="txt-acc">公称最大出力動作電流（Imp）</p>
-              </div>
-              <div class="product">
-                <div class="item">
-                  <p class="data-txt" id="product-detail-7"><?= wp_kses_post(get_field('product_detail_7')); ?></p>
-                </div>
-                <div class="item">
-                  <p class="data-txt" id="compare-product-detail-7"><?= wp_kses_post(get_field('product_detail_7', $default_compare_post_id)); ?></p>
-                </div>
-              </div>
-            </div>
-            <div class="row row-acc">
-              <div class="heading">
-                <p class="txt-acc">公称最大出力動作電圧（Vmp）</p>
-              </div>
-              <div class="product">
-                <div class="item">
-                  <p class="data-txt" id="product-detail-8"><?= wp_kses_post(get_field('product_detail_8')); ?></p>
-                </div>
-                <div class="item">
-                  <p class="data-txt" id="compare-product-detail-8"><?= wp_kses_post(get_field('product_detail_8', $default_compare_post_id)); ?></p>
-                </div>
-              </div>
-            </div>
-            <div class="row row-acc">
-              <div class="heading">
-                <p class="txt-acc">質量</p>
+                <p class="txt-acc">重量</p>
               </div>
               <div class="product">
                 <div class="item">
@@ -262,33 +223,33 @@ $img_path = get_stylesheet_directory_uri() . "/images";
             </div>
             <div class="row row-acc">
               <div class="heading">
-                <p class="txt-acc">フレーム材料</p>
+                <p class="txt-acc">携帯</p>
               </div>
               <div class="product">
                 <div class="item">
-                  <p class="data-txt" id="product-detail-9"><?= wp_kses_post(get_field('product_detail_9')); ?></p>
+                  <p class="data-txt" id="product-detail-5"><?= wp_kses_post(get_field('product_detail_5')); ?></p>
                 </div>
                 <div class="item">
-                  <p class="data-txt" id="compare-product-detail-9"><?= wp_kses_post(get_field('product_detail_9', $default_compare_post_id)); ?></p>
+                  <p class="data-txt" id="compare-product-detail-5"><?= wp_kses_post(get_field('product_detail_5', $default_compare_post_id)); ?></p>
                 </div>
               </div>
             </div>
             <div class="row row-acc">
               <div class="heading">
-                <p class="txt-acc">セル</p>
+                <p class="txt-acc">電源</p>
               </div>
               <div class="product">
                 <div class="item">
-                  <p class="data-txt" id="product-detail-10"><?= wp_kses_post(get_field('product_detail_10')); ?></p>
+                  <p class="data-txt" id="product-detail-7"><?= wp_kses_post(get_field('product_detail_7')); ?></p>
                 </div>
                 <div class="item">
-                  <p class="data-txt" id="compare-product-detail-10"><?= wp_kses_post(get_field('product_detail_10', $default_compare_post_id)); ?></p>
+                  <p class="data-txt" id="compare-product-detail-7"><?= wp_kses_post(get_field('product_detail_7', $default_compare_post_id)); ?></p>
                 </div>
               </div>
             </div>
             <div class="row row-acc">
               <div class="heading">
-                <p class="txt-acc">防汚テック防汚仕様</p>
+                <p class="txt-acc">使用周囲温度</p>
               </div>
               <div class="product">
                 <div class="item">
@@ -301,7 +262,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
             </div>
             <div class="row row-acc">
               <div class="heading">
-                <p class="txt-acc">最大システム電圧（Vsys）</p>
+                <p class="txt-acc">保存温度</p>
               </div>
               <div class="product">
                 <div class="item">
@@ -314,7 +275,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
             </div>
             <div class="row row-acc">
               <div class="heading">
-                <p class="txt-acc">最大圧風荷重 / 最大表面荷重</p>
+                <p class="txt-acc">保存湿度</p>
               </div>
               <div class="product">
                 <div class="item">
@@ -325,7 +286,73 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                 </div>
               </div>
             </div>
+            <div class="row row-acc">
+              <div class="heading">
+                <p class="txt-acc">I/O ポート</p>
+              </div>
+              <div class="product">
+                <div class="item">
+                  <p class="data-txt" id="product-detail-14"><?= wp_kses_post(get_field('product_detail_14')); ?></p>
+                </div>
+                <div class="item">
+                  <p class="data-txt" id="compare-product-detail-14"><?= wp_kses_post(get_field('product_detail_14', $default_compare_post_id)); ?></p>
+                </div>
+              </div>
+            </div>
+            <div class="row row-acc">
+              <div class="heading">
+                <p class="txt-acc">最大消費電力</p>
+              </div>
+              <div class="product">
+                <div class="item">
+                  <p class="data-txt" id="product-detail-15"><?= wp_kses_post(get_field('product_detail_15')); ?></p>
+                </div>
+                <div class="item">
+                  <p class="data-txt" id="compare-product-detail-15"><?= wp_kses_post(get_field('product_detail_15', $default_compare_post_id)); ?></p>
+                </div>
+              </div>
+            </div>
+            <div class="row row-acc">
+              <div class="heading">
+                <p class="txt-acc">ACアダプタ<span class="sm">※ｺﾝｾﾝﾄﾌﾟﾗｸﾞ方向</span></p>
+              </div>
+              <div class="product">
+                <div class="item">
+                  <p class="data-txt" id="product-detail-16"><?= wp_kses_post(get_field('product_detail_16')); ?></p>
+                </div>
+                <div class="item">
+                  <p class="data-txt" id="compare-product-detail-16"><?= wp_kses_post(get_field('product_detail_16', $default_compare_post_id)); ?></p>
+                </div>
+              </div>
+            </div>
+            <div class="row row-acc">
+              <div class="heading">
+                <p class="txt-acc">認証</p>
+              </div>
+              <div class="product">
+                <div class="item">
+                  <p class="data-txt" id="product-detail-17"><?= wp_kses_post(get_field('product_detail_17')); ?></p>
+                </div>
+                <div class="item">
+                  <p class="data-txt" id="compare-product-detail-17"><?= wp_kses_post(get_field('product_detail_17', $default_compare_post_id)); ?></p>
+                </div>
+              </div>
+            </div>
+            <div class="row row-acc">
+              <div class="heading">
+                <p class="txt-acc">メーカー希望小売価格（税込）</p>
+              </div>
+              <div class="product">
+                <div class="item">
+                  <p class="data-txt" id="product-detail-9"><?= wp_kses_post(get_field('product_detail_9')); ?></p>
+                </div>
+                <div class="item">
+                  <p class="data-txt" id="compare-product-detail-9"><?= wp_kses_post(get_field('product_detail_9', $default_compare_post_id)); ?></p>
+                </div>
+              </div>
+            </div>
           </div>
+          <p class="acc-note">※100V/200Vで使用できる電力が異なります。</p>
         </div>
         <div class="accordion-btn">
           <p class="txt">すべての仕様を比較</p>
