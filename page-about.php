@@ -35,7 +35,7 @@ require get_stylesheet_directory() . '/include/my_variables.php';
   <div class="button-area">
     <?php if (get_field('url_1')): ?>
       <p>ハンファジャパンについてもっと知りたい方</p>
-      <a href="<?= get_field('url_1'); ?>" class="btn">詳しくはこちら</a>
+      <a href="<?= get_field('url_1'); ?>" class="btn" target="_blank" rel="noopener noreferrer">詳しくはこちら</a>
     <?php endif; ?>
   </div>
 
@@ -49,7 +49,7 @@ require get_stylesheet_directory() . '/include/my_variables.php';
   <div class="button-area">
     <?php if (get_field('url_2')): ?>
       <p>ハンファについてもっと知りたい方</p>
-      <a href="<?= get_field('url_2'); ?>" class="btn">詳しくはこちら</a>
+      <a href="<?= get_field('url_2'); ?>" class="btn" target="_blank" rel="noopener noreferrer">詳しくはこちら</a>
     <?php endif; ?>
   </div>
 
