@@ -206,7 +206,7 @@ get_header();
     </div>
   </section>
   <!-- // SYSTEM -->
-  <section class="info">
+  <section class="common-info">
     <div class="container">
       <div class="ctt customer">
         <div class="img"><img src="<?=get_img_path()?>/contact/icon-customer.svg" alt=""></div>

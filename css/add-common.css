@@ -109,6 +109,8 @@ html .wrap_s:has(#breadcrumb) {
   margin: auto;
   max-width: 1000px;
   margin-block: 40px 65px;
+  position: relative;
+  z-index: 10;
 }
 #breadcrumb ul {
   text-align: left;
@@ -718,4 +720,35 @@ main.search > .wrap_s .error-results .error-txt {
   .none-min-500 {
     display: none;
   }
+}
+
+.common-info {
+  padding: 40px 0;
+  background-image: url(../images/blog/Repair\ Announcement\ bg.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.common-info > .container > .ctt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+@media screen and (max-width: 768px) {
+  .common-info > .container > .ctt {
+    gap: 30px;
+  }
+}
+.common-info > .container > .ctt > .img {
+  width: 32px;
+}
+.common-info > .container > .ctt > .detail > .head {
+  font-size: 16px;
+  font-weight: var(--fw-bold);
+}
+.common-info > .container > .ctt > .detail > .txt {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 2;
 }/*# sourceMappingURL=add-common.css.map */

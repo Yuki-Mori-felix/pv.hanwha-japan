@@ -18,7 +18,7 @@ $form_id = is_public_server() ? "058f6ed" : "4061147"; // cf7のフォームid
     <?php echo do_shortcode('[contact-form-7 id="' . $form_id . '" title="カタログ請求内容確認" html_class="h-adr form"]');?>
   </section>
   <!-- // SEC_FORM -->
-  <section class="info">
+  <section class="common-info">
     <div class="container">
       <div class="ctt customer">
         <div class="img"><img src="<?=get_img_path()?>/contact/icon-customer.svg" alt=""></div>

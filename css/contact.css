@@ -542,36 +542,6 @@ main.contact > .sec-form .form .wpcf7-not-valid-tip {
 main.contact > .sec-form .form .wpcf7-list-item {
   margin-left: initial;
 }
-main.contact > .info {
-  padding: 40px 0;
-  background-image: url(../images/blog/Repair\ Announcement\ bg.webp);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-main.contact > .info > .container > .ctt {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-}
-@media screen and (max-width: 768px) {
-  main.contact > .info > .container > .ctt {
-    gap: 30px;
-  }
-}
-main.contact > .info > .container > .ctt > .img {
-  width: 32px;
-}
-main.contact > .info > .container > .ctt > .detail > .head {
-  font-size: 16px;
-  font-weight: var(--fw-bold);
-}
-main.contact > .info > .container > .ctt > .detail > .txt {
-  margin-top: 10px;
-  font-size: 12px;
-  line-height: 2;
-}
 
 main.contact.quotation > .sec-form > .container > .links {
   margin-top: 80px;

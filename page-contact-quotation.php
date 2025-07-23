@@ -33,7 +33,7 @@ $form_id = is_public_server() ? "fc48203" : "722591f"; // cf7のフォームid
     </div>
   </section>
   <!-- // SEC_FORM -->
-  <section class="info">
+  <section class="common-info">
     <div class="container">
       <div class="ctt customer">
         <div class="img"><img src="<?=get_img_path()?>/contact/icon-customer.svg" alt=""></div>
