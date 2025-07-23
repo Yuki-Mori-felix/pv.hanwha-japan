@@ -77,7 +77,7 @@
     <div class="wrap_s">
       <div class="_left-contents">
         <ul>
-          <li><a href="https://www.q-cells.jp/qcells/policy" rel="nofollow noopener" target="_blank">プライバシーポリシー</a></li>
+          <li><a href="https://www.hanwha-japan.com/privacy-policy/" rel="nofollow noopener" target="_blank">プライバシーポリシー</a></li>
           <li><a href="https://www.q-cells.jp/qcells/sns_guideline" rel="nofollow noopener" target="_blank">SNSガイドライン</a></li>
         </ul>
       </div>
