@@ -24,20 +24,9 @@ $form_id = is_public_server() ? "6c9f023" : "2fb4fe9"; // cf7のフォームid
       <div class="ctt customer">
         <div class="img"><img src="<?=get_img_path()?>/contact/icon-customer.svg" alt=""></div>
         <div class="detail">
-          <p class="head">お客さまご相談センター</p>
+          <p class="head">お問い合わせはこちらまで</p>
           <p class="txt">
-            電話番号 0120-322-001<br>
-            受付時間 09：00～17：00<br class="none-min-ml">（12：00～13：00を除く）<br>
-            ※土日・祝日および年末年始を除く
-          </p>
-        </div>
-      </div>
-      <div class="ctt repair">
-        <div class="img"><img src="<?=get_img_path()?>/contact/icon-repair.svg" alt=""></div>
-        <div class="detail">
-          <p class="head">修理のご用命</p>
-          <p class="txt">
-            電話番号 0120-801-170<br>
+            番号 0120-322-001<br>
             受付時間 09：00～17：00<br class="none-min-ml">（12：00～13：00を除く）<br>
             ※土日・祝日および年末年始を除く
           </p>
