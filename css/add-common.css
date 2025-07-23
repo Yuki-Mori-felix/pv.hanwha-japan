@@ -751,4 +751,6 @@ main.search > .wrap_s .error-results .error-txt {
   margin-top: 10px;
   font-size: 12px;
   line-height: 2;
+  text-align: left;
+  padding: 0;
 }/*# sourceMappingURL=add-common.css.map */
