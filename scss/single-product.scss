@@ -450,9 +450,14 @@ main.single-products {
             display: flex;
             align-items: center;
             justify-content: center;
+						flex-direction: column;
 						@include max {
 							padding: 12px;
 							flex: 0 0 fit-content;
+						}
+						.tag-item-small {
+							font-size: 10px;
+							margin-top: 5px;
 						}
 					}
 				}
