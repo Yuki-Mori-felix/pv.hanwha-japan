@@ -24,6 +24,9 @@
 .sustainability .btn:hover::after {
   background: #3d7abb;
 }
+.sustainability .btn-center {
+  margin: auto;
+}
 .sustainability .sustainability-top {
   background-size: cover;
   background-position: center;
