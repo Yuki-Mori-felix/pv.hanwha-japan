@@ -87,6 +87,12 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward_ios,open_in_new" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward_ios,open_in_new" />
 
+  <style>
+    /* 製品比較　一時的に非表示 */
+    .compare {
+      display: none;
+    }
+  </style>
   <?php wp_head(); ?>
 </head>
 
