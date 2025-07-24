@@ -77,10 +77,13 @@ $img_path = get_stylesheet_directory_uri() . "/images";
             </div>
             <ul class="certification">
               <li class="ctf-item-1">
-                <img src="<?= $img_path ?>/single-product/product_details_top_No-1.png" alt="太陽光発電システム 新築住宅シェア2年連続NO.1">
+                <img src="<?= get_field('image6')['url']; ?>" alt="<?= get_field('image6')['alt']; ?>">
               </li>
               <li class="ctf-item-2">
-                <img src="<?= $img_path ?>/single-product/product_details_top_Re.RISE-G3_440_25Years_2-Warranty_Primary_JP.png" alt="25年製品・出力保証">
+                <img src="<?= get_field('image7')['url']; ?>" alt="<?= get_field('image7')['alt']; ?>">
+              </li>
+              <li class="ctf-item-2">
+                <img src="<?= get_field('image8')['url']; ?>" alt="<?= get_field('image8')['alt']; ?>">
               </li>
             </ul>
           </div>
@@ -168,7 +171,8 @@ $img_path = get_stylesheet_directory_uri() . "/images";
             <div class="info-links">
               <a href="<?= the_field('web_catalog'); ?>" class="link web">WEBカタログ<img src="<?= $img_path ?>/single-product/book-open.svg" alt=""></a>
               <a href="<?= the_field('catalog_pdf'); ?>" class="link pdf">カタログPDF<img src="<?= $img_path ?>/single-product/download-icon.svg" alt=""></a>
-              <div href="#" class="share">シェアする<a href="<?= the_field('share'); ?>" class="round"><img src="<?= $img_path ?>/single-product/share-icon.svg" alt=""></a></div>
+              <div class="share">シェアする<a id="copy-url" data-url="<?= get_permalink(); ?>" class="round"><img src="<?= $img_path ?>/single-product/share-icon.svg" alt=""></a></div>
+              <div class="success-msg"></div>
             </div>
           </div>
         </div>

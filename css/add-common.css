@@ -753,4 +753,25 @@ main.search > .wrap_s .error-results .error-txt {
   line-height: 2;
   text-align: left;
   padding: 0;
+}
+
+/*__________ リンクシェア関連 __________*/
+#copy-url {
+  cursor: pointer;
+}
+
+.success-msg {
+  display: none;
+  position: fixed;
+  width: 300px;
+  height: 40px;
+  line-height: 40px;
+  background-color: rgba(140, 140, 140, 0.9);
+  color: #fff;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  border-radius: 5px;
 }/*# sourceMappingURL=add-common.css.map */

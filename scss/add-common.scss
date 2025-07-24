@@ -835,3 +835,23 @@ main.search {
 	}
 }
 // COMMON_INFO ページ共通 お問い合わせはこちらまで
+
+/*__________ リンクシェア関連 __________*/ 
+#copy-url {
+  cursor: pointer;
+}
+.success-msg {
+  display: none;
+  position: fixed;
+  width: 300px;
+  height: 40px;
+  line-height: 40px;
+  background-color: rgba(140, 140, 140, .9);
+  color: #fff;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  border-radius: 5px;
+}

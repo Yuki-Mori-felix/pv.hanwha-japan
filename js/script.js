@@ -46,3 +46,34 @@ window.addEventListener("DOMContentLoaded", function() {
     }
   }
 });
+
+// =====================
+//  リンクシェアボタン
+// =====================
+$(function () {
+	$("#copy-url").click(function () {
+		// data-urlの値を取得
+		const url = $(this).data("url");
+
+		// クリップボードにコピー
+		navigator.clipboard
+			.writeText(url)
+			.then(() => {
+				// メッセージを変更
+				$(".success-msg").text("リンクをコピーしました");
+
+				// フラッシュメッセージ表示
+				$(".success-msg").fadeIn("slow", function () {
+					$(this).delay(1500).fadeOut("slow");
+				});
+			})
+			.catch((err) => {
+				// エラー時のメッセージ
+				$(".success-msg").text("コピーに失敗しました");
+
+				$(".success-msg").fadeIn("slow", function () {
+					$(this).delay(1500).fadeOut("slow");
+				});
+			});
+	});
+});
