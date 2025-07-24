@@ -371,7 +371,8 @@ main.single-products section.overview .wrapper > .right .new {
   font-weight: var(--fw-bold);
   line-height: 1;
   color: #fff;
-  margin-bottom: 10px;
+  display: inline-block;
+  margin-right: 10px;
 }
 main.single-products section.overview .wrapper > .right .format {
   min-width: 140px;
@@ -383,6 +384,8 @@ main.single-products section.overview .wrapper > .right .format {
   font-weight: var(--fw-bold);
   line-height: 1;
   color: #fff;
+  display: inline-block;
+  vertical-align: middle;
 }
 main.single-products section.overview .wrapper > .right .product-name {
   margin-top: 20px;
