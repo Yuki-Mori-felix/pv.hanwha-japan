@@ -76,16 +76,22 @@ $img_path = get_stylesheet_directory_uri() . "/images";
             </div>
             <ul class="certification">
               <li class="ctf-item-1">
-                <img src="<?= $img_path ?>/single-product/overview-share-no1.png" alt="太陽光発電システム 新築住宅シェア2年連続NO.1">
+                <img src="<?= get_field('image6')['url']; ?>" alt="<?= get_field('image6')['alt']; ?>">
               </li>
               <li class="ctf-item-2">
-                <img src="<?= $img_path ?>/single-product/overview-warranty-1.png" alt="25年製品・出力保証">
+                <img src="<?= get_field('image7')['url']; ?>" alt="<?= get_field('image7')['alt']; ?>">
+              </li>
+              <li class="ctf-item-2">
+                <img src="<?= get_field('image8')['url']; ?>" alt="<?= get_field('image8')['alt']; ?>">
               </li>
             </ul>
           </div>
           <div class="right">
             <?php if (get_field('new_switch')): ?>
               <p class="new">NEW</p>
+            <?php endif; ?>
+            <?php if (get_field('model')): ?>
+              <p class="format"><?= the_field('model'); ?></p>
             <?php endif; ?>
             <h2 class="product-name"><?= the_title(); ?></h2>
             <h3 class="description"><?= the_field('product_name_blue'); ?></h3>
@@ -165,9 +171,14 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               </div>
             </div> -->
             <div class="info-links">
-              <a href="<?= the_field('web_catalog'); ?>" class="link web" target="_blank" rel="noopener noreferrer">WEBカタログ<img src="<?= $img_path ?>/single-product/book-open.svg" alt=""></a>
-              <a href="<?= the_field('catalog_pdf'); ?>" class="link pdf">カタログPDF<img src="<?= $img_path ?>/single-product/download-icon.svg" alt=""></a>
-              <div href="<?= the_field('share'); ?>" class="share">シェアする<a href="<?= the_field('share'); ?>" class="round"><img src="<?= $img_path ?>/single-product/share-icon.svg" alt=""></a></div>
+              <?php if (get_field('web_catalog')): ?>
+                <a href="<?= the_field('web_catalog'); ?>" class="link web">WEBカタログ<img src="<?= $img_path ?>/single-product/book-open.svg" alt=""></a>
+              <?php endif; ?>
+              <?php if (get_field('catalog_pdf')): ?>
+                <a href="<?= the_field('catalog_pdf'); ?>" class="link pdf" download>カタログPDF<img src="<?= $img_path ?>/single-product/download-icon.svg" alt=""></a>
+              <?php endif; ?>
+              <div class="share">シェアする<a id="copy-url" data-url="<?= get_permalink(); ?>" class="round"><img src="<?= $img_path ?>/single-product/share-icon.svg" alt=""></a></div>
+              <div class="success-msg"></div>
             </div>
           </div>
         </div>

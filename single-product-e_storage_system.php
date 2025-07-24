@@ -76,21 +76,34 @@ $img_path = get_stylesheet_directory_uri() . "/images";
             </div>
             <ul class="ess_certification">
               <li class="ess_ctf-item-1">
-                <img src="<?= $img_path ?>/single-product/guarantee_15year_icon_small.png" alt="最長15年保証">
+                <img src="<?= get_field('image6')['url']; ?>" alt="<?= get_field('image6')['alt']; ?>">
               </li>
-              <li class="ess_ctf-item-2">
+              <li class="ess_ctf-item-1">
+                <img src="<?= get_field('image7')['url']; ?>" alt="<?= get_field('image7')['alt']; ?>">
+              </li>
+              <li class="ess_ctf-item-1">
+                <img src="<?= get_field('image8')['url']; ?>" alt="<?= get_field('image8')['alt']; ?>">
+              </li>
+              <!-- <li class="ess_ctf-item-2">
                 <p class="txt">全負荷型</p>
               </li>
               <li class="ess_ctf-item-3">
                 <p class="txt">屋外設置</p>
-              </li>
+              </li> -->
             </ul>
           </div>
           <div class="right">
             <?php if (get_field('model')): ?>
               <p class="format"><?= get_field('model'); ?></p>
             <?php endif; ?>
-            <h2 class="product-name"><?= the_title(); ?></h2>
+            <?php if (get_field('model2')): ?>
+              <p class="format"><?= get_field('model2'); ?></p>
+            <?php endif; ?>
+            <?php if (!get_field('alternative_title')): ?>
+              <h2 class="product-name"><?= the_title(); ?></h2>
+            <?php else: ?>
+              <h2 class="product-name"><?= get_field('alternative_title'); ?></h2>
+            <?php endif; ?>
             <p class="product-maker"><?= the_field('manufacturer') ?></p>
             <h3 class="description"><?= the_field('product_name_blue'); ?></h3>
             <ul class="tag">
@@ -207,9 +220,14 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               </div>
             </div> -->
             <div class="info-links">
-              <a href="<?= the_field('web_catalog'); ?>" class="link web">WEBカタログ<img src="<?= $img_path ?>/single-product/book-open.svg" alt=""></a>
-              <a href="<?= the_field('catalog_pdf'); ?>" class="link pdf">カタログPDF<img src="<?= $img_path ?>/single-product/download-icon.svg" alt=""></a>
-              <div href="#" class="share">シェアする<a href="<?= the_field('share'); ?>" class="round"><img src="<?= $img_path ?>/single-product/share-icon.svg" alt=""></a></div>
+              <?php if (get_field('web_catalog')): ?>
+                <a href="<?= the_field('web_catalog'); ?>" class="link web">WEBカタログ<img src="<?= $img_path ?>/single-product/book-open.svg" alt=""></a>
+              <?php endif; ?>
+              <?php if (get_field('catalog_pdf')): ?>
+                <a href="<?= the_field('catalog_pdf'); ?>" class="link pdf" download>カタログPDF<img src="<?= $img_path ?>/single-product/download-icon.svg" alt=""></a>
+              <?php endif; ?>
+              <div class="share">シェアする<a id="copy-url" data-url="<?= get_permalink(); ?>" class="round"><img src="<?= $img_path ?>/single-product/share-icon.svg" alt=""></a></div>
+              <div class="success-msg"></div>
             </div>
           </div>
         </div>

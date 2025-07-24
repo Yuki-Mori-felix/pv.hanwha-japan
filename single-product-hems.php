@@ -85,6 +85,9 @@ $img_path = get_stylesheet_directory_uri() . "/images";
             <?php if (get_field('new_switch')): ?>
               <p class="new">NEW</p>
             <?php endif; ?>
+            <?php if (get_field('model')): ?>
+              <p class="format"><?= the_field('model'); ?></p>
+            <?php endif; ?>
             <h2 class="product-name"><?= the_title(); ?></h2>
             <p class="product-maker"><?= wp_kses_post(the_field('manufacturer')); ?></p>
             <h3 class="description"><?= the_field('product_name_blue'); ?></h3>
@@ -143,9 +146,14 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               </div>
             </div> -->
             <div class="info-links">
-              <a href="<?= the_field('web_catalog'); ?>" class="link web" target="_blank" rel="noopener noreferrer">WEBカタログ<img src="<?= $img_path ?>/single-product/book-open.svg" alt=""></a>
-              <a href="<?= the_field('catalog_pdf'); ?>" class="link pdf">カタログPDF<img src="<?= $img_path ?>/single-product/download-icon.svg" alt=""></a>
-              <div href="" class="share">シェアする<a href="<?= the_field('share'); ?>" class="round"><img src="<?= $img_path ?>/single-product/share-icon.svg" alt=""></a></div>
+              <?php if (get_field('web_catalog')): ?>
+                <a href="<?= the_field('web_catalog'); ?>" class="link web">WEBカタログ<img src="<?= $img_path ?>/single-product/book-open.svg" alt=""></a>
+              <?php endif; ?>
+              <?php if (get_field('catalog_pdf')): ?>
+                <a href="<?= the_field('catalog_pdf'); ?>" class="link pdf" download>カタログPDF<img src="<?= $img_path ?>/single-product/download-icon.svg" alt=""></a>
+              <?php endif; ?>
+              <div class="share">シェアする<a id="copy-url" data-url="<?= get_permalink(); ?>" class="round"><img src="<?= $img_path ?>/single-product/share-icon.svg" alt=""></a></div>
+              <div class="success-msg"></div>
             </div>
           </div>
         </div>
