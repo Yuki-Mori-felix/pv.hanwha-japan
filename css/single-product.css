@@ -438,12 +438,17 @@ main.single-products section.overview .wrapper > .right .tag .tag-item {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 @media screen and (max-width: 768px) {
   main.single-products section.overview .wrapper > .right .tag .tag-item {
     padding: 12px;
     flex: 0 0 fit-content;
   }
+}
+main.single-products section.overview .wrapper > .right .tag .tag-item .tag-item-small {
+  font-size: 10px;
+  margin-top: 5px;
 }
 main.single-products section.overview .wrapper > .right .spec01 {
   display: flex;

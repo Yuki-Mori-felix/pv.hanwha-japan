@@ -12,7 +12,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
 
   <section class="top_product_logo">
     <div class="wrapper">
-      <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/rerise_logo_rgb-scaled.png" alt="Re.RISE">
+      <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/07/rerise_new_logo.png" alt="Re.RISE">
     </div>
   </section>
   <!-- //top_product_logo -->
