@@ -371,6 +371,7 @@ main.single-products section.overview .wrapper > .right .new {
   font-weight: var(--fw-bold);
   line-height: 1;
   color: #fff;
+  margin-bottom: 10px;
 }
 main.single-products section.overview .wrapper > .right .format {
   min-width: 140px;
