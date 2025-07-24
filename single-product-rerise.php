@@ -91,6 +91,9 @@ $img_path = get_stylesheet_directory_uri() . "/images";
             <?php if (get_field('new_switch')): ?>
               <p class="new">NEW</p>
             <?php endif; ?>
+            <?php if (get_field('model')): ?>
+              <p class="format"><?= the_field('model'); ?></p>
+            <?php endif; ?>
             <h2 class="product-name"><?= the_title(); ?></h2>
             <h3 class="description"><?= the_field('product_name_blue'); ?></h3>
             <ul class="tag">
