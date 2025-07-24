@@ -532,11 +532,15 @@
   display: block;
   text-align: left;
   color: #999;
+  font-size: 11px;
+  font-family: "Figtree";
 }
 .press .topic-inner .wrap_s li a .press-title {
   font-weight: 400;
   padding: 0;
   text-align: left;
+  font-size: 12px;
+  margin: 10px 0 0;
 }
 .press .topic-inner .wrap_s li ._right_bt a {
   top: unset;
