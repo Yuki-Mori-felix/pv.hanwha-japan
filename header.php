@@ -129,7 +129,7 @@
 
       <div class="main-catchphrase"><!--catchphrase-->
         <div class="wrap_S">
-          <h1>ハンファジャパンの太陽光発電で贅沢な毎日を。</h1>
+          <h1>エネルギーで未来を笑顔にする</h1>
         </div>
       </div><!--catchphrase-->
 
