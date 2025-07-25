@@ -7,7 +7,7 @@ require get_stylesheet_directory() . '/include/my_variables.php';
 <main class="under-pv">
   <section class="mv">
     <div class="back-img" style="background-image: url(<?= get_field('fv_page_img'); ?>);">
-      <h1 class="title">グローバルで認められた実績</h1>
+      <h1 class="title"><?= the_title(); ?></h1>
     </div>
   </section>
   <!--========== END OF MV ==========-->

@@ -8,7 +8,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
 <main class="under-pv">
   <section class="mv">
     <div class="back-img" style="background-image: url(<?= get_field('fv_page_img'); ?>);">
-      <h1 class="title">受賞・実績</h1>
+      <h1 class="title"><?= the_title(); ?></h1>
     </div>
   </section>
   <!--========== END OF MV ==========-->
