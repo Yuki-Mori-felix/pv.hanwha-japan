@@ -183,7 +183,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
   <!-- //support -->
 
 
-  <section class="compare" data-target="compare">
+  <section class="compare" data-target=""><!-- compareをdata-targetに設定で左側のメニューに比較が表示される -->
     <div class="wrapper">
       <h2 class="sec-ttl" id="compare">製品を比較する</h2>
       <div class="product top">
