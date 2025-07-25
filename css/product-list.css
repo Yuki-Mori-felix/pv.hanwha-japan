@@ -227,9 +227,6 @@
   font-size: 16px;
   margin-bottom: 17px;
 }
-.section-back .create_electricity .electricity-content .create-list li h4 .note {
-  font-size: 12px;
-}
 .section-back .store_electricity {
   background-image: url(../images/product-list/Products_TopPage_Product_BG_02.jpg);
 }
@@ -286,6 +283,9 @@
 }
 .section-back .use_electricity .electricity-content ul li h4 {
   text-align: center;
+}
+.section-back .use_electricity .electricity-content ul li h4 .note {
+  font-size: 12px;
 }
 .section-back .use_electricity .electricity-content ul li p {
   position: relative;

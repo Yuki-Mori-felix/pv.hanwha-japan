@@ -12,6 +12,10 @@ html .wrap_s:has(#breadcrumb) {
   width: 94%;
 }
 
+h5 {
+  text-transform: unset !important;
+}
+
 #content {
   padding-top: 0;
   /* メイン画像用CSS */
