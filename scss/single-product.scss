@@ -100,6 +100,12 @@ main.single-products {
 			font-size: 24px;
 		}
 	}
+	.note {
+		font-size: 10px;
+		margin-top: 5px;
+		color: var(--col-black);
+		font-weight: 400;
+	}
 	.accordion {
 		.accordion-content {
 			display: none;
@@ -770,6 +776,7 @@ main.single-products {
 										content: "※";
 										position: absolute;
 										left: 0;
+										top: 0;
 									}
 								}
 							}
