@@ -756,7 +756,7 @@ main.search > .wrap_s .error-results .error-txt {
 }
 
 /*__________ リンクシェア関連 __________*/
-#copy-url {
+#copy-url, #copy-url2 {
   cursor: pointer;
 }
 

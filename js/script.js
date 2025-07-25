@@ -51,7 +51,7 @@ window.addEventListener("DOMContentLoaded", function() {
 //  リンクシェアボタン
 // =====================
 $(function () {
-	$("#copy-url").click(function () {
+	$("#copy-url, #copy-url2").click(function () {
 		// data-urlの値を取得
 		const url = $(this).data("url");
 

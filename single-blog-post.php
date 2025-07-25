@@ -35,9 +35,10 @@ if (is_singular('blog-post')) {
         <ul class="icon-list">
           <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" rel="nofollow noopener" target="_blank"><img src="<?= $img_path; ?>/side-menu/Facebook_Logo_Primary.png" alt=""></a></li>
           <li><a href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_permalink()); ?>" rel="nofollow noopener" target="_blank"><img src="<?= $img_path; ?>/side-menu/logo-black.png" alt=""></a></li>
-          <li><a href="#"><img src="<?= $img_path; ?>/side-menu/threads-logo-black-01.png" alt=""></a></li>
+          <li><a href="https://www.threads.net/intent/post?text=<?php echo urlencode(get_permalink()); ?>" rel="nofollow noopener" target="_blank"><img src="<?= $img_path; ?>/side-menu/threads-logo-black-01.png" alt=""></a></li>
           <li><a href="https://social-plugins.line.me/lineit/share?url=<?php echo urlencode(get_permalink()); ?>" rel="nofollow noopener" target="_blank"><img src="<?= $img_path; ?>/side-menu/LINE_Brand_icon.png" alt=""></a></li>
-          <li><a href="#"><img src="<?= $img_path; ?>/side-menu/link_icon.png" alt=""></a></li>
+          <li><a id="copy-url" data-url="<?= get_permalink(); ?>"><img src="<?= $img_path; ?>/side-menu/link_icon.png" alt=""></a></li>
+          <div class="success-msg"></div>
         </ul>
         <div class="img"><?php the_post_thumbnail('full'); ?></div>
         <div class="detail"><?= the_content(); ?></div>
@@ -59,9 +60,9 @@ if (is_singular('blog-post')) {
           <ul class="icon-list">
             <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" rel="nofollow noopener" target="_blank"><img src="<?= $img_path; ?>/side-menu/Facebook_Logo_Primary.png" alt=""></a></li>
             <li><a href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_permalink()); ?>" rel="nofollow noopener" target="_blank"><img src="<?= $img_path; ?>/side-menu/logo-black.png" alt=""></a></li>
-            <li><a href="#"><img src="<?= $img_path; ?>/side-menu/threads-logo-black-01.png" alt=""></a></li>
+            <li><a href="https://www.threads.net/intent/post?text=<?php echo urlencode(get_permalink()); ?>" rel="nofollow noopener" target="_blank"><img src="<?= $img_path; ?>/side-menu/threads-logo-black-01.png" alt=""></a></li>
             <li><a href="https://social-plugins.line.me/lineit/share?url=<?php echo urlencode(get_permalink()); ?>" rel="nofollow noopener" target="_blank"><img src="<?= $img_path; ?>/side-menu/LINE_Brand_icon.png" alt=""></a></li>
-            <li><a href="#"><img src="<?= $img_path; ?>/side-menu/link_icon.png" alt=""></a></li>
+            <li><a id="copy-url2" data-url="<?= get_permalink(); ?>"><img src="<?= $img_path; ?>/side-menu/link_icon.png" alt=""></a></li>
           </ul>
         </div>
 
