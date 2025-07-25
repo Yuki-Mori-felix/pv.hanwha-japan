@@ -495,9 +495,9 @@ $img_path = get_stylesheet_directory_uri() . "/images";
           <span class="icon"></span>
         </div>
       </div>
-      <a href="<?= home_url(); ?>/product-list/" class="btn">製品・システム 一覧</a>
     </div>
   </section>
   <!-- //compare -->
+  <a href="<?= home_url(); ?>/product-list/" class="btn">製品・システム 一覧</a>
 </main>
 <?= get_footer(); ?>
