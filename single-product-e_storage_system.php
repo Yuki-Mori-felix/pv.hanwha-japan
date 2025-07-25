@@ -612,13 +612,13 @@ $img_path = get_stylesheet_directory_uri() . "/images";
           <p class="txt">すべての仕様を比較</p>
           <span class="icon"></span>
         </div>
-        </div>
       </div>
-    </section>
-    <!-- //compare -->
-    <a href="<?= home_url(); ?>/proudct-list/storage-system/" class="banner">
-      <img src="<?= $img_path ?>/single-product/PDH_HEMS_Product details_banner.png" alt="蓄電システム・HEMS製品一覧ページへ">
-    </a>
+    </div>
+  </section>
+  <!-- //compare -->
+  <a href="<?= home_url(); ?>/proudct-list/storage-system/" class="banner">
+    <img src="<?= $img_path ?>/single-product/PDH_HEMS_Product details_banner.png" alt="蓄電システム・HEMS製品一覧ページへ">
+  </a>
 
 
   <div class="fixed-anchor">
