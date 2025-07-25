@@ -290,6 +290,16 @@ if (! function_exists('custom_breadcrumb')) {
 
       // 個別ページの投稿タイトルを表示
       echo '<li><span>' . esc_html(get_the_title()) . '</span></li>';
+    } elseif (is_single() && get_post_type() === 'blog-post') { // ブログ(個別ページ) パンくず表示調整
+
+      // 固定ページ "page-blog.php" を追加
+      $page_voice = get_page_by_path('blog');
+      if ($page_voice) {
+        echo '<li><a href="' . get_permalink($page_voice) . '"><span>' . esc_html($page_voice->post_title) . '</span></a> / </li>';
+      }
+
+      // 個別ページの投稿タイトルを表示
+      echo '<li><span>' . esc_html(get_the_title()) . '</span></li>';
     } elseif (is_single()) {
 
       //投稿ページ ( $wp_obj : WP_Post )
