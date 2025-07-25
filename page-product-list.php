@@ -27,7 +27,7 @@ get_header();
 <!--人気の商品ここから-->
 
 <section class="popular_products_now"><!--人気の商品-->
-  <h3>今人気の商品</h3>
+  <h3>今人気の製品</h3>
 
   <div class="wrap_s">
     <ul class="popular_products_category">
@@ -71,22 +71,22 @@ get_header();
         <ul class="create-list">
           <li>
             <p class="_list"><img src="<?= get_field('create_electricity_1bst_photo', 163)['url']; ?>"></p>
-            <h4><a href="#"><?= the_field('create_electricity_title1', 163) ?></a></h4>
+            <h4><a href="<?=get_my_home_url("/product-list/re-rise")?>"><?= the_field('create_electricity_title1', 163) ?></a></h4>
             <p class="product-img"><img src="<?= get_field('create_electricity_1st_photo', 163)['url']; ?>"></p>
           </li>
           <li>
             <p class="_list"><img src="<?= get_field('create_electricity_2bst_photo', 163)['url']; ?>"></p>
-            <h4><a href="#"><?= the_field('create_electricity_title2', 163) ?></a></h4>
+            <h4><a href="<?=get_my_home_url("/product-list/q-cells")?>"><?= the_field('create_electricity_title2', 163) ?></a></h4>
             <p class="product-img"><img src="<?= get_field('create_electricity_2st_photo', 163)['url']; ?>"></p>
           </li>
           <li>
             <p class="_list"><img src="<?= get_field('create_electricity_3bst_photo', 163)['url']; ?>"></p>
-            <h4><a href="#"><?= the_field('create_electricity_title3', 163) ?></a></h4>
+            <h4><a href="<?=get_my_home_url("/product-list/power-conditioner")?>"><?= the_field('create_electricity_title3', 163) ?></a></h4>
             <p class="product-img"><img src="<?= get_field('create_electricity_3st_photo', 163)['url']; ?>"></p>
           </li>
           <li>
             <p class="_list"><img src="<?= get_field('create_electricity_4bst_photo', 163)['url']; ?>"></p>
-            <h4><a href="#"><?= the_field('create_electricity_title4', 163) ?></a></h4>
+            <h4><a href="<?=get_my_home_url("/product-list/bracket")?>"><?= the_field('create_electricity_title4', 163) ?></a></h4>
             <p class="product-img"><img src="<?= get_field('create_electricity_4st_photo', 163)['url']; ?>"></p>
           </li>
         </ul>
@@ -100,7 +100,7 @@ get_header();
       <div class="electricity-content">
         <ul class="wrap_s">
           <li>
-            <h4><a href="#"><?php the_field('products_storing_electricity_title', 163); ?></a></h4>
+            <h4><a href="<?=get_my_home_url("/product-list/storage-system")?>"><?php the_field('products_storing_electricity_title', 163); ?></a></h4>
             <p class="_list"><img src="<?= get_field('create_electricity_1st_photo', 163)['url']; ?>"></p>
           </li>
         </ul>
@@ -114,15 +114,15 @@ get_header();
       <div class="electricity-content">
         <ul class="wrap_s">
           <li>
-            <h4><a href="#"><?= the_field('use_electricity_title1'); ?></a></h4>
+            <h4><a href="https://www.q-cells.jp/qreadylp/" rel="nofollow noopener" target="_blank"><?= the_field('use_electricity_title1'); ?></a></h4>
             <p class="_list"><img src="<?= get_field('use_electricity_img1', 163)['url']; ?>"></p>
           </li>
           <li>
-            <h4><a href="#"><?= the_field('use_electricity_title2'); ?></a></h4>
+            <h4><a href="<?=get_my_home_url("/product-list/hems")?>"><?= the_field('use_electricity_title2'); ?></a></h4>
             <p class="_list"><img src="<?= get_field('use_electricity_img2', 163)['url']; ?>"></p>
           </li>
           <li>
-            <h4><a href="#"><?= the_field('use_electricity_title3'); ?></a></h4>
+            <h4><a href="<?=get_my_home_url("/product-list/v2h")?>"><?= the_field('use_electricity_title3'); ?></a></h4>
             <p class="_list"><img src="<?= get_field('use_electricity_img3', 163)['url']; ?>"></p>
           </li>
         </ul>
@@ -139,7 +139,7 @@ get_header();
     <div class="wrap">
       <div class="wrap_s">
         <h2>システム</h2>
-        <a href="<?= get_field('system_button'); ?>" class="system-button">販売店様専用</a>
+        <p class="system-button">販売店様専用</p>
       </div>
     </div>
   </div>
@@ -148,7 +148,7 @@ get_header();
     <div class="wrap">
       <div class="system-content wrap_s">
         <p>ワンストップ電子発注システムHANASYS</p>
-        <a class="banner" href="<?= get_field('banner002_url', 163); ?>">
+        <a class="banner" href="https://www.q-cells.jp/qorder-qmusubi/" rel="nofollow noopener" target="_blank">
           <img src="<?php the_field('banner002', 163); ?>" alt="ワンストップ電子発注システムHANASYS">
         </a>
       </div>
@@ -215,7 +215,6 @@ get_header();
     </div>
   </div>
 </section><!--関連記事-->
-
 
 
 
