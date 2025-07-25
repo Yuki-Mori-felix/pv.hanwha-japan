@@ -160,8 +160,8 @@ $img_path = get_stylesheet_directory_uri() . "/images";
       </div>
     </div>
     <?php if (get_field('product_url')): ?>
-      <a href="<?= get_field('product_url'); ?>" class="pcs-banner" target="_blank">
-        <img src="<?= $img_path ?>/single-product/" alt="一目でわかるQREADY® 詳しくはこちら">
+      <a href="https://www.q-cells.jp/qreadylp/" class="pcs-banner" target="_blank">
+        <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/07/PDH_monitor_Product-details_banner-1.png" alt="一目でわかるQREADY® 詳しくはこちら">
       </a>
     <?php endif; ?>
   </section>
