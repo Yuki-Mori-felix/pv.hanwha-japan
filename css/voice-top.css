@@ -119,23 +119,24 @@
   max-width: 796px;
   width: 65%;
   height: 100%;
-  background-image: url(../images/about/hanwhaJP_building_BG.jpg);
+  background-image: url(../images/voice/uservoice_top_BG_01.jpg);
   background-size: cover;
   background-position: center;
 }
 .voice .section-back::after {
-  content: "INTERVIEW";
+  content: "";
   position: absolute;
   z-index: -1;
-  top: 72px;
-  left: -18px;
+  top: 40px;
+  left: 0;
   writing-mode: vertical-lr;
   font-size: 120px;
   color: white;
   line-height: 0.8;
+  background-image: url(../images/voice/INTERVIEW.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  width: 95px;
+  width: 84px;
   height: 100%;
 }
 @media screen and (max-width: 768px) {
