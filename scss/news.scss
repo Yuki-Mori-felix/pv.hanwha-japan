@@ -38,6 +38,9 @@
 								font-size: 14px;
 								border-radius: 35px;
                 white-space: nowrap;
+                padding: 1em 2em;
+                display: block;
+                border: unset;
 
 								&.active {
 									color: white;
@@ -146,6 +149,24 @@
         margin-bottom: 100px;
         &:hover::after {
           background: #3d7abb;
+        }
+      }
+
+      .search-area {
+        margin-top: 50px;
+
+        .title {
+          font-size: 24px;
+          margin-bottom: 15px;
+          font-weight: 500;
+        }
+
+        form {
+          display: flex;
+
+          button {
+            background: #3366aa;
+          }
         }
       }
 		}

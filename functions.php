@@ -596,61 +596,6 @@ function filter_voice_posts()
 add_action('wp_ajax_filter_voice', 'filter_voice_posts');
 add_action('wp_ajax_nopriv_filter_voice', 'filter_voice_posts');
 
-/*------------------------------------------
-  NEWSページ カテゴリごとに記事表示
-------------------------------------------*/
-function filter_news_posts() {
-  $term_id = isset($_GET['term_id']) ? $_GET['term_id'] : 'all';
-  $paged = isset($_GET['paged']) ? intval($_GET['paged']) : 1;
-
-  // 「すべて」のときだけページネーションを有効に
-  $args = array(
-    'post_type'      => 'news',
-    'orderby'        => 'date',
-    'order'          => 'DESC',
-    'paged'          => $paged,
-    'posts_per_page' => ($term_id === 'all') ? 21 : -1, // デフォルト18件表示、絞り込み時全件表示
-  );
-
-  if ($term_id !== 'all') {
-    $args['tax_query'] = array(
-      array(
-        'taxonomy' => 'news-post-format',
-        'field'    => 'term_id',
-        'terms'    => intval($term_id),
-      ),
-    );
-  }
-
-  $news_query = new WP_Query($args);
-
-  if ($news_query->have_posts()) :
-    while ($news_query->have_posts()) : $news_query->the_post();
-      $terms = get_the_terms(get_the_ID(), 'news-post-format');
-      $term_name = ($terms && !is_wp_error($terms)) ? esc_html($terms[0]->name) : '';
-?>
-      <li>
-        <a href="<?php the_permalink(); ?>">
-          <div class="img"><?php the_post_thumbnail('full'); ?></div>
-          <div class="post-info">
-            <span class="date"><?php the_time('Y.m.d'); ?></span>
-            <span class="cat"><?= $term_name; ?></span>
-          </div>
-          <p><?php the_title(); ?></p>
-        </a>
-      </li>
-<?php
-    endwhile;
-    wp_reset_postdata();
-  else :
-    echo '<li><p>該当する投稿がありません。</p></li>';
-  endif;
-
-  wp_die();
-}
-
-add_action('wp_ajax_filter_news', 'filter_news_posts');
-add_action('wp_ajax_nopriv_filter_news', 'filter_news_posts');
 
 /*------------------------------------------
   製品詳細ページ 製品比較機能

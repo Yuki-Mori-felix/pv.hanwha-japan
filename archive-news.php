@@ -9,42 +9,68 @@ require get_stylesheet_directory() . '/include/my_variables.php';
   </div>
   <section class="news-area">
     <div class="wrap_s">
-      <h1>ニュース</h1>
+      <?php
+      $page_id = 2580; // 固定ページ(ニュース一覧)のIDを指定
+      $page = get_post($page_id);
+      echo '<h1>' . esc_html($page->post_title) . '</h1>';
+      ?>
 
       <div class="post-filter-area">
         <div class="news-category-wrap">
+
           <ul class="news-category-buttons">
-            <!-- すべてボタンを追加 -->
+            <!-- 「すべて」ボタン -->
             <li>
-              <button class="filter-button active" data-term-id="all">すべて</button>
+              <a class="filter-button <?php echo empty($_GET['news_category']) ? 'active' : ''; ?>" href="<?php echo home_url('/news/'); ?>">すべて</a>
             </li>
             <?php
             $terms = get_terms(array(
-              'taxonomy'   => 'news-post-format', // カスタムタクソノミーのスラッグ
-              'hide_empty' => false,       // 投稿がないカテゴリも表示
+              'taxonomy'   => 'news-post-format',
+              'hide_empty' => false,
             ));
 
-            foreach ($terms as $term) : ?>
+            foreach ($terms as $term) :
+              $is_active = (isset($_GET['news_category']) && $_GET['news_category'] === $term->name);
+              $link = add_query_arg('news_category', $term->slug, home_url('/news/'));
+            ?>
               <li>
-                <button class="filter-button" data-term-id="<?php echo $term->term_id; ?>">
-                  <?php echo $term->name; ?>
-                </button>
+                <a class="filter-button <?php echo $is_active ? 'active' : ''; ?>" href="<?php echo esc_url($link); ?>">
+                  <?php echo esc_html($term->name); ?>
+                </a>
               </li>
             <?php endforeach; ?>
           </ul>
+
         </div>
       </div>
 
       <ul class="news-list">
         <?php
+        $search_keyword = isset($_GET['search_news']) ? sanitize_text_field($_GET['search_news']) : '';
+        $category_slug = isset($_GET['news_category']) ? sanitize_text_field($_GET['news_category']) : '';
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $args = array(
           'post_type'      => 'news',
-          'posts_per_page' => 21, // 表示件数(functions.phpの数と合わせる)
+          'posts_per_page' => 18, //1ページあたりの表示件数
           'orderby'        => 'date',
           'order'          => 'DESC',
           'paged'          => $paged,
         );
+
+        // 検索キーワードがある場合
+        if (!empty($search_keyword)) {
+          $args['s'] = $search_keyword;
+        }
+
+        if (!empty($category_slug)) {
+          $args['tax_query'] = array(
+            array(
+              'taxonomy' => 'news-post-format',
+              'field'    => 'slug',
+              'terms'    => $category_slug,
+            ),
+          );
+        }
 
         $news_query = new WP_Query($args);
         ?>
@@ -91,7 +117,20 @@ require get_stylesheet_directory() . '/include/my_variables.php';
         ));
         ?>
       </div>
+
+      <div class="search-area">
+        <div class="title">ニュース内を検索</div>
+        <form method="get" action="<?php echo home_url('/news/'); ?>">
+          <input type="text" name="search_news" value="<?php echo esc_attr($search_keyword); ?>" placeholder="キーワードを入力">
+          <?php if (!empty($category_slug)) : ?>
+            <input type="hidden" name="news_category" value="<?php echo esc_attr($category_slug); ?>">
+          <?php endif; ?>
+          <button type="submit"><img src="<?= $img_path; ?>/search.svg" alt=""></button>
+        </form>
+      </div>
+
       <a href="/" class="btn news-top-btn">TOPに戻る</a>
+
     </div>
   </section>
 </main>
