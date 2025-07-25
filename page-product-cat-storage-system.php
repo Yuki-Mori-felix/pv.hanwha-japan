@@ -498,6 +498,6 @@ $img_path = get_stylesheet_directory_uri() . "/images";
     </div>
   </section>
   <!-- //compare -->
-  <a href="<?= home_url(); ?>/product-list/" class="btn">製品・システム 一覧</a>
+  <a href="<?= home_url(); ?>/ess-hems" class="btn">蓄電システム・HEMS一覧</a>
 </main>
 <?= get_footer(); ?>

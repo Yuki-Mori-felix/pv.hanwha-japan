@@ -101,7 +101,7 @@ get_header();
         <ul class="wrap_s">
           <li>
             <h4><a href="<?=get_my_home_url("/product-list/storage-system")?>"><?php the_field('products_storing_electricity_title', 163); ?></a></h4>
-            <p class="_list"><img src="<?= get_field('create_electricity_1st_photo', 163)['url']; ?>"></p>
+            <p class="_list"><img src="<?= get_field('_Products_Products_Storing_electricity_001', 163)['url']; ?>"></p>
           </li>
         </ul>
       </div>
