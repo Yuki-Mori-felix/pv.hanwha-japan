@@ -74,7 +74,11 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         <?php if (get_field('model')): ?>
           <p class="format"><?= the_field('model'); ?></p>
         <?php endif; ?>
-        <h2 class="product-name"><?= the_title(); ?></h2>
+        <?php if (!get_field('alternative_title')): ?>
+          <h2 class="product-name"><?= the_title(); ?></h2>
+        <?php else: ?>
+          <h2 class="product-name"><?= get_field('alternative_title'); ?></h2>
+        <?php endif; ?>
         <h3 class="description"><?= the_field('product_name_blue'); ?></h3>
         <ul class="tag">
           <li class="tag-item"><?= the_field('feat_1'); ?></li>
