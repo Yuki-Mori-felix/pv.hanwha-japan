@@ -534,12 +534,12 @@ $img_path = get_stylesheet_directory_uri() . "/images";
           <span class="icon"></span>
         </div>
       </div>
-      <a href="<?= the_field('compare_link'); ?>" class="banner">
-        <img src="<?= $img_path ?>/single-product/qcells_banner.png" alt="Qcells太陽光パネル製品一覧ページへ">
-      </a>
     </div>
   </section>
   <!-- //compare -->
+  <a href="<?= the_field('compare_link'); ?>" class="banner">
+    <img src="<?= $img_path ?>/single-product/qcells_banner.png" alt="Qcells太陽光パネル製品一覧ページへ">
+  </a>
 
   <div class="fixed-anchor">
   </div>

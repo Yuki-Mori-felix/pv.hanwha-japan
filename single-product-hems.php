@@ -545,12 +545,12 @@ $img_path = get_stylesheet_directory_uri() . "/images";
           <span class="icon"></span>
         </div>
       </div>
-      <a href="<?= home_url(); ?>/proudct-list/hems/" class="banner">
-        <img src="<?= $img_path ?>/single-product/Product details_banner.png" alt="蓄電システム・HEMS 製品一覧ページへ">
-      </a>
     </div>
   </section>
   <!-- //compare -->
+  <a href="<?= home_url(); ?>/proudct-list/hems/" class="banner">
+    <img src="<?= $img_path ?>/single-product/Product details_banner.png" alt="蓄電システム・HEMS 製品一覧ページへ">
+  </a>
 
 
   <div class="fixed-anchor">
