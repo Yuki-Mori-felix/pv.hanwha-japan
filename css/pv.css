@@ -167,15 +167,17 @@
   background-color: rgba(238, 119, 68, 0.08);
 }
 .section-back::after {
-  content: "Hanwha Japan";
+  content: "";
   position: absolute;
   z-index: -1;
   top: 72px;
-  left: 0;
-  writing-mode: vertical-lr;
-  font-size: min(120px, 11vw);
-  color: white;
+  left: -18px;
   line-height: 0.8;
+  background-image: url(../images/pv/Hanwha\ Japan.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 95px;
+  height: 100%;
 }
 .section-back .section-title-area {
   position: relative;
@@ -256,6 +258,7 @@
 .section-back ._contents004 ._contents004_inner .wrap_s ._box2 {
   align-self: end;
   margin-bottom: 50px;
+  min-width: 250px;
 }
 .section-back ._contents004 ._contents004_inner .wrap_s ._box2 p {
   line-height: 1.4;
@@ -429,10 +432,16 @@
 
 /*_____ section-back _____*/
 ._contents006 {
-  background: url(/wp-content/uploads/2025/02/header.jpg);
+  background: url(../images/pv/31031373_m.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
   padding-block: 80px;
   margin-bottom: 100px;
+}
+@media screen and (min-width: 1600px) {
+  ._contents006 {
+    padding-block: 180px;
+  }
 }
 @media screen and (max-width: 768px) {
   ._contents006 {
@@ -554,6 +563,7 @@
 ._contents007 ._contents007_inner .wrap .wrap_s ._box1 ul li p {
   font-size: 12px;
   font-weight: 400;
+  line-height: unset;
 }
 
 /*_____ _contents007 _____*//*# sourceMappingURL=pv.css.map */

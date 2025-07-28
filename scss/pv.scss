@@ -183,15 +183,17 @@
 		background-color: rgba(238, 119, 68, 0.08);
 	}
 	&::after {
-		content: "Hanwha Japan";
+		content: "";
 		position: absolute;
 		z-index: -1;
 		top: 72px;
-		left: 0;
-		writing-mode: vertical-lr;
-		font-size: min(120px, 11vw);
-		color: white;
+		left: -18px;
 		line-height: 0.8;
+    background-image: url(../images/pv/Hanwha\ Japan.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 95px;
+    height: 100%;
 	}
 
 	.section-title-area {
@@ -278,6 +280,7 @@
 				._box2 {
 					align-self: end;
 					margin-bottom: 50px;
+          min-width: 250px;
 
 					p {
 						line-height: 1.4;
@@ -477,10 +480,14 @@
 /*_____ section-back _____*/
 
 ._contents006 {
-	background: url(/wp-content/uploads/2025/02/header.jpg);
+	background: url(../images/pv/31031373_m.jpg);
 	background-repeat: no-repeat;
+  background-size: cover;
 	padding-block: 80px;
 	margin-bottom: 100px;
+  @media screen and (min-width: 1600px) {
+    padding-block: 180px;
+  }
 	@include max {
 		padding-block: 50px;
 	}
@@ -611,6 +618,7 @@
 							p {
 								font-size: 12px;
 								font-weight: 400;
+                line-height: unset;
 							}
 						}
 					}
