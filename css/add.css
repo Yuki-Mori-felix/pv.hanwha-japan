@@ -297,6 +297,9 @@
 .product .product-category .wrap_s li:nth-child(1), .product .product-category .wrap_s li:nth-child(2) {
   background-image: url(../images/top/Module_BG_TopBanner_01.jpg);
 }
+.product .product-category .wrap_s li:nth-child(1) .product-photo1 img, .product .product-category .wrap_s li:nth-child(2) .product-photo1 img {
+  display: block;
+}
 .product .product-category .wrap_s li:nth-child(3), .product .product-category .wrap_s li:nth-child(4) {
   background-image: url(../images/top/ESS-HEMS_BG_TopBanner_01.jpg);
 }
@@ -493,6 +496,9 @@
 }
 
 /*_____ electricity-bill-service _____*/
+.press {
+  padding-bottom: 0;
+}
 .press .topic-inner .wrap_s li {
   height: fit-content;
 }
@@ -547,18 +553,9 @@
   bottom: 10px;
   right: 10px;
 }
+.press .topic-inner .next-more1 {
+  padding-bottom: 80px;
+}
 
 /*_____ press _____*/
-/*_____ navigation _____*/
-/*_____ navigation _____*/
-/*_____ navigation _____*/
-/*_____ navigation _____*/
-/*_____ navigation _____*/
-/*_____ navigation _____*/
-/*_____ navigation _____*/
-/*_____ navigation _____*/
-/*_____ navigation _____*/
-/*_____ navigation _____*/
-/*_____ navigation _____*/
-/*_____ navigation _____*/
-/*_____ navigation _____*//*# sourceMappingURL=add.css.map */
+/*_____  _____*//*# sourceMappingURL=add.css.map */

@@ -335,6 +335,11 @@
         background-size: cover;
         &:nth-child(1), &:nth-child(2) {
           background-image: url(../images/top/Module_BG_TopBanner_01.jpg);
+          .product-photo1 {
+            img {
+              display: block;
+            }
+          }
         }
         &:nth-child(3), &:nth-child(4) {
           background-image: url(../images/top/ESS-HEMS_BG_TopBanner_01.jpg);
@@ -568,6 +573,7 @@
 /*_____ electricity-bill-service _____*/ 
 
 .press {
+  padding-bottom: 0;
 
   .topic-inner {
 
@@ -646,36 +652,12 @@
         }
       }
     }
+
+    .next-more1 {
+      padding-bottom: 80px;
+    }
   }
 }
 /*_____ press _____*/ 
 
-/*_____ navigation _____*/ 
-
-/*_____ navigation _____*/ 
-
-/*_____ navigation _____*/ 
-
-/*_____ navigation _____*/ 
-
-/*_____ navigation _____*/ 
-
-/*_____ navigation _____*/ 
-
-/*_____ navigation _____*/ 
-
-/*_____ navigation _____*/ 
-
-/*_____ navigation _____*/ 
-
-/*_____ navigation _____*/ 
-
-/*_____ navigation _____*/ 
-
-/*_____ navigation _____*/ 
-
-/*_____ navigation _____*/ 
-
-
-
-
+/*_____  _____*/ 
