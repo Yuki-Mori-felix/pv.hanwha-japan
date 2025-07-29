@@ -228,6 +228,8 @@ footer#colophon .wrap_s .footer-buttom .footer-menu ul li {
   display: flex;
   align-items: flex-start;
   margin-bottom: 15px;
+  font-size: 12px;
+  font-weight: 400;
 }
 footer#colophon .wrap_s .footer-buttom .footer-menu ul li a {
   font-size: 12px;

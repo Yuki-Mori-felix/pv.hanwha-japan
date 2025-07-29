@@ -178,7 +178,7 @@ get_header();
               <P>HANASYS (ハナシス)</p>
             </div>
             <div class="_right_contents">
-              <a href="<?= wp_kses_post(get_field('hanasys_banner_url')); ?>">
+              <a href="<?= wp_kses_post(get_field('hanasys_banner_url')); ?>" rel="nofollow noopener" target="_blank">
                 <img src="<?= wp_kses_post(get_field('hanasys_banner')['url']); ?>" alt="HANASYS (ハナシス)">
               </a>
             </div>

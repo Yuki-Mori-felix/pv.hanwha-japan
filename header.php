@@ -130,20 +130,19 @@
       <div class="main-catchphrase"><!--catchphrase-->
         <div class="wrap_S">
           <h1>エネルギーで未来を笑顔にする</h1>
+          <!--buttom-->
+          <div class="btn-box _mv_link_bt">
+            <a href="<?=get_my_home_url("/product-list/re-rise")?>" class="mv-btn">
+              <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/07/Top_FV_ReRISE_Logo.png" alt="">
+              <span class="btn-txt">製品はこちら</span>
+            </a>
+            <a href="<?=get_my_home_url("/product-list/q-cells")?>" class="mv-btn">
+              <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/07/Top_FV_Qcells_Logo.png" alt="">
+              <span class="btn-txt">製品はこちら</span>
+            </a>
+          </div>
         </div>
       </div><!--catchphrase-->
-
-      <!--buttom-->
-      <div class="btn-box _mv_link_bt">
-        <a href="<?=get_my_home_url("/product-list/re-rise")?>" class="mv-btn">
-          <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/07/Top_FV_ReRISE_Logo.png" alt="">
-          <span class="btn-txt">製品はこちら</span>
-        </a>
-        <a href="<?=get_my_home_url("/product-list/q-cells")?>" class="mv-btn">
-          <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/07/Top_FV_Qcells_Logo.png" alt="">
-          <span class="btn-txt">製品はこちら</span>
-        </a>
-      </div>
 
       <?php echo do_shortcode('[smartslider3 slider="1"]'); ?>
 
