@@ -1182,6 +1182,9 @@ main.taxonomy-product-cat.bracket > .wall-surface > .explanation > .explanation-
   max-width: 376px;
   width: 100%;
 }
+main.taxonomy-product-cat.bracket > .wall-surface .btn {
+  margin-bottom: initial;
+}
 main.taxonomy-product-cat.bracket .sec-wrap {
   max-width: 1140px;
 }
@@ -1587,4 +1590,7 @@ main.taxonomy-product-cat.v2h > .tribrid > .container > .list > .item > .tribrid
   margin-top: 20px;
   padding-top: 30px;
   border-top: 1px solid #CCCCCC;
+}
+main.taxonomy-product-cat.v2h > .tribrid .btn {
+  margin-bottom: initial;
 }/*# sourceMappingURL=product-cat.css.map */
