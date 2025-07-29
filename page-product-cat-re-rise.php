@@ -31,7 +31,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
   <!-- // TOP -->
   <section class="intro bg-re-rise">
     <div class="container">
-      <div class="img"><img src="<?=$img_path?>/tax-prod-cat/logo-re-rise.png" alt=""></div>
+      <div class="img"><img src="<?=$img_path?>/tax-prod-cat/Re.RISE_Logo_2025_v1.png" alt=""></div>
       <div class="ctt">
         <p class="name col-re-rise">Re.RISE<sup>®</sup></p>
         <p class="txt"><?= get_field('description'); ?></p>
