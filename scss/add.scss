@@ -24,12 +24,15 @@
   }
 
   .btn-box {
-    top: unset;
-    left: 50%;
-    bottom: 200px;
-    transform: translateX(-50%);
+    // top: unset;
+    // left: 50%;
+    // bottom: 200px;
+    // transform: translateX(-50%);
+    position: relative;
+    left: initial;
+    top: initial;
     z-index: 10;
-    margin: 0;
+    margin: auto;
     // width: fit-content;
     // height: fit-content;
     display: flex;
@@ -37,7 +40,7 @@
     gap: 32px;
     width: 94%;
     @include max {
-      bottom: 20dvh;
+      // bottom: 20dvh;
       gap: 15px;
     }
 

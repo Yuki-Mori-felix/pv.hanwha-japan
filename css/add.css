@@ -24,12 +24,11 @@
   }
 }
 .main-mv .btn-box {
-  top: unset;
-  left: 50%;
-  bottom: 200px;
-  transform: translateX(-50%);
+  position: relative;
+  left: initial;
+  top: initial;
   z-index: 10;
-  margin: 0;
+  margin: auto;
   display: flex;
   justify-content: center;
   gap: 32px;
@@ -37,7 +36,6 @@
 }
 @media screen and (max-width: 768px) {
   .main-mv .btn-box {
-    bottom: 20dvh;
     gap: 15px;
   }
 }
