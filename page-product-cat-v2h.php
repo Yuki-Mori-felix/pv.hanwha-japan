@@ -35,10 +35,10 @@ $img_path = get_stylesheet_directory_uri() . "/images";
   </section>
   <!-- // INTRO -->
 
-  <?= get_field('content_1', false, false); ?>
+  <?= get_field('content_1'); ?>
   <!-- // POWER_STATION -->
 
-  <?= get_field('content_2', false, false); ?>
+  <?= get_field('content_2'); ?>
   <!-- // TRIBRID -->
 </main>
 <?= get_footer(); ?>
