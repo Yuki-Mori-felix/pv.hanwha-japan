@@ -1166,20 +1166,14 @@ main.taxonomy-product-cat.bracket > .wall-surface > .explanation {
 main.taxonomy-product-cat.bracket > .wall-surface > .explanation > .explanation-wrap {
   border-radius: 10px;
   background-color: #fff;
-  display: flex;
-  justify-content: center;
-  gap: 68px;
   padding: 0 20px;
 }
 @media screen and (max-width: 768px) {
   main.taxonomy-product-cat.bracket > .wall-surface > .explanation > .explanation-wrap {
-    flex-direction: column;
-    align-items: center;
     padding: 30px 20px;
   }
 }
 main.taxonomy-product-cat.bracket > .wall-surface > .explanation > .explanation-wrap > .img {
-  max-width: 376px;
   width: 100%;
 }
 main.taxonomy-product-cat.bracket > .wall-surface .btn {

@@ -1129,17 +1129,11 @@ main.taxonomy-product-cat.bracket {
       > .explanation-wrap {
         border-radius: 10px;
         background-color: #fff;
-        display: flex;
-        justify-content: center;
-        gap: 68px;
         padding: 0 20px;
         @include max {
-          flex-direction: column;
-          align-items: center;
           padding: 30px 20px;
         }
         > .img {
-          max-width: 376px;
           width: 100%;
         }
       }
