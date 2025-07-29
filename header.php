@@ -58,7 +58,7 @@
     <script src="<?=get_stylesheet_directory_uri()?>/js/product-cat.js<?=get_last_modified("product-cat.js", "js")?>"></script>
     <script src="<?= get_stylesheet_directory_uri(); ?>/js/sort-product-cat.js<?=get_last_modified("sort-product-cat.js", "js")?>"></script>
     <script src="<?= get_stylesheet_directory_uri() ?>/js/compare-page-product.js<?=get_last_modified("compare-page-product.js", "js")?>"></script>
-  <?php elseif (is_page('contact') || is_page('contact-quotation') || is_page('contact-catalog') || is_page('catalog') || is_page('confirm') || is_page('complete')) : ?>
+  <?php elseif (is_page('contact') || is_page('service-support') || is_page('contact-quotation') || is_page('contact-catalog') || is_page('catalog') || is_page('confirm') || is_page('complete')) : ?>
     <link rel='stylesheet' href='<?=get_stylesheet_directory_uri()?>/css/contact.css<?=get_last_modified("contact.css", "css")?>'>
     <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
     <script src="<?=get_stylesheet_directory_uri()?>/js/contact.js<?=get_last_modified("contact.js", "js")?>"></script>
