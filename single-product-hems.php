@@ -167,11 +167,92 @@ $img_path = get_stylesheet_directory_uri() . "/images";
       <!-- //feature -->
 
 
-      <?= the_field('sec_guide', false, false); ?>
+      <!-- <?= the_field('sec_guide', false, false); ?> -->
+      <section class="guide" data-target="guide">
+        <div class="wrapper">
+          <h2 class="sec-ttl" id="guide">安心導入ガイド</h2>
+          <ul class="flow">
+            <li class="step">
+              <p class="no">STEP1</p>
+              <h3 class="step-ttl">エネコネクトサイトで申し込み</h3>
+              <div class="imgc">
+                <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/guide-step-1.png" alt="">
+              </div>
+              <div class="accordion typeB">
+                <div class="accordion-btn">
+                  <p class="txt">詳細を見る</p>
+                  <span class="icon"></span>
+                </div>
+                <div class="accordion-content">
+                  <p class="txt">
+                    ・エネコネクトのウェブサイトのお問い合わせフォームをご記入ください。<br />
+                    ・担当者から確認後ご連絡します。
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="step">
+              <p class="no">STEP2</p>
+              <h3 class="step-ttl">ヒアリング・ご提案</h3>
+              <div class="imgc">
+                <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/guide-step-2.png" alt="">
+              </div>
+              <div class="accordion typeB">
+                <div class="accordion-btn">
+                  <p class="txt">詳細を見る</p>
+                  <span class="icon"></span>
+                </div>
+                <div class="accordion-content">
+                  <p class="txt">
+                    ・ご紹介した販売店から具体的な状況（例：電気代のご使用状況）やご希望などヒアリングいたします。<br />
+                    ・ヒアリングの上、最適な内容をご提案いたします。
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="step">
+              <p class="no">STEP3</p>
+              <h3 class="step-ttl">ご契約・施工</h3>
+              <div class="imgc">
+                <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/guide-step-3.png" alt="">
+              </div>
+              <div class="accordion typeB">
+                <div class="accordion-btn">
+                  <p class="txt">詳細を見る</p>
+                  <span class="icon"></span>
+                </div>
+                <div class="accordion-content">
+                  <p class="txt">
+                    ・ご契約の後、現地調査、施工を行います。（販売店によりご契約、現地調査は前後する場合がございます）
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="step">
+              <p class="no">STEP4</p>
+              <h3 class="step-ttl">ご契約・施工</h3>
+              <div class="imgc">
+                <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/guide-step-4.png" alt="">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <!-- //guide -->
 
 
-      <?= the_field('sec_support', false, false); ?>
+      <!-- <?= the_field('sec_support', false, false); ?> -->
+      <section class="support" data-target="support">
+        <div class="wrapper">
+          <h2 class="sec-ttl" id="support">丁寧な導入サポート、充実な保証制度でご安心いただけます。</h2>
+          <div class="support_list" style="display: block;">
+            <p class="item" style="width: fit-content; margin-inline: auto;"><a href="https://pv.hanwha-japan.com/service-support/contact/"><span class="imgc"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/support_icon_1.svg" alt=""></span><span class="txt txt-faq">導入・製品に関するご質問</span></a></p>
+            <!-- <p class="border"> -->
+            <!-- <p class="item"><a href="https://pv.hanwha-japan.com/"><span class="imgc"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/support_icon_2.svg" alt=""></span><span class="txt txt-after">アフターフォロー</span></a></p> -->
+          </div>
+        </div>
+      </section>
       <!-- //support -->
 
     <?php endwhile; ?>
@@ -549,7 +630,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
   </section>
   <!-- //compare -->
   <a href="<?= home_url(); ?>/proudct-list/hems/" class="banner">
-    <img src="<?= $img_path ?>/single-product/Product details_banner.png" alt="蓄電システム・HEMS 製品一覧ページへ">
+    <img src="<?= $img_path ?>/single-product/HEMS_Product details_banner.webp" alt="蓄電システム・HEMS 製品一覧ページへ">
   </a>
 
 
