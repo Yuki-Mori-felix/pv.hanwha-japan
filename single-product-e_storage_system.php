@@ -704,7 +704,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
   </section>
   <!-- //compare -->
   <a href="<?= home_url(); ?>/proudct-list/storage-system/" class="banner">
-    <img src="<?= $img_path ?>/single-product/PDH_HEMS_Product details_banner.png" alt="蓄電システム・HEMS製品一覧ページへ">
+    <img src="<?= $img_path ?>/single-product/PDH_HEMS_Product details_banner.webp" alt="蓄電システム・HEMS製品一覧ページへ">
   </a>
 
 
