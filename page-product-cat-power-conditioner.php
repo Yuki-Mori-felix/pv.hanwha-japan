@@ -27,7 +27,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
   <!-- // TOP -->
   <section class="intro bg-other">
     <div class="container">
-      <div class="img intro-power-conditioner"><img src="<?=$img_path?>/tax-prod-cat/intro-power-conditioner.png" alt=""></div>
+      <div class="img intro-power-conditioner"><img style="box-shadow: 10px 15px 40px #00000033;" src="<?=$img_path?>/tax-prod-cat/Qready_PCS_front_Hanwha.png" alt=""></div>
       <div class="ctt">
         <p class="txt"><?= get_field('description'); ?></p>
       </div>
