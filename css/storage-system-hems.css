@@ -141,6 +141,7 @@
 .storage-system-hems .about-storage-system .wrap_s .storage-system-grid li .title {
   color: #3366aa;
   margin-bottom: 20px;
+  font-size: 20px;
 }
 .storage-system-hems .about-storage-system .wrap_s .storage-system-grid li img {
   width: 100%;
@@ -431,7 +432,7 @@
   margin-bottom: 60px;
 }
 .storage-system-hems .parts-bottom-content {
-  margin-bottom: 120px;
+  margin-bottom: 70px;
 }
 .storage-system-hems .parts-bottom-content h3 {
   font-size: 24px;
