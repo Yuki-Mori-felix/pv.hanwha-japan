@@ -212,6 +212,9 @@
 .section-back .create_electricity .electricity-content .create-list li:hover {
   background: white;
 }
+.section-back .create_electricity .electricity-content .create-list li a {
+  display: block;
+}
 .section-back .create_electricity .electricity-content .create-list li ._list {
   width: 140px;
   height: 50px;
@@ -312,6 +315,9 @@
 }
 
 /*_____ section-back _____*/
+.products_that_generate_electricity_title {
+  margin-bottom: 70px;
+}
 .products_that_generate_electricity_title .section-title {
   font-size: 24px;
   font-weight: bold;

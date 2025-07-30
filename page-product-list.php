@@ -70,24 +70,32 @@ get_header();
       <div class="electricity-content wrap_s">
         <ul class="create-list">
           <li>
-            <p class="_list"><img src="<?= get_field('create_electricity_1bst_photo', 163)['url']; ?>"></p>
-            <h4><a href="<?=get_my_home_url("/product-list/re-rise")?>"><?= the_field('create_electricity_title1', 163) ?></a></h4>
-            <p class="product-img"><img src="<?= get_field('create_electricity_1st_photo', 163)['url']; ?>"></p>
+            <a href="<?=get_my_home_url("/product-list/re-rise")?>">
+              <p class="_list"><img src="<?= get_field('create_electricity_1bst_photo', 163)['url']; ?>"></p>
+              <h4><?= the_field('create_electricity_title1', 163) ?></h4>
+              <p class="product-img"><img src="<?= get_field('create_electricity_1st_photo', 163)['url']; ?>"></p>
+            </a>
           </li>
           <li>
-            <p class="_list"><img src="<?= get_field('create_electricity_2bst_photo', 163)['url']; ?>"></p>
-            <h4><a href="<?=get_my_home_url("/product-list/q-cells")?>"><?= the_field('create_electricity_title2', 163) ?></a></h4>
-            <p class="product-img"><img src="<?= get_field('create_electricity_2st_photo', 163)['url']; ?>"></p>
+            <a href="<?=get_my_home_url("/product-list/q-cells")?>">
+              <p class="_list"><img src="<?= get_field('create_electricity_2bst_photo', 163)['url']; ?>"></p>
+              <h4><?= the_field('create_electricity_title2', 163) ?></h4>
+              <p class="product-img"><img src="<?= get_field('create_electricity_2st_photo', 163)['url']; ?>"></p>
+            </a>
           </li>
           <li>
-            <p class="_list"><img src="<?= get_field('create_electricity_3bst_photo', 163)['url']; ?>"></p>
-            <h4><a href="<?=get_my_home_url("/product-list/power-conditioner")?>"><?= the_field('create_electricity_title3', 163) ?></a></h4>
-            <p class="product-img"><img src="<?= get_field('create_electricity_3st_photo', 163)['url']; ?>"></p>
+            <a href="<?=get_my_home_url("/product-list/power-conditioner")?>">
+              <p class="_list"><img src="<?= get_field('create_electricity_3bst_photo', 163)['url']; ?>"></p>
+              <h4><?= the_field('create_electricity_title3', 163) ?></h4>
+              <p class="product-img"><img src="<?= get_field('create_electricity_3st_photo', 163)['url']; ?>"></p>
+            </a>
           </li>
           <li>
-            <p class="_list"><img src="<?= get_field('create_electricity_4bst_photo', 163)['url']; ?>"></p>
-            <h4><a href="<?=get_my_home_url("/product-list/bracket")?>"><?= the_field('create_electricity_title4', 163) ?></a></h4>
-            <p class="product-img"><img src="<?= get_field('create_electricity_4st_photo', 163)['url']; ?>"></p>
+            <a href="<?=get_my_home_url("/product-list/bracket")?>">
+              <p class="_list"><img src="<?= get_field('create_electricity_4bst_photo', 163)['url']; ?>"></p>
+              <h4><?= the_field('create_electricity_title4', 163) ?></h4>
+              <p class="product-img"><img src="<?= get_field('create_electricity_4st_photo', 163)['url']; ?>"></p>
+            </a>
           </li>
         </ul>
       </div>
@@ -100,8 +108,10 @@ get_header();
       <div class="electricity-content">
         <ul class="wrap_s">
           <li>
-            <h4><a href="<?=get_my_home_url("/product-list/storage-system")?>"><?php the_field('products_storing_electricity_title', 163); ?></a></h4>
-            <p class="_list"><img src="<?= get_field('_Products_Products_Storing_electricity_001', 163)['url']; ?>"></p>
+            <a href="<?=get_my_home_url("/product-list/storage-system")?>">
+              <h4><?php the_field('products_storing_electricity_title', 163); ?></h4>
+              <p class="_list"><img src="<?= get_field('_Products_Products_Storing_electricity_001', 163)['url']; ?>"></p>
+            </a>
           </li>
         </ul>
       </div>
@@ -114,16 +124,22 @@ get_header();
       <div class="electricity-content">
         <ul class="wrap_s">
           <li>
-            <h4><a href="https://www.q-cells.jp/qreadylp/" rel="nofollow noopener" target="_blank"><?= the_field('use_electricity_title1'); ?></a></h4>
-            <p class="_list"><img src="<?= get_field('use_electricity_img1', 163)['url']; ?>"></p>
+            <a href="https://www.q-cells.jp/qreadylp/" rel="nofollow noopener" target="_blank">
+              <h4><?= the_field('use_electricity_title1'); ?></h4>
+              <p class="_list"><img src="<?= get_field('use_electricity_img1', 163)['url']; ?>"></p>
+            </a>
           </li>
           <li>
-            <h4><a href="<?=get_my_home_url("/product-list/hems")?>"><?= the_field('use_electricity_title2'); ?></a></h4>
-            <p class="_list"><img src="<?= get_field('use_electricity_img2', 163)['url']; ?>"></p>
+            <a href="<?=get_my_home_url("/product-list/hems")?>">
+              <h4><?= the_field('use_electricity_title2'); ?></h4>
+              <p class="_list"><img src="<?= get_field('use_electricity_img2', 163)['url']; ?>"></p>
+            </a>
           </li>
           <li>
-            <h4><a href="<?=get_my_home_url("/product-list/v2h")?>"><?= the_field('use_electricity_title3'); ?></a></h4>
-            <p class="_list"><img src="<?= get_field('use_electricity_img3', 163)['url']; ?>"></p>
+            <a href="<?=get_my_home_url("/product-list/v2h")?>">
+              <h4><?= the_field('use_electricity_title3'); ?></h4>
+              <p class="_list"><img src="<?= get_field('use_electricity_img3', 163)['url']; ?>"></p>
+            </a>
           </li>
         </ul>
       </div>

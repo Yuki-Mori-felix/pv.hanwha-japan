@@ -231,6 +231,10 @@
 						background: white;
 					}
 
+          a {
+            display: block;
+          }
+
 					._list {
 						width: 140px;
 						height: 50px;
@@ -360,6 +364,7 @@
 /*_____ section-back _____*/
 
 .products_that_generate_electricity_title {
+  margin-bottom: 70px;
 	.section-title {
 		font-size: 24px;
 		font-weight: bold;
