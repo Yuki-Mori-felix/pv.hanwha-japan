@@ -873,10 +873,8 @@ main.single-voice.template-general .problem .sv-wrap .prob-content .prob-item .p
   position: relative;
 }
 main.single-voice.template-general .problem .sv-wrap .prob-content .prob-item .prob-img img {
-  display: inline-block;
   width: 80px;
   height: 130px;
-  background-color: plum;
 }
 main.single-voice.template-general .problem .sv-wrap .prob-content .prob-item .prob-list {
   grid-area: list;

@@ -1447,7 +1447,8 @@ main.single-voice.template-general {
 						grid-area: img;
 						position: relative;
 						img {
-							@include sv-img-replacement(80px, 130px);
+              width: 80px;
+              height: 130px;
 						}
 					}
 					.prob-list {

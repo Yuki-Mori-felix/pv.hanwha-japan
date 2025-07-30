@@ -5,6 +5,7 @@ get_header();
 Template Name: お客様インタビュー詳細（一般）
 Template Post Type: voice
 */
+$img_path = get_stylesheet_directory_uri() . "/images";
 ?>
 	<div class="sv-breadcrumb">
 		<?php custom_breadcrumb(); ?>
@@ -34,7 +35,7 @@ Template Post Type: voice
 				</div>
 				<div class="overview-status">
 					<div class="overview-status-head">
-						<img src="<?= get_stylesheet_directory_uri() ?>/images/voice/voice-head.png" alt="">
+						<img src="<?= $img_path; ?>/voice/img_House_01.svg" alt="">
 						<div class="os-ttl">
 							<div class="os-ttl-ja">設置状況</div>
 							<span class="os-ttl-en">installation status</span>
@@ -73,7 +74,7 @@ Template Post Type: voice
 					<div class="prob-item customer">
 						<div class="prob-ttl">お客様の悩み</div>
 						<div class="prob-img">
-							<img src="" alt="">
+							<img src="<?= $img_path; ?>/voice/img_user-Interview_01.png" alt="">
 						</div>
 						<?=get_field('customer_concerns', $post_id, false)?>
 					</div>
@@ -84,7 +85,7 @@ Template Post Type: voice
 					<div class="prob-item solution">
 						<div class="prob-ttl">ハンファジャパンで<br>解決しました</div>
 						<div class="prob-img">
-							<img src="" alt="">
+							<img src="<?= $img_path; ?>/voice/img_user-Interview_02.png" alt="">
 						</div>
 						<?=get_field('solution', $post_id, false)?>
 					</div>

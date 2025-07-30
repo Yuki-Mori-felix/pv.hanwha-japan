@@ -3,6 +3,7 @@
 Template Name: お客様インタビュー(販売店) 
 Template Post Type: voice
 */
+$img_path = get_stylesheet_directory_uri() . "/images";
 get_header(); ?>
 
 <div class="wrap">
@@ -28,7 +29,7 @@ get_header(); ?>
             </div>
             <div class="voice-detail-textarea">
               <div class="detail-head">
-                <img src="<?= get_stylesheet_directory_uri() ?>/images/voice/voice-head.png" alt="">
+                <img src="<?= $img_path; ?>/voice/voice-head.png" alt="">
                 <div class="detail-head-text">
                   <div class="detail-head-title">設置状況</div>
                   <span class="detail-head-title-en">installation status</span>
@@ -80,7 +81,7 @@ get_header(); ?>
             <div class="prob-item customer">
               <div class="prob-ttl">お客様の悩み</div>
               <div class="prob-img">
-                <img src="" alt="">
+                <img src="<?= $img_path; ?>/voice/img_user-Interview_01.png" alt="">
               </div>
               <?= get_field('customer_concerns', $post_id, false) ?>
             </div>
@@ -91,7 +92,7 @@ get_header(); ?>
             <div class="prob-item solution">
               <div class="prob-ttl">ハンファジャパンで<br>解決しました</div>
               <div class="prob-img">
-                <img src="" alt="">
+                <img src="<?= $img_path; ?>/voice/img_user-Interview_02.png" alt="">
               </div>
               <?= get_field('solution', $post_id, false) ?>
             </div>
