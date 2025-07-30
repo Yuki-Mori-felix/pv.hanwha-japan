@@ -228,6 +228,42 @@ unset($menu[10]);
 add_action( 'admin_menu', 'customize_menus' );
 
 /*------------------------------------------
+  ニュース 詳細ページのURLにタームのスラッグを追加
+------------------------------------------*/
+function custom_news_permalink($permalink, $post) {
+  if ($post->post_type !== 'news') return $permalink;
+
+  $terms = get_the_terms($post, 'news-post-format');
+  if (!empty($terms) && !is_wp_error($terms)) {
+    $term_slug = $terms[0]->slug;
+    return home_url("/news/{$term_slug}/{$post->post_name}/");
+  }
+
+  return $permalink;
+}
+add_filter('post_type_link', 'custom_news_permalink', 10, 2);
+
+function custom_news_rewrite_rules() {
+  add_rewrite_rule(
+    '^news/([^/]+)/([^/]+)/?$',
+    'index.php?post_type=news&name=$matches[2]',
+    'top'
+  );
+}
+add_action('init', 'custom_news_rewrite_rules');
+
+// ニュース一覧 カテゴリのスラッグで終わるURLは全てニュース一覧ページにリダイレクト
+function redirect_news_term_to_news() {
+  $request_uri = $_SERVER['REQUEST_URI'];
+
+  if (preg_match('#^/news/[^/]+/?$#', $request_uri)) {
+    wp_redirect(home_url('/news/'), 301);
+    exit;
+  }
+}
+add_action('template_redirect', 'redirect_news_term_to_news');
+
+/*------------------------------------------
   固定ページでぺージネーション有効
 ------------------------------------------*/
 function add_custom_pagination_rewrite() {
