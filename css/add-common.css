@@ -17,7 +17,7 @@ body {
   position: relative;
 }
 
-body:has(.mega-toggle-on)::before {
+body:has(.mega-toggle-on)::after {
   content: "";
   position: absolute;
   top: 0;
