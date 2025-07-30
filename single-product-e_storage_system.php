@@ -231,6 +231,11 @@ $img_path = get_stylesheet_directory_uri() . "/images";
             </div>
           </div>
         </div>
+        <?php if (get_field('product_url')): ?>
+          <a href="<?= get_field('product_url'); ?>" class="e_storage-banner" target="_blank">
+            <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/07/Qready_banner_001.jpg" alt="一目でわかるQREADY® 詳しくはこちら">
+          </a>
+        <?php endif; ?>
       </section>
       <!-- //overview -->
 

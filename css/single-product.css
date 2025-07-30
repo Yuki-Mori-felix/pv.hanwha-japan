@@ -931,6 +931,7 @@ main.single-products section.simulator .wrapper .simulator-content .simulator-li
   text-align: center;
   font-weight: var(--fw-bold);
   color: #fff;
+  display: block;
 }
 @media screen and (max-width: 768px) {
   main.single-products section.simulator .wrapper .simulator-content .simulator-link {
@@ -1716,6 +1717,17 @@ main.e_storage_system section.overview .wrapper .left .ess_certification .ess_ct
   font-weight: var(--fw-bold);
   color: var(--ess_ctf_item-txt-col);
 }
+main.e_storage_system .e_storage-banner {
+  display: block;
+  max-width: 484px;
+  width: calc(100% - 30px);
+  margin: 100px auto 0;
+}
+@media screen and (max-width: 768px) {
+  main.e_storage_system .e_storage-banner {
+    margin-top: 40px;
+  }
+}
 
 main.rerise {
   --feature-section-gradation: linear-gradient(136deg, #fff, var(--col-orange));
@@ -1796,6 +1808,7 @@ main.rerise section.simulator .wrapper .simulator-content .simulator-link {
   text-align: center;
   font-weight: var(--fw-bold);
   color: #fff;
+  display: block;
 }
 @media screen and (max-width: 768px) {
   main.rerise section.simulator .wrapper .simulator-content .simulator-link {
@@ -1826,11 +1839,6 @@ main.power_conditioner section.overview .pcs-banner {
   main.power_conditioner section.overview .pcs-banner {
     margin-top: 40px;
   }
-}
-main.power_conditioner section.overview .pcs-banner img {
-  display: inline-block;
-  width: 100%;
-  height: 100px;
 }
 main.power_conditioner section.feature .feature_list .item:last-child {
   padding-bottom: 100px;
