@@ -1083,3 +1083,8 @@ function get_last_modified($file_name, $path) {
 
   return "?ver=" . date('YmdHis', filemtime($file_path));
 }
+
+/*------------------------------------------
+	ACFのエディタでコードの実行を有効化
+------------------------------------------*/
+add_filter( 'acf/the_field/allow_unsafe_html', '__return_true' );
