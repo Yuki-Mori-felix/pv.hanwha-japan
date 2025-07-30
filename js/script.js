@@ -35,7 +35,6 @@ window.addEventListener("DOMContentLoaded", function() {
   function footerAddMargin() {
     const sticky = document.querySelector('._footer_fixed_bt');
     const footer = document.querySelector('.site-footer');
-    console.log("test");
 
     if (!sticky || !footer) return;
 
