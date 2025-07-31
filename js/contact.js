@@ -6,6 +6,7 @@ window.addEventListener("DOMContentLoaded", function() {
   // =====================
   systemToggle();
   catalogNumber();
+  disableSubmitBtn();
 
   // =====================
   //  関数
@@ -99,6 +100,25 @@ window.addEventListener("DOMContentLoaded", function() {
     }
   }
 
+  // バグ防止のため、フォーム内のボタンを一度クリックしたら10秒間無効化させる
+  function disableSubmitBtn() {
+    const btns = document.querySelectorAll(".form .submit-btn");
+
+    if (!btns) return;
+
+    btns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        // pointer-events を無効化
+        btn.style.pointerEvents = 'none';
+
+        // 10秒後に再度有効化
+        setTimeout(function() {
+          btn.style.pointerEvents = '';
+        }, 10000); // 10000ミリ秒 = 10秒
+      });
+    });
+  }
+
   // CF7 エラーメッセージが出ている箇所までスクロールさせる
   document.addEventListener('wpcf7invalid', function (event) {
     const form = event.target;
@@ -107,7 +127,7 @@ window.addEventListener("DOMContentLoaded", function() {
     if (!contactCatalog) return;
 
     setTimeout(() => {
-      const catA = form.querySelector('input[name="cat-noc-1"]');
+      const catA = form.querySelector('input[name^="cat-noc-"]'); // カタログ部数
       const catalogErrorMsg = form.querySelector('.catalog-err-msg');
       const defaultErrorMsg = form.querySelector('.input-address .wpcf7-not-valid');
       const catAHasError = catA && catA.classList.contains('wpcf7-not-valid'); // catAにエラーがあるか
