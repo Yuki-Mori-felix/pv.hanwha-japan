@@ -42,12 +42,15 @@
   padding-block: 30px;
 }
 .archive-voice .post-filter-area .voice-category-wrap {
-  width: 100%;
+  width: 94%;
   max-width: 1000px;
   margin-inline: auto;
+  overflow-x: scroll;
+  scrollbar-width: none;
 }
 .archive-voice .post-filter-area .voice-category-wrap .voice-category-buttons {
   display: flex;
+  align-items: center;
   margin-bottom: 0;
   background: white;
   width: fit-content;
@@ -56,12 +59,17 @@
 .archive-voice .post-filter-area .voice-category-wrap .voice-category-buttons li a {
   display: block;
   padding: 0.75em 2em;
+  white-space: nowrap;
+  line-height: 1.5;
 }
 .archive-voice .post-filter-area .voice-category-wrap .voice-category-buttons li .filter-button {
   background: unset;
   color: #333333;
   font-size: 14px;
   border-radius: 35px;
+  white-space: nowrap;
+  padding: 0.75em 2em;
+  line-height: 1.5;
 }
 .archive-voice .post-filter-area .voice-category-wrap .voice-category-buttons li .filter-button.active {
   color: white;
@@ -96,12 +104,20 @@
 }
 .archive-voice .voice-list-wrap .voice-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  place-content: center;
   gap: 32px;
 }
 .archive-voice .voice-list-wrap .voice-list .voice-item {
   border-radius: 10px;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1607843137);
+}
+@media screen and (max-width: 500px) {
+  .archive-voice .voice-list-wrap .voice-list .voice-item {
+    width: 100%;
+    max-width: 312px;
+    margin-inline: auto;
+  }
 }
 .archive-voice .voice-list-wrap .voice-list .voice-item a {
   position: relative;

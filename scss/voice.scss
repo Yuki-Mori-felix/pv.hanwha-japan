@@ -44,12 +44,15 @@
 		padding-block: 30px;
 
 		.voice-category-wrap {
-			width: 100%;
+			width: 94%;
 			max-width: 1000px;
 			margin-inline: auto;
+      overflow-x: scroll;
+      scrollbar-width: none;
 
 			.voice-category-buttons {
 				display: flex;
+        align-items: center;
 				margin-bottom: 0;
 				background: white;
 				width: fit-content;
@@ -59,12 +62,17 @@
           a { // すべてボタン用
             display: block;
             padding: 0.75em 2em;
+            white-space: nowrap;
+            line-height: 1.5;
           }
 					.filter-button {
 						background: unset;
 						color: #333333;
 						font-size: 14px;
 						border-radius: 35px;
+            white-space: nowrap;
+            padding: 0.75em 2em;
+            line-height: 1.5;
 
 						&.active {
 							color: white;
@@ -116,12 +124,18 @@
 
 		.voice-list {
 			display: grid;
-			grid-template-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      place-content: center;
 			gap: 32px;
 
 			.voice-item {
 				border-radius: 10px;
 				box-shadow: 0px 5px 20px #00000029;
+        @media screen and (max-width: 500px) {
+          width: 100%;
+          max-width: 312px;
+          margin-inline: auto;
+        }
 
 				a {
 					position: relative;
