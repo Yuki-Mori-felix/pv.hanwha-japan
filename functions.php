@@ -918,11 +918,6 @@ function custom_validate_catalog_group($result, $tag) {
     }
   }
 
-  // 番号順にソート（cat-noc-1, cat-noc-2, ...の順）
-  usort($catalog_fields, function($a, $b) {
-    return intval(str_replace('cat-noc-', '', $a)) - intval(str_replace('cat-noc-', '', $b));
-  });
-
   // どれか1つでも値が入ってるか確認
   $has_value = false;
   foreach ($catalog_fields as $field) {
@@ -933,7 +928,7 @@ function custom_validate_catalog_group($result, $tag) {
     }
   }
 
-  // すべて空なら、最も若い番号のフィールドにだけエラーを出す
+  // すべて空なら、最初のフィールドにだけエラーを出す
   if (!$has_value && $tag_name === ($catalog_fields[0] ?? '')) {
     $result->invalidate($tag, '');
   }
