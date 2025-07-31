@@ -119,6 +119,12 @@
 
 .single-news {
   padding-bottom: 120px;
+  margin-top: 90px;
+}
+@media screen and (max-width: 768px) {
+  .single-news {
+    margin-top: 40px;
+  }
 }
 .single-news .single-news-area .wrap_s {
   width: 94%;

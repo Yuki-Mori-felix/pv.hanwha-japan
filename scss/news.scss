@@ -176,6 +176,10 @@
 
 .single-news {
 	padding-bottom: 120px;
+  margin-top: 90px;
+  @include max {
+    margin-top: 40px;
+  }
 
 	.single-news-area {
 		.wrap_s {
