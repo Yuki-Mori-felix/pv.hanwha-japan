@@ -30,7 +30,7 @@ require get_stylesheet_directory() . '/include/my_variables.php';
             ));
 
             foreach ($terms as $term) :
-              $is_active = (isset($_GET['news_category']) && $_GET['news_category'] === $term->name);
+              $is_active = (isset($_GET['news_category']) && $_GET['news_category'] === $term->slug || $_GET['news_category'] === $term->name);
               $link = add_query_arg('news_category', $term->slug, home_url('/news/'));
             ?>
               <li>
