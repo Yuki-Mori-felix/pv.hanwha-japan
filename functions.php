@@ -252,17 +252,6 @@ function custom_news_rewrite_rules() {
 }
 add_action('init', 'custom_news_rewrite_rules');
 
-// ニュース一覧 カテゴリのスラッグで終わるURLは全てニュース一覧ページにリダイレクト
-function redirect_news_term_to_news() {
-  $request_uri = $_SERVER['REQUEST_URI'];
-
-  if (preg_match('#^/news/[^/]+/?$#', $request_uri)) {
-    wp_redirect(home_url('/news/'), 301);
-    exit;
-  }
-}
-add_action('template_redirect', 'redirect_news_term_to_news');
-
 /*------------------------------------------
   固定ページでぺージネーション有効
 ------------------------------------------*/
