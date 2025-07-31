@@ -909,21 +909,33 @@ add_filter('wpcf7_validate_number', 'custom_validate_catalog_group', 20, 2);
 
 function custom_validate_catalog_group($result, $tag) {
   $tag_name = $tag['name'];
-  $catalog_fields = ['cat-noc-1', 'cat-noc-2', 'cat-noc-3']; // カタログ部数の全項目
 
-  // 初回だけ、全体チェックを走らせる
-  if ($tag_name === $catalog_fields[0]) {
-    $filled = false;
-    foreach ($catalog_fields as $field) {
-      $val = isset($_POST[$field]) ? trim($_POST[$field]) : '';
-      if ($val !== '' && is_numeric($val)) {
-        $filled = true;
-        break;
-      }
+  // cat-noc-が含まれるフィールドを全て取得して配列に入れる
+  $catalog_fields = [];
+  foreach ($_POST as $key => $value) {
+    if (preg_match('/^cat-noc-\d+$/', $key)) {
+      $catalog_fields[] = $key;
     }
-    if (!$filled) { // グループ内に1つも値が入ってなければ、cat-noc-1にエラーが出るようにする
-      $result->invalidate($tag, '');
+  }
+
+  // 番号順にソート（cat-noc-1, cat-noc-2, ...の順）
+  usort($catalog_fields, function($a, $b) {
+    return intval(str_replace('cat-noc-', '', $a)) - intval(str_replace('cat-noc-', '', $b));
+  });
+
+  // どれか1つでも値が入ってるか確認
+  $has_value = false;
+  foreach ($catalog_fields as $field) {
+    $val = isset($_POST[$field]) ? trim($_POST[$field]) : '';
+    if ($val !== '' && is_numeric($val)) {
+      $has_value = true;
+      break;
     }
+  }
+
+  // すべて空なら、最も若い番号のフィールドにだけエラーを出す
+  if (!$has_value && $tag_name === ($catalog_fields[0] ?? '')) {
+    $result->invalidate($tag, '');
   }
 
   return $result;
@@ -977,6 +989,15 @@ function custom_validate_est_fields($result, $tag) {
 add_action('wpcf7_before_send_mail', 'add_branch_email_by_pref', 1);
 
 function add_branch_email_by_pref($contact_form) {
+  // 該当フォームの投稿ID（管理画面でフォームを開いたときのURLから確認可能）
+  // 例）https://pv.hanwha-japan.com/wp-admin/admin.php?page=wpcf7&post=1161&action=edit
+  // post=の後の数字がID
+  $allowed_ids = [3280, 1161, 2174, 2176];
+  // フォーム名    本番   テスト環境
+  // カタログ請求  3280   2174
+  // お見積り依頼  1161 　2176
+  if (!in_array($contact_form->id(), $allowed_ids)) return;
+
   $submission = WPCF7_Submission::get_instance();
   if (!$submission) return;
 
