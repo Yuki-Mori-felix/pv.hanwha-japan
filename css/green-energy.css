@@ -193,7 +193,8 @@
   z-index: -2;
   top: 0;
   left: 0;
-  width: 366px;
+  max-width: 366px;
+  width: 50%;
   height: 100%;
   background-color: rgba(238, 119, 68, 0.08);
   background-size: cover;
@@ -224,6 +225,11 @@
   position: relative;
   margin-bottom: 95px;
 }
+@media screen and (max-width: 768px) {
+  .green-energy .section-back .section-title-area {
+    margin-bottom: 40px;
+  }
+}
 .green-energy .section-back .section-title-area::after {
   content: "";
   position: absolute;
@@ -238,6 +244,11 @@
   color: #333;
   margin-bottom: 15px;
   text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .green-energy .section-back .section-title-area h2 {
+    font-size: 24px;
+  }
 }
 .green-energy .section-back .section-title-area h2 .orange {
   font-size: 80px;
@@ -303,6 +314,7 @@
 @media screen and (max-width: 768px) {
   .green-energy .section-back .wrap_s .merit-content .merit-grid img {
     max-width: 484px;
+    width: 90%;
     margin-inline: auto;
   }
 }

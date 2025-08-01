@@ -200,7 +200,8 @@
 			z-index: -2;
 			top: 0;
 			left: 0;
-			width: 366px;
+			max-width: 366px;
+      width: 50%;
 			height: 100%;
 			background-color: rgba(238, 119, 68, 0.08);
 			background-size: cover;
@@ -229,6 +230,9 @@
     .section-title-area {
 			position: relative;
 			margin-bottom: 95px;
+      @include max {
+        margin-bottom: 40px;
+      }
 			&::after {
 				content: "";
 				position: absolute;
@@ -244,6 +248,9 @@
 				color: #333;
 				margin-bottom: 15px;
         text-align: left;
+        @include max {
+          font-size: 24px;
+        }
 				.orange {
 					font-size: 80px;
           font-family: 'Figtree';
@@ -309,6 +316,7 @@
             object-position: center;
             @include max {
               max-width: 484px;
+              width: 90%;
               margin-inline: auto;
             }
           }
