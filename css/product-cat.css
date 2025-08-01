@@ -91,6 +91,7 @@ main.taxonomy-product-cat .intro-bracket {
   width: 100%;
   left: 0;
   bottom: 5px;
+  filter: drop-shadow(10px 15px 40px rgba(0, 0, 0, 0.2));
 }
 @media screen and (max-width: 1024px) {
   main.taxonomy-product-cat .intro-bracket {
@@ -107,6 +108,7 @@ main.taxonomy-product-cat .intro-v2h {
   width: 100%;
   left: 0;
   bottom: -70px;
+  filter: drop-shadow(10px 15px 40px rgba(0, 0, 0, 0.2));
 }
 @media screen and (max-width: 1024px) {
   main.taxonomy-product-cat .intro-v2h {

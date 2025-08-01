@@ -104,6 +104,7 @@ main.taxonomy-product-cat {
     width: 100%;
     left: 0;
     bottom: 5px;
+    filter: drop-shadow(10px 15px 40px #00000033);
     @include max(l) {
       width: 45%;
     }
@@ -117,6 +118,7 @@ main.taxonomy-product-cat {
     width: 100%;
     left: 0;
     bottom: -70px;
+    filter: drop-shadow(10px 15px 40px #00000033);
     @include max(l) {
       width: 34%;
       bottom: initial;
