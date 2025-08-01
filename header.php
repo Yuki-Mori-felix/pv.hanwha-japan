@@ -52,7 +52,7 @@
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/single-product.css<?=get_last_modified("single-product.css", "css")?>'>
     <script src="<?= get_stylesheet_directory_uri() ?>/js/single-product.js<?=get_last_modified("single-product.js", "js")?>"></script>
     <script src="<?= get_stylesheet_directory_uri() ?>/js/compare-single-product.js<?=get_last_modified("compare-single-product.js", "js")?>"></script>
-  <?php elseif (is_page('re-rise') || is_page('q-cells') || is_page('hems') || is_page('storage-system') || is_page('power-conditioner') ||is_page('bracket') ||is_page('v2h')) : ?>
+  <?php elseif (is_page('re-rise') || is_page('q-cells') || is_page('hems') || is_page('storage-system') || is_page('conditioner') ||is_page('bracket') ||is_page('v2h')) : ?>
     <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/single-product.css<?=get_last_modified("single-product.css", "css")?>'>
     <link rel='stylesheet' href='<?=get_stylesheet_directory_uri()?>/css/product-cat.css<?=get_last_modified("product-cat.css", "css")?>'>
     <script src="<?=get_stylesheet_directory_uri()?>/js/product-cat.js<?=get_last_modified("product-cat.js", "js")?>"></script>

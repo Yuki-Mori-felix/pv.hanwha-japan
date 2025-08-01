@@ -624,7 +624,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
     </div>
   </section>
   <!-- //compare -->
-  <a href="<?= home_url(); ?>/proudct-list/power-conditioner/" class="banner">
+  <a href="<?= home_url(); ?>/proudct-list/conditioner/" class="banner">
     <img src="<?= $img_path ?>/single-product/PDH_monitor_Product details_banner.webp" alt="パワーコンディショナ・モニター一覧ページへ">
   </a>
 

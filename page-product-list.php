@@ -84,7 +84,7 @@ get_header();
             </a>
           </li>
           <li>
-            <a href="<?=get_my_home_url("/product-list/power-conditioner")?>">
+            <a href="<?=get_my_home_url("/product-list/conditioner")?>">
               <p class="_list"><img src="<?= get_field('create_electricity_3bst_photo', 163)['url']; ?>"></p>
               <h4><?= the_field('create_electricity_title3', 163) ?></h4>
               <p class="product-img"><img src="<?= get_field('create_electricity_3st_photo', 163)['url']; ?>"></p>

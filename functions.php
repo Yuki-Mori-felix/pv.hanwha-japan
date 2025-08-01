@@ -228,6 +228,39 @@ unset($menu[10]);
 add_action( 'admin_menu', 'customize_menus' );
 
 /*------------------------------------------
+  製品詳細ページ
+  URLが/product-list/製品カテゴリ/製品名/となるように変更
+------------------------------------------*/
+add_filter('post_type_link', 'custom_product_permalink_structure', 10, 2);
+function custom_product_permalink_structure($permalink, $post) {
+  if ($post->post_type !== 'product') return $permalink;
+
+  $terms = get_the_terms($post->ID, 'product-cat');
+  if (!empty($terms) && !is_wp_error($terms)) {
+    $term_slug = $terms[0]->slug;
+    return home_url("product-list/{$term_slug}/{$post->post_name}/");
+  }
+
+  return $permalink;
+}
+add_action('init', 'add_product_custom_rewrite_rule');
+function add_product_custom_rewrite_rule() {
+  add_rewrite_rule(
+    '^product-list/([^/]+)/([^/]+)/?$',
+    'index.php?product=$matches[2]',
+    'top'
+  );
+}
+// URL /product/にアクセス時/product-list/にリダイレクト
+add_action('template_redirect', 'redirect_product_archive_to_product_list');
+function redirect_product_archive_to_product_list() {
+  if (is_post_type_archive('product')) {
+    wp_redirect(home_url('/product-list/'), 301);
+    exit;
+  }
+}
+
+/*------------------------------------------
   ニュース 詳細ページのURLにタームのスラッグを追加
 ------------------------------------------*/
 function custom_news_permalink($permalink, $post) {
