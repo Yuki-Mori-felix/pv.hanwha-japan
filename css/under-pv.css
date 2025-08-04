@@ -343,7 +343,7 @@
 }
 .under-pv .service-support {
   padding-block: 100px 245px;
-  background-image: url("https://pv.hanwha-japan.com/wp-content/uploads/2025/06/net-work_bg_img2.jpg");
+  background-image: url("/wp-content/uploads/2025/06/net-work_bg_img2.jpg");
 }
 @media screen and (max-width: 768px) {
   .under-pv .service-support {
