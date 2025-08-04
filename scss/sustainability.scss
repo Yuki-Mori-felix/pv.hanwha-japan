@@ -176,6 +176,9 @@
 		.section-title-area {
 			position: relative;
 			margin-bottom: 95px;
+      @include max {
+        margin-bottom: 40px;
+      }
 			&::after {
 				content: "";
 				position: absolute;
@@ -191,6 +194,9 @@
 				color: #333;
 				margin-bottom: 15px;
 				text-align: left;
+        @include max {
+          font-size: 24px;
+        }
 				.orange {
 					font-size: 80px;
 					font-family: "Figtree";
@@ -266,6 +272,7 @@
 						object-position: center;
 						@include max {
 							max-width: 398px;
+              width: 90%;
 							margin-inline: auto;
 						}
 					}
