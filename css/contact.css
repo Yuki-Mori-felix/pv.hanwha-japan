@@ -218,7 +218,7 @@ main.contact .links .link.catalog-b {
   background-color: var(--col-orange);
 }
 main.contact .links .link.catalog-b > .inner::before {
-  background: url(https://pv.hanwha-japan.com/wp-content/uploads/2025/06/download_icon.svg) no-repeat center/cover;
+  background: url(/wp-content/uploads/2025/06/download_icon.svg) no-repeat center/cover;
 }
 main.contact .links .link.catalog-c {
   background-color: var(--col-navy);

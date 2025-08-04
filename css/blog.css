@@ -493,7 +493,7 @@
   background-color: var(--col-orange);
 }
 .blog-common .wrap_s .links .link.catalog-b > .inner::before {
-  background: url(https://pv.hanwha-japan.com/wp-content/uploads/2025/06/download_icon.svg) no-repeat center/cover;
+  background: url(/wp-content/uploads/2025/06/download_icon.svg) no-repeat center/cover;
 }
 .blog-common .wrap_s .links .link.catalog-c {
   background-color: var(--col-navy);
