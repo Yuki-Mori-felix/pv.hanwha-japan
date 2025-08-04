@@ -11,6 +11,9 @@
   <!--Details page Accordion-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
+  <link rel="icon" type="image/png" sizes="32x32" href="https://beta.q-cells.jp/wp-content/uploads/2025/08/favicon.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://beta.q-cells.jp/wp-content/uploads/2025/08/favicon.png" />
+
   <!--style.css-->
   <?php if (is_front_page() || is_home() ) : ?>
     <!-- <link rel='stylesheet' href='<?= get_stylesheet_directory_uri() ?>/css/add.css'> -->
@@ -113,7 +116,7 @@
 		
     <?php if (has_nav_menu('top')) : ?>
       <div class="nav-menu-top">
-				<a href="<?php echo esc_url(home_url('/')); ?>" class="nmt-logo"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/07/navi_brand_Logo.png" alt="ハンファジャパン"></a>
+				<a href="<?php echo esc_url(home_url('/')); ?>" class="nmt-logo"><img src="<?= $home_url; ?>/wp-content/uploads/2025/07/navi_brand_Logo.png" alt="ハンファジャパン"></a>
         <div class="nmt-wrap">
           <?php get_template_part('template-parts/navigation/navigation', 'top'); ?>
         </div><!-- .wrap -->
@@ -133,11 +136,11 @@
           <!--buttom-->
           <div class="btn-box _mv_link_bt">
             <a href="<?=get_my_home_url("/product-list/re-rise")?>" class="mv-btn">
-              <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/07/Top_FV_ReRISE_Logo.png" alt="">
+              <img src="<?= $home_url; ?>/wp-content/uploads/2025/07/Top_FV_ReRISE_Logo.png" alt="">
               <span class="btn-txt">製品はこちら</span>
             </a>
             <a href="<?=get_my_home_url("/product-list/q-cells")?>" class="mv-btn">
-              <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/07/Top_FV_Qcells_Logo.png" alt="">
+              <img src="<?= $home_url; ?>/wp-content/uploads/2025/07/Top_FV_Qcells_Logo.png" alt="">
               <span class="btn-txt">製品はこちら</span>
             </a>
           </div>
