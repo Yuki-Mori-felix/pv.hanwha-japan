@@ -247,7 +247,7 @@ require get_stylesheet_directory() . '/include/my_variables.php';
             <ul>
               <?php if (get_field('contents007_img1')['url']): ?>
                 <li>
-                  <a href="https://pv.hanwha-japan.com/about/" target="_blank" rel="noopener noreferrer">
+                  <a href="<?= $home_url; ?>/about/" target="_blank" rel="noopener noreferrer">
                     <img src="<?= get_field('contents007_img1')['url'] ?>" alt="<?= get_field('contents007_img1')['alt'] ?>">
                     <div class="title"><?= get_field('contents007_title1') ?></div>
                     <p><?= get_field('contents007_text1') ?></p>
@@ -256,7 +256,7 @@ require get_stylesheet_directory() . '/include/my_variables.php';
               <?php endif; ?>
               <?php if (get_field('contents007_img2')['url']): ?>
                 <li>
-                  <a href="https://pv.hanwha-japan.com/green-energy/" target="_blank" rel="noopener noreferrer">
+                  <a href="<?= $home_url; ?>/green-energy/" target="_blank" rel="noopener noreferrer">
                     <img src="<?= get_field('contents007_img2')['url'] ?>" alt="<?= get_field('contents007_img2')['alt'] ?>">
                     <div class="title"><?= get_field('contents007_title2') ?></div>
                     <p><?= get_field('contents007_text2') ?></p>
@@ -265,7 +265,7 @@ require get_stylesheet_directory() . '/include/my_variables.php';
               <?php endif; ?>
               <?php if (get_field('contents007_img3')['url']): ?>
                 <li>
-                  <a href="https://pv.hanwha-japan.com/sustainability/" target="_blank" rel="noopener noreferrer">
+                  <a href="<?= $home_url; ?>/sustainability/" target="_blank" rel="noopener noreferrer">
                     <img src="<?= get_field('contents007_img3')['url'] ?>" alt="<?= get_field('contents007_img3')['alt'] ?>">
                     <div class="title"><?= get_field('contents007_title3') ?></div>
                     <p><?= get_field('contents007_text3') ?></p>
