@@ -4,7 +4,7 @@
 	Template Name: HEMS
 	Template Post Type: product
 	*/
-
+require get_stylesheet_directory() . '/include/my_variables.php';
 //画像パス
 $img_path = get_stylesheet_directory_uri() . "/images";
 ?>
@@ -77,7 +77,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
             </div>
             <?php if (get_field('hems_banner')): ?>
               <a href="<?= get_field('hems_banner'); ?>" class="eneconnect-banner">
-                <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/ENECONECT_banner_01.png" alt="エネコネクトの節電サポート 詳しくはこちら">
+                <img src="<?= $home_url; ?>/wp-content/uploads/2025/05/ENECONECT_banner_01.png" alt="エネコネクトの節電サポート 詳しくはこちら">
               </a>
             <?php endif; ?>
           </div>
@@ -176,7 +176,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               <p class="no">STEP1</p>
               <h3 class="step-ttl">エネコネクトサイトで申し込み</h3>
               <div class="imgc">
-                <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/guide-step-1.png" alt="">
+                <img src="<?= $home_url; ?>/wp-content/uploads/2025/05/guide-step-1.png" alt="">
               </div>
               <div class="accordion typeB">
                 <div class="accordion-btn">
@@ -195,7 +195,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               <p class="no">STEP2</p>
               <h3 class="step-ttl">ヒアリング・ご提案</h3>
               <div class="imgc">
-                <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/guide-step-2.png" alt="">
+                <img src="<?= $home_url; ?>/wp-content/uploads/2025/05/guide-step-2.png" alt="">
               </div>
               <div class="accordion typeB">
                 <div class="accordion-btn">
@@ -214,7 +214,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               <p class="no">STEP3</p>
               <h3 class="step-ttl">ご契約・施工</h3>
               <div class="imgc">
-                <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/guide-step-3.png" alt="">
+                <img src="<?= $home_url; ?>/wp-content/uploads/2025/05/guide-step-3.png" alt="">
               </div>
               <div class="accordion typeB">
                 <div class="accordion-btn">
@@ -232,7 +232,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               <p class="no">STEP4</p>
               <h3 class="step-ttl">ご契約・施工</h3>
               <div class="imgc">
-                <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/guide-step-4.png" alt="">
+                <img src="<?= $home_url; ?>/wp-content/uploads/2025/05/guide-step-4.png" alt="">
               </div>
             </li>
           </ul>
@@ -247,9 +247,9 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         <div class="wrapper">
           <h2 class="sec-ttl" id="support">丁寧な導入サポート、充実な保証制度でご安心いただけます。</h2>
           <div class="support_list" style="display: block;">
-            <p class="item" style="width: fit-content; margin-inline: auto;"><a href="https://pv.hanwha-japan.com/service-support/contact/"><span class="imgc"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/support_icon_1.svg" alt=""></span><span class="txt txt-faq">導入・製品に関するご質問</span></a></p>
+            <p class="item" style="width: fit-content; margin-inline: auto;"><a href="<?= $home_url; ?>/service-support/contact/"><span class="imgc"><img src="<?= $home_url; ?>/wp-content/uploads/2025/05/support_icon_1.svg" alt=""></span><span class="txt txt-faq">導入・製品に関するご質問</span></a></p>
             <!-- <p class="border"> -->
-            <!-- <p class="item"><a href="https://pv.hanwha-japan.com/"><span class="imgc"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/support_icon_2.svg" alt=""></span><span class="txt txt-after">アフターフォロー</span></a></p> -->
+            <!-- <p class="item"><a href="<?= $home_url; ?>/"><span class="imgc"><img src="<?= $home_url; ?>/wp-content/uploads/2025/05/support_icon_2.svg" alt=""></span><span class="txt txt-after">アフターフォロー</span></a></p> -->
           </div>
         </div>
       </section>
