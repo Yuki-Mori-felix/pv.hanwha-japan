@@ -2,6 +2,7 @@
 /*
 Template Name: 架台・設置金具製品一覧
 */
+require get_stylesheet_directory() . '/include/my_variables.php';
 get_header();
 $img_path = get_stylesheet_directory_uri() . "/images";
 ?>
@@ -27,7 +28,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
   <!-- // TOP -->
   <section class="intro bg-other">
     <div class="container">
-      <div class="img intro-bracket"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/img_Q-ROBUST_02.png" alt=""></div>
+      <div class="img intro-bracket"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/img_Q-ROBUST_02.png" alt=""></div>
       <div class="ctt">
         <p class="txt"><?= get_field('description'); ?></p>
       </div>
@@ -63,19 +64,19 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         </div>
         <div class="row">
           <div class="type">
-            <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/1_kinzoku-tate.jpg" alt="">
+            <img src="<?= $home_url; ?>/wp-content/uploads/2025/06/1_kinzoku-tate.jpg" alt="">
             <span class="name">金属縦葺板金</span>
           </div>
-          <div class="method"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/1_sunlock_bracket.png" alt=""></div>
+          <div class="method"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/1_sunlock_bracket.png" alt=""></div>
           <div class="impression modal-block">
-            <div class="img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/1_sunlock.png" alt=""></div>
+            <div class="img"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/1_sunlock.png" alt=""></div>
             <div class="modal-open">
-              <div class="modal-icon"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/zoom.svg" alt=""></div>
+              <div class="modal-icon"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/zoom.svg" alt=""></div>
             </div>
             <div class="modal">
               <div class="bg">
                 <div class="modal-ctt">
-                  <div class="modal-img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/1_sunlock.png" alt=""></div>
+                  <div class="modal-img"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/1_sunlock.png" alt=""></div>
                   <div class="modal-close"><span class="close-btn"></span><span class="close-txt">閉じる</span></div>
                 </div>
               </div>
@@ -87,19 +88,19 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         </div>
         <div class="row">
           <div class="type">
-            <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/2_kinzoku-yoko.jpg" alt="">
+            <img src="<?= $home_url; ?>/wp-content/uploads/2025/06/2_kinzoku-yoko.jpg" alt="">
             <span class="name">金属横葺板金</span>
           </div>
-          <div class="method"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/2_DY5_bracket.png" alt=""></div>
+          <div class="method"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/2_DY5_bracket.png" alt=""></div>
           <div class="impression modal-block">
-            <div class="img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/2_DY5.png" alt=""></div>
+            <div class="img"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/2_DY5.png" alt=""></div>
             <div class="modal-open">
-              <div class="modal-icon"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/zoom.svg" alt=""></div>
+              <div class="modal-icon"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/zoom.svg" alt=""></div>
             </div>
             <div class="modal">
               <div class="bg">
                 <div class="modal-ctt">
-                  <div class="modal-img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/2_DY5.png" alt=""></div>
+                  <div class="modal-img"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/2_DY5.png" alt=""></div>
                   <div class="modal-close"><span class="close-btn"></span><span class="close-txt">閉じる</span></div>
                 </div>
               </div>
@@ -111,19 +112,19 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         </div>
         <div class="row">
           <div class="type">
-            <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/3_slate.jpg" alt="">
+            <img src="<?= $home_url; ?>/wp-content/uploads/2025/06/3_slate.jpg" alt="">
             <span class="name">スレート</span>
           </div>
-          <div class="method"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/3_Takashima_BK_bracket.png" alt=""></div>
+          <div class="method"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/3_Takashima_BK_bracket.png" alt=""></div>
           <div class="impression modal-block">
-            <div class="img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/3_Takashima_BK.png" alt=""></div>
+            <div class="img"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/3_Takashima_BK.png" alt=""></div>
             <div class="modal-open">
-              <div class="modal-icon"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/zoom.svg" alt=""></div>
+              <div class="modal-icon"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/zoom.svg" alt=""></div>
             </div>
             <div class="modal">
               <div class="bg">
                 <div class="modal-ctt">
-                  <div class="modal-img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/3_Takashima_BK.png" alt=""></div>
+                  <div class="modal-img"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/3_Takashima_BK.png" alt=""></div>
                   <div class="modal-close"><span class="close-btn"></span><span class="close-txt">閉じる</span></div>
                 </div>
               </div>
@@ -135,19 +136,19 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         </div>
         <div class="row">
           <div class="type">
-            <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/4_hiraitagawara.jpg" alt="">
+            <img src="<?= $home_url; ?>/wp-content/uploads/2025/06/4_hiraitagawara.jpg" alt="">
             <span class="name">平板瓦</span>
           </div>
-          <div class="method"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/5_wagawara_bracket.png" alt=""></div>
+          <div class="method"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/5_wagawara_bracket.png" alt=""></div>
           <div class="impression modal-block">
-            <div class="img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/4_Shijigawara.png" alt=""></div>
+            <div class="img"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/4_Shijigawara.png" alt=""></div>
             <div class="modal-open">
-              <div class="modal-icon"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/zoom.svg" alt=""></div>
+              <div class="modal-icon"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/zoom.svg" alt=""></div>
             </div>
             <div class="modal">
               <div class="bg">
                 <div class="modal-ctt">
-                  <div class="modal-img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/4_Shijigawara.png" alt=""></div>
+                  <div class="modal-img"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/4_Shijigawara.png" alt=""></div>
                   <div class="modal-close"><span class="close-btn"></span><span class="close-txt">閉じる</span></div>
                 </div>
               </div>
@@ -159,19 +160,19 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         </div>
         <div class="row">
           <div class="type">
-            <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/5_wagawara_yane.jpg" alt="">
+            <img src="<?= $home_url; ?>/wp-content/uploads/2025/06/5_wagawara_yane.jpg" alt="">
             <span class="name">和瓦</span>
           </div>
-          <div class="method"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/5_wagawara_bracket.png" alt=""></div>
+          <div class="method"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/5_wagawara_bracket.png" alt=""></div>
           <div class="impression modal-block">
-            <div class="img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/5_wagawara.png" alt=""></div>
+            <div class="img"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/5_wagawara.png" alt=""></div>
             <div class="modal-open">
-              <div class="modal-icon"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/zoom.svg" alt=""></div>
+              <div class="modal-icon"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/zoom.svg" alt=""></div>
             </div>
             <div class="modal">
               <div class="bg">
                 <div class="modal-ctt">
-                  <div class="modal-img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/5_wagawara.png" alt=""></div>
+                  <div class="modal-img"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/5_wagawara.png" alt=""></div>
                   <div class="modal-close"><span class="close-btn"></span><span class="close-txt">閉じる</span></div>
                 </div>
               </div>
@@ -183,19 +184,19 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         </div>
         <div class="row">
           <div class="type">
-            <img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/6_ishitukibankin_yane.jpg" alt="">
+            <img src="<?= $home_url; ?>/wp-content/uploads/2025/06/6_ishitukibankin_yane.jpg" alt="">
             <span class="name">石付板金</span>
           </div>
-          <div class="method"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/6_ishitukibankin_bracket.png" alt=""></div>
+          <div class="method"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/6_ishitukibankin_bracket.png" alt=""></div>
           <div class="impression modal-block">
-            <div class="img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/6_ishitukibankin.png" alt=""></div>
+            <div class="img"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/6_ishitukibankin.png" alt=""></div>
             <div class="modal-open">
-              <div class="modal-icon"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/zoom.svg" alt=""></div>
+              <div class="modal-icon"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/zoom.svg" alt=""></div>
             </div>
             <div class="modal">
               <div class="bg">
                 <div class="modal-ctt">
-                  <div class="modal-img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/6_ishitukibankin.png" alt=""></div>
+                  <div class="modal-img"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/6_ishitukibankin.png" alt=""></div>
                   <div class="modal-close"><span class="close-btn"></span><span class="close-txt">閉じる</span></div>
                 </div>
               </div>
@@ -212,11 +213,11 @@ $img_path = get_stylesheet_directory_uri() . "/images";
             ><span class="circle rerise-s"></span><span class="txt">Re.RISE S</span>
           </p>
           <p class="sup-item metal">
-            金具：<span class="circle"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/bracket_icon_Y.svg" alt=""></span><span class="txt">（株）屋根技術研究所製</span><span class="line">／</span
-            ><span class="circle"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/bracket_icon_E.svg" alt=""></span><span class="txt">（株）栄信製</span><span class="line">／</span
-            ><span class="circle"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/bracket_icon_D.svg" alt=""></span><span class="txt">（株）ダイドーハント製</span><span class="line">／</span
-            ><span class="circle"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/bracket_icon_T.svg" alt=""></span><span class="txt">高島（株）製</span><span class="line">／</span
-            ><span class="circle"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/bracket_icon_S.svg" alt=""></span><span class="txt">スワロー工業（株）製</span>
+            金具：<span class="circle"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/bracket_icon_Y.svg" alt=""></span><span class="txt">（株）屋根技術研究所製</span><span class="line">／</span
+            ><span class="circle"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/bracket_icon_E.svg" alt=""></span><span class="txt">（株）栄信製</span><span class="line">／</span
+            ><span class="circle"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/bracket_icon_D.svg" alt=""></span><span class="txt">（株）ダイドーハント製</span><span class="line">／</span
+            ><span class="circle"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/bracket_icon_T.svg" alt=""></span><span class="txt">高島（株）製</span><span class="line">／</span
+            ><span class="circle"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/bracket_icon_S.svg" alt=""></span><span class="txt">スワロー工業（株）製</span>
           </p>
         </div>
         <div class="note">
@@ -231,10 +232,10 @@ $img_path = get_stylesheet_directory_uri() . "/images";
           <div class="ctt">
             <ul class="ctt-list">
               <li class="ctt-item">
-                <div class="ctt-icon none-max-t"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/trestle_icon_weather.svg" alt=""></div>
+                <div class="ctt-icon none-max-t"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/trestle_icon_weather.svg" alt=""></div>
                 <div class="ctt-group">
                   <div class="ttlc">
-                    <div class="ctt-icon none-min-t"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/trestle_icon_weather.svg" alt=""></div>
+                    <div class="ctt-icon none-min-t"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/trestle_icon_weather.svg" alt=""></div>
                     <h3 class="ttl">積雪荷重に対する設置基準</h3>
                   </div>
                   <div class="ctt-detail">
@@ -253,10 +254,10 @@ $img_path = get_stylesheet_directory_uri() . "/images";
                 </div>
               </li>
               <li class="ctt-item">
-                <div class="ctt-icon none-max-t"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/trestle_icon_wind.svg" alt=""></div>
+                <div class="ctt-icon none-max-t"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/trestle_icon_wind.svg" alt=""></div>
                 <div class="ctt-group">
                   <div class="ttlc">
-                    <div class="ctt-icon none-min-t"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/trestle_icon_wind.svg" alt=""></div>
+                    <div class="ctt-icon none-min-t"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/trestle_icon_wind.svg" alt=""></div>
                     <h3 class="ttl">風圧荷重に対する設置基準</h3>
                   </div>
                   <div class="ctt-detail">
@@ -275,7 +276,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
               <span class="txt">※ JIS C 8955:2017に準拠。</span>
             </div>
           </div>
-          <div class="img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/snow-covered_module_01.jpg" alt=""></div>
+          <div class="img"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/snow-covered_module_01.jpg" alt=""></div>
         </div>
         <div class="note">
           <span class="txt">※ 画像、設置イメージ図はすべてイメージです。</span>
@@ -296,32 +297,32 @@ $img_path = get_stylesheet_directory_uri() . "/images";
     <h2 class="sec-ttl">Q.ROBUST®シリーズ</h2>
     <div class="mv">
       <div class="mv-wrap sec-wrap">
-        <div class="mv-left"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/Sample_snow-covered_module_02.jpg" alt=""></div>
-        <div class="mv-right"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/img_Q-ROBUST_01.png" alt=""></div>
+        <div class="mv-left"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/Sample_snow-covered_module_02.jpg" alt=""></div>
+        <div class="mv-right"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/img_Q-ROBUST_01.png" alt=""></div>
       </div>
     </div>
     <div class="container">
       <p class="lead">Q.ROBUST®（キューロバスト）は<br>ハンファジャパンオリジナル多雪地域向け脱着式補強架台です。</p>
-      <div class="img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/img_Q.ROBUST_cont02.png" alt=""></div>
+      <div class="img"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/img_Q.ROBUST_cont02.png" alt=""></div>
       <div class="sec-detail">
         <ul class="list">
           <li class="item">
             <div class="head">
-              <div class="head-icon"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/SK_YCK02_icon01.svg" alt=""></div>
+              <div class="head-icon"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/SK_YCK02_icon01.svg" alt=""></div>
               <h3 class="ttl">垂直積雪量<br>最大210cmまで対応</h3>
             </div>
             <p class="txt">屋根に穴をあけず、垂直積雪量が最大210㎝までの地域に太陽光パネルを設置できます。</p>
           </li>
           <li class="item">
             <div class="head">
-              <div class="head-icon"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/SK_YCK02_icon01.svg" alt=""></div>
+              <div class="head-icon"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/SK_YCK02_icon01.svg" alt=""></div>
               <h3 class="ttl">フレキシブルな<br>固定可能範囲</h3>
             </div>
             <p class="txt">脱着式補強架台であるため、固定可能範囲内で設置芭蕉を自在に変更できます。</p>
           </li>
           <li class="item">
             <div class="head">
-              <div class="head-icon"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/SK_YCK01_icon03.svg" alt=""></div>
+              <div class="head-icon"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/SK_YCK01_icon03.svg" alt=""></div>
               <h3 class="ttl">屋根への負担を軽減</h3>
             </div>
             <p class="txt">積雪荷重を掴み金具とQ.ROBUSTに分散させ、屋根への負担を減らします。</p>
@@ -353,18 +354,18 @@ $img_path = get_stylesheet_directory_uri() . "/images";
       <ul class="list">
         <li class="item">
           <p class="head">角度90度架台</p>
-          <div class="img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/YCZ_rendering1.jpg" alt=""></div>
+          <div class="img"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/YCZ_rendering1.jpg" alt=""></div>
         </li>
         <li class="item">
           <p class="head">角度70度架台</p>
-          <div class="img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/YCZ_rendering2.jpg" alt=""></div>
+          <div class="img"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/YCZ_rendering2.jpg" alt=""></div>
         </li>
       </ul>
     </div>
     <div class="explanation">
       <div class="explanation-wrap container">
-        <div class="img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/YCZ_rendering2.jpg" alt=""></div>
-        <div class="img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/YCZ_rendering2.jpg" alt=""></div>
+        <div class="img"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/YCZ_rendering2.jpg" alt=""></div>
+        <div class="img"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/YCZ_rendering2.jpg" alt=""></div>
       </div>
     </div>
     <div class="container">
@@ -372,21 +373,21 @@ $img_path = get_stylesheet_directory_uri() . "/images";
         <ul class="list">
           <li class="item">
             <div class="head">
-              <div class="head-icon"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/SK_YCK02_icon01.svg" alt=""></div>
+              <div class="head-icon"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/SK_YCK02_icon01.svg" alt=""></div>
               <h3 class="ttl">豪雪地帯でも<br>年間を通して発電可能</h3>
             </div>
             <p class="txt">降雪があっても発電可能なため、豪雪地帯でも年間を通して安定した発電量が期待できます。</p>
           </li>
           <li class="item">
             <div class="head">
-              <div class="head-icon"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/SK_YCK02_icon02.svg" alt=""></div>
+              <div class="head-icon"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/SK_YCK02_icon02.svg" alt=""></div>
               <h3 class="ttl">積雪による太陽光パネルの破損を防止</h3>
             </div>
             <p class="txt">壁面に太陽光パネルを設置するため、雪が積もりにくく、積雪による太陽光パネルの破損を防ぎます。</p>
           </li>
           <li class="item">
             <div class="head">
-              <div class="head-icon"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/SK_YCK02_icon03.svg" alt=""></div>
+              <div class="head-icon"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/SK_YCK02_icon03.svg" alt=""></div>
               <h3 class="ttl">2種類の角度の<br>架台を用意</h3>
             </div>
             <p class="txt">角度70度（傾斜）と90度（垂直）の2種類の架台を用意。発電量優先、意匠性優先などの条件からお好みの架台を選択可能です。</p>

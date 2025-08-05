@@ -4,6 +4,7 @@ Template Name: V2H製品一覧
 */
 get_header();
 $img_path = get_stylesheet_directory_uri() . "/images";
+require get_stylesheet_directory() . '/include/my_variables.php';
 ?>
 <!-- 製品詳細 ターム(V2H) 一覧ページ -->
 <main class="taxonomy-product-cat v2h single-products">
@@ -27,7 +28,7 @@ $img_path = get_stylesheet_directory_uri() . "/images";
   <!-- // TOP -->
   <section class="intro bg-other">
     <div class="container">
-      <div class="img intro-v2h"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/V2H_front.png" alt=""></div>
+      <div class="img intro-v2h"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/V2H_front.png" alt=""></div>
       <div class="ctt">
         <p class="txt"><?= get_field('description'); ?></p>
       </div>

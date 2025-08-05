@@ -20,14 +20,14 @@ require get_stylesheet_directory() . '/include/my_variables.php';
     <div class="wrap_s">
       <h2>お客様より、よくいただくご質問を掲載しております。</h2>
       <ul class="faq-nav">
-        <li><a href="#cat_01"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/solar-power-icon.svg" alt="太陽光発電">太陽光発電</a></li>
-        <li><a href="#cat_02"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/Installation-icon.svg" alt="設置">設置</a></li>
-        <li><a href="#cat_03"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/power-generation-icon.svg" alt="発電">発電</a></li>
-        <li><a href="#cat_04"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/maintenance-icon.svg" alt="メンテナンス">メンテナンス</a></li>
-        <li><a href="#cat_05"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/cost-icon.svg" alt="お申込み・費用">お申込み・費用</a></li>
-        <li><a href="#cat_06"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/weather-icon.svg" alt="天候の影響">天候の影響</a></li>
-        <li><a href="#cat_07"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/disaster-icon.svg" alt="災害時の対応">災害時の対応</a></li>
-        <li><a href="#cat_08"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/05/pc-soft-icon.svg" alt="PCソフト">PCソフト</a></li>
+        <li><a href="#cat_01"><img src="<?= $home_url; ?>/wp-content/uploads/2025/05/solar-power-icon.svg" alt="太陽光発電">太陽光発電</a></li>
+        <li><a href="#cat_02"><img src="<?= $home_url; ?>/wp-content/uploads/2025/05/Installation-icon.svg" alt="設置">設置</a></li>
+        <li><a href="#cat_03"><img src="<?= $home_url; ?>/wp-content/uploads/2025/05/power-generation-icon.svg" alt="発電">発電</a></li>
+        <li><a href="#cat_04"><img src="<?= $home_url; ?>/wp-content/uploads/2025/05/maintenance-icon.svg" alt="メンテナンス">メンテナンス</a></li>
+        <li><a href="#cat_05"><img src="<?= $home_url; ?>/wp-content/uploads/2025/05/cost-icon.svg" alt="お申込み・費用">お申込み・費用</a></li>
+        <li><a href="#cat_06"><img src="<?= $home_url; ?>/wp-content/uploads/2025/05/weather-icon.svg" alt="天候の影響">天候の影響</a></li>
+        <li><a href="#cat_07"><img src="<?= $home_url; ?>/wp-content/uploads/2025/05/disaster-icon.svg" alt="災害時の対応">災害時の対応</a></li>
+        <li><a href="#cat_08"><img src="<?= $home_url; ?>/wp-content/uploads/2025/05/pc-soft-icon.svg" alt="PCソフト">PCソフト</a></li>
       </ul>
     </div>
   </section>
@@ -410,7 +410,7 @@ require get_stylesheet_directory() . '/include/my_variables.php';
           <div class="view">
             <div class="view-flex">
               <span class="a-icon">A.</span>
-              <p>自動運転切り替えについては「<a href="https://www.q-cells.jp/individual_customer/attention">災害時/停電時の製品取り扱いについて</a>」ページをご確認ください。</p>
+              <p>自動運転切り替えについては「<a href="<?= $home_url; ?>/individual_customer/attention">災害時/停電時の製品取り扱いについて</a>」ページをご確認ください。</p>
             </div>
           </div>
         </li>

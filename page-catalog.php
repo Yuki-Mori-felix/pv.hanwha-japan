@@ -2,6 +2,7 @@
 /*
 Template Name: WEBカタログ・ダウンロード
 */
+require get_stylesheet_directory() . '/include/my_variables.php';
 get_header();
 ?>
 <main class="contact catalog-dl">
@@ -17,7 +18,7 @@ get_header();
       <p class="lead">WEBカタログをご用意しております。</p>
       <p class="txt">ご希望のカタログをすぐに閲覧いただけます。</p>
       <div class="links">
-        <a href="<?=get_my_home_url("/service-support/catalog")?>" class="link catalog-c"><span class="inner">カタログ請求はこちら</span></a>
+        <a href="<?= $home_url; ?>/service-support/contact-catalog/" class="link catalog-c"><span class="inner">カタログ請求はこちら</span></a>
       </div>
     </div>
   </section>
@@ -26,38 +27,47 @@ get_header();
     <div class="container">
       <ul class="cat-list">
         <li class="cat-item">
+          <h3 class="name">ハンファジャパン統合カタログ</h3>
+          <p class="year">2025.08</p>
+          <div class="img"><img src="/wp-content/uploads/2025/07/img_sougou_Catalog_2025.webp" alt="ハンファジャパン統合カタログ"></div>
+          <p class="module">メインパネル</p>
+          <p class="series">Re.RISE-NBCシリーズ</p>
+          <a href="https://ebook.wisebook4.jp/html/hqjmarketing/57252/#1" class="link web" target="_blank" rel="noopener noreferrer">WEBカタログ</a>
+          <a href="/wp-content/uploads/2025/08/HWJ_catalog.pdf" class="link pdf" download="HWJ_catalog.pdf" rel="noopener noreferrer"><span class="inner">PDF</span></a>
+        </li>
+        <li class="cat-item">
           <h3 class="name">Qcells住宅用カタログ</h3>
-          <p class="year">2024年版</p>
-          <div class="img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/catalog-qcells-2024.png" alt=""></div>
+          <p class="year">2025.03</p>
+          <div class="img"><img src="/wp-content/uploads/2025/07/img_Qcells_Catalog_202402_v01.jpg" alt="Qcells住宅用カタログ"></div>
           <p class="module">メインパネル</p>
           <p class="series">Q.TRON-G2.4+シリーズ</p>
-          <a href="" class="link web" target="_blank" rel="noopener noreferrer">WEBカタログ</a>
-          <a href="" class="link pdf" target="_blank" rel="noopener noreferrer"><span class="inner">PDF</span></a>
+          <a href="https://ebook.wisebook4.jp/html/hqjmarketing/55162/#1" class="link web" target="_blank" rel="noopener noreferrer">WEBカタログ</a>
+          <a href="/wp-content/uploads/2025/08/Qcells.pdf" class="link pdf" download="Qcells.pdf" rel="noopener noreferrer"><span class="inner">PDF</span></a>
         </li>
         <li class="cat-item">
           <h3 class="name">Re.RISE®住宅用カタログ</h3>
-          <p class="year">2024年版</p>
-          <div class="img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/catalog-rerise-2024.png" alt=""></div>
+          <p class="year">2025.03</p>
+          <div class="img"><img src="/wp-content/uploads/2025/06/catalog-rerise-2024.png" alt="Re.RISE®住宅用カタログ"></div>
           <p class="module">メインパネル</p>
           <p class="series">Re.RISE-G3シリーズ</p>
-          <a href="" class="link web" target="_blank" rel="noopener noreferrer">WEBカタログ</a>
-          <a href="" class="link pdf" target="_blank" rel="noopener noreferrer"><span class="inner">PDF</span></a>
-        </li>
-        <li class="cat-item">
-          <h3 class="name">Q.READYカタログ</h3>
-          <p class="year">2024年版</p>
-          <div class="img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/catalog-qready-2024.png" alt=""></div>
-          <a href="" class="link web" target="_blank" rel="noopener noreferrer">WEBカタログ</a>
-          <a href="" class="link pdf" target="_blank" rel="noopener noreferrer"><span class="inner">PDF</span></a>
+          <a href="https://ebook.wisebook4.jp/html/hqjmarketing/54642/#1" class="link web" target="_blank" rel="noopener noreferrer">WEBカタログ</a>
+          <a href="/wp-content/uploads/2025/08/Re.RISE_G3.pdf" class="link pdf" download="Re.RISE_G3.pdf" rel="noopener noreferrer"><span class="inner">PDF</span></a>
         </li>
       </ul>
       <ul class="cat-list">
         <li class="cat-item">
-          <h3 class="name">産業用カタログ</h3>
-          <p class="year">2021年版</p>
-          <div class="img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/catalog-industrial-2021.png" alt=""></div>
-          <a href="" class="link web" target="_blank" rel="noopener noreferrer">WEBカタログ</a>
-          <a href="" class="link pdf" target="_blank" rel="noopener noreferrer"><span class="inner">PDF</span></a>
+          <h3 class="name">Q.READYカタログ</h3>
+          <p class="year">2024.05</p>
+          <div class="img"><img src="<?= $home_url; ?>/wp-content/uploads/2025/06/catalog-qready-2024.png" alt="Q.READYカタログ"></div>
+          <a href="https://ebook.wisebook4.jp/html/hqjmarketing/53882/#で送ります" class="link web" target="_blank" rel="noopener noreferrer">WEBカタログ</a>
+          <a href="/wp-content/uploads/2025/08/Qready.pdf" class="link pdf" download="Qready.pdf" rel="noopener noreferrer"><span class="inner">PDF</span></a>
+        </li>
+        <li class="cat-item">
+          <h3 class="name">Q.TRONカタログ</h3>
+          <p class="year">2023.10</p>
+          <div class="img"><img src="<?= $home_url; ?>/wp-content/uploads/2025/07/img_Q_TRON_leaflet_v2.3.jpg" alt="Q.TRONカタログ"></div>
+          <a href="https://ebook.wisebook4.jp/html/hqjmarketing/53792/#1" class="link web" target="_blank" rel="noopener noreferrer">WEBカタログ</a>
+          <a href="/wp-content/uploads/2025/08/Q_TRON.pdf" class="link pdf" download="Q_TRON.pdf" rel="noopener noreferrer"><span class="inner">PDF</span></a>
         </li>
       </ul>
       <div class="cat-note">
@@ -209,7 +219,7 @@ get_header();
   <section class="common-info">
     <div class="container">
       <div class="ctt customer">
-        <div class="img"><img src="<?=get_img_path()?>/contact/icon-customer.svg" alt=""></div>
+        <div class="img"><img src="<?= get_img_path() ?>/contact/icon-customer.svg" alt=""></div>
         <div class="detail">
           <p class="head">お問い合わせはこちらまで</p>
           <p class="txt">
@@ -224,4 +234,4 @@ get_header();
   <!-- // INFO -->
 </main>
 <!-- // CONTACT CATALOG_DL -->
-<?=get_footer();?>
+<?= get_footer(); ?>
