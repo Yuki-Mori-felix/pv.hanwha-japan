@@ -47,7 +47,7 @@ get_header();
       
     <?php else : ?>
       <div class="error-results">
-        <div class="error-img"><img src="https://pv.hanwha-japan.com/wp-content/uploads/2025/06/ico_search.png" alt=""></div>
+        <div class="error-img"><img src="/wp-content/uploads/2025/06/ico_search.png" alt=""></div>
         <p class="error-txt">検索した結果がありません。 再び検索してください。</p>
       </div>
     <?php endif; ?>
